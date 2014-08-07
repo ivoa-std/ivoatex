@@ -36,6 +36,7 @@ with revision control on volute with svn:externals, do something like
 (7) cd $DOCNAME
 (8) svn propset svn:externals "ivoatex $VOLUTEBASE/ivoapub/ivoatex" .
 (9) svn update
+(9a) svn propset svn:ignore ivoatex/svn-ignore.txt
 
 This has the advantage that you get updates automatically and that it is 
 trivial to feed back your bibliography additions and fixes into the
@@ -94,6 +95,10 @@ Non-obvious features include:
   supported yet (but we'll try to change that).
 
 
+Trouble?
+========
+
+If 
 Acknowledgements
 ================
 

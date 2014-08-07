@@ -1,0 +1,9 @@
+*.blg
+*.toc
+*.out
+*.pdf
+*.aux
+*.bbl
+ivoatexmeta.tex
+*.log
+*.html
