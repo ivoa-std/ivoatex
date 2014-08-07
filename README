@@ -1,0 +1,116 @@
+ivoatex Version 0.1
+===================
+
+This is another attempt at a generalised authoring system for IVOA
+(http://www.ivoa.net) documents with the design goals of
+
+ * version-controlled source file(s)
+ * reasonable-quality PDF and HTML output
+ * low to moderate installation effort (on POSIX systems with TeX)
+ * support with routine drudgery.
+
+
+Quick start
+===========
+
+ivoatex is designed to be used from within a subdirectory of the directory
+containing the document sources.  You could include a checkout of ivoatex in
+your document tree, but it's much more elegant to use svn:externals.  If
+you don't want to use svn:externals (yet), do step (1), put ivoatex
+into your document directory, and skip to (10) below
+
+
+To prepare for writing a Note called MyNote for the working group mywg
+with revision control on volute with svn:externals, do something like
+
+(0) export VOLUTEBASE=https://volute.googlecode.com/svn/trunk/projects
+(1) export DOCNAME=?????
+(this would be your document's short name, like RegTAP, SIAv2, etc)
+(2) export WG=?????
+(this would be your Working Group: dal, dm, edu, grid, registry, theory,...)
+
+(3) mkdir $DOCNAME
+(4) svn import MyNote $VOLUTEBASE/$WG/$DOCNAME
+(5) rmdir $DOCNAME
+(6) svn co $VOLUTEBASE/$WG/$DOCNAME $DOCNAME
+(7) cd $DOCNAME
+(8) svn propset svn:externals "ivoatex $VOLUTEBASE/ivoapub/ivoatex" .
+(9) svn update
+
+This has the advantage that you get updates automatically and that it is 
+trivial to feed back your bibliography additions and fixes into the
+distribution.
+
+If you get ivoatex in some other way, make sure the subdirectory it resides
+in is called ivoatex.
+
+(10) cp ivoatex/document.template $DOCNAME.tex
+(11) cp ivoatex/Makefile.template Makefile
+
+Fill out the marked-up things in Makefile, edit $DOCNAME.tex, and then run
+
+* ``make`` to generate a PDF rendering of your document
+* ``make biblio`` to update the bibliography (i.e., run BibTeX)
+* ``make forecetex`` to unconditionally run TeX (e.g., when TeX
+  asks to be rerun)
+* ``make $DOCNAME.html`` to generate an HTML rendering of your document
+* ``make package`` to generate a zip file containing everything needed
+  for publication at ivoa.net.   Obviously, you'll want to check
+  DOCVERSION, DOCTYPE, and DOCDATE in the Makefile before submitting things.
+
+
+Editing help
+============
+
+The least you need for an ivoatex instance document is::
+
+	\documentclass{ivoatex/ivoa}
+	\input ivoatex/tthdefs
+
+and an abstract.  However, you're advised to start from the template -- it
+really contains very little that you shouldn't have in your document,
+except you'll need to replace all the items between the ????-groups.
+
+Non-obvious features include:
+
+* author takes an optional argument that would be the author's URL, 
+  typically pointing into the IVOA wiki.
+* previousversion will usually have its optional argument, the
+  URL under which a previous version is accessible.  These URLs
+  are be generateable from the version strings if publishing has
+  been conforming, and we may provide a macro to deal with this later
+  (but also maybe a fully automatic management of previous versions
+  base on the change log?)
+* Right now, you must use the ivoaabstract environment rather than the
+  abstract environment.  That's because this is a pre-alpha version.
+  We hope to sort out things with tth so the abstract can be in abstract
+* ivoadoc uses natbib and BibTeX.  Don't be afraid, it's actually
+  dead simple.   If you want to reference something, check out
+  ivoatex/ivoabib.bib.  If what you're looking for is already in there,
+  say \citep{tag} (Einstein 1905) or \citet{tag} for Einstein (1905) in
+  your source, and update your bibliography using make biblio.  If
+  your source isn't yet in ivoabib, please add it and contribute your
+  new records.  Incidentally, no variant forms of citep and citet are 
+  supported yet (but we'll try to change that).
+
+
+Acknowledgements
+================
+
+The immediate predecessor of this is the document generation system created
+by Mark Taylor for SAMP and VOTable; essentially, this is a generalisation
+of Mark's work.  This, in turn, built on work done by Sebastien Derriere.
+
+Another inspiration was Paul Harrison's ivoadoc system; in particular,
+parts of the XSL style sheet were taken from there, as well as the idea of
+using svn:externals.
+
+
+License
+=======
+
+Unless stated otherwise in the files, ivoatex is (c) 2014 Markus Demleitner and
+can be used and distributed under the GNU General Public License (ask for
+additional licenses if you're unhappy with the GPL).  See COPYING for details.  
+
+The files in tth_C have their own license.  See there for details.

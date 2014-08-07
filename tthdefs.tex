@@ -1,0 +1,64 @@
+\newif\iftth
+\iftth
+\input tthntbib.sty
+\input ivoatexmeta
+
+\begin{html}
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+\end{html}
+
+
+\definecolor{ivoacolor}{rgb}{0.0,0.318,0.612}
+
+\renewcommand{\author}[2][0]{\def\@tmp{#1}
+  \if 0\@tmp
+	{\begin{html}<li class="author">#2</li>\end{html}}\else
+	{\begin{html}<li class="author"><a href="#1">#2</a></li>\end{html}}\fi}
+\renewcommand{\previousversion}[2][0]{\def\@tmp{#1}
+  \if 0\@tmp
+	{\begin{html}<li class="previousversion">#2</li>\end{html}}\else
+	{\begin{html}<li class="previousversion">
+	  <a href="#1">#2</a></li>\end{html}}\fi}
+\renewcommand{\ivoagroup}[1]
+  {\begin{html}<dd id="ivoagroup">#1</dd>\end{html}}
+\renewcommand{\editor}[1]
+  {\begin{html}<dd id="editor">#1</dd>\end{html}}
+
+\newcommand{\includeMeta}{%
+   \special{html:<span id='version'>}\ivoaDocversion\special{html:</span>
+   <span id='doctype'>}\ivoaDoctype\special{html:</span>
+   <span id='docname'>}\ivoaDocname\special{html:</span>
+   <span id='docdate'>}\ivoaDocdate\special{html:</span>}}
+
+\newenvironment{ivoaabstract}{%
+   \includeMeta
+  \begin{html}
+    </div> <!-- titlepage -->
+    <div id="abstract"><h2>Abstract</h2>
+  \end{html}
+  }{%
+    \special{html:<h2>Status of this Document</h2>
+      <div id='statusOfThisDocument'>}\ivoaDoctype\special{html:</div>}
+      \tableofcontents
+      }
+    
+
+\newenvironment{admonition}[1]{%
+  \begin{html}
+    <div class="admonition">
+      <p class="admonition-type">#1</p>
+  \end{html}
+  }{%
+    \begin{html}
+      </div> <!-- admonition -->
+    \end{html}
+  }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
+  \begin{html}
+    <div id="titlepage">
+  \end{html}
+
+\fi

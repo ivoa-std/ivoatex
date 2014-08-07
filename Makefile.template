@@ -1,0 +1,19 @@
+# short name of your document (edit $DOCNAME.tex; would be like RegTAP)
+DOCNAME = ????
+
+# count up; you probably do not want to bother with versions <1.0
+DOCVERSION = 1.0
+
+# Publication date, ISO format; update manually for "releases"
+DOCDATE = ???
+
+# What is it you're writing: NOTE, WD, PR, or REC
+DOCTYPE = ???
+
+# Additional source files ($DOCNAME.tex is included automatically)
+SOURCES = identifiers.tex
+
+# List of image files to be included in submitted package
+FIGURES =
+
+include ivoatex/Makefile

@@ -1,0 +1,77 @@
+% This file is (c) 1997-2012 Ian Hutchinson <ihutch@mit.edu>
+% Distributed under the GPL version 2
+%
+% Style for authoryear type of natbib citations, including double
+% optional argument handling.
+% Conditional to determine if we are using number style references.
+\newif\ifNAT@numbers
+% Formatting of citations requires 4 arguments unlike normal latex 1
+% They are number, year, author, long-author. The format is changed
+% within some types of references by local redefinition prior to
+% calling cite. The default natbib formats for a plain \cite 
+% call when authordate are:
+%\def\tthbibform#1#2#3#4{[#3 #2}
+%\def\tthciteform#1#2#3#4{#3}
+% and when numbers one uses argument #1
+%\def\tthbibform#1#2#3#4{\ifNAT@numbers[#1\else[#3 #2\fi}
+%\def\tthciteform#1#2#3#4{\ifNAT@numbers[#1\else#3, [#2\fi}
+%\def\tthciteob{}\def\tthcitecb{]}
+% All the above is builtin, together with setting NAT@numbers.
+
+% \citet is a textual citation with parens only round the year
+% Second optional argument is handled with a subcommand and conditional.
+\def\tthpnote{}
+\newcommand\tthsubcitet[2][]{\citet[#1]{#2} \egroup}
+\newcommand\citet[2][]{%
+\ifx #2[ \bgroup\def\tthpnote{#1\def\tthpnote{}} \tthsubcitet[\else%
+ {\def\tthcitecb{]}\def\tthcitefi{,}\def\tthcitepb{],}
+  \ifNAT@numbers% 
+    \def\tthciteob{}
+    \def\tthciteform##1##2##3##4{##3 [\tthpnote ##1}
+  \else%
+    \def\tthciteform##1##2##3##4{##3 [\tthpnote ##2}
+  \fi%
+  \cite[#1]{#2}
+ }\fi}
+
+% \citep has parens round the whole thing.
+\newcommand\tthsubcitep[2][]{
+\def\tthciteob{[}\def\tthcitecb{]}
+ \ifNAT@numbers
+  \def\tthciteform##1##2##3##4{\tthpnote\ ##1}\cite[#1]{#2}
+  \egroup%
+ \else
+  \def\tthciteform##1##2##3##4{\tthpnote\ ##3 ##2}\cite[#1]{#2}
+ \egroup%
+ \fi
+}
+\newcommand\citep[2][]{
+\ifx #2[\bgroup\def\tthpnote{#1\def\tthpnote{}} \tthsubcitep[\else{%
+  \ifNAT@numbers \def\tthciteform##1##2##3##4{##1}
+  \else\def\tthciteform##1##2##3##4{##3, ##2}\fi%
+\def\tthciteob{[}\def\tthcitecb{]}\cite[#1]{#2}}%
+\fi}
+
+% Additional types of natbib reference.
+\newcommand\citeauthor[2][]{{%\def\tthciteob{}
+\def\tthcitecb{}%
+ \def\tthciteform##1##2##3##4{##3}\cite[#1]{#2}}}
+\newcommand\citeyear[2][]{{%\def\tthciteob{}
+\def\tthcitecb{}
+ \def\tthciteform##1##2##3##4{##2}\cite[#1]{#2}}}
+\newcommand\citeyearpar[2][]{{\def\tthciteob{[}\def\tthcitecb{]}
+ \def\tthciteform##1##2##3##4{##2}\cite[#1]{#2}}}
+
+% bibpunct setting
+\newcommand\bibpunct[7][, ]{
+ \def\tthciteob{#2}\def\tthcitecb{#3}\def\tthcitepb{#4}
+ \ifx#5n\NAT@numberstrue\else
+  \ifx#5s\NAT@numberstrue
+    \def\tthciteob{#2$^\bgroup}\def\tthcitecb{\egroup$#3}%
+  \else\NAT@numbersfalse	
+  \fi
+ \fi
+}
+
+
+

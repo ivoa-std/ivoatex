@@ -1,0 +1,62 @@
+\documentclass{ivoatex/ivoa}
+\input ivoatex/tthdefs
+
+\title{???? Full title ????}
+
+\ivoagroup{???? group ????}
+
+\author[????URL????]{????Alfred Usher Thor????}
+\author{????Fred Offline????}
+
+\editor{Markus Demleitner}
+
+% \previousversion[????URL????]{????Funny Label????}
+\previousversion{This is the first public release}
+       
+
+\begin{document}
+\begin{ivoaabstract}
+???? Abstract ????
+\end{ivoaabstract}
+
+
+\section*{Acknowledgments}
+
+???? Or remove the section header ????
+
+\section*{Conformance-related definitions}
+
+The words ``MUST'', ``SHALL'', ``SHOULD'', ``MAY'', ``RECOMMENDED'', and
+``OPTIONAL'' (in upper or lower case) used in this document are to be
+interpreted as described in IETF standard, \citet{std:RFC2119}.
+
+The \emph{Virtual Observatory (VO)} is
+general term for a collection of federated resources that can be used
+to conduct astronomical research, education, and outreach.
+The \href{http://www.ivoa.net}{International
+Virtual Observatory Alliance (IVOA)} is a global
+collaboration of separately funded projects to develop standards and
+infrastructure that enable VO applications.
+
+
+\section{Introduction}
+
+???? Write something ????
+
+\subsection{Definitions}
+
+???? and so on, LaTeX as you know and love it. ????
+
+\appendix
+\section{Changes from Previous Versions}
+
+No previous versions yet.  
+% these would be subsections "Changes from v. WD-..."
+% Use itemize environments.
+
+
+\bibliographystyle{abbrvnat}
+\bibliography{ivoatex/ivoabib}
+
+
+\end{document}
