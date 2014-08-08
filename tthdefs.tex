@@ -1,6 +1,5 @@
 \newif\iftth
 \iftth
-\input tthntbib.sty
 \input ivoatexmeta
 
 \begin{html}
@@ -53,6 +52,17 @@
       </div> <!-- admonition -->
     \end{html}
   }
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
+
+  \newcommand{\harvarditem}[4][0]{%
+    \special{html:<a name='#4'/>}
+    \if 0#1 \item[#2 (#3)]
+    \else \item[#1 (#3)]\fi}
+  \newcommand{\harvardurl}[1]{\url{#1}}
+  \newcommand{\harvardand}{\&}
+  \newcommand{\harvardyearleft}{(}
+  \newcommand{\harvardyearright}{)}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
 

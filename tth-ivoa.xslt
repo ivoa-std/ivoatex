@@ -33,6 +33,43 @@
           <xsl:value-of select="$CSS_HREF"/>
         </xsl:attribute>
       </xsl:element>
+      <xsl:call-template name="selectDoctypeStyle"/>
+
+			<style type="text/css"><![CDATA[
+				div#versionstatement, div#dateline {
+					color: #005A9C;
+					font-size: 150%;
+				}
+
+				p.parsep {
+					overflow: hidden;
+					height: 0pt;
+					margin-top:0.5ex;
+					margin-bottom:0.5ex;
+				}
+
+				div.admonition {
+					width: 30em;
+					position: relative;
+					float: right;
+					background-color: #dddddd;
+					font-size: 80%;
+					margin: 1ex;
+					padding: 3pt;
+					overflow: auto;
+				}
+				
+				p.admonition-type {
+					background-color: #444444;
+					color: #ffffff;
+					margin-top: 0px;
+					padding-left: 5pt;
+					padding-top: 5pt;
+					padding-bottom: 5pt;
+					font-weight: bold;
+				}
+			]]></style>
+
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
@@ -114,40 +151,36 @@
   <xsl:template match="style[./@type='text/css']">
   </xsl:template>
 
-  <xsl:template match="body/div[./@class='p']">
-    <p/>
-  </xsl:template>
-
   <xsl:template match="dd/div[./@class='p']">
   </xsl:template>
 
   <xsl:template match="span[@id='doctype']" mode="humanreadable">
-  	<xsl:variable name="pubstatus" select="."/>
+  	<xsl:variable name="doctype" select="."/>
     <xsl:choose>
-       <xsl:when test="$pubstatus='WD'">
+       <xsl:when test="$doctype='WD'">
            <xsl:text>IVOA Working Draft </xsl:text>
        </xsl:when>
-       <xsl:when test="$pubstatus='PR'">
+       <xsl:when test="$doctype='PR'">
            <xsl:text>IVOA Proposed Recommendation </xsl:text>
        </xsl:when>
-       <xsl:when test="$pubstatus='REC'">
+       <xsl:when test="$doctype='REC'">
            <xsl:text>IVOA Recommendation </xsl:text>
        </xsl:when>
-       <xsl:when test="$pubstatus='NOTE'">
+       <xsl:when test="$doctype='NOTE'">
            <xsl:text>IVOA Note </xsl:text>
        </xsl:when>
        <xsl:otherwise>
-           <xsl:message terminate='yes'>pubstatus must be one of
+           <xsl:message terminate='yes'>doctype must be one of
                WD, PR, REC, NOTE</xsl:message>
        </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
   <xsl:template match="div[@id='statusOfThisDocument']">
-  	<xsl:variable name="pubstatus" select="."/>
+  	<xsl:variable name="doctype" select="."/>
       <p id="statusdecl"><em>
           <xsl:choose>
-              <xsl:when test="$pubstatus='NOTE'">
+              <xsl:when test="$doctype='NOTE'">
                   This is an IVOA Note expressing suggestions from and
                   opinions of the authors. It is intended to share best
                   practices, possible approaches, or other perspectives on
@@ -155,7 +188,7 @@
                   not be referenced or otherwise interpreted as a standard
                   specification.
               </xsl:when>
-              <xsl:when test="$pubstatus='WD'">
+              <xsl:when test="$doctype='WD'">
                   This is an IVOA Working Draft for review by IVOA members
                   and other interested parties.  It is a draft document and
                   may be updated, replaced, or obsoleted by other documents
@@ -163,14 +196,14 @@
                   as reference materials or to cite them as other than "work
                   in progress".
               </xsl:when>
-              <xsl:when test="$pubstatus='PR'">
+              <xsl:when test="$doctype='PR'">
                   This is an IVOA Proposed Recommendation made available for
                   public review. It is appropriate to reference this document
                   only as a recommended standard that is under review and
                   which may be changed before it is accepted as a full
                   Recommendation.
               </xsl:when>
-              <xsl:when test="$pubstatus='REC'">
+              <xsl:when test="$doctype='REC'">
                   This document has been reviewed by IVOA Members and other
                   interested parties, and has been endorsed by the IVOA
                   Executive Committee as an IVOA Recommendation. It is a
@@ -182,11 +215,29 @@
                   interoperability inside the Astronomical Community.
               </xsl:when>
               <xsl:otherwise>
-                  <xsl:message terminate='yes'>pubstatus must be one of
+                  <xsl:message terminate='yes'>doctype must be one of
                       WD, PR, REC, NOTE</xsl:message>
               </xsl:otherwise>
           </xsl:choose>
       </em></p>
+  </xsl:template>
+
+	<xsl:template name="selectDoctypeStyle">
+  	<xsl:variable name="doctype" select="//span[@id='doctype']"/>
+    <link rel="stylesheet" type="text/css">
+      <xsl:attribute name="href">
+        <xsl:choose>
+         <xsl:when test="$doctype='WD'"
+            >http://www.ivoa.net/misc/ivoa_wd.css</xsl:when>
+         <xsl:when test="$doctype='PR'"
+            >http://www.ivoa.net/misc/ivoa_pr.css</xsl:when>
+         <xsl:when test="$doctype='REC'"
+            >http://www.ivoa.net/misc/ivoa_rec.css</xsl:when>
+         <xsl:when test="$doctype='NOTE'"
+            >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
+       </xsl:choose>
+     </xsl:attribute>
+   	</link>
   </xsl:template>
 
   <!-- Make a link to the current version on the ivoa doc server.
@@ -228,6 +279,14 @@
        <xsl:value-of select="$currenturl"/>
     </xsl:element>
   </xsl:template>
+
+	<!-- tth has given up detecting Ps in TeX source and hacks in
+	     div class="p" elements as paragraph separators.  These
+	     are potentially very confusing to browsers.  We hence 
+	     replace them with hopefully less confusing constructs -->
+	<xsl:template match="div[@class='p']">
+		<p class="parsep"><span> </span></p>
+	</xsl:template>
 
 	<xsl:template match="body">
 		<xsl:apply-templates/>
