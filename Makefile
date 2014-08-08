@@ -48,7 +48,8 @@ archive: $(DOC).pdf $(DOC).html $(UPLOAD).zip $(ARCHIVE).zip
 
 clean:
 	rm -f $(DOCNAME).pdf $(DOCNAME).aux $(DOCNAME).log $(DOCNAME).toc texput.log
-	rm -f $(DOCNAME).html $(DOCNAME).xhtml $(UPLOAD).zip $(ARCHIVE).zip
+	rm -f $(DOCNAME).html $(DOCNAME).xhtml
+	rm -f *.bbl *.blg *.out debug.html
 
 ivoatexmeta.tex: Makefile
 	rm -f $@

@@ -36,7 +36,7 @@ with revision control on volute with svn:externals, do something like
 (7) cd $DOCNAME
 (8) svn propset svn:externals "ivoatex $VOLUTEBASE/ivoapub/ivoatex" .
 (9) svn update
-(9a) svn propset svn:ignore ivoatex/svn-ignore.txt
+(9a) svn propset svn:ignore . --file ivoatex/svn-ignore.txt
 
 This has the advantage that you get updates automatically and that it is 
 trivial to feed back your bibliography additions and fixes into the
@@ -60,8 +60,8 @@ Fill out the marked-up things in Makefile, edit $DOCNAME.tex, and then run
   DOCVERSION, DOCTYPE, and DOCDATE in the Makefile before submitting things.
 
 
-Editing help
-============
+Authoring
+=========
 
 The least you need for an ivoatex instance document is::
 
@@ -93,12 +93,18 @@ Non-obvious features include:
   your source isn't yet in ivoabib, please add it and contribute your
   new records.  Incidentally, no variant forms of citep and citet are 
   supported yet (but we'll try to change that).
+* There's an environment for "admonition boxes" like "Note", "Tip", etc.
+	Say \begin{admonition}{<admontype>}.  <admontype> will be the head
+	of the box, and in the future we may also have icons for the most common
+	headings.
 
 
 Trouble?
 ========
 
-If 
+In case of ivoatex-related issues, contact gavo@ari.uni-heidelberg.de.
+
+
 Acknowledgements
 ================
 

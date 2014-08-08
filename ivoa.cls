@@ -1,4 +1,4 @@
-\ProvidesClass{ivoa}
+\ProvidesClass{ivoatex/ivoa}
 \LoadClass[11pt,a4paper]{article}
 
 \NeedsTeXFormat{LaTeX2e}
@@ -11,11 +11,18 @@
 \RequirePackage{paralist}
 \RequirePackage{url}
 \RequirePackage{natbib}
-\RequirePackage[colorlinks]{hyperref}
 
 \definecolor{ivoacolor}{rgb}{0.0,0.318,0.612}
+\definecolor{linkcolor}{rgb}{0.318,0,0.318}
 
-% \MakeShortVerb{!} % for use in !keyword! (use with \DeleteShortVerb)
+\RequirePackage[colorlinks,
+	linkcolor=linkcolor,
+	anchorcolor=linkcolor,
+	citecolor=linkcolor,
+	pagecolor=linkcolor,
+	urlcolor=linkcolor]{hyperref}
+
+\bibliographystyle{agsm}
 
 \makeatletter
 
@@ -126,7 +133,6 @@
    	\docstatusDeclaration{\ivoaDoctype}
    	\tableofcontents}
 
-\makeatother
 
 \newcommand\expandedDoctype[1] % "Proposed Recommendation" for PR and such
 	{\ifthenelse{\equal{#1}{NOTE}}
@@ -185,21 +191,59 @@
 		{http://www.ivoa.net/documents/\ivoaDocname}}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Styling various item
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\raggedright\normalfont\Large
+                                   \color{ivoacolor}\bfseries\sffamily}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large
+                                     \color{ivoacolor}\bfseries\sffamily}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize
+                                     \color{ivoacolor}\bfseries\sffamily}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\normalfont\normalsize
+                                    \color{ivoacolor}\bfseries\sffamily}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+                                       {3.25ex \@plus1ex \@minus .2ex}%
+                                       {-1em}%
+                                      {\normalfont\normalsize\bfseries}}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Various utilities for writing IVOA docs
 
-\newenvironment{admonition}[1]
-% a simple admonition box
-  {%
-  \setlength\fboxsep{4pt}%
-  \begin{quotation}%  TODO: use something better here
-  \addtolength{\hsize}{-0.20\columnwidth}%
-  {\centering\Large#1\\[0.2cm]}%
-  \noindent\ignorespaces\raggedright%
+\newenvironment{admonition}[1]{ % a simple admonition box
+  \begin{table} %% TBD: use a different sort of insertion env?
+  \hskip -0.75cm
+  \begin{minipage}[r]{0.75\columnwidth}%
+  {\color{lightgray}\hrule}
+  \medskip
+  \hfil
+  \begin{minipage}[c]{0.9\columnwidth}
+  \small
+  \makebox[\columnwidth][l]{\sffamily\bfseries\color{ivoacolor}#1}%
+  \par\smallskip
+  \noindent\raggedright\ignorespaces
   }%
   {%
-  \end{quotation}%
-  \par
+  \end{minipage}
+  \hfil
+  \medskip
+  {\color{lightgray}\hrule}
+  \end{minipage}%
+  \end{table}
   }%
 
+
+\makeatother
 
 \input ivoatexmeta.tex
