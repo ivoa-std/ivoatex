@@ -68,6 +68,11 @@
 					padding-bottom: 5pt;
 					font-weight: bold;
 				}
+
+				a.tth_citation, a.tth_citeref {
+					color: #002A5C;
+					text-decoration: none;
+				}
 			]]></style>
 
       <xsl:apply-templates/>

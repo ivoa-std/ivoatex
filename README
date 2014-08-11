@@ -82,9 +82,6 @@ Non-obvious features include:
   been conforming, and we may provide a macro to deal with this later
   (but also maybe a fully automatic management of previous versions
   base on the change log?)
-* Right now, you must use the ivoaabstract environment rather than the
-  abstract environment.  That's because this is a pre-alpha version.
-  We hope to sort out things with tth so the abstract can be in abstract
 * ivoadoc uses natbib and BibTeX.  Don't be afraid, it's actually
   dead simple.   If you want to reference something, check out
   ivoatex/ivoabib.bib.  If what you're looking for is already in there,

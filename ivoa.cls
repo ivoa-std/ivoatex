@@ -118,7 +118,7 @@
 
 
 
-\newenvironment{ivoaabstract}{%
+\renewenvironment{abstract}{%
     \thispagestyle{empty}
     \maketitle
     \@beginparpenalty\@lowpenalty

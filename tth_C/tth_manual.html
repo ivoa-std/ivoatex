@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
            "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
-<meta name="GENERATOR" content="TtH 4.03">
+<meta name="GENERATOR" content="TtH 4.04">
  <style type="text/css"> div.p { margin-top: 7pt;}</style>
  <style type="text/css"><!--
  td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
@@ -31,7 +31,7 @@
 <center><img src="tth.gif" alt="TtH icon" /></center>
 
 <table align="center" border="0"><tr><td>
-Version 4.03</td></tr></table><!--hboxt-->
+Version 4.04</td></tr></table><!--hboxt-->
 
 <h3 align="center"> </h3>
 <h3 align="center"> </h3>
@@ -131,31 +131,43 @@ translates the equations, instead of converting them into images.
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc10.3"
 >10.3&nbsp; Limitations</a><br />
 <a href="#tth_sEc11"
->11&nbsp; HTML and output</a><br />
+>11&nbsp; Producing output split into different files.</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc11.1"
->11.1&nbsp; Formal HTML validation</a><br />
+>11.1&nbsp; Overview</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc11.2"
->11.2&nbsp; HTML Styles</a><br />
+>11.2&nbsp; Navigation Controls at File Top and Tail</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc11.3"
+>11.3&nbsp; Special Precautions when Splitting Output</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc11.3.1"
+>11.3.1&nbsp; Floats such as figures or tables</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc11.3.2"
+>11.3.2&nbsp; Multiple Bibliographies</a><br />
 <a href="#tth_sEc12"
->12&nbsp; Browser and Server Problems</a><br />
+>12&nbsp; HTML and output</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc12.1"
->12.1&nbsp; Accessing Symbol Fonts: Overview</a><br />
+>12.1&nbsp; Formal HTML validation</a><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc12.2"
->12.2&nbsp; Accessing Symbol Fonts: Details</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc12.3"
->12.3&nbsp; Printing</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc12.4"
->12.4&nbsp; Netscape/Mozilla Composer</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc12.5"
->12.5&nbsp; Other Browser Bugs</a><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc12.6"
->12.6&nbsp; Web server problems</a><br />
+>12.2&nbsp; HTML Styles</a><br />
 <a href="#tth_sEc13"
->13&nbsp; Code Critique</a><br />
+>13&nbsp; Browser and Server Problems</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc13.1"
+>13.1&nbsp; Accessing Symbol Fonts: Overview</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc13.2"
+>13.2&nbsp; Accessing Symbol Fonts: Details</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc13.3"
+>13.3&nbsp; Printing</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc13.4"
+>13.4&nbsp; Netscape/Mozilla Composer</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc13.5"
+>13.5&nbsp; Other Browser Bugs</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#tth_sEc13.6"
+>13.6&nbsp; Web server problems</a><br />
 <a href="#tth_sEc14"
->14&nbsp; License</a><br />
+>14&nbsp; Code Critique</a><br />
 <a href="#tth_sEc15"
->15&nbsp; Acknowledgements</a><br />
+>15&nbsp; License</a><br />
+<a href="#tth_sEc16"
+>16&nbsp; Acknowledgements</a><br />
 <a href="#tth_sEcA"
 >A&nbsp; Appendix: Non-Standard <span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;Macros</a><br />
 <a href="#tth_sEcB"
@@ -1218,7 +1230,7 @@ a new line unless they happen to be adjacent to a table already. Thus
 an hbox in a line will give a line break that you might not have
 wanted. This behaviour is really a bug in the browsers, but we are
 currently stuck with it. The behaviour of HTML tables is buggy
-[see <a href="#tablebug">12.5</a>] when their alignment is specified, which means that
+[see <a href="#tablebug">13.5</a>] when their alignment is specified, which means that
 strange results are likely if more than one box on a line is being
 set. Boxes in equations are troublesome. The only type that is
 reasonably supported is <tt>\mbox</tt> which is often used in <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;for
@@ -1531,20 +1543,246 @@ the font commands used for colors in HTML. As a result, use of
 10.3&nbsp;&nbsp;Limitations</h3>
 Color commands do not propagate into different cells of HTML tables
 because of what may be regarded as a browser bug
-[<a href="#cellbug">12.5</a>]. For that reason, tables and equations will not color
+[<a href="#cellbug">13.5</a>]. For that reason, tables and equations will not color
 correctly if the color commands enclose more than one cell (for
 tables) or equation element. Remember also that some computers may be
 limited in their color display capability, so the subtleties of colors
 will be lost in some circumstances. 
 
 <div class="p"><!----></div>
- <a id="tth_sEc11"></a><h2>
-11&nbsp;&nbsp;HTML and output</h2>
 
+<div class="p"><!----></div>
+ <a id="tth_sEc11"></a><h2>
+11&nbsp;&nbsp;Producing output split into different files.</h2>
+
+<div class="p"><!----></div>
      <a id="tth_sEc11.1"></a><h3>
-11.1&nbsp;&nbsp;Formal HTML validation</h3>
+11.1&nbsp;&nbsp;Overview</h3>
+
+<div class="p"><!----></div>
+Because the <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;program itself always produces just one output file,
+the division of the output into different files takes place in two
+steps. First, <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;is run on the <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;file with the switch
+<tt>-s</tt> (for "split"). This switch tells <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;to produce output
+that is in <b>multipart MIME</b> format. Incidentally, this format is
+used for sending multipart mail messages with attachments over the
+internet. For present purposes it is simply a convenient standard for
+<span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;to use to show how to split the output and what the names of the
+final files should be. If we wanted to keep this MIME file, then for
+example the command
+
+<pre>
+tth&nbsp;-s&nbsp;-Ltexdocument&nbsp;&lt;texdocument.tex&nbsp;&#62;mimedocument.html
+
+</pre>
+
+<div class="p"><!----></div>
+ would produce such a file called <tt>mimedocument.html</tt> from a
+<span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;file called <tt>texdocument.tex</tt>. The switch <tt>-L</tt>
+tells <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;to use auxiliary files that were produced when <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;
+was previously run on it. Alternatively if you want the output file to
+have the same name as the texdocument but with the extension
+<tt>html</tt>, you can use just
+
+<pre>
+tth&nbsp;-s&nbsp;texdocument
+
+</pre>
+
+<div class="p"><!----></div>
+There are available standard tools for unpacking multipart mime files
+into their individual files, notably the <tt>mpack</tt> tools available from
+the "Andrew" distribution, which may be available on some
+systems. However the executable <tt>tthsplit</tt>  (whose source is in
+the tthgold directory) is a more specific 
+program that will unpack MIME files produced by <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>. (<tt>tthsplit</tt>
+will <em>not</em> handle general MIME files.) To unpack the multipart
+file into its individual files requires the simple command:
+
+<div class="p"><!----></div>
+
+<pre>
+tthsplit&nbsp;&lt;mimedocument.html
+
+</pre>
+
+<div class="p"><!----></div>
+ This will inform the user of the files produced, for
+example
+
+<div class="p"><!----></div>
+
+<pre>
+index.html
+chap1.html
+chap2.html
+refs.html
+footnote.html
+
+</pre>
+
+<div class="p"><!----></div>
+ the file <tt>index.html</tt> is always the topmost file with
+links to succeeding files, and cross-links from any table of contents
+or list of figures, etc. 
+
+<div class="p"><!----></div>
+It is unnecessary to save the intermediate file. Instead, the output
+of <tt>tth</tt> can be piped to <tt>tthsplit</tt> to produce the split
+files directly by the command line:
+
+<div class="p"><!----></div>
+
+<pre>
+tth&nbsp;-s&nbsp;-Ltexdocument&nbsp;&lt;texdocument.tex&nbsp;|&nbsp;tthsplit
+
+</pre>
+
+<div class="p"><!----></div>
+Since the names of the split parts of the document are predetermined,
+it is strongly advisable to make a separate directory for each
+different <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;document to keep the parts of the document in. The
+conversion and splitting must then be performed in that directory to
+ensure the files end up there. This task is left to the user.
+
+<div class="p"><!----></div>
+The Windows graphical user interface tth-gui offers an option for
+the translated file to "split it here". If this button is checked,
+the file will be split in the same folder as the tex file, producing
+the HTML files as above.
+
+<div class="p"><!----></div>
+     <a id="tth_sEc11.2"></a><h3>
+11.2&nbsp;&nbsp;Navigation Controls at File Top and Tail</h3>
+
+<div class="p"><!----></div>
+By default <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;places navigation links labelled "PREVIOUS" and
+"NEXT" at the top and tail of the split pages, and a link "HEAD"
+to the first section of the file at both places. These do not use cute
+little images because images have to be in separate files, which would
+defeat the principle of <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;always outputing just one file. However,
+authors might want their own images or indeed far more elaborate
+navigation links. The links can be customized straightforwardly by
+redefining two special macros that are used for the navigation
+section. By default these macros are defined as
+
+<pre>
+\def\tthsplittail{
+&nbsp;\special{html:\n&lt;hr&#62;&lt;table&nbsp;width=\"100\%\"&#62;&lt;tr&#62;&lt;td&#62;
+&nbsp;&lt;a&nbsp;href=\"}\tthfilenext\special{html:\"&#62;}NEXT
+&nbsp;\special{html:&lt;/a&#62;&lt;/td&#62;&lt;td&nbsp;align=\"right\"&#62;
+&nbsp;&lt;a&nbsp;href=\"index.html\"&#62;HEAD&lt;/a&#62;&lt;/td&#62;&lt;/tr&#62;&lt;/table&#62;\n&lt;/html&#62;}}
+\def\tthsplittop{
+&nbsp;\special{html:&lt;table&nbsp;width=\"100\%\"&#62;&lt;tr&#62;&lt;td&#62;
+&nbsp;&lt;a&nbsp;href=\"}\tthfilechar\special{html:\"&#62;}PREVIOUS
+&nbsp;\special{html:&lt;/a&#62;&lt;/td&#62;&lt;td&nbsp;align=\"right\"&#62;
+&nbsp;&lt;a&nbsp;href=\"index.html\"&#62;HEAD&lt;/a&#62;&lt;/td&#62;&lt;/tr&#62;&lt;/table&#62;}}
+
+</pre>
+
+<div class="p"><!----></div>
+The macro <tt>\tthsplittail</tt> is called when splitting, as soon as a
+chapter or section command is detected. Then after the split is
+completed and the HTML header has been inserted for the next file,
+<tt>\tthsplittop</tt> is called. Note that these macros use the
+builtins <tt>\tthfilenext</tt> and <tt>\tthfilechar</tt> to access the
+names of the next and the previous HTML files respectively.
+
+<div class="p"><!----></div>
+These splitting macros can be redefined to whatever style of
+navigation the author prefers. But careful attention should be paid to
+the use of raw HTML output, for example using the HTML special.
+
+<div class="p"><!----></div>
+     <a id="tth_sEc11.3"></a><h3>
+11.3&nbsp;&nbsp;Special Precautions when Splitting Output</h3>
+
+<div class="p"><!----></div>
+      <a id="tth_sEc11.3.1"></a><h4>
+11.3.1&nbsp;&nbsp;Floats such as figures or tables</h4>
+If you are splitting an article-style file that has a lot of
+floating bodies (i.e. figures or tables) in it, these may be moved by
+<span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;beyond the end of their corresponding section. This is a
+familiar problem with <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>. The result of this float misplacement
+is that <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;may become confused and generate incorrect
+cross-references to these floats in the list of figures and or list of
+tables, because the only way that <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;can tell the section of float
+placement is by the order of lines in the auxiliary files. If this
+happens, some special precautions will prevent it. 
+
+<div class="p"><!----></div>
+All that is required is to add to the <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;source file, in the
+preamble between the documentclass and the begin{document} commands,
+the extra command:
+
+<div class="p"><!----></div>
+
+<pre>
+\input&nbsp;/usr/local/tth/tthprep.sty
+
+</pre>
+
+<div class="p"><!----></div>
+ where the path should be to wherever you unpacked or are
+keeping the tth distribution file <tt>tthprep.sty</tt>. Then <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;should
+be run twice on the file to create the auxiliary files that tth will
+use in its translation. Because of the extra definitions in
+<tt>tthprep.sty</tt>, the auxiliary files so produced can be interpreted by
+tth to give correctly linked split files. If you want to produce
+<tt>dvi</tt> output from your <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;then you should remove this extra
+input command.  None of this is needed unless splitting by <em>
+sections </em> (not chapters) is to be performed or floats are
+problematic.
+
+<div class="p"><!----></div>
+To make it easier for the user, a script is provided called
+<tt>tthprep</tt> which automates the process of producing satisfactory
+auxiliary files through the single command
+
+<div class="p"><!----></div>
+
+<pre>
+tthprep&nbsp;texdocument.tex
+
+</pre>
+
+<div class="p"><!----></div>
+ The script will leave the <span class="roman">L</span><sup><span class="roman">A</span></sup><span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;file in its original condition,
+but the auxiliary files in appropriate form for <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>.
+
+<div class="p"><!----></div>
+      <a id="tth_sEc11.3.2"></a><h4>
+11.3.2&nbsp;&nbsp;Multiple Bibliographies</h4>
+Multiple bibliographies in split files are a problem. All the
+citations in the rest of the text link to a single file
+<tt>refs.html</tt> because there is no way for TtHgold know the name of other
+files to refer to. However, each time a bibliography is started,
+when splitting, TtHgold starts a new file. TtHgold numbers reference
+files after the first as <tt>refs1.html</tt> <tt>refs2.html</tt>
+etc. 
+
+<div class="p"><!----></div>
+After splitting the output using tthsplit, the user has then to
+concatenate the reference files into a single html file if the
+cross-references are all to be correct. The utility program
+<tt>tthrfcat</tt> will do this if run in the directory where the split
+files reside. It destroys all the <tt>refsx.html</tt> files. But since those
+were generated by TtHgold, they can always be generated again. Some
+spurious file navigation buttons will remain in the resulting
+<tt>refs.html</tt> file. They can be removed by hand if desired.
+
+<div class="p"><!----></div>
+Things go much more smoothly if there is only one bibliography per TeX
+document and it is at the end of the TeX file.
+
+<div class="p"><!----></div>
+ <a id="tth_sEc12"></a><h2>
+12&nbsp;&nbsp;HTML and output</h2>
+
+     <a id="tth_sEc12.1"></a><h3>
+12.1&nbsp;&nbsp;Formal HTML validation</h3>
 <a 
-id="title_HTML_construction111"></a> <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;takes as its standard HTML that
+id="title_HTML_construction121"></a> <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;takes as its standard HTML that
 can be rendered by Netscape and IE browsers versions 4 and higher
 (with the caveats above).  The formal standard that <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>-translated
 documents follow is strictly HTML4.0[1]<a href="#tthFtNtAAI" id="tthFrefAAI"><sup>8</sup></a>
@@ -1587,8 +1825,8 @@ usage causes a violation of the formal standard, browsers will
 still render the output correctly if this manual is followed.
 
 <div class="p"><!----></div>
-     <a id="tth_sEc11.2"></a><h3>
-11.2&nbsp;&nbsp;HTML Styles</h3>
+     <a id="tth_sEc12.2"></a><h3>
+12.2&nbsp;&nbsp;HTML Styles</h3>
 <a id="htmlstyle">
 </a>
 There are good reasons why the <tt>&lt;head&gt;</tt> and <tt>&lt;body&gt;</tt> tags
@@ -1635,9 +1873,9 @@ Addition of four to the writing style index (e.g. -w4) prevents
  that will pass standards validation. According to the standard, HTML
  font changing commands like most others, are either of
  inline<a 
-id="inline_elements112"></a> type, in which case they are forbidden
+id="inline_elements122"></a> type, in which case they are forbidden
  to contain block<a 
-id="block_level_elements112"></a> level constructs like
+id="block_level_elements122"></a> level constructs like
  tables, or block type, in which case they force a new line and so
  can't be used within a paragraph. The default can't universally fix
  this unnecessarily restrictive requirement of the standard (which
@@ -1647,8 +1885,8 @@ id="block_level_elements112"></a> level constructs like
  this approach, reverting to less standards-compatible style.
 
 <div class="p"><!----></div>
- <a id="tth_sEc12"></a><h2>
-12&nbsp;&nbsp;Browser and Server Problems</h2>
+ <a id="tth_sEc13"></a><h2>
+13&nbsp;&nbsp;Browser and Server Problems</h2>
 
 <div class="p"><!----></div>
 <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;translates <span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;into standard HTML and takes account as far as
@@ -1657,14 +1895,14 @@ there are several problems that are associated with the browsers, and
 a few that are associated with web servers. Authors and publishers
 should recognize that these are <em>not</em> <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;bugs. Font-related
 problems are complicated. If you don't need all the gory details, you
-might want to read section <a href="#fontoverview">12.1</a> and then skip to
-.
+might want to read section <a href="#fontoverview">13.1</a> and then skip to
+<a href="#exploder">13.3</a>.
 
 <div class="p"><!----></div>
 <a 
-id="fonts_accessing120"></a><a 
-id="symbol_font_accessing120"></a>     <a id="tth_sEc12.1"></a><h3>
-12.1&nbsp;&nbsp;Accessing Symbol Fonts: Overview</h3><a id="fontoverview">
+id="fonts_accessing130"></a><a 
+id="symbol_font_accessing130"></a>     <a id="tth_sEc13.1"></a><h3>
+13.1&nbsp;&nbsp;Accessing Symbol Fonts: Overview</h3><a id="fontoverview">
 </a>
 
 <div class="p"><!----></div>
@@ -1681,9 +1919,9 @@ font use.
 
 <div class="p"><!----></div>
 <a 
-id="switches_-y1121"></a><a 
-id="switches_-y2121"></a><a 
-id="switches_-u121"></a>In brief, there are three ways to access the symbol fonts; these will
+id="switches_-y1131"></a><a 
+id="switches_-y2131"></a><a 
+id="switches_-u131"></a>In brief, there are three ways to access the symbol fonts; these will
 be described in more detail below. The following table indicates which of
 these approaches to accessing the symbol fonts works with which
 browser. It also outlines which of the mathematics rendering
@@ -1732,14 +1970,14 @@ In the interests of an eventual rationalization of this situation, TtH
  version 3.87 on, but this by no means universally satisfactory.
 
 <div class="p"><!----></div>
-     <a id="tth_sEc12.2"></a><h3>
-12.2&nbsp;&nbsp;Accessing Symbol Fonts: Details<a 
-id="fonts_details122"></a></h3>
+     <a id="tth_sEc13.2"></a><h3>
+13.2&nbsp;&nbsp;Accessing Symbol Fonts: Details<a 
+id="fonts_details132"></a></h3>
 
 <div class="p"><!----></div>
 <a 
-id="character_set122"></a><a 
-id="encoding122"></a>Prior to HTML4.0, that is, during the major phase of the evolution of
+id="character_set132"></a><a 
+id="encoding132"></a>Prior to HTML4.0, that is, during the major phase of the evolution of
 HTML, the default encoding for HTML documents was ISO-8859-1
 (sometimes called ISO Latin-1). The document encoding defines a
 mapping between the bytes of the file itself and characters. The
@@ -1845,9 +2083,11 @@ would be really nice if the browsers would get their act together on
 mathematical symbols.
 
 <div class="p"><!----></div>
-     <a id="tth_sEc12.3"></a><h3>
-12.3&nbsp;&nbsp;Printing<a 
-id="printing123"></a></h3>
+     <a id="tth_sEc13.3"></a><h3>
+13.3&nbsp;&nbsp;Printing<a 
+id="printing133"></a></h3>
+<a id="exploder">
+</a>
 
 <div class="p"><!----></div>
 In many browsers, the printing fonts are hard coded into the browser
@@ -1864,9 +2104,9 @@ provides the natural medium for people to <i>browse</i>, but not
 necessarily the best medium for paper production.
 
 <div class="p"><!----></div>
-     <a id="tth_sEc12.4"></a><h3>
-12.4&nbsp;&nbsp;Netscape/Mozilla Composer<a 
-id="Netscape_Mozilla_Composer124"></a></h3>
+     <a id="tth_sEc13.4"></a><h3>
+13.4&nbsp;&nbsp;Netscape/Mozilla Composer<a 
+id="Netscape_Mozilla_Composer134"></a></h3>
 <a id="nscomp">
 </a>
 Netscape Composer and Mozilla Composer is
@@ -1882,14 +2122,14 @@ this particular substitution, Composer will rearrange the document in
 various ways that it thinks are better, but that make the display of
 the document worse. The moral is, don't run <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;documents through
 Netscape Composer.<a 
-id="publish_through_composer_disallowed124"></a>
+id="publish_through_composer_disallowed134"></a>
   You therefore cannot use the "publish" facility
 of Composer. Transfering the document to the server with plain old ftp
 will keep it away from Composer's clutches.
 
 <div class="p"><!----></div>
-     <a id="tth_sEc12.5"></a><h3>
-12.5&nbsp;&nbsp;Other Browser Bugs</h3>
+     <a id="tth_sEc13.5"></a><h3>
+13.5&nbsp;&nbsp;Other Browser Bugs</h3>
 
 <div class="p"><!----></div>
 <a id="cellbug">
@@ -1918,11 +2158,11 @@ actually strictly <tt>&lt;td&gt;</tt> is one. However, even if you ensure that
 text is not inside a <tt>&lt;p&gt;</tt>, most browsers force a new line.
 
 <div class="p"><!----></div>
-     <a id="tth_sEc12.6"></a><h3>
-12.6&nbsp;&nbsp;Web server problems</h3>
+     <a id="tth_sEc13.6"></a><h3>
+13.6&nbsp;&nbsp;Web server problems</h3>
 <a 
-id="UTF-8126"></a><a 
-id="web-server126"></a>
+id="UTF-8136"></a><a 
+id="web-server136"></a>
 
 <div class="p"><!----></div>
 The HTML files that <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;produces are encoded using the charset
@@ -1989,9 +2229,9 @@ server, if you are a guru. Information is available at
   W3C FAQ</a>.
 
 <div class="p"><!----></div>
- <a id="tth_sEc13"></a><h2>
-13&nbsp;&nbsp;Code Critique<a 
-id="bugs130"></a></h2>
+ <a id="tth_sEc14"></a><h2>
+14&nbsp;&nbsp;Code Critique<a 
+id="bugs140"></a></h2>
 
 <div class="p"><!----></div>
 If you think you have found a bug, you can report it to
@@ -2012,12 +2252,12 @@ and sundry other operating systems. See
 <a href="http://hutchinson.belmont.ma.us/tth/platform.html">http://hutchinson.belmont.ma.us/tth/platform.html</a>.
 
 <div class="p"><!----></div>
- <a id="tth_sEc14"></a><h2>
-14&nbsp;&nbsp;License</h2>
+ <a id="tth_sEc15"></a><h2>
+15&nbsp;&nbsp;License</h2>
 
 <div class="p"><!----></div>
 <a 
-id="license140"></a><span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;is copyright &#169;&nbsp;Ian Hutchinson, 1997-2011.
+id="license150"></a><span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;is copyright &#169;&nbsp;Ian Hutchinson, 1997-2011.
 
 <div class="p"><!----></div>
 You are hereby freely licensed to use this software under the terms of
@@ -2031,8 +2271,8 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 <div class="p"><!----></div>
 
- <a id="tth_sEc15"></a><h2>
-15&nbsp;&nbsp;Acknowledgements</h2>
+ <a id="tth_sEc16"></a><h2>
+16&nbsp;&nbsp;Acknowledgements</h2>
 
 <div class="p"><!----></div>
 Many thanks for useful discussions and input to Robert Curtis, Ken
@@ -2244,7 +2484,7 @@ Therefore, the choice <em>not</em> to produce these tags automatically
 is a deliberate one based on a careful consideration of the advantages
 and disadvantages. An author can always adjust their <span class="roman">T</span><sub><span class="roman">E</span></sub><span class="roman">X</span>&nbsp;code to
 include them, if they wish to be pedantic about the division. See also
-the section on HTML style [<a href="#htmlstyle">11.2</a>].
+the section on HTML style [<a href="#htmlstyle">12.2</a>].
 
 <div class="p"><!----></div>
 <a 
@@ -2308,7 +2548,7 @@ kludge.
 id="ComposerB3"></a>
 <b>The file I "published" using Netscape Composer looks
 messed up when viewed on a Mac.&nbsp;&nbsp;</b><br />
-Don't use Composer on <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;documents. See section <a href="#nscomp">12.4</a>.
+Don't use Composer on <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>&nbsp;documents. See section <a href="#nscomp">13.4</a>.
 
 <div class="p"><!----></div>
 <a 
@@ -2558,11 +2798,11 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>bibtex, <a href="#bibtexB2113">B.2</a></dd>
  <dt><b></b></dt>
-	<dd>block level elements, <a href="#block_level_elements11289">11.2</a></dd>
+	<dd>block level elements, <a href="#block_level_elements12289">12.2</a></dd>
  <dt><b></b></dt>
 	<dd><tt>&lt;body&gt;</tt>, <a href="#bodyB3118">B.3</a></dd>
  <dt><b></b></dt>
-	<dd>bugs, <a href="#bugs130103">13.0</a><br /><br /></dd>
+	<dd>bugs, <a href="#bugs140103">14.0</a><br /><br /></dd>
  <dt><b></b></dt>
 	<dd>calligraphic, <a href="#calligraphicB3124">B.3</a></dd>
  <dt><b></b></dt>
@@ -2570,7 +2810,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>CGI script, <a href="#CGI_script3019">3.0</a></dd>
  <dt><b></b></dt>
-	<dd>character set, <a href="#character_set12296">12.2</a></dd>
+	<dd>character set, <a href="#character_set13296">13.2</a></dd>
  <dt><b></b></dt>
 	<dd>color, <a href="#color10085">10.0</a></dd>
  <dt><b></b></dt>
@@ -2608,7 +2848,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>double-quotes, <a href="#double-quotesB3125">B.3</a><br /><br /></dd>
  <dt><b></b></dt>
-	<dd>encoding, <a href="#encoding12297">12.2</a></dd>
+	<dd>encoding, <a href="#encoding13297">13.2</a></dd>
  <dt><b></b></dt>
 	<dd>environment</dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; not recognized, 
@@ -2635,8 +2875,8 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; <tt>face="symbol"</tt>, <a href="#font_face5125">5.1</a></dd>
  <dt><b></b></dt>
 	<dd>fonts, <a href="#fonts112">1.1</a></dd>
-<dd>&nbsp;&nbsp;&nbsp;&nbsp; accessing, <a href="#fonts_accessing12090">12.0</a></dd>
-<dd>&nbsp;&nbsp;&nbsp;&nbsp; details, <a href="#fonts_details12295">12.2</a></dd>
+<dd>&nbsp;&nbsp;&nbsp;&nbsp; accessing, <a href="#fonts_accessing13090">13.0</a></dd>
+<dd>&nbsp;&nbsp;&nbsp;&nbsp; details, <a href="#fonts_details13295">13.2</a></dd>
  <dt><b></b></dt>
 	<dd>footnotes, <a href="#footnotes9484">9.4</a></dd>
  <dt><b></b></dt>
@@ -2688,7 +2928,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>indexing, <a href="#indexing6351">6.3</a></dd>
  <dt><b></b></dt>
-	<dd>inline elements, <a href="#inline_elements11288">11.2</a></dd>
+	<dd>inline elements, <a href="#inline_elements12288">12.2</a></dd>
  <dt><b></b></dt>
 	<dd><tt>\input</tt></dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; "file not found" error, <a href="#inputB5137">B.5</a></dd>
@@ -2709,7 +2949,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; differences, <a href="#LaTeX2HTML_differences5126">5.1</a>, 
 		<a href="#LaTeX2HTML_differences6141">6.1</a></dd>
  <dt><b></b></dt>
-	<dd>license, <a href="#license140104">14.0</a></dd>
+	<dd>license, <a href="#license150104">15.0</a></dd>
  <dt><b></b></dt>
 	<dd>limitations, <a href="#limitations5229">5.2</a></dd>
  <dt><b></b></dt>
@@ -2731,7 +2971,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
 	<dd>messages, <a href="#messages4020">4.0</a><br /><br /></dd>
  <dt><b></b></dt>
 	<dd>Netscape/Mozilla Composer, 
-		<a href="#Netscape_Mozilla_Composer12499">12.4</a><br /><br /></dd>
+		<a href="#Netscape_Mozilla_Composer13499">13.4</a><br /><br /></dd>
  <dt><b></b></dt>
 	<dd><tt>&lt;p&gt;</tt>, <a href="#pB3126">B.3</a></dd>
  <dt><b></b></dt>
@@ -2741,7 +2981,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>postscript, <a href="#postscript6462">6.4</a></dd>
  <dt><b></b></dt>
-	<dd>printing, <a href="#printing12398">12.3</a></dd>
+	<dd>printing, <a href="#printing13398">13.3</a></dd>
  <dt><b></b></dt>
 	<dd>ps2gif, <a href="#ps2gif6458">6.4</a></dd>
  <dt><b></b></dt>
@@ -2749,7 +2989,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>publish</dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; through composer disallowed, 
-		<a href="#publish_through_composer_disallowed124100">12.4</a></dd>
+		<a href="#publish_through_composer_disallowed134100">13.4</a></dd>
 </dl></td></tr><tr><td valign="top"><hr />
 <dl>
  <dt><b></b></dt>
@@ -2784,15 +3024,15 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; -a, <a href="#switches_-a6146">6.1</a>, 
 		<a href="#switches_-a6567">6.5</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; -j, <a href="#switches_-j6354">6.3</a></dd>
-<dd>&nbsp;&nbsp;&nbsp;&nbsp; -u, <a href="#switches_-u12194">12.1</a></dd>
+<dd>&nbsp;&nbsp;&nbsp;&nbsp; -u, <a href="#switches_-u13194">13.1</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; -y1, <a href="#switches_-y15338">5.3</a>, 
-		<a href="#switches_-y112192">12.1</a></dd>
+		<a href="#switches_-y113192">13.1</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; -y2, <a href="#switches_-y25340">5.3</a>, 
-		<a href="#switches_-y212193">12.1</a></dd>
+		<a href="#switches_-y213193">13.1</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; <span class="roman">T</span><sub><span class="roman">T</span></sub><span class="roman">H</span>, <a href="#switches__TtH3014">3.0</a></dd>
  <dt><b></b></dt>
 	<dd>symbol font</dd>
-<dd>&nbsp;&nbsp;&nbsp;&nbsp; accessing, <a href="#symbol_font_accessing12091">12.0</a></dd>
+<dd>&nbsp;&nbsp;&nbsp;&nbsp; accessing, <a href="#symbol_font_accessing13091">13.0</a></dd>
 </dl></td><td valign="top"><hr />
 <dl>
  <dt><b></b></dt>
@@ -2810,7 +3050,7 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd>title</dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; HTML construction, 
-		<a href="#title_HTML_construction11187">11.1</a></dd>
+		<a href="#title_HTML_construction12187">12.1</a></dd>
 <dd>&nbsp;&nbsp;&nbsp;&nbsp; TeX commands not expanded in, 
 		<a href="#title_TeX_commands_not_expanded_inB3119">B.3</a></dd>
  <dt><b></b></dt>
@@ -2822,11 +3062,11 @@ accept that, even though <span class="roman">L</span><sup><span class="roman">A<
  <dt><b></b></dt>
 	<dd><tt>\usepackage</tt>, <a href="#usepackageB2110">B.2</a></dd>
  <dt><b></b></dt>
-	<dd>UTF-8, <a href="#UTF-8126101">12.6</a><br /><br /></dd>
+	<dd>UTF-8, <a href="#UTF-8136101">13.6</a><br /><br /></dd>
  <dt><b></b></dt>
 	<dd>warning, <a href="#warning4022">4.0</a></dd>
  <dt><b></b></dt>
-	<dd>web-server, <a href="#web-server126102">12.6</a></dd>
+	<dd>web-server, <a href="#web-server136102">13.6</a></dd>
  <dt><b></b></dt>
 	<dd>WinNT, <a href="#WinNTB5138">B.5</a></dd>
 </dl></td></tr></table>
@@ -2879,5 +3119,5 @@ the named colors.
 T<sub><span class="small">E</span></sub>X
 by <a href="http://hutchinson.belmont.ma.us/tth/">
 T<sub><span class="small">T</span></sub>H</a>,
-version 4.03.<br />On  5 Feb 2012, 23:02.</small>
+version 4.04.<br />On 22 Jun 2014, 18:00.</small>
 </html>

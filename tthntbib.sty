@@ -1,0 +1,24 @@
+% Very simplified natbib macros for ivoatex and tth.
+% 
+% This is for use with tth exclusively.
+%
+% We do not support multiple citations in one cite, any customisation,
+% etc -- just plain author (year) and (author, year); also the
+% three-argument forms are not supported.  Contributions are welcome.
+% 
+% Since the tth braces don't work for us at all, we just turn them off
+% entirely and manage them ourselves.
+%
+% This file is in the public domain
+
+\def\tthciteob{}\def\tthcitecb{}
+
+\newcommand{\citet}[2][]{
+	\def\tthciteform##1##2##3##4{
+		##3 (##2)}
+	\cite[#1]{#2}}
+
+\newcommand{\citep}[2][]{
+\def\tthciteform##1##2##3##4{
+	(##3, ##2)}
+	\cite[#1]{#2}}

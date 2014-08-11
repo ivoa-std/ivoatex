@@ -1,9 +1,13 @@
+Version 4.05
+____________
+Reimplement mathml bold as mathvariant. Implement \bm as bold-italic.
+Make environment abstract redefinable. 
+Add class to citation, citeref.
+
 Version 4.04
 ____________
 Fix bug in \not= when inside \edef.
 Fix bug in refs.xml reference while splitting.
-Incorporate splitting instructions into tth_manual (from gold_man)
-Adjust manual/makefile
 
 Version 4.03
 ____________

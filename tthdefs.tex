@@ -1,6 +1,7 @@
 \newif\iftth
 \iftth
 \input ivoatexmeta
+\input tthntbib.sty
 
 \begin{html}
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -29,8 +30,8 @@
    <span id='docname'>}\ivoaDocname\special{html:</span>
    <span id='docdate'>}\ivoaDocdate\special{html:</span>}}
 
-\newenvironment{ivoaabstract}{%
-   \includeMeta
+\newenvironment{abstract}{%
+  \includeMeta
   \begin{html}
     </div> <!-- titlepage -->
     <div id="abstract"><h2>Abstract</h2>
@@ -38,8 +39,8 @@
   }{%
     \special{html:<h2>Status of this Document</h2>
       <div id='statusOfThisDocument'>}\ivoaDoctype\special{html:</div>}
-      \tableofcontents
-      }
+    \tableofcontents
+  }
     
 
 \newenvironment{admonition}[1]{%
