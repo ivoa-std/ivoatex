@@ -6,7 +6,7 @@ This is another attempt at a generalised authoring system for IVOA
 
  * version-controlled source file(s)
  * reasonable-quality PDF and HTML output
- * low to moderate installation effort (on POSIX systems with TeX)
+ * low to moderate installation effort (on POSIX systems with LaTeX)
  * support with routine drudgery.
 
 
@@ -25,10 +25,9 @@ with revision control on volute with svn:externals, do something like
 
 (0) export VOLUTEBASE=https://volute.googlecode.com/svn/trunk/projects
 (1) export DOCNAME=?????
-(this would be your document's short name, like RegTAP, SIAv2, etc)
+	  (this would be your document's short name, like RegTAP, SIAv2, etc)
 (2) export WG=?????
-(this would be your Working Group: dal, dm, edu, grid, registry, theory,...)
-
+    (this would be your Working Group: dal, dm, edu, grid, registry...)
 (3) mkdir $DOCNAME
 (4) svn import MyNote $VOLUTEBASE/$WG/$DOCNAME
 (5) rmdir $DOCNAME
@@ -94,6 +93,16 @@ Non-obvious features include:
 	Say \begin{admonition}{<admontype>}.  <admontype> will be the head
 	of the box, and in the future we may also have icons for the most common
 	headings.
+
+
+Auxillary Files, Figures
+========================
+
+We're still waiting to get some experience here.  For pixel files
+understood by both the browser and LaTeX, using graphicx's
+\includegraphics should simply work.  Don't forget to include the files
+you have in the Makefile's SOURCES variable so they get included in the
+packages that get submitted to the ivoa.
 
 
 Trouble?

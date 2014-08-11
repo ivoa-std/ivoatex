@@ -7,3 +7,4 @@
 ivoatexmeta.tex
 *.log
 *.html
+*.zip

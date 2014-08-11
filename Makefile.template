@@ -1,3 +1,5 @@
+# ivoatex Makefile.  The ivoatex/README for the targets available.
+
 # short name of your document (edit $DOCNAME.tex; would be like RegTAP)
 DOCNAME = ????
 
@@ -10,8 +12,9 @@ DOCDATE = ???
 # What is it you're writing: NOTE, WD, PR, or REC
 DOCTYPE = ???
 
-# Additional source files ($DOCNAME.tex is included automatically)
-SOURCES = identifiers.tex
+# Source file for the TeX document (but the main file must always
+# be called $(DOCNAME).tex
+SOURCES = $(DOCNAME).tex
 
 # List of image files to be included in submitted package
 FIGURES =

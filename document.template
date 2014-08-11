@@ -55,7 +55,6 @@ No previous versions yet.
 % Use itemize environments.
 
 
-\bibliographystyle{abbrvnat}
 \bibliography{ivoatex/ivoabib}
 
 
