@@ -40,7 +40,6 @@ endif
 	$(PDF2GIF) $< $@
 
 $(DOCNAME).pdf: $(SOURCES) $(FIGURES) ivoatexmeta.tex
-	sh
 	$(PDFLATEX) $(DOCNAME)
 
 
