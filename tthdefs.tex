@@ -66,6 +66,8 @@
   \newcommand{\harvardyearright}{)}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
+  % shut up harmless error due to hyperref
+  \def\AtBeginDocument#1{\relax}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
   \begin{html}

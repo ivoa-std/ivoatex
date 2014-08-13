@@ -15,7 +15,7 @@ ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 #     C compiler
 #     GNU make (or another sufficiently powerful make)
 #     pdflatex
-#     PDF->GIF converter (ImageMagick)
+#     ghostscript (if you plan on postscript/pdf figures)
 #     zip
 #  All most likely present on, e.g., a linux disribution.
 #  Could use substitites for some of these if they are not available.
@@ -36,6 +36,8 @@ endif
 .SUFFIXES: .pdf .gif .tex
 .PHONY: biblio
 
+%.pdf.gif: %.pdf
+	$(PDF2GIF) $< $@
 
 $(DOCNAME).pdf: $(SOURCES) $(FIGURES) ivoatexmeta.tex
 	$(PDFLATEX) $(DOCNAME)
@@ -51,6 +53,7 @@ clean:
 	rm -f $(DOCNAME).pdf $(DOCNAME).aux $(DOCNAME).log $(DOCNAME).toc texput.log
 	rm -f $(DOCNAME).html $(DOCNAME).xhtml
 	rm -f *.bbl *.blg *.out debug.html
+	rm -f *.pdf.gif
 
 ivoatexmeta.tex: Makefile
 	rm -f $@
@@ -62,7 +65,7 @@ ivoatexmeta.tex: Makefile
 	echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
 	echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
 
-$(DOCNAME).html: $(DOCNAME).pdf $(FIGURES:=.gif) ivoatex/tth-ivoa.xslt $(TTH)
+$(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
           	| $(XSLTPROC) --html \
                          --stringparam CSS_HREF $(CSS_HREF) \

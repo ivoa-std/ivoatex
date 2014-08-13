@@ -89,6 +89,10 @@ Non-obvious features include:
   your source isn't yet in ivoabib, please add it and contribute your
   new records.  Incidentally, no variant forms of citep and citet are 
   supported yet (but we'll try to change that).
+* images: For now, we only really support pixel images; vector formats 
+	wouldn't be hard except for possible dependencies.  Talk to the authors
+	if you have a use case.  Otherwise, it's standard graphicx; there's
+	an example with the architecture diagram in the document template.
 * There's an environment for "admonition boxes" like "Note", "Tip", etc.
 	Say \begin{admonition}{<admontype>}.  <admontype> will be the head
 	of the box, and in the future we may also have icons for the most common

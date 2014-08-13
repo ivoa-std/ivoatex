@@ -43,7 +43,25 @@ infrastructure that enable VO applications.
 
 ???? Write something ????
 
-\subsection{Definitions}
+\subsection{Role within the VO Architecture}
+
+\begin{figure}
+\centering
+
+% Get the architecture diagram from the TCG chair
+% http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaTCG
+% If they give you a PDF, for now dumb it down to a png by
+% convert -antialias -density 72x72 archdiag.pdf archdiag.png
+% Oh -- Notes don't need this; you'd have to remove archdiag.png
+% from FIGURES in the Makefile, too.
+
+\includegraphics[width=0.9\textwidth]{archdiag.png}
+\caption{Architecture diagram for this document}
+\label{fig:archdiag}
+\end{figure}
+
+Fig.~\ref{fig:archdiag} shows the role this document plays within the
+IVOA architecture \citep{note:VOARCH}.
 
 ???? and so on, LaTeX as you know and love it. ????
 
