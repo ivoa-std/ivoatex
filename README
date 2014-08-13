@@ -64,8 +64,8 @@ Authoring
 
 The least you need for an ivoatex instance document is::
 
-	\documentclass{ivoatex/ivoa}
-	\input ivoatex/tthdefs
+	\documentclass{ivoa}
+	\input tthdefs
 
 and an abstract.  However, you're advised to start from the template -- it
 really contains very little that you shouldn't have in your document,

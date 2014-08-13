@@ -1,5 +1,5 @@
-\documentclass{ivoatex/ivoa}
-\input ivoatex/tthdefs
+\documentclass{ivoa}
+\input tthdefs
 
 \title{???? Full title ????}
 

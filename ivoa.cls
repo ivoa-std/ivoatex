@@ -1,4 +1,4 @@
-\ProvidesClass{ivoatex/ivoa}
+\ProvidesClass{ivoa}
 \LoadClass[11pt,a4paper]{article}
 
 \NeedsTeXFormat{LaTeX2e}

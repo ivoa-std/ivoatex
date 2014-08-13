@@ -25,7 +25,7 @@ PDFLATEX = pdflatex
 PDF2GIF = convert -density 54x54
 ZIP = zip
 
-TEXINPUTS=.;ivoatex
+export TEXINPUTS=.:ivoatex:
 
 # standard file name according to S&D standards
 versionedName:=$(DOCTYPE)-$(DOCNAME)-$(DOCVERSION)
@@ -40,6 +40,7 @@ endif
 	$(PDF2GIF) $< $@
 
 $(DOCNAME).pdf: $(SOURCES) $(FIGURES) ivoatexmeta.tex
+	sh
 	$(PDFLATEX) $(DOCNAME)
 
 
