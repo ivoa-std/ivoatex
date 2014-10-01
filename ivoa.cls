@@ -243,6 +243,7 @@
   \end{table}
   }%
 
+\newcommand{\xmlel}[1]{{\ttfamily\itshape #1}}
 
 \makeatother
 

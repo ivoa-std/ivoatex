@@ -97,7 +97,8 @@ Non-obvious features include:
 	Say \begin{admonition}{<admontype>}.  <admontype> will be the head
 	of the box, and in the future we may also have icons for the most common
 	headings.
-
+* \xmlel{p} typesets its argument in some common (yet-to-be agreed-upon)
+  style denoting XML element, attributes, or XPath expressions
 
 Auxillary Files, Figures
 ========================
