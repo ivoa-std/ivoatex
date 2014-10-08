@@ -1,4 +1,4 @@
-\documentclass{ivoa}
+\documentclass[11pt,a4paper]{ivoa}
 \input tthdefs
 
 \title{???? Full title ????}

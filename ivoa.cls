@@ -1,5 +1,5 @@
 \ProvidesClass{ivoa}
-\LoadClass[11pt,a4paper]{article}
+\LoadClassWithOptions{article}
 
 \NeedsTeXFormat{LaTeX2e}
 
@@ -23,6 +23,8 @@
 	urlcolor=linkcolor]{hyperref}
 
 \bibliographystyle{agsm}
+
+\DeclareGraphicsRule{.pdffig}{pdf}{.pdffig}{}
 
 \makeatletter
 
