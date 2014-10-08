@@ -11,6 +11,7 @@
 \RequirePackage{paralist}
 \RequirePackage{url}
 \RequirePackage{natbib}
+\RequirePackage[labelfont=it]{caption}
 
 \definecolor{ivoacolor}{rgb}{0.0,0.318,0.612}
 \definecolor{linkcolor}{rgb}{0.318,0,0.318}
@@ -25,6 +26,11 @@
 \bibliographystyle{agsm}
 
 \DeclareGraphicsRule{.pdffig}{pdf}{.pdffig}{}
+
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.7}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
 
 \makeatletter
 

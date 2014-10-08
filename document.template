@@ -1,6 +1,8 @@
 \documentclass[11pt,a4paper]{ivoa}
 \input tthdefs
 
+\usepackage[utf8]{inputenc}
+
 \title{???? Full title ????}
 
 \ivoagroup{???? group ????}
