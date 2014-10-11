@@ -54,24 +54,36 @@
     \end{html}
   }
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
+\newenvironment{lstlisting}[1][None]{%
+    \begin{html}<pre class="listing">\end{html}
+  }{%
+    \begin{html}</pre>\end{html}
+  }
 
-  \newcommand{\harvarditem}[4][0]{%
-    \special{html:<a name='#4'/>}
-    \if 0#1 \item[#2 (#3)]
-    \else \item[#1 (#3)]\fi}
-  \newcommand{\harvardurl}[1]{\url{#1}}
-  \newcommand{\harvardand}{\&}
-  \newcommand{\harvardyearleft}{(}
-  \newcommand{\harvardyearright}{)}
+\newcommand{\lstinputlisting}[2][None]{
+  \verbatiminput{#2}
+}
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
-  % shut up harmless error due to hyperref
-  \def\AtBeginDocument#1{\relax}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
-  \begin{html}
-    <div id="titlepage">
-  \end{html}
+\newcommand{\harvarditem}[4][0]{%
+  \special{html:<a name='#4'/>}
+  \if 0#1 \item[#2 (#3)]
+  \else \item[#1 (#3)]\fi}
+\newcommand{\harvardurl}[1]{\url{#1}}
+\newcommand{\harvardand}{\&}
+\newcommand{\harvardyearleft}{(}
+\newcommand{\harvardyearright}{)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
+% shut up harmless error due to hyperref
+\def\AtBeginDocument#1{\relax}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
+\begin{html}
+  <div id="titlepage">
+\end{html}
+
+
 
 \fi

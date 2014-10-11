@@ -16,8 +16,11 @@ DOCTYPE = ???
 # be called $(DOCNAME).tex
 SOURCES = $(DOCNAME).tex
 
-# List of image files to be included in submitted package 
+# List of pixel image files to be included in submitted package 
 # (whitespace-separated)
 FIGURES = archdiag.png
+
+# List of PDF figures (for vector graphics)
+VECTORFIGURES = 
 
 include ivoatex/Makefile

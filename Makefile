@@ -22,7 +22,7 @@ ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
 PDFLATEX = pdflatex
-PDF2GIF = convert -density 54x54
+CONVERT = convert
 ZIP = zip
 
 export TEXINPUTS=.:ivoatex:
@@ -33,13 +33,18 @@ ifneq "$(DOCTYPE)" "REC"
 		versionedName:=$(versionedName)-$(subst -,,$(DOCDATE))
 endif
 
-.SUFFIXES: .pdf .gif .tex
+GENERATED_PNGS = $(addsuffix .png, $(VECTORFIGURES))
+
+.SUFFIXES: .pdf .gif .tex .png
 .PHONY: biblio
 
-%.pdf.gif: %.pdf
-	$(PDF2GIF) $< $@
+%.pdffig.png: %.pdffig
+	# simple ImageMagic -antialias didn't work too well
+	$(CONVERT) -density 300x300 $< $@.$$
+	$(CONVERT) $@.$$ -scale 25% $@
+	rm $@.$$
 
-$(DOCNAME).pdf: $(SOURCES) $(FIGURES) ivoatexmeta.tex
+$(DOCNAME).pdf: $(SOURCES) $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
 	$(PDFLATEX) $(DOCNAME)
 
 
@@ -53,7 +58,7 @@ clean:
 	rm -f $(DOCNAME).pdf $(DOCNAME).aux $(DOCNAME).log $(DOCNAME).toc texput.log
 	rm -f $(DOCNAME).html $(DOCNAME).xhtml
 	rm -f *.bbl *.blg *.out debug.html
-	rm -f *.pdf.gif
+	rm -f *.pdffig.png
 
 ivoatexmeta.tex: Makefile
 	rm -f $@
@@ -65,7 +70,8 @@ ivoatexmeta.tex: Makefile
 	echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
 	echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
 
-$(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH)
+$(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
+		$(GENERATED_PNGS)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
           	| $(XSLTPROC) --html \
                          --stringparam CSS_HREF $(CSS_HREF) \
@@ -85,7 +91,8 @@ $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib
 biblio: $(DOCNAME).bbl
 
 
-package: $(DOCNAME).html $(DOCNAME).pdf
+package: $(DOCNAME).html $(DOCNAME).pdf \
+		$(GENERATED_PNGS)	$(FIGURES)
 	rm -rf -- $(versionedName)
 	mkdir $(versionedName)
 	cp $(DOCNAME).html $(versionedName)/$(versionedName).html
@@ -93,6 +100,9 @@ package: $(DOCNAME).html $(DOCNAME).pdf
 
 ifneq ($(strip $(FIGURES)),)
 	cp $(FIGURES) $(versionedName)
+endif
+ifneq ($(strip $(GENERATED_PNGS)),)
+	cp $(GENERATED_PNGS) $(versionedName)
 endif
 
 	zip -r $(versionedName).zip $(versionedName)

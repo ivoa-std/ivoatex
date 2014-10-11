@@ -13,6 +13,7 @@
   <xsl:param name="CSS_HREF" select="''"/>
 
   <xsl:output method="xml" encoding="utf-8"/>
+  <xsl:output cdata-section-elements="pre"/>
 
   <xsl:template match="*">
     <xsl:copy>

@@ -99,16 +99,28 @@ Non-obvious features include:
 	headings.
 * \xmlel{p} typesets its argument in some common (yet-to-be agreed-upon)
   style denoting XML element, attributes, or XPath expressions
+* A hint on including XML: \usepackage{listings}\lstloadlanguages{XML}
+	\lstinputlisting[language=XML,flexiblecolumns=true]{<filename>}
 
-Auxillary Files, Figures
+
+Auxiliary Files, Figures
 ========================
 
-We're still waiting to get some experience here.  For pixel files
-understood by both the browser and LaTeX, using graphicx's
-\includegraphics should simply work.  Don't forget to include the files
-you have in the Makefile's SOURCES variable so they get included in the
-packages that get submitted to the ivoa.
+For pixel files understood by both the browser and LaTeX, using graphicx's
+\includegraphics should simply work.  Don't forget to include the files you
+have in the Makefile's SOURCES variable so they get included in the packages
+that get submitted to the ivoa.
 
+Vector graphics is only supported in the form of PDF graphics; use ps2pdf
+or similar to convert your images as necessary.  
+
+You *must* give your PDF figures the extension "pdffig" (it's not just "pdf" to
+avoid accidents with make clean and similar).  In LaTeX, just use
+includegraphics as usual.  Then add the name of the file to VECTORFIGURES in
+the Makefile; ivoatex will then automatically generate the necessary bitmap
+images for the HTML version.
+
+Support for auxiliary files is in the works.
 
 Trouble?
 ========
