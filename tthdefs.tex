@@ -64,6 +64,16 @@
   \verbatiminput{#2}
 }
 
+\newenvironment{bigdescription}{%
+    \begin{html}<dl>\end{html}
+    \renewcommand{\item}[2][]{%
+      \begin{html}<dt>\end{html}#1%
+      \begin{html}</dt>\end{html}%
+      \begin{html}<dd>\end{html}#2%
+      \begin{html}</dd>\end{html}}%
+  }{%
+    \begin{html}</dl>\end{html}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
 
 \newcommand{\harvarditem}[4][0]{%
@@ -78,6 +88,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
 % shut up harmless error due to hyperref
 \def\AtBeginDocument#1{\relax}
+
+%don't do table rules, these come in through CSS
+\newcommand{\sptablerule}{\relax}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
 \begin{html}

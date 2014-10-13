@@ -40,9 +40,9 @@ GENERATED_PNGS = $(addsuffix .png, $(VECTORFIGURES))
 
 %.pdffig.png: %.pdffig
 	# simple ImageMagic -antialias didn't work too well
-	$(CONVERT) -density 300x300 $< $@.$$
-	$(CONVERT) $@.$$ -scale 25% $@
-	rm $@.$$
+	$(CONVERT) -density 300 $< temp-$@
+	$(CONVERT) temp-$@ -scale 25% $@
+	rm temp-$@
 
 $(DOCNAME).pdf: $(SOURCES) $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
 	$(PDFLATEX) $(DOCNAME)

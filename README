@@ -101,7 +101,8 @@ Non-obvious features include:
   style denoting XML element, attributes, or XPath expressions
 * A hint on including XML: \usepackage{listings}\lstloadlanguages{XML}
 	\lstinputlisting[language=XML,flexiblecolumns=true]{<filename>}
-
+* Standard table formatting: Just insert vertical rules as appropriate
+  usind \sptablerule
 
 Auxiliary Files, Figures
 ========================

@@ -1,11 +1,6 @@
-/* TtH TeX to HTML translator.
-TtH Version 
-"4.05"
- (c) Ian Hutchinson
-Sat Aug  9 10:55:01 EDT 2014
-*/
+#line 2 "tth.c"
 
-#line 3 "lex.yy.c"
+#line 4 "tth.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -14703,7 +14698,7 @@ as dugroup. */
 /* NOA	[^a-zA-Z0-9] Removed 1.04 */
 /* Old versions. WSP     [ \t\n] WSC     [^ \t\n] NL      \n */
 /* Costs 120k C! BRCG   \{[^\}]*(\{[^\}]*(\{[^\}]*\})?[^\}]*\})?[^\}]*\} */
-#line 14701 "lex.yy.c"
+#line 14702 "tth.c"
 
 #define INITIAL 0
 #define pargroup 1
@@ -15416,8 +15411,8 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 #define TTH_TRO "\n<tr>"
 #define TTH_TRC "</tr>"
 #define TTH_TABC "</table>\n"
-#define TTH_TABB "<table border=\"1\">"
-#define TTH_TABO "<table>"
+#define TTH_TABB "<table border=\"1\" class='tabular'>"
+#define TTH_TABO "<table class='tabular'>"
 #define TTH_TRTD "<tr><td></td></tr>"
 #define TTH_MULSTART "<td colspan=\"%d\"%s>"
 #define TTH_TABNOAL "\n<tr><td colspan=\"%d\">"
@@ -15597,7 +15592,7 @@ tth_flev=tth_flev0;
 
  /******************************* RULES *****************************/
 
-#line 15595 "lex.yy.c"
+#line 15596 "tth.c"
 
 	if ( !(yy_init) )
 		{
@@ -21434,7 +21429,7 @@ YY_RULE_SETUP
     if(tth_debug&32)fprintf(stderr,"Noalign:%s; eqdepth=%d\n",margs[jscratch],eqdepth);
     if(eqdepth){
       sprintf(defstore,
-	      "\\special{html: \n<tr><td id=\"e1\" colspan=\"%d\"><table><tr><td>}{%s}\\cr"
+	      "\\special{html: \n<tr><td id=\"e1\" colspan=\"%d\"><table class='t2'><tr><td>}{%s}\\cr"
 	    ,ncols,margs[jscratch]);
     }else{
       sprintf(defstore,
@@ -22464,7 +22459,7 @@ case 812:
 YY_RULE_SETUP
 #line 5196 "tth.lex"
 {
-  fprintf(tth_fdout,"\n<table><tr><td%s>",valignstring);
+  fprintf(tth_fdout,"\n<table class='tabular'><tr><td%s>",valignstring);
   yy_pop_state();
 }    
 	YY_BREAK
@@ -23431,7 +23426,7 @@ YY_RULE_SETUP
 case 896:
 YY_RULE_SETUP
 #line 5878 "tth.lex"
-if(!tth_LaTeX) fprintf(tth_fdout,"<table><tr><td width=\"%d\">\n",tabwidth);
+if(!tth_LaTeX) fprintf(tth_fdout,"<table class='t1'><tr><td width=\"%d\">\n",tabwidth);
 	YY_BREAK
 case 897:
 YY_RULE_SETUP
@@ -26533,7 +26528,7 @@ YY_RULE_SETUP
 #line 7579 "tth.lex"
 ECHO;
 	YY_BREAK
-#line 26531 "lex.yy.c"
+#line 26532 "tth.c"
 
 	case YY_END_OF_BUFFER:
 		{

@@ -253,6 +253,8 @@
 
 \newcommand{\xmlel}[1]{{\ttfamily\itshape #1}}
 
+\newcommand{\sptablerule}{\noalign{\vspace{2pt}}\hline\noalign{\vspace{2pt}}}
+
 \makeatother
 
 \input ivoatexmeta.tex

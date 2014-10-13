@@ -36,7 +36,8 @@
       </xsl:element>
       <xsl:call-template name="selectDoctypeStyle"/>
 
-			<style type="text/css"><![CDATA[
+			<style type="text/css">
+				<xsl:text disable-output-escaping="yes">
 				div#versionstatement, div#dateline {
 					color: #005A9C;
 					font-size: 150%;
@@ -74,7 +75,17 @@
 					color: #002A5C;
 					text-decoration: none;
 				}
-			]]></style>
+
+				table {
+					border-collapse: collapse;
+					border-spacing: 0px;
+				}
+
+				table.tabular > * > tr > td, table.tabular > tr > td {
+					border-top: 1pt solid gray;
+					border-bottom: 1pt solid gray;
+				}
+			</xsl:text>></style>
 
       <xsl:apply-templates/>
     </xsl:copy>
