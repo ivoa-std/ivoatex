@@ -46,6 +46,7 @@ in is called ivoatex.
 
 (10) cp ivoatex/document.template $DOCNAME.tex
 (11) cp ivoatex/Makefile.template Makefile
+(12) cp ivoatex/archdiag.png .
 
 Fill out the marked-up things in Makefile, edit $DOCNAME.tex, and then run
 
@@ -58,6 +59,10 @@ Fill out the marked-up things in Makefile, edit $DOCNAME.tex, and then run
   for publication at ivoa.net.   Obviously, you'll want to check
   DOCVERSION, DOCTYPE, and DOCDATE in the Makefile before submitting things.
 
+As to the architecture diagram, we deliver a placeholder.  Contact the TCG 
+chair to get one tailored to your standard unless you're writing a Note.
+In the latter case, remove the reference from the document template
+and archdiag.png from FIGURES in the Makefile.
 
 Authoring
 =========
@@ -89,10 +94,6 @@ Non-obvious features include:
   your source isn't yet in ivoabib, please add it and contribute your
   new records.  Incidentally, no variant forms of citep and citet are 
   supported yet (but we'll try to change that).
-* images: For now, we only really support pixel images; vector formats 
-	wouldn't be hard except for possible dependencies.  Talk to the authors
-	if you have a use case.  Otherwise, it's standard graphicx; there's
-	an example with the architecture diagram in the document template.
 * There's an environment for "admonition boxes" like "Note", "Tip", etc.
 	Say \begin{admonition}{<admontype>}.  <admontype> will be the head
 	of the box, and in the future we may also have icons for the most common
