@@ -5,6 +5,11 @@
 #  SOURCES; also, FIGURES as needed.
 #
 #  See README for the targets in here useful to the user.
+#
+#  You should *not* need to change anything here while authoring documents.
+#  All customisation should happen in the user Makefile
+
+IVOATEX_VERSION = 0.4
 
 CSS_HREF = http://www.ivoa.net/misc/ivoa_doc.css
 TTH = ivoatex/tth_C/tth
@@ -114,3 +119,32 @@ endif
 #  as long as you have a C compiler.
 $(TTH): ivoatex/tth_C/tth.c
 	$(CC) -o $(TTH) ivoatex/tth_C/tth.c
+
+############# below here: building an ivoatex distribution
+
+IVOATEX_FILES = archdiag.png fromivoadoc.xslt Makefile COPYING \
+	ivoabib.bib Makefile.template tthdefs.tex document.template \
+	ivoa.cls README  tth-ivoa.xslt fromivoadoc.xsl IVOA.jpg \
+	svn-ignore.txt tthntbib.sty 
+TTH_FILES= tth_C/CHANGES tth_C/latex2gif tth_C/ps2gif tth_C/tth.c \
+	tth_C/tth_manual.html tth_C/INSTALL tth_C/license.txt tth_C/ps2png \
+	tth_C/tth.1 tth_C/tth.gif
+
+IVOATEX_ARCHIVE = ivoatex-$(IVOATEX_VERSION).tar.gz
+
+.PHONY: ivoatex-install
+
+$(IVOATEX_ARCHIVE): $(IVOATEX_FILES)
+	@echo "This target must be run inside *ivoatex*"
+	-mkdir ivoatex
+	cp $(IVOATEX_FILES) ivoatex
+	-mkdir ivoatex/tth_C
+	cp $(TTH_FILES) ivoatex/tth_C
+	tar -czf ivoatex-$(IVOATEX_VERSION).tar.gz ivoatex
+	rm -rf ivoatex
+
+
+ivoatex-installdist: $(IVOATEX_ARCHIVE)
+	@echo "This target will only work for Markus"
+	scp $(IVOATEX_ARCHIVE) alnilam:/var/www/soft/ivoatex/
+	ssh alnilam "cd /var/www/soft/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivotex_latest.tar.gz"
