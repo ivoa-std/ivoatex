@@ -66,6 +66,7 @@
 		\setlength{\listparindent}{0pt}
 		\setlength{\itemsep}{0pt}
 		\let\makelabel\bigdescriptionlabel}
+		\let\term\item
 	}{%
 		\end{list}}
 

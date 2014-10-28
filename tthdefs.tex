@@ -66,13 +66,10 @@
 
 \newenvironment{bigdescription}{%
     \begin{html}<dl>\end{html}
-    \renewcommand{\item}[2][]{%
-      \begin{html}<dt>\end{html}#1%
-      \begin{html}</dt>\end{html}%
-      \begin{html}<dd>\end{html}#2%
-      \begin{html}</dd>\end{html}}%
+    \def\term[##1]{\begin{html}<dt>\end{html}##1\begin{html}</dt><dd>\end{html}%
+      \def\term[####1]{\begin{html}</dd><dt>\end{html}####1\begin{html}</dt><dd>\end{html}}}%
   }{%
-    \begin{html}</dl>\end{html}}
+    \begin{html}</dd></dl>\end{html}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
 
@@ -90,7 +87,7 @@
 \def\AtBeginDocument#1{\relax}
 
 %don't do table rules, these come in through CSS
-\newcommand{\sptablerule}{\relax}
+\newcommand{\sptablerule}{}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata

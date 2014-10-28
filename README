@@ -102,8 +102,12 @@ Non-obvious features include:
   style denoting XML element, attributes, or XPath expressions
 * A hint on including XML: \usepackage{listings}\lstloadlanguages{XML}
 	\lstinputlisting[language=XML,flexiblecolumns=true]{<filename>}
-* Standard table formatting: Just insert vertical rules as appropriate
-  usind \sptablerule
+* Standard table formatting: We generally recommend putting
+  \sptablerule before and after the headline and at the end of the table.
+  This adds extra spacing which is probably not compatible with vertical
+  rules; so, think twice before insisting on those.
+* The bigdescription environment with a \term[MyTerm] gives a fairly
+  truthful definition list markup in both PDF and HTML.
 
 Auxiliary Files, Figures
 ========================

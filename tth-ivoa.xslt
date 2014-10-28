@@ -81,9 +81,20 @@
 					border-spacing: 0px;
 				}
 
+				table.tabular {
+					margin-top: 2ex;
+					margin-bottom: 1ex;
+					margin-left: 0.5em;
+				}
+
 				table.tabular > * > tr > td, table.tabular > tr > td {
 					border-top: 1pt solid gray;
 					border-bottom: 1pt solid gray;
+					padding: 2pt;
+				}
+
+				dt {
+					margin-top: 0.5ex;
 				}
 			</xsl:text>></style>
 
