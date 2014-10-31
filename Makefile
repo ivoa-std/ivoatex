@@ -109,7 +109,9 @@ endif
 ifneq ($(strip $(GENERATED_PNGS)),)
 	cp $(GENERATED_PNGS) $(versionedName)
 endif
-
+	
+	# make sure files will be readable by the web server later on
+	chmod -R go+w $(versionedName)
 	zip -r $(versionedName).zip $(versionedName)
 	rm -rf -- $(versionedName)
 
