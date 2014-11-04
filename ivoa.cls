@@ -148,11 +148,13 @@
 		{IVOA Note}
 		{\ifthenelse{\equal{#1}{WD}}
 			{IVOA Working Draft}
-			{\ifthenelse{\equal{#1}{PR}}
-				{IVOA Proposed Recommendation}
-				{\ifthenelse{\equal{#1}{REC}}
-					{IVOA Recommendation}
-					{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}
+		{\ifthenelse{\equal{#1}{PR}}
+			{IVOA Proposed Recommendation}
+		{\ifthenelse{\equal{#1}{REC}}
+			{IVOA Recommendation}
+		{\ifthenelse{\equal{#1}{DERR}}
+			{Draft Erratum}
+		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}
 
 \newcommand\docstatusDeclaration[1]
 	{\ifthenelse{\equal{#1}{NOTE}}
@@ -162,30 +164,36 @@
      interoperability with the Virtual Observatory. It should
      not be referenced or otherwise interpreted as a standard
      specification.}
-		{\ifthenelse{\equal{#1}{WD}}
-			{This is an IVOA Working Draft for review by IVOA members
-       and other interested parties.  It is a draft document and
-       may be updated, replaced, or obsoleted by other documents
-       at any time. It is inappropriate to use IVOA Working Drafts
-       as reference materials or to cite them as other than ``work
-       in progress''.}
-			{\ifthenelse{\equal{#1}{PR}}
-				{This is an IVOA Proposed Recommendation made available for
-         public review. It is appropriate to reference this document
-         only as a recommended standard that is under review and
-         which may be changed before it is accepted as a full
-         Recommendation.}
-				{\ifthenelse{\equal{#1}{REC}}
-					{This document has been reviewed by IVOA Members and other
-           interested parties, and has been endorsed by the IVOA
-           Executive Committee as an IVOA Recommendation. It is a
-           stable document and may be used as reference material or
-           cited as a normative reference from another document.
-           IVOA's role in making the Recommendation is to draw
-           attention to the specification and to promote its
-           widespread deployment. This enhances the functionality and
-           interoperability inside the Astronomical Community.}
-					{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}\par
+	{\ifthenelse{\equal{#1}{WD}}
+		{This is an IVOA Working Draft for review by IVOA members
+     and other interested parties.  It is a draft document and
+     may be updated, replaced, or obsoleted by other documents
+     at any time. It is inappropriate to use IVOA Working Drafts
+     as reference materials or to cite them as other than ``work
+     in progress''.}
+ 	{\ifthenelse{\equal{#1}{PR}}
+ 		{This is an IVOA Proposed Recommendation made available for
+      public review. It is appropriate to reference this document
+      only as a recommended standard that is under review and
+      which may be changed before it is accepted as a full
+      Recommendation.}
+ 	{\ifthenelse{\equal{#1}{DERR}}
+ 		{This is a draft for an erratum to an IVOA recommendation made 
+ 			available for public review.  Interested parties are invited
+ 			to evaluate the erratum's validity and impact, but at this stage
+ 			the erratum does not yet change the normative content of the
+ 			recommendation.}
+	{\ifthenelse{\equal{#1}{REC}}
+		{This document has been reviewed by IVOA Members and other
+     interested parties, and has been endorsed by the IVOA
+     Executive Committee as an IVOA Recommendation. It is a
+     stable document and may be used as reference material or
+     cited as a normative reference from another document.
+     IVOA's role in making the Recommendation is to draw
+     attention to the specification and to promote its
+     widespread deployment. This enhances the functionality and
+     interoperability inside the Astronomical Community.}
+		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}\par
 	A list of current IVOA Recommendations and other technical documents
 	can be found at \href{http://www.ivoa.net/Documents/
 	}{http://www.ivoa.net/Documents/}.}

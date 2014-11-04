@@ -190,22 +190,26 @@
   <xsl:template match="span[@id='doctype']" mode="humanreadable">
   	<xsl:variable name="doctype" select="."/>
     <xsl:choose>
-       <xsl:when test="$doctype='WD'">
-           <xsl:text>IVOA Working Draft </xsl:text>
-       </xsl:when>
-       <xsl:when test="$doctype='PR'">
-           <xsl:text>IVOA Proposed Recommendation </xsl:text>
-       </xsl:when>
-       <xsl:when test="$doctype='REC'">
-           <xsl:text>IVOA Recommendation </xsl:text>
-       </xsl:when>
-       <xsl:when test="$doctype='NOTE'">
-           <xsl:text>IVOA Note </xsl:text>
-       </xsl:when>
-       <xsl:otherwise>
-           <xsl:message terminate='yes'>doctype must be one of
-               WD, PR, REC, NOTE</xsl:message>
-       </xsl:otherwise>
+      <xsl:when test="$doctype='WD'">
+        <xsl:text>IVOA Working Draft </xsl:text>
+      </xsl:when>
+      <xsl:when test="$doctype='PR'">
+        <xsl:text>IVOA Proposed Recommendation </xsl:text>
+      </xsl:when>
+      <xsl:when test="$doctype='REC'">
+        <xsl:text>IVOA Recommendation </xsl:text>
+      </xsl:when>
+      <xsl:when test="$doctype='NOTE'">
+        <xsl:text>IVOA Note </xsl:text>
+      </xsl:when>
+      <xsl:when test="$doctype='DERR'">
+       	<xsl:text>Draft Erratum </xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:message terminate='yes'>doctype must be one of
+                  WD, PR, REC, NOTE, DERR not 
+                  '<xsl:value-of select="$doctype"/>'</xsl:message>
+      </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
@@ -247,9 +251,16 @@
                   widespread deployment. This enhances the functionality and
                   interoperability inside the Astronomical Community.
               </xsl:when>
+              <xsl:when test="$doctype='DERR'">
+              	This is a draft for an erratum to an IVOA recommendation made
+              	available for public review.  Interested parties are invited to
+              	evaluate the erratum's validity and impact, but at this stage
+              	the erratum does not yet change the normative content of the
+              	recommendation.
+              </xsl:when>
               <xsl:otherwise>
-                  <xsl:message terminate='yes'>doctype must be one of
-                      WD, PR, REC, NOTE</xsl:message>
+                  <xsl:message terminate='yes'>Invalid document
+                      status (this cannot happen).</xsl:message>
               </xsl:otherwise>
           </xsl:choose>
       </em></p>
