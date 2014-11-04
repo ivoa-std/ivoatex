@@ -264,6 +264,8 @@
 
 \newcommand{\sptablerule}{\noalign{\vspace{2pt}}\hline\noalign{\vspace{2pt}}}
 
+\newcommand{\ivoatex}{\mbox{\textsc{Ivoa}\TeX}}
+
 \makeatother
 
 \input ivoatexmeta.tex

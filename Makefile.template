@@ -12,12 +12,11 @@ DOCDATE = ???
 # What is it you're writing: NOTE, WD, PR, or REC
 DOCTYPE = ???
 
-# Source file for the TeX document (but the main file must always
+# Source files for the TeX document (but the main file must always
 # be called $(DOCNAME).tex
 SOURCES = $(DOCNAME).tex
 
 # List of pixel image files to be included in submitted package 
-# (whitespace-separated)
 FIGURES = archdiag.png
 
 # List of PDF figures (for vector graphics)
