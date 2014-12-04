@@ -39,7 +39,8 @@
     <div id="abstract"><h2>Abstract</h2>
   \end{html}
   }{%
-    \special{html:<h2>Status of this Document</h2>
+    \special{html:</div> <!-- abstract -->
+      <h2>Status of this Document</h2>
       <div id='statusOfThisDocument'>}\ivoaDoctype\special{html:</div>}
     \tableofcontents
   }
@@ -54,12 +55,6 @@
     \begin{html}
       </div> <!-- admonition -->
     \end{html}
-  }
-
-\newenvironment{lstlisting}[1][None]{%
-    \begin{html}<pre class="listing">\end{html}
-  }{%
-    \begin{html}</pre>\end{html}
   }
 
 \newcommand{\lstinputlisting}[2][None]{
