@@ -266,6 +266,8 @@
 
 \newcommand{\ivoatex}{\mbox{\textsc{Ivoa}\TeX}}
 
+\chardef\dquote'042
+
 \makeatother
 
 \input ivoatexmeta.tex
