@@ -12,6 +12,7 @@
 \RequirePackage{url}
 \RequirePackage{natbib}
 \RequirePackage[labelfont=it]{caption}
+\RequirePackage[T1]{fontenc}
 
 \definecolor{ivoacolor}{rgb}{0.0,0.318,0.612}
 \definecolor{linkcolor}{rgb}{0.318,0,0.318}

@@ -61,6 +61,10 @@
   \verbatiminput{#2}
 }
 
+\newenvironment{lstlisting}[1][None]
+  {\special{html:<div class="listing">}%
+  \tthverbatim{lstlisting}}{\special{html:</div>}}
+
 \newenvironment{bigdescription}{%
     \begin{html}<dl>\end{html}
     \def\term[##1]{\begin{html}<dt>\end{html}##1\begin{html}</dt><dd>\end{html}%
