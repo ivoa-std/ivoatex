@@ -49,7 +49,7 @@ GENERATED_PNGS = $(addsuffix .png, $(VECTORFIGURES))
 	$(CONVERT) temp-$@ -scale 25% $@
 	rm temp-$@
 
-$(DOCNAME).pdf: $(SOURCES) $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
+$(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
 	$(PDFLATEX) $(DOCNAME)
 
 
@@ -69,11 +69,11 @@ ivoatexmeta.tex: Makefile
 	rm -f $@
 	touch $@
 	echo '% GENERATED FILE -- edit this in the Makefile' >>$@
-	echo '\newcommand{\ivoaDocversion}{$(DOCVERSION)}' >>$@
-	echo '\newcommand{\ivoaDocdate}{$(DOCDATE)}' >>$@
-	echo '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
-	echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
-	echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
+	/bin/echo -E '\newcommand{\ivoaDocversion}{$(DOCVERSION)}' >>$@
+	/bin/echo -E '\newcommand{\ivoaDocdate}{$(DOCDATE)}' >>$@
+	/bin/echo -E '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
+	/bin/echo -E '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
+	/bin/echo -E '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
 
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
