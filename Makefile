@@ -44,7 +44,7 @@ GENERATED_PNGS = $(addsuffix .png, $(VECTORFIGURES))
 .PHONY: biblio
 
 %.pdffig.png: %.pdffig
-	# simple ImageMagic -antialias didn't work too well
+#	# simple ImageMagic -antialias didn't work too well
 	$(CONVERT) -density 300 $< temp-$@
 	$(CONVERT) temp-$@ -scale 25% $@
 	rm temp-$@
@@ -78,7 +78,7 @@ ivoatexmeta.tex: Makefile
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
-          	| $(XSLTPROC) --html \
+		| $(XSLTPROC) --html \
                          --stringparam CSS_HREF $(CSS_HREF) \
                       ivoatex/tth-ivoa.xslt - \
            >$(DOCNAME).html
@@ -109,8 +109,7 @@ endif
 ifneq ($(strip $(GENERATED_PNGS)),)
 	cp $(GENERATED_PNGS) $(versionedName)
 endif
-	
-	# make sure files will be readable by the web server later on
+#	# make sure files will be readable by the web server later on
 	chmod -R go+w $(versionedName)
 	zip -r $(versionedName).zip $(versionedName)
 	rm -rf -- $(versionedName)
