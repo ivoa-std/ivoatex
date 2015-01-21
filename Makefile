@@ -69,11 +69,11 @@ ivoatexmeta.tex: Makefile
 	rm -f $@
 	touch $@
 	echo '% GENERATED FILE -- edit this in the Makefile' >>$@
-	/bin/echo -E '\newcommand{\ivoaDocversion}{$(DOCVERSION)}' >>$@
-	/bin/echo -E '\newcommand{\ivoaDocdate}{$(DOCDATE)}' >>$@
-	/bin/echo -E '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
-	/bin/echo -E '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
-	/bin/echo -E '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
+	/bin/echo '\newcommand{\ivoaDocversion}{$(DOCVERSION)}' >>$@
+	/bin/echo '\newcommand{\ivoaDocdate}{$(DOCDATE)}' >>$@
+	/bin/echo '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
+	/bin/echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
+	/bin/echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
 
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
