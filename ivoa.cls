@@ -55,6 +55,19 @@
 	{\g@addto@macro\previ@usversions{\item #2}}
 	{\g@addto@macro\previ@usversions{\item \href{#1}{#2}}}}
 
+\def\vcsR@vision{unknown}
+\def\vcsD@te{unknown}
+\newcommand{\vcsrevision}[1]{\gdef\vcsR@vision{#1}}
+\newcommand{\vcsdate}[1]{\gdef\vcsD@te{#1}}
+
+\def\SVN$#1: #2 ${%
+	\ifthenelse{\equal{#1}{Date}}
+		{\vcsdate{#2}}{%
+	\ifthenelse{\equal{#1}{Rev}}
+		{\vcsrevision{#2}}
+		{\message{Invalid SVN key /#1/}}
+}}
+
 %%%%%%%%%%%%%%%%%% Tools for formatting the titlepage
 
 \newcommand*\bigdescriptionlabel[1]{%
@@ -89,12 +102,14 @@
     \Large\color{ivoacolor}\textsl{\textsf{\textbf{A}lliance}}}}\hfil}
  
  	\vskip 1.4cm
-  \noindent{\LARGE\color{ivoacolor}\sffamily\bfseries \@title}
+ 	\begin{sloppypar}\raggedright
+  \LARGE\color{ivoacolor}\sffamily\bfseries \@title\par
+  \end{sloppypar}
 
-	\medskip
+	\bigskip
   \noindent{\LARGE\color{ivoacolor}\sffamily\bfseries 
   	Version \ivoaDocversion}
-	\bigskip
+	\medskip
   \titlehe@d{\expandedDoctype{\ivoaDoctype} \ivoaDocdate}%
 
 
@@ -120,6 +135,13 @@
 
     \item[Editor(s)]
     	\@ditor
+
+    \ifthenelse{\equal{\vcsR@vision}{unknown}}{\relax}{
+    	\item[Version Control]
+    		Revision \vcsR@vision
+    			\ifthenelse{\equal{\vcsD@te}{unknown}}{\relax}{,
+    				\vcsD@te}}
+    			
     \end{bigdescription}
   \@thanks
   \vfill\null

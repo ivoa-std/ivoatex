@@ -101,6 +101,10 @@
 				dt {
 					margin-top: 0.5ex;
 				}
+
+				.redaction {
+					background-color: #ffff33;
+				}
 			</xsl:text>></style>
 
       <xsl:apply-templates/>
@@ -166,6 +170,15 @@
 			
 			<dt>Editor</dt>
 			<xsl:copy-of select="dd[@id='editor']"/>
+
+			<xsl:if test="span[@id='vcsrevision']">
+				<dt>Version Control</dt>
+				<dd>Revision <xsl:value-of select="span[@id='vcsrevision']"
+					/><xsl:if test="span[@id='vcsdate']">, last change
+						<xsl:value-of select="span[@id='vcsdate']"/>
+				</xsl:if>
+				</dd>
+			</xsl:if>
 		</dl>
 	</xsl:template>
 

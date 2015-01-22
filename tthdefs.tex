@@ -32,6 +32,14 @@
    <span id='docname'>}\ivoaDocname\special{html:</span>
    <span id='docdate'>}\ivoaDocdate\special{html:</span>}}
 
+\def\SVN$#1: #2 ${%
+	\ifthenelse{\equal{#1}{Date}}
+		{\special{html:<span id='vcsdate'>}#2\special{html:</span>}}{%
+	\ifthenelse{\equal{#1}{Rev}}
+		{{\special{html:<span id='vcsrevision'>}#2\special{html:</span>}}}
+		{\message{Invalid SVN key /#1/}}
+}}
+
 \newenvironment{abstract}{%
   \includeMeta
   \begin{html}
@@ -80,6 +88,9 @@
 
 \def\dquote{"}
 
+\newcommand{\todo}[2][None]{
+  \begin{html}<span class="redaction">#2</span>\end{html}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
 
 \newcommand{\harvarditem}[4][0]{%
@@ -100,7 +111,6 @@
 \begin{html}
   <div id="titlepage">
 \end{html}
-
 
 
 \fi
