@@ -171,11 +171,11 @@
 			<dt>Editor</dt>
 			<xsl:copy-of select="dd[@id='editor']"/>
 
-			<xsl:if test="span[@id='vcsrevision']">
+			<xsl:if test="span[@id='vcsRev']">
 				<dt>Version Control</dt>
-				<dd>Revision <xsl:value-of select="span[@id='vcsrevision']"
-					/><xsl:if test="span[@id='vcsdate']">, last change
-						<xsl:value-of select="span[@id='vcsdate']"/>
+				<dd>Revision <xsl:value-of select="span[@id='vcsRev']"
+					/><xsl:if test="span[@id='vcsDate']">, last change
+						<xsl:value-of select="span[@id='vcsDate']"/>
 				</xsl:if>
 				</dd>
 			</xsl:if>

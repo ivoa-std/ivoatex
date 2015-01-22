@@ -33,12 +33,7 @@
    <span id='docdate'>}\ivoaDocdate\special{html:</span>}}
 
 \def\SVN$#1: #2 ${%
-	\ifthenelse{\equal{#1}{Date}}
-		{\special{html:<span id='vcsdate'>}#2\special{html:</span>}}{%
-	\ifthenelse{\equal{#1}{Rev}}
-		{{\special{html:<span id='vcsrevision'>}#2\special{html:</span>}}}
-		{\message{Invalid SVN key /#1/}}
-}}
+	\special{html:<span id='vcs#1'>}#2\special{html:</span>}}
 
 \newenvironment{abstract}{%
   \includeMeta
