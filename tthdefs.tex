@@ -63,17 +63,17 @@
 \newcommand{\lstinputlisting}[2][None]{
   \verbatiminput{#2}
 }
+\newcommand{\lstloadlanguages}[1]{}
+\newcommand{\lstset}[1]{}
 
 \newenvironment{lstlisting}[1][None]
-  {\special{html:<div class="listing">}%
-  \tthverbatim{lstlisting}}{\special{html:</div>}}
+  {\tthverbatim{lstlisting}}
+  {\special{html:</div>}}
 
 \newenvironment{bigdescription}{%
-    \begin{html}<dl>\end{html}
-    \def\term[##1]{\begin{html}<dt>\end{html}##1\begin{html}</dt><dd>\end{html}%
-      \def\term[####1]{\begin{html}</dd><dt>\end{html}####1\begin{html}</dt><dd>\end{html}}}%
-  }{%
-    \begin{html}</dd></dl>\end{html}}
+    \begin{html}<div class="bigdescription">\end{html}
+    \begin{description}
+  }{\end{description}\begin{html}</div>\end{html}}
 
 \newcommand{\xmlel}[1]{%
   \begin{html}<span class="xmlel">\end{html}#1\begin{html}</span>\end{html}}
@@ -83,8 +83,11 @@
 
 \def\dquote{"}
 
-\newcommand{\todo}[2][None]{
+\newcommand{\todo}[2][None]{%
   \begin{html}<span class="redaction">#2</span>\end{html}}
+
+\newcommand{\ivoatex}{%
+  \special{html:<span class="ivoatex">IVOAT<sub>E</sub>X</span>}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
 

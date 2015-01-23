@@ -177,6 +177,12 @@
 					/><xsl:if test="span[@id='vcsDate']">, last change
 						<xsl:value-of select="span[@id='vcsDate']"/>
 				</xsl:if>
+				<xsl:if test="span[@id='vcsURL']"><br/>
+					<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="span[@id='vcsURL']"/>
+						</xsl:attribute>Source file in VCS</a>
+				</xsl:if>
 				</dd>
 			</xsl:if>
 		</dl>

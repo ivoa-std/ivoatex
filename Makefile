@@ -78,7 +78,6 @@ ivoatexmeta.tex: Makefile
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
-		| tee zw.html \
 		| $(XSLTPROC) --html \
                          --stringparam CSS_HREF $(CSS_HREF) \
                       ivoatex/tth-ivoa.xslt - \

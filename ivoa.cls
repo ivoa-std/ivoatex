@@ -57,16 +57,20 @@
 
 \def\vcsR@vision{unknown}
 \def\vcsD@te{unknown}
+\def\vcs@RL{unknown}
 \newcommand{\vcsrevision}[1]{\gdef\vcsR@vision{#1}}
 \newcommand{\vcsdate}[1]{\gdef\vcsD@te{#1}}
+\newcommand{\vcsurl}[1]{\gdef\vcs@RL{#1}}
 
 \def\SVN$#1: #2 ${%
 	\ifthenelse{\equal{#1}{Date}}
 		{\vcsdate{#2}}{%
 	\ifthenelse{\equal{#1}{Rev}}
-		{\vcsrevision{#2}}
-		{\message{Invalid SVN key /#1/}}
-}}
+		{\vcsrevision{#2}}{%
+	\ifthenelse{\equal{#1}{URL}}
+		{\vcsurl{#2}}{%
+	\message{Invalid SVN key /#1/}}
+}}}
 
 %%%%%%%%%%%%%%%%%% Tools for formatting the titlepage
 
@@ -140,7 +144,9 @@
     	\item[Version Control]
     		Revision \vcsR@vision
     			\ifthenelse{\equal{\vcsD@te}{unknown}}{\relax}{,
-    				\vcsD@te}}
+    				\vcsD@te}
+   				\ifthenelse{\equal{\vcs@RL}{unknown}}{\relax}
+   					{\\\strut\tiny\url{\vcs@RL}}}
     			
     \end{bigdescription}
   \@thanks
