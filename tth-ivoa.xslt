@@ -81,6 +81,10 @@
 					font-style: italic;
 				}
 
+				.vorent {
+					font-variant: small-caps;
+				}
+
 				table {
 					border-collapse: collapse;
 					border-spacing: 0px;

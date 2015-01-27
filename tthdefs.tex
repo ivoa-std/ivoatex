@@ -75,8 +75,10 @@
     \begin{description}
   }{\end{description}\begin{html}</div>\end{html}}
 
-\newcommand{\xmlel}[1]{%
-  \begin{html}<span class="xmlel">\end{html}#1\begin{html}</span>\end{html}}
+\newcommand{\specialterm}[2]{%
+  \begin{html}<span class="#1">\end{html}#2\begin{html}</span>\end{html}}
+\newcommand{\xmlel}[1]{\specialterm{xmlel}{#1}}
+\newcommand{\vorent}[1]{\specialterm{vorent}{#1}}
 
 %don't do table rules, these come in through CSS
 \newcommand{\sptablerule}{}
