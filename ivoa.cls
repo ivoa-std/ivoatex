@@ -38,11 +38,11 @@
 %%%%%%%%%%%%%%%%%%% Metadata definition macros
 
 \newcommand{\ivoagroup}[1]{\def\ivo@group{#1}}
-\newcommand{\editor}[1]{\def\@ditor{#1}}
 
 % these are accumulators for sequences
 \def\previ@usversions{}
 \def\@uthors{}
+\def\@ditors{}
 
 \renewcommand{\author}[2][0]{%
 	\ifthenelse{\equal{\@uthors}{}}{}
@@ -50,6 +50,12 @@
 	\ifthenelse{\equal{#1}{0}}
 	{\g@addto@macro\@uthors{#2}}
 	{\g@addto@macro\@uthors{\href{#1}{#2}}}}
+\newcommand{\editor}[2][0]{%
+        \ifthenelse{\equal{\@ditors}{}}{}
+                {\g@addto@macro\@ditors{, }}
+        \ifthenelse{\equal{#1}{0}}
+        {\g@addto@macro\@ditors{#2}}
+        {\g@addto@macro\@ditors{\href{#1}{#2}}}}
 \newcommand{\previousversion}[2][0]{
 	\ifthenelse{\equal{#1}{0}}
 	{\g@addto@macro\previ@usversions{\item #2}}
@@ -138,7 +144,9 @@
     	\end{compactenum}
 
     \item[Editor(s)]
-    	\@ditor
+        \begin{compactenum}[]
+    	\@ditors
+        \end{compactenum}
 
     \ifthenelse{\equal{\vcsR@vision}{unknown}}{\relax}{
     	\item[Version Control]

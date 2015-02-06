@@ -173,8 +173,12 @@
 			</dd>
 			
 			<dt>Editor</dt>
-			<xsl:copy-of select="dd[@id='editor']"/>
-
+                        <dd>
+				<ul class="editors">
+					<xsl:apply-templates select="li[@class='editor']"/>
+				</ul>
+			</dd>
+                    
 			<xsl:if test="span[@id='vcsRev']">
 				<dt>Version Control</dt>
 				<dd>Revision <xsl:value-of select="span[@id='vcsRev']"

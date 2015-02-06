@@ -19,7 +19,7 @@ XHTML to ivoatex -->
 
 \author[FIXTHIS]{FIXTHIS}
 
-\editor{FIXTHIS}
+\editor[FIXTHIS]{FIXTHIS}
 
 \previousversion{FIXTHIS}
 
