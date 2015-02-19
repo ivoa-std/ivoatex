@@ -125,7 +125,7 @@ $(TTH): ivoatex/tth_C/tth.c
 
 IVOATEX_FILES = archdiag.png fromivoadoc.xslt Makefile COPYING \
 	ivoabib.bib Makefile.template tthdefs.tex document.template \
-	ivoa.cls README  tth-ivoa.xslt fromivoadoc.xsl IVOA.jpg \
+	ivoa.cls README  tth-ivoa.xslt IVOA.jpg \
 	svn-ignore.txt tthntbib.sty 
 TTH_FILES= tth_C/CHANGES tth_C/latex2gif tth_C/ps2gif tth_C/tth.c \
 	tth_C/tth_manual.html tth_C/INSTALL tth_C/license.txt tth_C/ps2png \
@@ -148,4 +148,4 @@ $(IVOATEX_ARCHIVE): $(IVOATEX_FILES)
 ivoatex-installdist: $(IVOATEX_ARCHIVE)
 	@echo "This target will only work for Markus"
 	scp $(IVOATEX_ARCHIVE) alnilam:/var/www/soft/ivoatex/
-	ssh alnilam "cd /var/www/soft/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivotex_latest.tar.gz"
+	ssh alnilam "cd /var/www/soft/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivoatex-latest.tar.gz"
