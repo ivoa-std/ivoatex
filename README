@@ -10,184 +10,27 @@ This is another attempt at a generalised authoring system for IVOA
  * support with routine drudgery.
 
 
-Dependencies
-============
+Documentation
+=============
 
-ivoatex really is targetted at Unix-like systems with reasonable TeX
-installations.  If you're planning to use ivoatex on a Windows box, even
-if you have TeX on it natively, do yourself a favour nevertheless and
-install cygwin to use ivoatex.
-
-Nontrivial dependencies:
-
-* GNU make (or another sufficiently powerful make)
-* C compiler
-* pdflatex
-* xsltproc
-* zip (for making document packages)
-* imageMagic (if you plan to auto-convert vector graphics)
-* ghostscript (if you plan to auto-convert vector graphics)
-
-Not all of these are actually hard dependencies -- you *could* use
-another XSLT processor than xsltproc, but then you'd have to change the
-command line in the Makefile (ivoatex is simple XSLT 1 for normal files)
--- which probably is not worth it.
+Documentation on ivoatex, including a chapter on a quick start, is 
+given in the IVOA note "The IVOATeX Document Preparation System",
+available at http://ivoa.net/documents/IVOATex/index.html.
 
 
-Quick start
-===========
 
-ivoatex right now is designed to be used from within a subdirectory of the
-directory containing the document sources (rather than being installed
-globally).  So, you'll usually have one copy per document processed.
-Given that it's fairly compact, this seems acceptable and indeed
-preferable to installation scenarios that would require much more
-knowledge about the target system.
+If you have the dependencies together (essentially, a GNU build
+toolchain, a texlive-equivalent TeX distribution, subversion, and
+xsltproc; on the average linux machines, chances are you're almost
+there), you can build this note (which is written in IVOATeX itself)
+like this::
 
-So, the first step in using ivoatex is to make your development
-directory
+	svn co https://volute.googlecode.com/svn/trunk/projects/ivoapub/ivoatexDoc
+	cd ivoatexDoc
+	make
 
-(1) ``export DOCNAME=?????``
-	  (this would be your document's short name, like RegTAP, SIAv2, etc)
-(2) ``mkdir $DOCNAME``
+Then start your favourite PDF viewer on ivoatexDoc.pdf.
 
-Choose DOCNAME to be succinct and expressive.  SimpleDALRegExt should be
-about the upper limit of alphabet soup.
-
-At this point you have two options go on (and we recommend the second
-one).
-
-Option 1: Getting ivoatex Avoiding Volute
------------------------------------------
-
-Here, you do not use the VO's common version contol system, Volute
-(maybe you want to avoid google or the scrutiny  that version control
-brings with it).  Get an ivoatex archive from GAVO's distribution site
-and unpack it:
-
-(3a) ``cd $DOCNAME``
-(4a) ``curl http://soft.g-vo.org/ivoatex/ivoatex-latest.tar.gz | tar -xvzf -k``
-
-
-Option 2: Getting ivoatex Using Volute
---------------------------------------
-
-You could again include a checkout of ivoatex in
-your document tree, but it's much more elegant to use svn:externals.
-
-(3b) ``export VOLUTEBASE=https://volute.googlecode.com/svn/trunk/projects``
-(4b) ``export WG=?????``
-      (this would be your Working Group: dal, dm, edu, grid, registry...)
-(5b) ``svn import $DOCNAME $VOLUTEBASE/$WG/$DOCNAME``
-(6b) ``rmdir $DOCNAME``
-(7b) ``svn co $VOLUTEBASE/$WG/$DOCNAME $DOCNAME``
-(8b) ``cd $DOCNAME``
-(9b) ``svn propset svn:externals "ivoatex $VOLUTEBASE/ivoapub/ivoatex" .``
-(10b) ``svn update``
-
-This has the advantage that you get updates automatically and that it is 
-trivial to feed back your bibliography additions and fixes into the
-distribution.
-
-Start your Document
--------------------
-
-If your source is in SVN, set up common ignores so ``svn status``
-remains neat:
-
-(11) ``svn propset svn:ignore . --file ivoatex/svn-ignore.txt``
-
-Then get some templates from ivoatex:
-
-(11) ``cp ivoatex/document.template $DOCNAME.tex``
-(12) ``cp ivoatex/Makefile.template Makefile``
-(13) ``cp ivoatex/archdiag.png .``
-
-Fill out the marked-up things in Makefile, edit $DOCNAME.tex, and then run
-
-* ``make`` to generate a PDF rendering of your document
-* ``make biblio`` to update the bibliography (i.e., run BibTeX)
-* ``make forecetex`` to unconditionally run TeX (e.g., when TeX
-  asks to be rerun)
-* ``make $DOCNAME.html`` to generate an HTML rendering of your document
-* ``make package`` to generate a zip file containing everything needed
-  for publication at ivoa.net.   Obviously, you'll want to check
-  DOCVERSION, DOCTYPE, and DOCDATE in the Makefile before submitting things.
-
-As to the architecture diagram, we deliver a placeholder.  Contact the
-TCG chair to get one tailored to your standard unless you're writing a
-Note (which doesn't need architecture diagrams).  In tha case, remove
-the image inclusion from the document template and archdiag.png from
-FIGURES in the Makefile.
-
-*Note*: You cannot just run pdflatex directly, as some path setup going
-on in Makefile.  Just get used to running make.  It's better fun all
-around.
-
-
-Authoring
-=========
-
-The least you need for an ivoatex instance document is::
-
-	\documentclass{ivoa}
-	\input tthdefs
-
-and an abstract.  However, you're advised to start from the template -- it
-really contains very little that you shouldn't have in your document,
-except you'll need to replace all the items between the ????-groups.
-
-Non-obvious features include:
-
-* author takes an optional argument that would be the author's URL, 
-  typically pointing into the IVOA wiki.
-* previousversion will usually have its optional argument, the
-  URL under which a previous version is accessible.  These URLs
-  are be generateable from the version strings if publishing has
-  been conforming, and we may provide a macro to deal with this later
-  (but also maybe a fully automatic management of previous versions
-  base on the change log?)
-* ivoadoc uses natbib and BibTeX.  Don't be afraid, it's actually
-  dead simple.   If you want to reference something, check out
-  ivoatex/ivoabib.bib.  If what you're looking for is already in there,
-  say \citep{tag} (Einstein 1905) or \citet{tag} for Einstein (1905) in
-  your source, and update your bibliography using make biblio.  If
-  your source isn't yet in ivoabib, please add it and contribute your
-  new records.  Incidentally, no variant forms of citep and citet are 
-  supported yet (but we'll try to change that).
-* There's an environment for "admonition boxes" like "Note", "Tip", etc.
-	Say \begin{admonition}{<admontype>}.  <admontype> will be the head
-	of the box, and in the future we may also have icons for the most common
-	headings.
-* \xmlel{p} typesets its argument in some common (yet-to-be agreed-upon)
-  style denoting XML element, attributes, or XPath expressions
-* A hint on including XML: \usepackage{listings}\lstloadlanguages{XML}
-	\lstinputlisting[language=XML,flexiblecolumns=true]{<filename>}
-* Standard table formatting: We generally recommend putting
-  \sptablerule before and after the headline and at the end of the table.
-  This adds extra spacing which is probably not compatible with vertical
-  rules; so, think twice before insisting on those.
-* The bigdescription environment with a \term[MyTerm] gives a fairly
-  truthful definition list markup in both PDF and HTML.
-
-Auxiliary Files, Figures
-========================
-
-For pixel files understood by both the browser and LaTeX, using graphicx's
-\includegraphics should simply work.  Don't forget to include the files you
-have in the Makefile's SOURCES variable so they get included in the packages
-that get submitted to the ivoa.
-
-Vector graphics is only supported in the form of PDF graphics; use ps2pdf
-or similar to convert your images as necessary.  
-
-You *must* give your PDF figures the extension "pdffig" (it's not just "pdf" to
-avoid accidents with make clean and similar).  In LaTeX, just use
-includegraphics as usual.  Then add the name of the file to VECTORFIGURES in
-the Makefile; ivoatex will then automatically generate the necessary bitmap
-images for the HTML version.
-
-Support for auxiliary files is in the works.
 
 Trouble?
 ========
