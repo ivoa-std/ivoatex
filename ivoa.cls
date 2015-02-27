@@ -22,7 +22,8 @@
 	anchorcolor=linkcolor,
 	citecolor=linkcolor,
 	pagecolor=linkcolor,
-	urlcolor=linkcolor]{hyperref}
+	urlcolor=linkcolor,
+	breaklinks=true]{hyperref}
 
 \bibliographystyle{agsm}
 
@@ -255,7 +256,7 @@
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\normalfont\large
+                                     {\raggedright\normalfont\large
                                      \color{ivoacolor}\bfseries\sffamily}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
