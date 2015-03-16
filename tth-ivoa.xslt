@@ -109,6 +109,10 @@
 				.redaction {
 					background-color: #ffff33;
 				}
+
+				span.nolinkurl {
+					font-family: monospace;
+				}
 			</xsl:text>></style>
 
       <xsl:apply-templates/>

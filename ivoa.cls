@@ -34,6 +34,8 @@
 \renewcommand{\textfraction}{0.1}
 \renewcommand{\floatpagefraction}{0.8}
 
+\setlength{\parskip}{1pt plus 2pt}
+
 \makeatletter
 
 %%%%%%%%%%%%%%%%%%% Metadata definition macros

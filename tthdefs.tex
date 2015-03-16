@@ -72,6 +72,9 @@
   {\tthverbatim{lstlisting}}
   {\special{html:</div>}}
 
+\newcommand{\nolinkurl}[1]{
+	\special{html:<span class='nolinkurl'>}#1\special{html:</span>}}
+
 \newenvironment{bigdescription}{%
     \begin{html}<div class="bigdescription">\end{html}
     \begin{description}
