@@ -176,7 +176,7 @@
 				</ul>
 			</dd>
 			
-			<dt>Editor</dt>
+			<dt>Editor(s)</dt>
                         <dd>
 				<ul class="editors">
 					<xsl:apply-templates select="li[@class='editor']"/>
