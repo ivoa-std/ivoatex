@@ -116,11 +116,6 @@ FIXTHIS: Mark up caption
 
 </template>
 
-<template match="h:pre">
-\begin{IVOAVerbatim}<apply-templates/>\end{IVOAVerbatim}
-
-</template>
-
 <template match="h:ul">
 \begin{itemize}
 <apply-templates/>
