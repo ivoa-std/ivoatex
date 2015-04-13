@@ -62,8 +62,10 @@
     \end{html}
   }
 
-\newcommand{\lstinputlisting}[2][None]{
+\newcommand{\lstinputlisting}[2][plain]{
+  \special{html:<div keyvals="#1">}
   \verbatiminput{#2}
+  \special{html:</div>}
 }
 \newcommand{\lstloadlanguages}[1]{}
 \newcommand{\lstset}[1]{}
