@@ -300,6 +300,9 @@
   \end{table}
   }%
 
+% customcss only relevant for tth output, not LaTeX
+\newcommand{\customcss}[1]{\relax}
+
 \newcommand{\xmlel}[1]{{\ttfamily\itshape #1}}
 \newcommand{\vorent}[1]{\textsc{#1}}
 

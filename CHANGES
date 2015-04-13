@@ -10,3 +10,5 @@ Version 0.5 (2015-XX-XX):
 	* Most of README has migrated to the IVOA note ivoatexDoc
 
 	* Multiple editors are now possible
+
+	* Document-specific CSS is now supported.

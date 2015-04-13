@@ -82,6 +82,10 @@
     \begin{description}
   }{\end{description}\begin{html}</div>\end{html}}
 
+% declare additional css to be included; only effective in the preamble
+\renewcommand{\customcss}[1]{%
+  \begin{html}<span class="customcss" ref="#1"/>\end{html}}
+
 \newcommand{\specialterm}[2]{%
   \begin{html}<span class="#1">\end{html}#2\begin{html}</span>\end{html}}
 \newcommand{\xmlel}[1]{\specialterm{xmlel}{#1}}
@@ -110,8 +114,12 @@
 \newcommand{\harvardyearright}{)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacks
-% shut up harmless error due to hyperref
+% shut up harmless error due to some package we're actually using
 \def\AtBeginDocument#1{\relax}
+\def\pgfsyspdfmark#1#2#3{\relax}
+\def\spacefactor{\relax}
+\newbox\voidb@x
+\def\@m{\relax}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata

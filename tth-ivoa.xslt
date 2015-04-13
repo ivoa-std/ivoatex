@@ -36,6 +36,8 @@
       </xsl:element>
       <xsl:call-template name="selectDoctypeStyle"/>
 
+			<xsl:apply-templates select="//span[@class='customcss']"/>
+
 			<style type="text/css">
 				<xsl:text disable-output-escaping="yes">
 				div#versionstatement, div#dateline {
@@ -117,7 +119,7 @@
 				.basicstyle__footnotesize {
 					font-size: 80%;
 				}
-			</xsl:text>></style>
+			</xsl:text></style>
 
       <xsl:apply-templates/>
     </xsl:copy>
@@ -218,6 +220,12 @@
 
   <xsl:template match="style[./@type='text/css']">
   </xsl:template>
+
+	<xsl:template match="span[@class='customcss']">
+		<link type="text/css" rel="stylesheet">
+			<xsl:attribute name="href"><xsl:value-of select="@ref"/></xsl:attribute>
+		</link>
+	</xsl:template>
 
   <xsl:template match="dd/div[./@class='p']">
   </xsl:template>

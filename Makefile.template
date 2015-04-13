@@ -22,4 +22,7 @@ FIGURES = archdiag.png
 # List of PDF figures (for vector graphics)
 VECTORFIGURES = 
 
+# Additional files to distribute (e.g., CSS, schema files, examples...)
+AUX_FILES = 
+
 include ivoatex/Makefile

@@ -4,7 +4,8 @@
 #  This main Makefile must define DOCNAME, DOCVERSION, DOCDATE, DOCTYPE
 #  SOURCES; also, FIGURES as needed.
 #
-#  See README for the targets in here useful to the user.
+#  See http://ivoa.net/documents/Notes/IVOATex/index.html 
+#  for the targets in here useful to the user.
 #
 #  You should *not* need to change anything here while authoring documents.
 #  All customisation should happen in the user Makefile
@@ -97,7 +98,7 @@ biblio: $(DOCNAME).bbl
 
 
 package: $(DOCNAME).html $(DOCNAME).pdf \
-		$(GENERATED_PNGS)	$(FIGURES)
+		$(GENERATED_PNGS)	$(FIGURES) $(AUX_FILES)
 	rm -rf -- $(versionedName)
 	mkdir $(versionedName)
 	cp $(DOCNAME).html $(versionedName)/$(versionedName).html
@@ -108,6 +109,9 @@ ifneq ($(strip $(FIGURES)),)
 endif
 ifneq ($(strip $(GENERATED_PNGS)),)
 	cp $(GENERATED_PNGS) $(versionedName)
+endif
+ifneq ($(strip $(AUX_FILES)),)
+	cp $(AUX_FILES) $(versionedName)
 endif
 #	# make sure files will be readable by the web server later on
 	chmod -R go+w $(versionedName)
