@@ -1,0 +1,11 @@
+tth is maintained by Ian Hutchinson, who occasionally releases new versions,
+which usually fix some bugs or contain some improvements.  To update
+this, pull "C code for any platform" from
+
+http://hutchinson.belmont.ma.us/tth/tth-noncom/download.html
+
+then go into this directory and say
+
+tar --strip-components=1 -xvzf <path-to-your-download>/tth_C.tgz
+
+This assumes GNU tar.

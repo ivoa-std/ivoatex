@@ -68,8 +68,8 @@
 \newcommand{\lstloadlanguages}[1]{}
 \newcommand{\lstset}[1]{}
 
-\newenvironment{lstlisting}[1][None]
-  {\tthverbatim{lstlisting}}
+\newenvironment{lstlisting}[1][plain]
+  {\special{html:<div keyvals="#1">}\tthverbatim{lstlisting}}
   {\special{html:</div>}}
 
 \newcommand{\nolinkurl}[1]{

@@ -1,3 +1,15 @@
+Version 4.07
+____________
+Fix the tthverbatim command so it can be used as planned to end environments.
+
+Version 4.07
+____________
+Add Polish characters (from package fontenc} to those recognized by default.
+
+Version 4.06
+____________
+Implement \tthverbatim{} command.
+
 Version 4.05
 ____________
 Reimplement mathml bold as mathvariant. Implement \bm as bold-italic.

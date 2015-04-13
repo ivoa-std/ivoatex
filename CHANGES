@@ -1,0 +1,12 @@
+Version 0.5 (2015-XX-XX):
+	
+	* lstlistings options are now available as CSS classes, and 
+		basicstyle=\footnotesize is interpreted for HTML.
+
+	* Updated to tth 4.08
+
+	* Improvied URL formatting (e.g., line breaks), including nolinkurl support
+
+	* Most of README has migrated to the IVOA note ivoatexDoc
+
+	* Multiple editors are now possible

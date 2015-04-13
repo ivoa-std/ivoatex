@@ -113,6 +113,10 @@
 				span.nolinkurl {
 					font-family: monospace;
 				}
+
+				.basicstyle__footnotesize {
+					font-size: 80%;
+				}
 			</xsl:text>></style>
 
       <xsl:apply-templates/>
@@ -314,6 +318,19 @@
      </xsl:attribute>
    	</link>
   </xsl:template>
+
+	<!-- To somewhat support keyval-style arguments (as in, e.g., listings)
+		this allows translating them into css classes.  Essentially,
+		generate a div with a keyvals attribute; see lstlisting in tthdefs -->
+	
+	<xsl:template match="*[@keyvals]">
+		<div>
+			<xsl:attribute name="class">
+				<xsl:value-of select="translate(@keyvals, ',=\\', ' __')"/>
+			</xsl:attribute>
+			<xsl:apply-templates/>
+		</div>
+	</xsl:template>
 
   <!-- Make a link to the current version on the ivoa doc server.
        The format of the URI here is as mandated by the IVOA
