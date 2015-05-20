@@ -13,6 +13,7 @@
 \RequirePackage{natbib}
 \RequirePackage[labelfont=it]{caption}
 \RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
 
 \definecolor{ivoacolor}{rgb}{0.0,0.318,0.612}
 \definecolor{linkcolor}{rgb}{0.318,0,0.318}
@@ -21,7 +22,6 @@
 	linkcolor=linkcolor,
 	anchorcolor=linkcolor,
 	citecolor=linkcolor,
-	pagecolor=linkcolor,
 	urlcolor=linkcolor,
 	breaklinks=true]{hyperref}
 
