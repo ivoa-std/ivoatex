@@ -85,7 +85,7 @@ $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
            >$(DOCNAME).html
 
 
-$(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib
+$(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
 	$(PDFLATEX) $(DOCNAME).tex
 	bibtex $(DOCNAME).aux
 	$(PDFLATEX) $(DOCNAME).tex 2>&1 >/dev/null
