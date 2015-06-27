@@ -45,10 +45,9 @@ GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 .PHONY: biblio
 
 %.png: %.pdf
-#	# simple ImageMagic -antialias didn't work too well
-	$(CONVERT) -density 300 $< temp-$@
-	$(CONVERT) temp-$@ -scale 25% $@
-	rm temp-$@
+	# simple ImageMagic -antialias didn't work too well
+	$(CONVERT) -density 300 -scale 25% $< $@
+
 
 $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
 	$(PDFLATEX) $(DOCNAME)
