@@ -27,8 +27,6 @@
 
 \bibliographystyle{agsm}
 
-\DeclareGraphicsRule{.pdffig}{pdf}{.pdffig}{}
-
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.7}
 \renewcommand{\textfraction}{0.1}
