@@ -28,9 +28,9 @@
 
 The words ``MUST'', ``SHALL'', ``SHOULD'', ``MAY'', ``RECOMMENDED'', and
 ``OPTIONAL'' (in upper or lower case) used in this document are to be
-interpreted as described in IETF standard, \citet{std:RFC2119}.
+interpreted as described in IETF standard RFC2119 \citep{std:RFC2119}.
 
-The \emph{Virtual Observatory (VO)} is
+The \emph{Virtual Observatory (VO)} is a
 general term for a collection of federated resources that can be used
 to conduct astronomical research, education, and outreach.
 The \href{http://www.ivoa.net}{International
