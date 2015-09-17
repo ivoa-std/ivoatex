@@ -315,6 +315,11 @@
 
 \chardef\dquote'042
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Changing LaTeX defaults
+
+\renewcommand*\descriptionlabel[1]
+	{\hspace{\labelsep}\itshape #1}
+
 \makeatother
 
 \input ivoatexmeta.tex
