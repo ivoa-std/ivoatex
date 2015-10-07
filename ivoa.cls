@@ -10,7 +10,6 @@
 \RequirePackage{doc}
 \RequirePackage{paralist}
 \RequirePackage{url}
-\RequirePackage{natbib}
 \RequirePackage[labelfont=it]{caption}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
@@ -25,6 +24,7 @@
 	urlcolor=linkcolor,
 	breaklinks=true]{hyperref}
 
+\RequirePackage{natbib}
 \bibliographystyle{agsm}
 
 \renewcommand{\topfraction}{0.9}

@@ -59,10 +59,23 @@ forcetex:
 
 archive: $(DOC).pdf $(DOC).html $(UPLOAD).zip $(ARCHIVE).zip
 
+arxiv-upload: $(SOURCES) biblio $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
+	mkdir -p stuff-for-arxiv/ivoatex
+	cp ivoatex/ivoa.cls ivoatex/tthdefs.tex stuff-for-arxiv
+	cp ivoatex/IVOA.jpg stuff-for-arxiv/ivoatex
+	# HACK: 2015-10-05 MD: arXiv produces an hyperref option clash without
+	# this
+	echo nohypertex >> stuff-for-arxiv/00README.XXX
+	cp $(SOURCES) $(DOCNAME).bbl $(FIGURES) $(VECTORFIGURES) \
+		ivoatexmeta.tex  stuff-for-arxiv
+	tar -cvzf arxiv-upload.tar.gz -C stuff-for-arxiv .
+	rm -r stuff-for-arxiv
+
 clean:
 	rm -f $(DOCNAME).pdf $(DOCNAME).aux $(DOCNAME).log $(DOCNAME).toc texput.log ivoatexmeta.tex
 	rm -f $(DOCNAME).html $(DOCNAME).xhtml
 	rm -f *.bbl *.blg *.out debug.html
+	rm -f arxiv-upload.tar.gz
 	rm -f $(GENERATED_PNGS)
 
 ivoatexmeta.tex: Makefile
