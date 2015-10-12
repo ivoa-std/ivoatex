@@ -104,6 +104,11 @@
 
 \newenvironment{inlinetable}{}{}
 
+% TODO: support some common styles
+\newenvironment{compactenum}[1][None]
+  {\begin{html}<ul class="compact">\end{html}\begin{enumerate}}
+  {\end{enumerate}\begin{html}</ul>\end{html}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Simplified support for Harvard citation style
 
 \newcommand{\harvarditem}[4][0]{%
