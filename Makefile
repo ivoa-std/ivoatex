@@ -108,6 +108,13 @@ $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
 # bibliography-relevant changes, they run make biblio manually.
 biblio: $(DOCNAME).bbl
 
+# generate may modify DOCNAME.tex controlled by arbitrary external binaries.
+# It is impossible to model these dependencies (here), and anyway
+# I feel something like that shouldn't run automatically.
+# Also, it needs python installed, which may not be available on all
+# installations.
+generate:
+	python ivoatex/update_generated.py $(DOCNAME).tex
 
 package: $(DOCNAME).html $(DOCNAME).pdf \
 		$(GENERATED_PNGS)	$(FIGURES) $(AUX_FILES)
