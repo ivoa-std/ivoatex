@@ -4,6 +4,18 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	xmlns:vm="http://www.ivoa.net/xml/VOMetadata/v0.1" 
 	version="1.0">
+<!-- This stylesheet produces LaTeX source for one (simple or complex) 
+type taken from an XML schema file.  The name of the type is taken from
+the destType schema parameter.
+
+This file is part of the IVOATeX document production system.  It was derived
+from Ray Plante's XSLT files for producing HTML documentation from schema
+files.
+
+This file can be distributed under the GNU GPL.  See COPYING for details.
+
+Copyright 2015, The GAVO project
+-->
 
   <xsl:output method="text"/>
 

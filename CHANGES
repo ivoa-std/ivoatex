@@ -12,3 +12,5 @@ Version 0.5 (2015-XX-XX):
 	* Multiple editors are now possible
 
 	* Document-specific CSS is now supported.
+
+	* Support for generated content (update_generated.py, make generate)

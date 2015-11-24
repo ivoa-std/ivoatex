@@ -15,7 +15,7 @@ Documentation
 
 Documentation on ivoatex, including a chapter on a quick start, is 
 given in the IVOA note "The IVOATeX Document Preparation System",
-available at http://ivoa.net/documents/IVOATex/index.html.
+available at http://ivoa.net/documents/Notes/IVOATex/index.html.
 
 
 
@@ -25,8 +25,9 @@ xsltproc; on the average linux machines, chances are you're almost
 there), you can build this note (which is written in IVOATeX itself)
 like this::
 
-	svn co https://volute.googlecode.com/svn/trunk/projects/ivoapub/ivoatexDoc
+	svn co https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatexDoc
 	cd ivoatexDoc
+	make biblio
 	make
 
 Then start your favourite PDF viewer on ivoatexDoc.pdf.
@@ -49,12 +50,16 @@ Another inspiration was Paul Harrison's ivoadoc system; in particular,
 parts of the XSL style sheet were taken from there, as well as the idea of
 using svn:externals.
 
+The document generation from XML schema files was adapted from XSLT 
+stylesheets written by Ray Plante.
+
 
 License
 =======
 
-Unless stated otherwise in the files, ivoatex is (c) 2014 Markus Demleitner and
-can be used and distributed under the GNU General Public License (ask for
-additional licenses if you're unhappy with the GPL).  See COPYING for details.  
+Unless stated otherwise in the files, ivoatex is (c) 2014-2015, the GAVO
+project and can be used and distributed under the GNU General Public License
+(ask for additional licenses if you're unhappy with the GPL).  See COPYING for
+details.  
 
 The files in tth_C have their own license.  See there for details.
