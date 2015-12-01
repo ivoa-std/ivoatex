@@ -25,7 +25,7 @@
 	breaklinks=true]{hyperref}
 
 \RequirePackage{natbib}
-\bibliographystyle{agsm}
+\bibliographystyle{ivoatex/ivoa}
 
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.7}
