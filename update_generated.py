@@ -39,7 +39,8 @@ def escape_for_TeX(tx):
 		).replace("&", "\\&"
 		).replace("#", "\\#"
 		).replace("%", "\\%"
-		).replace("_", "\\_")
+		).replace("_", "\\_"
+		).replace('"', '{"}')
 
 
 def cmd_taptable(table_name):
