@@ -26,6 +26,13 @@ Copyright 2015, The GAVO project
 
   <xsl:template match="text()"/>
 
+  <xsl:template name="escape-for-TeX">
+  	<xsl:param name="tx"/>
+  	<xsl:text>escape-for-TeX{{{</xsl:text>
+ 			<xsl:value-of select="$tx"/>
+  	<xsl:text>}}}</xsl:text>
+  </xsl:template>
+
   <xsl:template match="xs:complexType[xs:simpleContent]" mode="content"/>
 
   <xsl:template match="xs:complexType" mode="content">
@@ -155,7 +162,9 @@ Copyright 2015, The GAVO project
   <xsl:template match="xs:element|xs:attribute" mode="content.meaning">
     <xsl:param name="row" select="1"/>
     <xsl:text>\item[Meaning] </xsl:text>
-    <xsl:value-of select="xs:annotation/xs:documentation[1]"/>
+    <xsl:call-template name="escape-for-TeX">
+	    <xsl:with-param name="tx" select="xs:annotation/xs:documentation[1]"/>
+	  </xsl:call-template>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>
 
@@ -245,21 +254,20 @@ Copyright 2015, The GAVO project
   <xsl:template match="xs:element|xs:attribute" mode="content.allowedValues">
     <xsl:param name="row" select="1"/>
     <xsl:param name="type" select="@type"/>
-    <allowedValues>
-      <xsl:attribute namespace="" name="row">
-        <xsl:value-of select="$row"/>
-      </xsl:attribute>
-      <xsl:text>&#10;</xsl:text>
-      <xsl:choose>
-        <xsl:when test="$type">
-          <xsl:apply-templates select="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration" mode="controlledVocab"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:apply-templates select="xs:simpleType/xs:restriction/xs:enumeration" mode="controlledVocab"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </allowedValues>
+   	<xsl:text>\item[Allowed Values]\hfil\begin{description}</xsl:text>
+    <xsl:attribute namespace="" name="row">
+      <xsl:value-of select="$row"/>
+    </xsl:attribute>
     <xsl:text>&#10;</xsl:text>
+    <xsl:choose>
+      <xsl:when test="$type">
+        <xsl:apply-templates select="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration" mode="controlledVocab"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates select="xs:simpleType/xs:restriction/xs:enumeration" mode="controlledVocab"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>\end{description}&#10;</xsl:text>
   </xsl:template>
 
   <xsl:template match="xs:element|xs:attribute" mode="content.comment">
@@ -269,7 +277,9 @@ Copyright 2015, The GAVO project
       <xsl:attribute namespace="" name="row">
         <xsl:value-of select="$row"/>
       </xsl:attribute>
-      <xsl:value-of select="."/>
+      <xsl:call-template name="escape-for-TeX">
+	    	<xsl:with-param name="tx" select="."/>
+      </xsl:call-template>
       <xsl:text>&#10;</xsl:text>
     </xsl:for-each>
   </xsl:template>
@@ -394,9 +404,15 @@ Copyright 2015, The GAVO project
   </xsl:template>
 
   <xsl:template match="xs:enumeration" mode="controlledVocab">
-    <value name="{@value}">
-      <xsl:value-of select="xs:annotation/xs:documentation"/>
-    </value>
+    <xsl:text>\item[</xsl:text>
+    <xsl:call-template name="escape-for-TeX">
+    	<xsl:with-param name="tx" select="@value"/>
+    </xsl:call-template>
+    <xsl:text>]</xsl:text>
+    <xsl:call-template name="escape-for-TeX">
+	     <xsl:with-param name="tx" 
+	     	select="xs:annotation/xs:documentation"/>
+	   </xsl:call-template>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>
 
@@ -612,13 +628,16 @@ Copyright 2015, The GAVO project
     <xsl:if test="@name=$destType">
       <xsl:text>\begingroup
       	\renewcommand*\descriptionlabel[1]{%
-      	\hbox to 5.5em{\emph{#1}\hfil}}
-      	\vspace{2ex}\noindent\textbf{\xmlel{</xsl:text>
-      <xsl:value-of select="concat(/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix,':',@name)"/>
-      <xsl:text>}</xsl:text>
-      <xsl:text> Type Schema Documentation}&#10;&#10;</xsl:text>
-      <xsl:apply-templates select="./xs:annotation/xs:documentation"
-      	mode="typedesc"/>
+      	\hbox to 5.5em{\emph{#1}\hfil}}</xsl:text>
+
+      <xsl:if test="./xs:annotation/xs:documentation">
+      	<xsl:text>\vspace{2ex}\noindent\textbf{\xmlel{</xsl:text>
+      	<xsl:value-of select="concat(/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix,':',@name)"/>
+      	<xsl:text>}</xsl:text>
+      	<xsl:text> Type Schema Documentation}&#10;&#10;</xsl:text>
+      	<xsl:apply-templates select="./xs:annotation/xs:documentation"
+      		mode="typedesc"/>
+      </xsl:if>
 
       <xsl:text>\vspace{1ex}\noindent\textbf{\xmlel{</xsl:text>
       <xsl:value-of select="concat(/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix,':',@name)"/>

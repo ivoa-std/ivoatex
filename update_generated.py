@@ -86,6 +86,21 @@ def cmd_taptable(table_name):
 	return "\n".join(res)
 
 
+def cmd_schemadoc(schema_name, dest_type):
+	"""returns TeX source for the generated documentation of dest_type within
+	schema_name.
+
+	We cannot just use the output of the stylesheet, as TeX escapes in
+	XSLT1 is an inefficient nightmare.
+	"""
+	output = subprocess.check_output(["xsltproc", 
+		"--stringparam", "destType", dest_type, 
+		"ivoatex/schemadoc.xslt", schema_name])
+	# for the TeX escaping, we simply assume there's no nesting
+	# of escaped sections, and no annotation uses our magic strings.
+	return re.sub("(?s)escape-for-TeX{{{(.*?)}}}", 
+		lambda mat: escape_for_TeX(mat.group(1)), output)
+
 def process_one_builtin(command):
 	"""processes a GENERATED block containing a call to a builtin function.
 
