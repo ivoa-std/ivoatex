@@ -73,7 +73,7 @@ No previous versions yet.
 % Use itemize environments.
 
 
-\bibliography{ivoatex/ivoabib}
+\bibliography{ivoatex/ivoabib,ivoatex/docrepo}
 
 
 \end{document}

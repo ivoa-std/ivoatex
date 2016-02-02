@@ -14,3 +14,5 @@ Version 0.5 (2015-XX-XX):
 	* Document-specific CSS is now supported.
 
 	* Support for generated content (update_generated.py, make generate)
+	
+	* ivoa.bst is now used to format references
