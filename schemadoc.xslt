@@ -330,6 +330,9 @@ Copyright 2015, The GAVO project
       <xsl:when test=".='xs:anyURI'">
         <xsl:text>a URI: \xmlel{</xsl:text>
           <xsl:value-of select="."/>}</xsl:when>
+      <xsl:otherwise>
+      	<xsl:text>\xmlel{</xsl:text>
+				<xsl:value-of select="."/>}</xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
