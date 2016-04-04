@@ -95,6 +95,20 @@
 	}{%
 		\end{list}}
 
+\newcommand*\longtermslabel[1]{%
+	\parbox[b]{\labelwidth}{\makebox[0pt][l]{#1}\\\mbox{}}}
+\newenvironment{longtermsdescription}%
+	{\begin{list}{}{%
+		\setlength{\leftmargin}{4em}
+		\setlength{\labelwidth}{4em}
+		\setlength{\labelsep}{0pt}
+		\setlength{\listparindent}{0pt}
+		\setlength{\itemsep}{3pt}
+		\let\makelabel\longtermslabel}
+		\let\term\item
+	}{%
+		\end{list}}
+
 \newcommand\titlehe@d[1]{\bigbreak{\noindent
 	\Large\color{ivoacolor}\sffamily\bfseries #1}\nobreak\par\nobreak}
 

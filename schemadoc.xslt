@@ -254,7 +254,7 @@ Copyright 2015, The GAVO project
   <xsl:template match="xs:element|xs:attribute" mode="content.allowedValues">
     <xsl:param name="row" select="1"/>
     <xsl:param name="type" select="@type"/>
-   	<xsl:text>\item[Allowed Values]\hfil\begin{description}</xsl:text>
+   	<xsl:text>\item[Allowed Values]\hfil\begin{longtermsdescription}</xsl:text>
     <xsl:attribute namespace="" name="row">
       <xsl:value-of select="$row"/>
     </xsl:attribute>
@@ -267,7 +267,7 @@ Copyright 2015, The GAVO project
         <xsl:apply-templates select="xs:simpleType/xs:restriction/xs:enumeration" mode="controlledVocab"/>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:text>\end{description}&#10;</xsl:text>
+    <xsl:text>\end{longtermsdescription}&#10;</xsl:text>
   </xsl:template>
 
   <xsl:template match="xs:element|xs:attribute" mode="content.comment">
