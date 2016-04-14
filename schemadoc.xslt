@@ -33,6 +33,9 @@ Copyright 2015, The GAVO project
   	<xsl:text>}}}</xsl:text>
   </xsl:template>
 
+	<xsl:template match="vm:dcterm"/> <!-- we don't have a good place for these
+		yet -->
+	
   <xsl:template match="xs:complexType[xs:simpleContent]" mode="content"/>
 
   <xsl:template match="xs:complexType" mode="content">
@@ -68,15 +71,6 @@ Copyright 2015, The GAVO project
     <xsl:param name="item" select="1"/>
     <xsl:variable name="type" select="@type"/>
     <xsl:choose>
-      <xsl:when test="$item &lt; 2 and xs:annotation/xs:appinfo/vm:dcterm">
-        <xsl:apply-templates select="." mode="content.rmname">
-          <xsl:with-param name="row" select="$row"/>
-        </xsl:apply-templates>
-        <xsl:apply-templates select="." mode="nextContentItem">
-          <xsl:with-param name="row" select="$row+1"/>
-          <xsl:with-param name="item" select="2"/>
-        </xsl:apply-templates>
-      </xsl:when>
       <xsl:when test="$item &lt; 3">
         <xsl:apply-templates select="." mode="content.type">
           <xsl:with-param name="row" select="$row"/>
@@ -122,22 +116,6 @@ Copyright 2015, The GAVO project
         </xsl:apply-templates>
       </xsl:when>
     </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="xs:element" mode="content.rmname">
-    <xsl:param name="row" select="1"/>
-    <rmname>
-      <xsl:attribute namespace="" name="row">
-        <xsl:value-of select="$row"/>
-      </xsl:attribute>
-      <xsl:for-each select="xs:annotation/xs:appinfo/vm:dcterm">
-        <xsl:if test="position()!=1">
-          <xsl:text>, </xsl:text>
-        </xsl:if>
-        <xsl:value-of select="."/>
-      </xsl:for-each>
-    </rmname>
-    <xsl:text>&#10;</xsl:text>
   </xsl:template>
 
   <xsl:template match="xs:element|xs:attribute" mode="content.type">
