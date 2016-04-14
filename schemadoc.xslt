@@ -248,7 +248,7 @@ Copyright 2015, The GAVO project
    			<xsl:if test="descendant::xs:enumeration">
  					<xsl:text>\item[Allowed Values]\hfil&#10;\begin{longtermsdescription}</xsl:text>
        		<xsl:apply-templates 
-       			select="xs:simpleType/xs:restriction/xs:enumeration" 
+       			select="descendant::xs:enumeration" 
        			mode="controlledVocab"/>
    				<xsl:text>\end{longtermsdescription}&#10;</xsl:text>
        	</xsl:if>
@@ -627,6 +627,19 @@ Copyright 2015, The GAVO project
       	<xsl:apply-templates select="./xs:annotation/xs:documentation"
       		mode="typedesc"/>
       </xsl:if>
+			
+			<!-- oh my. refactor content.allowedValues stuff above to let us
+			re-use the mess there here. -->
+     	<xsl:if test="xs:restriction/xs:enumeration">
+       	<xsl:text>\vspace{2ex}\noindent\textbf{\xmlel{</xsl:text>
+      	<xsl:value-of select="concat(/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix,':',@name)"/>
+      	<xsl:text>}</xsl:text>
+      	<xsl:text> Type Allowed Values}&#10;&#10;\begin{longtermsdescription}</xsl:text>
+       	<xsl:apply-templates 
+       		select="descendant::xs:enumeration" 
+       		mode="controlledVocab"/>
+   			<xsl:text>\end{longtermsdescription}&#10;</xsl:text>
+     	</xsl:if>
 
       <xsl:text>\vspace{1ex}\noindent\textbf{\xmlel{</xsl:text>
       <xsl:value-of select="concat(/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix,':',@name)"/>
