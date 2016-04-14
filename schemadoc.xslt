@@ -254,20 +254,28 @@ Copyright 2015, The GAVO project
   <xsl:template match="xs:element|xs:attribute" mode="content.allowedValues">
     <xsl:param name="row" select="1"/>
     <xsl:param name="type" select="@type"/>
-   	<xsl:text>\item[Allowed Values]\hfil\begin{longtermsdescription}</xsl:text>
-    <xsl:attribute namespace="" name="row">
-      <xsl:value-of select="$row"/>
-    </xsl:attribute>
-    <xsl:text>&#10;</xsl:text>
-    <xsl:choose>
-      <xsl:when test="$type">
-        <xsl:apply-templates select="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration" mode="controlledVocab"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates select="xs:simpleType/xs:restriction/xs:enumeration" mode="controlledVocab"/>
-      </xsl:otherwise>
-    </xsl:choose>
-    <xsl:text>\end{longtermsdescription}&#10;</xsl:text>
+   	<xsl:attribute namespace="" name="row">
+     	<xsl:value-of select="$row"/>
+   	</xsl:attribute>
+   	<xsl:text>&#10;</xsl:text>
+   	<xsl:choose>
+     	<xsl:when test="$type">
+     		<xsl:if test="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration">
+ 					<xsl:text>\item[Allowed Values]\hfil&#10;\begin{longtermsdescription}&#10;</xsl:text>
+       			<xsl:apply-templates select="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration" mode="controlledVocab"/>
+   				<xsl:text>\end{longtermsdescription}&#10;</xsl:text>
+       	</xsl:if>
+     	</xsl:when>
+     	<xsl:otherwise>
+   			<xsl:if test="descendant::xs:enumeration">
+ 					<xsl:text>\item[Allowed Values]\hfil&#10;\begin{longtermsdescription}</xsl:text>
+       		<xsl:apply-templates 
+       			select="xs:simpleType/xs:restriction/xs:enumeration" 
+       			mode="controlledVocab"/>
+   				<xsl:text>\end{longtermsdescription}&#10;</xsl:text>
+       	</xsl:if>
+     	</xsl:otherwise>
+   	</xsl:choose>
   </xsl:template>
 
   <xsl:template match="xs:element|xs:attribute" mode="content.comment">
