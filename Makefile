@@ -98,9 +98,9 @@ $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 
 
 $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
-	$(PDFLATEX) $(DOCNAME).tex
+	-$(PDFLATEX) -interaction scrollmode $(DOCNAME).tex
 	bibtex $(DOCNAME).aux
-	$(PDFLATEX) $(DOCNAME).tex 2>&1 >/dev/null
+	$(PDFLATEX) -interaction batchmode $(DOCNAME).tex 2>&1 >/dev/null
 	touch $(DOCNAME).tex
 
 # We don't let the pdf depend on .bbl, as we don't want to run BibTeX
