@@ -42,7 +42,7 @@ endif
 GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 
 .SUFFIXES: .pdf .gif .tex .png
-.PHONY: biblio
+.PHONY: biblio docrepo.bib
 
 %.png: %.pdf
 	# simple ImageMagic -antialias didn't work too well
