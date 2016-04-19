@@ -49,7 +49,16 @@
       <div id='statusOfThisDocument'>}\ivoaDoctype\special{html:</div>}
     \tableofcontents
   }
-    
+   
+\newenvironment{generated}{%
+  \begin{html}
+    <div class="generated">
+  \end{html}
+  }{%
+    \begin{html}
+      </div> <!-- generated -->
+    \end{html}
+  }
 
 \newenvironment{admonition}[1]{%
   \begin{html}

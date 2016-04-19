@@ -194,6 +194,9 @@
    	\docstatusDeclaration{\ivoaDoctype}
    	\tableofcontents}
 
+\newenvironment{generated}{%
+	\list{}{\rightmargin 0mm\leftmargin 5mm}\item[]}
+	{\endlist}
 
 \newcommand\expandedDoctype[1] % "Proposed Recommendation" for PR and such
 	{\ifthenelse{\equal{#1}{NOTE}}

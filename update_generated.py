@@ -98,8 +98,10 @@ def cmd_schemadoc(schema_name, dest_type):
 		"ivoatex/schemadoc.xslt", schema_name])
 	# for the TeX escaping, we simply assume there's no nesting
 	# of escaped sections, and no annotation uses our magic strings.
-	return re.sub("(?s)escape-for-TeX{{{(.*?)}}}", 
-		lambda mat: escape_for_TeX(mat.group(1)), output)
+	return "\\begin{generated}\n%s\n\\end{generated}\n"%(
+		re.sub("(?s)escape-for-TeX{{{(.*?)}}}", 
+			lambda mat: escape_for_TeX(mat.group(1)), output))
+
 
 def process_one_builtin(command):
 	"""processes a GENERATED block containing a call to a builtin function.

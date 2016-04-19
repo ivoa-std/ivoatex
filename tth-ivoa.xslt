@@ -52,6 +52,11 @@
 					margin-bottom:0.5ex;
 				}
 
+				div.generated {
+					padding-left: 5mm;
+					border-left: 4pt solid #dddddd;
+				}
+
 				div.admonition {
 					width: 30em;
 					position: relative;
