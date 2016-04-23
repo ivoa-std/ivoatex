@@ -10,7 +10,7 @@
 #  You should *not* need to change anything here while authoring documents.
 #  All customisation should happen in the user Makefile
 
-IVOATEX_VERSION = 0.4
+IVOATEX_VERSION = 1.0
 
 CSS_HREF = http://www.ivoa.net/misc/ivoa_doc.css
 TTH = ivoatex/tth_C/tth
