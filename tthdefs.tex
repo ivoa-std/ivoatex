@@ -14,8 +14,8 @@
 
 \renewcommand{\author}[2][0]{\def\@tmp{#1}
   \if 0\@tmp
-	{\begin{html}<li class="author">#2</li>\end{html}}\else
-	{\begin{html}<li class="author"><a href="#1">#2</a></li>\end{html}}\fi}
+	{\begin{html}<li class="author">\end{html}#2\begin{html}</li>\end{html}}\else
+	{\begin{html}<li class="author"><a href="#1">\end{html}#2\begin{html}</a></li>\end{html}}\fi}
 \renewcommand{\previousversion}[2][0]{\def\@tmp{#1}
   \if 0\@tmp
 	{\begin{html}<li class="previousversion">#2</li>\end{html}}\else
@@ -25,8 +25,8 @@
   {\begin{html}<dd id="ivoagroup">#1</dd>\end{html}}
 \renewcommand{\editor}[2][0]{\def\@tmp{#1}
   \if 0\@tmp
-        {\begin{html}<li class="editor">#2</li>\end{html}}\else
-        {\begin{html}<li class="editor"><a href="#1">#2</a></li>\end{html}}\fi}
+        {\begin{html}<li class="editor">\end{html}#2\begin{html}</li>\end{html}}\else
+        {\begin{html}<li class="editor"><a href="#1">\end{html}#2\begin{html}</a></li>\end{html}}\fi}
 
 \newcommand{\includeMeta}{%
    \special{html:<span id='version'>}\ivoaDocversion\special{html:</span>
