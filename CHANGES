@@ -1,4 +1,9 @@
-Version 0.5 (2015-XX-XX):
+Version 1.1 (2016-09-XX)
+
+	* Authors and Editors are now TeX-formatted even in HTML rendering
+
+
+Version 1.0 (2016-04-23):
 	
 	* lstlistings options are now available as CSS classes, and 
 		basicstyle=\footnotesize is interpreted for HTML.
