@@ -1247,12 +1247,12 @@ FUNCTION {confusion.pass}
     { last.etal.allowed 
         { last.full.label make.full.label sortify.names =
             { skip$ }
-            { #0 'etal.allowed :=
+            { #1 'etal.allowed :=
               #0 'last.etal.allowed :=
             }
           if$
         }
-        { #0 'etal.allowed := }
+        { #1 'etal.allowed := }
       if$
     }
     { sort.label 'last.sort.label :=
