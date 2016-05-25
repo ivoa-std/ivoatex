@@ -176,4 +176,4 @@ ivoatex-installdist: $(IVOATEX_ARCHIVE)
 
 # re-gets the ivoa records from ADS
 docrepo.bib:
-	curl -o "$@" "http://ads.ari.uni-heidelberg.de/cgi-bin/nph-abs_connect?db_key=ALL&warnings=YES&version=1&bibcode=%3F%3F%3F%3Fivoa.spec&nr_to_return=1000&start_nr=1&data_type=BIBTEX&use_text=YES"
+	curl -o "$@" "http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=ALL&warnings=YES&version=1&bibcode=%3F%3F%3F%3Fivoa.spec&nr_to_return=1000&start_nr=1&data_type=BIBTEX&use_text=YES"
