@@ -39,6 +39,7 @@ ENTRY
     title
     type
     URL
+    adsurl
     volume
     year
   }
@@ -161,7 +162,11 @@ FUNCTION {quote}
 
 FUNCTION {write.url}
 { URL empty$
-    { skip$ }
+    { adsurl empty$
+    	{ skip$ }
+    	{ "\newline\harvardurl{" adsurl * "}" * write$ newline$ }
+    	if$
+    }
     { "\newline\harvardurl{" URL * "}" * write$ newline$ }
   if$
 }
