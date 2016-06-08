@@ -83,7 +83,7 @@ change updated whenever you re-upload this record. -->
 	<!-- You can furthermore have as many key-value pairs as you want.
 		Service standard authors will need this to comply with Identifier 2.0's
 		recommendation for standardId 
-		(http://www.ivoa.net/documents/IVOAIdentifiers/20150709/PR-Identifiers-2.0-20150709.html#tth_sEc4.2)
+		(http://www.ivoa.net/documents/IVOAIdentifiers/20150709/PR-Identifiers-2.0-20150709.html#tth_sEc4.2) -->
 	<key>
 		<name>####</name>
 		<description>####
