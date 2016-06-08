@@ -1,0 +1,93 @@
+<!-- A template for a registry record for a standard.
+
+See http://wiki.ivoa.net/twiki/bin/view/IVOA/WriteAStandardsRecord
+for the why and what of this.
+
+It is hoped that the embedded comments will guide you to producing
+a correct and semantically useful registry record.
+
+You will need to change everything marked with ####
+-->
+
+<!-- initially, set created and updated to (roughly) UTC of now.
+change updated whenever you re-upload this record. -->
+<ri:Resource 
+	xsi:type="vstd:Standard" 
+	created="####" 
+	updated="####"
+	status="active"
+	xmlns:vr="http://www.ivoa.net/xml/VOResource/v1.0" 
+	xmlns:vstd="http://www.ivoa.net/xml/StandardsRegExt/v1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:ri="http://www.ivoa.net/xml/RegistryInterface/v1.0"
+	xsi:schemaLocation="http://www.ivoa.net/xml/VOResource/v1.0
+		http://www.ivoa.net/xml/VOResource/v1.0
+	http://www.ivoa.net/xml/StandardsRegExt/v1.0
+		http://www.ivoa.net/xml/StandardsRegExt/v1.0
+	http://www.ivoa.net/xml/VOResource/v1.0
+		http://www.ivoa.net/xml/VOResource/v1.0">
+
+  <title>####</title> <!-- title as given on the standard's title page -->
+	<!-- put the "short name" of your standard after std/: -->
+  <identifier>ivo://ivoa.net/std/####</identifier> 
+  <curation>
+    <publisher>IVOA</publisher>
+
+    <!-- author name(s), preferably in Last, I. form; one creator
+    element per author -->
+    <creator>
+      <name>####</name>
+    </creator>
+    <creator>
+      <name>####</name>
+    </creator>
+
+		<!-- this should be the date of the last recommendation -->
+    <date role="update">####</date>
+    <version>####</version> <!-- the document version -->
+    <contact>
+      <name>####</name> <!-- typcially, the name of the main WG/IG-->
+      <email>####</email> <!-- typically, the mailing list address -->
+    </contact>
+  </curation>
+  <content>
+    <subject>Virtual observatory</subject>
+    <!-- you can give further keywords, one per subject element;
+    use the IVOA thesaurus if possible:
+
+    http://www.ivoa.net/rdf/Vocabularies/vocabularies-20091007/IVOAT/IVOAT.html
+    -->
+    <subject>####</subject>
+
+    <description>
+    	#### (your abstract; no markup here, please)
+    </description>
+    <referenceURL>#### (the generic landing page URL, e.g.
+    	http://ivoa.net/documents/SAMP/)</referenceURL>
+    <type>Other</type>
+  	<contentLevel>Research</contentLevel>
+  </content>
+
+  <!-- Version(s) of the standard that should be used.  In general,
+  	you'll only have exactly one endorsedVersion with status="rec",
+  	but situations are imaginable where you have multiple endorsed
+  	versions, perhaps even with non-rec status (though you should probably
+  	ask the TCG before going there). -->
+  <endorsedVersion status="rec">####</endorsedVersion>
+
+	<!-- If your standard provides schema file(s), list their canonical
+		URL(s) here.  Only list the most recent versions. Otherwise, just
+		delete this element. -->
+	<schema>####</schema>
+
+	<!-- You can furthermore have as many key-value pairs as you want.
+		Service standard authors will need this to comply with Identifier 2.0's
+		recommendation for standardId 
+		(http://www.ivoa.net/documents/IVOAIdentifiers/20150709/PR-Identifiers-2.0-20150709.html#tth_sEc4.2)
+	<key>
+		<name>####</name>
+		<description>####
+		</description>
+	</key>
+
+</ri:Resource>
