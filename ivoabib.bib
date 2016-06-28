@@ -18,25 +18,6 @@
   url =          {http://www.ivoa.net/documents/latest/DocStdProc.html}
 }
 
-@Misc{note:schemaevolution,
-  author =       {Paul Harrison and Markus Demleitner and Brian Major 
-  	and Pat Dowler},
-  title =        {{XML} Schema Versioning Policies},
-  howpublished = {{IVOA Note}},
-  year =         2015,
-  url =          {http://ivoa.net/documents/Notes/XMLVers/},
-}
-
-@Misc{note:discoveringdata,
-  author =       {Markus Demleitner and Mark Taylor},
-  title =        {Discovering Data Collections Within Services},
-  howpublished = {{IVOA Note}},
-  year =         2016,
-  url =          {http://ivoa.net/documents/Notes/DataCollect/},
-}
-
-
-
 @Misc{std:FITS,
    author = {{Hanisch}, R.~J. and {Farris}, A. and {Greisen}, E.~W. and {Pence}, 
 W.~D. and 
@@ -84,7 +65,7 @@ MISCELLANEOUS, ASTRONOMICAL DATABASES: MISCELLANEOUS},
   howpublished = {{IVOA Recommendation}},
   month =        jul,
   year =         2015,
-  url =          {http://www.ivoa.net/documents/Identifiers}
+  url =          {http://www.ivoa.net/documents/REC/FIXME}
 }
 
 
@@ -342,6 +323,15 @@ Version 1.03},
 }
 
 
+@Misc{std:SIAv2,
+   author = {Patrick Dowler and Doug Tody and Francois Bonnarel},
+   title = {IVOA Simple Image Access, Version 2.0},
+   howpublished = {IVOA Recommendation 23 December 2015},
+   year = 2015,
+   month = dec,
+   editor = {Patrick Dowler and Francois Bonnarel},
+}
+
 @Misc{std:SIAP,
   editor =       {Paul Harrison},
   author =       {Doug Tody and Ray Plante},
@@ -357,15 +347,6 @@ Version 1.03},
   howpublished = {{IVOA Recommendation}},
   year =         {2008},
   url =          {http://www.ivoa.net/documents/latest/ConeSearch.html}
-}
-
-@Misc{std:SLAP,
-  editor =       {Pedro Osuna and Jesus Salgado},
-  author =       {Jesus Salgado and Pedro Osuna and Matteo Guainazzi and Isa Barbarisi and Marie-Lise Dubernet and Doug Tody},
-  title =        {Simple Line Access Protocol},
-  howpublished = {{IVOA Recommendation}},
-  year =         {2010},
-  url =          {http://www.ivoa.net/documents/SLAP}
 }
 
 @Misc{std:SSAP,
@@ -398,15 +379,6 @@ Alexander Szalay and Yuji Shirasaki and Maria A. Nieto-Santisteban and Masatoshi
   howpublished = {{IVOA Recommendation}},
   year =         {2008},
   url =          {http://www.ivoa.net/documents/cover/ADQL-20081030.html}
-}
-
-@Misc{std:ADQL-20150601,
-  editor =       {Dave Morris},
-  author =       {I{\~n}aki Ortiz and Jeff Lusted and Pat Dowler and Alexander Szalay and Yuji Shirasaki and Maria A. Nieto-Santisteba and Masatoshi Ohishi and William O'Mullane and Pedro Osuna and the VOQL-TEG and the VOQL Working Group},
-  title =        {{IVOA} Astronomical Data Query Language, Version 2.1 (WD), 2015-06-01},
-  howpublished = {{IVOA Working draft}},
-  year =         {2015},
-  url =          {http://wiki.ivoa.net/internal/IVOA/ADQL/WD-ADQL-2.1-20150601.pdf}
 }
 
 @Misc{std:VOSPACE,
@@ -557,15 +529,14 @@ Dave Winer
 	url={http://www.ivoa.net/documents/RegTAP/},
 }
 
-@Misc{std:Datalink,
-   author = {{Dowler}, P. and {Bonnarel}, F. and {Tody}, D.},
-    title = "{IVOA Simple Image Access Version 2.0}",
-howpublished = {IVOA Recommendation 23 December 2015},
-     year = 2015,
-    month = dec,
-   editor = {{Dowler}, P. and {Bonnarel}, F.},
-   adsurl = {http://ads.ari.uni-heidelberg.de/abs/2015ivoa.spec.1223D},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+@Misc{std:DataLink,
+        author={Patrick Dowler and Francois Bonnarel and Laurent Michel and Markus Demleitner},
+        editor={Patrick Dowler},
+        howpublished={IVOA Recommendation 17 June 2015},
+        title={IVOA} DataLink},
+        year=2015,
+        month=jun,
+        url={http://www.ivoa.net/documents/DataLink/}
 }
 
 @Misc{std:VOTABLE,
@@ -584,7 +555,7 @@ howpublished = {IVOA Recommendation 23 December 2015},
   author={{International Organization for Standardization)}},
   title={Data elements and interchange formats -- Information interchange -- Representation of dates and times},
   year=2004,
-  url= {http://www.iso.org/iso/catalogue\_detail?csnumber=40874}
+  url= {http://www.iso.org/iso/catalogue_detail?csnumber=40874}
 }
 @Misc{std:XFORM,
   editor={John M. Boyer},
@@ -685,8 +656,8 @@ howpublished = {IVOA Recommendation 23 December 2015},
 
 @Misc{std:MIME,
   author =       {N. Freed and N. Borenstein},
-  title =        {Mulitpurpose Internet Mail Extensions (MIME) Part Two: Media Types},
-  howpublished = {IETF RFC 2046},
+  title =        {Mulitpurpose Internet Mail Extensions},
+  howpublished = {IETF RFC},
   organization = {{IETF}},
   url =          {http://www.ietf.org/rfc/rfc2046.txt},
   month =        nov,
@@ -708,7 +679,7 @@ howpublished = {IVOA Recommendation 23 December 2015},
 
 @misc{std:RDFaLite11,
     author = {M. Sporny},
-    title = {{RDFa} Lite 1.1},
+    title = {RDFA Lite 1.1},
     howpublished = {W3C Recommendation},
     month = jun,
     year = 2012
@@ -862,62 +833,26 @@ booktitle = {Astronomical Data Analysis Software and Systems (ADASS) XIII},
 @ARTICLE{paper:regclient,
    author = {{Demleitner}, M. and {Harrison}, P. and {Taylor}, M. and {Normand}, J.
 	},
-    title = "{Client interfaces to the Virtual Observatory Registry}",
-  journal = {Astronomy and Computing},
+    title = "{Client Interfaces to the Virtual Observatory Registry}",
+  journal = {ArXiv e-prints},
 archivePrefix = "arXiv",
    eprint = {1502.01186},
  primaryClass = "astro-ph.IM",
- keywords = {Virtual Observatory, Registry, Standards},
+ keywords = {Astrophysics - Instrumentation and Methods for Astrophysics},
      year = 2015,
-    month = apr,
-   volume = 10,
-    pages = {88-98},
-      doi = {10.1016/j.ascom.2015.01.008},
-   adsurl = {http://ads.ari.uni-heidelberg.de/abs/2015A%26C....10...88D},
+    month = feb,
+   adsurl = {http://ads.ari.uni-heidelberg.de/abs/2015arXiv150201186D},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
 @MISC{soft:Splat,
-   author = {{Castro-Neves}, M. and {Draper}, P.~W.},
-    title = "{SPLAT-VO: Spectral Analysis Tool for the Virtual Observatory}",
-     note = {Astrophysics Source Code Library},
+   author = {{Draper}, P.~W.},
+    title = "{SPLAT: Spectral Analysis Tool}",
+howpublished = {Astrophysics Source Code Library},
      year = 2014,
-archivePrefix = "ascl",
-   eprint = {1402.008},
     month = feb,
-   adsurl = {http://ads.ari.uni-heidelberg.de/abs/2014ascl.soft02008C},
+archivePrefix = "ascl",
+   eprint = {1402.007},
+   adsurl = {http://adsabs.harvard.edu/abs/2014ascl.soft02007D},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
-
-@INPROCEEDINGS{soft:VOSpec,
-   author = {{Osuna}, P. and {Barbarisi}, I. and {Salgado}, J. and {Arviset}, C.
-	},
-    title = "{VOSpec: A Tool for Handling Virtual Observatory Compliant Spectra}",
-booktitle = {Astronomical Data Analysis Software and Systems XIV},
-     year = 2005,
-   series = {Astronomical Society of the Pacific Conference Series},
-   volume = 347,
-   editor = {{Shopbell}, P. and {Britton}, M. and {Ebert}, R.},
-    month = dec,
-    pages = {198},
-   adsurl = {http://adsabs.harvard.edu/abs/2005ASPC..347..198O},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-
-@techreport{std:DataCite31,
-    doi = {10.5438/0010},
-    institution = {DataCite},
-		author = {Joan Starr and Noemie Amman and Jan Ashton and Amy Barton
-			and Jannean Elliott and Marie-Christine Jacquemot-Perbal
-			and Merja Karjalainen and Andreas Oskar Kempf and Lynne {MacAvoy}
-			and Elizabeth Newbold and Lars Holm Nielsen and Sebastian Peters
-			and Madeleine de Smaele and Natalija Schlenstein and Mohammed Yahia
-			and Frauke Ziedorn},
-    keywords = {datacite},
-    month = oct,
-    publisher = {DataCite},
-    title = {{DataCite} Metadata Schema for the Publication and Citation of Research Data, version 3.1},
-    url = {http://dx.doi.org/10.5438/0010},
-    year = {2014}
-}
-
