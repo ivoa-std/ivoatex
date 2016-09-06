@@ -207,9 +207,11 @@
 			{IVOA Proposed Recommendation}
 		{\ifthenelse{\equal{#1}{REC}}
 			{IVOA Recommendation}
-		{\ifthenelse{\equal{#1}{DERR}}
-			{Draft Erratum}
-		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}
+		{\ifthenelse{\equal{#1}{PEN}}
+			{Proposed Endorsed Note}
+		{\ifthenelse{\equal{#1}{EN}}
+			{Endorsed Note}
+		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}}
 
 \newcommand\docstatusDeclaration[1]
 	{\ifthenelse{\equal{#1}{NOTE}}
@@ -255,7 +257,7 @@
      attention to the specification and to promote its
      widespread deployment. This enhances the functionality and
      interoperability inside the Astronomical Community.}
-		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}\par
+		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}\par
 	A list of current IVOA Recommendations and other technical documents
 	can be found at \href{http://www.ivoa.net/Documents/
 	}{http://www.ivoa.net/Documents/}.}

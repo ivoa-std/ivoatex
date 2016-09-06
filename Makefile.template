@@ -9,7 +9,7 @@ DOCVERSION = 1.0
 # Publication date, ISO format; update manually for "releases"
 DOCDATE = ???
 
-# What is it you're writing: NOTE, WD, PR, or REC
+# What is it you're writing: NOTE, WD, PR, REC, PEN, or EN
 DOCTYPE = ???
 
 # Source files for the TeX document (but the main file must always
