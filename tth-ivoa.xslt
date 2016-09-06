@@ -250,12 +250,15 @@
       <xsl:when test="$doctype='NOTE'">
         <xsl:text>IVOA Note </xsl:text>
       </xsl:when>
-      <xsl:when test="$doctype='DERR'">
-       	<xsl:text>Draft Erratum </xsl:text>
+      <xsl:when test="$doctype='PEN'">
+       	<xsl:text>Proposed Endorsed Note </xsl:text>
+      </xsl:when>
+      <xsl:when test="$doctype='EN'">
+       	<xsl:text>Endorsed Note </xsl:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:message terminate='yes'>doctype must be one of
-                  WD, PR, REC, NOTE, DERR not 
+                  WD, PR, REC, NOTE, EN, PEN not 
                   '<xsl:value-of select="$doctype"/>'</xsl:message>
       </xsl:otherwise>
     </xsl:choose>
@@ -299,12 +302,18 @@
                   widespread deployment. This enhances the functionality and
                   interoperability inside the Astronomical Community.
               </xsl:when>
-              <xsl:when test="$doctype='DERR'">
-              	This is a draft for an erratum to an IVOA recommendation made
-              	available for public review.  Interested parties are invited to
-              	evaluate the erratum's validity and impact, but at this stage
-              	the erratum does not yet change the normative content of the
-              	recommendation.
+              <xsl:when test="$doctype='PEN'">
+              	This is an IVOA Proposed Endorsed Note for review by IVOA
+              	members and other interested parties. It is appropriate to
+              	reference this document only as a Proposed Endorsed Note that
+              	is under review and may change before it is endorsed or may not
+              	be endorsed at all.
+              </xsl:when>
+              <xsl:when test="$doctype='EN'">
+	              This document is an IVOA Endorsed Note. It has been reviewed
+	              and endorsed by the IVOA Technical Coordination Group as a
+	              stable, citable document which constitutes valuable information
+	              for the IVOA community and beyond.
               </xsl:when>
               <xsl:otherwise>
                   <xsl:message terminate='yes'>Invalid document
@@ -326,6 +335,10 @@
          <xsl:when test="$doctype='REC'"
             >http://www.ivoa.net/misc/ivoa_rec.css</xsl:when>
          <xsl:when test="$doctype='NOTE'"
+            >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
+         <xsl:when test="$doctype='PEN'"
+            >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
+         <xsl:when test="$doctype='EN'"
             >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
        </xsl:choose>
      </xsl:attribute>
