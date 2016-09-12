@@ -303,11 +303,11 @@
                   interoperability inside the Astronomical Community.
               </xsl:when>
               <xsl:when test="$doctype='PEN'">
-              	This is an IVOA Proposed Endorsed Note for review by IVOA
-              	members and other interested parties. It is appropriate to
-              	reference this document only as a Proposed Endorsed Note that
-              	is under review and may change before it is endorsed or may not
-              	be endorsed at all.
+								This is an IVOA Proposed Endorsed Note for review by IVOA
+      					members and other interested parties. It is appropriate to
+      					reference this document only as a Proposed Endorsed Note that
+      					is under review and may change before it is endorsed or may  
+      					not be endorsed. 
               </xsl:when>
               <xsl:when test="$doctype='EN'">
 	              This document is an IVOA Endorsed Note. It has been reviewed
