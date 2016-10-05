@@ -548,7 +548,10 @@ FUNCTION {format.lab.names.abbr}
   s num.names$ 'numnames :=
   numnames #1 >
     { numnames #2 >
-	{ s #1 "{vv~}{ll}" format.name$ " et~al." * }
+	{ s #1 "{vv~}{ll}" format.name$ " \harvardand\ " *
+          s #2 "{vv~}{ll}" format.name$ * 
+	  " et~al." * 
+	}
 	{ s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             { s #1 "{vv~}{ll}" format.name$ " et~al." * }
 	    { s #1 "{vv~}{ll}" format.name$ " \harvardand\ " *
@@ -1252,12 +1255,12 @@ FUNCTION {confusion.pass}
     { last.etal.allowed 
         { last.full.label make.full.label sortify.names =
             { skip$ }
-            { #1 'etal.allowed :=
+            { #0 'etal.allowed :=
               #0 'last.etal.allowed :=
             }
           if$
         }
-        { #1 'etal.allowed := }
+        { #0 'etal.allowed := }
       if$
     }
     { sort.label 'last.sort.label :=
