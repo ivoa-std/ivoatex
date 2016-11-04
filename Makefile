@@ -24,7 +24,7 @@ ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 #     ghostscript (if you plan on postscript/pdf figures)
 #     zip
 #  All most likely present on, e.g., a linux disribution.
-#  Could use substitites for some of these if they are not available.
+#  Could use substitutes for some of these if they are not available.
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
 PDFLATEX = pdflatex

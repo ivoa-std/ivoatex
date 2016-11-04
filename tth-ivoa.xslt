@@ -151,17 +151,21 @@
 		
 		<h1><xsl:value-of select="h1[@align='center']"/></h1>
 		<div id="versionstatement">
-			Version <xsl:value-of select="span[@id='version']"/>
+			Version <xsl:value-of select="h:span[@id='version']"
+				xmlns:h="http://www.w3.org/1999/xhtml"/>
 		</div>
 		<div id="dateline">
-			<xsl:apply-templates select="span[@id='doctype']" mode="humanreadable"/>
+			<xsl:apply-templates select="h:span[@id='doctype']" mode="humanreadable"
+				xmlns:h="http://www.w3.org/1999/xhtml"/>
 			<xsl:text> </xsl:text>
-			<xsl:apply-templates select="span[@id='docdate']"/>
+			<xsl:apply-templates select="h:span[@id='docdate']"
+				xmlns:h="http://www.w3.org/1999/xhtml"/>
 		</div>
 		<dl id="docmeta">
 
 			<dt>Working Group</dt>
-			<xsl:copy-of select="dd[@id='ivoagroup']"/>
+			<xsl:copy-of select="h:dd[@id='ivoagroup']"
+				xmlns:h="http://www.w3.org/1999/xhtml"/>
 
 			<dt>This Version</dt>
 			<dd>
@@ -176,21 +180,24 @@
 			<dt>Previous Versions</dt>
 			<dd>
 				<ul class="previousversions">
-					<xsl:apply-templates select="li[@class='previousversion']"/>
+					<xsl:apply-templates select="h:li[@class='previousversion']"
+						xmlns:h="http://www.w3.org/1999/xhtml"/>
 				</ul>
 			</dd>
 
 			<dt>Author(s)</dt>
 			<dd>
 				<ul class="authors">
-					<xsl:apply-templates select="li[@class='author']"/>
+					<xsl:apply-templates select="h:li[@class='author']"
+						xmlns:h="http://www.w3.org/1999/xhtml"/>
 				</ul>
 			</dd>
 			
 			<dt>Editor(s)</dt>
                         <dd>
 				<ul class="editors">
-					<xsl:apply-templates select="li[@class='editor']"/>
+					<xsl:apply-templates select="h:li[@class='editor']"
+						xmlns:h="http://www.w3.org/1999/xhtml"/>
 				</ul>
 			</dd>
                     
@@ -362,10 +369,12 @@
        The format of the URI here is as mandated by the IVOA
        Document Standards Standard Document (ahem). -->
   <xsl:template name="currentlink">
-		<xsl:variable name="docdate" select="span[@id='docdate']"/>
+		<xsl:variable name="docdate" select="h:span[@id='docdate']"
+			xmlns:h="http://www.w3.org/1999/xhtml"/>
     <xsl:variable name="currenturl">
       <xsl:value-of select="$docbase"/>
-      <xsl:value-of select="//span[@id='docname']"/>
+      <xsl:value-of select="//h:span[@id='docname']"
+				xmlns:h="http://www.w3.org/1999/xhtml"/>
       <xsl:text>/</xsl:text>
       <xsl:value-of select="concat(
       	substring($docdate, 1, 4),
