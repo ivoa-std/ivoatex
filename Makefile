@@ -139,6 +139,10 @@ endif
 	rm -rf -- $(versionedName)
 
 
+upload: package
+	python ivoatex/submission.py $(versionedName).zip
+
+
 #  Build TtH from source.  See http://hutchinson.belmont.ma.us/tth/.
 #  TtH source seems to be highly portable, so compilation should be easy
 #  as long as you have a C compiler.
