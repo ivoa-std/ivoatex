@@ -20,7 +20,7 @@ Copyright 2015, The GAVO project
   <xsl:output method="text"/>
 
   <xsl:param name="indentstep" select="'  '"/>
-  <xsl:param name="maxcodelen" select="80"/>
+  <xsl:param name="maxcodelen" select="72"/>
   <xsl:param name="showDefaults" select="true()"/>
   <xsl:param name="xsdprefix">xs</xsl:param>
 
