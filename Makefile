@@ -117,10 +117,11 @@ biblio: $(DOCNAME).bbl
 generate:
 	python ivoatex/update_generated.py $(DOCNAME).tex
 
-package: $(DOCNAME).html $(DOCNAME).pdf \
+package: $(DOCNAME).tex $(DOCNAME).html $(DOCNAME).pdf \
 		$(GENERATED_PNGS)	$(FIGURES) $(AUX_FILES)
 	rm -rf -- $(versionedName)
 	mkdir $(versionedName)
+	cp $(DOCNAME).tex $(versionedName)/$(versionedName).tex
 	cp $(DOCNAME).html $(versionedName)/$(versionedName).html
 	cp $(DOCNAME).pdf $(versionedName)/$(versionedName).pdf
 
