@@ -164,10 +164,10 @@ FUNCTION {write.url}
 { URL empty$
     { adsurl empty$
     	{ skip$ }
-    	{ "\newline\harvardurl{" adsurl * "}" * write$ newline$ }
+    	{ "\newline\url{" adsurl * "}" * write$ newline$ }
     	if$
     }
-    { "\newline\harvardurl{" URL * "}" * write$ newline$ }
+    { "\newline\url{" URL * "}" * write$ newline$ }
   if$
 }
 

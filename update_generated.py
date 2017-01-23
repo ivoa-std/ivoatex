@@ -91,7 +91,7 @@ def cmd_schemadoc(schema_name, dest_type):
 	schema_name.
 
 	We cannot just use the output of the stylesheet, as TeX escapes in
-	XSLT1 is an inefficient nightmare.
+	XSLT1 are an inefficient nightmare.
 	"""
 	output = subprocess.check_output(["xsltproc", 
 		"--stringparam", "destType", dest_type, 
