@@ -132,7 +132,7 @@ ifneq ($(strip $(GENERATED_PNGS)),)
 	cp $(GENERATED_PNGS) $(versionedName)
 endif
 ifneq ($(strip $(AUX_FILES)),)
-	cp $(AUX_FILES) $(versionedName)
+	cp -r $(AUX_FILES) $(versionedName)
 endif
 #	# make sure files will be readable by the web server later on
 	chmod -R go+w $(versionedName)
