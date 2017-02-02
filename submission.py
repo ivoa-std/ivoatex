@@ -259,12 +259,15 @@ def main(archive_file_name):
 	document_meta = DocumentMeta.from_makefile()
 	document_meta.add_info_from_document()
 	review_and_comment(document_meta)
+	sys.stdout.write("Uploading... ")
+	sys.stdout.flush()
 
 	with open(sys.argv[1]) as upload:
 		resp = requests.post(DOCREPO_URL, 
 			data=document_meta.get_post_payload(),
 			files=[('filename', (sys.argv[1], upload))])
 
+	sys.stdout.write("done (result in docrepo-response.html)\n")
 	with open("docrepo-response.html", "w") as f:
 		f.write(resp.text)
 
