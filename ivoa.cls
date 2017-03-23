@@ -259,8 +259,8 @@
      interoperability inside the Astronomical Community.}
 		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}\par
 	A list of current IVOA Recommendations and other technical documents
-	can be found at \href{http://www.ivoa.net/Documents/
-	}{http://www.ivoa.net/Documents/}.}
+	can be found at \href{http://www.ivoa.net/documents/
+	}{http://www.ivoa.net/documents/}.}
 
 
 \newcommand\currentDocURL % URL of this document's landing page
