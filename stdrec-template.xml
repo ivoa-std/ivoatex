@@ -28,6 +28,7 @@ change updated whenever you re-upload this record. -->
 		http://www.ivoa.net/xml/VOResource/v1.0">
 
   <title>####</title> <!-- title as given on the standard's title page -->
+  <shortName>####</shortName> <!-- this should be your DOCNAME -->
 	<!-- put the "short name" of your standard after std/: -->
   <identifier>ivo://ivoa.net/std/####</identifier> 
   <curation>
