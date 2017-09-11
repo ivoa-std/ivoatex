@@ -325,7 +325,8 @@
   }%
 
 
-\newenvironment{inlinetable}{\vskip 1ex\vfil\penalty8000\vfilneg%
+\newenvironment{inlinetable}{\vskip 1.5ex plus 0.5ex minus 0.5ex
+		\vfil\penalty8000\vfilneg%
     \hbox to\hsize\bgroup\hss}
   {\hss\egroup\vspace{8pt}}
 
