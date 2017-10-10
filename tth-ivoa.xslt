@@ -124,6 +124,23 @@
 				.basicstyle__footnotesize {
 					font-size: 80%;
 				}
+
+				pre {
+   				 counter-reset: pre_line;
+				}
+
+				pre span {
+   				 counter-increment: pre_line;
+				}
+
+				div.numbers_right pre span:before {
+   				 content: counter(pre_line);
+   				 text-align: right;
+   				 user-select: none;
+   				 min-width: 1.5em;
+   				 display: inline-block;
+   				 padding-right: 1em;
+				}
 			</xsl:text></style>
 
       <xsl:apply-templates/>
@@ -356,6 +373,32 @@
 			</xsl:attribute>
 			<xsl:apply-templates/>
 		</div>
+	</xsl:template>
+
+	<!-- In verbatim listings, we may want to play tricks with lines.
+	     So, let's mark them up with spans. -->
+	
+	<xsl:template name="split-into-lines">
+		<xsl:param name="arg"/>
+		<span class="verbline"><xsl:value-of 
+			select="substring-before($arg, '&#xa;')"/>
+			<xsl:text>&#xa;</xsl:text>
+		</span>
+		
+		<xsl:if test="substring-after($arg, '&#xa;')">
+			<xsl:call-template name="split-into-lines">
+				<xsl:with-param name="arg" select="substring-after($arg, '&#xa;')"/>
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="pre">
+		<pre>
+			<xsl:copy-of select="@*"/>
+			<xsl:call-template name="split-into-lines">
+				<xsl:with-param name="arg" select="."/>
+			</xsl:call-template>
+		</pre>
 	</xsl:template>
 
   <!-- Make a link to the current version on the ivoa doc server.
