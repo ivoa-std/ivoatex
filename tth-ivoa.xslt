@@ -133,7 +133,7 @@
    				 counter-increment: pre_line;
 				}
 
-				div.numbers_right pre span:before {
+				div.numbers_left pre span:before {
    				 content: counter(pre_line);
    				 text-align: right;
    				 user-select: none;
