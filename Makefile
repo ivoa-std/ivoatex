@@ -57,8 +57,6 @@ forcetex:
 	$(PDFLATEX) $(DOCNAME)   # && $(PDFLATEX) $(DOCNAME) && $(PDFLATEX) $(DOCNAME)
 
 
-archive: $(DOC).pdf $(DOC).html $(UPLOAD).zip $(ARCHIVE).zip
-
 arxiv-upload: $(SOURCES) biblio $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
 	mkdir -p stuff-for-arxiv/ivoatex
 	cp ivoatex/ivoa.cls ivoatex/tthdefs.tex stuff-for-arxiv
