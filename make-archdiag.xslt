@@ -37,7 +37,7 @@ want.
 				<xsl:value-of select="$std-class"/>
 			</xsl:attribute>
 		</rect>
-		<text class="doclabel" x="45" y="14"
+		<text class="doclabel" x="45" y="13"
 			><xsl:value-of select="$std-name"/></text>
 	</svg>
 </xsl:template>
