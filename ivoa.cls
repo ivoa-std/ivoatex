@@ -149,19 +149,19 @@
     	\latestDocURL
 
     \item[Previous versions]
-			\begin{compactenum}[]
+			\begin{compactitem}[]
 				\previ@usversions
-			\end{compactenum}
+			\end{compactitem}
 
     \item[Author(s)]
-    	\begin{compactenum}[]
+    	\begin{compactitem}[]
       	\@uthors
-    	\end{compactenum}
+    	\end{compactitem}
 
     \item[Editor(s)]
-        \begin{compactenum}[]
+        \begin{compactitem}[]
     	\@ditors
-        \end{compactenum}
+        \end{compactitem}
 
     \ifthenelse{\equal{\vcsR@vision}{unknown}}{\relax}{
     	\item[Version Control]

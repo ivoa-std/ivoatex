@@ -148,6 +148,13 @@
           margin-left: auto;
           margin-right: auto;
         }
+
+        ul.authors, ul.previousversions, ul.editors {
+        	list-style-type: none;
+        	padding-left: 0pt;
+        	margin-top: 2pt;
+        	margin-bottom: 2pt;
+        }
 			</xsl:text></style>
 
       <xsl:apply-templates/>
