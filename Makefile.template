@@ -14,10 +14,10 @@ DOCTYPE = ???
 
 # Source files for the TeX document (but the main file must always
 # be called $(DOCNAME).tex
-SOURCES = $(DOCNAME).tex
+SOURCES = $(DOCNAME).tex archdiag.pdf
 
 # List of pixel image files to be included in submitted package 
-FIGURES = archdiag.png
+FIGURES = archdiag.svg
 
 # List of PDF figures (for vector graphics)
 VECTORFIGURES = 

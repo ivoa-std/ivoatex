@@ -23,8 +23,11 @@ ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 #     pdflatex
 #     ghostscript (if you plan on postscript/pdf figures)
 #     zip
-#  All most likely present on, e.g., a linux disribution.
-#  Could use substitutes for some of these if they are not available.
+#     librsvg2-bin (to teach convert to turn svg to pdf, the arch diagram)
+#  All of these are likely present on, e.g., a linux distribution,
+#  except for librsvg, which is part of the gnome svg toolkit.
+#  Hence, please commit both archdiag.svg and archdiag.pdf into
+#  your VCS.
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
 PDFLATEX = pdflatex
@@ -89,12 +92,12 @@ ivoatexmeta.tex: Makefile
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
-		| tee debug.html \
 		| $(XSLTPROC) --html \
-                         --stringparam CSS_HREF $(CSS_HREF) \
-                      ivoatex/tth-ivoa.xslt - \
+                  --stringparam CSS_HREF $(CSS_HREF) \
+                  ivoatex/tth-ivoa.xslt - \
            >$(DOCNAME).html
 
+#		| tee debug.html \
 
 $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
 	-$(PDFLATEX) -interaction scrollmode $(DOCNAME).tex
@@ -103,9 +106,19 @@ $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
 	touch $(DOCNAME).tex
 
 # We don't let the pdf depend on .bbl, as we don't want to run BibTeX
-# everytime the TeX input is changed.  The idea is that when people do
+# every time the TeX input is changed.  The idea is that when people do
 # bibliography-relevant changes, they run make biblio manually.
 biblio: $(DOCNAME).bbl
+
+# The architecture diagram is generated from a spec in the document
+# directory and a stylesheet.
+archdiag.svg: archdiag.xml
+	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt archdiag.xml 
+
+# Regrettably, pdflatex can't use svg, so we need to convert it
+# using inkscape.  That's a major pain.  Hm.
+%.pdf: %.svg
+	convert -antialias $< $@ || cp ivoatex/svg-fallback.pdf $@
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway

@@ -1,4 +1,4 @@
-ivoatex Version 1.0
+ivoatex Version 1.2
 ===================
 
 This is another attempt at a generalised authoring system for IVOA
@@ -28,7 +28,7 @@ like this::
 	svn co https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatexDoc
 	cd ivoatexDoc
 	make biblio
-	make
+	make forcetex
 
 Then start your favourite PDF viewer on ivoatexDoc.pdf.
 

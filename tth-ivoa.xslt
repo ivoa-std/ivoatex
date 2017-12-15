@@ -141,10 +141,24 @@
    				 display: inline-block;
    				 padding-right: 1em;
 				}
+
+				img.archdiag {
+				  display: block;
+				  width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
 			</xsl:text></style>
 
       <xsl:apply-templates/>
     </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="img[@src='archdiag.png']">
+    <!-- special handling for our architecture diagram for which we
+      know we have an svg -->
+    <img src="archdiag.svg" alt="[IVOA architecture diagram]"
+      class="archdiag"/>
   </xsl:template>
 
 	<xsl:template match="div[@id='titlepage']">
