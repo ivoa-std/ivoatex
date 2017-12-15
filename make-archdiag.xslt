@@ -37,7 +37,7 @@ want.
 				<xsl:value-of select="$std-class"/>
 			</xsl:attribute>
 		</rect>
-		<text class="doclabel" x="45" y="13"
+		<text class="doclabel" x="45" y="12.5"
 			><xsl:value-of select="$std-name"/></text>
 	</svg>
 </xsl:template>
@@ -60,8 +60,9 @@ want.
 	</xsl:call-template>
 </xsl:template>
 
-<xsl:template match="ad:archdiag">
-	<!-- design size: 800 x 600 whateever; 50 border for annotation-->
+<xsl:template name="draw-archdiag">
+	<!-- design size: 800 x 600 whatever; 50 border for annotation-->
+	<xsl:param name="include-level1"/>
 	<svg  version="2.0"
 		width="800" height="600">
 		<defs>
@@ -78,8 +79,9 @@ want.
 
 				text.doclabel {
 					fill: #0000ff;
-					font-family: univers;
-					font-size: 10px;
+					font-weight: bold;
+					font-family: Liberation Sans Narrow;
+					font-size: 11px;
 					text-anchor:middle;
 				}
 			</style>
@@ -107,56 +109,85 @@ want.
 
 
 		<!-- border annotation -->
-		<g style="font-size:16px;font-family:sans-serif;
+		<g style="font-size:16px;font-family:Liberation Sans;
 			text-anchor:middle;text-align:center;font-weight:bold">
 		<text x="250" y="25">Users</text>
 		<text x="550" y="25">Computers</text>
-		<g class="level1">
-		<text x="25" y="300" transform="rotate(-90, 25, 300)">Registry</text>
-		<text x="775" y="300" transform="rotate(90, 775, 300)"
-			>Data Access Protocols</text>
 		<text x="400" y="585">Providers</text>
-		</g>
+		<xsl:if test="$include-level1">
+			<text x="25" y="300" transform="rotate(-90, 25, 300)">Registry</text>
+			<text x="775" y="300" transform="rotate(90, 775, 300)"
+				>Data Access Protocols</text>
+		</xsl:if>
 		</g>
 
 		<!-- level 0 annotation -->
-		<g style="font-size:20px;font-family:sans-serif;fill:#888888;
+		<g style="font-size:20px;font-family:Liberation Sans;fill:#888888;
 			text-anchor:middle;text-align:center">
 			<text x="400" y="72">User Layer</text>
 			<text x="400" y="132">Using</text>
 			<text x="400" y="543">Resource Layer</text>
 			<text x="400" y="480">Sharing</text>
-			<text x="400" y="300">VO Core</text>
+			<g transform="translate(400,285)">
+				<text x="0" y="0" width="10em">VO</text>
+				<text x="0" y="30" width="10em">Core</text>
+			</g>
+
 			<text x="100" y="300" transform="rotate(-90, 100, 300)">Finding</text>
 			<text x="700" y="300" transform="rotate(90, 700, 300)"
 				>Getting</text>
 		</g>
 
 		<!-- level 1 annotation -->
-		<g class="level1">
-			<g style="font-size:16px;font-family:sans-serif;
+		<xsl:if test="$include-level1">
+			<g style="font-size:16px;font-family:Liberation Sans;
 				text-anchor:middle;text-align:center;font-style:italic">
 				<text x="400" y="96">Desktop Apps</text>
-				<text x="175" y="96">In-Browser Apps</text>
-				<text x="625" y="96">User Programs</text>
+				<g transform="translate(175,72)">
+					<text x="0" y="0" width="10em">In-Browser</text>
+					<text x="0" y="20" width="10em">Apps</text>
+				</g>
+				<g transform="translate(625,72)">
+					<text x="0" y="0" width="10em">User</text>
+					<text x="0" y="20" width="10em">Programs</text>
+				</g>
 
 				<text x="400" y="520">Data and Metadata Collection</text>
-				<text x="175" y="520">Storage</text>
-				<text x="625" y="520">Computation</text>
+				<text x="175" y="530">Storage</text>
+				<text x="625" y="530">Computation</text>
 
 				<text x="250" y="300">Semantics</text>
-				<text x="550" y="300">Data Models</text>
+				<g transform="translate(550,290)">
+					<text x="0" y="0" width="10em">Data</text>
+					<text x="0" y="20" width="10em">Models</text>
+				</g>
 
-				<text x="400" y="225">VO Query Languages</text>
+				<g transform="translate(400,210)">
+					<text x="0" y="0" width="10em">VO Query</text>
+					<text x="0" y="20" width="10em">Languages</text>
+				</g>
 				<text x="400" y="375">Formats</text>
 			</g>
-		</g>
+		</xsl:if>
 
-		<!-- level 2: standards -->
+		<!-- level 2: the actual standards -->
 
 		<g class="level2">
 			<xsl:apply-templates/>
 		</g>
 	</svg>
 </xsl:template>
+
+<xsl:template match="ad:archdiag">
+	<xsl:call-template name="draw-archdiag">
+		<xsl:with-param name="include-level1">True</xsl:with-param>
+	</xsl:call-template>
+</xsl:template>
+
+<xsl:template match="ad:archdiag0">
+	<xsl:call-template name="draw-archdiag">
+		<xsl:with-param name="include-level1" select="false"/>
+	</xsl:call-template>
+</xsl:template>
+
 </xsl:stylesheet>

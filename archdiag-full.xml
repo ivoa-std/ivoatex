@@ -13,13 +13,13 @@
 	<rec name="Identifiers" x="125" y="425"/>
 
 	<!-- Apps: all over the place -->
-	<rec name="VOTable" x="270" y="335"/>
+	<rec name="VOTable" x="270" y="325"/>
 	<rec name="SAMP" x="170" y="110"/>
 	<rec name="MOC" x="430" y="400"/>
 	<rec name="HiPS" x="430" y="425"/>
 
 	<!-- DAL: x=655, y=155..435 -->
-	<rec name="DALI" x="340" y="305"/>
+	<rec name="DALI" x="310" y="290"/>
 	<rec name="ADQL" x="250" y="160"/>
 
 	<rec name="SCS" x="655" y="155"/>
@@ -46,7 +46,7 @@
 	<prerec name="ProvDM" x="450" y="330"/>
 
 	<!-- GWS: all over the place -->
-	<rec name="PDL" x="405" y="355"/>
+	<rec name="PDL" x="425" y="355"/>
 	<rec name="SSO" x="270" y="120"/>
 	<rec name="VOSpace" x="155" y="455"/>
 	<rec name="CDP" x="570" y="115"/>
@@ -55,8 +55,8 @@
 
 	<!-- Semantics: x=160..250 y=250..400 -->
 	<rec name="VOUnits" x="200" y="250"/>
-	<rec name="UCD" x="160" y="300"/>
-	<rec name="Vocabularies" x="160" y="325"/>
+	<rec name="UCD" x="160" y="310"/>
+	<rec name="Vocabularies" x="160" y="335"/>
 
 	<!-- TD -->
 	<rec name="VOEvent"  x="530" y="375"/>
