@@ -54,6 +54,20 @@ The document generation from XML schema files was adapted from XSLT
 stylesheets written by Ray Plante.
 
 
+Fonts
+=====
+
+The fonts embedded in the architecture diagram are derived from
+Liberation Sans and Liberation Sans Mono in the following way:
+
+pyftsubset /usr/share/fonts/truetype/ttf-liberation/LiberationSansNarrow-Regular.ttf --unicodes="20,41-5a,61-7a" --output-file="lsn-sub.ttf"
+pyftsubset /usr/share/fonts/truetype/ttf-liberation/LiberationSans-Regular.ttf --unicodes="20,41-5a,61-7a" --output-file="ls-sub.ttf"
+
+What is inserted into the CSS within the XSLT is then the output of 
+
+base64 -w0 ls-sub.ttf
+
+
 License
 =======
 
@@ -63,3 +77,7 @@ project and can be used and distributed under the GNU General Public License
 details.  
 
 The files in tth_C have their own license.  See there for details.
+
+The font excerpts in the architecture diagram are
+(C) 2007 Red Hat, Inc. All rights reserved and are used in compliance
+with GPL exception (a) in Red Hat's license agreement.

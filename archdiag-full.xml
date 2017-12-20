@@ -1,4 +1,16 @@
-<!-- box size: 90; vertical distance: 25 -->
+<!--
+Document authors: 
+
+Remove all <rec> elements in there referring to standards not related
+to the current one, then say 
+
+make archdiag.pdf
+
+For the time being, please keep both archdiag.pdf and archdiag.svg as
+created by this in the VCS.  This helps document builds on machines
+with missing dependencies.
+-->
+
 <archdiag xmlns="http://ivoa.net/archdiag">
 	<!-- Registry: x=55, y=150..450 -->
 	<rec name="VOResource" x="55" y="155"/>
