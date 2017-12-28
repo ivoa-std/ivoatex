@@ -188,7 +188,7 @@
     \@endparpenalty\@M}
     {\par
     \bigskip
-    \titlehe@d{Status of This Document}
+    \titlehe@d{Status of this document}
 
    	\medskip
    	\docstatusDeclaration{\ivoaDoctype}
