@@ -42,6 +42,15 @@ want.
 	</svg>
 </xsl:template>
 
+<xsl:template match="ad:thisrec">
+	<xsl:call-template name="format-standard">
+		<xsl:with-param name="x0" select="@x"/>
+		<xsl:with-param name="y0" select="@y"/>
+		<xsl:with-param name="std-name" select="@name"/>
+		<xsl:with-param name="std-class">thisrec</xsl:with-param>
+	</xsl:call-template>
+</xsl:template>
+
 <xsl:template match="ad:rec">
 	<xsl:call-template name="format-standard">
 		<xsl:with-param name="x0" select="@x"/>
@@ -80,6 +89,12 @@ want.
 				rect.rec {
 					fill: #bbe0e3;
 					stroke: #0000ff;
+				}
+
+				rect.thisrec {
+					fill: #bbe0e3;
+					stroke: #ff0000;
+					stroke-width: 2;
 				}
 
 				rect.prerec {
