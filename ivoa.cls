@@ -263,9 +263,10 @@
 	}{http://www.ivoa.net/documents/}.}
 
 
+\newcommand\currentBaseURL % 
+	{http://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}
 \newcommand\currentDocURL % URL of this document's landing page
-	{\href{http://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}
-		{http://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}}
+	{\href{\currentBaseURL}{\currentBaseURL}}
 \newcommand\latestDocURL 
 	% URL of a potential successor to the document's landing page
 	{\href{http://www.ivoa.net/documents/\ivoaDocname}
@@ -339,6 +340,8 @@
 \newcommand{\sptablerule}{\noalign{\vspace{2pt}}\hline\noalign{\vspace{2pt}}}
 
 \newcommand{\ivoatex}{\mbox{\textsc{Ivoa}\TeX}}
+
+\newcommand{\auxiliaryurl}[1]{\href{\currentBaseURL/#1}{\currentBaseURL/#1}}
 
 \chardef\dquote'042
 
