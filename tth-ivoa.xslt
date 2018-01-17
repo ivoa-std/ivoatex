@@ -161,10 +161,10 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="img[@src='archdiag.png']">
-    <!-- special handling for our architecture diagram for which we
+  <xsl:template match="img[@src='role_diagram.png']">
+    <!-- special handling for role diagrams for which we
       know we have an svg -->
-    <img src="archdiag.svg" alt="[IVOA architecture diagram]"
+    <img src="role_diagram.svg" alt="[IVOA architecture diagram]"
       class="archdiag"/>
   </xsl:template>
 
