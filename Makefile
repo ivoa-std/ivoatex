@@ -26,7 +26,7 @@ ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 #     librsvg2-bin (to teach convert to turn svg to pdf, the arch diagram)
 #  All of these are likely present on, e.g., a linux distribution,
 #  except for librsvg, which is part of the gnome svg toolkit.
-#  Hence, please commit both archdiag.svg and archdiag.pdf into
+#  Hence, please commit both role_diagram.svg and role_diagram.pdf into
 #  your VCS.
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
@@ -112,11 +112,12 @@ biblio: $(DOCNAME).bbl
 
 # The architecture diagram is generated from a spec in the document
 # directory and a stylesheet.
-archdiag.svg: archdiag.xml
-	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt archdiag.xml 
+role_diagram.svg: role_diagram.xml
+	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt role_diagram.xml 
 
 # Regrettably, pdflatex can't use svg, so we need to convert it
-# using inkscape.  That's a major pain.  Hm.
+# using convert (which only works with an extra library).  That's 
+# a major pain.  Hm.
 %.pdf: %.svg
 	convert -antialias $< $@ || cp ivoatex/svg-fallback.pdf $@
 
