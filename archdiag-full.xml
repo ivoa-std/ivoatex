@@ -18,6 +18,7 @@ with missing dependencies.
 	<rec name="RegistryInterface" x="55" y="205"/>
 	<rec name="Resource M.D." x="55" y="230"/>
 	<rec name="TAPRegExt" x="55" y="255"/>
+        <prerec name="UWSRegExt" x="55" y="280"/>
 	<rec name="VODataService" x="55" y="350"/>
 	<rec name="StandardsRegExt" x="55" y="375"/>
 	<rec name="SimpleDALR.E." x="55" y="400"/>
