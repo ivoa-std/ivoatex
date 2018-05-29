@@ -177,6 +177,7 @@ class DocumentMeta(object):
  	 	"Registry": "reg",
  	 	"Data Curation and Preservation": "dcp",
  	 	"Documents and Standards": "std",
+ 	 	"Standards and Processes": "std",
  	 	"Semantics": "semantics",
  	 	"Theory": "the",
  	 	"VO Event": "voe",

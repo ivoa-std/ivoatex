@@ -2,6 +2,7 @@ Version 1.1 (2016-09-XX)
 
 	* Authors and Editors are now TeX-formatted even in HTML rendering
 
+	* Support for endorsed notes (and PENs)
 
 Version 1.0 (2016-04-23):
 	
