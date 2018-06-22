@@ -55,7 +55,7 @@ infrastructure that enable VO applications.
 % Notes don't generally need this.  If you don't copy archdiag.xml,
 % you must remove archdiag.svg from FIGURES in the Makefile.
 
-\includegraphics[width=0.9\textwidth]{archdiag.svg}
+\includegraphics[width=0.9\textwidth]{role_diagram.svg}
 \caption{Architecture diagram for this document}
 \label{fig:archdiag}
 \end{figure}
