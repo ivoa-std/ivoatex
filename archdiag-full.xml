@@ -1,12 +1,16 @@
 <!--
-Document authors: 
+Document authors (ivoatex maintainers have different rules):
 
-Remove all <rec> elements in there referring to standards not related
-to the current one, then say 
+* svn cp this file to role_diagram.xml, and then:
 
-make archdiag.pdf
+* Remove all <rec> elements in there referring to standards not related
+  to the current one,
 
-For the time being, please keep both archdiag.pdf and archdiag.svg as
+* change the tag name for the current one from rec to thisrec
+
+* make role_diagram.pdf
+
+For the time being, keep both role_diagram.pdf and role_diagram.svg as
 created by this in the VCS.  This helps document builds on machines
 with missing dependencies.
 -->
