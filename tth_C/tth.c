@@ -1,8 +1,8 @@
 /* TtH TeX to HTML translator.
 TtH Version 
-"4.08"
+"4.12"
  (c) Ian Hutchinson
-Fri Apr 10 10:13:46 EDT 2015
+Sun Dec 17 17:43:50 EST 2017
 */
 
 #line 3 "lex.yy.c"
@@ -645,7 +645,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1199, 1296, 1296, 1296, 1296, 1296, 1296, 1172,
      1296,   95, 1296, 1296, 1296,    0,  677, 1143, 1138, 1122,
      1296, 1296, 1296, 1296,   98, 1296, 1296, 1296, 1296,  901,
-     1296, 1296, 1296, 1296, 1296, 1296, 1267, 1296, 1296, 1296,
+     1296, 1296, 1296, 1296, 1296, 1296, 1268, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,  434,
      1296,  863, 1296, 1296, 1296, 1258, 1296, 1296, 1296, 1296,
       608, 1296, 1291, 1296, 1296, 1296, 1296, 1296, 1296,  126,
@@ -669,7 +669,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296, 1296, 1199, 1296, 1296, 1296, 1296,
      1296, 1296, 1296,   95, 1296, 1296, 1296, 1296, 1296, 1296,
      1296,   98, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
-     1296, 1296, 1267, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
+     1296, 1296, 1268, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296,  434, 1296,  863, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296,  754, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
@@ -764,7 +764,7 @@ static yyconst flex_int16_t yy_accept[11276] =
 
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1262, 1296, 1296, 1296, 1296, 1296, 1296,
-     1296, 1296, 1296, 1296, 1268,  674, 1212, 1296,  436, 1296,
+     1296, 1296, 1296, 1296, 1269,  674, 1212, 1296,  436, 1296,
      1296, 1222,  864, 1296, 1296,  128,  610,    0,    0, 1296,
      1296,    0, 1296, 1296, 1296, 1296,  954, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296,  919, 1200,  943, 1296, 1296,
@@ -773,7 +773,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296,  788, 1296, 1296,  963, 1169, 1171,
      1177, 1179, 1296, 1296, 1296,  946, 1296, 1296, 1296, 1296,
 
-     1296, 1275, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
+     1296, 1276, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1225,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1074, 1296, 1296, 1296, 1296,
@@ -790,7 +790,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
-     1268,  674, 1212, 1296,  436, 1296, 1296, 1222,  864, 1296,
+     1269,  674, 1212, 1296,  436, 1296, 1296, 1222,  864, 1296,
      1296,  128,  610, 1296, 1296, 1296, 1296, 1296, 1296,  954,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,  919, 1200,
       943, 1296, 1296,  953, 1296, 1296, 1296, 1296,   83, 1296,
@@ -798,7 +798,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,  750, 1296, 1296,
       963, 1296, 1296, 1296,  946, 1296, 1296, 1296, 1296, 1296,
-     1275, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
+     1276, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1225, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1074, 1296, 1296, 1296, 1296, 1296,
@@ -902,10 +902,10 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,  567, 1296, 1296,
-     1296, 1296, 1296,   34, 1075, 1296,  965, 1276, 1296, 1296,
+     1296, 1296, 1296,   34, 1075, 1296,  965, 1277, 1296, 1296,
      1296, 1296,    0, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
 
-     1296, 1296, 1296,  708, 1280, 1296, 1296, 1296, 1296, 1296,
+     1296, 1296, 1296,  708, 1281, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296,  705,   43, 1296, 1296, 1296,    0,    0,    0,    0,
         0,    0,    0,    0, 1296, 1296, 1296, 1296, 1296, 1296,
@@ -913,7 +913,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,    0, 1296,  744,
       744,  744,  744,  744,  744,  744, 1296,  744,  744,  744,
-      744,  744,  744, 1271, 1296,  770,  936, 1296,  750,   32,
+      744,  744,  744, 1272, 1296,  770,  936, 1296,  750,   32,
        96,  719,   93,  712,  711, 1296,   97, 1296, 1296, 1296,
 
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
@@ -929,14 +929,14 @@ static yyconst flex_int16_t yy_accept[11276] =
 
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,   34, 1075, 1296,
-      965, 1276, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
-     1296, 1296, 1296, 1296, 1296, 1296,  708, 1280, 1296, 1296,
+      965, 1277, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
+     1296, 1296, 1296, 1296, 1296, 1296,  708, 1281, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296,   43, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
-     1296, 1296,  744, 1296,  744,  744,  744,  744,  744, 1271,
+     1296, 1296,  744, 1296,  744,  744,  744,  744,  744, 1272,
 
      1296,  770,  936, 1296, 1296, 1296, 1296, 1296, 1296,  769,
      1296, 1296, 1296,  708,    0, 1045, 1045, 1045,  221,  221,
@@ -1043,7 +1043,7 @@ static yyconst flex_int16_t yy_accept[11276] =
         0,    0, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296,   88, 1296, 1296, 1296,
-     1296, 1269, 1296, 1296, 1266, 1296, 1296,    0,    0,    0,
+     1296, 1270, 1296, 1296, 1267, 1296, 1296,    0,    0,    0,
         0, 1296, 1296, 1296,  933,    0, 1296,   92, 1296, 1296,
      1296, 1296, 1296, 1296, 1296,    0, 1296,  885, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
@@ -1064,7 +1064,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,   88, 1296, 1296,
-     1296, 1296, 1269, 1296, 1296, 1266, 1296, 1296, 1296, 1296,
+     1296, 1296, 1270, 1296, 1296, 1267, 1296, 1296, 1296, 1296,
      1296,  933, 1296, 1296,  889, 1296, 1296, 1296, 1296, 1296,
      1296,    0, 1045,   27, 1045,    0,  172, 1045,  173,  170,
       176,  175,  850, 1045,  225,  227,  223, 1045,  222,  230,
@@ -1148,8 +1148,8 @@ static yyconst flex_int16_t yy_accept[11276] =
      1201, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,  955,
 
      1296, 1296, 1296, 1296,  774, 1296, 1296, 1296, 1296, 1296,
-     1296,    0, 1211, 1296, 1265, 1296, 1296, 1296, 1296, 1296,
-      853, 1296, 1296, 1296, 1296, 1296, 1226, 1156, 1296, 1270,
+     1296,    0, 1211, 1296, 1266, 1296, 1296, 1296, 1296, 1296,
+      853, 1296, 1296, 1296, 1296, 1296, 1226, 1156, 1296, 1271,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,    0, 1296,  914,
      1296, 1296,  956, 1296, 1296, 1296, 1296,  904, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
@@ -1169,8 +1169,8 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296,  903, 1201, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296,  955, 1296, 1296, 1296, 1296,  753, 1296, 1296, 1296,
 
-     1296, 1296, 1296, 1211, 1296, 1265, 1296, 1296, 1296, 1296,
-     1296, 1296, 1296, 1296, 1296, 1296, 1226, 1296, 1270, 1296,
+     1296, 1296, 1296, 1211, 1296, 1266, 1296, 1296, 1296, 1296,
+     1296, 1296, 1296, 1296, 1296, 1296, 1226, 1296, 1271, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,  914, 1296, 1296,
      1296, 1296, 1296,  904, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
@@ -1237,7 +1237,7 @@ static yyconst flex_int16_t yy_accept[11276] =
 
      1226, 1226, 1296, 1296,    0,    0,    0,    0,    0,    0,
         0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-        0,    0,    0,    0,    0,    0,    0,  900, 1283, 1296,
+        0,    0,    0,    0,    0,    0,    0,  900, 1265, 1296,
      1296,  771,  916, 1296, 1296, 1296,  569, 1067, 1296,  729,
      1296, 1296, 1296,  888, 1290, 1296,    0,    0,    0,    0,
         0,    0,    0,    0,    0,    0,    0,    0,   35, 1296,
@@ -1247,7 +1247,7 @@ static yyconst flex_int16_t yy_accept[11276] =
       123, 1296, 1296, 1296,  789,  903, 1296, 1296,  764, 1296,
 
      1296, 1296, 1296, 1254, 1296, 1296, 1296,  910,  773, 1296,
-      918, 1277, 1296,  835, 1296,    0, 1296, 1296, 1296, 1296,
+      918, 1278, 1296,  835, 1296,    0, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296,  909,    0,  955, 1296,  576,
      1296, 1296, 1296,    0,    0,    0,    0,  915,  904, 1296,
@@ -1264,7 +1264,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296,  756, 1290, 1296,   35, 1296, 1296, 1296, 1293,  792,
      1296, 1296, 1296, 1296,   45, 1296, 1296, 1296, 1296, 1296,
      1296,  751, 1296, 1296,  764, 1296, 1296, 1296, 1296, 1296,
-     1296, 1296,  910,  753, 1296,  918, 1277, 1296,  835, 1296,
+     1296, 1296,  910,  753, 1296,  918, 1278, 1296,  835, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,  909,
 
@@ -1325,13 +1325,13 @@ static yyconst flex_int16_t yy_accept[11276] =
 
         0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
         0,    0,    0,    0,    0,    0,  900, 1296, 1284,  916,
-     1296,  714, 1296, 1282, 1296, 1125, 1296, 1296,  791,    0,
+     1296,  714, 1296, 1283, 1296, 1125, 1296, 1296,  791,    0,
         0,    0,    0,    0,  629,    0,    0,    0,    0,    0,
         0, 1296,  730,    0,    0,  827,  827,  827,  827,  827,
       827,  827,  827, 1296, 1293, 1293,  792,    0, 1296,    0,
         0,  776,    0,    0,    0,  921, 1296,   45,    0,  769,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1250, 1296, 1296,
-     1296, 1296,  551, 1278,  910,  790, 1296, 1296, 1296,  110,
+     1296, 1296,  551, 1279,  910,  790, 1296, 1296, 1296,  110,
      1296, 1296,    0, 1296, 1296, 1296, 1296,  898, 1296,  731,
 
       922, 1296, 1296, 1296,    0, 1296, 1296, 1296,  909,    0,
@@ -1342,12 +1342,12 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296,    0,    0,    0, 1296,   86, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296, 1296,
-      768, 1296,    0, 1296, 1296, 1281,  751, 1296, 1247, 1296,
+      768, 1296,    0, 1296, 1296, 1282,  751, 1296, 1247, 1296,
      1296,    0, 1296, 1296,  714, 1296, 1296, 1125, 1296, 1296,
 
       791, 1296,  730, 1296, 1296,  776,  921, 1296,  769, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1250, 1296, 1296, 1296,
-     1296,  551, 1278,  790, 1296, 1296, 1296, 1296, 1296, 1296,
+     1296,  551, 1279,  790, 1296, 1296, 1296, 1296, 1296, 1296,
      1296, 1296, 1296,  898, 1296,  731,  922, 1296, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,  753, 1296, 1296,
      1296, 1296, 1296,  720, 1296,  727, 1296,  928,  926, 1296,
@@ -1405,7 +1405,7 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296,  863,    0,    0,    0,  920,    0,   79, 1296, 1296,
      1296,  778, 1245, 1244, 1250,    0, 1296, 1296, 1296, 1296,
       736, 1296, 1296, 1296, 1296, 1198, 1197, 1196, 1195, 1296,
-     1296,  912,  709, 1296,  554, 1296,  715,    0, 1274, 1296,
+     1296,  912,  709, 1296,  554, 1296,  715,    0, 1275, 1296,
      1296,    0,    0,    0,  955,  706, 1296, 1296,    0,    0,
       775, 1296,    0,    0, 1296, 1296, 1296, 1296, 1296,  598,
         0,    0,    0,    0,    0,    0,    0, 1296, 1296,  585,
@@ -1504,15 +1504,15 @@ static yyconst flex_int16_t yy_accept[11276] =
      1296, 1296, 1296,    0,    0,    0,  621,    0,    0,    0,
       701,    0,    0,    0,    0,  827,    0,  827,  827,  827,
       827,  827,  827,  827,  827,  827,  827,  827,  707,    0,
-     1288, 1279, 1296, 1250, 1296,  556, 1296,    0,  828, 1296,
+     1288, 1280, 1296, 1250, 1296,  556, 1296,    0,  828, 1296,
         0,    0, 1070,    0,    0, 1251,    0, 1296,  923, 1296,
-        0, 1274,  735, 1296,    0, 1296,    0,    0,    0,    0,
+        0, 1275,  735, 1296,    0, 1296,    0,    0,    0,    0,
         0,    0, 1249, 1249,    0,    0,    0,    0,    0, 1296,
      1296, 1296,    0,  793,    0,    0,    0,    0,    0,    0,
 
       722, 1296,  593, 1296, 1296,  583, 1296, 1296, 1296, 1296,
      1296, 1296, 1296, 1296,    0,    0,    0,    0, 1296,  831,
-      762,    0, 1296,   80, 1296, 1296, 1296,  707, 1279, 1296,
+      762,    0, 1296,   80, 1296, 1296, 1296,  707, 1280, 1296,
      1296,  556, 1296, 1296, 1070, 1296,  923, 1296,  735, 1296,
      1296, 1296, 1296, 1296,  593, 1296, 1296,  583, 1296, 1296,
      1296, 1296, 1296, 1296, 1296, 1296, 1296,  220,    0,  220,
@@ -1539,13 +1539,13 @@ static yyconst flex_int16_t yy_accept[11276] =
         0,    0,    0, 1296, 1296,    0, 1230,    0,  718,    0,
       630,    0,    0,  827,  827,    0,  827,  827,  827,  827,
       827,  827,  827,  827,  827,  827,  827,  707,    0, 1296,
-      557, 1253, 1296,    0, 1070, 1194,    0,    0, 1272, 1296,
+      557, 1253, 1296,    0, 1070, 1194,    0,    0, 1273, 1296,
         0,    0,  732, 1296,    0,    0, 1296,    0,    0,    0,
         0,    0,   81,    0,  833, 1296, 1296,  312,    0,    0,
 
         0,  899,  794,   23, 1296, 1296,    0, 1296,  528, 1296,
      1296, 1296,  580, 1296,    0,    0,    0,   22,    0, 1296,
-     1296, 1296, 1296,  557, 1253, 1296, 1272, 1296, 1296, 1296,
+     1296, 1296, 1296,  557, 1253, 1296, 1273, 1296, 1296, 1296,
      1296,  312, 1296, 1296, 1296,  528, 1296, 1296, 1296,  580,
      1296,   22,  220,    0, 1004,    0,    0, 1004,    0,    0,
         0,  188,  672, 1228,  418, 1228, 1228,  214,    0, 1228,
@@ -1567,7 +1567,7 @@ static yyconst flex_int16_t yy_accept[11276] =
 
       827,  827,  827,  827,  827,  827,  827,  827,  827,  827,
       827,    0, 1296, 1253,    0, 1253, 1253, 1253, 1296,    0,
-        0, 1251,  737,    0, 1274, 1296,    0, 1296,    0,    0,
+        0, 1251,  737,    0, 1275, 1296,    0, 1296,    0,    0,
         0,    0,    0,    0,    0,  581, 1296,  312,    0,  826,
         0,    0,  899, 1296, 1296,    0,  721,  886, 1296, 1296,
      1296, 1296,    0,  724,    0,    0, 1296, 1296, 1296,  737,
@@ -1588,7 +1588,7 @@ static yyconst flex_int16_t yy_accept[11276] =
         0,    0,  827,    0,  827,  827,  827,  827,  827,  827,
 
       827,  827,  827,  827,    0,  798,   33, 1253,    0,    0,
-        0,  734, 1296, 1273, 1296,  830,    0,    0,    0,    0,
+        0,  734, 1296, 1274, 1296,  830,    0,    0,    0,    0,
         0,  726,  555,    0,    0,  575, 1296,  578, 1296,  584,
      1296,    0,  716, 1296,   33, 1296,  555,  575, 1296,  578,
      1296,  584, 1296,    0,  210,    0, 1228,  214, 1228,  368,
@@ -14313,11 +14313,11 @@ This file needs to be turned into a C program using flex
 And then compiled into the tth executable using a C compiler.
 */
 #line 10 "tth.lex"
-#define TTH_VERSION "4.08"
+#define TTH_VERSION "4.12"
   /*#define TTH_GOLD "gold" no longer a distinction*/  /*sf*/
 #define TTH_HEAD "HEAD"  /*sf*/
 char tth_DOC[]="\n\
-                Version XXXX (c)1997-2011 Ian Hutchinson\n\
+                Version XXXX (c)1997-2017 Ian Hutchinson\n\
             TtH (TeX-to-HTML) translates TeX into HTML.\n\n\
 The program is a filter by default: it reads from stdin and writes to stdout.\n\
 But a non-switch argument specifies the file[.tex] to translate to file.html.\n\
@@ -14560,7 +14560,7 @@ char *tth_latex_builtins2=
 \\def\\tthciteform{}\\def\\tthbibform{[}\\def\\tthbibcb{]}\
 \\def\\tthciteob{[}\\def\\tthcitepb{,}\\def\\tthcitefi{,}\\def\\tthcitecb{]}\
 \\newcommand\\citet[2][]{{\\def\\tthciteform##1##2##3##4{##3 [##2]}\
-\\def\\tthciteob{}\\def\\tthcitecb{}\\cite[#1]{#2}}}\
+\\def\\tthciteob{}\\def\\tthcitecb{}\\def\\tthcitib{}\\cite[#1]{#2}}}\
 \\newcommand\\citep[2][]{{\\def\\tthciteform##1##2##3##4{##3, ##2}\
 \\def\\tthciteob{[}\\cite[#1]{#2}}}\
 \\newcommand\\marginpar[2][]{\\special{html:<table align=\"right\" border=\
@@ -16319,7 +16319,6 @@ YY_RULE_SETUP
   yy_push_state(urlgroup);
   storetype=99; /* Just leave in dupgroup to be dealt with by prior state*/
   yy_push_state(uncommentgroup);
-  /*yy_push_state(escgroup);*/
   bracecount=-1;
   yy_push_state(embracetok); /* Make sure we have a braced argument */
 }
@@ -16327,7 +16326,7 @@ YY_RULE_SETUP
 case 89:
 /* rule 89 can match eol */
 YY_RULE_SETUP
-#line 1428 "tth.lex"
+#line 1427 "tth.lex"
 {
   yyless(0);
   yy_pop_state();
@@ -16358,36 +16357,24 @@ YY_RULE_SETUP
   *dupstore2=0;
  }
 	YY_BREAK
-/*
-<urlgroup>.|\n {
-  yyless(0);
-  yy_pop_state();
-  strcpy(dupstore2,"\\href");strcat(dupstore2,dupstore);
-  sprintf(dupstore2+strlen(dupstore2),"{\\verb%c%s",6,dupstore+1);
-  sprintf(dupstore2+strlen(dupstore2)-1,"%c}",6);
-  if(tth_debug&8)fprintf(stderr,"urlgroup rescanning:%s\n",dupstore2);
-  TTH_SCAN_STRING(dupstore2);
-  *dupstore=0;
-  *dupstore2=0;
-  }*/
 /* Colordvi commands, won't work in equations. Convert to \color */
 case 90:
-#line 1473 "tth.lex"
+#line 1459 "tth.lex"
 case 91:
-#line 1474 "tth.lex"
+#line 1460 "tth.lex"
 case 92:
-#line 1475 "tth.lex"
+#line 1461 "tth.lex"
 case 93:
-#line 1476 "tth.lex"
+#line 1462 "tth.lex"
 case 94:
-#line 1477 "tth.lex"
+#line 1463 "tth.lex"
 case 95:
-#line 1478 "tth.lex"
+#line 1464 "tth.lex"
 case 96:
-#line 1479 "tth.lex"
+#line 1465 "tth.lex"
 case 97:
 YY_RULE_SETUP
-#line 1479 "tth.lex"
+#line 1465 "tth.lex"
 {
   strcpy(scratchstring,yytext+1);
   /**scratchstring=tolower(*scratchstring);*/
@@ -16398,21 +16385,21 @@ YY_RULE_SETUP
 case 98:
 /* rule 98 can match eol */
 YY_RULE_SETUP
-#line 1485 "tth.lex"
+#line 1471 "tth.lex"
 TTH_INC_MULTI;fprintf(tth_fdout,",");
 	YY_BREAK
 /************************ Comment removal ******************/
 /* Many needed so that e.g.  inside a comment does not break stuff */
 case 99:
 /* rule 99 can match eol */
-#line 1490 "tth.lex"
+#line 1476 "tth.lex"
 case 100:
 /* rule 100 can match eol */
-#line 1491 "tth.lex"
+#line 1477 "tth.lex"
 case 101:
 /* rule 101 can match eol */
 YY_RULE_SETUP
-#line 1491 "tth.lex"
+#line 1477 "tth.lex"
 {
   TTH_INC_LINE;
   if(strstr(yytext,"%%tth:")==yytext){TTH_SCAN_STRING(yytext+6);}
@@ -16425,7 +16412,7 @@ YY_RULE_SETUP
 case 102:
 /* rule 102 can match eol */
 YY_RULE_SETUP
-#line 1500 "tth.lex"
+#line 1486 "tth.lex"
 {
   TTH_INC_LINE;
   if(strstr(yytext,"%%tth:")==yytext){TTH_SCAN_STRING(yytext+6);}
@@ -16440,20 +16427,20 @@ YY_RULE_SETUP
 /* escgroup explicitly ignores comment removal and other special chars.*/
 case 103:
 YY_RULE_SETUP
-#line 1512 "tth.lex"
+#line 1498 "tth.lex"
 strcat(dupstore,"\\");strcat(dupstore,yytext); 
 	YY_BREAK
 /* Don't escape things already escaped*/
 case 104:
 YY_RULE_SETUP
-#line 1514 "tth.lex"
+#line 1500 "tth.lex"
 strcat(dupstore,yytext); 
 	YY_BREAK
 /*********************************************************************/
 /* Date information needs to be before conditionals. */
 case 105:
 YY_RULE_SETUP
-#line 1517 "tth.lex"
+#line 1503 "tth.lex"
 {
   time(&thetime);
   strcpy(scratchstring,ctime(&thetime));
@@ -16465,7 +16452,7 @@ YY_RULE_SETUP
 /* Act as if these are counters */
 case 106:
 YY_RULE_SETUP
-#line 1526 "tth.lex"
+#line 1512 "tth.lex"
 {
   yyless(0);
   TTH_SCAN_STRING("\\number");
@@ -16473,7 +16460,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 107:
 YY_RULE_SETUP
-#line 1531 "tth.lex"
+#line 1517 "tth.lex"
 {
   time(&thetime);
   timestruct=*localtime(&thetime);
@@ -16486,7 +16473,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 108:
 YY_RULE_SETUP
-#line 1540 "tth.lex"
+#line 1526 "tth.lex"
 {
   time(&thetime);
   timestruct=*localtime(&thetime);
@@ -16497,7 +16484,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 109:
 YY_RULE_SETUP
-#line 1547 "tth.lex"
+#line 1533 "tth.lex"
 {
   time(&thetime);
   timestruct=*localtime(&thetime);
@@ -16510,7 +16497,7 @@ YY_RULE_SETUP
 /* Conditionals*/
 case 110:
 YY_RULE_SETUP
-#line 1557 "tth.lex"
+#line 1543 "tth.lex"
 {
   strcpy(scratchstring,strstr(yytext,"\\if")+3);
   sprintf(scrstring,"\\def\\if%s{\\iffalse}\\def\\%sfalse{\\%dfalse}\\def\\%strue{\\%dtrue}",scratchstring,scratchstring,nkeys,scratchstring,nkeys);
@@ -16519,7 +16506,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 111:
 YY_RULE_SETUP
-#line 1562 "tth.lex"
+#line 1548 "tth.lex"
 {
   sscanf(yytext+1,"%d",&js2);
   strncpy(defs[js2]+3,"false",5);
@@ -16527,48 +16514,48 @@ YY_RULE_SETUP
 	YY_BREAK
 case 112:
 YY_RULE_SETUP
-#line 1566 "tth.lex"
+#line 1552 "tth.lex"
 {
   sscanf(yytext+1,"%d",&js2);
   strncpy(defs[js2]+3,"true ",5);
 }
 	YY_BREAK
 case 113:
-#line 1572 "tth.lex"
+#line 1558 "tth.lex"
 case 114:
-#line 1573 "tth.lex"
+#line 1559 "tth.lex"
 case 115:
-#line 1574 "tth.lex"
+#line 1560 "tth.lex"
 case 116:
 YY_RULE_SETUP
-#line 1574 "tth.lex"
+#line 1560 "tth.lex"
 if(tth_debug&1024)fprintf(stderr,"Starting %s.\n",yytext);
 	YY_BREAK
 case 117:
 YY_RULE_SETUP
-#line 1576 "tth.lex"
+#line 1562 "tth.lex"
 
 	YY_BREAK
 case 118:
-#line 1578 "tth.lex"
+#line 1564 "tth.lex"
 case 119:
 YY_RULE_SETUP
-#line 1578 "tth.lex"
+#line 1564 "tth.lex"
 {
   yy_push_state(innerfalse);
   if(tth_debug&1024)fprintf(stderr,"Starting inner \\if in falsetext.\n");
 }
 	YY_BREAK
 case 120:
-#line 1583 "tth.lex"
+#line 1569 "tth.lex"
 case 121:
 YY_RULE_SETUP
-#line 1583 "tth.lex"
+#line 1569 "tth.lex"
 
 	YY_BREAK
 case 122:
 YY_RULE_SETUP
-#line 1584 "tth.lex"
+#line 1570 "tth.lex"
 {
   yy_push_state(falsetext);
   if(tth_debug&1024)fprintf(stderr,"Starting \\iffalse.\n");
@@ -16576,29 +16563,29 @@ YY_RULE_SETUP
 	YY_BREAK
 case 123:
 YY_RULE_SETUP
-#line 1588 "tth.lex"
+#line 1574 "tth.lex"
 if(horizmode) yy_push_state(falsetext);
 	YY_BREAK
 case 124:
 YY_RULE_SETUP
-#line 1589 "tth.lex"
+#line 1575 "tth.lex"
 if(!horizmode) yy_push_state(falsetext);
 	YY_BREAK
 case 125:
-#line 1592 "tth.lex"
+#line 1578 "tth.lex"
 case 126:
 YY_RULE_SETUP
-#line 1592 "tth.lex"
+#line 1578 "tth.lex"
 {
   if(tth_debug&1024)fprintf(stderr,"Ending true clause \\if\\fi.\n");
   if(horizmode)horizmode=1;
 }
 	YY_BREAK
 case 127:
-#line 1597 "tth.lex"
+#line 1583 "tth.lex"
 case 128:
 YY_RULE_SETUP
-#line 1597 "tth.lex"
+#line 1583 "tth.lex"
 {
   if(tth_debug&1024)fprintf(stderr,"Ending true clause \\if\\else\n");
   yy_push_state(falsetext);
@@ -16607,7 +16594,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 129:
 YY_RULE_SETUP
-#line 1602 "tth.lex"
+#line 1588 "tth.lex"
 {
   yy_pop_state();
   if(tth_debug&1024)fprintf(stderr,"Ending false clause \\if\\else.\n");
@@ -16617,12 +16604,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 130:
 YY_RULE_SETUP
-#line 1608 "tth.lex"
+#line 1594 "tth.lex"
 /* Don't misinterpret other commands. */
 	YY_BREAK
 case 131:
 YY_RULE_SETUP
-#line 1609 "tth.lex"
+#line 1595 "tth.lex"
 {
   yy_pop_state(); 
   if(tth_debug&1024)fprintf(stderr,"Ending false clause \\if\\fi.\n");
@@ -16631,90 +16618,90 @@ YY_RULE_SETUP
 	YY_BREAK
 case 132:
 YY_RULE_SETUP
-#line 1614 "tth.lex"
+#line 1600 "tth.lex"
 
 	YY_BREAK
 case 133:
 YY_RULE_SETUP
-#line 1616 "tth.lex"
+#line 1602 "tth.lex"
 yy_push_state(innerfalse);
 	YY_BREAK
 case 134:
 YY_RULE_SETUP
-#line 1617 "tth.lex"
+#line 1603 "tth.lex"
 yy_pop_state(); if(tth_debug&1024)fprintf(stderr,"\\or ");
 	YY_BREAK
 case 135:
 YY_RULE_SETUP
-#line 1618 "tth.lex"
+#line 1604 "tth.lex"
 yy_push_state(innerfalse); /* Ignore nested ifs */
 	YY_BREAK
 case 136:
 YY_RULE_SETUP
-#line 1619 "tth.lex"
+#line 1605 "tth.lex"
 {
  yy_pop_state(); if(tth_debug&1024)fprintf(stderr,"#tthorbreak\n");
  TTH_SCAN_STRING(yytext);
  }
 	YY_BREAK
 case 137:
-#line 1624 "tth.lex"
+#line 1610 "tth.lex"
 case 138:
 YY_RULE_SETUP
-#line 1624 "tth.lex"
+#line 1610 "tth.lex"
 {
   if(tth_debug&1024)fprintf(stderr,"%s ortext\n",yytext);
   TTH_SCAN_STRING("#tthorbreak");}
 	YY_BREAK
 case 139:
 YY_RULE_SETUP
-#line 1627 "tth.lex"
+#line 1613 "tth.lex"
 /*fprintf(stderr,"ortext ");*/
 	YY_BREAK
 case 140:
 YY_RULE_SETUP
-#line 1629 "tth.lex"
+#line 1615 "tth.lex"
 {
   yy_pop_state(); if(tth_debug&1024)fprintf(stderr,"#orbreak end\n");}
 	YY_BREAK
 case 141:
 YY_RULE_SETUP
-#line 1631 "tth.lex"
+#line 1617 "tth.lex"
 {
   yyless(0); 
   yy_pop_state(); if(tth_debug&1024)fprintf(stderr,"Orbreak exit\n");}
 	YY_BREAK
 case 142:
-#line 1636 "tth.lex"
+#line 1622 "tth.lex"
 case 143:
-#line 1637 "tth.lex"
+#line 1623 "tth.lex"
 case 144:
-#line 1638 "tth.lex"
+#line 1624 "tth.lex"
 case 145:
-#line 1639 "tth.lex"
+#line 1625 "tth.lex"
 case 146:
-#line 1640 "tth.lex"
+#line 1626 "tth.lex"
 case 147:
 YY_RULE_SETUP
-#line 1640 "tth.lex"
+#line 1626 "tth.lex"
 {
   yy_push_state(getifnum);strcpy(strif,yytext);yy_push_state(removespace);}
 	YY_BREAK
 case 148:
-#line 1643 "tth.lex"
+#line 1629 "tth.lex"
 case 149:
 YY_RULE_SETUP
-#line 1643 "tth.lex"
+#line 1629 "tth.lex"
 yy_push_state(number);jscratch=0;
 	YY_BREAK
 case 150:
 YY_RULE_SETUP
-#line 1644 "tth.lex"
+#line 1630 "tth.lex"
 TTH_CCAT(strif,yytext);
 	YY_BREAK
 case 151:
 YY_RULE_SETUP
-#line 1645 "tth.lex"
+#line 1631 "tth.lex"
 { 
   TTH_DO_MACRO
   else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) { 
@@ -16729,18 +16716,18 @@ YY_RULE_SETUP
 	YY_BREAK
 case 152:
 YY_RULE_SETUP
-#line 1656 "tth.lex"
+#line 1642 "tth.lex"
 TTH_CCAT(strif,yytext);yy_push_state(removespace);
 	YY_BREAK
 case 153:
 /* rule 153 can match eol */
 YY_RULE_SETUP
-#line 1657 "tth.lex"
+#line 1643 "tth.lex"
 /*Oct 2001.*/
 	YY_BREAK
 case 154:
 YY_RULE_SETUP
-#line 1658 "tth.lex"
+#line 1644 "tth.lex"
 {
   yy_pop_state();
   if(*yytext != '#') {yyless(0);}
@@ -16766,15 +16753,15 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 155:
-#line 1683 "tth.lex"
+#line 1669 "tth.lex"
 case 156:
 YY_RULE_SETUP
-#line 1683 "tth.lex"
+#line 1669 "tth.lex"
 yy_push_state(getiftok);*strif=0;  yy_push_state(removespace);
 	YY_BREAK
 case 157:
 YY_RULE_SETUP
-#line 1684 "tth.lex"
+#line 1670 "tth.lex"
 { 
   TTH_DO_MACRO
   else{
@@ -16791,7 +16778,7 @@ YY_RULE_SETUP
 case 158:
 /* rule 158 can match eol */
 YY_RULE_SETUP
-#line 1696 "tth.lex"
+#line 1682 "tth.lex"
 {
   if(strcspn(yytext,"\n")==0) TTH_INC_LINE;
   if(strlen(strif)){
@@ -16802,19 +16789,19 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 159:
-#line 1706 "tth.lex"
+#line 1692 "tth.lex"
 case 160:
 YY_RULE_SETUP
-#line 1706 "tth.lex"
+#line 1692 "tth.lex"
 yy_push_state(getifx);*strif=0;  yy_push_state(removespace);
 	YY_BREAK
 case 161:
 /* rule 161 can match eol */
-#line 1708 "tth.lex"
+#line 1694 "tth.lex"
 case 162:
 /* rule 162 can match eol */
 YY_RULE_SETUP
-#line 1708 "tth.lex"
+#line 1694 "tth.lex"
 {
   if(strcspn(yytext,"\n")==0) TTH_INC_LINE;
   if(tth_debug&1024) fprintf(stderr,"\\ifx comparison argument:%s\n",yytext);
@@ -16849,7 +16836,7 @@ YY_RULE_SETUP
 /*equationhl*/
 case 163:
 YY_RULE_SETUP
-#line 1739 "tth.lex"
+#line 1725 "tth.lex"
 { 
   if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);       /* Start new row */ 
   if(tth_istyle&1)eqalignrow=eqalignrow+6*(levhgt[eqclose]-1)+TTH_HGT;else
@@ -16860,7 +16847,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 164:
 YY_RULE_SETUP
-#line 1747 "tth.lex"
+#line 1733 "tth.lex"
 {
   TTH_TEX_FN("{\\buildrel{#1}\\over{#2}}#tthdrop2",2);
 }
@@ -16868,13 +16855,13 @@ YY_RULE_SETUP
 case 165:
 /* rule 165 can match eol */
 YY_RULE_SETUP
-#line 1751 "tth.lex"
+#line 1737 "tth.lex"
 TTH_CHECK_LENGTH;  TTH_INC_LINE;
 	YY_BREAK
 case 166:
 /* rule 166 can match eol */
 YY_RULE_SETUP
-#line 1753 "tth.lex"
+#line 1739 "tth.lex"
 {
   TTH_INC_MULTI;
   if(*halstring){ /* halign and tabular */
@@ -16887,12 +16874,12 @@ YY_RULE_SETUP
 /* Version that uses tabular code: */
 case 167:
 YY_RULE_SETUP
-#line 1763 "tth.lex"
+#line 1749 "tth.lex"
 TTH_SCAN_STRING("\\end{tabular}");
 	YY_BREAK
 case 168:
 YY_RULE_SETUP
-#line 1765 "tth.lex"
+#line 1751 "tth.lex"
 {
   if(tth_debug&2)fprintf(stderr,"end eqnarray, eqdepth=%d, eqclose=%d, tth_multinum=%d, eqalignlog=%d.\n",eqdepth,eqclose,tth_multinum,eqalignlog);
   TTH_SCAN_STRING("}}\\tth_endeqnarray"); 
@@ -16900,61 +16887,61 @@ YY_RULE_SETUP
 	YY_BREAK
 case 169:
 YY_RULE_SETUP
-#line 1769 "tth.lex"
+#line 1755 "tth.lex"
 if(eqalignlog <= 100) eqalignlog=eqalignlog+100;
 	YY_BREAK
 /* Font faces and styles etc.*/
 case 170:
 YY_RULE_SETUP
-#line 1771 "tth.lex"
+#line 1757 "tth.lex"
 TTH_SWAP("\\rm ");
 	YY_BREAK
 case 171:
-#line 1773 "tth.lex"
+#line 1759 "tth.lex"
 case 172:
 YY_RULE_SETUP
-#line 1773 "tth.lex"
+#line 1759 "tth.lex"
 TTH_SWAP("\\bf ");
 	YY_BREAK
 case 173:
 YY_RULE_SETUP
-#line 1774 "tth.lex"
+#line 1760 "tth.lex"
 TTH_SWAP("\\it ");
 	YY_BREAK
 case 174:
 YY_RULE_SETUP
-#line 1775 "tth.lex"
+#line 1761 "tth.lex"
 TTH_SWAP("\\it ");
 	YY_BREAK
 case 175:
 YY_RULE_SETUP
-#line 1776 "tth.lex"
+#line 1762 "tth.lex"
 TTH_SWAP("\\tt ");
 	YY_BREAK
 case 176:
 YY_RULE_SETUP
-#line 1777 "tth.lex"
+#line 1763 "tth.lex"
 TTH_SWAP("\\sffamily ");
 	YY_BREAK
 case 177:
 YY_RULE_SETUP
-#line 1778 "tth.lex"
+#line 1764 "tth.lex"
 
 	YY_BREAK
 case 178:
 /* rule 178 can match eol */
 YY_RULE_SETUP
-#line 1779 "tth.lex"
+#line 1765 "tth.lex"
 TTH_INC_MULTI; 
 	YY_BREAK
 case 179:
 YY_RULE_SETUP
-#line 1780 "tth.lex"
+#line 1766 "tth.lex"
 TTH_MATHI(219);
 	YY_BREAK
 case 180:
 YY_RULE_SETUP
-#line 1783 "tth.lex"
+#line 1769 "tth.lex"
 {
  /* halign */
   /*if(*halstring) {TTH_SCAN_STRING("}\\tth_mhamper{");*/
@@ -16965,20 +16952,20 @@ YY_RULE_SETUP
 	YY_BREAK
 case 181:
 YY_RULE_SETUP
-#line 1790 "tth.lex"
+#line 1776 "tth.lex"
 yy_push_state(hamper);
 	YY_BREAK
 /* hamper for halign */
 case 182:
 /* rule 182 can match eol */
 YY_RULE_SETUP
-#line 1793 "tth.lex"
+#line 1779 "tth.lex"
 TTH_INC_MULTI;  
 	YY_BREAK
 case 183:
 /* rule 183 can match eol */
 YY_RULE_SETUP
-#line 1794 "tth.lex"
+#line 1780 "tth.lex"
 {  
   yyless(0);yy_pop_state();
   tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
@@ -16997,18 +16984,18 @@ YY_RULE_SETUP
 	YY_BREAK
 case 184:
 YY_RULE_SETUP
-#line 1810 "tth.lex"
+#line 1796 "tth.lex"
 TTH_TEX_FN("\\tthemultispan{#1}#tthdrop1",1);
 	YY_BREAK
 case 185:
 YY_RULE_SETUP
-#line 1811 "tth.lex"
+#line 1797 "tth.lex"
 TTH_TEX_FN("\\tthemultispan{#1}#tthdrop2",2);
 	YY_BREAK
 /*  interior in array */
 case 186:
 YY_RULE_SETUP
-#line 1813 "tth.lex"
+#line 1799 "tth.lex"
 {
   yy_pop_state();  
   chscratch=strstr(yytext,"multi");
@@ -17027,7 +17014,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 187:
 YY_RULE_SETUP
-#line 1828 "tth.lex"
+#line 1814 "tth.lex"
 { /* line start in array */
   chscratch=strstr(yytext,"multi");
   TTH_CCPY(argchar,chscratch+strcspn(chscratch,"{")+1);
@@ -17037,7 +17024,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 188:
 YY_RULE_SETUP
-#line 1834 "tth.lex"
+#line 1820 "tth.lex"
 { /* expand first */
   TTH_DO_MACRO
   else{
@@ -17059,7 +17046,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 189:
 YY_RULE_SETUP
-#line 1853 "tth.lex"
+#line 1839 "tth.lex"
 { 
   if(tth_debug&33) fprintf(stderr,"noalign in equation:\n");
   if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);
@@ -17072,14 +17059,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 190:
 /* rule 190 can match eol */
-#line 1863 "tth.lex"
+#line 1849 "tth.lex"
 case 191:
 /* rule 191 can match eol */
-#line 1864 "tth.lex"
+#line 1850 "tth.lex"
 case 192:
 /* rule 192 can match eol */
 YY_RULE_SETUP
-#line 1864 "tth.lex"
+#line 1850 "tth.lex"
 {  
   if(eqclose && (active[eqclose-1] || mtrx[eqclose-1])){ 
     /* If this is really an array-type environment. */
@@ -17134,7 +17121,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 193:
 YY_RULE_SETUP
-#line 1916 "tth.lex"
+#line 1902 "tth.lex"
 {
   if(tth_LaTeX && tth_multinum && strlen(envirchar) && (eqalignlog==1) ){
     equatno++;sprintf(envirchar,"%d",equatno);tth_multinum++;
@@ -17155,7 +17142,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 194:
 YY_RULE_SETUP
-#line 1934 "tth.lex"
+#line 1920 "tth.lex"
 {
   if(tth_debug&16) {
     fprintf(stderr,"Start Group {, eqdepth=%d, eqclose=%d, tth_flev=%d, levdelim=%s\n",eqdepth,eqclose,tth_flev,levdelim[eqclose]);
@@ -17171,7 +17158,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 195:
 YY_RULE_SETUP
-#line 1947 "tth.lex"
+#line 1933 "tth.lex"
 {
   if(mtrx[eqclose-1] || active[eqclose-1] || tophgt[eqclose]){
     /* Terminate getsubp state */
@@ -17184,10 +17171,10 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 196:
-#line 1958 "tth.lex"
+#line 1944 "tth.lex"
 case 197:
 YY_RULE_SETUP
-#line 1958 "tth.lex"
+#line 1944 "tth.lex"
 { 
   TTH_TEXCLOSE else{
   do{
@@ -17289,7 +17276,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 198:
 YY_RULE_SETUP
-#line 2057 "tth.lex"
+#line 2043 "tth.lex"
 {  /* Cope with ambiguous style at equation end */
   if(displaystyle){
     if(tth_debug&2)fprintf(stderr,"$$ in displaystyle\n");
@@ -17302,7 +17289,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 199:
 YY_RULE_SETUP
-#line 2067 "tth.lex"
+#line 2053 "tth.lex"
 {
   TTH_TEXCLOSE else{
     if(tth_debug&2) fprintf(stderr,"Leaving inline eq, eqclose=%d, eqdepth=%d, tth_flev=%d, levhgt=%d, tophgt=%d\n",  
@@ -17333,7 +17320,7 @@ YY_RULE_SETUP
 /* Force all equations to end enclosed. */
 case 200:
 YY_RULE_SETUP
-#line 2094 "tth.lex"
+#line 2080 "tth.lex"
 { 
   if(strstr(yytext,"*")==NULL){    /* end{equation} */
     if(tth_multinum < 2) { 
@@ -17347,15 +17334,15 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 201:
-#line 2106 "tth.lex"
+#line 2092 "tth.lex"
 case 202:
 YY_RULE_SETUP
-#line 2106 "tth.lex"
+#line 2092 "tth.lex"
 TTH_SCAN_STRING("}\\tth_endequation");
 	YY_BREAK
 case 203:
 YY_RULE_SETUP
-#line 2108 "tth.lex"
+#line 2094 "tth.lex"
 {
       strcat(eqstr,TTH_DISP3);
       TTH_SCAN_STRING("(\\theequation)\\tth_endnumbered");
@@ -17363,14 +17350,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 204:
 YY_RULE_SETUP
-#line 2112 "tth.lex"
+#line 2098 "tth.lex"
 equatno--;TTH_SCAN_STRING("\\tth_endequation");
 	YY_BREAK
 case 205:
-#line 2114 "tth.lex"
+#line 2100 "tth.lex"
 case 206:
 YY_RULE_SETUP
-#line 2114 "tth.lex"
+#line 2100 "tth.lex"
 {
   TTH_TEXCLOSE else{
   eqaligncell=0;
@@ -17422,7 +17409,7 @@ YY_RULE_SETUP
 case 207:
 /* rule 207 can match eol */
 YY_RULE_SETUP
-#line 2161 "tth.lex"
+#line 2147 "tth.lex"
 {
   if(active[eqclose]){ /* reembrace to protect active closure */
     TTH_INC_MULTI; 
@@ -17447,7 +17434,7 @@ YY_RULE_SETUP
 case 208:
 /* rule 208 can match eol */
 YY_RULE_SETUP
-#line 2182 "tth.lex"
+#line 2168 "tth.lex"
 {
   TTH_INC_MULTI; 
   yyless(strspn(yytext," \t\r\n"));
@@ -17456,7 +17443,7 @@ YY_RULE_SETUP
 case 209:
 /* rule 209 can match eol */
 YY_RULE_SETUP
-#line 2186 "tth.lex"
+#line 2172 "tth.lex"
 {
   TTH_INC_MULTI; 
   if(tth_debug&16)fprintf(stderr,
@@ -17487,7 +17474,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 210:
 YY_RULE_SETUP
-#line 2213 "tth.lex"
+#line 2199 "tth.lex"
 strcpy(levdelim[eqclose+1],")");
 	YY_BREAK
 /*TTH_SCAN_STRING("\\right)"); doesn't work. Imbalances closures.*/
@@ -17497,12 +17484,12 @@ strcpy(levdelim[eqclose+1],")");
    This case will not be used if we are doing a full cell (getsubsup). */
 case 211:
 YY_RULE_SETUP
-#line 2221 "tth.lex"
+#line 2207 "tth.lex"
 TTH_MATHI(162); 
 	YY_BREAK
 case 212:
 YY_RULE_SETUP
-#line 2222 "tth.lex"
+#line 2208 "tth.lex"
 {
   strcat(eqstr,TTH_SUP1);yy_push_state(exptokarg);
   TTH_CCPY(expchar,TTH_SUP2);
@@ -17510,7 +17497,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 213:
 YY_RULE_SETUP
-#line 2226 "tth.lex"
+#line 2212 "tth.lex"
 {
   strcat(eqstr,TTH_SUB1);yy_push_state(exptokarg);
   TTH_CCPY(expchar,TTH_SUB2);
@@ -17520,7 +17507,7 @@ YY_RULE_SETUP
 case 214:
 /* rule 214 can match eol */
 YY_RULE_SETUP
-#line 2231 "tth.lex"
+#line 2217 "tth.lex"
 {
   TTH_INC_MULTI; 
   TTH_SCAN_STRING("\\begin{tabular}");
@@ -17528,11 +17515,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 215:
 /* rule 215 can match eol */
-#line 2236 "tth.lex"
+#line 2222 "tth.lex"
 case 216:
 /* rule 216 can match eol */
 YY_RULE_SETUP
-#line 2236 "tth.lex"
+#line 2222 "tth.lex"
 { /*border not really supported*/
   TTH_INC_MULTI; 
   TTH_HAL_PUSH;*halstring=0;
@@ -17565,7 +17552,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 217:
 YY_RULE_SETUP
-#line 2265 "tth.lex"
+#line 2251 "tth.lex"
 {
   if(tth_debug&16) fprintf(stderr,"Matrix close %d, levhgt=%d, rows=%d\n",
 			   eqclose,levhgt[eqclose],eqalignrow);
@@ -17587,14 +17574,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 218:
 YY_RULE_SETUP
-#line 2284 "tth.lex"
+#line 2270 "tth.lex"
 {
   TTH_TEX_FN("\\mbox{\\left\\lbrace\\matrix{#1}\\right.}#tthdrop1",1);
 }
 	YY_BREAK
 case 219:
 YY_RULE_SETUP
-#line 2287 "tth.lex"
+#line 2273 "tth.lex"
 {
   TTH_TEX_FN("\\left(\\matrix{#1}\\right)#tthdrop1",1);
 }
@@ -17606,20 +17593,20 @@ YY_RULE_SETUP
  */
 case 220:
 /* rule 220 can match eol */
-#line 2297 "tth.lex"
+#line 2283 "tth.lex"
 case 221:
 /* rule 221 can match eol */
-#line 2298 "tth.lex"
+#line 2284 "tth.lex"
 case 222:
 /* rule 222 can match eol */
-#line 2299 "tth.lex"
+#line 2285 "tth.lex"
 case 223:
 /* rule 223 can match eol */
-#line 2300 "tth.lex"
+#line 2286 "tth.lex"
 case 224:
 /* rule 224 can match eol */
 YY_RULE_SETUP
-#line 2300 "tth.lex"
+#line 2286 "tth.lex"
 {
   TTH_INC_MULTI;
   strcpy(scratchstring,"\\tth_tbone");strcat(scratchstring,"\\rm ");  TTH_SCAN_STRING("\\tth_tbox");
@@ -17627,44 +17614,44 @@ YY_RULE_SETUP
 	YY_BREAK
 case 225:
 YY_RULE_SETUP
-#line 2304 "tth.lex"
+#line 2290 "tth.lex"
 {
   strcpy(scratchstring,"\\tth_tbone");strcat(scratchstring,"\\bf ");  TTH_SCAN_STRING("\\tth_tbox");
 }
 	YY_BREAK
 case 226:
-#line 2308 "tth.lex"
+#line 2294 "tth.lex"
 case 227:
 YY_RULE_SETUP
-#line 2308 "tth.lex"
+#line 2294 "tth.lex"
 {
   strcpy(scratchstring,"\\tth_tbone");strcat(scratchstring,"\\it ");  TTH_SCAN_STRING("\\tth_tbox");
 }
 	YY_BREAK
 case 228:
 YY_RULE_SETUP
-#line 2311 "tth.lex"
+#line 2297 "tth.lex"
 {
   strcpy(scratchstring,"\\tth_tbone");strcat(scratchstring,"\\tt ");  TTH_SCAN_STRING("\\tth_tbox");
 }
 	YY_BREAK
 case 229:
 YY_RULE_SETUP
-#line 2314 "tth.lex"
+#line 2300 "tth.lex"
 {
   strcpy(scratchstring,"\\tth_tbone");strcat(scratchstring,"\\sffamily ");  TTH_SCAN_STRING("\\tth_tbox");
 }
 	YY_BREAK
 case 230:
 YY_RULE_SETUP
-#line 2317 "tth.lex"
+#line 2303 "tth.lex"
 {
   strcpy(scratchstring,"\\tth_tbone");strcat(scratchstring,"\\scshape ");  TTH_SCAN_STRING("\\tth_tbox");
 }
 	YY_BREAK
 case 231:
 YY_RULE_SETUP
-#line 2320 "tth.lex"
+#line 2306 "tth.lex"
 {
   if(tth_debug&2)fprintf(stderr,
     "Start textbox. eqclose %d. push_depth %d. Line %d\n"
@@ -17677,7 +17664,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 232:
 YY_RULE_SETUP
-#line 2329 "tth.lex"
+#line 2315 "tth.lex"
 {
   if(tth_debug&2)fprintf(stderr,
       "Start textbox exptokarg. Displaystyle %d. eqclose %d, push_depth %d, Line %d\n"
@@ -17690,7 +17677,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 233:
 YY_RULE_SETUP
-#line 2338 "tth.lex"
+#line 2324 "tth.lex"
 { /* box closure*/
     if(tth_debug&2) fprintf(stderr,"Box closure, eqclose=%d\n",eqclose);
     if(!displaystyle) yy_pop_state(); /* textbox state end */
@@ -17698,7 +17685,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 234:
 YY_RULE_SETUP
-#line 2342 "tth.lex"
+#line 2328 "tth.lex"
 {
   if(tth_debug&8)fprintf(stderr,"tbone at push_depth %d\n",tth_push_depth);
   TTH_OUTPUT(TTH_TEXTBOX1);
@@ -17707,16 +17694,16 @@ YY_RULE_SETUP
 	YY_BREAK
 case 235:
 YY_RULE_SETUP
-#line 2347 "tth.lex"
+#line 2333 "tth.lex"
 {GET_DIMEN;} /* Override new handling */
 	YY_BREAK
 case 236:
-#line 2350 "tth.lex"
+#line 2336 "tth.lex"
 case 237:
-#line 2351 "tth.lex"
+#line 2337 "tth.lex"
 case 238:
 YY_RULE_SETUP
-#line 2351 "tth.lex"
+#line 2337 "tth.lex"
 {
   /* Deal with single $ or inline in display equations or boxes.*/
   if(displaystyle==1){ /* Open inline in box enclose it.*/
@@ -17747,33 +17734,33 @@ YY_RULE_SETUP
 /* Math greek and symbols */
 case 239:
 YY_RULE_SETUP
-#line 2378 "tth.lex"
+#line 2364 "tth.lex"
 TTH_MATHS("a");
 	YY_BREAK
 case 240:
 YY_RULE_SETUP
-#line 2379 "tth.lex"
+#line 2365 "tth.lex"
 TTH_MATHS("b");
 	YY_BREAK
 case 241:
 YY_RULE_SETUP
-#line 2380 "tth.lex"
+#line 2366 "tth.lex"
 TTH_MATHS("g");
 	YY_BREAK
 case 242:
 YY_RULE_SETUP
-#line 2381 "tth.lex"
+#line 2367 "tth.lex"
 TTH_MATHS("d");
 	YY_BREAK
 case 243:
 YY_RULE_SETUP
-#line 2382 "tth.lex"
+#line 2368 "tth.lex"
 TTH_MATHS("e");
 	YY_BREAK
 /* <equation>\\varepsilon{SP}*	TTH_MATHS("e"); */ 
 case 244:
 YY_RULE_SETUP
-#line 2384 "tth.lex"
+#line 2370 "tth.lex"
 {
   if(tth_unicode){
     TTH_MATHI(129); /*Kludge for coding translation */
@@ -17784,516 +17771,516 @@ YY_RULE_SETUP
 	YY_BREAK
 case 245:
 YY_RULE_SETUP
-#line 2391 "tth.lex"
+#line 2377 "tth.lex"
 TTH_MATHS("z");
 	YY_BREAK
 case 246:
 YY_RULE_SETUP
-#line 2392 "tth.lex"
+#line 2378 "tth.lex"
 TTH_MATHS("h")
 	YY_BREAK
 case 247:
 YY_RULE_SETUP
-#line 2393 "tth.lex"
+#line 2379 "tth.lex"
 TTH_MATHS("q");
 	YY_BREAK
 case 248:
 YY_RULE_SETUP
-#line 2394 "tth.lex"
+#line 2380 "tth.lex"
 TTH_MATHS("J");
 	YY_BREAK
 case 249:
 YY_RULE_SETUP
-#line 2395 "tth.lex"
+#line 2381 "tth.lex"
 TTH_MATHS("i");
 	YY_BREAK
 case 250:
 YY_RULE_SETUP
-#line 2396 "tth.lex"
+#line 2382 "tth.lex"
 TTH_MATHS("k");
 	YY_BREAK
 case 251:
 YY_RULE_SETUP
-#line 2397 "tth.lex"
+#line 2383 "tth.lex"
 TTH_MATHS("l");
 	YY_BREAK
 case 252:
 YY_RULE_SETUP
-#line 2398 "tth.lex"
+#line 2384 "tth.lex"
 TTH_MATHS("l");
 	YY_BREAK
 case 253:
 YY_RULE_SETUP
-#line 2399 "tth.lex"
+#line 2385 "tth.lex"
 TTH_MATHS("m");
 	YY_BREAK
 case 254:
 YY_RULE_SETUP
-#line 2400 "tth.lex"
+#line 2386 "tth.lex"
 TTH_MATHS("n");
 	YY_BREAK
 case 255:
 YY_RULE_SETUP
-#line 2401 "tth.lex"
+#line 2387 "tth.lex"
 TTH_MATHS("x");
 	YY_BREAK
 case 256:
 YY_RULE_SETUP
-#line 2402 "tth.lex"
+#line 2388 "tth.lex"
 TTH_MATHS("p");
 	YY_BREAK
 case 257:
 YY_RULE_SETUP
-#line 2403 "tth.lex"
+#line 2389 "tth.lex"
 TTH_MATHS("v");
 	YY_BREAK
 case 258:
 YY_RULE_SETUP
-#line 2404 "tth.lex"
+#line 2390 "tth.lex"
 TTH_MATHS("r");
 	YY_BREAK
 case 259:
 YY_RULE_SETUP
-#line 2405 "tth.lex"
+#line 2391 "tth.lex"
 TTH_MATHS("r");
 	YY_BREAK
 case 260:
 YY_RULE_SETUP
-#line 2406 "tth.lex"
+#line 2392 "tth.lex"
 TTH_MATHS("s");
 	YY_BREAK
 case 261:
 YY_RULE_SETUP
-#line 2407 "tth.lex"
+#line 2393 "tth.lex"
 TTH_MATHS("V");
 	YY_BREAK
 case 262:
 YY_RULE_SETUP
-#line 2408 "tth.lex"
+#line 2394 "tth.lex"
 TTH_MATHS("t");
 	YY_BREAK
 case 263:
 YY_RULE_SETUP
-#line 2409 "tth.lex"
+#line 2395 "tth.lex"
 TTH_MATHS("u");
 	YY_BREAK
 case 264:
 YY_RULE_SETUP
-#line 2410 "tth.lex"
+#line 2396 "tth.lex"
 TTH_MATHS("f");
 	YY_BREAK
 case 265:
 YY_RULE_SETUP
-#line 2411 "tth.lex"
+#line 2397 "tth.lex"
 TTH_MATHS("j");
 	YY_BREAK
 case 266:
 YY_RULE_SETUP
-#line 2412 "tth.lex"
+#line 2398 "tth.lex"
 TTH_MATHS("c");
 	YY_BREAK
 case 267:
 YY_RULE_SETUP
-#line 2413 "tth.lex"
+#line 2399 "tth.lex"
 TTH_MATHS("y");
 	YY_BREAK
 case 268:
 YY_RULE_SETUP
-#line 2414 "tth.lex"
+#line 2400 "tth.lex"
 TTH_MATHS("w");
 	YY_BREAK
 case 269:
 YY_RULE_SETUP
-#line 2415 "tth.lex"
+#line 2401 "tth.lex"
 TTH_MATHS("G");
 	YY_BREAK
 case 270:
 YY_RULE_SETUP
-#line 2416 "tth.lex"
+#line 2402 "tth.lex"
 TTH_MATHS("D");
 	YY_BREAK
 case 271:
 YY_RULE_SETUP
-#line 2417 "tth.lex"
+#line 2403 "tth.lex"
 TTH_MATHS("Q");
 	YY_BREAK
 case 272:
 YY_RULE_SETUP
-#line 2418 "tth.lex"
+#line 2404 "tth.lex"
 TTH_MATHS("L");
 	YY_BREAK
 case 273:
 YY_RULE_SETUP
-#line 2419 "tth.lex"
+#line 2405 "tth.lex"
 TTH_MATHS("X");
 	YY_BREAK
 case 274:
 YY_RULE_SETUP
-#line 2420 "tth.lex"
+#line 2406 "tth.lex"
 TTH_MATHS("P");
 	YY_BREAK
 case 275:
 YY_RULE_SETUP
-#line 2421 "tth.lex"
+#line 2407 "tth.lex"
 TTH_MATHS("S");
 	YY_BREAK
 case 276:
 YY_RULE_SETUP
-#line 2422 "tth.lex"
+#line 2408 "tth.lex"
 TTH_MATHS("U");
 	YY_BREAK
 case 277:
 YY_RULE_SETUP
-#line 2423 "tth.lex"
+#line 2409 "tth.lex"
 TTH_MATHS("F");
 	YY_BREAK
 case 278:
 YY_RULE_SETUP
-#line 2424 "tth.lex"
+#line 2410 "tth.lex"
 TTH_MATHS("Y");
 	YY_BREAK
 case 279:
 YY_RULE_SETUP
-#line 2425 "tth.lex"
+#line 2411 "tth.lex"
 TTH_MATHS("W");
 	YY_BREAK
 case 280:
 YY_RULE_SETUP
-#line 2427 "tth.lex"
+#line 2413 "tth.lex"
 TTH_MATHC("<i>l</i>");
 	YY_BREAK
 case 281:
 YY_RULE_SETUP
-#line 2428 "tth.lex"
+#line 2414 "tth.lex"
 TTH_MATHI(192);
 	YY_BREAK
 case 282:
 YY_RULE_SETUP
-#line 2429 "tth.lex"
+#line 2415 "tth.lex"
 TTH_MATHS("i"); 
 	YY_BREAK
 case 283:
 YY_RULE_SETUP
-#line 2430 "tth.lex"
+#line 2416 "tth.lex"
 TTH_MATHC("j"); 
 	YY_BREAK
 case 284:
 YY_RULE_SETUP
-#line 2431 "tth.lex"
+#line 2417 "tth.lex"
 TTH_MATHI(195);
 	YY_BREAK
 case 285:
-#line 2433 "tth.lex"
+#line 2419 "tth.lex"
 case 286:
 YY_RULE_SETUP
-#line 2433 "tth.lex"
+#line 2419 "tth.lex"
 TTH_MATHI(194);
 	YY_BREAK
 case 287:
-#line 2435 "tth.lex"
+#line 2421 "tth.lex"
 case 288:
 YY_RULE_SETUP
-#line 2435 "tth.lex"
+#line 2421 "tth.lex"
 TTH_MATHI(193);
 	YY_BREAK
 case 289:
 YY_RULE_SETUP
-#line 2436 "tth.lex"
+#line 2422 "tth.lex"
 TTH_MATHI(182);
 	YY_BREAK
 case 290:
 YY_RULE_SETUP
-#line 2437 "tth.lex"
+#line 2423 "tth.lex"
 TTH_MATHI(165);
 	YY_BREAK
 case 291:
 YY_RULE_SETUP
-#line 2438 "tth.lex"
+#line 2424 "tth.lex"
 TTH_MATHI(208);
 	YY_BREAK
 case 292:
 YY_RULE_SETUP
-#line 2439 "tth.lex"
+#line 2425 "tth.lex"
 TTH_MATHI(162);
 	YY_BREAK
 case 293:
 YY_RULE_SETUP
-#line 2440 "tth.lex"
+#line 2426 "tth.lex"
 TTH_MATHI(162);
 	YY_BREAK
 case 294:
 YY_RULE_SETUP
-#line 2441 "tth.lex"
+#line 2427 "tth.lex"
 TTH_MATHI(198);
 	YY_BREAK
 case 295:
 YY_RULE_SETUP
-#line 2442 "tth.lex"
+#line 2428 "tth.lex"
 TTH_MATHI(209);
 	YY_BREAK
 case 296:
 YY_RULE_SETUP
-#line 2443 "tth.lex"
+#line 2429 "tth.lex"
 TTH_MATHI(214);
 	YY_BREAK
 case 297:
-#line 2445 "tth.lex"
+#line 2431 "tth.lex"
 case 298:
 YY_RULE_SETUP
-#line 2445 "tth.lex"
+#line 2431 "tth.lex"
 TTH_MATHS("|");
 	YY_BREAK
 case 299:
-#line 2447 "tth.lex"
+#line 2433 "tth.lex"
 case 300:
-#line 2448 "tth.lex"
+#line 2434 "tth.lex"
 case 301:
 YY_RULE_SETUP
-#line 2448 "tth.lex"
+#line 2434 "tth.lex"
 TTH_MATHS("||");
 	YY_BREAK
 case 302:
 YY_RULE_SETUP
-#line 2449 "tth.lex"
+#line 2435 "tth.lex"
 TTH_MATHC("[");
 	YY_BREAK
 case 303:
 YY_RULE_SETUP
-#line 2450 "tth.lex"
+#line 2436 "tth.lex"
 TTH_MATHC("]");
 	YY_BREAK
 case 304:
 YY_RULE_SETUP
-#line 2451 "tth.lex"
+#line 2437 "tth.lex"
 TTH_MATHC("{");
 	YY_BREAK
 case 305:
 YY_RULE_SETUP
-#line 2452 "tth.lex"
+#line 2438 "tth.lex"
 TTH_MATHC("}");
 	YY_BREAK
 case 306:
 YY_RULE_SETUP
-#line 2453 "tth.lex"
+#line 2439 "tth.lex"
 TTH_MATHI(249);
 	YY_BREAK
 case 307:
 YY_RULE_SETUP
-#line 2454 "tth.lex"
+#line 2440 "tth.lex"
 TTH_MATHI(251);
 	YY_BREAK
 case 308:
 YY_RULE_SETUP
-#line 2455 "tth.lex"
+#line 2441 "tth.lex"
 TTH_MATHI(233);
 	YY_BREAK
 case 309:
 YY_RULE_SETUP
-#line 2456 "tth.lex"
+#line 2442 "tth.lex"
 TTH_MATHI(235);
 	YY_BREAK
 case 310:
 YY_RULE_SETUP
-#line 2457 "tth.lex"
+#line 2443 "tth.lex"
 TTH_MATHI(225);
 	YY_BREAK
 case 311:
 YY_RULE_SETUP
-#line 2458 "tth.lex"
+#line 2444 "tth.lex"
 TTH_MATHI(241);
 	YY_BREAK
 case 312:
-#line 2460 "tth.lex"
+#line 2446 "tth.lex"
 case 313:
-#line 2461 "tth.lex"
+#line 2447 "tth.lex"
 case 314:
 YY_RULE_SETUP
-#line 2461 "tth.lex"
+#line 2447 "tth.lex"
 TTH_MATHC("\\"); 
 	YY_BREAK
 case 315:
 YY_RULE_SETUP
-#line 2462 "tth.lex"
+#line 2448 "tth.lex"
 TTH_MATHS("\"");
 	YY_BREAK
 case 316:
 YY_RULE_SETUP
-#line 2463 "tth.lex"
+#line 2449 "tth.lex"
 TTH_MATHS("$");
 	YY_BREAK
 case 317:
 YY_RULE_SETUP
-#line 2464 "tth.lex"
+#line 2450 "tth.lex"
 TTH_MATHI(216);
 	YY_BREAK
 case 318:
 YY_RULE_SETUP
-#line 2465 "tth.lex"
+#line 2451 "tth.lex"
 TTH_MATHI(167);
 	YY_BREAK
 case 319:
 YY_RULE_SETUP
-#line 2466 "tth.lex"
+#line 2452 "tth.lex"
 TTH_MATHI(168);
 	YY_BREAK
 case 320:
 YY_RULE_SETUP
-#line 2467 "tth.lex"
+#line 2453 "tth.lex"
 TTH_MATHI(169);
 	YY_BREAK
 case 321:
 YY_RULE_SETUP
-#line 2468 "tth.lex"
+#line 2454 "tth.lex"
 TTH_MATHI(170);
 	YY_BREAK
 case 322:
 YY_RULE_SETUP
-#line 2470 "tth.lex"
+#line 2456 "tth.lex"
 TTH_MATHS("-");
 	YY_BREAK
 /*Risky. <equation>\+      TTH_MATHS("+"); */
 case 323:
 YY_RULE_SETUP
-#line 2472 "tth.lex"
+#line 2458 "tth.lex"
 TTH_MATHC("T"); 
 	YY_BREAK
 case 324:
-#line 2474 "tth.lex"
+#line 2460 "tth.lex"
 case 325:
 YY_RULE_SETUP
-#line 2474 "tth.lex"
+#line 2460 "tth.lex"
 TTH_MATHS("^");
 	YY_BREAK
 case 326:
 YY_RULE_SETUP
-#line 2475 "tth.lex"
+#line 2461 "tth.lex"
 TTH_MATHI(176);
 	YY_BREAK
 case 327:
 YY_RULE_SETUP
-#line 2476 "tth.lex"
+#line 2462 "tth.lex"
 TTH_MATHC("&#126;"); 
 	YY_BREAK
 case 328:
 YY_RULE_SETUP
-#line 2477 "tth.lex"
+#line 2463 "tth.lex"
 TTH_MATHS(" ~ ");
 	YY_BREAK
 case 329:
-#line 2479 "tth.lex"
+#line 2465 "tth.lex"
 case 330:
 YY_RULE_SETUP
-#line 2479 "tth.lex"
+#line 2465 "tth.lex"
 TTH_MATHC(" mod ");
 	YY_BREAK
 case 331:
 YY_RULE_SETUP
-#line 2480 "tth.lex"
+#line 2466 "tth.lex"
 TTH_MATHC(" &lt; ");
 	YY_BREAK
 case 332:
 YY_RULE_SETUP
-#line 2481 "tth.lex"
+#line 2467 "tth.lex"
 TTH_MATHC(" &gt; ");
 	YY_BREAK
 case 333:
-#line 2483 "tth.lex"
+#line 2469 "tth.lex"
 case 334:
 YY_RULE_SETUP
-#line 2483 "tth.lex"
+#line 2469 "tth.lex"
 TTH_MATHC(" &lt;&lt; ");
 	YY_BREAK
 case 335:
-#line 2485 "tth.lex"
+#line 2471 "tth.lex"
 case 336:
 YY_RULE_SETUP
-#line 2485 "tth.lex"
+#line 2471 "tth.lex"
 TTH_MATHC(" &gt;&gt; ");
 	YY_BREAK
 case 337:
 YY_RULE_SETUP
-#line 2486 "tth.lex"
+#line 2472 "tth.lex"
 TTH_MATHS("*");
 	YY_BREAK
 case 338:
 YY_RULE_SETUP
-#line 2487 "tth.lex"
+#line 2473 "tth.lex"
 TTH_MATHS("*");
 	YY_BREAK
 case 339:
 YY_RULE_SETUP
-#line 2488 "tth.lex"
+#line 2474 "tth.lex"
 TTH_MATHI(224);
 	YY_BREAK
 case 340:
 YY_RULE_SETUP
-#line 2489 "tth.lex"
+#line 2475 "tth.lex"
 TTH_MATHI(183);
 	YY_BREAK
 case 341:
 YY_RULE_SETUP
-#line 2490 "tth.lex"
+#line 2476 "tth.lex"
 TTH_MATHC("&#183;"); 
 	YY_BREAK
 /*<equation>\\cdot	TTH_MATHI(215);*/
 case 342:
 YY_RULE_SETUP
-#line 2492 "tth.lex"
+#line 2478 "tth.lex"
 TTH_MATHI(200);
 	YY_BREAK
 case 343:
 YY_RULE_SETUP
-#line 2493 "tth.lex"
+#line 2479 "tth.lex"
 TTH_MATHI(199);
 	YY_BREAK
 case 344:
 YY_RULE_SETUP
-#line 2494 "tth.lex"
+#line 2480 "tth.lex"
 TTH_MATHI(177);
 	YY_BREAK
 case 345:
 YY_RULE_SETUP
-#line 2495 "tth.lex"
+#line 2481 "tth.lex"
 TTH_MATHS("-&#177;");
 	YY_BREAK
 case 346:
-#line 2497 "tth.lex"
+#line 2483 "tth.lex"
 case 347:
 YY_RULE_SETUP
-#line 2497 "tth.lex"
+#line 2483 "tth.lex"
 TTH_MATHI(218);
 	YY_BREAK
 case 348:
-#line 2499 "tth.lex"
+#line 2485 "tth.lex"
 case 349:
 YY_RULE_SETUP
-#line 2499 "tth.lex"
+#line 2485 "tth.lex"
 TTH_MATHI(217);
 	YY_BREAK
 case 350:
 YY_RULE_SETUP
-#line 2500 "tth.lex"
+#line 2486 "tth.lex"
 TTH_MATHI(197);
 	YY_BREAK
 case 351:
 YY_RULE_SETUP
-#line 2501 "tth.lex"
+#line 2487 "tth.lex"
 TTH_MATHI(196);
 	YY_BREAK
 case 352:
 YY_RULE_SETUP
-#line 2502 "tth.lex"
+#line 2488 "tth.lex"
 TTH_MATHI(198);
 	YY_BREAK
 case 353:
 /* rule 353 can match eol */
 YY_RULE_SETUP
-#line 2504 "tth.lex"
+#line 2490 "tth.lex"
 TTH_INC_MULTI;/* Don't mess up if it is in wrong place*/
 	YY_BREAK
 case 354:
 YY_RULE_SETUP
-#line 2505 "tth.lex"
+#line 2491 "tth.lex"
 {
   if(eqclose <= tth_flev-1 && displaystyle){
     /*If we end with a CELL3, cut it off. */
@@ -18310,7 +18297,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 355:
 YY_RULE_SETUP
-#line 2519 "tth.lex"
+#line 2505 "tth.lex"
 {
  if(eqclose > tth_flev-1 || !displaystyle ){
    TTH_MATHI(242); /* TTH_OUTPUT(" "); perhaps not */
@@ -18325,10 +18312,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 356:
-#line 2532 "tth.lex"
+#line 2518 "tth.lex"
 case 357:
 YY_RULE_SETUP
-#line 2532 "tth.lex"
+#line 2518 "tth.lex"
 {
   if(eqclose > tth_flev-1){
     TTH_MATHC("(");TTH_MATHI(242);TTH_MATHC(")");
@@ -18340,504 +18327,504 @@ YY_RULE_SETUP
 	YY_BREAK
 case 358:
 YY_RULE_SETUP
-#line 2541 "tth.lex"
+#line 2527 "tth.lex"
 TTH_LIMITOP(199);
 	YY_BREAK
 case 359:
 YY_RULE_SETUP
-#line 2542 "tth.lex"
+#line 2528 "tth.lex"
 TTH_LIMITOP(200);
 	YY_BREAK
 case 360:
 YY_RULE_SETUP
-#line 2543 "tth.lex"
+#line 2529 "tth.lex"
 TTH_LIMITOP(218);
 	YY_BREAK
 case 361:
 YY_RULE_SETUP
-#line 2544 "tth.lex"
+#line 2530 "tth.lex"
 TTH_LIMITOP(217);
 	YY_BREAK
 case 362:
 YY_RULE_SETUP
-#line 2545 "tth.lex"
+#line 2531 "tth.lex"
 TTH_LIMITOP(196);
 	YY_BREAK
 case 363:
 YY_RULE_SETUP
-#line 2546 "tth.lex"
+#line 2532 "tth.lex"
 TTH_LIMITOP(197);
 	YY_BREAK
 case 364:
 YY_RULE_SETUP
-#line 2547 "tth.lex"
+#line 2533 "tth.lex"
 TTH_LIMITOP(229);
 	YY_BREAK
 case 365:
 YY_RULE_SETUP
-#line 2548 "tth.lex"
+#line 2534 "tth.lex"
 TTH_LIMITOP(213);
 	YY_BREAK
 case 366:
 YY_RULE_SETUP
-#line 2549 "tth.lex"
+#line 2535 "tth.lex"
 TTH_LIMITOP(242);
 	YY_BREAK
 case 367:
 YY_RULE_SETUP
-#line 2550 "tth.lex"
+#line 2536 "tth.lex"
 /* Drop a limits command if not combined */
 	YY_BREAK
 case 368:
 YY_RULE_SETUP
-#line 2552 "tth.lex"
+#line 2538 "tth.lex"
 TTH_MATHI(199);
 	YY_BREAK
 case 369:
 YY_RULE_SETUP
-#line 2553 "tth.lex"
+#line 2539 "tth.lex"
 TTH_MATHI(200);
 	YY_BREAK
 case 370:
 YY_RULE_SETUP
-#line 2554 "tth.lex"
+#line 2540 "tth.lex"
 TTH_MATHI(218);
 	YY_BREAK
 case 371:
 YY_RULE_SETUP
-#line 2555 "tth.lex"
+#line 2541 "tth.lex"
 TTH_MATHI(217);
 	YY_BREAK
 case 372:
 YY_RULE_SETUP
-#line 2556 "tth.lex"
+#line 2542 "tth.lex"
 TTH_MATHI(196);
 	YY_BREAK
 case 373:
 YY_RULE_SETUP
-#line 2557 "tth.lex"
+#line 2543 "tth.lex"
 TTH_MATHI(197);
 	YY_BREAK
 case 374:
 YY_RULE_SETUP
-#line 2558 "tth.lex"
+#line 2544 "tth.lex"
 TTH_MATHI(229);
 	YY_BREAK
 case 375:
 YY_RULE_SETUP
-#line 2559 "tth.lex"
+#line 2545 "tth.lex"
 TTH_MATHI(213);
 	YY_BREAK
 case 376:
 YY_RULE_SETUP
-#line 2561 "tth.lex"
+#line 2547 "tth.lex"
 TTH_MATHI(184);
 	YY_BREAK
 case 377:
 YY_RULE_SETUP
-#line 2562 "tth.lex"
+#line 2548 "tth.lex"
 TTH_MATHC("&times;"); 
 	YY_BREAK
 /*<equation>\\times	TTH_MATHI(180);*/
 case 378:
 YY_RULE_SETUP
-#line 2564 "tth.lex"
+#line 2550 "tth.lex"
 TTH_MATHC(" &lt;~"); 
 	YY_BREAK
 case 379:
 YY_RULE_SETUP
-#line 2565 "tth.lex"
+#line 2551 "tth.lex"
 TTH_MATHC(" &gt;~"); 
 	YY_BREAK
 case 380:
 YY_RULE_SETUP
-#line 2567 "tth.lex"
+#line 2553 "tth.lex"
 TTH_MATHC(" ");TTH_MATHC("|");TTH_MATHC(" ");
 	YY_BREAK
 case 381:
 YY_RULE_SETUP
-#line 2568 "tth.lex"
+#line 2554 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(163);TTH_MATHC(" ");
 	YY_BREAK
 case 382:
 YY_RULE_SETUP
-#line 2569 "tth.lex"
+#line 2555 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(163);TTH_MATHC(" ");
 	YY_BREAK
 case 383:
 YY_RULE_SETUP
-#line 2570 "tth.lex"
+#line 2556 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(179);TTH_MATHC(" ");
 	YY_BREAK
 case 384:
 YY_RULE_SETUP
-#line 2571 "tth.lex"
+#line 2557 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(179);TTH_MATHC(" ");
 	YY_BREAK
 case 385:
 YY_RULE_SETUP
-#line 2572 "tth.lex"
+#line 2558 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(186);TTH_MATHC(" ");
 	YY_BREAK
 case 386:
 YY_RULE_SETUP
-#line 2573 "tth.lex"
+#line 2559 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(187);TTH_MATHC(" ");
 	YY_BREAK
 case 387:
-#line 2575 "tth.lex"
+#line 2561 "tth.lex"
 case 388:
 YY_RULE_SETUP
-#line 2575 "tth.lex"
+#line 2561 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(185);TTH_MATHC(" ");
 	YY_BREAK
 case 389:
 YY_RULE_SETUP
-#line 2576 "tth.lex"
+#line 2562 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(185);TTH_MATHC(" ");
 	YY_BREAK
 case 390:
 YY_RULE_SETUP
-#line 2577 "tth.lex"
+#line 2563 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(203);TTH_MATHC(" ");
 	YY_BREAK
 case 391:
 YY_RULE_SETUP
-#line 2578 "tth.lex"
+#line 2564 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(204);TTH_MATHC(" ");
 	YY_BREAK
 case 392:
 YY_RULE_SETUP
-#line 2579 "tth.lex"
+#line 2565 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(205);TTH_MATHC(" ");
 	YY_BREAK
 case 393:
 YY_RULE_SETUP
-#line 2580 "tth.lex"
+#line 2566 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(201);TTH_MATHC(" ");
 	YY_BREAK
 case 394:
 YY_RULE_SETUP
-#line 2581 "tth.lex"
+#line 2567 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(202);TTH_MATHC(" ");
 	YY_BREAK
 case 395:
 YY_RULE_SETUP
-#line 2582 "tth.lex"
+#line 2568 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(206);TTH_MATHC(" ");
 	YY_BREAK
 case 396:
-#line 2584 "tth.lex"
+#line 2570 "tth.lex"
 case 397:
 YY_RULE_SETUP
-#line 2584 "tth.lex"
+#line 2570 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(207);TTH_MATHC(" ");
 	YY_BREAK
 case 398:
-#line 2586 "tth.lex"
+#line 2572 "tth.lex"
 case 399:
 YY_RULE_SETUP
-#line 2586 "tth.lex"
+#line 2572 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(39);TTH_MATHC(" ");
 	YY_BREAK
 case 400:
-#line 2588 "tth.lex"
+#line 2574 "tth.lex"
 case 401:
 YY_RULE_SETUP
-#line 2588 "tth.lex"
+#line 2574 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(64);TTH_MATHC(" ");
 	YY_BREAK
 case 402:
 YY_RULE_SETUP
-#line 2589 "tth.lex"
+#line 2575 "tth.lex"
 TTH_MATHC(" ");TTH_MATHI(181);TTH_MATHC(" ");
 	YY_BREAK
 case 403:
-#line 2591 "tth.lex"
+#line 2577 "tth.lex"
 case 404:
 YY_RULE_SETUP
-#line 2591 "tth.lex"
+#line 2577 "tth.lex"
 TTH_MATHI(172);
 	YY_BREAK
 case 405:
 YY_RULE_SETUP
-#line 2592 "tth.lex"
+#line 2578 "tth.lex"
 TTH_MATHI(172);
 	YY_BREAK
 /* A slight kludge */
 case 406:
-#line 2595 "tth.lex"
+#line 2581 "tth.lex"
 case 407:
-#line 2596 "tth.lex"
+#line 2582 "tth.lex"
 case 408:
-#line 2597 "tth.lex"
+#line 2583 "tth.lex"
 case 409:
 YY_RULE_SETUP
-#line 2597 "tth.lex"
+#line 2583 "tth.lex"
 TTH_MATHI(174);
 	YY_BREAK
 case 410:
 YY_RULE_SETUP
-#line 2598 "tth.lex"
+#line 2584 "tth.lex"
 TTH_MATHI(174);
 	YY_BREAK
 case 411:
 YY_RULE_SETUP
-#line 2599 "tth.lex"
+#line 2585 "tth.lex"
 TTH_MATHI(173);
 	YY_BREAK
 case 412:
 YY_RULE_SETUP
-#line 2600 "tth.lex"
+#line 2586 "tth.lex"
 TTH_MATHI(175);
 	YY_BREAK
 case 413:
 YY_RULE_SETUP
-#line 2601 "tth.lex"
+#line 2587 "tth.lex"
 TTH_MATHC(yytext);
 	YY_BREAK
 case 414:
 YY_RULE_SETUP
-#line 2602 "tth.lex"
+#line 2588 "tth.lex"
 TTH_MATHC(yytext);
 	YY_BREAK
 case 415:
-#line 2604 "tth.lex"
+#line 2590 "tth.lex"
 case 416:
 YY_RULE_SETUP
-#line 2604 "tth.lex"
+#line 2590 "tth.lex"
 TTH_MATHI(171);
 	YY_BREAK
 case 417:
 YY_RULE_SETUP
-#line 2605 "tth.lex"
+#line 2591 "tth.lex"
 TTH_MATHI(220);
 	YY_BREAK
 case 418:
 YY_RULE_SETUP
-#line 2606 "tth.lex"
+#line 2592 "tth.lex"
 TTH_MATHI(220);
 	YY_BREAK
 case 419:
 YY_RULE_SETUP
-#line 2607 "tth.lex"
+#line 2593 "tth.lex"
 TTH_MATHI(222);
 	YY_BREAK
 case 420:
 YY_RULE_SETUP
-#line 2608 "tth.lex"
+#line 2594 "tth.lex"
 TTH_MATHI(222);
 	YY_BREAK
 case 421:
 YY_RULE_SETUP
-#line 2609 "tth.lex"
+#line 2595 "tth.lex"
 TTH_MATHC(yytext);
 	YY_BREAK
 case 422:
-#line 2611 "tth.lex"
+#line 2597 "tth.lex"
 /* moved before if code <equation>\\iff TTH_MATHI(219); */
 case 423:
 YY_RULE_SETUP
-#line 2612 "tth.lex"
+#line 2598 "tth.lex"
 TTH_MATHI(219);
 	YY_BREAK
 case 424:
 YY_RULE_SETUP
-#line 2613 "tth.lex"
+#line 2599 "tth.lex"
 TTH_MATHI(221);
 	YY_BREAK
 case 425:
 YY_RULE_SETUP
-#line 2614 "tth.lex"
+#line 2600 "tth.lex"
 TTH_MATHI(223);
 	YY_BREAK
 /* <equation>\\dots{SP}*	TTH_MATHI(188); Not in math mode */
 case 426:
 YY_RULE_SETUP
-#line 2616 "tth.lex"
+#line 2602 "tth.lex"
 TTH_MATHI(188);
 	YY_BREAK
 case 427:
 YY_RULE_SETUP
-#line 2617 "tth.lex"
+#line 2603 "tth.lex"
 TTH_MATHI(188);
 	YY_BREAK
 case 428:
 YY_RULE_SETUP
-#line 2618 "tth.lex"
+#line 2604 "tth.lex"
 TTH_MATHI(188);
 	YY_BREAK
 case 429:
 YY_RULE_SETUP
-#line 2619 "tth.lex"
+#line 2605 "tth.lex"
 TTH_MATHI(188);
 	YY_BREAK
 case 430:
 YY_RULE_SETUP
-#line 2620 "tth.lex"
+#line 2606 "tth.lex"
 TTH_MATHI(188);
 	YY_BREAK
 case 431:
 YY_RULE_SETUP
-#line 2621 "tth.lex"
+#line 2607 "tth.lex"
 TTH_OUTPUT("<sup><big>&#183;</big></sup>&#183;<sub><big>&#183;</big></sub>");
 	YY_BREAK
 case 432:
 YY_RULE_SETUP
-#line 2622 "tth.lex"
+#line 2608 "tth.lex"
 TTH_OUTPUT(":");
 	YY_BREAK
 case 433:
 YY_RULE_SETUP
-#line 2623 "tth.lex"
+#line 2609 "tth.lex"
 TTH_MATHC("@");
 	YY_BREAK
 case 434:
-#line 2625 "tth.lex"
+#line 2611 "tth.lex"
 case 435:
 YY_RULE_SETUP
-#line 2625 "tth.lex"
+#line 2611 "tth.lex"
 TTH_OUTPUT(TTH_DAG);
 	YY_BREAK
 case 436:
-#line 2627 "tth.lex"
+#line 2613 "tth.lex"
 case 437:
 YY_RULE_SETUP
-#line 2627 "tth.lex"
+#line 2613 "tth.lex"
 TTH_OUTPUT(TTH_DDAG);
 	YY_BREAK
 case 438:
 YY_RULE_SETUP
-#line 2629 "tth.lex"
+#line 2615 "tth.lex"
 TTH_MATHC("arccos");  
 	YY_BREAK
 case 439:
 YY_RULE_SETUP
-#line 2630 "tth.lex"
+#line 2616 "tth.lex"
 TTH_MATHC("arcsin");  
 	YY_BREAK
 case 440:
 YY_RULE_SETUP
-#line 2631 "tth.lex"
+#line 2617 "tth.lex"
 TTH_MATHC("arctan");  
 	YY_BREAK
 case 441:
 YY_RULE_SETUP
-#line 2632 "tth.lex"
+#line 2618 "tth.lex"
 TTH_MATHC("arg");  
 	YY_BREAK
 case 442:
 YY_RULE_SETUP
-#line 2633 "tth.lex"
+#line 2619 "tth.lex"
 TTH_MATHC("cos");  
 	YY_BREAK
 case 443:
 YY_RULE_SETUP
-#line 2634 "tth.lex"
+#line 2620 "tth.lex"
 TTH_MATHC("cosh");  
 	YY_BREAK
 case 444:
 YY_RULE_SETUP
-#line 2635 "tth.lex"
+#line 2621 "tth.lex"
 TTH_MATHC("cot");  
 	YY_BREAK
 case 445:
 YY_RULE_SETUP
-#line 2636 "tth.lex"
+#line 2622 "tth.lex"
 TTH_MATHC("coth");  
 	YY_BREAK
 case 446:
 YY_RULE_SETUP
-#line 2637 "tth.lex"
+#line 2623 "tth.lex"
 TTH_MATHC("csc");  
 	YY_BREAK
 /* <equation>\\deg{SP}*        TTH_MATHC("&deg;");  Incorrect TeX */
 case 447:
 YY_RULE_SETUP
-#line 2639 "tth.lex"
+#line 2625 "tth.lex"
 TTH_MATHC("deg");
 	YY_BREAK
 case 448:
 YY_RULE_SETUP
-#line 2640 "tth.lex"
+#line 2626 "tth.lex"
 TTH_MATHC("dim");  
 	YY_BREAK
 case 449:
 YY_RULE_SETUP
-#line 2641 "tth.lex"
+#line 2627 "tth.lex"
 TTH_MATHC("exp");  
 	YY_BREAK
 case 450:
 YY_RULE_SETUP
-#line 2642 "tth.lex"
+#line 2628 "tth.lex"
 TTH_MATHC("hom");  
 	YY_BREAK
 case 451:
 YY_RULE_SETUP
-#line 2643 "tth.lex"
+#line 2629 "tth.lex"
 TTH_MATHC("ker");  
 	YY_BREAK
 case 452:
 YY_RULE_SETUP
-#line 2644 "tth.lex"
+#line 2630 "tth.lex"
 TTH_MATHC("lg");  
 	YY_BREAK
 case 453:
 YY_RULE_SETUP
-#line 2645 "tth.lex"
+#line 2631 "tth.lex"
 TTH_MATHC("ln");  
 	YY_BREAK
 case 454:
 YY_RULE_SETUP
-#line 2646 "tth.lex"
+#line 2632 "tth.lex"
 TTH_MATHC("log");  
 	YY_BREAK
 case 455:
 YY_RULE_SETUP
-#line 2647 "tth.lex"
+#line 2633 "tth.lex"
 TTH_MATHC("sec");  
 	YY_BREAK
 case 456:
 YY_RULE_SETUP
-#line 2648 "tth.lex"
+#line 2634 "tth.lex"
 TTH_MATHC("sin");  
 	YY_BREAK
 case 457:
 YY_RULE_SETUP
-#line 2649 "tth.lex"
+#line 2635 "tth.lex"
 TTH_MATHC("sinh");  
 	YY_BREAK
 case 458:
 YY_RULE_SETUP
-#line 2650 "tth.lex"
+#line 2636 "tth.lex"
 TTH_MATHC("tan");   
 	YY_BREAK
 case 459:
 YY_RULE_SETUP
-#line 2651 "tth.lex"
+#line 2637 "tth.lex"
 TTH_MATHC("tanh");  
 	YY_BREAK
 case 460:
-#line 2654 "tth.lex"
+#line 2640 "tth.lex"
 case 461:
-#line 2655 "tth.lex"
+#line 2641 "tth.lex"
 case 462:
-#line 2656 "tth.lex"
+#line 2642 "tth.lex"
 case 463:
-#line 2657 "tth.lex"
+#line 2643 "tth.lex"
 case 464:
-#line 2658 "tth.lex"
+#line 2644 "tth.lex"
 case 465:
-#line 2659 "tth.lex"
+#line 2645 "tth.lex"
 case 466:
-#line 2660 "tth.lex"
+#line 2646 "tth.lex"
 case 467:
-#line 2661 "tth.lex"
+#line 2647 "tth.lex"
 case 468:
-#line 2662 "tth.lex"
+#line 2648 "tth.lex"
 case 469:
 YY_RULE_SETUP
-#line 2662 "tth.lex"
+#line 2648 "tth.lex"
 {
   if(strstr(yytext,"nolimit")){js2=0;}else{js2=1;}
   *(yytext+1+strcspn(yytext+1," \\"))=0;
@@ -18853,11 +18840,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 470:
 /* rule 470 can match eol */
-#line 2675 "tth.lex"
+#line 2661 "tth.lex"
 case 471:
 /* rule 471 can match eol */
 YY_RULE_SETUP
-#line 2675 "tth.lex"
+#line 2661 "tth.lex"
 {
  if(eqclose > tth_flev-1 || !displaystyle ){
    unput('{');
@@ -18892,7 +18879,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 472:
 YY_RULE_SETUP
-#line 2706 "tth.lex"
+#line 2692 "tth.lex"
 { /* not done eqlimited section for mathop, overbrace */
     if(tth_debug&2)fprintf(stderr,"Mathop eqlimited:%s\n",eqstr);
     if(strlen(eqlimited)+strlen(eqstr)< TTH_DLEN) {
@@ -18913,45 +18900,45 @@ YY_RULE_SETUP
 /* end of symbols */
 case 473:
 YY_RULE_SETUP
-#line 2724 "tth.lex"
+#line 2710 "tth.lex"
 /* Nothing needs doing */
 	YY_BREAK
 case 474:
 YY_RULE_SETUP
-#line 2725 "tth.lex"
+#line 2711 "tth.lex"
 TTH_SWAP("\\buildrel\\rightarrow\\over ");
 	YY_BREAK
 case 475:
 YY_RULE_SETUP
-#line 2726 "tth.lex"
+#line 2712 "tth.lex"
 TTH_SWAP("\\buildrel\\leftarrow\\over ");
 	YY_BREAK
 /* Above accents expressed with braces. Removed {WSP} 11 Apr */
 case 476:
 YY_RULE_SETUP
-#line 2729 "tth.lex"
+#line 2715 "tth.lex"
 { /* single character bar; convert to \sar */
   *(yytext+1)='s';
   TTH_SCAN_STRING(yytext);
  }
 	YY_BREAK
 case 477:
-#line 2734 "tth.lex"
+#line 2720 "tth.lex"
 case 478:
-#line 2735 "tth.lex"
+#line 2721 "tth.lex"
 case 479:
-#line 2736 "tth.lex"
+#line 2722 "tth.lex"
 case 480:
-#line 2737 "tth.lex"
+#line 2723 "tth.lex"
 case 481:
-#line 2738 "tth.lex"
+#line 2724 "tth.lex"
 case 482:
-#line 2739 "tth.lex"
+#line 2725 "tth.lex"
 case 483:
-#line 2740 "tth.lex"
+#line 2726 "tth.lex"
 case 484:
 YY_RULE_SETUP
-#line 2740 "tth.lex"
+#line 2726 "tth.lex"
 {
   if(tth_debug&2) {
     fprintf(stderr,"Start Overaccent {, eqdepth=%d, eqclose=%d, tth_flev=%d, levdelim=%s.\n",eqdepth,eqclose,tth_flev,levdelim[eqclose]);
@@ -19042,17 +19029,17 @@ YY_RULE_SETUP
 /* Implementing sqrt as a command with optional argument.*/
 case 485:
 YY_RULE_SETUP
-#line 2828 "tth.lex"
+#line 2814 "tth.lex"
 TTH_SCAN_STRING("\\expandafter\\tthsqrtexp");
 	YY_BREAK
 case 486:
 YY_RULE_SETUP
-#line 2829 "tth.lex"
+#line 2815 "tth.lex"
 TTH_TEX_FN_OPT("\\tth_sqrt#tthdrop2",2,"");
 	YY_BREAK
 case 487:
 YY_RULE_SETUP
-#line 2830 "tth.lex"
+#line 2816 "tth.lex"
 {
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1)
     strcpy(scrstring,margs[jscratch]);
@@ -19131,7 +19118,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 488:
 YY_RULE_SETUP
-#line 2905 "tth.lex"
+#line 2891 "tth.lex"
 {
     TTH_CCPY(tth_root_index[tth_root_depth],eqstr);
     tth_root_len[tth_root_depth]=strlen(eqstr);
@@ -19141,32 +19128,32 @@ YY_RULE_SETUP
 	YY_BREAK
 case 489:
 YY_RULE_SETUP
-#line 2911 "tth.lex"
+#line 2897 "tth.lex"
 strcpy(levdelim[eqclose],"&#214;");
 	YY_BREAK
 /* Above accents etc without braces: embrace following token (and rescan). */
 case 490:
 /* rule 490 can match eol */
-#line 2916 "tth.lex"
+#line 2902 "tth.lex"
 case 491:
 /* rule 491 can match eol */
-#line 2917 "tth.lex"
+#line 2903 "tth.lex"
 case 492:
 /* rule 492 can match eol */
-#line 2918 "tth.lex"
+#line 2904 "tth.lex"
 case 493:
 /* rule 493 can match eol */
-#line 2919 "tth.lex"
+#line 2905 "tth.lex"
 case 494:
 /* rule 494 can match eol */
-#line 2920 "tth.lex"
+#line 2906 "tth.lex"
 case 495:
 /* rule 495 can match eol */
-#line 2921 "tth.lex"
+#line 2907 "tth.lex"
 case 496:
 /* rule 496 can match eol */
 YY_RULE_SETUP
-#line 2921 "tth.lex"
+#line 2907 "tth.lex"
 {  /* overline needs leading WSP */
   TTH_INC_MULTI; 
   strcpy(dupstore,yytext);
@@ -19179,7 +19166,7 @@ YY_RULE_SETUP
 case 497:
 /* rule 497 can match eol */
 YY_RULE_SETUP
-#line 2929 "tth.lex"
+#line 2915 "tth.lex"
 { /*This is default.*/
   TTH_INC_MULTI;
   if((tth_flev > 0 )){
@@ -19196,7 +19183,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 498:
 YY_RULE_SETUP
-#line 2942 "tth.lex"
+#line 2928 "tth.lex"
 { /* Fallback only */
   if((tth_flev > 0 ) && (eqaligncell)) {
     tth_enclose(TTH_EQ1,eqstr,TTH_EQ4,eqstore);
@@ -19208,7 +19195,7 @@ YY_RULE_SETUP
 case 499:
 /* rule 499 can match eol */
 YY_RULE_SETUP
-#line 2949 "tth.lex"
+#line 2935 "tth.lex"
 {
   TTH_INC_MULTI; 
   TTH_SCAN_STRING("\\left.\\tth_size2\\right");
@@ -19217,7 +19204,7 @@ YY_RULE_SETUP
 case 500:
 /* rule 500 can match eol */
 YY_RULE_SETUP
-#line 2953 "tth.lex"
+#line 2939 "tth.lex"
 {
   TTH_INC_MULTI; 
   TTH_SCAN_STRING("\\left.\\tth_size3\\right");
@@ -19225,41 +19212,41 @@ YY_RULE_SETUP
 	YY_BREAK
 case 501:
 YY_RULE_SETUP
-#line 2957 "tth.lex"
+#line 2943 "tth.lex"
 levhgt[eqclose]=2;
 	YY_BREAK
 case 502:
 YY_RULE_SETUP
-#line 2958 "tth.lex"
+#line 2944 "tth.lex"
 levhgt[eqclose]=3;
 	YY_BREAK
 case 503:
 /* rule 503 can match eol */
 YY_RULE_SETUP
-#line 2959 "tth.lex"
+#line 2945 "tth.lex"
 {
   TTH_INC_MULTI;yy_push_state(bigdel);strcpy(scratchstring,"{");}
 	YY_BREAK
 case 504:
 /* rule 504 can match eol */
 YY_RULE_SETUP
-#line 2961 "tth.lex"
+#line 2947 "tth.lex"
 {
   TTH_INC_MULTI;yy_push_state(bigdel);strcpy(scratchstring,"}");}
 	YY_BREAK
 case 505:
 YY_RULE_SETUP
-#line 2964 "tth.lex"
+#line 2950 "tth.lex"
 ;
 	YY_BREAK
 case 506:
 YY_RULE_SETUP
-#line 2965 "tth.lex"
+#line 2951 "tth.lex"
 ;
 	YY_BREAK
 case 507:
 YY_RULE_SETUP
-#line 2966 "tth.lex"
+#line 2952 "tth.lex"
 ;
 	YY_BREAK
 /* Textstyle html is so limited that it makes no sense to use it.
@@ -19278,24 +19265,24 @@ YY_RULE_SETUP
  */
 case 508:
 YY_RULE_SETUP
-#line 2981 "tth.lex"
+#line 2967 "tth.lex"
 
 	YY_BREAK
 case 509:
 YY_RULE_SETUP
-#line 2982 "tth.lex"
+#line 2968 "tth.lex"
 
 	YY_BREAK
 case 510:
 YY_RULE_SETUP
-#line 2983 "tth.lex"
+#line 2969 "tth.lex"
 
 	YY_BREAK
 /* Default equation actions. */
 /* Was single character. IE gave problems. */
 case 511:
 YY_RULE_SETUP
-#line 2987 "tth.lex"
+#line 2973 "tth.lex"
 {
     strcat(eqstr,tth_font_open[tth_push_depth]);
     strcat(eqstr,yytext);
@@ -19304,20 +19291,20 @@ YY_RULE_SETUP
 	YY_BREAK
 case 512:
 YY_RULE_SETUP
-#line 2993 "tth.lex"
+#line 2979 "tth.lex"
 TTH_MATHC(" ");
 	YY_BREAK
 case 513:
-#line 2995 "tth.lex"
+#line 2981 "tth.lex"
 case 514:
-#line 2996 "tth.lex"
+#line 2982 "tth.lex"
 case 515:
-#line 2997 "tth.lex"
+#line 2983 "tth.lex"
 case 516:
-#line 2998 "tth.lex"
+#line 2984 "tth.lex"
 case 517:
 YY_RULE_SETUP
-#line 2998 "tth.lex"
+#line 2984 "tth.lex"
 { 
   if(*(yytext) == '\\'){ chscratch=yytext+1;} else {chscratch=yytext;}
   if(*chscratch=='&')chscratch="&amp;";
@@ -19334,13 +19321,13 @@ YY_RULE_SETUP
 case 518:
 /* rule 518 can match eol */
 YY_RULE_SETUP
-#line 3010 "tth.lex"
+#line 2996 "tth.lex"
 TTH_INC_MULTI; TTH_SCAN_STRING(" = ");
 	YY_BREAK
 /**** tth pseudo-TeX ******/
 case 519:
 YY_RULE_SETUP
-#line 3015 "tth.lex"
+#line 3001 "tth.lex"
 {
   if(tth_debug&8) fprintf(stderr,"#tthbigsup, eqhgt=%d\n",eqhgt);
   strcat(eqstr,TTH_BR);
@@ -19362,7 +19349,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 520:
 YY_RULE_SETUP
-#line 3033 "tth.lex"
+#line 3019 "tth.lex"
 { /* Finish an eq group and attach to previous key */
   tth_prefix(eqstrs[eqdepth-1],eqstr,eqstore); /* prefix previous row.*/
   rmkey(eqstrs,&eqdepth);
@@ -19372,7 +19359,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 521:
 YY_RULE_SETUP
-#line 3039 "tth.lex"
+#line 3025 "tth.lex"
 {
   lefteq=1;
   colspan=3;
@@ -19382,19 +19369,19 @@ YY_RULE_SETUP
 case 522:
 /* rule 522 can match eol */
 YY_RULE_SETUP
-#line 3046 "tth.lex"
+#line 3032 "tth.lex"
 {
  TTH_INC_MULTI;
 } 
 	YY_BREAK
 case 523:
 YY_RULE_SETUP
-#line 3049 "tth.lex"
+#line 3035 "tth.lex"
 
 	YY_BREAK
 case 524:
 YY_RULE_SETUP
-#line 3050 "tth.lex"
+#line 3036 "tth.lex"
 { /* unenclosed subp. Embrace or expand it */
   *expchar=0;strcpy(exptex,yytext);yy_push_state(exptokarg);
   if(tth_debug&8)fprintf(stderr,"Expanding big subpscript\n");
@@ -19402,7 +19389,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 525:
 YY_RULE_SETUP
-#line 3054 "tth.lex"
+#line 3040 "tth.lex"
 {
   storetype=1;
   yy_push_state(dupgroup);
@@ -19411,7 +19398,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 526:
 YY_RULE_SETUP
-#line 3059 "tth.lex"
+#line 3045 "tth.lex"
 {
   storetype=2;
   yy_push_state(dupgroup);
@@ -19420,7 +19407,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 527:
 YY_RULE_SETUP
-#line 3064 "tth.lex"
+#line 3050 "tth.lex"
 {
   TTH_DO_MACRO
     else{
@@ -19430,7 +19417,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 528:
 YY_RULE_SETUP
-#line 3070 "tth.lex"
+#line 3056 "tth.lex"
 {
   if(tth_htmlstyle&4){
     TTH_OUTPUT("<span class=\"smaller\">");TTH_PRECLOSE("</span>");
@@ -19441,7 +19428,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 529:
 YY_RULE_SETUP
-#line 3077 "tth.lex"
+#line 3063 "tth.lex"
 { /* No more subp's */
   if(*yytext != '#') yyless(0);
   storetype=0;
@@ -19473,96 +19460,96 @@ YY_RULE_SETUP
 /* New big, left, right, delimiters section */
 case 530:
 YY_RULE_SETUP
-#line 3107 "tth.lex"
+#line 3093 "tth.lex"
 { 
   yy_pop_state();strcpy(levdelim[eqclose+1],"{");unput(*scratchstring);}
 	YY_BREAK
 case 531:
 YY_RULE_SETUP
-#line 3109 "tth.lex"
+#line 3095 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"}");unput(*scratchstring);}
 	YY_BREAK
 case 532:
 YY_RULE_SETUP
-#line 3111 "tth.lex"
+#line 3097 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"(");unput(*scratchstring);}
 	YY_BREAK
 case 533:
 YY_RULE_SETUP
-#line 3113 "tth.lex"
+#line 3099 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],")");unput(*scratchstring);}
 	YY_BREAK
 case 534:
 YY_RULE_SETUP
-#line 3115 "tth.lex"
+#line 3101 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"[");unput(*scratchstring);}
 	YY_BREAK
 case 535:
 YY_RULE_SETUP
-#line 3117 "tth.lex"
+#line 3103 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"]");unput(*scratchstring);}
 	YY_BREAK
 case 536:
 YY_RULE_SETUP
-#line 3119 "tth.lex"
+#line 3105 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"&#233;");unput(*scratchstring);}
 	YY_BREAK
 case 537:
 YY_RULE_SETUP
-#line 3121 "tth.lex"
+#line 3107 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"&#249;");unput(*scratchstring);}
 	YY_BREAK
 case 538:
 YY_RULE_SETUP
-#line 3123 "tth.lex"
+#line 3109 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"&#235;");unput(*scratchstring);}
 	YY_BREAK
 case 539:
 YY_RULE_SETUP
-#line 3125 "tth.lex"
+#line 3111 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"&#251;");unput(*scratchstring);}
 	YY_BREAK
 case 540:
 YY_RULE_SETUP
-#line 3127 "tth.lex"
+#line 3113 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"&#225;");unput(*scratchstring);}
 	YY_BREAK
 case 541:
 YY_RULE_SETUP
-#line 3129 "tth.lex"
+#line 3115 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"&#241;");unput(*scratchstring);}
 	YY_BREAK
 case 542:
 YY_RULE_SETUP
-#line 3131 "tth.lex"
+#line 3117 "tth.lex"
 {
   yy_pop_state();strcpy(levdelim[eqclose+1],"|");unput(*scratchstring);}
 	YY_BREAK
 case 543:
 YY_RULE_SETUP
-#line 3133 "tth.lex"
+#line 3119 "tth.lex"
 {
   yy_pop_state();*levdelim[eqclose+1]=*yytext;unput(*scratchstring);}
 	YY_BREAK
 case 544:
 YY_RULE_SETUP
-#line 3135 "tth.lex"
+#line 3121 "tth.lex"
 yy_pop_state();*levdelim[eqclose+1]=0;unput(*scratchstring);
 	YY_BREAK
 case 545:
 YY_RULE_SETUP
-#line 3136 "tth.lex"
+#line 3122 "tth.lex"
 { /* unknown bigdelimiter; make blank and then rescan. */
   yy_pop_state();yyless(0);
   TTH_SCAN_STRING(scratchstring);
@@ -19570,12 +19557,12 @@ YY_RULE_SETUP
 	YY_BREAK
 /* *************   LaTeX Math constructs.     ***********************/
 case 546:
-#line 3146 "tth.lex"
+#line 3132 "tth.lex"
 case 547:
-#line 3147 "tth.lex"
+#line 3133 "tth.lex"
 case 548:
 YY_RULE_SETUP
-#line 3147 "tth.lex"
+#line 3133 "tth.lex"
 {    /* Latex display equations */
   if(tth_debug&3)fprintf(stderr,"Latex display eqn %d\n",equatno);
   displaystyle=1;
@@ -19609,7 +19596,7 @@ YY_RULE_SETUP
 /* begin (inline) math moved after the close math */
 case 549:
 YY_RULE_SETUP
-#line 3177 "tth.lex"
+#line 3163 "tth.lex"
 { /* Assume this is NOT inside \math */
   if(strstr(yytext,"*") != NULL){
     eqalignlog=1; tth_multinum++; /* No row numbering. No end numbering */
@@ -19623,7 +19610,7 @@ YY_RULE_SETUP
 /* **********************   LateX Non Math  ********************************/
 case 550:
 YY_RULE_SETUP
-#line 3189 "tth.lex"
+#line 3175 "tth.lex"
 { /* Check for aux file. If present input. */
   tth_LaTeX=1;
   if(tth_splitfile)strcpy(filechar,"index.html"); /*sf*/
@@ -19670,7 +19657,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 551:
 YY_RULE_SETUP
-#line 3232 "tth.lex"
+#line 3218 "tth.lex"
 {/* Open index tid file for writing and start to do so. */
   if(strlen(tth_latex_file)){
     strcpy(scratchstring,tth_latex_file);strcat(scratchstring,".tid");
@@ -19691,7 +19678,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 552:
 YY_RULE_SETUP
-#line 3250 "tth.lex"
+#line 3236 "tth.lex"
 { /* Version to grab whole thing even special chars*/
   *dupstore=0;
   *argchar=0;
@@ -19704,7 +19691,7 @@ YY_RULE_SETUP
 case 553:
 /* rule 553 can match eol */
 YY_RULE_SETUP
-#line 3258 "tth.lex"
+#line 3244 "tth.lex"
 { /* \index action on group stored in dupstore. */
   yyless(0);
   yy_pop_state();
@@ -19779,7 +19766,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 554:
 YY_RULE_SETUP
-#line 3330 "tth.lex"
+#line 3316 "tth.lex"
 { /* Check for file. If present put title and open */
   if(tth_indexfile !=NULL){
     fprintf(stderr,"Closing index file and processing ...\n");
@@ -19819,7 +19806,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 555:
 YY_RULE_SETUP
-#line 3366 "tth.lex"
+#line 3352 "tth.lex"
 { /* Check for file. If present put title and open */
   TTH_CCPY(argchar,tth_latex_file);TTH_CCAT(argchar,".toc");
   if( (tth_inputfile=fopen(argchar,"r")) != NULL){
@@ -19835,7 +19822,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 556:
 YY_RULE_SETUP
-#line 3378 "tth.lex"
+#line 3364 "tth.lex"
 { /* Check for file. If present put title and open */
   TTH_CCPY(argchar,tth_latex_file);strcat(argchar,".lot");
   if( (tth_inputfile=fopen(argchar,"r")) != NULL){
@@ -19849,7 +19836,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 557:
 YY_RULE_SETUP
-#line 3388 "tth.lex"
+#line 3374 "tth.lex"
 { /* Check for file. If present put title and open */
   TTH_CCPY(argchar,tth_latex_file);strcat(argchar,".lof");
   if( (tth_inputfile=fopen(argchar,"r")) != NULL){
@@ -19864,7 +19851,7 @@ YY_RULE_SETUP
 case 558:
 /* rule 558 can match eol */
 YY_RULE_SETUP
-#line 3398 "tth.lex"
+#line 3384 "tth.lex"
 { /*Processing aux file*/
   TTH_INC_LINE
   if(strstr(yytext,"toc}{\\contentsline")==yytext+12){  /*sf*/
@@ -19885,7 +19872,7 @@ YY_RULE_SETUP
 case 559:
 /* rule 559 can match eol */
 YY_RULE_SETUP
-#line 3414 "tth.lex"
+#line 3400 "tth.lex"
 {
   horizmode=1;
   *scrstring=0;
@@ -19941,7 +19928,7 @@ YY_RULE_SETUP
 case 560:
 /* rule 560 can match eol */
 YY_RULE_SETUP
-#line 3465 "tth.lex"
+#line 3451 "tth.lex"
 {
   TTH_INC_MULTI;
   js2=strcspn(yytext,"{");
@@ -19980,6 +19967,7 @@ YY_RULE_SETUP
       /* New operator on the bibcite */
       strcat(dupstore2,"\\tthciteform ");
       strcat(dupstore2,scratchstring);
+    if(*(dupstore+ind+i+1))strcat(dupstore2,"\\tthciteib{}");
       strcat(dupstore2,"\\special{html:</a>}");
       if(!nargs[jarg]){ 
 	if(lbook)jscratch=chapno; else jscratch=sectno;
@@ -20008,12 +19996,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 561:
 YY_RULE_SETUP
-#line 3529 "tth.lex"
+#line 3516 "tth.lex"
 TTH_TEX_FN("\\tth_thebibliography#tthdrop1",1);
 	YY_BREAK
 case 562:
 YY_RULE_SETUP
-#line 3530 "tth.lex"
+#line 3517 "tth.lex"
 {
   if(lbook)  {TTH_SCAN_STRING("\\special{html:<h2>}\\bibname\\special{html:</h2>\n}\\begin{description}");}
   else {TTH_SCAN_STRING("\\special{html:<h2>}\\refname\\special{html:</h2>\n}\\begin{description}");}
@@ -20028,13 +20016,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 563:
 YY_RULE_SETUP
-#line 3542 "tth.lex"
+#line 3529 "tth.lex"
 TTH_TEX_FN_OPT("\\tthbibitem{#2}#tthdrop2",2,"");
 	YY_BREAK
 case 564:
 /* rule 564 can match eol */
 YY_RULE_SETUP
-#line 3543 "tth.lex"
+#line 3530 "tth.lex"
 {
   TTH_INC_MULTI;
   TTH_OUTPUT(closing);strcpy(closing,"</dd>\n"); /*27 Apr 2001 */
@@ -20070,7 +20058,7 @@ YY_RULE_SETUP
 case 565:
 /* rule 565 can match eol */
 YY_RULE_SETUP
-#line 3574 "tth.lex"
+#line 3561 "tth.lex"
 { /* Input the bbl file. */
   TTH_CCPY(argchar,tth_latex_file);strcat(argchar,".bbl");
   if( (tth_inputfile=fopen(argchar,"r")) != NULL){
@@ -20114,7 +20102,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 566:
 YY_RULE_SETUP
-#line 3615 "tth.lex"
+#line 3602 "tth.lex"
 {
   chapno=0;sectno=0;appendix=1;
   if(lbook) strcpy(scratchstring,
@@ -20126,14 +20114,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 567:
 YY_RULE_SETUP
-#line 3623 "tth.lex"
+#line 3610 "tth.lex"
 {  
   fprintf(tth_fdout,"\n<h1>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h1>");
 }
 	YY_BREAK
 case 568:
 YY_RULE_SETUP
-#line 3626 "tth.lex"
+#line 3613 "tth.lex"
 {
   sprintf(scratchstring,"%s\\tthenclose{\\special{html:<br /><h1>}%s{ %s}   \\special{html:<br />}}{\\special{html:</h1><br />}} ",
 	  "\\stepcounter{part}",
@@ -20143,13 +20131,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 569:
 YY_RULE_SETUP
-#line 3632 "tth.lex"
+#line 3619 "tth.lex"
 {
   fprintf(tth_fdout,"\n<h1>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h1>");}
 	YY_BREAK
 case 570:
 YY_RULE_SETUP
-#line 3634 "tth.lex"
+#line 3621 "tth.lex"
 {
   figureno=0;tableno=0;
   sprintf(labelchar,"%d",chapno+1);
@@ -20163,12 +20151,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 571:
 YY_RULE_SETUP
-#line 3644 "tth.lex"
+#line 3631 "tth.lex"
 if(tth_splitfile)  strcpy(filechar,filenext); /*sf*/
 	YY_BREAK
 case 572:
 YY_RULE_SETUP
-#line 3645 "tth.lex"
+#line 3632 "tth.lex"
 {/*sf*/
   fprintf(tth_fdout,TTH_MIME_DIVIDE,filenext);/*sf*/
   fprintf(tth_fdout,TTH_DOCTYPE); /*sf*/
@@ -20183,17 +20171,17 @@ YY_RULE_SETUP
 	YY_BREAK
 case 573:
 YY_RULE_SETUP
-#line 3656 "tth.lex"
+#line 3643 "tth.lex"
 fprintf(tth_fdout,"%s",filenext); /*sf*/
 	YY_BREAK
 case 574:
 YY_RULE_SETUP
-#line 3657 "tth.lex"
+#line 3644 "tth.lex"
 fprintf(tth_fdout,"%s",filechar); /*sf*/
 	YY_BREAK
 case 575:
 YY_RULE_SETUP
-#line 3658 "tth.lex"
+#line 3645 "tth.lex"
 {
   if(appendix) {TTH_CCPY(argchar,"\\appendixname");}
   else TTH_CCPY(argchar,"\\chaptername");
@@ -20206,13 +20194,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 576:
 YY_RULE_SETUP
-#line 3667 "tth.lex"
+#line 3654 "tth.lex"
 {   
   fprintf(tth_fdout,"\n<h2>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h2>");}
 	YY_BREAK
 case 577:
 YY_RULE_SETUP
-#line 3669 "tth.lex"
+#line 3656 "tth.lex"
 {
   TTH_SCAN_STRING("\\tthsectcomplete");
   if(lbook) {
@@ -20230,7 +20218,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 578:
 YY_RULE_SETUP
-#line 3683 "tth.lex"
+#line 3670 "tth.lex"
 {
   if(secnumdepth > 0){
     /* the following needs the space at the end for tex compatibility */
@@ -20247,13 +20235,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 579:
 YY_RULE_SETUP
-#line 3696 "tth.lex"
+#line 3683 "tth.lex"
 {   
   fprintf(tth_fdout,"\n<h3>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h3>");}
 	YY_BREAK
 case 580:
 YY_RULE_SETUP
-#line 3698 "tth.lex"
+#line 3685 "tth.lex"
 {
   { 
     if(lbook) {
@@ -20276,13 +20264,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 581:
 YY_RULE_SETUP
-#line 3717 "tth.lex"
+#line 3704 "tth.lex"
 {   
   fprintf(tth_fdout,"\n<h4>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h4>");}
 	YY_BREAK
 case 582:
 YY_RULE_SETUP
-#line 3719 "tth.lex"
+#line 3706 "tth.lex"
 { 
   {
     if(lbook) {
@@ -20308,7 +20296,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 583:
 YY_RULE_SETUP
-#line 3741 "tth.lex"
+#line 3728 "tth.lex"
 {
   if(secnumdepth > 3){
     TTH_TEX_FN("\\par\\stepcounter{paragraph}{\\bf\\theparagraph\
@@ -20321,7 +20309,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 584:
 YY_RULE_SETUP
-#line 3750 "tth.lex"
+#line 3737 "tth.lex"
 {
   if(secnumdepth > 4){
     TTH_TEX_FN("\\stepcounter{subparagraph}{\\special{html:<br />}\
@@ -20336,7 +20324,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 585:
 YY_RULE_SETUP
-#line 3762 "tth.lex"
+#line 3749 "tth.lex"
 {
   if(tth_debug&256)fprintf(stderr,"Caption in environment:%s\n",environment);
   if(!strcmp(environment,"figure")){
@@ -20355,7 +20343,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 586:
 YY_RULE_SETUP
-#line 3777 "tth.lex"
+#line 3764 "tth.lex"
 {
   if(horizmode) horizmode=1;
   jscratch=indexkey("#1",margkeys,&margmax);
@@ -20401,7 +20389,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 587:
 YY_RULE_SETUP
-#line 3819 "tth.lex"
+#line 3806 "tth.lex"
 { /* Called only by \label latex builtin. */
   if(horizmode) horizmode=1;
   jscratch=indexkey("#1",margkeys,&margmax);
@@ -20435,10 +20423,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 588:
-#line 3851 "tth.lex"
+#line 3838 "tth.lex"
 case 589:
 YY_RULE_SETUP
-#line 3851 "tth.lex"
+#line 3838 "tth.lex"
 {
   if(horizmode) horizmode=1;
   jscratch=indexkey("#1",margkeys,&margmax);
@@ -20472,12 +20460,12 @@ YY_RULE_SETUP
 case 590:
 /* rule 590 can match eol */
 YY_RULE_SETUP
-#line 3881 "tth.lex"
+#line 3868 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 591:
 YY_RULE_SETUP
-#line 3882 "tth.lex"
+#line 3869 "tth.lex"
 {
   /* These are purely to silence warnings. They are non-functional*/
   PUSHEDINTS[0][0]=0;
@@ -20493,7 +20481,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 592:
 YY_RULE_SETUP
-#line 3894 "tth.lex"
+#line 3881 "tth.lex"
 {
   yy_pop_state();
   yyless(0);
@@ -20509,7 +20497,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 593:
 YY_RULE_SETUP
-#line 3907 "tth.lex"
+#line 3894 "tth.lex"
 {
   countstart=ncounters;
   if(tth_debug&512) fprintf(stderr,"Countstart= %d\n",countstart);
@@ -20518,7 +20506,7 @@ YY_RULE_SETUP
 case 594:
 /* rule 594 can match eol */
 YY_RULE_SETUP
-#line 3912 "tth.lex"
+#line 3899 "tth.lex"
 {
   TTH_INC_MULTI;
   if(indexkey("\\label",keys,&nkeys) == -1){ /* Only if not already done */
@@ -20551,68 +20539,70 @@ YY_RULE_SETUP
 case 595:
 /* rule 595 can match eol */
 YY_RULE_SETUP
-#line 3941 "tth.lex"
+#line 3928 "tth.lex"
 {
   TTH_INC_MULTI;
   if(strstr(yytext,"numbers")){TTH_SCAN_STRING("\\NAT@numberstrue ");}
   TTH_SCAN_STRING("\\newif\\ifNAT@numbers\
 \\def\\tthbibform#1#2#3#4{\\ifNAT@numbers[#1\\else[#3 #2\\fi}\
-\\def\\tthciteform#1#2#3#4{\\ifNAT@numbers[#1\\else#3, [#2\\fi}\
-\\def\\tthciteob{}\\def\\tthcitecb{]}\\input tthntbib.sty");
+\\def\\tthciteform#1#2#3#4{\\ifNAT@numbers#1\\else\\ #3, [#2\\fi}\
+\\def\\tthciteob{\\ifNAT@numbers[\\else\\fi}\
+\\def\\tthciteib{\\ifNAT@numbers\\else]\\fi}\\def\\tthcitecb{]}\
+\\input tthntbib.sty");
 }
 	YY_BREAK
 case 596:
 YY_RULE_SETUP
-#line 3949 "tth.lex"
+#line 3938 "tth.lex"
 yy_push_state(matchbrace);
 	YY_BREAK
 /* Font faces and styles etc.*/
 case 597:
-#line 3953 "tth.lex"
+#line 3942 "tth.lex"
 case 598:
 YY_RULE_SETUP
-#line 3953 "tth.lex"
+#line 3942 "tth.lex"
 TTH_SWAP("\\rm ");
 	YY_BREAK
 case 599:
 YY_RULE_SETUP
-#line 3954 "tth.lex"
+#line 3943 "tth.lex"
 TTH_SWAP("\\bf ");
 	YY_BREAK
 case 600:
 YY_RULE_SETUP
-#line 3955 "tth.lex"
+#line 3944 "tth.lex"
 TTH_SWAP("\\rm ");
 	YY_BREAK
 case 601:
 YY_RULE_SETUP
-#line 3956 "tth.lex"
+#line 3945 "tth.lex"
 TTH_SWAP("\\it ");
 	YY_BREAK
 case 602:
 YY_RULE_SETUP
-#line 3957 "tth.lex"
+#line 3946 "tth.lex"
 TTH_SWAP("\\it ");
 	YY_BREAK
 case 603:
 YY_RULE_SETUP
-#line 3958 "tth.lex"
+#line 3947 "tth.lex"
 TTH_SWAP("\\tt ");
 	YY_BREAK
 case 604:
 YY_RULE_SETUP
-#line 3959 "tth.lex"
+#line 3948 "tth.lex"
 TTH_SWAP("\\sffamily ");
 	YY_BREAK
 case 605:
 YY_RULE_SETUP
-#line 3960 "tth.lex"
+#line 3949 "tth.lex"
 TTH_SWAP("\\scshape ");
 	YY_BREAK
 /*   Now using the halign brace closure */
 case 606:
 YY_RULE_SETUP
-#line 3962 "tth.lex"
+#line 3951 "tth.lex"
 {
   TTH_OUTPUT(TTH_SMALLCAPS_FONT1);
   for(jscratch=0;jscratch<strlen(yytext);jscratch++) {
@@ -20623,29 +20613,29 @@ YY_RULE_SETUP
 	YY_BREAK
 case 607:
 YY_RULE_SETUP
-#line 3969 "tth.lex"
+#line 3958 "tth.lex"
 TTH_OUTPUT(yytext);horizmode=1; /* Trying to fix in equations */
 	YY_BREAK
 case 608:
 YY_RULE_SETUP
-#line 3972 "tth.lex"
+#line 3961 "tth.lex"
 TTH_OUTPUT(TTH_EM1);TTH_PRECLOSE(TTH_EM2);
 	YY_BREAK
 case 609:
-#line 3974 "tth.lex"
+#line 3963 "tth.lex"
 case 610:
 YY_RULE_SETUP
-#line 3974 "tth.lex"
+#line 3963 "tth.lex"
 TTH_SWAP("\\em ");
 	YY_BREAK
 case 611:
 YY_RULE_SETUP
-#line 3975 "tth.lex"
+#line 3964 "tth.lex"
 TTH_SCAN_STRING("{\\em ");
 	YY_BREAK
 case 612:
 YY_RULE_SETUP
-#line 3976 "tth.lex"
+#line 3965 "tth.lex"
 {
   if(horizmode) horizmode=1;
   fprintf(tth_fdout,"\n<pre>"); yy_push_state(verbatim);
@@ -20653,25 +20643,25 @@ YY_RULE_SETUP
 	YY_BREAK
 case 613:
 YY_RULE_SETUP
-#line 3980 "tth.lex"
+#line 3969 "tth.lex"
 {
   fprintf(tth_fdout,"\n<div style=\"text-align:center\">");  TTH_PUSH_CLOSING;  TTH_CCPY(closing,"</div>");}
 	YY_BREAK
 case 614:
 YY_RULE_SETUP
-#line 3982 "tth.lex"
+#line 3971 "tth.lex"
 {
   if(horizmode) horizmode=1;
   fprintf(tth_fdout,"\n<div align=\"right\">");TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"</div>");}
 	YY_BREAK
 case 615:
-#line 3987 "tth.lex"
+#line 3976 "tth.lex"
 case 616:
-#line 3988 "tth.lex"
+#line 3977 "tth.lex"
 case 617:
 YY_RULE_SETUP
-#line 3988 "tth.lex"
+#line 3977 "tth.lex"
 {
   if(horizmode) horizmode=1;
   fprintf(tth_fdout,"\n<blockquote><div>");
@@ -20679,7 +20669,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 618:
 YY_RULE_SETUP
-#line 3992 "tth.lex"
+#line 3981 "tth.lex"
 {
   if(horizmode) horizmode=1;
   TTH_SCAN_STRING("\\beginsection{\\abstractname}\\par");
@@ -20688,12 +20678,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 619:
 YY_RULE_SETUP
-#line 3997 "tth.lex"
+#line 3986 "tth.lex"
 TTH_SCAN_STRING("\\egroup\\par");
 	YY_BREAK
 case 620:
 YY_RULE_SETUP
-#line 3999 "tth.lex"
+#line 3988 "tth.lex"
 {
   horizmode=0;
   fprintf(tth_fdout,"\n<ul>");yy_push_state(Litemize);
@@ -20704,7 +20694,7 @@ YY_RULE_SETUP
 case 621:
 /* rule 621 can match eol */
 YY_RULE_SETUP
-#line 4005 "tth.lex"
+#line 3994 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_pop_state();
@@ -20717,7 +20707,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 622:
 YY_RULE_SETUP
-#line 4015 "tth.lex"
+#line 4004 "tth.lex"
 {
   horizmode=0;
   fprintf(tth_fdout,"\n<ol type=\"%c\">",
@@ -20731,7 +20721,7 @@ YY_RULE_SETUP
 case 623:
 /* rule 623 can match eol */
 YY_RULE_SETUP
-#line 4024 "tth.lex"
+#line 4013 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_pop_state();
@@ -20745,7 +20735,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 624:
 YY_RULE_SETUP
-#line 4034 "tth.lex"
+#line 4023 "tth.lex"
 {    /* list like description */
   horizmode=0;
   fprintf(tth_fdout,"\n<dl>\n");yy_push_state(Ldescription);
@@ -20759,7 +20749,7 @@ YY_RULE_SETUP
 /* Multiple column index. */
 case 625:
 YY_RULE_SETUP
-#line 4044 "tth.lex"
+#line 4033 "tth.lex"
 {
   if(tth_debug&3)fprintf(stderr,"Starting the index ");
   horizmode=0;
@@ -20775,7 +20765,7 @@ YY_RULE_SETUP
 case 626:
 /* rule 626 can match eol */
 YY_RULE_SETUP
-#line 4056 "tth.lex"
+#line 4045 "tth.lex"
 {
   /* fprintf(stderr,"indexspace\n"); */
   TTH_INC_MULTI;
@@ -20796,7 +20786,7 @@ YY_RULE_SETUP
 case 627:
 /* rule 627 can match eol */
 YY_RULE_SETUP
-#line 4073 "tth.lex"
+#line 4062 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_pop_state();
@@ -20808,7 +20798,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 628:
 YY_RULE_SETUP
-#line 4082 "tth.lex"
+#line 4071 "tth.lex"
 {
   /*  if(horizmode) horizmode=1; */
   horizmode=0;
@@ -20819,11 +20809,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 629:
 /* rule 629 can match eol */
-#line 4090 "tth.lex"
+#line 4079 "tth.lex"
 case 630:
 /* rule 630 can match eol */
 YY_RULE_SETUP
-#line 4090 "tth.lex"
+#line 4079 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_pop_state();
@@ -20836,7 +20826,7 @@ YY_RULE_SETUP
 case 631:
 /* rule 631 can match eol */
 YY_RULE_SETUP
-#line 4098 "tth.lex"
+#line 4087 "tth.lex"
 {
   TTH_INC_MULTI;
   if(horizmode) horizmode=1;
@@ -20851,7 +20841,7 @@ YY_RULE_SETUP
 case 632:
 /* rule 632 can match eol */
 YY_RULE_SETUP
-#line 4108 "tth.lex"
+#line 4097 "tth.lex"
 {
   TTH_INC_MULTI;
   if(horizmode) horizmode=1;
@@ -20864,10 +20854,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 633:
-#line 4119 "tth.lex"
+#line 4108 "tth.lex"
 case 634:
 YY_RULE_SETUP
-#line 4119 "tth.lex"
+#line 4108 "tth.lex"
 {   /* Special case. Remove environment label. */
   TTH_TEXCLOSE else{
   TTH_CLOSEGROUP;TTH_POP_CLOSING;
@@ -20877,12 +20867,12 @@ YY_RULE_SETUP
 case 635:
 /* rule 635 can match eol */
 YY_RULE_SETUP
-#line 4125 "tth.lex"
+#line 4114 "tth.lex"
 strcpy(unitlength,yytext);
 	YY_BREAK
 case 636:
 YY_RULE_SETUP
-#line 4126 "tth.lex"
+#line 4115 "tth.lex"
 {
   if(tth_autopic){
     picno++;
@@ -20916,12 +20906,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 637:
 YY_RULE_SETUP
-#line 4156 "tth.lex"
+#line 4145 "tth.lex"
 jscratch++;fprintf(tth_picfile,"%s",yytext);    
 	YY_BREAK
 case 638:
 YY_RULE_SETUP
-#line 4157 "tth.lex"
+#line 4146 "tth.lex"
 {
   if(jscratch) {jscratch--; fprintf(tth_picfile,"%s",yytext);}    
   else{
@@ -20941,13 +20931,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 639:
 YY_RULE_SETUP
-#line 4173 "tth.lex"
+#line 4162 "tth.lex"
 
 	YY_BREAK
 case 640:
 /* rule 640 can match eol */
 YY_RULE_SETUP
-#line 4174 "tth.lex"
+#line 4163 "tth.lex"
 {
   if(strcspn(yytext,"\n")==0) TTH_INC_LINE;
   fprintf(tth_picfile,"%s",yytext);
@@ -20955,7 +20945,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 641:
 YY_RULE_SETUP
-#line 4178 "tth.lex"
+#line 4167 "tth.lex"
 {
   yy_push_state(discardgroup);
   if(tth_debug&32)fprintf(stderr,"Discarding unsupported construct:%s\n",yytext);
@@ -20963,7 +20953,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 642:
 YY_RULE_SETUP
-#line 4182 "tth.lex"
+#line 4171 "tth.lex"
 {
   yy_pop_state();
   if(tth_debug&32)fprintf(stderr,"Ending discarding construct:%s\n",yytext);
@@ -20971,26 +20961,26 @@ YY_RULE_SETUP
 	YY_BREAK
 case 643:
 YY_RULE_SETUP
-#line 4186 "tth.lex"
+#line 4175 "tth.lex"
 
 	YY_BREAK
 /***********************************************************************/
 /* Latex tabular and haligns */
 case 644:
 YY_RULE_SETUP
-#line 4190 "tth.lex"
+#line 4179 "tth.lex"
 TTH_TEX_FN("\\begin{tabular}#tthdrop1",1);
 	YY_BREAK
 case 645:
 YY_RULE_SETUP
-#line 4191 "tth.lex"
+#line 4180 "tth.lex"
 {
   TTH_TEX_FN_OPT("\\tth_tabular#tthdrop2",2,"");
 }
 	YY_BREAK
 case 646:
 YY_RULE_SETUP
-#line 4194 "tth.lex"
+#line 4183 "tth.lex"
 {
   TTH_HAL_PUSH;
   *halstring=0;
@@ -21010,22 +21000,22 @@ YY_RULE_SETUP
 case 647:
 /* rule 647 can match eol */
 YY_RULE_SETUP
-#line 4209 "tth.lex"
+#line 4198 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 648:
 YY_RULE_SETUP
-#line 4210 "tth.lex"
+#line 4199 "tth.lex"
 /*remove spaces*/
 	YY_BREAK
 case 649:
 YY_RULE_SETUP
-#line 4211 "tth.lex"
+#line 4200 "tth.lex"
 TTH_CCAT(halstring,yytext);
 	YY_BREAK
 case 650:
 YY_RULE_SETUP
-#line 4212 "tth.lex"
+#line 4201 "tth.lex"
 TTH_CCAT(halstring,yytext);ncols++;
 	YY_BREAK
 /*
@@ -21036,12 +21026,12 @@ TTH_CCAT(halstring,yytext);ncols++;
 }*/
 case 651:
 YY_RULE_SETUP
-#line 4219 "tth.lex"
+#line 4208 "tth.lex"
 {  TTH_TEX_FN("\\tth_preat#tthdrop1",1); }
 	YY_BREAK
 case 652:
 YY_RULE_SETUP
-#line 4220 "tth.lex"
+#line 4209 "tth.lex"
 {
   yy_pop_state();
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
@@ -21055,12 +21045,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 653:
 YY_RULE_SETUP
-#line 4230 "tth.lex"
+#line 4219 "tth.lex"
 { TTH_TEX_FN("\\tth_presp#tthdrop1",1);ncols++; }
 	YY_BREAK
 case 654:
 YY_RULE_SETUP
-#line 4231 "tth.lex"
+#line 4220 "tth.lex"
 {
   yy_pop_state();
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
@@ -21075,7 +21065,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 655:
 YY_RULE_SETUP
-#line 4242 "tth.lex"
+#line 4231 "tth.lex"
 {
   /*  sprintf(scratchstring,"&{&p{%d}&}&",thesize/SCALEDPERPIXEL);*/
   sprintf(scratchstring,"p{%d}",thesize/SCALEDPERPIXEL);
@@ -21086,12 +21076,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 656:
 YY_RULE_SETUP
-#line 4249 "tth.lex"
+#line 4238 "tth.lex"
 { TTH_TEX_FN("\\tth_tabstar#tthdrop2",2); }
 	YY_BREAK
 case 657:
 YY_RULE_SETUP
-#line 4250 "tth.lex"
+#line 4239 "tth.lex"
 {
   yy_pop_state();
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
@@ -21110,12 +21100,12 @@ YY_RULE_SETUP
 case 658:
 /* rule 658 can match eol */
 YY_RULE_SETUP
-#line 4264 "tth.lex"
+#line 4253 "tth.lex"
 if(strcspn(yytext,"\n")==0) TTH_INC_LINE;/* Do nothing if we don't recognize */ 
 	YY_BREAK
 case 659:
 YY_RULE_SETUP
-#line 4265 "tth.lex"
+#line 4254 "tth.lex"
 {
   yy_pop_state();
   TTH_PUSH_CLOSING;
@@ -21150,7 +21140,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 660:
 YY_RULE_SETUP
-#line 4297 "tth.lex"
+#line 4286 "tth.lex"
 { /* cell boundary. Scan @strings if any */
   if(tth_debug&32)fprintf(stderr,"|");
   jstal=-1;
@@ -21168,7 +21158,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 661:
 YY_RULE_SETUP
-#line 4311 "tth.lex"
+#line 4300 "tth.lex"
 {
   /*  if(tth_debug&32) fprintf(stderr,"tth_@, %d\n",margmax);*/
   TTH_TEX_FN("\\tth_atstring#tthdrop1",1);
@@ -21176,7 +21166,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 662:
 YY_RULE_SETUP
-#line 4315 "tth.lex"
+#line 4304 "tth.lex"
 {
   yy_pop_state();
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
@@ -21196,7 +21186,7 @@ YY_RULE_SETUP
 case 663:
 /* rule 663 can match eol */
 YY_RULE_SETUP
-#line 4331 "tth.lex"
+#line 4320 "tth.lex"
 {
   if(jshal==1||jshal==-1){yyless(0);} 
   if(jstal==-1)jstal=0;
@@ -21204,7 +21194,7 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case YY_STATE_EOF(talign):
-#line 4336 "tth.lex"
+#line 4325 "tth.lex"
 {  /* Reset halbuff to start. Gives matrix underflows.
     yy_delete_buffer(YY_CURRENT_BUFFER);
     if(tth_debug&32)fprintf(stderr,"\nTemplate end rescan:%s> \n",halstring);
@@ -21215,12 +21205,12 @@ case YY_STATE_EOF(talign):
 	YY_BREAK
 case 664:
 YY_RULE_SETUP
-#line 4343 "tth.lex"
+#line 4332 "tth.lex"
 yy_push_state(tempamp);
 	YY_BREAK
 case 665:
 YY_RULE_SETUP
-#line 4344 "tth.lex"
+#line 4333 "tth.lex"
 {
   yy_pop_state();
   /*  if(tth_debug&32)fprintf(stderr,"%dprecell=%s\n",jshal,precell);*/
@@ -21229,15 +21219,15 @@ YY_RULE_SETUP
 	YY_BREAK
 case 666:
 YY_RULE_SETUP
-#line 4349 "tth.lex"
+#line 4338 "tth.lex"
 {TTH_CCAT(precell,yytext);}
 	YY_BREAK
 case 667:
-#line 4351 "tth.lex"
+#line 4340 "tth.lex"
 case 668:
 /* rule 668 can match eol */
 YY_RULE_SETUP
-#line 4351 "tth.lex"
+#line 4340 "tth.lex"
 {
   if(strcspn(yytext,"\n")==0) TTH_INC_LINE;
   if(jshal<1){TTH_CCAT(precell,yytext);}
@@ -21245,46 +21235,46 @@ YY_RULE_SETUP
 	YY_BREAK
 case 669:
 YY_RULE_SETUP
-#line 4355 "tth.lex"
+#line 4344 "tth.lex"
 fprintf(stderr,"Unknown tabular format: %s\n",yytext);TTH_HALACT;
 	YY_BREAK
 case 670:
 YY_RULE_SETUP
-#line 4357 "tth.lex"
+#line 4346 "tth.lex"
 TTH_SCAN_STRING("\\par");
 	YY_BREAK
 case 671:
 YY_RULE_SETUP
-#line 4358 "tth.lex"
+#line 4347 "tth.lex"
 {
   fprintf(tth_fdout,"\n</td><td%s>",valignstring);
 }
 	YY_BREAK
 case 672:
 YY_RULE_SETUP
-#line 4361 "tth.lex"
+#line 4350 "tth.lex"
 {
   yy_pop_state();
 }
 	YY_BREAK
 case 673:
 YY_RULE_SETUP
-#line 4365 "tth.lex"
+#line 4354 "tth.lex"
 {
   if(*halstring) {yy_push_state(hamper); 
   }else{fprintf(tth_fdout,"</td><td width=\"%d\">\n",tabwidth);}/* settabs */
 }
 	YY_BREAK
 case 674:
-#line 4370 "tth.lex"
+#line 4359 "tth.lex"
 case 675:
-#line 4371 "tth.lex"
+#line 4360 "tth.lex"
 case 676:
-#line 4372 "tth.lex"
+#line 4361 "tth.lex"
 case 677:
 /* rule 677 can match eol */
 YY_RULE_SETUP
-#line 4372 "tth.lex"
+#line 4361 "tth.lex"
 {
   TTH_INC_MULTI;
   if(*halstring){ /* halign and tabular */
@@ -21323,17 +21313,17 @@ YY_RULE_SETUP
 case 678:
 /* rule 678 can match eol */
 YY_RULE_SETUP
-#line 4406 "tth.lex"
+#line 4395 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 679:
 YY_RULE_SETUP
-#line 4407 "tth.lex"
+#line 4396 "tth.lex"
 
 	YY_BREAK
 case 680:
 YY_RULE_SETUP
-#line 4408 "tth.lex"
+#line 4397 "tth.lex"
 {
   if(tth_debug&32) fprintf(stderr,"\nInner Multicolumn(%d%d)",jshal,jstal);
   if(jstal==0){
@@ -21351,12 +21341,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 681:
 YY_RULE_SETUP
-#line 4422 "tth.lex"
+#line 4411 "tth.lex"
 TTH_SCAN_STRING("\\multispan1");
 	YY_BREAK
 case 682:
 YY_RULE_SETUP
-#line 4423 "tth.lex"
+#line 4412 "tth.lex"
 {
   if(tth_debug&32) fprintf(stderr,"Inner Multispan(%d%d)",jshal,jstal);
   if(jstal==0){
@@ -21375,7 +21365,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 683:
 YY_RULE_SETUP
-#line 4438 "tth.lex"
+#line 4427 "tth.lex"
 { /* expand first */
   TTH_DO_MACRO
   else{ 
@@ -21388,7 +21378,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 684:
 YY_RULE_SETUP
-#line 4447 "tth.lex"
+#line 4436 "tth.lex"
 {
   yyless(0);
   strcpy(tdalign,TTH_CELL_TAB);  /* Save the cell closing.*/
@@ -21399,34 +21389,34 @@ YY_RULE_SETUP
 	YY_BREAK
 case 685:
 YY_RULE_SETUP
-#line 4454 "tth.lex"
+#line 4443 "tth.lex"
 
 	YY_BREAK
 case 686:
 /* rule 686 can match eol */
 YY_RULE_SETUP
-#line 4455 "tth.lex"
+#line 4444 "tth.lex"
 TTH_INC_MULTI;TTH_OUTPUT(TTH_TRTD);
 	YY_BREAK
 case 687:
 YY_RULE_SETUP
-#line 4456 "tth.lex"
+#line 4445 "tth.lex"
 yy_push_state(matchbrace);
 	YY_BREAK
 case 688:
 YY_RULE_SETUP
-#line 4457 "tth.lex"
+#line 4446 "tth.lex"
 
 	YY_BREAK
 case 689:
 /* rule 689 can match eol */
 YY_RULE_SETUP
-#line 4458 "tth.lex"
+#line 4447 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 690:
 YY_RULE_SETUP
-#line 4460 "tth.lex"
+#line 4449 "tth.lex"
 {
   if(tth_debug&32) fprintf(stderr,"Multicolumn at start:");
   TTH_OUTPUT(TTH_TRO);
@@ -21436,7 +21426,7 @@ YY_RULE_SETUP
 /* Add an open brace for a starting multicol */
 case 691:
 YY_RULE_SETUP
-#line 4466 "tth.lex"
+#line 4455 "tth.lex"
 {
   /*TTH_SCAN_STRING("{");
     if(tth_debug&32){fprintf(stderr,"{");}*/
@@ -21445,7 +21435,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 692:
 YY_RULE_SETUP
-#line 4471 "tth.lex"
+#line 4460 "tth.lex"
 {
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
     sscanf(margs[jscratch],"%d",&jshal);
@@ -21467,7 +21457,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 693:
 YY_RULE_SETUP
-#line 4489 "tth.lex"
+#line 4478 "tth.lex"
 {
   TTH_TEXCLOSE else{
   if(tth_debug&32) fprintf(stderr,"Ending tabular\n");
@@ -21493,7 +21483,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 694:
 YY_RULE_SETUP
-#line 4511 "tth.lex"
+#line 4500 "tth.lex"
 {
   yy_pop_state(); /* out of hendline */
   TTH_TEXCLOSE else{
@@ -21511,7 +21501,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 695:
 YY_RULE_SETUP
-#line 4525 "tth.lex"
+#line 4514 "tth.lex"
 {
   yyless(0); TTH_OUTPUT(TTH_TRO);
   yy_pop_state();
@@ -21521,7 +21511,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 696:
 YY_RULE_SETUP
-#line 4532 "tth.lex"
+#line 4521 "tth.lex"
 {/*attempt to fix*/
   if(tth_debug&33) fprintf(stderr,
 	"Noalign in hendline. eqdepth=%d, ncols=%d.\n",eqdepth,ncols);
@@ -21531,12 +21521,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 697:
 YY_RULE_SETUP
-#line 4539 "tth.lex"
+#line 4528 "tth.lex"
 TTH_SCAN_STRING("\\multispan1");
 	YY_BREAK
 case 698:
 YY_RULE_SETUP
-#line 4540 "tth.lex"
+#line 4529 "tth.lex"
 {
   yy_pop_state();
   if(tth_debug&32) fprintf(stderr,"Line Start Multispan\n");
@@ -21546,7 +21536,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 699:
 YY_RULE_SETUP
-#line 4546 "tth.lex"
+#line 4535 "tth.lex"
 {
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1)
     sscanf(margs[jscratch],"%d",&jshal);
@@ -21561,7 +21551,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 700:
 YY_RULE_SETUP
-#line 4557 "tth.lex"
+#line 4546 "tth.lex"
 { /* expand first */
   TTH_DO_MACRO
   else{
@@ -21574,80 +21564,80 @@ YY_RULE_SETUP
 	YY_BREAK
 case 701:
 YY_RULE_SETUP
-#line 4566 "tth.lex"
+#line 4555 "tth.lex"
 yyless(0);TTH_SCAN_STRING("\\\\"); 
 	YY_BREAK
 case 702:
 YY_RULE_SETUP
-#line 4568 "tth.lex"
+#line 4557 "tth.lex"
 yy_push_state(matchbrace);
 	YY_BREAK
 case 703:
 YY_RULE_SETUP
-#line 4569 "tth.lex"
+#line 4558 "tth.lex"
 
 	YY_BREAK
 case 704:
 /* rule 704 can match eol */
 YY_RULE_SETUP
-#line 4570 "tth.lex"
+#line 4559 "tth.lex"
 TTH_INC_MULTI;TTH_OUTPUT("</tr><tr><td>");
 	YY_BREAK
 /* End of tabular and halign code.*/
 /********************************************************************/
 case 705:
 YY_RULE_SETUP
-#line 4574 "tth.lex"
+#line 4563 "tth.lex"
 TTH_OUTPUT(TTH_TINY);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 706:
 YY_RULE_SETUP
-#line 4575 "tth.lex"
+#line 4564 "tth.lex"
 TTH_OUTPUT(TTH_SCRIPTSIZE);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 707:
 YY_RULE_SETUP
-#line 4576 "tth.lex"
+#line 4565 "tth.lex"
 TTH_OUTPUT(TTH_FOOTNOTESIZE);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 708:
 YY_RULE_SETUP
-#line 4577 "tth.lex"
+#line 4566 "tth.lex"
 TTH_OUTPUT(TTH_SMALL);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 709:
 YY_RULE_SETUP
-#line 4578 "tth.lex"
+#line 4567 "tth.lex"
 TTH_OUTPUT(TTH_NORMALSIZE);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 710:
 YY_RULE_SETUP
-#line 4579 "tth.lex"
+#line 4568 "tth.lex"
 TTH_OUTPUT(TTH_large);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 711:
 YY_RULE_SETUP
-#line 4580 "tth.lex"
+#line 4569 "tth.lex"
 TTH_OUTPUT(TTH_Large);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 712:
 YY_RULE_SETUP
-#line 4581 "tth.lex"
+#line 4570 "tth.lex"
 TTH_OUTPUT(TTH_LARGE);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 713:
 YY_RULE_SETUP
-#line 4582 "tth.lex"
+#line 4571 "tth.lex"
 TTH_OUTPUT(TTH_HUGE);TTH_PRECLOSE(TTH_SIZEEND);
 	YY_BREAK
 case 714:
 YY_RULE_SETUP
-#line 4584 "tth.lex"
+#line 4573 "tth.lex"
 fprintf(tth_fdout,"<div style=\"text-align:center\">");TTH_PRECLOSE("</div>");
 	YY_BREAK
 case 715:
 YY_RULE_SETUP
-#line 4585 "tth.lex"
+#line 4574 "tth.lex"
 fprintf(tth_fdout,"<div align=\"right\">");TTH_PRECLOSE("</div>");
 	YY_BREAK
 /* Insert an implied hbox around the minipage(s) that terminates at the
@@ -21656,7 +21646,7 @@ fprintf(tth_fdout,"<div align=\"right\">");TTH_PRECLOSE("</div>");
  */
 case 716:
 YY_RULE_SETUP
-#line 4591 "tth.lex"
+#line 4580 "tth.lex"
 {
   yy_push_state(INITIAL);
   TTH_TEX_FN_OPT("\\vbox\\bgroup\\hsize=#2#tthdrop2",2,"");
@@ -21664,7 +21654,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 717:
 YY_RULE_SETUP
-#line 4595 "tth.lex"
+#line 4584 "tth.lex"
 {
   TTH_PUSH_CLOSING; /* This will be cancelled at the end of the pargroup*/
   yy_push_state(pargroup);
@@ -21674,7 +21664,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 718:
 YY_RULE_SETUP
-#line 4601 "tth.lex"
+#line 4590 "tth.lex"
 {
   TTH_SCAN_STRING("\\egroup");
   yy_pop_state();
@@ -21684,29 +21674,29 @@ YY_RULE_SETUP
 /* colordvi-compatible commands. Expand the argument first.*/
 case 719:
 YY_RULE_SETUP
-#line 4609 "tth.lex"
+#line 4598 "tth.lex"
 TTH_TEX_FN("{\\textColor{#1}#2}#tthdrop2",2);
 	YY_BREAK
 /* textColor in colordvi is global. But that's a terrible thing to do 
     so in TtH it is local. */
 case 720:
 YY_RULE_SETUP
-#line 4612 "tth.lex"
+#line 4601 "tth.lex"
 TTH_TEX_FN("\\edef\\tthexpcol{\\tthtextColor{#1}}\\tthexpcol#tthdrop1",1);
 	YY_BREAK
 case 721:
 /* rule 721 can match eol */
-#line 4614 "tth.lex"
+#line 4603 "tth.lex"
 case 722:
 /* rule 722 can match eol */
-#line 4615 "tth.lex"
+#line 4604 "tth.lex"
 case 723:
 /* rule 723 can match eol */
-#line 4616 "tth.lex"
+#line 4605 "tth.lex"
 case 724:
 /* rule 724 can match eol */
 YY_RULE_SETUP
-#line 4616 "tth.lex"
+#line 4605 "tth.lex"
 { /* Color defined in one of four ways*/
   chscratch=yytext+strcspn(yytext,"{")+1;
   *(chscratch+strcspn(chscratch,"}"))=0;
@@ -21775,14 +21765,14 @@ YY_RULE_SETUP
 case 725:
 /* rule 725 can match eol */
 YY_RULE_SETUP
-#line 4680 "tth.lex"
+#line 4669 "tth.lex"
 TTH_INC_MULTI;
 	YY_BREAK
 /* TTH_OUTPUT(TTH_COLOREND); Remove because nesting gets broken */
 case 726:
 /* rule 726 can match eol */
 YY_RULE_SETUP
-#line 4682 "tth.lex"
+#line 4671 "tth.lex"
 {
   TTH_INC_MULTI;
   TTH_CCPY(scratchstring,"\\tthspecialcolor{");
@@ -21798,42 +21788,42 @@ YY_RULE_SETUP
     but color is the switch. Use the preceding function anyway.*/
 case 727:
 YY_RULE_SETUP
-#line 4695 "tth.lex"
+#line 4684 "tth.lex"
 TTH_TEX_FN_OPT("{\\textColor{#2}#3}#tthdrop3",3,"");
 	YY_BREAK
 case 728:
 YY_RULE_SETUP
-#line 4696 "tth.lex"
+#line 4685 "tth.lex"
 TTH_TEX_FN_OPT("\\edef\\tthexpcol{\\tthtextColor{#2}}\\tthexpcol#tthdrop2",2,"");
 	YY_BREAK
 case 729:
 YY_RULE_SETUP
-#line 4697 "tth.lex"
+#line 4686 "tth.lex"
 TTH_TEX_FN_OPT("{\\edef\\tthexpcol{\\tthbgColor{#2}}\\tthexpcol #3}#tthdrop3",3,"");
 	YY_BREAK
 case 730:
 YY_RULE_SETUP
-#line 4698 "tth.lex"
+#line 4687 "tth.lex"
 TTH_TEX_FN_OPT("\\fbox{\\colorbox[#1]{#2}{#3}}#tthdrop3",3,"");
 	YY_BREAK
 case 731:
 YY_RULE_SETUP
-#line 4699 "tth.lex"
+#line 4688 "tth.lex"
 TTH_TEX_FN_OPT("{\\edef\\tthexpcol{\\tthpageColor{#2}}\\tthexpcol}#tthdrop2",2,"");
 	YY_BREAK
 case 732:
-#line 4702 "tth.lex"
+#line 4691 "tth.lex"
 case 733:
-#line 4703 "tth.lex"
+#line 4692 "tth.lex"
 case 734:
-#line 4704 "tth.lex"
+#line 4693 "tth.lex"
 case 735:
-#line 4705 "tth.lex"
+#line 4694 "tth.lex"
 case 736:
-#line 4706 "tth.lex"
+#line 4695 "tth.lex"
 case 737:
 YY_RULE_SETUP
-#line 4706 "tth.lex"
+#line 4695 "tth.lex"
 {
   localdef=1;
   horizmode=0; /* This protection against \par should not be needed but ...*/
@@ -21845,7 +21835,7 @@ YY_RULE_SETUP
 case 738:
 /* rule 738 can match eol */
 YY_RULE_SETUP
-#line 4713 "tth.lex"
+#line 4702 "tth.lex"
 {
   fprintf(stderr,"**** %s: works only for non-standard environments\n",yytext);
   strcpy(scratchstring,"\\newenvironment");
@@ -21856,7 +21846,7 @@ YY_RULE_SETUP
 case 739:
 /* rule 739 can match eol */
 YY_RULE_SETUP
-#line 4719 "tth.lex"
+#line 4708 "tth.lex"
 {
   localdef=0;
   horizmode=0;
@@ -21872,7 +21862,7 @@ YY_RULE_SETUP
 case 740:
 /* rule 740 can match eol */
 YY_RULE_SETUP
-#line 4730 "tth.lex"
+#line 4719 "tth.lex"
 { 
   TTH_INC_MULTI;
   /* Newtheorem with numberedlike option. Overrides macro definition.*/
@@ -21891,7 +21881,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 741:
 YY_RULE_SETUP
-#line 4745 "tth.lex"
+#line 4734 "tth.lex"
 {
   yyless(0);yy_pop_state();
   yy_push_state(define);
@@ -21903,7 +21893,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 742:
 YY_RULE_SETUP
-#line 4754 "tth.lex"
+#line 4743 "tth.lex"
 {
   if(indexkey("\\amslatex",keys,&nkeys)!=-1){
     TTH_SCAN_STRING("\\verb|");
@@ -21914,11 +21904,11 @@ YY_RULE_SETUP
 	YY_BREAK
 /* url that does not use braces */
 case 743:
-#line 4763 "tth.lex"
+#line 4752 "tth.lex"
 /*\\verb\*?[^ \t\na] { prior to 12 Jan 2002*/
 case 744:
 YY_RULE_SETUP
-#line 4764 "tth.lex"
+#line 4753 "tth.lex"
 {  /* Prevent erroneous \verbatim detection */
   if(tth_debug&8)fprintf(stderr,"Entering Verb state:%s\n",yytext);
   chr1[0]=*(yytext+strlen(yytext)-1);
@@ -21929,7 +21919,7 @@ YY_RULE_SETUP
 /* Deal with cases that are not in line.*/
 case 745:
 YY_RULE_SETUP
-#line 4771 "tth.lex"
+#line 4760 "tth.lex"
 TTH_TEX_FN("\\verb#1#tthdrop1",1);
 	YY_BREAK
 /* ************* Enclosing multiple groups in stuff. ******** removed **/
@@ -21937,19 +21927,19 @@ TTH_TEX_FN("\\verb#1#tthdrop1",1);
 case 746:
 /* rule 746 can match eol */
 YY_RULE_SETUP
-#line 4776 "tth.lex"
+#line 4765 "tth.lex"
 {
   TTH_INC_LINE;yy_pop_state();TTH_SCAN_STRING("\\par\n");horizmode=1;}
 	YY_BREAK
 case 747:
 YY_RULE_SETUP
-#line 4778 "tth.lex"
+#line 4767 "tth.lex"
 {yyless(0);yy_pop_state();horizmode=1;}
 	YY_BREAK
 case 748:
 /* rule 748 can match eol */
 YY_RULE_SETUP
-#line 4780 "tth.lex"
+#line 4769 "tth.lex"
 {
   TTH_INC_LINE;
   if(horizmode==1){
@@ -21964,7 +21954,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 749:
 YY_RULE_SETUP
-#line 4791 "tth.lex"
+#line 4780 "tth.lex"
 {
   TTH_TEXCLOSE else{
     TTH_CLOSEGROUP;TTH_POP_CLOSING;
@@ -21976,7 +21966,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 750:
 YY_RULE_SETUP
-#line 4799 "tth.lex"
+#line 4788 "tth.lex"
 {
   TTH_TEXCLOSE else{ 
     if(!strcmp(closing,"</dd></dl>")) {
@@ -21994,7 +21984,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 751:
 YY_RULE_SETUP
-#line 4813 "tth.lex"
+#line 4802 "tth.lex"
 {
   TTH_TEXCLOSE else{
     if(!strcmp(closing,"</dd></dl></dl>")) {
@@ -22011,24 +22001,24 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 752:
-#line 4829 "tth.lex"
+#line 4818 "tth.lex"
 case 753:
-#line 4830 "tth.lex"
+#line 4819 "tth.lex"
 case 754:
 YY_RULE_SETUP
-#line 4830 "tth.lex"
+#line 4819 "tth.lex"
 {
   sprintf(scratchstring,"\\par%s",yytext); TTH_SCAN_STRING(scratchstring);
 }
 	YY_BREAK
 /* Fix for \hang and friends end of a vbox implies a par */
 case 755:
-#line 4835 "tth.lex"
+#line 4824 "tth.lex"
 case 756:
-#line 4836 "tth.lex"
+#line 4825 "tth.lex"
 case 757:
 YY_RULE_SETUP
-#line 4836 "tth.lex"
+#line 4825 "tth.lex"
 {
   if(strstr(closing,"--vbox")){
     TTH_SCAN_STRING("\\par}");
@@ -22039,7 +22029,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 758:
 YY_RULE_SETUP
-#line 4845 "tth.lex"
+#line 4834 "tth.lex"
 {
   if(strstr(tth_texclose[tth_push_depth-1],"\\tthhbclose")){
     if(tth_debug&1024){
@@ -22055,7 +22045,7 @@ YY_RULE_SETUP
 case 759:
 /* rule 759 can match eol */
 YY_RULE_SETUP
-#line 4856 "tth.lex"
+#line 4845 "tth.lex"
 {
   TTH_CHECK_LENGTH;
   if(bracecount) fprintf(stderr,
@@ -22073,7 +22063,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 760:
 YY_RULE_SETUP
-#line 4871 "tth.lex"
+#line 4860 "tth.lex"
 {
   if(horizmode) {
     {TTH_PAR_ACTION}
@@ -22083,7 +22073,7 @@ YY_RULE_SETUP
 case 761:
 /* rule 761 can match eol */
 YY_RULE_SETUP
-#line 4877 "tth.lex"
+#line 4866 "tth.lex"
 {
   TTH_CHECK_LENGTH;
   if(bracecount) fprintf(stderr,"**** Error. Bracecount=%d nonzero, line %d\n",
@@ -22102,7 +22092,7 @@ YY_RULE_SETUP
 /*************************** General Rules. *****************/
 case 762:
 YY_RULE_SETUP
-#line 4893 "tth.lex"
+#line 4882 "tth.lex"
 {
   TTH_PUSH_CLOSING; fprintf(tth_fdout,"\n<h2> ");
   TTH_CCPY(closing,"</h2>\n");
@@ -22110,7 +22100,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 763:
 YY_RULE_SETUP
-#line 4897 "tth.lex"
+#line 4886 "tth.lex"
 {
   TTH_OUTPUT("\n<table align=\"center\" border=\"0\"><tr><td>\n");
   TTH_CCPY(argchar,"</td></tr></table><!--hboxt-->");
@@ -22119,37 +22109,37 @@ YY_RULE_SETUP
 	YY_BREAK
 case 764:
 YY_RULE_SETUP
-#line 4902 "tth.lex"
+#line 4891 "tth.lex"
 {
   fprintf(tth_fdout,"\n<br />");yy_push_state(tokenarg);
   TTH_CCPY(argchar,"<br />");}
 	YY_BREAK
 case 765:
-#line 4908 "tth.lex"
+#line 4897 "tth.lex"
 case 766:
-#line 4909 "tth.lex"
+#line 4898 "tth.lex"
 case 767:
-#line 4910 "tth.lex"
+#line 4899 "tth.lex"
 case 768:
 YY_RULE_SETUP
-#line 4910 "tth.lex"
+#line 4899 "tth.lex"
 TTH_SWAP("\\tth_underline ");
 	YY_BREAK
 case 769:
 YY_RULE_SETUP
-#line 4911 "tth.lex"
+#line 4900 "tth.lex"
 yy_push_state(ruledim);TTH_OUTPUT("<hr />\n");
 	YY_BREAK
 case 770:
 YY_RULE_SETUP
-#line 4912 "tth.lex"
+#line 4901 "tth.lex"
 yy_push_state(ruledim);
 	YY_BREAK
 case 771:
-#line 4914 "tth.lex"
+#line 4903 "tth.lex"
 case 772:
 YY_RULE_SETUP
-#line 4914 "tth.lex"
+#line 4903 "tth.lex"
 {
   /*  if(horizmode) {fprintf(tth_fdout,TTH_PAR);horizmode=0;} replaced by*/
   if(horizmode) {{TTH_PAR_ACTION}}
@@ -22157,22 +22147,22 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 773:
-#line 4920 "tth.lex"
+#line 4909 "tth.lex"
 case 774:
 YY_RULE_SETUP
-#line 4920 "tth.lex"
+#line 4909 "tth.lex"
 {
   if(horizmode) {{TTH_PAR_ACTION}}
   fprintf(tth_fdout,"<br />");
 }
 	YY_BREAK
 case 775:
-#line 4925 "tth.lex"
+#line 4914 "tth.lex"
 case 776:
-#line 4926 "tth.lex"
+#line 4915 "tth.lex"
 case 777:
 YY_RULE_SETUP
-#line 4926 "tth.lex"
+#line 4915 "tth.lex"
 {
   if(horizmode) {{TTH_PAR_ACTION}}
 }
@@ -22181,7 +22171,7 @@ YY_RULE_SETUP
 case 778:
 /* rule 778 can match eol */
 YY_RULE_SETUP
-#line 4931 "tth.lex"
+#line 4920 "tth.lex"
 {
   TTH_EXTRACT_COMMENT{TTH_INC_MULTI;TTH_OUTPUT("<br />");}
 }
@@ -22190,7 +22180,7 @@ YY_RULE_SETUP
 case 779:
 /* rule 779 can match eol */
 YY_RULE_SETUP
-#line 4935 "tth.lex"
+#line 4924 "tth.lex"
 {
   TTH_EXTRACT_COMMENT{GET_DIMEN;}
 }
@@ -22199,7 +22189,7 @@ YY_RULE_SETUP
 case 780:
 /* rule 780 can match eol */
 YY_RULE_SETUP
-#line 4939 "tth.lex"
+#line 4928 "tth.lex"
 {
   TTH_EXTRACT_COMMENT{    /* Fix tth-comment before item bug. */
     TTH_INC_MULTI;
@@ -22215,7 +22205,7 @@ YY_RULE_SETUP
 case 781:
 /* rule 781 can match eol */
 YY_RULE_SETUP
-#line 4950 "tth.lex"
+#line 4939 "tth.lex"
 {
   TTH_EXTRACT_COMMENT{    /* Fix tth-comment before item bug. */
     TTH_INC_MULTI;
@@ -22235,18 +22225,18 @@ YY_RULE_SETUP
 	YY_BREAK
 case 782:
 YY_RULE_SETUP
-#line 4966 "tth.lex"
+#line 4955 "tth.lex"
 fprintf(tth_fdout,"<br />&nbsp;&nbsp;&nbsp;&nbsp;");
 	YY_BREAK
 case 783:
 YY_RULE_SETUP
-#line 4967 "tth.lex"
+#line 4956 "tth.lex"
 fprintf(tth_fdout,"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 	YY_BREAK
 case 784:
 /* rule 784 can match eol */
 YY_RULE_SETUP
-#line 4968 "tth.lex"
+#line 4957 "tth.lex"
 { /* Space might not mean no opt. */ 
   /* If we can immediately detect absence of opt arg. Don't put dt section*/
   TTH_INC_MULTI;
@@ -22260,7 +22250,7 @@ YY_RULE_SETUP
 case 785:
 /* rule 785 can match eol */
 YY_RULE_SETUP
-#line 4977 "tth.lex"
+#line 4966 "tth.lex"
 { /* If opt arg absent just gives null dt*/
   TTH_EXTRACT_COMMENT{    /* Fix tth-comment before item bug. */
   TTH_INC_MULTI;
@@ -22273,7 +22263,7 @@ YY_RULE_SETUP
 case 786:
 /* rule 786 can match eol */
 YY_RULE_SETUP
-#line 4985 "tth.lex"
+#line 4974 "tth.lex"
 {
   TTH_EXTRACT_COMMENT{    /* Fix tth-comment before item bug. */
   TTH_INC_MULTI;
@@ -22286,7 +22276,7 @@ YY_RULE_SETUP
 case 787:
 /* rule 787 can match eol */
 YY_RULE_SETUP
-#line 4993 "tth.lex"
+#line 4982 "tth.lex"
 {
   TTH_EXTRACT_COMMENT{    /* Fix tth-comment before item bug. */
   TTH_INC_MULTI;
@@ -22298,7 +22288,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 788:
 YY_RULE_SETUP
-#line 5001 "tth.lex"
+#line 4990 "tth.lex"
 {
   fprintf(tth_fdout,"%s","\n<dl>\n <dt>\n");TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"</dd></dl>");
@@ -22309,7 +22299,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 789:
 YY_RULE_SETUP
-#line 5008 "tth.lex"
+#line 4997 "tth.lex"
 {
   fprintf(tth_fdout,"\n<dl><dd><dl><dt>");TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"</dd></dl></dd></dl>");
@@ -22320,12 +22310,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 790:
 YY_RULE_SETUP
-#line 5015 "tth.lex"
+#line 5004 "tth.lex"
 {TTH_PUSH_CLOSING;fprintf(tth_fdout,"\n<br />");}
 	YY_BREAK
 case 791:
 YY_RULE_SETUP
-#line 5016 "tth.lex"
+#line 5005 "tth.lex"
 {
   TTH_TEXCLOSE else{
     TTH_CLOSEGROUP;TTH_POP_CLOSING;fprintf(tth_fdout,"\n<br />");}
@@ -22333,7 +22323,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 792:
 YY_RULE_SETUP
-#line 5021 "tth.lex"
+#line 5010 "tth.lex"
 {  /* Now using embracetok Sep 98*/
   ftntno++;
   tth_encode(ftntcode,ftntno);
@@ -22362,7 +22352,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 793:
 YY_RULE_SETUP
-#line 5047 "tth.lex"
+#line 5036 "tth.lex"
 { /* xdef footnote with reference.*/
   if(tth_debug&4) fprintf(stderr,"tthfootnote, dupstore=%s\n",dupstore);
   TTH_OUTPUT("</a>");  /* end the anchors */
@@ -22374,7 +22364,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 794:
 YY_RULE_SETUP
-#line 5056 "tth.lex"
+#line 5045 "tth.lex"
 {
   yy_push_state(uppercase);
   tth_push_depth--;
@@ -22384,7 +22374,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 795:
 YY_RULE_SETUP
-#line 5062 "tth.lex"
+#line 5051 "tth.lex"
 {
   for(jscratch=0;jscratch<strlen(yytext);jscratch++) {
     *(yytext+jscratch)=toupper(*(yytext+jscratch));}
@@ -22392,10 +22382,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 796:
-#line 5068 "tth.lex"
+#line 5057 "tth.lex"
 case 797:
 YY_RULE_SETUP
-#line 5068 "tth.lex"
+#line 5057 "tth.lex"
 {
   *(yytext+strlen(yytext)-1)=toupper(*(yytext+strlen(yytext)-1));
   TTH_SCAN_STRING(yytext);
@@ -22403,11 +22393,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 798:
 /* rule 798 can match eol */
-#line 5074 "tth.lex"
+#line 5063 "tth.lex"
 case 799:
 /* rule 799 can match eol */
 YY_RULE_SETUP
-#line 5074 "tth.lex"
+#line 5063 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_push_state(htemplate);
@@ -22424,7 +22414,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 800:
 YY_RULE_SETUP
-#line 5087 "tth.lex"
+#line 5076 "tth.lex"
 {
  strcpy(scratchstring," border=\"1\"");
  TTH_CCAT(scrstring,yytext);
@@ -22433,7 +22423,7 @@ YY_RULE_SETUP
 /* Add template interpretation into && strings and alignment.*/
 case 801:
 YY_RULE_SETUP
-#line 5092 "tth.lex"
+#line 5081 "tth.lex"
 {
   TTH_CCAT(halstring,tdalign);
   /*  TTH_CCAT(scrstring,"}&|");  */
@@ -22452,7 +22442,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 802:
 YY_RULE_SETUP
-#line 5107 "tth.lex"
+#line 5096 "tth.lex"
 {
   if(*tdalign==0) {
     strcpy(tdalign,"r"); 
@@ -22464,7 +22454,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 803:
 YY_RULE_SETUP
-#line 5115 "tth.lex"
+#line 5104 "tth.lex"
 {
   ncols++;
   TTH_CCAT(scrstring,"&");
@@ -22474,21 +22464,21 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 804:
-#line 5123 "tth.lex"
+#line 5112 "tth.lex"
 case 805:
 /* rule 805 can match eol */
 YY_RULE_SETUP
-#line 5123 "tth.lex"
+#line 5112 "tth.lex"
 TTH_INC_LINE;TTH_CCAT(scrstring,yytext);
 	YY_BREAK
 case 806:
 YY_RULE_SETUP
-#line 5124 "tth.lex"
+#line 5113 "tth.lex"
 TTH_CCAT(scrstring,yytext);
 	YY_BREAK
 case 807:
 YY_RULE_SETUP
-#line 5125 "tth.lex"
+#line 5114 "tth.lex"
 { /* New version uses the scanning of template. */
   /*
   TTH_CCAT(scrstring,"&");  
@@ -22513,7 +22503,7 @@ YY_RULE_SETUP
 case 808:
 /* rule 808 can match eol */
 YY_RULE_SETUP
-#line 5147 "tth.lex"
+#line 5136 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_push_state(valign);
@@ -22527,12 +22517,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 809:
 YY_RULE_SETUP
-#line 5158 "tth.lex"
+#line 5147 "tth.lex"
 valsec++;
 	YY_BREAK
 case 810:
 YY_RULE_SETUP
-#line 5159 "tth.lex"
+#line 5148 "tth.lex"
 {
   if(valsec){
     if(*valignstring){
@@ -22547,49 +22537,49 @@ YY_RULE_SETUP
 	YY_BREAK
 case 811:
 YY_RULE_SETUP
-#line 5170 "tth.lex"
+#line 5159 "tth.lex"
 {
   fprintf(tth_fdout,"\n<table class=\"tabular\"><tr><td%s>",valignstring);
   yy_pop_state();
 }    
 	YY_BREAK
 case 812:
-#line 5177 "tth.lex"
+#line 5166 "tth.lex"
 case 813:
 YY_RULE_SETUP
-#line 5177 "tth.lex"
+#line 5166 "tth.lex"
 {
   yy_pop_state();
 }
 	YY_BREAK
 /* altered approach to input*/
 case 814:
-#line 5182 "tth.lex"
+#line 5171 "tth.lex"
 case 815:
-#line 5183 "tth.lex"
+#line 5172 "tth.lex"
 case 816:
 YY_RULE_SETUP
-#line 5183 "tth.lex"
+#line 5172 "tth.lex"
 yy_push_state(inputfile);yy_push_state(removespace); 
 	YY_BREAK
 case YY_STATE_EOF(inputfile):
-#line 5184 "tth.lex"
+#line 5173 "tth.lex"
 TTH_SCAN_STRING(" \\tth_eof");
 	YY_BREAK
 case 817:
 /* rule 817 can match eol */
-#line 5186 "tth.lex"
+#line 5175 "tth.lex"
 case 818:
 /* rule 818 can match eol */
 YY_RULE_SETUP
-#line 5186 "tth.lex"
+#line 5175 "tth.lex"
 TTH_INC_LINE;TTH_SCAN_STRING(" ");
 	YY_BREAK
 case 819:
-#line 5188 "tth.lex"
+#line 5177 "tth.lex"
 case 820:
 YY_RULE_SETUP
-#line 5188 "tth.lex"
+#line 5177 "tth.lex"
 {
     if ( tth_stack_ptr >= MAX_INCLUDE_DEPTH )
       {
@@ -22640,23 +22630,23 @@ YY_RULE_SETUP
 	YY_BREAK
 case 821:
 YY_RULE_SETUP
-#line 5235 "tth.lex"
+#line 5224 "tth.lex"
 
 	YY_BREAK
 case 822:
 YY_RULE_SETUP
-#line 5236 "tth.lex"
+#line 5225 "tth.lex"
 TTH_CCAT(input_filename,yytext);
 	YY_BREAK
 /* Specific internal commands to expand in inputfile */
 case 823:
 YY_RULE_SETUP
-#line 5238 "tth.lex"
+#line 5227 "tth.lex"
 TTH_SCAN_STRING(tth_latex_file);
 	YY_BREAK
 case 824:
 YY_RULE_SETUP
-#line 5239 "tth.lex"
+#line 5228 "tth.lex"
 {
   TTH_DO_MACRO
     else{
@@ -22666,11 +22656,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 825:
 /* rule 825 can match eol */
-#line 5247 "tth.lex"
+#line 5236 "tth.lex"
 case 826:
 /* rule 826 can match eol */
 YY_RULE_SETUP
-#line 5247 "tth.lex"
+#line 5236 "tth.lex"
 {
 #ifdef MSDOS
     /* pointer reading is broken in DJGPP */
@@ -22693,7 +22683,7 @@ YY_RULE_SETUP
 case 827:
 /* rule 827 can match eol */
 YY_RULE_SETUP
-#line 5266 "tth.lex"
+#line 5255 "tth.lex"
 {
   TTH_INC_MULTI;
  if(tth_fontguess){/* Try to guess what size etc is being called for. */
@@ -22761,7 +22751,7 @@ YY_RULE_SETUP
 case 828:
 /* rule 828 can match eol */
 YY_RULE_SETUP
-#line 5329 "tth.lex"
+#line 5318 "tth.lex"
 {
   TTH_INC_MULTI;
   sprintf(newcstr,"\\tth_newcounter%s",strstr(yytext,"{"));
@@ -22771,7 +22761,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 829:
 YY_RULE_SETUP
-#line 5335 "tth.lex"
+#line 5324 "tth.lex"
 {
   if(tth_debug&4)fprintf(stderr,"Newcounter: %s\n",yytext);
   strcpy(dupstore2,"\\");strcat(dupstore2,yytext+strcspn(yytext,"{")+1);
@@ -22813,7 +22803,7 @@ YY_RULE_SETUP
 case 830:
 /* rule 830 can match eol */
 YY_RULE_SETUP
-#line 5372 "tth.lex"
+#line 5361 "tth.lex"
 {
   TTH_INC_MULTI;
   if(tth_debug&4)fprintf(stderr,"Setcounter: %s\n",yytext);
@@ -22837,12 +22827,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 831:
 YY_RULE_SETUP
-#line 5392 "tth.lex"
+#line 5381 "tth.lex"
 iac=-1;yy_push_state(advance);  yy_push_state(removespace);
 	YY_BREAK
 case 832:
 YY_RULE_SETUP
-#line 5393 "tth.lex"
+#line 5382 "tth.lex"
 {
   if(strstr(yytext,"alph")) jscratch=1;
   else if(strstr(yytext,"Alph")) jscratch=2;
@@ -22860,7 +22850,7 @@ YY_RULE_SETUP
 case 833:
 /* rule 833 can match eol */
 YY_RULE_SETUP
-#line 5406 "tth.lex"
+#line 5395 "tth.lex"
 {
   TTH_INC_MULTI;
   strcpy(scratchstring,yytext+strcspn(yytext,"{"));
@@ -22890,7 +22880,7 @@ YY_RULE_SETUP
 case 834:
 /* rule 834 can match eol */
 YY_RULE_SETUP
-#line 5431 "tth.lex"
+#line 5420 "tth.lex"
 {
   TTH_INC_MULTI;
   chscratch=yytext+strcspn(yytext,"{")+1;
@@ -22921,31 +22911,31 @@ YY_RULE_SETUP
 /* TeX counters */
 case 835:
 YY_RULE_SETUP
-#line 5459 "tth.lex"
+#line 5448 "tth.lex"
 {
   if(horizmode)horizmode=1;yy_push_state(getcount);yy_push_state(removespace);}
 	YY_BREAK
 case 836:
 YY_RULE_SETUP
-#line 5461 "tth.lex"
+#line 5450 "tth.lex"
 {
   mkkey(yytext,countkeys,&ncounters);yy_pop_state();
  }
 	YY_BREAK
 case 837:
 YY_RULE_SETUP
-#line 5464 "tth.lex"
+#line 5453 "tth.lex"
 fprintf(stderr,"Ill-formed newcount");yy_pop_state();
 	YY_BREAK
 case 838:
 YY_RULE_SETUP
-#line 5467 "tth.lex"
+#line 5456 "tth.lex"
 {iac=-1;yy_push_state(advance);if(horizmode)horizmode=1;}
 	YY_BREAK
 case 839:
 /* rule 839 can match eol */
 YY_RULE_SETUP
-#line 5469 "tth.lex"
+#line 5458 "tth.lex"
 TTH_INC_MULTI;
 	YY_BREAK
 /*
@@ -22958,7 +22948,7 @@ TTH_INC_MULTI;
 case 840:
 /* rule 840 can match eol */
 YY_RULE_SETUP
-#line 5479 "tth.lex"
+#line 5468 "tth.lex"
 {
   /* Latex addtocounter. Convert into plain form. */
   TTH_INC_MULTI;
@@ -22977,12 +22967,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 841:
 YY_RULE_SETUP
-#line 5495 "tth.lex"
+#line 5484 "tth.lex"
 
 	YY_BREAK
 case 842:
 YY_RULE_SETUP
-#line 5496 "tth.lex"
+#line 5485 "tth.lex"
 {/* Dimension advancing: get counter name.*/
   chscratch=yytext+strlen("\\tthdimen");
   strcpy(newcstr,chscratch+strspn(chscratch," "));
@@ -22996,7 +22986,7 @@ YY_RULE_SETUP
 case 843:
 /* rule 843 can match eol */
 YY_RULE_SETUP
-#line 5506 "tth.lex"
+#line 5495 "tth.lex"
 {
   yyless(0);
   if(!dimadvstate){ /* Return of first time we have the first num,unit. */
@@ -23019,16 +23009,16 @@ YY_RULE_SETUP
 	YY_BREAK
 case 844:
 YY_RULE_SETUP
-#line 5527 "tth.lex"
+#line 5516 "tth.lex"
 {
   if(strcspn(yytext,"-") < strlen(yytext)) minus=-1;
 }             
 	YY_BREAK
 case 845:
-#line 5531 "tth.lex"
+#line 5520 "tth.lex"
 case 846:
 YY_RULE_SETUP
-#line 5531 "tth.lex"
+#line 5520 "tth.lex"
 {
   if(iac==-1){ /* First time we are getting the one to set */ 
     iac=indexkey(yytext,countkeys,&ncounters);
@@ -23079,7 +23069,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 847:
 YY_RULE_SETUP
-#line 5578 "tth.lex"
+#line 5567 "tth.lex"
 {
   fprintf(stderr,"**** Error. Ill-formed \\advance statement\n");
   yy_pop_state();
@@ -23087,11 +23077,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 848:
 /* rule 848 can match eol */
-#line 5584 "tth.lex"
+#line 5573 "tth.lex"
 case 849:
 /* rule 849 can match eol */
 YY_RULE_SETUP
-#line 5584 "tth.lex"
+#line 5573 "tth.lex"
 {
   chscratch=strstr(yytext,"{");
   strcpy(scratchstring,chscratch);
@@ -23101,19 +23091,19 @@ YY_RULE_SETUP
   }
 	YY_BREAK
 case 850:
-#line 5593 "tth.lex"
+#line 5582 "tth.lex"
 case 851:
-#line 5594 "tth.lex"
+#line 5583 "tth.lex"
 case 852:
-#line 5595 "tth.lex"
+#line 5584 "tth.lex"
 case 853:
 YY_RULE_SETUP
-#line 5595 "tth.lex"
+#line 5584 "tth.lex"
 yy_push_state(number);jscratch=0;
 	YY_BREAK
 case 854:
 YY_RULE_SETUP
-#line 5596 "tth.lex"
+#line 5585 "tth.lex"
 {
   i=indexkey(yytext,countkeys,&ncounters);
   if(i == -1) {
@@ -23142,22 +23132,22 @@ YY_RULE_SETUP
 	YY_BREAK
 case 855:
 YY_RULE_SETUP
-#line 5621 "tth.lex"
+#line 5610 "tth.lex"
 fprintf(stderr,"No number at character:%s",yytext);yy_pop_state();
 	YY_BREAK
 case 856:
 YY_RULE_SETUP
-#line 5622 "tth.lex"
+#line 5611 "tth.lex"
 /* Remove optional = and space */
 	YY_BREAK
 case 857:
 YY_RULE_SETUP
-#line 5623 "tth.lex"
+#line 5612 "tth.lex"
 TTH_PUSH_CLOSING;
 	YY_BREAK
 case 858:
 YY_RULE_SETUP
-#line 5624 "tth.lex"
+#line 5613 "tth.lex"
 {
   sscanf(yytext+strcspn(yytext,"+-0123456789"),"%d",&counters[ind]);
   if(tth_debug&4) fprintf(stderr,"Counter %d set to %d\n",ind,counters[ind]);
@@ -23166,7 +23156,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 859:
 YY_RULE_SETUP
-#line 5629 "tth.lex"
+#line 5618 "tth.lex"
 {
   js2=ind; /* Save ind because it is used by TTH_DO_MACRO */
   i=indexkey(yytext+strcspn(yytext,"\\"),countkeys,&ncounters);
@@ -23190,7 +23180,7 @@ YY_RULE_SETUP
 case 860:
 /* rule 860 can match eol */
 YY_RULE_SETUP
-#line 5648 "tth.lex"
+#line 5637 "tth.lex"
 {
   fprintf(stderr,"**** Error: Failed to find value to set counter %s.\n",countkeys[ind]);
   yy_pop_state();
@@ -23199,7 +23189,7 @@ YY_RULE_SETUP
 /* Definitions */
 case 861:
 YY_RULE_SETUP
-#line 5655 "tth.lex"
+#line 5644 "tth.lex"
 {	
   localdef=1;
   if(tth_debug&4) fprintf(stderr,"%s(localdef=%d)",yytext,localdef);
@@ -23212,7 +23202,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 862:
 YY_RULE_SETUP
-#line 5664 "tth.lex"
+#line 5653 "tth.lex"
 {  /* others are the same as <define> */
   if(!bracecount){
     if(tth_debug&4) fprintf(stderr,"Close brace ending let,count=%d\n",
@@ -23256,7 +23246,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 863:
 YY_RULE_SETUP
-#line 5705 "tth.lex"
+#line 5694 "tth.lex"
 {
   if(*(yytext+1)!='d')localdef=0; else localdef=1;
   if(tth_debug&4) fprintf(stderr,"%s(localdef=%d)",yytext,localdef);
@@ -23267,7 +23257,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 864:
 YY_RULE_SETUP
-#line 5712 "tth.lex"
+#line 5701 "tth.lex"
 {
   if(*(yytext+1)!='e')localdef=0; else localdef=1;
   if(tth_debug&4) fprintf(stderr,"%s(localdef=%d)",yytext,localdef);
@@ -23280,22 +23270,22 @@ YY_RULE_SETUP
 case 865:
 /* rule 865 can match eol */
 YY_RULE_SETUP
-#line 5720 "tth.lex"
+#line 5709 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 866:
 YY_RULE_SETUP
-#line 5721 "tth.lex"
+#line 5710 "tth.lex"
 
 	YY_BREAK
 case 867:
 YY_RULE_SETUP
-#line 5722 "tth.lex"
+#line 5711 "tth.lex"
 yy_push_state(getdefbr);strcpy(dupstore,"{");
 	YY_BREAK
 case 868:
 YY_RULE_SETUP
-#line 5723 "tth.lex"
+#line 5712 "tth.lex"
 {  /* Really ought to match braces. */
   /*fprintf(stderr,"getdefbr strings:%s:%s:",yytext,dupstore);*/
   yy_pop_state();
@@ -23309,12 +23299,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 869:
 YY_RULE_SETUP
-#line 5733 "tth.lex"
+#line 5722 "tth.lex"
 strcat(dupstore,yytext);
 	YY_BREAK
 case 870:
 YY_RULE_SETUP
-#line 5734 "tth.lex"
+#line 5723 "tth.lex"
 {
   /*fprintf(stderr,"getdef string:%s:",yytext);*/
   TTH_CCPY(defchar,yytext+strspn(yytext,"{ \t\n"));
@@ -23325,7 +23315,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 871:
 YY_RULE_SETUP
-#line 5741 "tth.lex"
+#line 5730 "tth.lex"
 {
   fprintf(stderr,
 	  "\n**** Error: incompatible syntax in macro name:%s: Line %d\n",
@@ -23336,11 +23326,11 @@ YY_RULE_SETUP
 /* Latex form accommodates arg number perhaps WSP is wrong. */
 case 872:
 /* rule 872 can match eol */
-#line 5750 "tth.lex"
+#line 5739 "tth.lex"
 case 873:
 /* rule 873 can match eol */
 YY_RULE_SETUP
-#line 5750 "tth.lex"
+#line 5739 "tth.lex"
 { /* New pattern */
   /*  sscanf((yytext+strcspn(yytext,"] \t\n{")-1),"%d",&narg); */
   TTH_INC_MULTI;
@@ -23351,7 +23341,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 874:
 YY_RULE_SETUP
-#line 5757 "tth.lex"
+#line 5746 "tth.lex"
 {
   narg=0;
   yy_pop_state();
@@ -23361,7 +23351,7 @@ YY_RULE_SETUP
 case 875:
 /* rule 875 can match eol */
 YY_RULE_SETUP
-#line 5762 "tth.lex"
+#line 5751 "tth.lex"
 {
   if(tth_delimdef){
     yy_pop_state();
@@ -23393,7 +23383,7 @@ YY_RULE_SETUP
 case 876:
 /* rule 876 can match eol */
 YY_RULE_SETUP
-#line 5789 "tth.lex"
+#line 5778 "tth.lex"
 {
   if(!whitespace)strcat(dupstore," ");
   TTH_INC_LINE;
@@ -23411,17 +23401,17 @@ YY_RULE_SETUP
 	YY_BREAK
 case 877:
 YY_RULE_SETUP
-#line 5803 "tth.lex"
+#line 5792 "tth.lex"
 {if(!whitespace){strcat(dupstore," ");} whitespace=1; }
 	YY_BREAK
 case 878:
 YY_RULE_SETUP
-#line 5804 "tth.lex"
+#line 5793 "tth.lex"
 {whitespace=1;strcat(dupstore,yytext);}
 	YY_BREAK
 case 879:
 YY_RULE_SETUP
-#line 5805 "tth.lex"
+#line 5794 "tth.lex"
 {
   whitespace=0;strcat(dupstore,yytext);horizmode=1;
     lkeys[nkeys]=0;
@@ -23436,18 +23426,18 @@ YY_RULE_SETUP
 	YY_BREAK
 case 880:
 YY_RULE_SETUP
-#line 5816 "tth.lex"
+#line 5805 "tth.lex"
 {whitespace=0;strcat(dupstore,yytext+1);horizmode=1;}
 	YY_BREAK
 case 881:
 YY_RULE_SETUP
-#line 5817 "tth.lex"
+#line 5806 "tth.lex"
 {whitespace=0;strcat(dupstore,yytext);horizmode=1;}
 	YY_BREAK
 case 882:
 /* rule 882 can match eol */
 YY_RULE_SETUP
-#line 5819 "tth.lex"
+#line 5808 "tth.lex"
 { 
   TTH_INC_MULTI;
   strcpy(scratchstring,yytext);
@@ -23465,23 +23455,23 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 883:
-#line 5836 "tth.lex"
+#line 5825 "tth.lex"
 case 884:
-#line 5837 "tth.lex"
+#line 5826 "tth.lex"
 case 885:
 YY_RULE_SETUP
-#line 5837 "tth.lex"
+#line 5826 "tth.lex"
 TTH_PUSH_CLOSING;
 	YY_BREAK
 case 886:
-#line 5839 "tth.lex"
+#line 5828 "tth.lex"
 case 887:
-#line 5840 "tth.lex"
+#line 5829 "tth.lex"
 case 888:
-#line 5841 "tth.lex"
+#line 5830 "tth.lex"
 case 889:
 YY_RULE_SETUP
-#line 5841 "tth.lex"
+#line 5830 "tth.lex"
 {
   TTH_TEXCLOSE else{
 /*    if(horizmode==-1)horizmode=1;  */
@@ -23490,37 +23480,37 @@ YY_RULE_SETUP
 	YY_BREAK
 case 890:
 YY_RULE_SETUP
-#line 5846 "tth.lex"
+#line 5835 "tth.lex"
 bracecount++;
 	YY_BREAK
 case 891:
 YY_RULE_SETUP
-#line 5847 "tth.lex"
+#line 5836 "tth.lex"
 {if(!bracecount){yy_pop_state();} else {bracecount--;}}
 	YY_BREAK
 case 892:
 YY_RULE_SETUP
-#line 5848 "tth.lex"
+#line 5837 "tth.lex"
 
 	YY_BREAK
 case 893:
 YY_RULE_SETUP
-#line 5849 "tth.lex"
+#line 5838 "tth.lex"
 
 	YY_BREAK
 case 894:
 YY_RULE_SETUP
-#line 5850 "tth.lex"
+#line 5839 "tth.lex"
 
 	YY_BREAK
 case 895:
 YY_RULE_SETUP
-#line 5852 "tth.lex"
+#line 5841 "tth.lex"
 if(!tth_LaTeX) fprintf(tth_fdout,"<table class=\"tabbing\"><tr><td width=\"%d\">\n",tabwidth);
 	YY_BREAK
 case 896:
 YY_RULE_SETUP
-#line 5854 "tth.lex"
+#line 5843 "tth.lex"
 {
   sscanf(yytext+8,"%d",&jscratch);
   tabwidth=1000/jscratch;
@@ -23528,18 +23518,18 @@ YY_RULE_SETUP
 	YY_BREAK
 case 897:
 YY_RULE_SETUP
-#line 5858 "tth.lex"
+#line 5847 "tth.lex"
 {TTH_PAR_ACTION};
 	YY_BREAK
 /* Standard TeX formatting switches work properly inside groups.*/
 case 898:
 YY_RULE_SETUP
-#line 5861 "tth.lex"
+#line 5850 "tth.lex"
 fprintf(tth_fdout,"<pre>");TTH_PRECLOSE("\n</pre>");
 	YY_BREAK
 case 899:
 YY_RULE_SETUP
-#line 5862 "tth.lex"
+#line 5851 "tth.lex"
 { /* underline switch. */
   if(eqdepth && strcspn(TTH_NAME,"M")>0 ){ /* In equations not Mathml */
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_UNDL1);
@@ -23551,7 +23541,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 900:
 YY_RULE_SETUP
-#line 5870 "tth.lex"
+#line 5859 "tth.lex"
 {
   if(eqdepth){
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_BOLDO);
@@ -23566,7 +23556,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 901:
 YY_RULE_SETUP
-#line 5881 "tth.lex"
+#line 5870 "tth.lex"
 {
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_BOLDO);
@@ -23582,7 +23572,7 @@ YY_RULE_SETUP
 /* Implementation of \bm from math package. Bold italic.*/
 case 902:
 YY_RULE_SETUP
-#line 5893 "tth.lex"
+#line 5882 "tth.lex"
 {
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_BLDITO);
@@ -23596,10 +23586,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 903:
-#line 5905 "tth.lex"
+#line 5894 "tth.lex"
 case 904:
 YY_RULE_SETUP
-#line 5905 "tth.lex"
+#line 5894 "tth.lex"
 {
   if(eqdepth){
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_ITALO);
@@ -23613,10 +23603,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 905:
-#line 5917 "tth.lex"
+#line 5906 "tth.lex"
 case 906:
 YY_RULE_SETUP
-#line 5917 "tth.lex"
+#line 5906 "tth.lex"
 {
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_ITALO);
@@ -23630,10 +23620,10 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 907:
-#line 5929 "tth.lex"
+#line 5918 "tth.lex"
 case 908:
 YY_RULE_SETUP
-#line 5929 "tth.lex"
+#line 5918 "tth.lex"
 {
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_TTO);
@@ -23647,16 +23637,16 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 909:
-#line 5941 "tth.lex"
+#line 5930 "tth.lex"
 case 910:
-#line 5942 "tth.lex"
+#line 5931 "tth.lex"
 case 911:
-#line 5943 "tth.lex"
+#line 5932 "tth.lex"
 case 912:
-#line 5944 "tth.lex"
+#line 5933 "tth.lex"
 case 913:
 YY_RULE_SETUP
-#line 5944 "tth.lex"
+#line 5933 "tth.lex"
 {
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_NORM1);
@@ -23672,7 +23662,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 914:
 YY_RULE_SETUP
-#line 5956 "tth.lex"
+#line 5945 "tth.lex"
 { /* new approach */
   if(tth_push_depth){
     yy_push_state(textsc);
@@ -23683,13 +23673,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 915:
 YY_RULE_SETUP
-#line 5963 "tth.lex"
+#line 5952 "tth.lex"
 {
   TTH_OUTPUT(TTH_HELV1); TTH_PRECLOSE(TTH_HELV2);}
 	YY_BREAK
 case 916:
 YY_RULE_SETUP
-#line 5965 "tth.lex"
+#line 5954 "tth.lex"
 {
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_BOLDO);
     TTH_CCAT(tth_font_close[tth_push_depth],TTH_BOLDC);
@@ -23697,7 +23687,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 917:
 YY_RULE_SETUP
-#line 5969 "tth.lex"
+#line 5958 "tth.lex"
 {
     TTH_CCPY(tth_font_open[tth_push_depth],tth_fonto_def);
     TTH_CCPY(tth_font_close[tth_push_depth],tth_fontc_def);
@@ -23705,12 +23695,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 918:
 YY_RULE_SETUP
-#line 5974 "tth.lex"
+#line 5963 "tth.lex"
 fprintf(tth_fdout,"<dl><dd>");TTH_PRECLOSE("</dd></dl>");
 	YY_BREAK
 case 919:
 YY_RULE_SETUP
-#line 5976 "tth.lex"
+#line 5965 "tth.lex"
 {
   fprintf(tth_fdout,"<dl><dd>");
   if(strstr(closing,"--vbox")){
@@ -23723,7 +23713,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 920:
 YY_RULE_SETUP
-#line 5985 "tth.lex"
+#line 5974 "tth.lex"
 {
   TTH_PUSH_CLOSING; fprintf(tth_fdout,"<dl><dd>");
   TTH_CCPY(closing,"</dd></dl>\n");
@@ -23732,7 +23722,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 921:
 YY_RULE_SETUP
-#line 5990 "tth.lex"
+#line 5979 "tth.lex"
 {
   fprintf(stderr,"Hangafter ignored\n");yy_push_state(lookfornum);*argchar=0;
 }
@@ -23742,45 +23732,45 @@ YY_RULE_SETUP
  Removed /{NUM} also in hangindent, 1.01 (also saved 10k size)*/
 case 922:
 YY_RULE_SETUP
-#line 5999 "tth.lex"
+#line 5988 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 case 923:
 YY_RULE_SETUP
-#line 6000 "tth.lex"
+#line 5989 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 /* Setting sizes: */
 case 924:
 YY_RULE_SETUP
-#line 6002 "tth.lex"
+#line 5991 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 case 925:
 YY_RULE_SETUP
-#line 6003 "tth.lex"
+#line 5992 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 case 926:
 YY_RULE_SETUP
-#line 6004 "tth.lex"
+#line 5993 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 case 927:
 YY_RULE_SETUP
-#line 6005 "tth.lex"
+#line 5994 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 case 928:
 YY_RULE_SETUP
-#line 6006 "tth.lex"
+#line 5995 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 /*<argclear>.|\n  yyless(0);yy_pop_state(); *argchar=0; */
 case 929:
 /* rule 929 can match eol */
 YY_RULE_SETUP
-#line 6010 "tth.lex"
+#line 5999 "tth.lex"
 {   /* Set a dimension that was defined. */
   strcpy(newcstr,yytext+1+strcspn(yytext+1,"\\"));
   *scratchstring=0;
@@ -23801,7 +23791,7 @@ YY_RULE_SETUP
 case 930:
 /* rule 930 can match eol */
 YY_RULE_SETUP
-#line 6026 "tth.lex"
+#line 6015 "tth.lex"
 {
   yy_pop_state();yyless(0);
   if(tth_debug&1024)fprintf(stderr,"Setdimen. scratchstring=%s, closing=%s, newcstr=%s, thesize=%d\n",scratchstring,closing,newcstr,thesize);
@@ -23831,7 +23821,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 931:
 YY_RULE_SETUP
-#line 6052 "tth.lex"
+#line 6041 "tth.lex"
 {
   TTH_DO_MACRO
     else{GET_DIMEN;}
@@ -23839,17 +23829,17 @@ YY_RULE_SETUP
 	YY_BREAK
 case 932:
 YY_RULE_SETUP
-#line 6056 "tth.lex"
+#line 6045 "tth.lex"
 TTH_TEX_FN("\\hskip #1{}#tthdrop1",1);
 	YY_BREAK
 case 933:
 YY_RULE_SETUP
-#line 6057 "tth.lex"
+#line 6046 "tth.lex"
 TTH_TEX_FN("\\vskip #1{}#tthdrop1",1);
 	YY_BREAK
 case 934:
 YY_RULE_SETUP
-#line 6058 "tth.lex"
+#line 6047 "tth.lex"
 {
   yy_push_state(hskip);
   yy_push_state(glue);GET_DIMEN;
@@ -23858,7 +23848,7 @@ YY_RULE_SETUP
 case 935:
 /* rule 935 can match eol */
 YY_RULE_SETUP
-#line 6062 "tth.lex"
+#line 6051 "tth.lex"
 {
   if(*scratchstring=='%'){ /* Size is in % of hsize. Guess 100 nbsp per line!*/
     for(js2=0;js2<thesize;js2++){TTH_OUTPUT("&nbsp;");}
@@ -23870,7 +23860,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 936:
 YY_RULE_SETUP
-#line 6070 "tth.lex"
+#line 6059 "tth.lex"
 {
   yy_push_state(vskip);
   yy_push_state(glue);GET_DIMEN;
@@ -23879,17 +23869,17 @@ YY_RULE_SETUP
 case 937:
 /* rule 937 can match eol */
 YY_RULE_SETUP
-#line 6074 "tth.lex"
+#line 6063 "tth.lex"
 {  /*Guess that <br /> is 14 pixels */
   for(js2=0;js2<(thesize/(SCALEDPERPIXEL*14));js2++){TTH_OUTPUT("<br />");}
   yy_pop_state(); yyless(0);
 }
 	YY_BREAK
 case 938:
-#line 6079 "tth.lex"
+#line 6068 "tth.lex"
 case 939:
 YY_RULE_SETUP
-#line 6079 "tth.lex"
+#line 6068 "tth.lex"
 {
   TTH_DO_MACRO
   else{
@@ -23901,7 +23891,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 940:
 YY_RULE_SETUP
-#line 6087 "tth.lex"
+#line 6076 "tth.lex"
 {
   if(!horizmode || horizmode==3 ||  strstr(closing,"<!--hbox") || 
      strstr(tth_texclose[tth_push_depth-1],"tthhbclose")){
@@ -23926,7 +23916,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 941:
 YY_RULE_SETUP
-#line 6109 "tth.lex"
+#line 6098 "tth.lex"
 {
   if(tth_debug&1024)fprintf(stderr,"tthhbclose Stack_ptr=%d. Closing=%s\n",tth_stack_ptr,closing);
   yy_pop_state();
@@ -23937,7 +23927,7 @@ YY_RULE_SETUP
 case 942:
 /* rule 942 can match eol */
 YY_RULE_SETUP
-#line 6117 "tth.lex"
+#line 6106 "tth.lex"
 {
   if(tth_debug&1024)fprintf(stderr,"Starting vbox\n");
   yy_pop_state();
@@ -23982,12 +23972,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 943:
 YY_RULE_SETUP
-#line 6158 "tth.lex"
+#line 6147 "tth.lex"
 {TTH_SWAP("\\tth_hbox");}
 	YY_BREAK
 case 944:
 YY_RULE_SETUP
-#line 6159 "tth.lex"
+#line 6148 "tth.lex"
 {
   if(horizmode){
     TTH_CCAT(closing,"<!--hbox-->");
@@ -23999,7 +23989,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 945:
 YY_RULE_SETUP
-#line 6167 "tth.lex"
+#line 6156 "tth.lex"
 {
   yy_push_state(hbox);
   GET_DIMEN;
@@ -24007,13 +23997,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 946:
 YY_RULE_SETUP
-#line 6171 "tth.lex"
+#line 6160 "tth.lex"
 TTH_SCAN_STRING("\\par\\hbox to\\hsize ");
 	YY_BREAK
 case 947:
 /* rule 947 can match eol */
 YY_RULE_SETUP
-#line 6173 "tth.lex"
+#line 6162 "tth.lex"
 {
   if(strstr(yytext,"\\h")){
     strcpy(boxalign," align=\"right\"");
@@ -24045,17 +24035,17 @@ YY_RULE_SETUP
 	YY_BREAK
 case 948:
 YY_RULE_SETUP
-#line 6201 "tth.lex"
+#line 6190 "tth.lex"
 horizmode=2; /* fprintf(stderr,"Set Horizmode=2.\n"); */
 	YY_BREAK
 case 949:
 YY_RULE_SETUP
-#line 6202 "tth.lex"
+#line 6191 "tth.lex"
 horizmode=3;
 	YY_BREAK
 case 950:
 YY_RULE_SETUP
-#line 6204 "tth.lex"
+#line 6193 "tth.lex"
 {
   fprintf(stderr,
 	  "**** Error: Apparently unembraced h/vbox:%s, near line %d\n",
@@ -24067,7 +24057,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 951:
 YY_RULE_SETUP
-#line 6212 "tth.lex"
+#line 6201 "tth.lex"
 { /* expand a possible macro */
   TTH_DO_MACRO else{
   yyless(0);
@@ -24078,10 +24068,10 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 952:
-#line 6221 "tth.lex"
+#line 6210 "tth.lex"
 case 953:
 YY_RULE_SETUP
-#line 6221 "tth.lex"
+#line 6210 "tth.lex"
 {
   if(strstr(closing,"</td></tr></table>")){ 
     TTH_OUTPUT("</td><td align=\"right\">"); /* align=right a compromise. */
@@ -24091,11 +24081,11 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 954:
-#line 6229 "tth.lex"
+#line 6218 "tth.lex"
 case 955:
 /* rule 955 can match eol */
 YY_RULE_SETUP
-#line 6229 "tth.lex"
+#line 6218 "tth.lex"
 {
   TTH_INC_MULTI;
   if(*(yytext+1)=='f')boxborder=1;
@@ -24127,7 +24117,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 956:
 YY_RULE_SETUP
-#line 6258 "tth.lex"
+#line 6247 "tth.lex"
 {
   sscanf(yytext+7,"%d",&js2);
   js2++;
@@ -24138,7 +24128,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 957:
 YY_RULE_SETUP
-#line 6266 "tth.lex"
+#line 6255 "tth.lex"
 {
   yy_push_state(getbox); /* Get the box definition, then define */
   yy_push_state(getdef); /* Get the next cs and leave in defchar.*/
@@ -24147,7 +24137,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 958:
 YY_RULE_SETUP
-#line 6273 "tth.lex"
+#line 6262 "tth.lex"
 {
   TTH_CCPY(argchar,yytext);
   TTH_CCAT(argchar," ");
@@ -24161,18 +24151,18 @@ YY_RULE_SETUP
 case 959:
 /* rule 959 can match eol */
 YY_RULE_SETUP
-#line 6282 "tth.lex"
+#line 6271 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 960:
 YY_RULE_SETUP
-#line 6283 "tth.lex"
+#line 6272 "tth.lex"
 
 	YY_BREAK
 case 961:
 /* rule 961 can match eol */
 YY_RULE_SETUP
-#line 6284 "tth.lex"
+#line 6273 "tth.lex"
 {
   yyless(0);
   yy_pop_state();
@@ -24184,34 +24174,34 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 962:
-#line 6295 "tth.lex"
+#line 6284 "tth.lex"
 /*\\vbox{SP}+to	|*/
 case 963:
-#line 6297 "tth.lex"
+#line 6286 "tth.lex"
 case 964:
-#line 6298 "tth.lex"
+#line 6287 "tth.lex"
 case 965:
 YY_RULE_SETUP
-#line 6298 "tth.lex"
+#line 6287 "tth.lex"
 GET_DIMEN
 	YY_BREAK
 case 966:
 YY_RULE_SETUP
-#line 6299 "tth.lex"
+#line 6288 "tth.lex"
 TTH_TEX_FN_OPT("#tthdrop3",3,"");
 	YY_BREAK
 /* Looking constructs */
 case 967:
 YY_RULE_SETUP
-#line 6302 "tth.lex"
+#line 6291 "tth.lex"
 {TTH_PUSH_CLOSING;TTH_CCPY(closing,argchar);
 			argchar[0]=0;yy_pop_state();}
 	YY_BREAK
 case 968:
-#line 6305 "tth.lex"
+#line 6294 "tth.lex"
 case 969:
 YY_RULE_SETUP
-#line 6305 "tth.lex"
+#line 6294 "tth.lex"
 {
       strcpy(dupstore,"{");strcat(dupstore,yytext);strcat(dupstore,"}");
       TTH_SCAN_STRING(dupstore);
@@ -24219,13 +24209,13 @@ YY_RULE_SETUP
       }
 	YY_BREAK
 case 970:
-#line 6311 "tth.lex"
+#line 6300 "tth.lex"
 case 971:
-#line 6312 "tth.lex"
+#line 6301 "tth.lex"
 case 972:
 /* rule 972 can match eol */
 YY_RULE_SETUP
-#line 6312 "tth.lex"
+#line 6301 "tth.lex"
 { 
   /* Count braces, save text in dupstore */
   TTH_INC_MULTI;
@@ -24237,21 +24227,21 @@ YY_RULE_SETUP
 	YY_BREAK
 case 973:
 YY_RULE_SETUP
-#line 6320 "tth.lex"
+#line 6309 "tth.lex"
 yy_push_state(number);jscratch=0;
 	YY_BREAK
 case 974:
 YY_RULE_SETUP
-#line 6321 "tth.lex"
+#line 6310 "tth.lex"
 yy_push_state(matchbrace);
 	YY_BREAK
 /* Prevent an expanding state from expanding:
     \hsize, natbib cites in footnotes*/
 case 975:
-#line 6325 "tth.lex"
+#line 6314 "tth.lex"
 case 976:
 YY_RULE_SETUP
-#line 6325 "tth.lex"
+#line 6314 "tth.lex"
 {
   if(tth_debug&4)fprintf(stderr,"We don't expand:%s \n",yytext);
   strcat(defstore,yytext);strcpy(xpndstring," ");
@@ -24259,7 +24249,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 977:
 YY_RULE_SETUP
-#line 6329 "tth.lex"
+#line 6318 "tth.lex"
 {
   if(tth_debug&4)fprintf(stderr,"Attempt to expand:%s ",yytext);
   TTH_DO_MACRO
@@ -24273,7 +24263,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 978:
 YY_RULE_SETUP
-#line 6339 "tth.lex"
+#line 6328 "tth.lex"
 { /* tth pseudo commands are unexpandable. */
     strcat(defstore,yytext);
     /* strcpy(xpndstring," "); And no termination is needed. */
@@ -24281,19 +24271,19 @@ YY_RULE_SETUP
 	YY_BREAK
 case 979:
 YY_RULE_SETUP
-#line 6343 "tth.lex"
+#line 6332 "tth.lex"
 {
   strcat(defstore,yytext+9);    strcpy(xpndstring," "); 
 }
 	YY_BREAK
 case 980:
 YY_RULE_SETUP
-#line 6346 "tth.lex"
+#line 6335 "tth.lex"
 
 	YY_BREAK
 case 981:
 YY_RULE_SETUP
-#line 6348 "tth.lex"
+#line 6337 "tth.lex"
 {
   strcat(defstore,yytext);
   yy_pop_state();
@@ -24314,13 +24304,13 @@ YY_RULE_SETUP
      If it is not, then output the space denoting the end of previous macro*/
 case 982:
 YY_RULE_SETUP
-#line 6365 "tth.lex"
+#line 6354 "tth.lex"
 strcat(defstore,yytext);*xpndstring=0;
 	YY_BREAK
 case 983:
 /* rule 983 can match eol */
 YY_RULE_SETUP
-#line 6366 "tth.lex"
+#line 6355 "tth.lex"
 {
     if(strcspn(yytext,"\n")==0) TTH_INC_LINE;
   strcat(defstore,xpndstring);strcat(defstore,yytext);*xpndstring=0;
@@ -24328,17 +24318,17 @@ YY_RULE_SETUP
 	YY_BREAK
 case 984:
 YY_RULE_SETUP
-#line 6370 "tth.lex"
+#line 6359 "tth.lex"
 strcat(defstore,yytext); /* Ensure \\ doesn't escape. */
 	YY_BREAK
 case 985:
 YY_RULE_SETUP
-#line 6371 "tth.lex"
+#line 6360 "tth.lex"
 strcat(defstore,yytext); /* Don't count escaped { */
 	YY_BREAK
 case 986:
 YY_RULE_SETUP
-#line 6372 "tth.lex"
+#line 6361 "tth.lex"
 {
    if(tth_debug&16) fprintf(stderr,"Open brace in [e]def, count=%d\n",
 			    bracecount);
@@ -24347,12 +24337,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 987:
 YY_RULE_SETUP
-#line 6377 "tth.lex"
+#line 6366 "tth.lex"
 strcat(defstore,yytext);
 	YY_BREAK
 case 988:
 YY_RULE_SETUP
-#line 6378 "tth.lex"
+#line 6367 "tth.lex"
 {
   if(!bracecount){
     if(tth_debug&16) fprintf(stderr,"Close brace ending [e]def,count=%d\n",
@@ -24389,24 +24379,24 @@ YY_RULE_SETUP
 case 989:
 /* rule 989 can match eol */
 YY_RULE_SETUP
-#line 6410 "tth.lex"
+#line 6399 "tth.lex"
 TTH_INC_LINE;TTH_CHECK_LENGTH;strcat(defstore,yytext);
 	YY_BREAK
 case 990:
 /* rule 990 can match eol */
 YY_RULE_SETUP
-#line 6411 "tth.lex"
+#line 6400 "tth.lex"
 strcat(defstore,yytext);
 	YY_BREAK
 case 991:
 /* rule 991 can match eol */
 YY_RULE_SETUP
-#line 6413 "tth.lex"
+#line 6402 "tth.lex"
 TTH_INC_MULTI;  /*Necessary for roots to work etc.*/
 	YY_BREAK
 case 992:
 YY_RULE_SETUP
-#line 6414 "tth.lex"
+#line 6403 "tth.lex"
 {
   yyless(0);yy_pop_state();
   yy_push_state(macarg);yy_push_state(embracetok);yy_push_state(optag);
@@ -24415,7 +24405,7 @@ YY_RULE_SETUP
 case 993:
 /* rule 993 can match eol */
 YY_RULE_SETUP
-#line 6418 "tth.lex"
+#line 6407 "tth.lex"
 {
   yyless(0);yy_pop_state();
   sprintf(scratchstring,"#%d",jarg);
@@ -24449,7 +24439,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 994:
 YY_RULE_SETUP
-#line 6448 "tth.lex"
+#line 6437 "tth.lex"
 { /* Don't add space after verb */
   strcat(dupstore,yytext);
   *(dupstore+strlen(dupstore)-1)=0;
@@ -24457,10 +24447,10 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 995:
-#line 6454 "tth.lex"
+#line 6443 "tth.lex"
 case 996:
 YY_RULE_SETUP
-#line 6454 "tth.lex"
+#line 6443 "tth.lex"
 { 
   strcat(dupstore,yytext);
   strcpy(dupstore+strlen(dupstore)-1," ");
@@ -24469,17 +24459,17 @@ YY_RULE_SETUP
  }
 	YY_BREAK
 case 997:
-#line 6461 "tth.lex"
+#line 6450 "tth.lex"
 case 998:
 YY_RULE_SETUP
-#line 6461 "tth.lex"
+#line 6450 "tth.lex"
 bracecount++;strcat(dupstore,yytext);
 	YY_BREAK
 case 999:
-#line 6463 "tth.lex"
+#line 6452 "tth.lex"
 case 1000:
 YY_RULE_SETUP
-#line 6463 "tth.lex"
+#line 6452 "tth.lex"
 {
 	if(bracecount == 0){
 	  sprintf(argchar,"#%d",jarg);
@@ -24518,13 +24508,13 @@ YY_RULE_SETUP
         }
 	YY_BREAK
 case 1001:
-#line 6500 "tth.lex"
+#line 6489 "tth.lex"
 case 1002:
-#line 6501 "tth.lex"
+#line 6490 "tth.lex"
 case 1003:
 /* rule 1003 can match eol */
 YY_RULE_SETUP
-#line 6501 "tth.lex"
+#line 6490 "tth.lex"
 {
   /* Count down braces. Save, or complete.
     storetype=
@@ -24587,7 +24577,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1004:
 YY_RULE_SETUP
-#line 6560 "tth.lex"
+#line 6549 "tth.lex"
 {
   if(verbinput){ TTH_OUTPUT(yytext);} 
   else{
@@ -24598,12 +24588,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1005:
 YY_RULE_SETUP
-#line 6568 "tth.lex"
+#line 6557 "tth.lex"
 TTH_TEX_FN("\\tth_grabverbname#tthdrop1",1);
 	YY_BREAK
 case 1006:
 YY_RULE_SETUP
-#line 6569 "tth.lex"
+#line 6558 "tth.lex"
 { /* Set the name of verb environment */
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
     strcpy(tth_verbenviron,margs[jscratch]);
@@ -24621,7 +24611,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1007:
 YY_RULE_SETUP
-#line 6583 "tth.lex"
+#line 6572 "tth.lex"
 {/* Redefinable verbatim end command */
   if(verbinput){ TTH_OUTPUT(yytext);
   }else{
@@ -24646,24 +24636,24 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1008:
 YY_RULE_SETUP
-#line 6605 "tth.lex"
+#line 6594 "tth.lex"
 {
   verbinput=0;
   TTH_TEXCLOSE else{TTH_CLOSEGROUP;TTH_POP_CLOSING;yy_pop_state();}
 }
 	YY_BREAK
 case 1009:
-#line 6610 "tth.lex"
+#line 6599 "tth.lex"
 case 1010:
 YY_RULE_SETUP
-#line 6610 "tth.lex"
+#line 6599 "tth.lex"
 {  
   TTH_TEXCLOSE else{TTH_CLOSEGROUP;TTH_POP_CLOSING;yy_pop_state();}
 }
 	YY_BREAK
 case 1011:
 YY_RULE_SETUP
-#line 6613 "tth.lex"
+#line 6602 "tth.lex"
 {
   TTH_OUTPUT(yytext);TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"}");
@@ -24673,7 +24663,7 @@ YY_RULE_SETUP
 case 1012:
 /* rule 1012 can match eol */
 YY_RULE_SETUP
-#line 6620 "tth.lex"
+#line 6609 "tth.lex"
 {
   TTH_INC_MULTI;
   yy_pop_state();
@@ -24689,7 +24679,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1013:
 YY_RULE_SETUP
-#line 6632 "tth.lex"
+#line 6621 "tth.lex"
 { /* The dimension is in \hsizes */
   thesize=100*anumber;
   strcpy(scratchstring,"%");
@@ -24700,12 +24690,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1014:
 YY_RULE_SETUP
-#line 6639 "tth.lex"
+#line 6628 "tth.lex"
 GET_DIMEN; /* Do nothing outside for now */
 	YY_BREAK
 case 1015:
 YY_RULE_SETUP
-#line 6640 "tth.lex"
+#line 6629 "tth.lex"
 { /* expand a possible macro */
   TTH_DO_MACRO else { /* pop state if uninterpretable */
     if(tth_debug&1024) fprintf(stderr,"Unknown dimension %s\n",yytext);
@@ -24716,12 +24706,12 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1016:
 YY_RULE_SETUP
-#line 6647 "tth.lex"
+#line 6636 "tth.lex"
 /* Rip this out of the way */
 	YY_BREAK
 case 1017:
 YY_RULE_SETUP
-#line 6648 "tth.lex"
+#line 6637 "tth.lex"
 {/* We find a number. Scale instead. Shouldn't be in TeX*/
   if(! sscanf(yytext,"%f",&bnumber) ){
     fprintf(stderr,"**** Uninterpreted scaled dimension value:%s\n",yytext);
@@ -24733,22 +24723,22 @@ YY_RULE_SETUP
 case 1018:
 /* rule 1018 can match eol */
 YY_RULE_SETUP
-#line 6656 "tth.lex"
+#line 6645 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 1019:
 YY_RULE_SETUP
-#line 6657 "tth.lex"
+#line 6646 "tth.lex"
 /* Ignore spaces */
 	YY_BREAK
 case 1020:
 YY_RULE_SETUP
-#line 6658 "tth.lex"
+#line 6647 "tth.lex"
 /* and equal signs */
 	YY_BREAK
 case 1021:
 YY_RULE_SETUP
-#line 6659 "tth.lex"
+#line 6648 "tth.lex"
 { /* If we find a number store it.*/
   TTH_CCAT(argchar,yytext);
   if(! sscanf(argchar,"%f",&anumber) ){
@@ -24761,13 +24751,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1022:
 YY_RULE_SETUP
-#line 6668 "tth.lex"
+#line 6657 "tth.lex"
 strcat(argchar,yytext);
 	YY_BREAK
 /* If this is an unknown token, pop extra lookforunit state too.*/
 case 1023:
 YY_RULE_SETUP
-#line 6670 "tth.lex"
+#line 6659 "tth.lex"
 {
   TTH_DO_MACRO
   else{ 
@@ -24781,47 +24771,47 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1024:
 YY_RULE_SETUP
-#line 6680 "tth.lex"
+#line 6669 "tth.lex"
 {
   fprintf(tth_fdout,"%s%s",yytext,argchar);yy_pop_state();}
 	YY_BREAK
 case 1025:
 /* rule 1025 can match eol */
 YY_RULE_SETUP
-#line 6682 "tth.lex"
+#line 6671 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 1026:
 YY_RULE_SETUP
-#line 6683 "tth.lex"
+#line 6672 "tth.lex"
 
 	YY_BREAK
 case 1027:
 YY_RULE_SETUP
-#line 6684 "tth.lex"
+#line 6673 "tth.lex"
 {TTH_CCPY(argchar,yytext);yy_pop_state();
 			if(tth_verb) fprintf(stderr,"File:%s",yytext);}
 	YY_BREAK
 case 1028:
 /* rule 1028 can match eol */
 YY_RULE_SETUP
-#line 6686 "tth.lex"
+#line 6675 "tth.lex"
 TTH_INC_MULTI;tthglue=1;GET_DIMEN  
 	YY_BREAK
 /* nested glue not allowed */
 case 1029:
 /* rule 1029 can match eol */
 YY_RULE_SETUP
-#line 6688 "tth.lex"
+#line 6677 "tth.lex"
 tthglue=0;yyless(0);yy_pop_state();
 	YY_BREAK
 case 1030:
-#line 6691 "tth.lex"
+#line 6680 "tth.lex"
 case 1031:
-#line 6692 "tth.lex"
+#line 6681 "tth.lex"
 case 1032:
 YY_RULE_SETUP
-#line 6692 "tth.lex"
+#line 6681 "tth.lex"
 { /* already embraced */
   strcat(dupstore,"{");
   TTH_SCAN_STRING(dupstore);
@@ -24832,21 +24822,21 @@ YY_RULE_SETUP
 case 1033:
 /* rule 1033 can match eol */
 YY_RULE_SETUP
-#line 6699 "tth.lex"
+#line 6688 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 1034:
 YY_RULE_SETUP
-#line 6700 "tth.lex"
+#line 6689 "tth.lex"
 
 	YY_BREAK
 case 1035:
-#line 6702 "tth.lex"
+#line 6691 "tth.lex"
 case 1036:
-#line 6703 "tth.lex"
+#line 6692 "tth.lex"
 case 1037:
 YY_RULE_SETUP
-#line 6703 "tth.lex"
+#line 6692 "tth.lex"
 { /* Enclose a bare token for using as argument.*/
       strcat(dupstore,"{");strcat(dupstore,yytext);strcat(dupstore,"}");
       TTH_SCAN_STRING(dupstore);
@@ -24855,10 +24845,10 @@ YY_RULE_SETUP
       }
 	YY_BREAK
 case 1038:
-#line 6710 "tth.lex"
+#line 6699 "tth.lex"
 case 1039:
 YY_RULE_SETUP
-#line 6710 "tth.lex"
+#line 6699 "tth.lex"
 {
   sprintf(scratchstring,"{%s",swapchar);
   TTH_SCAN_STRING(scratchstring);*swapchar=0;yy_pop_state();
@@ -24866,7 +24856,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1040:
 YY_RULE_SETUP
-#line 6714 "tth.lex"
+#line 6703 "tth.lex"
 {
   fprintf(stderr,"**** Error: swaparg fault:%s:%s:\n",swapchar,yytext);
   yy_pop_state();}
@@ -24875,13 +24865,13 @@ YY_RULE_SETUP
 case 1041:
 /* rule 1041 can match eol */
 YY_RULE_SETUP
-#line 6719 "tth.lex"
+#line 6708 "tth.lex"
 TTH_INC_LINE;
 	YY_BREAK
 case 1042:
 /* rule 1042 can match eol */
 YY_RULE_SETUP
-#line 6720 "tth.lex"
+#line 6709 "tth.lex"
 {
   TTH_INC_LINE;
   fprintf(tth_fdout,"%s",yytext);
@@ -24892,7 +24882,7 @@ YY_RULE_SETUP
 case 1043:
 /* rule 1043 can match eol */
 YY_RULE_SETUP
-#line 6726 "tth.lex"
+#line 6715 "tth.lex"
 { /* Final route for all cases once expanded. */
   TTH_INC_MULTI;
   if(strlen(expchar)){
@@ -24922,7 +24912,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1044:
 YY_RULE_SETUP
-#line 6753 "tth.lex"
+#line 6742 "tth.lex"
 {
   if(tth_debug&8) fprintf(stderr,
 		 "Nothing to expand in exptok[arg]. Rescan:{%s}\n",yytext);
@@ -24932,7 +24922,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1045:
 YY_RULE_SETUP
-#line 6759 "tth.lex"
+#line 6748 "tth.lex"
 { /* fix for _\| etc */
   if(tth_debug&8)fprintf(stderr,"Exptokarg, expanding:%s\n",yytext);
   TTH_DO_MACRO
@@ -24945,7 +24935,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1046:
 YY_RULE_SETUP
-#line 6769 "tth.lex"
+#line 6758 "tth.lex"
 {
   yyless(0);yy_pop_state();
   if(strlen(exptex)){TTH_SCAN_STRING(exptex); *exptex=0;}
@@ -24953,7 +24943,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1047:
 YY_RULE_SETUP
-#line 6773 "tth.lex"
+#line 6762 "tth.lex"
 { /* fix for _\| etc OUT for tokexp. */
   if(tth_debug&8)fprintf(stderr,"Tokexp, expanding:%s\n",yytext);
   TTH_DO_MACRO
@@ -24967,7 +24957,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1048:
 YY_RULE_SETUP
-#line 6784 "tth.lex"
+#line 6773 "tth.lex"
 {
   if(*halstring){ /* In a display table has to be a null inline*/
   }else{
@@ -24981,12 +24971,12 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 1049:
-#line 6797 "tth.lex"
+#line 6786 "tth.lex"
 case 1050:
-#line 6798 "tth.lex"
+#line 6787 "tth.lex"
 case 1051:
 YY_RULE_SETUP
-#line 6798 "tth.lex"
+#line 6787 "tth.lex"
 {
   if(tth_debug&2) 
     fprintf(stderr,"Starting textbox equation, line %d\n",tth_num_lines);
@@ -25000,14 +24990,14 @@ YY_RULE_SETUP
 	YY_BREAK
 /* $ Will be superceded by equation grab for non-null eqs */
 case 1052:
-#line 6810 "tth.lex"
+#line 6799 "tth.lex"
 case 1053:
-#line 6811 "tth.lex"
+#line 6800 "tth.lex"
 case 1054:
-#line 6812 "tth.lex"
+#line 6801 "tth.lex"
 case 1055:
 YY_RULE_SETUP
-#line 6812 "tth.lex"
+#line 6801 "tth.lex"
 { 
   if(displaystyle) fprintf(stderr,"Starting displaystyle incorrect.\n");
   displaystyle=0;
@@ -25027,13 +25017,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1056:
 YY_RULE_SETUP
-#line 6829 "tth.lex"
+#line 6818 "tth.lex"
 
 	YY_BREAK
 case 1057:
 /* rule 1057 can match eol */
 YY_RULE_SETUP
-#line 6831 "tth.lex"
+#line 6820 "tth.lex"
 {
   if(strcspn(yytext,"_^")==1){
     if(tth_debug&3) fprintf(stderr,"Special In line Eq:%s\n",yytext);
@@ -25060,11 +25050,11 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1058:
 /* rule 1058 can match eol */
-#line 6856 "tth.lex"
+#line 6845 "tth.lex"
 case 1059:
 /* rule 1059 can match eol */
 YY_RULE_SETUP
-#line 6856 "tth.lex"
+#line 6845 "tth.lex"
 { 
   if(tth_debug&33)fprintf(stderr,"Display Table:\n%s\n",yytext);
   fprintf(tth_fdout,"<dl><dd>");
@@ -25079,7 +25069,7 @@ YY_RULE_SETUP
     Does not permit non-output commands before the halign. TeX does.*/
 case 1060:
 YY_RULE_SETUP
-#line 6867 "tth.lex"
+#line 6856 "tth.lex"
 {
   yy_push_state(halsearch);
 }
@@ -25087,12 +25077,12 @@ YY_RULE_SETUP
 case 1061:
 /* rule 1061 can match eol */
 YY_RULE_SETUP
-#line 6871 "tth.lex"
+#line 6860 "tth.lex"
 TTH_INC_MULTI;
 	YY_BREAK
 case 1062:
 YY_RULE_SETUP
-#line 6872 "tth.lex"
+#line 6861 "tth.lex"
 {
   if(tth_debug&33)fprintf(stderr,"Display Table:\n%s\n",yytext);
   yyless(0);
@@ -25106,7 +25096,7 @@ YY_RULE_SETUP
 case 1063:
 /* rule 1063 can match eol */
 YY_RULE_SETUP
-#line 6881 "tth.lex"
+#line 6870 "tth.lex"
 {
   yyless(0);
   yy_pop_state();
@@ -25115,11 +25105,11 @@ YY_RULE_SETUP
 	YY_BREAK
 /* Don't recognize display equations except in certain allowed states. */
 case 1064:
-#line 6889 "tth.lex"
+#line 6878 "tth.lex"
 case 1065:
 /* rule 1065 can match eol */
 YY_RULE_SETUP
-#line 6889 "tth.lex"
+#line 6878 "tth.lex"
 {
   {
     if(tth_debug&3) fprintf(stderr,"Display Eq:\n%s\n",yytext);
@@ -25150,13 +25140,13 @@ YY_RULE_SETUP
 /* Translate single characters. */
 case 1066:
 YY_RULE_SETUP
-#line 6917 "tth.lex"
+#line 6906 "tth.lex"
 TTH_OUTPUTH(yytext+strlen(yytext)-1);
 	YY_BREAK
 case 1067:
 /* rule 1067 can match eol */
 YY_RULE_SETUP
-#line 6919 "tth.lex"
+#line 6908 "tth.lex"
 {
   TTH_INC_MULTI;
   sscanf(yytext+5,"%d",&jscratch);
@@ -25168,7 +25158,7 @@ YY_RULE_SETUP
 /* Latin Characters and other non-math but output correctly in math.*/
 case 1068:
 YY_RULE_SETUP
-#line 6928 "tth.lex"
+#line 6917 "tth.lex"
 { /* Circumvent spaces after accents.*/
   strcpy(scratchstring,yytext);
   unput(*(scratchstring+strlen(scratchstring)-1));
@@ -25176,556 +25166,556 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 1069:
-#line 6935 "tth.lex"
+#line 6924 "tth.lex"
 case 1070:
-#line 6936 "tth.lex"
+#line 6925 "tth.lex"
 case 1071:
 YY_RULE_SETUP
-#line 6936 "tth.lex"
+#line 6925 "tth.lex"
 TTH_OUTPUTH("&nbsp;");
 	YY_BREAK
 case 1072:
 /* rule 1072 can match eol */
 YY_RULE_SETUP
-#line 6937 "tth.lex"
+#line 6926 "tth.lex"
 TTH_OUTPUTH("&nbsp;");TTH_INC_LINE;
 	YY_BREAK
 case 1073:
 YY_RULE_SETUP
-#line 6938 "tth.lex"
+#line 6927 "tth.lex"
 TTH_OUTPUTH("&nbsp;&nbsp;");
 	YY_BREAK
 case 1074:
 YY_RULE_SETUP
-#line 6939 "tth.lex"
+#line 6928 "tth.lex"
 TTH_OUTPUTH("&nbsp;&nbsp;&nbsp;");
 	YY_BREAK
 case 1075:
 YY_RULE_SETUP
-#line 6940 "tth.lex"
+#line 6929 "tth.lex"
 TTH_OUTPUTH("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 	YY_BREAK
 case 1076:
 YY_RULE_SETUP
-#line 6941 "tth.lex"
+#line 6930 "tth.lex"
 TTH_OUTPUTH("&#198;");
 	YY_BREAK
 case 1077:
 YY_RULE_SETUP
-#line 6942 "tth.lex"
+#line 6931 "tth.lex"
 TTH_OUTPUTH("&#193;");
 	YY_BREAK
 case 1078:
 YY_RULE_SETUP
-#line 6943 "tth.lex"
+#line 6932 "tth.lex"
 TTH_OUTPUTH("&#194;");
 	YY_BREAK
 case 1079:
 YY_RULE_SETUP
-#line 6944 "tth.lex"
+#line 6933 "tth.lex"
 TTH_OUTPUTH("&#192;");
 	YY_BREAK
 case 1080:
-#line 6946 "tth.lex"
+#line 6935 "tth.lex"
 case 1081:
 YY_RULE_SETUP
-#line 6946 "tth.lex"
+#line 6935 "tth.lex"
 TTH_OUTPUTH("&#197;");
 	YY_BREAK
 case 1082:
 YY_RULE_SETUP
-#line 6947 "tth.lex"
+#line 6936 "tth.lex"
 TTH_OUTPUTH("&#195;");
 	YY_BREAK
 case 1083:
-#line 6949 "tth.lex"
+#line 6938 "tth.lex"
 case 1084:
 YY_RULE_SETUP
-#line 6949 "tth.lex"
+#line 6938 "tth.lex"
 TTH_OUTPUTH("&#196;");
 	YY_BREAK
 /*  \\c{SP}?C    | */
 case 1085:
 YY_RULE_SETUP
-#line 6951 "tth.lex"
+#line 6940 "tth.lex"
 TTH_OUTPUTH("&#199;");
 	YY_BREAK
 case 1086:
 YY_RULE_SETUP
-#line 6952 "tth.lex"
+#line 6941 "tth.lex"
 TTH_OUTPUTH("&#201;");
 	YY_BREAK
 case 1087:
 YY_RULE_SETUP
-#line 6953 "tth.lex"
+#line 6942 "tth.lex"
 TTH_OUTPUTH("&#202;");
 	YY_BREAK
 case 1088:
 YY_RULE_SETUP
-#line 6954 "tth.lex"
+#line 6943 "tth.lex"
 TTH_OUTPUTH("&#200;");
 	YY_BREAK
 case 1089:
-#line 6956 "tth.lex"
+#line 6945 "tth.lex"
 case 1090:
 YY_RULE_SETUP
-#line 6956 "tth.lex"
+#line 6945 "tth.lex"
 TTH_OUTPUTH("&#203;");
 	YY_BREAK
 case 1091:
 YY_RULE_SETUP
-#line 6957 "tth.lex"
+#line 6946 "tth.lex"
 TTH_OUTPUTH("&#204;");
 	YY_BREAK
 case 1092:
 YY_RULE_SETUP
-#line 6958 "tth.lex"
+#line 6947 "tth.lex"
 TTH_OUTPUTH("&#205;");
 	YY_BREAK
 case 1093:
 YY_RULE_SETUP
-#line 6959 "tth.lex"
+#line 6948 "tth.lex"
 TTH_OUTPUTH("&#206;");
 	YY_BREAK
 case 1094:
-#line 6961 "tth.lex"
+#line 6950 "tth.lex"
 case 1095:
 YY_RULE_SETUP
-#line 6961 "tth.lex"
+#line 6950 "tth.lex"
 TTH_OUTPUTH("&#207;");
 	YY_BREAK
 case 1096:
 YY_RULE_SETUP
-#line 6962 "tth.lex"
+#line 6951 "tth.lex"
 TTH_OUTPUTH("&#209;");
 	YY_BREAK
 case 1097:
 YY_RULE_SETUP
-#line 6963 "tth.lex"
+#line 6952 "tth.lex"
 TTH_OUTPUTH("&#210;");
 	YY_BREAK
 case 1098:
 YY_RULE_SETUP
-#line 6964 "tth.lex"
+#line 6953 "tth.lex"
 TTH_OUTPUTH("&#211;");
 	YY_BREAK
 case 1099:
 YY_RULE_SETUP
-#line 6965 "tth.lex"
+#line 6954 "tth.lex"
 TTH_OUTPUTH("&#212;");
 	YY_BREAK
 case 1100:
 YY_RULE_SETUP
-#line 6966 "tth.lex"
+#line 6955 "tth.lex"
 TTH_OUTPUTH("&#216;");
 	YY_BREAK
 case 1101:
 YY_RULE_SETUP
-#line 6967 "tth.lex"
+#line 6956 "tth.lex"
 TTH_OUTPUTH("&#213;");
 	YY_BREAK
 case 1102:
-#line 6969 "tth.lex"
+#line 6958 "tth.lex"
 case 1103:
 YY_RULE_SETUP
-#line 6969 "tth.lex"
+#line 6958 "tth.lex"
 TTH_OUTPUTH("&#214;");
 	YY_BREAK
 case 1104:
 YY_RULE_SETUP
-#line 6970 "tth.lex"
+#line 6959 "tth.lex"
 TTH_OUTPUTH("&#182;");
 	YY_BREAK
 case 1105:
 YY_RULE_SETUP
-#line 6971 "tth.lex"
+#line 6960 "tth.lex"
 TTH_OUTPUTH("&#167;");
 	YY_BREAK
 case 1106:
 YY_RULE_SETUP
-#line 6972 "tth.lex"
+#line 6961 "tth.lex"
 TTH_OUTPUTH("&#218;");
 	YY_BREAK
 case 1107:
 YY_RULE_SETUP
-#line 6973 "tth.lex"
+#line 6962 "tth.lex"
 TTH_OUTPUTH("&#219;");
 	YY_BREAK
 case 1108:
 YY_RULE_SETUP
-#line 6974 "tth.lex"
+#line 6963 "tth.lex"
 TTH_OUTPUTH("&#217;");
 	YY_BREAK
 case 1109:
-#line 6976 "tth.lex"
+#line 6965 "tth.lex"
 case 1110:
 YY_RULE_SETUP
-#line 6976 "tth.lex"
+#line 6965 "tth.lex"
 TTH_OUTPUTH("&#220;");
 	YY_BREAK
 case 1111:
 YY_RULE_SETUP
-#line 6977 "tth.lex"
+#line 6966 "tth.lex"
 TTH_OUTPUTH("&#221;");
 	YY_BREAK
 case 1112:
 YY_RULE_SETUP
-#line 6978 "tth.lex"
+#line 6967 "tth.lex"
 TTH_OUTPUTH("&amp;");
 	YY_BREAK
 case 1113:
 YY_RULE_SETUP
-#line 6979 "tth.lex"
+#line 6968 "tth.lex"
 TTH_OUTPUTH("&amp;");
 	YY_BREAK
 case 1114:
 YY_RULE_SETUP
-#line 6980 "tth.lex"
+#line 6969 "tth.lex"
 TTH_OUTPUTH("&#230;");
 	YY_BREAK
 case 1115:
 YY_RULE_SETUP
-#line 6981 "tth.lex"
+#line 6970 "tth.lex"
 TTH_OUTPUTH("&#224;");
 	YY_BREAK
 case 1116:
 YY_RULE_SETUP
-#line 6982 "tth.lex"
+#line 6971 "tth.lex"
 TTH_OUTPUTH("&#225;");
 	YY_BREAK
 case 1117:
 YY_RULE_SETUP
-#line 6983 "tth.lex"
+#line 6972 "tth.lex"
 TTH_OUTPUTH("&#226;");
 	YY_BREAK
 case 1118:
 YY_RULE_SETUP
-#line 6984 "tth.lex"
+#line 6973 "tth.lex"
 TTH_OUTPUTH("&#227;");
 	YY_BREAK
 case 1119:
-#line 6986 "tth.lex"
+#line 6975 "tth.lex"
 case 1120:
 YY_RULE_SETUP
-#line 6986 "tth.lex"
+#line 6975 "tth.lex"
 TTH_OUTPUTH("&#228;");
 	YY_BREAK
 case 1121:
-#line 6988 "tth.lex"
+#line 6977 "tth.lex"
 case 1122:
 YY_RULE_SETUP
-#line 6988 "tth.lex"
+#line 6977 "tth.lex"
 TTH_OUTPUTH("&#229;");
 	YY_BREAK
 /*  \\c{SP}?c              | */
 case 1123:
 YY_RULE_SETUP
-#line 6990 "tth.lex"
+#line 6979 "tth.lex"
 TTH_OUTPUTH("&#231;");
 	YY_BREAK
 case 1124:
 YY_RULE_SETUP
-#line 6991 "tth.lex"
+#line 6980 "tth.lex"
 TTH_OUTPUTH("^");
 	YY_BREAK
 case 1125:
 YY_RULE_SETUP
-#line 6992 "tth.lex"
+#line 6981 "tth.lex"
 TTH_OUTPUTH("&#169;");
 	YY_BREAK
 case 1126:
 YY_RULE_SETUP
-#line 6993 "tth.lex"
+#line 6982 "tth.lex"
 TTH_OUTPUTH("&#233;");
 	YY_BREAK
 case 1127:
 YY_RULE_SETUP
-#line 6994 "tth.lex"
+#line 6983 "tth.lex"
 TTH_OUTPUTH("&#234;");
 	YY_BREAK
 case 1128:
 YY_RULE_SETUP
-#line 6995 "tth.lex"
+#line 6984 "tth.lex"
 TTH_OUTPUTH("&#232;");
 	YY_BREAK
 case 1129:
 YY_RULE_SETUP
-#line 6996 "tth.lex"
+#line 6985 "tth.lex"
 TTH_OUTPUTH("&#240;");
 	YY_BREAK
 case 1130:
-#line 6998 "tth.lex"
+#line 6987 "tth.lex"
 case 1131:
 YY_RULE_SETUP
-#line 6998 "tth.lex"
+#line 6987 "tth.lex"
 TTH_OUTPUTH("&#235;");
 	YY_BREAK
 case 1132:
-#line 7000 "tth.lex"
+#line 6989 "tth.lex"
 case 1133:
 YY_RULE_SETUP
-#line 7000 "tth.lex"
+#line 6989 "tth.lex"
 TTH_OUTPUTH("&#62;");
 	YY_BREAK
 case 1134:
-#line 7002 "tth.lex"
+#line 6991 "tth.lex"
 case 1135:
 YY_RULE_SETUP
-#line 7002 "tth.lex"
+#line 6991 "tth.lex"
 TTH_OUTPUTH("&lt;");
 	YY_BREAK
 case 1136:
 YY_RULE_SETUP
-#line 7003 "tth.lex"
+#line 6992 "tth.lex"
 TTH_OUTPUTH("&nbsp;")
 	YY_BREAK
 case 1137:
-#line 7005 "tth.lex"
+#line 6994 "tth.lex"
 case 1138:
 YY_RULE_SETUP
-#line 7005 "tth.lex"
+#line 6994 "tth.lex"
 TTH_OUTPUTH("&#236;");
 	YY_BREAK
 case 1139:
-#line 7007 "tth.lex"
+#line 6996 "tth.lex"
 case 1140:
-#line 7008 "tth.lex"
+#line 6997 "tth.lex"
 case 1141:
 YY_RULE_SETUP
-#line 7008 "tth.lex"
+#line 6997 "tth.lex"
 TTH_OUTPUTH("&#237;");
 	YY_BREAK
 case 1142:
-#line 7010 "tth.lex"
+#line 6999 "tth.lex"
 case 1143:
 YY_RULE_SETUP
-#line 7010 "tth.lex"
+#line 6999 "tth.lex"
 TTH_OUTPUTH("&#238;");
 	YY_BREAK
 case 1144:
-#line 7012 "tth.lex"
+#line 7001 "tth.lex"
 case 1145:
-#line 7013 "tth.lex"
+#line 7002 "tth.lex"
 case 1146:
 YY_RULE_SETUP
-#line 7013 "tth.lex"
+#line 7002 "tth.lex"
 TTH_OUTPUTH("&#239;");
 	YY_BREAK
 case 1147:
 YY_RULE_SETUP
-#line 7014 "tth.lex"
+#line 7003 "tth.lex"
 TTH_OUTPUTH("&#241;");
 	YY_BREAK
 case 1148:
 YY_RULE_SETUP
-#line 7015 "tth.lex"
+#line 7004 "tth.lex"
 TTH_OUTPUTH("&#242;");
 	YY_BREAK
 case 1149:
 YY_RULE_SETUP
-#line 7016 "tth.lex"
+#line 7005 "tth.lex"
 TTH_OUTPUTH("&#243;");
 	YY_BREAK
 case 1150:
 YY_RULE_SETUP
-#line 7017 "tth.lex"
+#line 7006 "tth.lex"
 TTH_OUTPUTH("&#244;");
 	YY_BREAK
 case 1151:
 YY_RULE_SETUP
-#line 7018 "tth.lex"
+#line 7007 "tth.lex"
 TTH_OUTPUTH("&#248;");
 	YY_BREAK
 case 1152:
 YY_RULE_SETUP
-#line 7019 "tth.lex"
+#line 7008 "tth.lex"
 TTH_OUTPUTH("&#245;");
 	YY_BREAK
 case 1153:
-#line 7021 "tth.lex"
+#line 7010 "tth.lex"
 case 1154:
 YY_RULE_SETUP
-#line 7021 "tth.lex"
+#line 7010 "tth.lex"
 TTH_OUTPUTH("&#246;");
 	YY_BREAK
 case 1155:
 YY_RULE_SETUP
-#line 7022 "tth.lex"
+#line 7011 "tth.lex"
 TTH_OUTPUTH("&#175;");
 	YY_BREAK
 case 1156:
 YY_RULE_SETUP
-#line 7023 "tth.lex"
+#line 7012 "tth.lex"
 TTH_OUTPUTH("&#163;");
 	YY_BREAK
 case 1157:
 YY_RULE_SETUP
-#line 7024 "tth.lex"
+#line 7013 "tth.lex"
 TTH_OUTPUTH("&#126;");
 	YY_BREAK
 case 1158:
 YY_RULE_SETUP
-#line 7025 "tth.lex"
+#line 7014 "tth.lex"
 TTH_OUTPUTH("&#250;");
 	YY_BREAK
 case 1159:
 YY_RULE_SETUP
-#line 7026 "tth.lex"
+#line 7015 "tth.lex"
 TTH_OUTPUTH("&#251;");
 	YY_BREAK
 case 1160:
 YY_RULE_SETUP
-#line 7027 "tth.lex"
+#line 7016 "tth.lex"
 TTH_OUTPUTH("&#249;");
 	YY_BREAK
 case 1161:
-#line 7029 "tth.lex"
+#line 7018 "tth.lex"
 case 1162:
 YY_RULE_SETUP
-#line 7029 "tth.lex"
+#line 7018 "tth.lex"
 TTH_OUTPUTH("&#252;");
 	YY_BREAK
 case 1163:
 YY_RULE_SETUP
-#line 7030 "tth.lex"
+#line 7019 "tth.lex"
 TTH_OUTPUTH("&#253;");
 	YY_BREAK
 case 1164:
-#line 7032 "tth.lex"
+#line 7021 "tth.lex"
 case 1165:
 YY_RULE_SETUP
-#line 7032 "tth.lex"
+#line 7021 "tth.lex"
 TTH_OUTPUTH("&#255;");
 	YY_BREAK
 case 1166:
 YY_RULE_SETUP
-#line 7033 "tth.lex"
+#line 7022 "tth.lex"
 TTH_OUTPUTH("&#223;");
 	YY_BREAK
 case 1167:
-#line 7035 "tth.lex"
+#line 7024 "tth.lex"
 case 1168:
 YY_RULE_SETUP
-#line 7035 "tth.lex"
+#line 7024 "tth.lex"
 TTH_DO_MACRO else{ TTH_OUTPUTH("&#223;");}
 	YY_BREAK
 /* Polish character macros:*/
 case 1169:
 YY_RULE_SETUP
-#line 7037 "tth.lex"
+#line 7026 "tth.lex"
 TTH_OUTPUTH("&#260;");
 	YY_BREAK
 case 1170:
 YY_RULE_SETUP
-#line 7038 "tth.lex"
+#line 7027 "tth.lex"
 TTH_OUTPUTH("&#262;");
 	YY_BREAK
 case 1171:
 YY_RULE_SETUP
-#line 7039 "tth.lex"
+#line 7028 "tth.lex"
 TTH_OUTPUTH("&#280;");
 	YY_BREAK
 case 1172:
 YY_RULE_SETUP
-#line 7040 "tth.lex"
+#line 7029 "tth.lex"
 TTH_OUTPUTH("&#321;");
 	YY_BREAK
 case 1173:
 YY_RULE_SETUP
-#line 7041 "tth.lex"
+#line 7030 "tth.lex"
 TTH_OUTPUTH("&#323;");
 	YY_BREAK
 case 1174:
 YY_RULE_SETUP
-#line 7042 "tth.lex"
+#line 7031 "tth.lex"
 TTH_OUTPUTH("&#346;");
 	YY_BREAK
 case 1175:
 YY_RULE_SETUP
-#line 7043 "tth.lex"
+#line 7032 "tth.lex"
 TTH_OUTPUTH("&#377;");
 	YY_BREAK
 case 1176:
 YY_RULE_SETUP
-#line 7044 "tth.lex"
+#line 7033 "tth.lex"
 TTH_OUTPUTH("&#379;");
 	YY_BREAK
 case 1177:
 YY_RULE_SETUP
-#line 7045 "tth.lex"
+#line 7034 "tth.lex"
 TTH_OUTPUTH("&#261;");
 	YY_BREAK
 case 1178:
 YY_RULE_SETUP
-#line 7046 "tth.lex"
+#line 7035 "tth.lex"
 TTH_OUTPUTH("&#263;");
 	YY_BREAK
 case 1179:
 YY_RULE_SETUP
-#line 7047 "tth.lex"
+#line 7036 "tth.lex"
 TTH_OUTPUTH("&#281;");
 	YY_BREAK
 case 1180:
 YY_RULE_SETUP
-#line 7048 "tth.lex"
+#line 7037 "tth.lex"
 TTH_OUTPUTH("&#322;");
 	YY_BREAK
 case 1181:
 YY_RULE_SETUP
-#line 7049 "tth.lex"
+#line 7038 "tth.lex"
 TTH_OUTPUTH("&#324;");
 	YY_BREAK
 case 1182:
 YY_RULE_SETUP
-#line 7050 "tth.lex"
+#line 7039 "tth.lex"
 TTH_OUTPUTH("&#347;");
 	YY_BREAK
 case 1183:
 YY_RULE_SETUP
-#line 7051 "tth.lex"
+#line 7040 "tth.lex"
 TTH_OUTPUTH("&#378;");
 	YY_BREAK
 case 1184:
 YY_RULE_SETUP
-#line 7052 "tth.lex"
+#line 7041 "tth.lex"
 TTH_OUTPUTH("&#380;");
 	YY_BREAK
 case 1185:
 YY_RULE_SETUP
-#line 7054 "tth.lex"
+#line 7043 "tth.lex"
 TTH_OUTPUTH(",,");
 	YY_BREAK
 case 1186:
 YY_RULE_SETUP
-#line 7055 "tth.lex"
+#line 7044 "tth.lex"
 TTH_OUTPUTH("''");
 	YY_BREAK
 case 1187:
 YY_RULE_SETUP
-#line 7056 "tth.lex"
+#line 7045 "tth.lex"
 TTH_OUTPUTH("&#171;");
 	YY_BREAK
 case 1188:
 YY_RULE_SETUP
-#line 7057 "tth.lex"
+#line 7046 "tth.lex"
 TTH_OUTPUTH("&#187;");
 	YY_BREAK
 case 1189:
 YY_RULE_SETUP
-#line 7058 "tth.lex"
+#line 7047 "tth.lex"
 
 	YY_BREAK
 /* Convert TeX double quotes to single-character */
 case 1190:
-#line 7061 "tth.lex"
+#line 7050 "tth.lex"
 case 1191:
 YY_RULE_SETUP
-#line 7061 "tth.lex"
+#line 7050 "tth.lex"
 TTH_OUTPUTH("\"");
 	YY_BREAK
 case 1192:
 YY_RULE_SETUP
-#line 7062 "tth.lex"
+#line 7051 "tth.lex"
 {
   if(*(yytext+1)=='g') strcpy(scratchstring,"\\`");
   else  strcpy(scratchstring,"\\'");
@@ -25735,11 +25725,11 @@ YY_RULE_SETUP
 	YY_BREAK
 /* Remove unwanted braces from around accented characters. */
 case 1193:
-#line 7070 "tth.lex"
+#line 7059 "tth.lex"
 /*  \\c{SP}*\{[cC]\}   | */
 case 1194:
 YY_RULE_SETUP
-#line 7071 "tth.lex"
+#line 7060 "tth.lex"
 {
   if(tth_debug&8) fprintf(stderr,"Fixing accent:%s\n",yytext);
   *dupstore2=0;
@@ -25756,32 +25746,32 @@ YY_RULE_SETUP
  Above are safely defined. Below need protection.*/
 case 1195:
 YY_RULE_SETUP
-#line 7084 "tth.lex"
+#line 7073 "tth.lex"
 
 	YY_BREAK
 case 1196:
 YY_RULE_SETUP
-#line 7085 "tth.lex"
+#line 7074 "tth.lex"
 
 	YY_BREAK
 case 1197:
 YY_RULE_SETUP
-#line 7086 "tth.lex"
+#line 7075 "tth.lex"
 
 	YY_BREAK
 case 1198:
 YY_RULE_SETUP
-#line 7087 "tth.lex"
+#line 7076 "tth.lex"
 
 	YY_BREAK
 case 1199:
 YY_RULE_SETUP
-#line 7089 "tth.lex"
+#line 7078 "tth.lex"
 TTH_OUTPUTH(TTH_BOXCODE);
 	YY_BREAK
 case 1200:
 YY_RULE_SETUP
-#line 7090 "tth.lex"
+#line 7079 "tth.lex"
 TTH_OUTPUTH(TTH_HBAR);
 	YY_BREAK
 /* Various things not being used.
@@ -25791,7 +25781,7 @@ TTH_OUTPUTH(TTH_HBAR);
  */
 case 1201:
 YY_RULE_SETUP
-#line 7097 "tth.lex"
+#line 7086 "tth.lex"
 {
   TTH_SCAN_STRING(tth_latex_file);
 }
@@ -25799,25 +25789,25 @@ YY_RULE_SETUP
 /* This needs to match all the cases of comments otherwise they will
     not allow escaping of the % in that state. Not all are TTH_OUTPUT */
 case 1202:
-#line 7103 "tth.lex"
+#line 7092 "tth.lex"
 case 1203:
-#line 7104 "tth.lex"
+#line 7093 "tth.lex"
 case 1204:
 YY_RULE_SETUP
-#line 7104 "tth.lex"
+#line 7093 "tth.lex"
 TTH_OUTPUTH("%");
 	YY_BREAK
 case 1205:
 YY_RULE_SETUP
-#line 7105 "tth.lex"
+#line 7094 "tth.lex"
 
 	YY_BREAK
 case 1206:
-#line 7107 "tth.lex"
+#line 7096 "tth.lex"
 case 1207:
 /* rule 1207 can match eol */
 YY_RULE_SETUP
-#line 7107 "tth.lex"
+#line 7096 "tth.lex"
 {
   if(strcspn(yytext,"\n")==0) {TTH_INC_LINE;TTH_CHECK_LENGTH;}
   strcat(dupstore,yytext);
@@ -25825,30 +25815,30 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1208:
 YY_RULE_SETUP
-#line 7111 "tth.lex"
+#line 7100 "tth.lex"
 strcat(defstore,yytext); 
 	YY_BREAK
 case 1209:
 /* rule 1209 can match eol */
 YY_RULE_SETUP
-#line 7112 "tth.lex"
+#line 7101 "tth.lex"
 {
   TTH_INC_LINE;
 }
 	YY_BREAK
 case 1210:
-#line 7116 "tth.lex"
+#line 7105 "tth.lex"
 case 1211:
-#line 7117 "tth.lex"
+#line 7106 "tth.lex"
 /* \\\\\*?({SP}*\[[^\]]*\])?         | */
 case 1212:
 YY_RULE_SETUP
-#line 7118 "tth.lex"
+#line 7107 "tth.lex"
 TTH_SCAN_STRING("\\par");
 	YY_BREAK
 case 1213:
 YY_RULE_SETUP
-#line 7119 "tth.lex"
+#line 7108 "tth.lex"
 {
   if(horizmode) horizmode=1;
   jscratch=indexkey("#1",margkeys,&margmax);
@@ -25865,70 +25855,70 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1214:
 YY_RULE_SETUP
-#line 7133 "tth.lex"
+#line 7122 "tth.lex"
 TTH_OUTPUTH("$");
 	YY_BREAK
 case 1215:
 YY_RULE_SETUP
-#line 7134 "tth.lex"
+#line 7123 "tth.lex"
 TTH_OUTPUTH("#");
 	YY_BREAK
 case 1216:
 YY_RULE_SETUP
-#line 7135 "tth.lex"
+#line 7124 "tth.lex"
 TTH_OUTPUTH("{");
 	YY_BREAK
 case 1217:
 YY_RULE_SETUP
-#line 7136 "tth.lex"
+#line 7125 "tth.lex"
 TTH_OUTPUTH("}");
 	YY_BREAK
 /* In nbsp choice above \\{SP}			TTH_OUTPUTH(" "); */
 case 1218:
 YY_RULE_SETUP
-#line 7138 "tth.lex"
+#line 7127 "tth.lex"
 TTH_OUTPUTH("_");
 	YY_BREAK
 case 1219:
 YY_RULE_SETUP
-#line 7139 "tth.lex"
+#line 7128 "tth.lex"
 
 	YY_BREAK
 case 1220:
 YY_RULE_SETUP
-#line 7140 "tth.lex"
+#line 7129 "tth.lex"
 TTH_OUTPUTH(" ");
 	YY_BREAK
 case 1221:
 YY_RULE_SETUP
-#line 7141 "tth.lex"
+#line 7130 "tth.lex"
 TTH_OUTPUTH("-");
 	YY_BREAK
 case 1222:
 YY_RULE_SETUP
-#line 7142 "tth.lex"
+#line 7131 "tth.lex"
 TTH_OUTPUTH("..."); /* non-math dots */
 	YY_BREAK
 /* Commands to ignore in equations as well as text*/
 case 1223:
 YY_RULE_SETUP
-#line 7144 "tth.lex"
+#line 7133 "tth.lex"
 
 	YY_BREAK
 case 1224:
 YY_RULE_SETUP
-#line 7145 "tth.lex"
+#line 7134 "tth.lex"
 
 	YY_BREAK
 case 1225:
 YY_RULE_SETUP
-#line 7146 "tth.lex"
+#line 7135 "tth.lex"
 
 	YY_BREAK
 /* Some problems in equations being confused with this, unless specific. */
 case 1226:
 YY_RULE_SETUP
-#line 7149 "tth.lex"
+#line 7138 "tth.lex"
 {
   fprintf(stderr,"**** Removing inappropriate parameter command %s Line %d\n",yytext,tth_num_lines);
   yy_push_state(lookfornum);*argchar=0;
@@ -25936,13 +25926,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1227:
 YY_RULE_SETUP
-#line 7153 "tth.lex"
+#line 7142 "tth.lex"
 /* Overridden where necessary for defs.. */
 	YY_BREAK
 /* TeX Commands in equations*/
 case 1228:
 YY_RULE_SETUP
-#line 7156 "tth.lex"
+#line 7145 "tth.lex"
 {
   TTH_DO_MACRO
   else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) { 
@@ -25959,20 +25949,20 @@ YY_RULE_SETUP
 /* Default equation action may no longer be needed, but not sure. 21 Mar*/
 case 1229:
 YY_RULE_SETUP
-#line 7169 "tth.lex"
+#line 7158 "tth.lex"
 {
   strcat(eqstr,yytext);
  }
 	YY_BREAK
 case 1230:
 YY_RULE_SETUP
-#line 7173 "tth.lex"
+#line 7162 "tth.lex"
 yy_scan_string("}\\end");
 	YY_BREAK
 /* Latex default (unknown) environment */
 case 1231:
 YY_RULE_SETUP
-#line 7175 "tth.lex"
+#line 7164 "tth.lex"
 {
   TTH_CCPY(environment,strstr(yytext,"{")+1);
   environment[strlen(environment)-1]=0;
@@ -25988,7 +25978,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1232:
 YY_RULE_SETUP
-#line 7187 "tth.lex"
+#line 7176 "tth.lex"
 {
   ind=indexkey(yytext,keys,&nkeys);
   TTH_SCAN_STRING("\\egroup");
@@ -26004,7 +25994,7 @@ YY_RULE_SETUP
 case 1233:
 /* rule 1233 can match eol */
 YY_RULE_SETUP
-#line 7198 "tth.lex"
+#line 7187 "tth.lex"
 {
   TTH_INC_MULTI;
   if(strstr(yytext,"\n")){TTH_INC_LINE;}
@@ -26016,7 +26006,7 @@ YY_RULE_SETUP
 case 1234:
 /* rule 1234 can match eol */
 YY_RULE_SETUP
-#line 7205 "tth.lex"
+#line 7194 "tth.lex"
 {
   TTH_INC_MULTI;
   if(strstr(yytext,"\n")){TTH_INC_LINE;}
@@ -26027,7 +26017,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1235:
 YY_RULE_SETUP
-#line 7213 "tth.lex"
+#line 7202 "tth.lex"
 {
   if(*yytext == *chr1){
     TTH_TEXCLOSE else{
@@ -26046,48 +26036,48 @@ YY_RULE_SETUP
 /* Special escape sequences in rawgroup */
 case 1236:
 YY_RULE_SETUP
-#line 7229 "tth.lex"
+#line 7218 "tth.lex"
 TTH_OUTPUT(yytext+1);
 	YY_BREAK
 /* Don't set horizmode for whitespace.*/
 case 1237:
 YY_RULE_SETUP
-#line 7231 "tth.lex"
+#line 7220 "tth.lex"
 TTH_OUTPUT(yytext);
 	YY_BREAK
 /* Default action */
 case 1238:
 YY_RULE_SETUP
-#line 7233 "tth.lex"
+#line 7222 "tth.lex"
 horizmode=1;TTH_OUTPUT(yytext);
 	YY_BREAK
 /* Normal action. Set to horizontal mode if not space*/
 case 1239:
 YY_RULE_SETUP
-#line 7235 "tth.lex"
+#line 7224 "tth.lex"
 fprintf(tth_fdout,"%s",yytext);
 	YY_BREAK
 /* Default action */
 case 1240:
 YY_RULE_SETUP
-#line 7237 "tth.lex"
+#line 7226 "tth.lex"
 horizmode=1;fprintf(tth_fdout,"%s",yytext);
 	YY_BREAK
 /* Delete in certain states. */
 case 1241:
 YY_RULE_SETUP
-#line 7240 "tth.lex"
+#line 7229 "tth.lex"
 yyless(0);yy_pop_state();      
 	YY_BREAK
 case 1242:
 YY_RULE_SETUP
-#line 7241 "tth.lex"
+#line 7230 "tth.lex"
 
 	YY_BREAK
 case 1243:
 /* rule 1243 can match eol */
 YY_RULE_SETUP
-#line 7243 "tth.lex"
+#line 7232 "tth.lex"
 {
   if(tth_ercnt==0){
     fprintf(stderr,"%s",yytext);
@@ -26099,99 +26089,99 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1244:
 YY_RULE_SETUP
-#line 7252 "tth.lex"
+#line 7241 "tth.lex"
 horizmode=1;
 	YY_BREAK
 case 1245:
 YY_RULE_SETUP
-#line 7253 "tth.lex"
+#line 7242 "tth.lex"
 {TTH_PAR_ACTION}
 	YY_BREAK
 case 1246:
 YY_RULE_SETUP
-#line 7254 "tth.lex"
+#line 7243 "tth.lex"
 yy_push_state(unknown);
 	YY_BREAK
 case 1247:
 YY_RULE_SETUP
-#line 7255 "tth.lex"
+#line 7244 "tth.lex"
 yy_push_state(unknown);
 	YY_BREAK
 case 1248:
 YY_RULE_SETUP
-#line 7256 "tth.lex"
+#line 7245 "tth.lex"
 fprintf(stderr,"**** DANGER: Catcode changes not honored. Expect abnormal behavior. Line %d\n",tth_num_lines);
 	YY_BREAK
 /* Ignore quietly */
 case 1249:
 YY_RULE_SETUP
-#line 7259 "tth.lex"
+#line 7248 "tth.lex"
 
 	YY_BREAK
 case 1250:
 YY_RULE_SETUP
-#line 7260 "tth.lex"
+#line 7249 "tth.lex"
 
 	YY_BREAK
 case 1251:
 YY_RULE_SETUP
-#line 7261 "tth.lex"
+#line 7250 "tth.lex"
 
 	YY_BREAK
 case 1252:
 YY_RULE_SETUP
-#line 7262 "tth.lex"
+#line 7251 "tth.lex"
 
 	YY_BREAK
 case 1253:
 YY_RULE_SETUP
-#line 7263 "tth.lex"
+#line 7252 "tth.lex"
 
 	YY_BREAK
 case 1254:
 YY_RULE_SETUP
-#line 7264 "tth.lex"
+#line 7253 "tth.lex"
 
 	YY_BREAK
 case 1255:
 YY_RULE_SETUP
-#line 7265 "tth.lex"
+#line 7254 "tth.lex"
 
 	YY_BREAK
 /*\\line   | */
 case 1256:
 YY_RULE_SETUP
-#line 7267 "tth.lex"
+#line 7256 "tth.lex"
 
 	YY_BREAK
 case 1257:
 YY_RULE_SETUP
-#line 7268 "tth.lex"
+#line 7257 "tth.lex"
 
 	YY_BREAK
 case 1258:
 YY_RULE_SETUP
-#line 7269 "tth.lex"
+#line 7258 "tth.lex"
 
 	YY_BREAK
 case 1259:
-#line 7271 "tth.lex"
+#line 7260 "tth.lex"
 case 1260:
-#line 7272 "tth.lex"
+#line 7261 "tth.lex"
 case 1261:
 YY_RULE_SETUP
-#line 7272 "tth.lex"
+#line 7261 "tth.lex"
 { /* Dump the argument. Might be used instead of matchbrace. */
   TTH_TEX_FN("#tthdrop1",1);
 }
 	YY_BREAK
 case 1262:
-#line 7276 "tth.lex"
+#line 7265 "tth.lex"
 case 1263:
-#line 7277 "tth.lex"
+#line 7266 "tth.lex"
 case 1264:
 YY_RULE_SETUP
-#line 7277 "tth.lex"
+#line 7266 "tth.lex"
 {
   sscanf(yytext+strcspn(yytext,"0123456789"),"%d", &js2);
   js2++;
@@ -26201,73 +26191,82 @@ YY_RULE_SETUP
 }
 	YY_BREAK
 case 1265:
-#line 7286 "tth.lex"
+YY_RULE_SETUP
+#line 7274 "tth.lex"
+{
+  fprintf(stderr,"%s","\nUnusual bibdata command; if natbib not explicit,\n\
+maybe insert the following in the preamble:\n\
+%%tth: \\usepackage{natbib} % Tells tth/m to use natbib.\n\
+%%tth: \\NAT@numberstrue % If you want number-style citations\n\n");
+  TTH_INC_MULTI;yy_push_state(matchbrace);
+}
+	YY_BREAK
 case 1266:
-#line 7287 "tth.lex"
+#line 7283 "tth.lex"
 case 1267:
-#line 7288 "tth.lex"
+#line 7284 "tth.lex"
 case 1268:
-#line 7289 "tth.lex"
+#line 7285 "tth.lex"
 case 1269:
-#line 7290 "tth.lex"
+#line 7286 "tth.lex"
 case 1270:
-#line 7291 "tth.lex"
+#line 7287 "tth.lex"
 case 1271:
-#line 7292 "tth.lex"
+#line 7288 "tth.lex"
 case 1272:
-#line 7293 "tth.lex"
+#line 7289 "tth.lex"
 case 1273:
-/* rule 1273 can match eol */
-#line 7294 "tth.lex"
+#line 7290 "tth.lex"
 case 1274:
 /* rule 1274 can match eol */
-#line 7295 "tth.lex"
+#line 7291 "tth.lex"
 case 1275:
 /* rule 1275 can match eol */
-#line 7296 "tth.lex"
+#line 7292 "tth.lex"
 case 1276:
 /* rule 1276 can match eol */
-#line 7297 "tth.lex"
+#line 7293 "tth.lex"
 case 1277:
 /* rule 1277 can match eol */
-#line 7298 "tth.lex"
+#line 7294 "tth.lex"
 case 1278:
 /* rule 1278 can match eol */
-#line 7299 "tth.lex"
+#line 7295 "tth.lex"
 case 1279:
 /* rule 1279 can match eol */
-#line 7300 "tth.lex"
+#line 7296 "tth.lex"
 case 1280:
 /* rule 1280 can match eol */
+#line 7297 "tth.lex"
+case 1281:
+/* rule 1281 can match eol */
 YY_RULE_SETUP
-#line 7300 "tth.lex"
+#line 7297 "tth.lex"
 if(horizmode)horizmode=1;
 	YY_BREAK
-case 1281:
-#line 7302 "tth.lex"
 case 1282:
-#line 7303 "tth.lex"
+#line 7299 "tth.lex"
 case 1283:
-#line 7304 "tth.lex"
+#line 7300 "tth.lex"
 case 1284:
-#line 7305 "tth.lex"
+#line 7301 "tth.lex"
 case 1285:
-#line 7306 "tth.lex"
+#line 7302 "tth.lex"
 case 1286:
-#line 7307 "tth.lex"
+#line 7303 "tth.lex"
 case 1287:
-#line 7308 "tth.lex"
+#line 7304 "tth.lex"
 case 1288:
 YY_RULE_SETUP
-#line 7308 "tth.lex"
+#line 7304 "tth.lex"
 TTH_INC_MULTI;yy_push_state(matchbrace);
 	YY_BREAK
 case 1289:
-#line 7311 "tth.lex"
+#line 7307 "tth.lex"
 case 1290:
-#line 7312 "tth.lex"
+#line 7308 "tth.lex"
 case 1291:
-#line 7313 "tth.lex"
+#line 7309 "tth.lex"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(pargroup):
 case YY_STATE_EOF(parclose):
@@ -26356,7 +26355,7 @@ case YY_STATE_EOF(uncommentgroup):
 case YY_STATE_EOF(urlgroup):
 case YY_STATE_EOF(indexgroup):
 case YY_STATE_EOF(halsearch):
-#line 7313 "tth.lex"
+#line 7309 "tth.lex"
 {
   if(!strcmp(yytext,"\\end")) {
     tth_stack_ptr=0; 
@@ -26425,7 +26424,7 @@ case YY_STATE_EOF(halsearch):
 	YY_BREAK
 case 1292:
 YY_RULE_SETUP
-#line 7378 "tth.lex"
+#line 7374 "tth.lex"
 { /* Don't suppose glue command in equations */
   TTH_CCPY(argchar,yytext);
   strcpy(argchar+strlen(argchar)-1,"\n=");
@@ -26435,13 +26434,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1293:
 YY_RULE_SETUP
-#line 7385 "tth.lex"
+#line 7381 "tth.lex"
 yy_push_state(unknown);
 	YY_BREAK
 /* Format looks like counter or dimension setting */
 case 1294:
 YY_RULE_SETUP
-#line 7388 "tth.lex"
+#line 7384 "tth.lex"
 {
   TTH_CCPY(argchar,yytext);
   argchar[strcspn(yytext," =")]=0;
@@ -26465,10 +26464,10 @@ YY_RULE_SETUP
  }    
 	YY_BREAK
 case 1295:
-#line 7411 "tth.lex"
+#line 7407 "tth.lex"
 case 1296:
 YY_RULE_SETUP
-#line 7411 "tth.lex"
+#line 7407 "tth.lex"
 { /* Not a tth native command */
   TTH_DO_MACRO
   else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) { 
@@ -26488,40 +26487,40 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1297:
 YY_RULE_SETUP
-#line 7429 "tth.lex"
+#line 7425 "tth.lex"
 yy_push_state(matchbrace);
 	YY_BREAK
 case 1298:
 /* rule 1298 can match eol */
 YY_RULE_SETUP
-#line 7430 "tth.lex"
+#line 7426 "tth.lex"
 TTH_INC_MULTI;
 	YY_BREAK
 case 1299:
 /* rule 1299 can match eol */
 YY_RULE_SETUP
-#line 7431 "tth.lex"
+#line 7427 "tth.lex"
 yy_pop_state();yyless(0);
 	YY_BREAK
 case 1300:
 YY_RULE_SETUP
-#line 7433 "tth.lex"
+#line 7429 "tth.lex"
 strcat(psubstore,yytext);
 	YY_BREAK
 case 1301:
 YY_RULE_SETUP
-#line 7434 "tth.lex"
+#line 7430 "tth.lex"
 strcat(psubstore,yytext);
 	YY_BREAK
 case 1302:
 /* rule 1302 can match eol */
 YY_RULE_SETUP
-#line 7435 "tth.lex"
+#line 7431 "tth.lex"
 TTH_INC_LINE;strcat(psubstore,yytext);
 	YY_BREAK
 case 1303:
 YY_RULE_SETUP
-#line 7436 "tth.lex"
+#line 7432 "tth.lex"
 {
   strcat(psubstore,"#");
   if(tth_debug&8) fprintf(stderr,"Double # added to %s\n",psubstore);
@@ -26530,7 +26529,7 @@ YY_RULE_SETUP
 /* Changed * to + here 4 Nov 07 */
 case 1304:
 YY_RULE_SETUP
-#line 7441 "tth.lex"
+#line 7437 "tth.lex"
 { /* Add space after a command string, in case */
   if( (js2 = strcspn(yytext,"#")) ){
     strcpy(scratchstring,yytext);
@@ -26552,7 +26551,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1305:
 YY_RULE_SETUP
-#line 7459 "tth.lex"
+#line 7455 "tth.lex"
 {
   sscanf((yytext+strlen(yytext)-1),"%d",&i);
   if(tth_debug&8) fprintf(stderr,"dropping %d args\n",i);
@@ -26564,24 +26563,24 @@ YY_RULE_SETUP
   }
 	YY_BREAK
 case 1306:
-#line 7469 "tth.lex"
+#line 7465 "tth.lex"
 case 1307:
 YY_RULE_SETUP
-#line 7469 "tth.lex"
+#line 7465 "tth.lex"
 fprintf(stderr,"**** Internal Error: encountered %s\n",yytext);
 	YY_BREAK
 case 1308:
 /* rule 1308 can match eol */
 YY_RULE_SETUP
-#line 7471 "tth.lex"
+#line 7467 "tth.lex"
 {TTH_INC_MULTI;}
 	YY_BREAK
 case 1309:
-#line 7473 "tth.lex"
+#line 7469 "tth.lex"
 case 1310:
 /* rule 1310 can match eol */
 YY_RULE_SETUP
-#line 7473 "tth.lex"
+#line 7469 "tth.lex"
 {
   /* duplicated below  if(strcspn(yytext,"\n")==0) TTH_INC_LINE; */
   if(tth_debug&8){
@@ -26706,7 +26705,7 @@ YY_RULE_SETUP
 case 1311:
 /* rule 1311 can match eol */
 YY_RULE_SETUP
-#line 7593 "tth.lex"
+#line 7589 "tth.lex"
 {
   TTH_CHECK_LENGTH;
   TTH_INC_LINE;
@@ -26721,13 +26720,13 @@ YY_RULE_SETUP
 	YY_BREAK
 case 1312:
 YY_RULE_SETUP
-#line 7604 "tth.lex"
+#line 7600 "tth.lex"
 
 	YY_BREAK
 case 1313:
 /* rule 1313 can match eol */
 YY_RULE_SETUP
-#line 7605 "tth.lex"
+#line 7601 "tth.lex"
 {
   if(tth_debug&16)fprintf(stderr,"End of removespace:%s\n",yytext);
   yy_pop_state();yyless(0);
@@ -26736,21 +26735,21 @@ YY_RULE_SETUP
 case 1314:
 /* rule 1314 can match eol */
 YY_RULE_SETUP
-#line 7609 "tth.lex"
+#line 7605 "tth.lex"
 TTH_INC_MULTI;GET_DIMEN;
 	YY_BREAK
 case 1315:
 /* rule 1315 can match eol */
 YY_RULE_SETUP
-#line 7610 "tth.lex"
+#line 7606 "tth.lex"
 yyless(0);yy_pop_state();   
 	YY_BREAK
 case 1316:
 YY_RULE_SETUP
-#line 7612 "tth.lex"
+#line 7608 "tth.lex"
 ECHO;
 	YY_BREAK
-#line 26748 "lex.yy.c"
+#line 26747 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -27787,7 +27786,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 7612 "tth.lex"
+#line 7608 "tth.lex"
 
 
  /********************************** CODE ******************************/

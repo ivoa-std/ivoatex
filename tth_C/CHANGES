@@ -1,4 +1,20 @@
-Version 4.07
+Version 4.12
+____________
+Give Mathml eqalign equations the <table displaystyle="true"> attribute.
+
+Version 4.11
+____________
+Make ttm (MathML) apparent multi-character indentifiers default italic.
+
+Version 4.10
+____________
+Remove extra TTH_TEXTBOX1 that was causing xml errors with \mbox{$ $}.
+
+Version 4.09
+____________
+Improve natbib code to handle RevTex bibstyles. 
+
+Version 4.08
 ____________
 Fix the tthverbatim command so it can be used as planned to end environments.
 
