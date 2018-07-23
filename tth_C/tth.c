@@ -1,6 +1,6 @@
 /* TtH TeX to HTML translator.
 TtH Version 
-"4.12"
+"4.13"
  (c) Ian Hutchinson
 Sun Dec 17 17:43:50 EST 2017
 */
@@ -20337,7 +20337,7 @@ YY_RULE_SETUP
     if(lbook) sprintf(envirchar,"%d.%d",chapno,tableno);
     else sprintf(envirchar,"%d",tableno);
     sprintf(scratchstring,"\n\\tthenclose{\\special{html:<div style=\"text-align:center\">}\\tablename{ \\thetable:} }{\\special{html:</div>}} ");
-  }
+  }else{*scratchstring=0; /*Partial fix of nested newenvironment*/}
   TTH_SCAN_STRING(scratchstring);
 }
 	YY_BREAK
