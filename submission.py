@@ -27,8 +27,11 @@ Fields needed:
 """
 
 import pprint
+import os
 import re
+import subprocess
 import sys
+import tempfile
 from xml.etree import ElementTree as etree
 
 try:
@@ -235,6 +238,19 @@ class DocumentMeta(object):
 def review_and_comment(document_meta):
 	"""prints document_meta and lets the user add a remark if they want.
 	"""
+	editor = os.environ.get("VISUAL", 
+		os.environ.get("EDITOR", "nano"))
+
+	fd, path_name = comment_src = tempfile.mkstemp()
+	try:
+		os.write(fd, "# optionally enter comment(s) below.\n")
+		os.close(fd)
+		subprocess.check_call([editor, path_name])
+		with open(path_name) as f:
+			document_meta.comment = re.sub("(?m)^#.*$", "", f.read())
+	finally:
+		os.unlink(path_name)
+
 	pprint.pprint(document_meta.get_post_payload())
 	print("-----------------------\n")
 	print("Going to upload %s\n"%document_meta.doctitle)
@@ -243,17 +259,9 @@ def review_and_comment(document_meta):
 		document_meta.docver2,
 		document_meta.doctype, 
 		document_meta.get_date()))
-	print("Hit ^C if this (or anthing in the dict above) is wrong")
-	print("Otherwise, you can optionally enter a comment now,")
-	print("or enter an empty line to continue.")
-
-	remark_lines = []
-	while True:
-		cur_input = raw_input()
-		if not cur_input.strip():
-			break
-		remark_lines.append(cur_input)
-	document_meta.commend = "\n".join(remark_lines)
+	print("Hit ^C if this (or anthing in the dict above) is wrong,"
+		" enter to upload.")
+	raw_input()
 
 
 def main(archive_file_name):
