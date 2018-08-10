@@ -8,6 +8,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{ifthen}
 \RequirePackage{doc}
+\RequirePackage{listings}
 \RequirePackage{paralist}
 \RequirePackage{url}
 \RequirePackage[labelfont=it]{caption}
@@ -345,10 +346,14 @@
 
 \chardef\dquote'042
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Changing LaTeX defaults
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Changing LaTeX/package defaults
 
 \renewcommand*\descriptionlabel[1]
 	{\hspace{\labelsep}\itshape #1}
+
+\lst@CCPutMacro
+    \lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-}}
+    \@empty\z@\@empty
 
 \makeatother
 
