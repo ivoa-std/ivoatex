@@ -1,8 +1,8 @@
-ivoatex Version 1.2
+ivoatex Version 1.1
 ===================
 
-This is another attempt at a generalised authoring system for IVOA
-(http://www.ivoa.net) documents with the design goals of
+This is an authoring system for IVOA (http://www.ivoa.net) documents
+with the design goals of
 
  * version-controlled (or at least controllable) source file(s)
  * reasonable-quality PDF and HTML output
@@ -37,6 +37,7 @@ Trouble?
 ========
 
 In case of ivoatex-related issues, contact gavo@ari.uni-heidelberg.de.
+See also http://ivoatex.g-vo.org.
 
 
 Acknowledgements

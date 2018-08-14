@@ -10,7 +10,7 @@
 #  You should *not* need to change anything here while authoring documents.
 #  All customisation should happen in the user Makefile
 
-IVOATEX_VERSION = 1.2
+IVOATEX_VERSION = 1.1
 
 CSS_HREF = http://www.ivoa.net/misc/ivoa_doc.css
 TTH = ivoatex/tth_C/tth
@@ -178,11 +178,12 @@ archdiag-l0.svg: make-archdiag.xslt
 
 ############# below here: building an ivoatex distribution
 
-IVOATEX_FILES = archdiag.png fromivoadoc.xslt Makefile COPYING \
+IVOATEX_FILES = fromivoadoc.xslt Makefile COPYING \
 	ivoabib.bib Makefile.template tthdefs.tex document.template \
 	ivoa.cls README  tth-ivoa.xslt IVOA.jpg docrepo.bib\
 	svn-ignore.txt tthntbib.sty update_generated.py schemadoc.xslt \
-	ivoa.bst
+	ivoa.bst CHANGES archdiag-full.xml make-archdiag.xslt stdrec-template.xml \
+	submission.py svg-fallback.pdf
 TTH_FILES= tth_C/CHANGES tth_C/latex2gif tth_C/ps2gif tth_C/tth.c \
 	tth_C/tth_manual.html tth_C/INSTALL tth_C/license.txt tth_C/ps2png \
 	tth_C/tth.1 tth_C/tth.gif
