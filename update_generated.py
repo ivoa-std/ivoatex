@@ -35,11 +35,13 @@ def escape_for_TeX(tx):
 	"""returns tx with TeX's standard active (and other magic) characters 
 	escaped.
 	"""
-	return tx.replace("\\", "$\backslash$"
+	return tx.replace("\\", "$\\backslash$"
 		).replace("&", "\\&"
 		).replace("#", "\\#"
 		).replace("%", "\\%"
 		).replace("_", "\\_"
+		).replace("}", "\\}"
+		).replace("{", "\\{"
 		).replace('"', '{"}')
 
 

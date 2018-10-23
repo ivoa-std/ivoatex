@@ -379,7 +379,11 @@ Copyright 2015, The GAVO project
       <xsl:when test="xs:restriction[@base='xs:string' 
       		or @base='xs:token']/xs:pattern">
         <xsl:text>string of the form: \emph{</xsl:text>
-          <xsl:value-of select="xs:restriction/xs:pattern/@value"/>
+    			<xsl:call-template name="escape-for-TeX">
+    				<xsl:with-param name="tx">
+		          <xsl:value-of select="xs:restriction/xs:pattern/@value"/>
+		        </xsl:with-param>
+		      </xsl:call-template>
         <xsl:text>}</xsl:text>
       </xsl:when>
       <xsl:otherwise>string</xsl:otherwise>
