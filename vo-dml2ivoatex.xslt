@@ -58,7 +58,7 @@
 <xsl:template match="vo-dml:model" mode="Section">
 \pagebreak
 \section{Model: <xsl:value-of select="name"/> }
-
+  <xsl:variable name="model_prefix"><xsl:value-of select="name"/>:</xsl:variable>
   % INSERT FIGURE HERE
   %\begin{figure}[h]
   %\begin{center}
@@ -71,7 +71,7 @@
   
   <xsl:for-each select="objectType|dataType">
     <xsl:sort select="name"/>
-    <xsl:apply-templates select="." mode="SubSection"/>
+    <xsl:apply-templates select="." mode="SubSection"><xsl:with-param name="model_prefix" select="$model_prefix"/></xsl:apply-templates>
   </xsl:for-each>
   <xsl:apply-templates select="primitiveType" mode="SubSection"/>
   <xsl:apply-templates select="enumeration" mode="SubSection"/>
@@ -110,6 +110,7 @@
 
 <!-- Subsection Template -->
 <xsl:template match="objectType|dataType" mode="SubSection">
+  <xsl:param name="model_prefix"/>
 
   \subsection{<xsl:value-of select="name"/><xsl:apply-templates select="." name="abstract"/>}
   \label{sect:<xsl:value-of select="name"/>}
@@ -123,7 +124,7 @@
   </xsl:if>
     
     <xsl:for-each select="attribute|composition|reference">
-      <xsl:apply-templates select="." mode="SubSubSection"/>
+      <xsl:apply-templates select="." mode="SubSubSection"><xsl:with-param name="model_prefix" select="$model_prefix"/></xsl:apply-templates>
     </xsl:for-each>
 </xsl:template>
 
@@ -166,12 +167,27 @@
 
 <!-- SubSubsection Template(s) -->
 <xsl:template match="attribute|composition|reference" mode="SubSubSection">
+    <xsl:param name="model_prefix"/>
+    <xsl:variable name="isOrdered">
+      <xsl:if test="./isOrdered"><xsl:value-of select="./isOrdered"/></xsl:if>
+    </xsl:variable>
+
+    <!-- generates internal reference to the element type in the PDF file -->
+    <xsl:variable name="dtype"><xsl:value-of select="datatype/vodml-ref"/></xsl:variable>
+    <xsl:variable name="typeWithRef">
+      <xsl:choose>
+	<xsl:when test="starts-with($dtype,'ivoa:')">\hyperref[sect:ivoa]{<xsl:value-of select="$dtype"/>}</xsl:when>
+	<xsl:when test="starts-with($dtype, $model_prefix)">\hyperref[sect:<xsl:value-of select="substring-after($dtype,':')"/>]{<xsl:value-of select="$dtype"/>}</xsl:when>
+	<xsl:otherwise><xsl:value-of select="$dtype"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
     <xsl:choose>
       <xsl:when test="semanticconcept">
 
     \subsubsection{<xsl:value-of select="../name"/>.<xsl:value-of select="name"/>}
       \textbf{vodml-id: <xsl:value-of select="vodml-id"/>} \newline
-      \textbf{type: <xsl:value-of select="datatype/vodml-ref"/>} \newline
+      \textbf{type: <xsl:value-of select="$typeWithRef"/>} \newline
       \textbf{vocabulary: <xsl:value-of select="semanticconcept/vocabularyURI"/>} \newline
       \textbf{multiplicity: <xsl:apply-templates select="multiplicity" mode="tostring"/>} \newline
       </xsl:when>
@@ -179,8 +195,8 @@
 
     \subsubsection{<xsl:value-of select="../name"/>.<xsl:value-of select="name"/>}
       \textbf{vodml-id: <xsl:value-of select="vodml-id"/>} \newline
-      \textbf{type: <xsl:value-of select="datatype/vodml-ref"/>} \newline
-      \textbf{multiplicity: <xsl:apply-templates select="multiplicity" mode="tostring"/>} \newline
+      \textbf{type: <xsl:value-of select="$typeWithRef"/>} \newline
+      \textbf{multiplicity: <xsl:apply-templates select="multiplicity" mode="tostring"/> <xsl:if test="string-length($isOrdered)">  (ordered)</xsl:if>} \newline 
       </xsl:otherwise>
     </xsl:choose>
 <xsl:apply-templates select="." mode="Description"/>
