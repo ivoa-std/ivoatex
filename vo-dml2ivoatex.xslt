@@ -113,7 +113,7 @@
   <xsl:param name="model_prefix"/>
 
   \subsection{<xsl:value-of select="name"/><xsl:apply-templates select="." name="abstract"/>}
-  \label{sect:<xsl:value-of select="name"/>}
+  \label{sect:<xsl:value-of select="vodml-id"/>}
     <xsl:apply-templates select="." mode="Description"/>
 
   <xsl:if test="constraint[@xsi:type='vo-dml:SubsettedRole']">
@@ -131,14 +131,14 @@
 <xsl:template match="primitiveType" mode="SubSection">
 
   \subsection{<xsl:value-of select="name"/><xsl:apply-templates select="." name="abstract"/>}
-  \label{sect:<xsl:value-of select="name"/>}
+  \label{sect:<xsl:value-of select="vodml-id"/>}
   <xsl:apply-templates select="." mode="Description"/>
 </xsl:template>
 
 <xsl:template match="enumeration" mode="SubSection">
 
   \subsection{<xsl:value-of select="name"/><xsl:apply-templates select="." name="abstract"/>}
-  \label{sect:<xsl:value-of select="name"/>}
+  \label{sect:<xsl:value-of select="vodml-id"/>}
 
   <xsl:apply-templates select="." mode="Description"/>
 
