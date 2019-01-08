@@ -470,6 +470,11 @@
 		<p class="parsep"><span> </span></p>
 	</xsl:template>
 
+	<xsl:template match="head">
+		<title><xsl:value-of select="//h1[1]"/></title>
+		<xsl:apply-templates/>
+	</xsl:template>
+	
 	<xsl:template match="body">
 		<xsl:apply-templates/>
 	</xsl:template>
