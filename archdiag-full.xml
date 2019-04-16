@@ -68,6 +68,7 @@ with missing dependencies.
 	<rec name="VOSpace" x="155" y="455"/>
 	<rec name="CDP" x="570" y="115"/>
 	<rec name="UWS" x="605" y="460"/>
+	<prerec name="GMS" x="505" y="460"/>
 	<rec name="VOSI" x="540" y="435"/>
 
 	<!-- Semantics: x=160..250 y=250..400 -->
