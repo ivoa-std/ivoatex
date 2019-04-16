@@ -73,6 +73,8 @@ No previous versions yet.
 % Use itemize environments.
 
 
+% NOTE: IVOA recommendations must be cited from docrepo rather than ivoabib
+% (REC entries there are for legacy documents only)
 \bibliography{ivoatex/ivoabib,ivoatex/docrepo}
 
 
