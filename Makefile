@@ -100,10 +100,10 @@ $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 #		| tee debug.html \
 
 $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
-	-$(PDFLATEX) -interaction scrollmode $(DOCNAME).tex
+	-$(PDFLATEX) -interaction batchmode $(DOCNAME).tex
 	bibtex $(DOCNAME).aux
 	$(PDFLATEX) -interaction batchmode $(DOCNAME).tex 2>&1 >/dev/null
-	touch $(DOCNAME).tex
+	$(PDFLATEX) -interaction scrollmode $(DOCNAME).tex
 
 # We don't let the pdf depend on .bbl, as we don't want to run BibTeX
 # every time the TeX input is changed.  The idea is that when people do
