@@ -12,7 +12,7 @@
 # stopped with an error message of a failed command, in which case the
 # original file is unchanged.
 
-from cStringIO import StringIO
+from io import StringIO
 import csv
 import os
 import re
@@ -123,7 +123,7 @@ def process_one_builtin(command):
 		parts = command.split()
 		print("Calling %s(%s)"%("cmd_"+parts[0], ", ".join(parts[1:])))
 		return globals()["cmd_"+parts[0]](*parts[1:])
-	except Exception, ex:
+	except Exception as ex:
 		ex.command = command
 		raise
 
@@ -194,7 +194,7 @@ def main():
 	
 	try:
 		content = process_all(content)
-	except ExecError, ex:
+	except ExecError as ex:
 		sys.stderr.write("Command %s failed.  Message below.  Aborting.\n"%
 			ex.command)
 		sys.stderr.write(ex.stderr+"\n")
