@@ -15,6 +15,7 @@ IVOATEX_VERSION = 1.1
 CSS_HREF = http://www.ivoa.net/misc/ivoa_doc.css
 TTH = ivoatex/tth_C/tth
 ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
+PYTHON?=python3
 
 #  Requirements:
 #     XSLT processor
@@ -143,7 +144,7 @@ role_diagram.svg: role_diagram.xml
 # Also, it needs python installed, which may not be available on all
 # installations.
 generate:
-	python ivoatex/update_generated.py $(DOCNAME).tex
+	$(PYTHON) ivoatex/update_generated.py $(DOCNAME).tex
 
 package: $(DOCNAME).tex $(DOCNAME).html $(DOCNAME).pdf \
 		$(GENERATED_PNGS)	$(FIGURES) $(AUX_FILES)

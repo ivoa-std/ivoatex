@@ -145,7 +145,7 @@ def process_one_exec(command):
 
 	if f.returncode!=0:
 		raise ExecError(command, stderr)
-	return stdout
+	return stdout.decode("utf-8")
 
 
 def process_one(match_obj):
@@ -189,8 +189,8 @@ def parse_command_line():
 
 def main():
 	args = parse_command_line()
-	with open(args.filename) as f:
-		content = f.read()
+	with open(args.filename, "rb") as f:
+		content = f.read().decode("utf-8")
 	
 	try:
 		content = process_all(content)
@@ -199,8 +199,9 @@ def main():
 			ex.command)
 		sys.stderr.write(ex.stderr+"\n")
 		sys.exit(1)
-	
-	with open(args.filename, "w") as f:
+
+	content = content.encode("utf-8")
+	with open(args.filename, "wb") as f:
 		f.write(content)
 
 
