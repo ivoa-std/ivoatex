@@ -136,7 +136,7 @@ role_diagram.svg: role_diagram.xml
 # using convert (which only works with an extra library).  That's 
 # a major pain.  Hm.
 %.pdf: %.svg
-	convert -antialias $< $@ || cp ivoatex/svg-fallback.pdf $@
+	inkscape --export-pdf=$@ $< || cp ivoatex/svg-fallback.pdf $@
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway
