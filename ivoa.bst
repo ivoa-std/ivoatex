@@ -40,6 +40,7 @@ ENTRY
     type
     URL
     adsurl
+    doi
     volume
     year
   }
@@ -161,10 +162,14 @@ FUNCTION {quote}
 }
 
 FUNCTION {write.url}
-{ URL empty$
-    { adsurl empty$
-    	{ skip$ }
-    	{ "\newline\url{" adsurl * "}" * write$ newline$ }
+{ URL empty$ {
+		doi empty$ { 
+			adsurl empty$
+    		{ skip$ }
+    		{ "\newline\url{" adsurl * "}" * write$ newline$ }
+    		if$
+    	}
+    	{ "\newline\url{http://dx.doi.org/" doi * "}" * write$ newline$}
     	if$
     }
     { "\newline\url{" URL * "}" * write$ newline$ }
