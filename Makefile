@@ -132,9 +132,9 @@ biblio: $(DOCNAME).bbl
 role_diagram.svg: role_diagram.xml
 	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt role_diagram.xml 
 
-# Regrettably, pdflatex can't use svg, so we need to convert it
-# using convert (which only works with an extra library).  That's 
-# a major pain.  Hm.
+# Regrettably, pdflatex can't use svg, so we need to convert it.
+# We're using inkscape here rather than convert because convert
+# rasterises the svg.
 %.pdf: %.svg
 	inkscape --export-pdf=$@ $< || cp ivoatex/svg-fallback.pdf $@
 

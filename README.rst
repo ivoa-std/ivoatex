@@ -22,6 +22,19 @@ IvoaTeX is designed to be included with the document source,
 preferably via mechanisms of the version control system chosen (e.g.,
 ``svn:externals`` or ``git submodule``).
 
+IvoaTeX is currently maintained in two places:
+
+* https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatex – this is the 
+  original site on volute (an IVOA-affiliated subversion repository).
+* https://github.com/ivoa-std/ivoatex.git – this is experimental and git-based; it
+  is likely that ivoaTeX's recommended process will move to using this at some
+  point.
+
+Because of this situation, some of the points below are mentioned twice, once
+for github and once for volute.
+
+The two locations are being kept in sync manually.
+
 
 Crib Sheet
 ----------
@@ -48,10 +61,25 @@ Mac OS X with MacPorts::
   port install ImageMagick  libxslt ghostscript texlive +full
 
 
+Checking Out and Building a Document from Volute
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Where documents are still developed on the Volute VCS, use something like the
+following to build a document; in the example, the ivoatex documentation
+is built::
+
+	svn co https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatexDoc
+	cd ivoatexDoc
+	make biblio
+	make forcetex
+
+Then start your favourite PDF viewer on ivoatexDoc.pdf.
+
+
 Checking Out a Standard from Github and Building it
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+Documents developed on github can be built like this::
 
    git clone --recurse-submodules https://github.com/ivoa-std/ADQL
    cd ADQL
@@ -110,7 +138,7 @@ What is inserted into the CSS within the XSLT is then the output of::
 License
 -------
 
-Unless stated otherwise in the files, ivoatex is (c) 2014-2015, the
+Unless stated otherwise in the files, ivoatex is (c) 2014-2019, the
 GAVO project and can be used and distributed under the GNU General
 Public License (ask for additional licenses if you're unhappy with the
 GPL). See COPYING for details.
