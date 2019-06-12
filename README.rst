@@ -98,6 +98,18 @@ given in the IVOA note `The IVOATeX Document Preparation System`_.
 .. _The IVOATeX Document Preparation System: http://ivoa.net/documents/Notes/IVOATex/index.html
 
 
+Extra Points for git operation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(This is a temporary accumulator for git-related stuff that should go
+into ivoatexDoc once it's stabilised)
+
+(1) VCS info in the documents: ivoatex 1.2, sect 3.8 is svn-specific.  To have
+info on the git commit in the document heading, instead do:
+
+* Add gitmeta.tex to SOURCES in the Makefile
+* Say ``\input gitmeta`` right below ``\input tthdefs`` in your document.
+
 
 Trouble?
 --------

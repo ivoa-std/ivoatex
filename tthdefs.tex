@@ -34,8 +34,19 @@
    <span id='docname'>}\ivoaDocname\special{html:</span>
    <span id='docdate'>}\ivoaDocdate\special{html:</span>}}
 
+% this is for SVN-provided VCS info (and will be picked up by
+% tth-ivoa.xslt.
 \def\SVN$#1: #2 ${%
 	\special{html:<span id='vcs#1'>}#2\special{html:</span>}}
+
+% this is for VCS info put in by git
+\def\vcsrevision#1{%
+	\special{html:<span id='vcsRev'>}#1\special{html:</span>}}
+\def\vcsdate#1{%
+	\special{html:<span id='vcsDate'>}#1\special{html:</span>}}
+\def\vcsurl#1{%
+	\special{html:<span id='vcsURL'>}#1\special{html:</span>}}
+
 
 \newenvironment{abstract}{%
   \includeMeta

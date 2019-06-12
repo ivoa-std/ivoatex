@@ -37,13 +37,6 @@ ZIP = zip
 
 export TEXINPUTS=.:ivoatex:
 
-# Version information extracted from git.
-GITVERSION := $(shell git log -1 --date=short --pretty=%h 2> /dev/null)
-GITDATE := $(shell git log -1 --date=short --pretty=%ai 2> /dev/null)
-GITSTATUS := $(shell git status --porcelain -uno 2> /dev/null)
-ifneq "$(GITSTATUS)" ""
-	GITDIRTY = -dirty
-endif
 
 # standard file name according to S&D standards
 versionedName:=$(DOCTYPE)-$(DOCNAME)-$(DOCVERSION)
@@ -90,7 +83,15 @@ clean:
 
 .FORCE:
 
-ivoatexmeta.tex: Makefile .FORCE
+gitmeta.tex: .FORCE
+	/bin/echo -n '\vcsrevision{' > $@
+	/bin/echo -n "$(shell git log -1 --date=short --pretty=%h 2> /dev/null)" >> $@
+	if [ ! -z "$(shell git status --porcelain -uno 2> /dev/null)" ]; then /bin/echo -n -dirty >> $@; fi
+	/bin/echo } >> $@
+	/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ai 2> /dev/null) '}' >>$@
+
+
+ivoatexmeta.tex: Makefile
 	rm -f $@
 	touch $@
 	echo '% GENERATED FILE -- edit this in the Makefile' >>$@
@@ -99,12 +100,6 @@ ivoatexmeta.tex: Makefile .FORCE
 	/bin/echo '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
 	/bin/echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
 	/bin/echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
-ifneq ($(GITVERSION), )
-	/bin/echo '\vcsrevision{$(GITVERSION)$(GITDIRTY)}' >>$@
-endif
-ifneq ($(GITDATE), )
-	/bin/echo '\vcsdate{$(GITDATE)}' >>$@
-endif
 
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
