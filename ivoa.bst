@@ -169,7 +169,7 @@ FUNCTION {write.url}
     		{ "\newline\url{" adsurl * "}" * write$ newline$ }
     		if$
     	}
-    	{ "\newline\url{http://dx.doi.org/" doi * "}" * write$ newline$}
+    	{ "\newline\url{http://doi.org/" doi * "}" * write$ newline$}
     	if$
     }
     { "\newline\url{" URL * "}" * write$ newline$ }

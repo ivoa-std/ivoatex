@@ -97,7 +97,7 @@ def cmd_schemadoc(schema_name, dest_type):
 	"""
 	output = subprocess.check_output(["xsltproc", 
 		"--stringparam", "destType", dest_type, 
-		"ivoatex/schemadoc.xslt", schema_name])
+		"ivoatex/schemadoc.xslt", schema_name]).decode("utf-8")
 	# for the TeX escaping, we simply assume there's no nesting
 	# of escaped sections, and no annotation uses our magic strings.
 	return "\\begin{generated}\n%s\n\\end{generated}\n"%(

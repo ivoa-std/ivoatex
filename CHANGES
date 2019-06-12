@@ -1,3 +1,14 @@
+Version 1.2 (unreleased)
+
+  * update_generated now works with python3 (you can fall back to python2 
+    by writing PYTHON=python into your Makefile).
+
+  * New VO-DML translator for the generator.
+
+  * Minor fixes (e.g., escaping in schema snippets, &-less bibanchors,
+    titles in HTML output).
+
+
 Version 1.1 (2018-08-14)
 
   * New bibliography docrepo.bib, which is the preferred way to reference
