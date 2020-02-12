@@ -58,12 +58,29 @@ Copyright 2015, The GAVO project
       <xsl:text>&#10;</xsl:text>
     </xsl:if>
   </xsl:template>
+
   <xsl:template match="xs:element" mode="content">
-    <xsl:text>\item[Element \xmlel{</xsl:text>
-    <xsl:value-of select="@name"/>
-    <xsl:text>}]&#10;\begin{description}&#10;</xsl:text>
-    <xsl:apply-templates select="." mode="nextContentItem"/>
-    <xsl:text>&#10;\end{description}&#10;</xsl:text>
+  	<xsl:choose>
+  		<xsl:when test="@ref">
+  			<xsl:text>\item[Element \xmlel{</xsl:text>
+	    		<xsl:value-of select="@ref"/>
+    		<xsl:text>}]&#10;</xsl:text>
+    		<xsl:call-template name="escape-for-TeX">
+	     		 <xsl:with-param name="tx" 
+	     			select="xs:annotation/xs:documentation"/>
+	   		 </xsl:call-template>
+     		 <xsl:text>&#10;&#10;</xsl:text>
+     		 <xsl:text>This element is imported from another schema.  See
+	     		 there for details.</xsl:text>
+    	</xsl:when>
+    	<xsl:otherwise>
+    		<xsl:text>\item[Element \xmlel{</xsl:text>
+    		<xsl:value-of select="@name"/>
+    		<xsl:text>}]&#10;\begin{description}&#10;</xsl:text>
+    		<xsl:apply-templates select="." mode="nextContentItem"/>
+    		<xsl:text>&#10;\end{description}&#10;</xsl:text>
+    	</xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="xs:element" mode="nextContentItem">
@@ -148,9 +165,15 @@ Copyright 2015, The GAVO project
 
   <xsl:template match="xs:attribute" mode="content.default">
     <xsl:param name="row" select="1"/>
-    <default row="{$row}">
-      <xsl:value-of select="@default"/>
-    </default>
+    <xsl:text>\item[Default] </xsl:text>
+    <xsl:choose>
+    	<xsl:when test="@default=' '">
+    		<xsl:text>a space character</xsl:text>
+    	</xsl:when>
+    	<xsl:otherwise>
+		    <xsl:value-of select="@default"/>
+    	</xsl:otherwise>
+    </xsl:choose>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>
 
@@ -239,7 +262,7 @@ Copyright 2015, The GAVO project
    	<xsl:choose>
      	<xsl:when test="$type">
      		<xsl:if test="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration">
- 					<xsl:text>\item[Allowed Values]\hfil&#10;\begin{longtermsdescription}&#10;</xsl:text>
+ 					<xsl:text>\item[Terms]\hfil&#10;\begin{longtermsdescription}&#10;</xsl:text>
        			<xsl:apply-templates select="/xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction/xs:enumeration" mode="controlledVocab"/>
    				<xsl:text>\end{longtermsdescription}&#10;</xsl:text>
        	</xsl:if>
@@ -306,6 +329,9 @@ Copyright 2015, The GAVO project
           <xsl:value-of select="."/>}</xsl:when>
       <xsl:when test=".='xs:integer'">
         <xsl:text>integer</xsl:text>
+      </xsl:when>
+      <xsl:when test=".='xs:NonNegativeInteger'">
+        <xsl:text>non-negative integer</xsl:text>
       </xsl:when>
       <xsl:when test=".='xs:NCName'">
         <xsl:text>a prefixless XML name</xsl:text>
@@ -406,7 +432,7 @@ Copyright 2015, The GAVO project
 	     <xsl:with-param name="tx" 
 	     	select="xs:annotation/xs:documentation"/>
 	   </xsl:call-template>
-    <xsl:text>&#10;</xsl:text>
+     <xsl:text>&#10;</xsl:text>
   </xsl:template>
 
   <xsl:template match="xs:attribute" mode="attributes">
