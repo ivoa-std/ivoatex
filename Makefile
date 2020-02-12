@@ -165,7 +165,7 @@ endif
 
 
 upload: package
-	python ivoatex/submission.py $(versionedName).zip
+	$(PYTHON) ivoatex/submission.py $(versionedName).zip
 
 
 #  Build TtH from source.  See http://hutchinson.belmont.ma.us/tth/.
