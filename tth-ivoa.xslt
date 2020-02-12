@@ -27,6 +27,7 @@
 
   <xsl:template match="head">
     <xsl:copy>
+      <title><xsl:value-of select="//h1[1]"/></title>
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
@@ -359,6 +360,10 @@
               </xsl:otherwise>
           </xsl:choose>
       </em></p>
+
+      <p>A list of current IVOA Recommendations and other technical documents
+				can be found in the <a href="http://www.ivoa.net/documents">IVOA
+				document repository</a>.</p>
   </xsl:template>
 
 	<xsl:template name="selectDoctypeStyle">
@@ -470,11 +475,6 @@
 		<p class="parsep"><span> </span></p>
 	</xsl:template>
 
-	<xsl:template match="head">
-		<title><xsl:value-of select="//h1[1]"/></title>
-		<xsl:apply-templates/>
-	</xsl:template>
-	
 	<xsl:template match="body">
 		<xsl:apply-templates/>
 	</xsl:template>
