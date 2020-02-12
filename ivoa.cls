@@ -11,6 +11,7 @@
 \RequirePackage{listings}
 \RequirePackage{paralist}
 \RequirePackage{url}
+\RequirePackage[nottoc]{tocbibind}
 \RequirePackage[labelfont=it]{caption}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
