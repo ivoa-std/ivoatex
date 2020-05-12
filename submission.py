@@ -101,7 +101,7 @@ class DocumentMeta(object):
 	def add_info_from_document(self):
 		"""tries to obtain missing metadata from the formatted (XHTML) source.
 		"""
-		with open(self.conciseName+".html") as f:
+		with open(self.conciseName+".html", "rb") as f:
 			tree = etree.parse(f)
 
 		# The following would be a bit smoother if we had xpath; there's
@@ -143,7 +143,7 @@ class DocumentMeta(object):
 		from the makefile filled in.
 		"""
 		meta_keys = {}
-		with open("Makefile") as f:
+		with open("Makefile", encoding="utf-8") as f:
 			for ln in f:
 				mat = re.match("(\w+)\s*=\s*(.*)", ln)
 				if mat:
@@ -246,7 +246,7 @@ def review_and_comment(document_meta):
 		os.write(fd, b'# optionally enter comment(s) below.\n')
 		os.close(fd)
 		subprocess.check_call([editor, path_name])
-		with open(path_name) as f:
+		with open(path_name, encoding="utf-8") as f:
 			document_meta.comment = re.sub("(?m)^#.*$", "", f.read())
 	finally:
 		os.unlink(path_name)
@@ -271,13 +271,13 @@ def main(archive_file_name):
 	sys.stdout.write("Uploading... ")
 	sys.stdout.flush()
 
-	with open(sys.argv[1]) as upload:
+	with open(sys.argv[1], "rb") as upload:
 		resp = requests.post(DOCREPO_URL, 
 			data=document_meta.get_post_payload(),
 			files=[('filename', (sys.argv[1], upload))])
 
 	sys.stdout.write("done (result in docrepo-response.html)\n")
-	with open("docrepo-response.html", "w") as f:
+	with open("docrepo-response.html", "w", encoding="utf-8") as f:
 		f.write(resp.text)
 
 
