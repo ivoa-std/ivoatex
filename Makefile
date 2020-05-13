@@ -59,7 +59,7 @@ $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
 
 
 forcetex:
-	$(PDFLATEX) $(DOCNAME)   # && $(PDFLATEX) $(DOCNAME) && $(PDFLATEX) $(DOCNAME)
+	make -W $(DOCNAME).tex $(DOCNAME).pdf
 
 
 arxiv-upload: $(SOURCES) biblio $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
