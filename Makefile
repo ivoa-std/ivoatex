@@ -58,7 +58,7 @@ $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
 
 
 forcetex:
-	$(PDFLATEX) $(DOCNAME)   # && $(PDFLATEX) $(DOCNAME) && $(PDFLATEX) $(DOCNAME)
+	make -W $(DOCNAME).tex $(DOCNAME).pdf
 
 $(DOCNAME)-draft.pdf: $(DOCNAME).pdf draft-background.pdf
 	pdftk $< background draft-background.pdf output $@
