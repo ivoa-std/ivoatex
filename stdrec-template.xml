@@ -31,6 +31,8 @@ change updated whenever you re-upload this record. -->
   <shortName>####</shortName> <!-- this should be your DOCNAME -->
 	<!-- put the "short name" of your standard after std/: -->
   <identifier>ivo://ivoa.net/std/####</identifier> 
+  <!-- <altIdentifier>doi:Look up on ADS once your standard has made
+    it there and then update this. </altIdentifier>
   <curation>
     <publisher>IVOA</publisher>
 
@@ -54,9 +56,9 @@ change updated whenever you re-upload this record. -->
   <content>
     <subject>Virtual observatory</subject>
     <!-- you can give further keywords, one per subject element;
-    use the IVOA thesaurus if possible:
+    use the Unified Astronomy Thesaurus if possible:
 
-    http://www.ivoa.net/rdf/Vocabularies/vocabularies-20091007/IVOAT/IVOAT.html
+    http://astrothesaurus.org
     -->
     <subject>####</subject>
 

@@ -28,6 +28,8 @@ except ImportError:
 class ExecError(Exception):
 	def __init__(self, command, stderr):
 		Exception.__init__(self, "Failed command %s"%repr(command))
+		if isinstance(stderr, bytes):
+			stderr = stderr.decode("utf-8", "ignore")
 		self.command, self.stderr = command, stderr
 
 

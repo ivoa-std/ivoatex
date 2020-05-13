@@ -22,7 +22,6 @@ with missing dependencies.
 	<rec name="RegistryInterface" x="55" y="205"/>
 	<rec name="Resource M.D." x="55" y="230"/>
 	<rec name="TAPRegExt" x="55" y="255"/>
-        <prerec name="UWSRegExt" x="55" y="280"/>
 	<rec name="VODataService" x="55" y="350"/>
 	<rec name="StandardsRegExt" x="55" y="375"/>
 	<rec name="SimpleDALR.E." x="55" y="400"/>
@@ -50,7 +49,7 @@ with missing dependencies.
 	<rec name="SODA" x="655" y="425"/>
 
 	<!-- Data Models: x=430..580, y=250..400 -->
-	<prerec name="VODML" x="490" y="195"/>
+	<rec name="VODML" x="490" y="195"/>
 	<rec name="ObsCore" x="600" y="205"/>
 	<rec name="SimDM" x="450" y="230"/>
 	<rec name="STC" x="550" y="230"/>
