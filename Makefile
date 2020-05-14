@@ -225,5 +225,5 @@ ivoatex-installdist: $(IVOATEX_ARCHIVE)
 
 # re-gets the ivoa records from ADS
 docrepo.bib:
-	curl -o "$@" "http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=ALL&warnings=YES&version=1&bibcode=%3F%3F%3F%3Fivoa.spec%0D%0A%3F%3F%3F%3Fivoa.rept&nr_to_return=1000&start_nr=1&data_type=BIBTEX&use_text=YES"
+	python3 fetch_from_ads.py
 	
