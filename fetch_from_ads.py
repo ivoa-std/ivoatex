@@ -7,7 +7,9 @@ environment variable ADS_TOKEN.
 
 If successful, it will write BibTeX to docrepo.bib (as needed by ivoatex).
 
-Put in the Public Domain 2020 by Markus Demleitner.
+Copyright 2020, the GAVO project
+
+This is part of ivoatex, covered by the GPL.  See COPYING for details.
 """
 
 import json
