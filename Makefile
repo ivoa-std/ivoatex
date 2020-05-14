@@ -21,14 +21,13 @@ PYTHON?=python3
 #     XSLT processor
 #     C compiler
 #     GNU make (or another sufficiently powerful make)
-#     pdflatex
+#     texlive
 #     ghostscript (if you plan on postscript/pdf figures)
 #     zip
-#     librsvg2-bin (to teach convert to turn svg to pdf, the arch diagram)
-#  All of these are likely present on, e.g., a linux distribution,
-#  except for librsvg, which is part of the gnome svg toolkit.
-#  Hence, please commit both role_diagram.svg and role_diagram.pdf into
-#  your VCS.
+#     inkscape if you need an architecture diagram
+#     pdftk if you want to build draft pdfs with a watermark
+#  Since inkscape is a rather exotic dependency, please commit both 
+#  role_diagram.svg and role_diagram.pdf into your VCS for now.
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
 PDFLATEX = pdflatex
@@ -61,6 +60,11 @@ $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
 forcetex:
 	$(PDFLATEX) $(DOCNAME)   # && $(PDFLATEX) $(DOCNAME) && $(PDFLATEX) $(DOCNAME)
 
+$(DOCNAME)-draft.pdf: $(DOCNAME).pdf draft-background.pdf
+	pdftk $< background draft-background.pdf output $@
+
+draft-background.pdf: ivoatex/draft-background.tex
+	pdflatex $<
 
 arxiv-upload: $(SOURCES) biblio $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
 	mkdir -p stuff-for-arxiv/ivoatex
