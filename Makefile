@@ -26,11 +26,18 @@ PYTHON?=python3
 #     zip
 #     inkscape if you need an architecture diagram
 #     pdftk if you want to build draft pdfs with a watermark
+#     optionally, latexmk.
 #  Since inkscape is a rather exotic dependency, please commit both 
 #  role_diagram.svg and role_diagram.pdf into your VCS for now.
+
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
-PDFLATEX = pdflatex
+LATEXMK_BANNER := $(shell latexmk --version 2> /dev/null)
+ifdef LATEXMK_BANNER
+	PDFLATEX = latexmk -pdf
+else
+	PDFLATEX = pdflatex
+endif
 CONVERT = convert
 ZIP = zip
 
@@ -56,9 +63,8 @@ GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
 	$(PDFLATEX) $(DOCNAME)
 
-
 forcetex:
-	$(PDFLATEX) $(DOCNAME)   # && $(PDFLATEX) $(DOCNAME) && $(PDFLATEX) $(DOCNAME)
+	make -W $(DOCNAME).tex $(DOCNAME).pdf
 
 $(DOCNAME)-draft.pdf: $(DOCNAME).pdf draft-background.pdf
 	pdftk $< background draft-background.pdf output $@
@@ -116,10 +122,14 @@ $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 #		| tee debug.html \
 
 $(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
+ifdef LATEXMK_BANNER
+	$(PDFLATEX) -bibtex $(DOCNAME).tex
+else
 	-$(PDFLATEX) -interaction batchmode $(DOCNAME).tex
 	bibtex $(DOCNAME).aux
 	$(PDFLATEX) -interaction batchmode $(DOCNAME).tex 2>&1 >/dev/null
 	$(PDFLATEX) -interaction scrollmode $(DOCNAME).tex
+endif
 
 # We don't let the pdf depend on .bbl, as we don't want to run BibTeX
 # every time the TeX input is changed.  The idea is that when people do
