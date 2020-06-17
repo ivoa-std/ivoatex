@@ -236,4 +236,40 @@ ivoatex-installdist: $(IVOATEX_ARCHIVE)
 # re-gets the ivoa records from ADS
 docrepo.bib:
 	python3 fetch_from_ads.py
+
+############# GitHub workflows configuration
+
+.PHONY: github-preview
+
+GITHUB_WORKFLOWS        = .github/workflows
+GITHUB_BUILD            = $(GITHUB_WORKFLOWS)/build.yml
+GITHUB_PREVIEW          = $(GITHUB_WORKFLOWS)/preview.yml
+GITHUB_BUILD_TEMPLATE   = ivoatex/github_workflow_build.yml.template
+GITHUB_PREVIEW_TEMPLATE = ivoatex/github_workflow_preview.yml.template
+
+$(GITHUB_WORKFLOWS):
+	@mkdir -p $@
+
+$(GITHUB_BUILD): $(GITHUB_WORKFLOWS) $(GITHUB_BUILD_TEMPLATE)
+	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_BUILD_TEMPLATE) > $@
+	@git add "$@"
+	@echo "* GitHub Workflow for PDF preview in PullRequest configured:\n      $@"
+	@echo '  => Run "git commit && git push" to enable GitHub PDF preview.'
+
+$(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
+	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_PREVIEW_TEMPLATE) > $@
+	@git add "$@"
+	@echo "* GitHub Workflow for PDF preview at pushed commit configured:\n\
+	        $@\n\
+	  -----------------------------------------------------------------------\n\
+	    Clickable badge toward the generated PDF preview:\n\n\
+	        [![PDF-Preview](https://img.shields.io/badge/Preview-PDF-blue)]\
+	(../../releases/download/auto-pdf-preview/$(DOCNAME)-draft.pdf)\n\n\
+	    You can add it into your README.md to give an easy way to access\n\
+	    the PDF preview to your users.\n\
+	  -----------------------------------------------------------------------"
+	@echo '  => Run "git commit && git push" to enable GitHub PDF preview.'
+
+github-preview: $(GITHUB_BUILD) $(GITHUB_PREVIEW)
 	
+

@@ -88,6 +88,26 @@ Documents developed on github can be built like this::
 
 This produces the standards document ``ADQL.pdf``.
 
+Automatic PDF preview in GitHub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To enable the automatic generation of a PDF preview in GitHub::
+
+   make github-preview
+   git add .github/workflows/build.yml .github/workflows/preview.yml
+   git commit -m 'Add/Update GH-Workflows for PDF Preview'
+   git push
+
+Once the generated files pushed on GitHub, this will produce a PDF preview
+after each pushed commit. This PDF will be available in the GitHub's
+Pre-Release ``Auto PDF Preview``.
+
+You may want to have a link toward this PDF preview. For this, you can add the
+clickable badge returned by the ``make`` command into your ``README.md``.
+
+A PDF preview is also generated at each update of a PullRequest. To get it,
+go on the page of your PullRequest, click on the tab ``Checks`` and then on
+``Artifacts``. This artifact will be automatically deleted after some time.
 
 Documentation
 -------------
