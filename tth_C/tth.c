@@ -28030,8 +28030,8 @@ char *arg;
 int epsftype;
 {
 #define NCONV 2
-#define NGTYPES 3
- char *gtype[NGTYPES]={"png","gif","jpg"};
+#define NGTYPES 4
+ char *gtype[NGTYPES]={"png","gif","jpg","svg"};
  char commandstr[150]={0};
  char filestr[150]={0};
  char filestr1[150]={0};
