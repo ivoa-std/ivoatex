@@ -127,7 +127,7 @@ ifdef LATEXMK_BANNER
 else
 	-$(PDFLATEX) -interaction batchmode $(DOCNAME).tex
 	bibtex $(DOCNAME).aux
-	$(PDFLATEX) -interaction batchmode $(DOCNAME).tex 2>&1 >/dev/null
+	-$(PDFLATEX) -interaction batchmode $(DOCNAME).tex 2>&1 >/dev/null
 	$(PDFLATEX) -interaction scrollmode $(DOCNAME).tex
 endif
 
