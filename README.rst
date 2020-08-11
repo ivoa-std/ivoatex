@@ -94,7 +94,6 @@ Automatic PDF preview in GitHub
 To enable the automatic generation of a PDF preview in GitHub::
 
    make github-preview
-   git add .github/workflows/build.yml .github/workflows/preview.yml
    git commit -m 'Add/Update GH-Workflows for PDF Preview'
    git push
 
