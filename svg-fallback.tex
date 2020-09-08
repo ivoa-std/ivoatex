@@ -1,0 +1,23 @@
+% if you change this, build manually with pdflatex svg-fallback and
+% commit the PDF, too.  This is *not* managed by make.
+\documentclass{article}
+\usepackage[paperwidth=10cm,paperheight=4cm,margin=0.5cm]{geometry}
+\usepackage{xcolor}
+\pagestyle{empty}
+\begin{document}
+\fontfamily{cmss}\selectfont
+\vfil
+\color{red}
+\hrule height 1pt
+\color{black}
+\vskip 6pt
+\noindent PDF fallback: A conversion from SVG to PDF failed.  This is probably
+because inkscape is not installed.  While SVG is not supported by
+the major TeX engines, it is recommended to commit built PDFs
+to the VCS.
+\vskip 6pt
+\color{red}
+\hrule height 1pt
+\vfil
+\eject
+\end{document}
