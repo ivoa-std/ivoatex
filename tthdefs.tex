@@ -93,9 +93,10 @@
 \newenvironment{lstlisting}[1][plain]
   {\special{html:<div keyvals="#1">}\tthverbatim{lstlisting}}
   {\special{html:</div>}}
-
-\newcommand{\nolinkurl}[1]{
-	\special{html:<span class='nolinkurl'>}#1\special{html:</span>}}
+ 
+\def\nolinkurl#1{\special{html:<span class="nolinkurl">}%
+  \verb|#1|%
+  \special{html:<span class="nolinkurl">}}
 
 \newenvironment{bigdescription}{%
     \begin{html}<div class="bigdescription">\end{html}
