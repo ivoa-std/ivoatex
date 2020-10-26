@@ -253,13 +253,13 @@ $(GITHUB_WORKFLOWS):
 $(GITHUB_BUILD): $(GITHUB_WORKFLOWS) $(GITHUB_BUILD_TEMPLATE)
 	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_BUILD_TEMPLATE) > $@
 	@git add "$@"
-	@echo "* GitHub Workflow for PDF preview in PullRequest configured:\n      $@"
+	@echo -e "* GitHub Workflow for PDF preview in PullRequest configured:\n      $@"
 	@echo '  => Run "git commit && git push" to enable GitHub PDF preview.'
 
 $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
 	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_PREVIEW_TEMPLATE) > $@
 	@git add "$@"
-	@echo "* GitHub Workflow for PDF preview at pushed commit configured:\n\
+	@echo -e "* GitHub Workflow for PDF preview at pushed commit configured:\n\
 	        $@\n\
 	  -----------------------------------------------------------------------\n\
 	    Clickable badge toward the generated PDF preview:\n\n\
