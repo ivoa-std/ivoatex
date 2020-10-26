@@ -54,11 +54,11 @@ change updated whenever you re-upload this record. -->
     </contact>
   </curation>
   <content>
-    <subject>Virtual observatory</subject>
+    <subject>virtual-observatories</subject>
     <!-- you can give further keywords, one per subject element;
     use the Unified Astronomy Thesaurus if possible:
 
-    http://astrothesaurus.org
+    http://www.ivoa.net/rdf/uat
     -->
     <subject>####</subject>
 
