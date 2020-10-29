@@ -5,7 +5,7 @@ A little script to operate the IVOA submission form with data scrubbed
 from ivoatex sources.
 
 The keys used here are taken from screen-scraping 
-http://www.ivoa.net/cgi-bin/up.cgi (which is also the target to POST
+https://www.ivoa.net/cgi-bin/up.cgi (which is also the target to POST
 to).
 
 Fields needed:
@@ -42,7 +42,7 @@ except ImportError:
 		"*** https://pypi.python.org/pypi/requests")
 
 
-DOCREPO_URL = 'http://www.ivoa.net/cgi-bin/up.cgi' 
+DOCREPO_URL = 'https://www.ivoa.net/cgi-bin/up.cgi' 
 
 
 class ReportableError(Exception):
