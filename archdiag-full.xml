@@ -38,28 +38,30 @@ with missing dependencies.
 	<rec name="DALI" x="310" y="290"/>
 	<rec name="ADQL" x="250" y="160"/>
 
-	<rec name="SCS" x="655" y="155"/>
-	<rec name="SIAP" x="655" y="180"/>
-	<rec name="SSAP" x="655" y="230"/>
-	<rec name="SLAP" x="655" y="255"/>
-	<rec name="TAP" x="655" y="325"/>
-	<rec name="SimDAL" x="655" y="350"/>
-	<rec name="VTP" x="655" y="375"/>
-	<rec name="DataLink" x="610" y="400"/>
-	<rec name="SODA" x="655" y="425"/>
+	<rec name="TAP" x="655" y="155"/>
+	<rec name="SSAP" x="655" y="255"/>
+	<rec name="SLAP" x="655" y="280"/>
+	<rec name="SCS" x="655" y="305"/>
+	<rec name="SIAP" x="655" y="330"/>
+	<rec name="SimDAL" x="655" y="355"/>
+	<rec name="VTP" x="655" y="380"/>
+	<rec name="DataLink" x="610" y="405"/>
+	<rec name="SODA" x="655" y="430"/>
+	<rec name="ObsCore" x="600" y="180"/>
+	<prerec name="EPN-TAP" x="600" y="205"/>
+	<prerec name="ObsLocTAP" x="600" y="230"/>
 
 	<!-- Data Models: x=430..580, y=250..400 -->
 	<rec name="VODML" x="490" y="195"/>
-	<rec name="ObsCore" x="600" y="205"/>
 	<rec name="SimDM" x="450" y="230"/>
-	<rec name="STC" x="550" y="230"/>
+	<rec name="STC" x="550" y="255"/>
 	<rec name="CharDM" x="450" y="255"/>
-	<rec name="SSLDM" x="550" y="255"/>
+	<rec name="SSLDM" x="550" y="280"/>
 	<rec name="SpectralDM" x="450" y="280"/>
-	<rec name="PhotDM" x="550" y="280"/>
+	<rec name="PhotDM" x="550" y="305"/>
 	<prerec name="DatasetDM" x="450" y="305"/>
-	<prerec name="CubeDM" x="550" y="305"/>
-	<prerec name="ProvDM" x="450" y="330"/>
+	<prerec name="CubeDM" x="550" y="330"/>
+	<rec name="ProvDM" x="450" y="330"/>
 
 	<!-- GWS: all over the place -->
 	<rec name="PDL" x="425" y="355"/>
