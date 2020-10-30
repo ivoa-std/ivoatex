@@ -41,7 +41,7 @@ with missing dependencies.
 	<rec name="TAP" x="655" y="155"/>
 	<rec name="SSAP" x="655" y="255"/>
 	<rec name="SLAP" x="655" y="280"/>
-	<rec name="SCS" x="655" y="305"/>
+	<rec name="ConeSearch" x="655" y="305"/>
 	<rec name="SIAP" x="655" y="330"/>
 	<rec name="SimDAL" x="655" y="355"/>
 	<rec name="VTP" x="655" y="380"/>
