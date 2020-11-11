@@ -5,6 +5,9 @@ Version 1.2 (unreleased)
 
   * New VO-DML translator for the generator.
 
+	* Removed legacy entries for IVOA standards from ivoabib.bib.  Use records
+	  from docrepo.bib instead.
+	
   * Minor fixes (e.g., escaping in schema snippets, &-less bibanchors,
     titles in HTML output).
 
