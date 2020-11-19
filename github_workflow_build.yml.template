@@ -1,3 +1,7 @@
+# This file generated from a template file maintained in the ivoatex repository.
+# See README.rst for instructions on how to create and install it into a project repository.
+#   https://github.com/ivoa-std/ivoatex#automatic-pdf-preview-in-github
+
 name: Check the IVOA document
 
 env:
