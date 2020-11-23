@@ -1,3 +1,9 @@
+# This file generated from a template file maintained in the ivoatex repository.
+# To create and install it into a project repository, do:
+#    make github-preview
+#    git commit
+#    git push
+#
 name: Check the IVOA document
 
 env:
