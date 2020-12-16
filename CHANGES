@@ -6,7 +6,9 @@ Version 1.2 (unreleased)
   * New VO-DML translator for the generator.
 
 	* Removed legacy entries for IVOA standards from ivoabib.bib.  Use records
-	  from docrepo.bib instead.
+	  from docrepo.bib instead.  In particular: note:VOARCH in the role
+	  diagram caption needs to become 2010ivoa.rept.1123 (until the
+	  arch note is updated).
 	
   * Minor fixes (e.g., escaping in schema snippets, &-less bibanchors,
     titles in HTML output).
