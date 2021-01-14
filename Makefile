@@ -91,6 +91,10 @@ clean:
 	rm -f arxiv-upload.tar.gz
 	rm -f $(GENERATED_PNGS)
 
+update:
+	@echo "*** updating ivoatex from github"
+	git submodule update --remote
+
 .FORCE:
 
 gitmeta.tex: .FORCE
@@ -271,4 +275,4 @@ $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
 	@echo '  => Run "git commit && git push" to enable GitHub PDF preview.'
 
 github-preview: $(GITHUB_BUILD) $(GITHUB_PREVIEW)
-	
+
