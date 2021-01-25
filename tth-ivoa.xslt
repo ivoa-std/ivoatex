@@ -148,6 +148,7 @@
 				  width: 90%;
           margin-left: auto;
           margin-right: auto;
+          max-width: 19cm;
         }
 
         ul.authors, ul.previousversions, ul.editors {
@@ -155,6 +156,10 @@
         	padding-left: 0pt;
         	margin-top: 2pt;
         	margin-bottom: 2pt;
+        }
+
+        body div {
+        	max-width: 21cm;
         }
 			</xsl:text></style>
 
@@ -460,7 +465,17 @@
     </xsl:element>
   </xsl:template>
 
-	<!-- tth has given up detecting Ps in TeX source and hacks in
+	<!-- I want to style the role diagram; ideally, we'd add a class
+		through LaTeX, but TTH doesn't have a straightforward facility
+		for doing this.  Hence, I'm adding a class manually. -->
+  <xsl:template match="img[@src='role_diagram.svg']">
+  	<xsl:copy>
+  		<xsl:attribute name="class">archdiag</xsl:attribute>
+  		<xsl:apply-templates select="@*|node()"/>
+  	</xsl:copy>
+  </xsl:template>
+
+	<!-- tth has given up detecting p elements in TeX source and hacks in
 	     div class="p" elements as paragraph separators.  These
 	     are potentially very confusing to browsers.  We hence 
 	     replace them with hopefully less confusing constructs -->
