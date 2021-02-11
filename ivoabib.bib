@@ -316,7 +316,12 @@ Dave Winer
   url =          {http://www.w3.org/TR/1999/REC-html401-19991224/}
 }
 
+DO NOT USE std:HTTP in new documents any more.  It has been obsoleted
+by various other RFCs, including std:RFC7230, std:RFC7231, and std:RFC7235,
+which are available below.
+
 @Misc{std:HTTP,
+	obsolete = True,
   author =       {R. Fielding and J. Gettys and J. Mogul and H. Frystyk and L. Masinter and P. Leach and T. Berners-Lee},
   title =        {Hypertext Transfer Protocol -- {HTTP}/1.1},
   howpublished = {{rfc2616}},
@@ -324,6 +329,34 @@ Dave Winer
   year =         1999,
   url =          {http://www.w3.org/Protocols/rfc2616/rfc2616.html}
 }
+
+@misc{std:RFC7231
+  author =       {R. Fielding and J. Reschke},
+  title =        {Hypertext Transfer Protocol ({HTTP}/1.1): Message Syntax and Routing},
+  howpublished = {{RFC 7230}},
+  month =        jun,
+  year =         2014,
+  url =          {https://tools.ietf.org/html/rfc7230}
+}
+
+@misc{std:RFC7231
+  author =       {R. Fielding and J. Reschke},
+  title =        {Hypertext Transfer Protocol ({HTTP}/1.1): Semantics and Content},
+  howpublished = {{RFC 7231}},
+  month =        jun,
+  year =         2014,
+  url =          {https://tools.ietf.org/html/rfc7231}
+}
+
+@misc{std:RFC7235
+  author =       {R. Fielding and J. Reschke},
+  title =        {Hypertext Transfer Protocol ({HTTP}/1.1): Authentication},
+  howpublished = {{RFC 7235}},
+  month =        jun,
+  year =         2014,
+  url =          {https://tools.ietf.org/html/rfc7235}
+}
+
 
 @Misc{std:DNS,
   author =       {P. Mockapetris},
