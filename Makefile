@@ -12,6 +12,8 @@
 
 IVOATEX_VERSION = 1.1
 
+.DELETE_ON_ERROR:
+
 CSS_HREF = http://www.ivoa.net/misc/ivoa_doc.css
 TTH = ivoatex/tth_C/tth
 ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
