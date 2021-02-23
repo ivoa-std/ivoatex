@@ -165,6 +165,12 @@
 \newbox\voidb@x
 \def\@m{\relax}
 
+% The default rendering of the captions is really ugly, and so I need to
+% fiddle in some HTML to let me style it.  I frankly cannot quite
+% say what tth things the first argument to caption would be in
+% the following definition; let's consider it an implementation detail.
+\newcommand\caption[2][]{\special{html:<div class="caption">}%
+  \tthcaption{#2}\special{html:</div>}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
 \begin{html}

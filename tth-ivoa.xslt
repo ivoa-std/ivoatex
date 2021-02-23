@@ -158,6 +158,12 @@
         	margin-bottom: 2pt;
         }
 
+       div.caption {
+          font-style: italic;
+          margin-top: 3mm;
+          margin-bottom: 6mm;
+        }
+
         body div {
         	max-width: 21cm;
         }
