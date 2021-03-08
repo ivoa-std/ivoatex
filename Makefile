@@ -197,6 +197,9 @@ $(TTH): ivoatex/tth_C/tth.c
 archdiag-l2.svg: archdiag-full.xml make-archdiag.xslt
 	$(XSLTPROC) -o $@ make-archdiag.xslt archdiag-full.xml 
 
+archdiag-debug.svg: archdiag-full.xml make-archdiag.xslt
+	$(XSLTPROC) --stringparam WITHJS True -o $@ make-archdiag.xslt archdiag-full.xml 
+
 archdiag-l1.svg: make-archdiag.xslt
 	echo '<archdiag xmlns="http://ivoa.net/archdiag"/>' | \
 		$(XSLTPROC) -o $@ make-archdiag.xslt - 
