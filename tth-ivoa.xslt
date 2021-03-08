@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-	xmlns="http://www.w3.org/1999/xhtml"
-	version="1.0">
+  xmlns="http://www.w3.org/1999/xhtml"
+  version="1.0">
 
   <!-- The parameter docbase is the location where the final document
        will be served from.  This will always have the following value
@@ -37,137 +37,143 @@
       </xsl:element>
       <xsl:call-template name="selectDoctypeStyle"/>
 
-			<xsl:apply-templates select="//span[@class='customcss']"/>
+      <xsl:apply-templates select="//span[@class='customcss']"/>
 
-			<style type="text/css">
-				<xsl:text disable-output-escaping="yes">
-				div#versionstatement, div#dateline {
-					color: #005A9C;
-					font-size: 150%;
-				}
+      <style type="text/css">
+        <xsl:text disable-output-escaping="yes">
+        div#versionstatement, div#dateline {
+          color: #005A9C;
+          font-size: 150%;
+        }
 
-				p.parsep {
-					overflow: hidden;
-					height: 0pt;
-					margin-top:0.5ex;
-					margin-bottom:0.5ex;
-				}
+        p.parsep {
+          overflow: hidden;
+          height: 0pt;
+          margin-top:0.5ex;
+          margin-bottom:0.5ex;
+        }
 
-				div.generated {
-					padding-left: 5mm;
-					border-left: 4pt solid #dddddd;
-				}
+        div.generated {
+          padding-left: 5mm;
+          border-left: 4pt solid #dddddd;
+        }
 
-				div.admonition {
-					width: 30em;
-					position: relative;
-					float: right;
-					background-color: #dddddd;
-					font-size: 80%;
-					margin: 1ex;
-					padding: 3pt;
-					overflow: auto;
-				}
-				
-				p.admonition-type {
-					background-color: #444444;
-					color: #ffffff;
-					margin-top: 0px;
-					padding-left: 5pt;
-					padding-top: 5pt;
-					padding-bottom: 5pt;
-					font-weight: bold;
-				}
+        div.admonition {
+          width: 30em;
+          position: relative;
+          float: right;
+          background-color: #dddddd;
+          font-size: 80%;
+          margin: 1ex;
+          padding: 3pt;
+          overflow: auto;
+        }
+        
+        p.admonition-type {
+          background-color: #444444;
+          color: #ffffff;
+          margin-top: 0px;
+          padding-left: 5pt;
+          padding-top: 5pt;
+          padding-bottom: 5pt;
+          font-weight: bold;
+        }
 
-				a.tth_citation, a.tth_citeref {
-					color: #002A5C;
-					text-decoration: none;
-				}
+        a.tth_citation, a.tth_citeref {
+          color: #002A5C;
+          text-decoration: none;
+        }
 
-				.xmlel {
-					font-family: monospace;
-					font-style: italic;
-				}
+        .xmlel {
+          font-family: monospace;
+          font-style: italic;
+        }
 
-				.vorent {
-					font-variant: small-caps;
-				}
+        .vorent {
+          font-variant: small-caps;
+        }
 
-				table {
-					border-collapse: collapse;
-					border-spacing: 0px;
-				}
+        table {
+          border-collapse: collapse;
+          border-spacing: 0px;
+        }
 
-				table.tabular {
-					margin-top: 2ex;
-					margin-bottom: 1ex;
-					margin-left: 0.5em;
-				}
+        table.tabular {
+          margin-top: 2ex;
+          margin-bottom: 1ex;
+          margin-left: 0.5em;
+        }
 
-				table.tabular > * > tr > td, table.tabular > tr > td {
-					border-top: 1pt solid gray;
-					border-bottom: 1pt solid gray;
-					padding: 2pt;
-				}
+        table.tabular > * > tr > td, table.tabular > tr > td {
+          border-top: 1pt solid gray;
+          border-bottom: 1pt solid gray;
+          padding: 2pt;
+        }
 
-				dt {
-					margin-top: 0.5ex;
-				}
+        dt {
+          margin-top: 0.5ex;
+        }
 
-				.redaction {
-					background-color: #ffff33;
-				}
+        .redaction {
+          background-color: #ffff33;
+        }
 
-				span.nolinkurl {
-					font-family: monospace;
-				}
+        span.nolinkurl {
+          font-family: monospace;
+        }
 
-				.basicstyle__footnotesize {
-					font-size: 80%;
-				}
+        .basicstyle__footnotesize {
+          font-size: 80%;
+        }
 
-				pre {
-   				 counter-reset: pre_line;
-				}
+        pre {
+            counter-reset: pre_line;
+        }
 
-				pre span {
-   				 counter-increment: pre_line;
-				}
+        pre span {
+            counter-increment: pre_line;
+        }
 
-				div.numbers_left pre span:before {
-   				 content: counter(pre_line);
-   				 text-align: right;
-   				 user-select: none;
-   				 min-width: 1.5em;
-   				 display: inline-block;
-   				 padding-right: 1em;
-				}
+        div.numbers_left pre span:before {
+            content: counter(pre_line);
+            text-align: right;
+            user-select: none;
+            min-width: 1.5em;
+            display: inline-block;
+            padding-right: 1em;
+        }
 
-				img.archdiag {
-				  display: block;
-				  width: 90%;
+        img.archdiag {
+          display: block;
+          width: 90%;
           margin-left: auto;
           margin-right: auto;
           max-width: 19cm;
         }
 
         ul.authors, ul.previousversions, ul.editors {
-        	list-style-type: none;
-        	padding-left: 0pt;
-        	margin-top: 2pt;
-        	margin-bottom: 2pt;
+          list-style-type: none;
+          padding-left: 0pt;
+          margin-top: 2pt;
+          margin-bottom: 2pt;
+        }
+
+        div.caption {
+          font-style: italic;
+          margin-top: 3mm;
+          margin-bottom: 6mm;
         }
 
         body div {
-        	max-width: 21cm;
+          max-width: 21cm;
         }
-			</xsl:text></style>
+      </xsl:text></style>
 
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
 
-	<xsl:template match="div[@id='titlepage']">
+  <xsl:template match="div[@id='titlepage']">
     <xsl:copy>
       <table cellspacing="0" cellpadding="0" width="450">
       <tr>
@@ -185,68 +191,68 @@
       </table>
       <br/>
     </xsl:copy>
-		
-		<h1><xsl:value-of select="h1[@align='center']"/></h1>
-		<div id="versionstatement">
-			Version <xsl:value-of select="span[@id='version']"/>
-		</div>
-		<div id="dateline">
-			<xsl:apply-templates select="span[@id='doctype']" mode="humanreadable"/>
-			<xsl:text> </xsl:text>
-			<xsl:apply-templates select="span[@id='docdate']"/>
-		</div>
-		<dl id="docmeta">
+    
+    <h1><xsl:value-of select="h1[@align='center']"/></h1>
+    <div id="versionstatement">
+      Version <xsl:value-of select="span[@id='version']"/>
+    </div>
+    <div id="dateline">
+      <xsl:apply-templates select="span[@id='doctype']" mode="humanreadable"/>
+      <xsl:text> </xsl:text>
+      <xsl:apply-templates select="span[@id='docdate']"/>
+    </div>
+    <dl id="docmeta">
 
-			<dt>Working Group</dt>
-			<xsl:copy-of select="dd[@id='ivoagroup']"/>
+      <dt>Working Group</dt>
+      <xsl:copy-of select="dd[@id='ivoagroup']"/>
 
-			<dt>This Version</dt>
-			<dd>
-				<xsl:call-template name="currentlink"/>
-			</dd>
+      <dt>This Version</dt>
+      <dd>
+        <xsl:call-template name="currentlink"/>
+      </dd>
 
-			<dt>Latest Version</dt>
-			<dd>
-				<xsl:call-template name="latestlink"/>
-			</dd>
+      <dt>Latest Version</dt>
+      <dd>
+        <xsl:call-template name="latestlink"/>
+      </dd>
 
-			<dt>Previous Versions</dt>
-			<dd>
-				<ul class="previousversions">
-					<xsl:apply-templates select="li[@class='previousversion']"/>
-				</ul>
-			</dd>
+      <dt>Previous Versions</dt>
+      <dd>
+        <ul class="previousversions">
+          <xsl:apply-templates select="li[@class='previousversion']"/>
+        </ul>
+      </dd>
 
-			<dt>Author(s)</dt>
-			<dd>
-				<ul class="authors">
-					<xsl:apply-templates select="li[@class='author']"/>
-				</ul>
-			</dd>
-			
-			<dt>Editor(s)</dt>
+      <dt>Author(s)</dt>
+      <dd>
+        <ul class="authors">
+          <xsl:apply-templates select="li[@class='author']"/>
+        </ul>
+      </dd>
+      
+      <dt>Editor(s)</dt>
                         <dd>
-				<ul class="editors">
-					<xsl:apply-templates select="li[@class='editor']"/>
-				</ul>
-			</dd>
+        <ul class="editors">
+          <xsl:apply-templates select="li[@class='editor']"/>
+        </ul>
+      </dd>
                     
-			<xsl:if test="span[@id='vcsRev']">
-				<dt>Version Control</dt>
-				<dd>Revision <xsl:value-of select="span[@id='vcsRev']"
-					/><xsl:if test="span[@id='vcsDate']">, last change
-						<xsl:value-of select="span[@id='vcsDate']"/>
-				</xsl:if>
-				<xsl:if test="span[@id='vcsURL']"><br/>
-					<a>
-						<xsl:attribute name="href">
-							<xsl:value-of select="span[@id='vcsURL']"/>
-						</xsl:attribute>Source file in VCS</a>
-				</xsl:if>
-				</dd>
-			</xsl:if>
-		</dl>
-	</xsl:template>
+      <xsl:if test="span[@id='vcsRev']">
+        <dt>Version Control</dt>
+        <dd>Revision <xsl:value-of select="span[@id='vcsRev']"
+          /><xsl:if test="span[@id='vcsDate']">, last change
+            <xsl:value-of select="span[@id='vcsDate']"/>
+        </xsl:if>
+        <xsl:if test="span[@id='vcsURL']"><br/>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:value-of select="span[@id='vcsURL']"/>
+            </xsl:attribute>Source file in VCS</a>
+        </xsl:if>
+        </dd>
+      </xsl:if>
+    </dl>
+  </xsl:template>
 
   <xsl:template match="a/@name">
     <xsl:if test="not(starts-with(., 'CITE'))">
@@ -263,17 +269,17 @@
   <xsl:template match="style[./@type='text/css']">
   </xsl:template>
 
-	<xsl:template match="span[@class='customcss']">
-		<link type="text/css" rel="stylesheet">
-			<xsl:attribute name="href"><xsl:value-of select="@ref"/></xsl:attribute>
-		</link>
-	</xsl:template>
+  <xsl:template match="span[@class='customcss']">
+    <link type="text/css" rel="stylesheet">
+      <xsl:attribute name="href"><xsl:value-of select="@ref"/></xsl:attribute>
+    </link>
+  </xsl:template>
 
   <xsl:template match="dd/div[./@class='p']">
   </xsl:template>
 
   <xsl:template match="span[@id='doctype']" mode="humanreadable">
-  	<xsl:variable name="doctype" select="."/>
+    <xsl:variable name="doctype" select="."/>
     <xsl:choose>
       <xsl:when test="$doctype='WD'">
         <xsl:text>IVOA Working Draft </xsl:text>
@@ -288,10 +294,10 @@
         <xsl:text>IVOA Note </xsl:text>
       </xsl:when>
       <xsl:when test="$doctype='PEN'">
-       	<xsl:text>Proposed Endorsed Note </xsl:text>
+         <xsl:text>Proposed Endorsed Note </xsl:text>
       </xsl:when>
       <xsl:when test="$doctype='EN'">
-       	<xsl:text>Endorsed Note </xsl:text>
+         <xsl:text>Endorsed Note </xsl:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:message terminate='yes'>doctype must be one of
@@ -302,7 +308,7 @@
   </xsl:template>
 
   <xsl:template match="div[@id='statusOfThisDocument']">
-  	<xsl:variable name="doctype" select="."/>
+    <xsl:variable name="doctype" select="."/>
       <p id="statusdecl"><em>
           <xsl:choose>
               <xsl:when test="$doctype='NOTE'">
@@ -340,17 +346,17 @@
                   interoperability inside the Astronomical Community.
               </xsl:when>
               <xsl:when test="$doctype='PEN'">
-								This is an IVOA Proposed Endorsed Note for review by IVOA
-      					members and other interested parties. It is appropriate to
-      					reference this document only as a Proposed Endorsed Note that
-      					is under review and may change before it is endorsed or may  
-      					not be endorsed. 
+                This is an IVOA Proposed Endorsed Note for review by IVOA
+                members and other interested parties. It is appropriate to
+                reference this document only as a Proposed Endorsed Note that
+                is under review and may change before it is endorsed or may  
+                not be endorsed. 
               </xsl:when>
               <xsl:when test="$doctype='EN'">
-	              This document is an IVOA Endorsed Note. It has been reviewed
-	              and endorsed by the IVOA Technical Coordination Group as a
-	              stable, citable document which constitutes valuable information
-	              for the IVOA community and beyond.
+                This document is an IVOA Endorsed Note. It has been reviewed
+                and endorsed by the IVOA Technical Coordination Group as a
+                stable, citable document which constitutes valuable information
+                for the IVOA community and beyond.
               </xsl:when>
               <xsl:otherwise>
                   <xsl:message terminate='yes'>Invalid document
@@ -360,12 +366,12 @@
       </em></p>
 
       <p>A list of current IVOA Recommendations and other technical documents
-				can be found in the <a href="http://www.ivoa.net/documents">IVOA
-				document repository</a>.</p>
+        can be found in the <a href="http://www.ivoa.net/documents">IVOA
+        document repository</a>.</p>
   </xsl:template>
 
-	<xsl:template name="selectDoctypeStyle">
-  	<xsl:variable name="doctype" select="//span[@id='doctype']"/>
+  <xsl:template name="selectDoctypeStyle">
+    <xsl:variable name="doctype" select="//span[@id='doctype']"/>
     <link rel="stylesheet" type="text/css">
       <xsl:attribute name="href">
         <xsl:choose>
@@ -383,61 +389,61 @@
             >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
        </xsl:choose>
      </xsl:attribute>
-   	</link>
+     </link>
   </xsl:template>
 
-	<!-- To somewhat support keyval-style arguments (as in, e.g., listings)
-		this allows translating them into css classes.  Essentially,
-		generate a div with a keyvals attribute; see lstlisting in tthdefs -->
-	
-	<xsl:template match="*[@keyvals]">
-		<div>
-			<xsl:attribute name="class">
-				<xsl:value-of select="translate(@keyvals, ',=\\', ' __')"/>
-			</xsl:attribute>
-			<xsl:apply-templates/>
-		</div>
-	</xsl:template>
+  <!-- To somewhat support keyval-style arguments (as in, e.g., listings)
+    this allows translating them into css classes.  Essentially,
+    generate a div with a keyvals attribute; see lstlisting in tthdefs -->
+  
+  <xsl:template match="*[@keyvals]">
+    <div>
+      <xsl:attribute name="class">
+        <xsl:value-of select="translate(@keyvals, ',=\\', ' __')"/>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
 
-	<!-- In verbatim listings, we may want to play tricks with lines.
-	     So, let's mark them up with spans. -->
-	
-	<xsl:template name="split-into-lines">
-		<xsl:param name="arg"/>
-		<span class="verbline"><xsl:value-of 
-			select="substring-before($arg, '&#xa;')"/>
-			<xsl:text>&#xa;</xsl:text>
-		</span>
-		
-		<xsl:if test="substring-after($arg, '&#xa;')">
-			<xsl:call-template name="split-into-lines">
-				<xsl:with-param name="arg" select="substring-after($arg, '&#xa;')"/>
-			</xsl:call-template>
-		</xsl:if>
-	</xsl:template>
+  <!-- In verbatim listings, we may want to play tricks with lines.
+       So, let's mark them up with spans. -->
+  
+  <xsl:template name="split-into-lines">
+    <xsl:param name="arg"/>
+    <span class="verbline"><xsl:value-of 
+      select="substring-before($arg, '&#xa;')"/>
+      <xsl:text>&#xa;</xsl:text>
+    </span>
+    
+    <xsl:if test="substring-after($arg, '&#xa;')">
+      <xsl:call-template name="split-into-lines">
+        <xsl:with-param name="arg" select="substring-after($arg, '&#xa;')"/>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
 
-	<xsl:template match="pre">
-		<pre>
-			<xsl:copy-of select="@*"/>
-			<xsl:call-template name="split-into-lines">
-				<xsl:with-param name="arg" select="."/>
-			</xsl:call-template>
-		</pre>
-	</xsl:template>
+  <xsl:template match="pre">
+    <pre>
+      <xsl:copy-of select="@*"/>
+      <xsl:call-template name="split-into-lines">
+        <xsl:with-param name="arg" select="."/>
+      </xsl:call-template>
+    </pre>
+  </xsl:template>
 
   <!-- Make a link to the current version on the ivoa doc server.
        The format of the URI here is as mandated by the IVOA
        Document Standards Standard Document (ahem). -->
   <xsl:template name="currentlink">
-		<xsl:variable name="docdate" select="span[@id='docdate']"/>
+    <xsl:variable name="docdate" select="span[@id='docdate']"/>
     <xsl:variable name="currenturl">
       <xsl:value-of select="$docbase"/>
       <xsl:value-of select="//span[@id='docname']"/>
       <xsl:text>/</xsl:text>
       <xsl:value-of select="concat(
-      	substring($docdate, 1, 4),
-      	substring($docdate, 6, 2),
-      	substring($docdate, 9, 2))"/>
+        substring($docdate, 1, 4),
+        substring($docdate, 6, 2),
+        substring($docdate, 9, 2))"/>
     </xsl:variable>
     <xsl:element name="a">
       <xsl:attribute name="class">currentlink</xsl:attribute>
@@ -453,7 +459,7 @@
        doc server, to the versioned URL. -->
   <xsl:template name="latestlink">
     <xsl:variable name="currenturl">
-	    <xsl:value-of select="$docbase"/>
+      <xsl:value-of select="$docbase"/>
       <xsl:value-of select="//span[@id='docname']"/>
     </xsl:variable>
     <xsl:element name="a">
@@ -465,26 +471,26 @@
     </xsl:element>
   </xsl:template>
 
-	<!-- I want to style the role diagram; ideally, we'd add a class
-		through LaTeX, but TTH doesn't have a straightforward facility
-		for doing this.  Hence, I'm adding a class manually. -->
+  <!-- I want to style the role diagram; ideally, we'd add a class
+    through LaTeX, but TTH doesn't have a straightforward facility
+    for doing this.  Hence, I'm adding a class manually. -->
   <xsl:template match="img[@src='role_diagram.svg']">
-  	<xsl:copy>
-  		<xsl:attribute name="class">archdiag</xsl:attribute>
-  		<xsl:apply-templates select="@*|node()"/>
-  	</xsl:copy>
+    <xsl:copy>
+      <xsl:attribute name="class">archdiag</xsl:attribute>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
   </xsl:template>
 
-	<!-- tth has given up detecting p elements in TeX source and hacks in
-	     div class="p" elements as paragraph separators.  These
-	     are potentially very confusing to browsers.  We hence 
-	     replace them with hopefully less confusing constructs -->
-	<xsl:template match="div[@class='p']">
-		<p class="parsep"><span> </span></p>
-	</xsl:template>
+  <!-- tth has given up detecting p elements in TeX source and hacks in
+       div class="p" elements as paragraph separators.  These
+       are potentially very confusing to browsers.  We hence 
+       replace them with hopefully less confusing constructs -->
+  <xsl:template match="div[@class='p']">
+    <p class="parsep"><span> </span></p>
+  </xsl:template>
 
-	<xsl:template match="body">
-		<xsl:apply-templates/>
-	</xsl:template>
+  <xsl:template match="body">
+    <xsl:apply-templates/>
+  </xsl:template>
 
 </xsl:stylesheet>
