@@ -31,7 +31,8 @@ SpectralDM: 67; 11.5
 
 The first number is the box's natural width, which you should use in the w
 attribute of the rec/prerec.  The second is the offset to x you'd need to
-one of the x grid lines to have the box centered.
+add to one of the x grid lines (the x=something in the opening comments
+of the various sections) to have the box centered.
 -->
 
 <archdiag xmlns="http://ivoa.net/archdiag">
