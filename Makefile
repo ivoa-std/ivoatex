@@ -194,19 +194,22 @@ $(TTH): ivoatex/tth_C/tth.c
 
 ############# architecture diagram stuff (to be executed in this directory)
 
-archdiag-l2.svg: archdiag-full.xml make-archdiag.xslt
-	$(XSLTPROC) -o $@ make-archdiag.xslt archdiag-full.xml 
+ARCHDIAG_XSLT = make-archdiag.xslt
 
-archdiag-debug.svg: archdiag-full.xml make-archdiag.xslt
-	$(XSLTPROC) --stringparam WITHJS True -o $@ make-archdiag.xslt archdiag-full.xml 
+archdiag-l2.svg: archdiag-full.xml  $(ARCHDIAG_XSLT)
+	$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) archdiag-full.xml 
 
-archdiag-l1.svg: make-archdiag.xslt
+archdiag-debug.svg: archdiag-full.xml $(ARCHDIAG_XSLT)
+	$(XSLTPROC) --stringparam WITHJS True -o $@ $(ARCHDIAG_XSLT) \
+		archdiag-full.xml 
+
+archdiag-l1.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ make-archdiag.xslt - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
 
-archdiag-l0.svg: make-archdiag.xslt
+archdiag-l0.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag0 xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ make-archdiag.xslt - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
 
 
 ############# below here: building an ivoatex distribution
