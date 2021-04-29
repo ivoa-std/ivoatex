@@ -490,7 +490,9 @@
   </xsl:template>
 
   <xsl:template match="body">
-    <xsl:apply-templates/>
+  	<body>
+	    <xsl:apply-templates/>
+	  </body>
   </xsl:template>
 
 </xsl:stylesheet>
