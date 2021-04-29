@@ -162,8 +162,6 @@ class DocumentMeta(object):
 			kwargs.update(
 				dict(parser_function(meta_keys[input_key])))
 
-		##### Temporary HACK: map pen to other:
-		kwargs["doctype"] = {"pen": "other"}.get(kwargs["doctype"], kwargs["doctype"])
 		res = cls(**kwargs)
 
 		if "IVOA_GROUP" in meta_keys:
