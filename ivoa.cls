@@ -261,18 +261,18 @@
      interoperability inside the Astronomical Community.}
 		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}\par
 	A list of current IVOA Recommendations and other technical documents
-	can be found at \href{http://www.ivoa.net/documents/
-	}{http://www.ivoa.net/documents/}.}
+	can be found at \href{https://www.ivoa.net/documents/
+	}{https://www.ivoa.net/documents/}.}
 
 
 \newcommand\currentBaseURL % 
-	{http://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}
+	{https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}
 \newcommand\currentDocURL % URL of this document's landing page
 	{\href{\currentBaseURL}{\currentBaseURL}}
 \newcommand\latestDocURL 
 	% URL of a potential successor to the document's landing page
-	{\href{http://www.ivoa.net/documents/\ivoaDocname}
-		{http://www.ivoa.net/documents/\ivoaDocname}}
+	{\href{https://www.ivoa.net/documents/\ivoaDocname}
+		{https://www.ivoa.net/documents/\ivoaDocname}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Styling various item
