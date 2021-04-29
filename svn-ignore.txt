@@ -10,3 +10,4 @@ ivoatexmeta.tex
 *.zip
 *.fdb_latexmk
 *.fls
+gitmeta.tex
