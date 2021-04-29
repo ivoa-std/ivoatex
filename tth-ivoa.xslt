@@ -384,9 +384,9 @@
          <xsl:when test="$doctype='NOTE'"
             >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
          <xsl:when test="$doctype='PEN'"
-            >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
+            >http://www.ivoa.net/misc/ivoa_pen.css</xsl:when>
          <xsl:when test="$doctype='EN'"
-            >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
+            >http://www.ivoa.net/misc/ivoa_en.css</xsl:when>
        </xsl:choose>
      </xsl:attribute>
      </link>
