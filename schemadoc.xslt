@@ -303,18 +303,14 @@ Copyright 2015, The GAVO project
   <xsl:template match="@type[.='vr:ResourceName']" priority="1" mode="type">
     <xsl:text>string with ID attribute: </xsl:text>
     <code>
-      <a href="http://www.ivoa.net/Documents/REC/ReR/VOResource-20080222.html#d:ResourceName">
         <xsl:text>vr:ResourceName</xsl:text>
-      </a>
     </code>
   </xsl:template>
 
   <xsl:template match="@type[.='vr:IdentifierURI']" priority="1" mode="type">
     <xsl:text>an IVOA Identifier URI: </xsl:text>
     <code>
-      <a href="http://www.ivoa.net/Documents/REC/ReR/VOResource-20080222.html#d:IdentifierURI">
         <xsl:text>vr:IdentifierURI</xsl:text>
-      </a>
     </code>
   </xsl:template>
 

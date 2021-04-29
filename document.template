@@ -34,7 +34,7 @@ interpreted as described in IETF standard RFC2119 \citep{std:RFC2119}.
 The \emph{Virtual Observatory (VO)} is a
 general term for a collection of federated resources that can be used
 to conduct astronomical research, education, and outreach.
-The \href{http://www.ivoa.net}{International
+The \href{https://www.ivoa.net}{International
 Virtual Observatory Alliance (IVOA)} is a global
 collaboration of separately funded projects to develop standards and
 infrastructure that enable VO applications.
