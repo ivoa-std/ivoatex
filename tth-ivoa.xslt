@@ -8,7 +8,7 @@
        in final versions, but draft versions may appear for a while at
        a different location, and this can be parameterised when this
        stylesheet is invoked. -->
-  <xsl:param name='docbase'>http://www.ivoa.net/documents/</xsl:param>
+  <xsl:param name='docbase'>https://www.ivoa.net/documents/</xsl:param>
 
   <xsl:param name="CSS_HREF" select="''"/>
 
@@ -177,7 +177,7 @@
     <xsl:copy>
       <table cellspacing="0" cellpadding="0" width="450">
       <tr>
-        <td><a href="http://www.ivoa.net/"><img height="169" alt="IVOA" src="http://www.ivoa.net/icons/IVOA_wb_300.jpg" width="300" border="0"/></a></td>
+        <td><a href="https://www.ivoa.net/"><img height="169" alt="IVOA" src="https://www.ivoa.net/icons/IVOA_wb_300.jpg" width="300" border="0"/></a></td>
         <td>
         <div style="padding: 3.6pt 7.2pt;">
         <p><b><i><span style="font-size: 14pt; color: rgb(0, 90, 156);"><span>&#xa0;</span>I</span></i></b><i><span style="font-size: 14pt; color: rgb(0, 90, 156);">nternational</span></i></p>
@@ -366,7 +366,7 @@
       </em></p>
 
       <p>A list of current IVOA Recommendations and other technical documents
-        can be found in the <a href="http://www.ivoa.net/documents">IVOA
+        can be found in the <a href="https://www.ivoa.net/documents">IVOA
         document repository</a>.</p>
   </xsl:template>
 
@@ -376,17 +376,17 @@
       <xsl:attribute name="href">
         <xsl:choose>
          <xsl:when test="$doctype='WD'"
-            >http://www.ivoa.net/misc/ivoa_wd.css</xsl:when>
+            >https://www.ivoa.net/misc/ivoa_wd.css</xsl:when>
          <xsl:when test="$doctype='PR'"
-            >http://www.ivoa.net/misc/ivoa_pr.css</xsl:when>
+            >https://www.ivoa.net/misc/ivoa_pr.css</xsl:when>
          <xsl:when test="$doctype='REC'"
-            >http://www.ivoa.net/misc/ivoa_rec.css</xsl:when>
+            >https://www.ivoa.net/misc/ivoa_rec.css</xsl:when>
          <xsl:when test="$doctype='NOTE'"
-            >http://www.ivoa.net/misc/ivoa_note.css</xsl:when>
+            >https://www.ivoa.net/misc/ivoa_note.css</xsl:when>
          <xsl:when test="$doctype='PEN'"
-            >http://www.ivoa.net/misc/ivoa_pen.css</xsl:when>
+            >https://www.ivoa.net/misc/ivoa_pen.css</xsl:when>
          <xsl:when test="$doctype='EN'"
-            >http://www.ivoa.net/misc/ivoa_en.css</xsl:when>
+            >https://www.ivoa.net/misc/ivoa_en.css</xsl:when>
        </xsl:choose>
      </xsl:attribute>
      </link>
@@ -490,7 +490,9 @@
   </xsl:template>
 
   <xsl:template match="body">
-    <xsl:apply-templates/>
+  	<body>
+	    <xsl:apply-templates/>
+	  </body>
   </xsl:template>
 
 </xsl:stylesheet>

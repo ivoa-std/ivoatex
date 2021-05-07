@@ -21,11 +21,11 @@ change updated whenever you re-upload this record. -->
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:ri="http://www.ivoa.net/xml/RegistryInterface/v1.0"
 	xsi:schemaLocation="http://www.ivoa.net/xml/VOResource/v1.0
-		http://www.ivoa.net/xml/VOResource/v1.0
+		https://www.ivoa.net/xml/VOResource/v1.0
 	http://www.ivoa.net/xml/StandardsRegExt/v1.0
-		http://www.ivoa.net/xml/StandardsRegExt/v1.0
+		https://www.ivoa.net/xml/StandardsRegExt/v1.0
 	http://www.ivoa.net/xml/VOResource/v1.0
-		http://www.ivoa.net/xml/VOResource/v1.0">
+		https://www.ivoa.net/xml/VOResource/v1.0">
 
   <title>####</title> <!-- title as given on the standard's title page -->
   <shortName>####</shortName> <!-- this should be your DOCNAME -->
@@ -58,7 +58,7 @@ change updated whenever you re-upload this record. -->
     <!-- you can give further keywords, one per subject element;
     use the Unified Astronomy Thesaurus if possible:
 
-    http://www.ivoa.net/rdf/uat
+    https://www.ivoa.net/rdf/uat
     -->
     <subject>####</subject>
 
@@ -66,7 +66,7 @@ change updated whenever you re-upload this record. -->
     	#### (your abstract; no markup here, please)
     </description>
     <referenceURL>#### (the generic landing page URL, e.g.
-    	http://ivoa.net/documents/SAMP/)</referenceURL>
+    	https://ivoa.net/documents/SAMP/)</referenceURL>
     <type>Other</type>
   	<contentLevel>Research</contentLevel>
   </content>
@@ -86,7 +86,7 @@ change updated whenever you re-upload this record. -->
 	<!-- You can furthermore have as many key-value pairs as you want.
 		Service standard authors will need this to comply with Identifier 2.0's
 		recommendation for standardId 
-		(http://www.ivoa.net/documents/IVOAIdentifiers/20150709/PR-Identifiers-2.0-20150709.html#tth_sEc4.2) -->
+		(https://www.ivoa.net/documents/IVOAIdentifiers/20150709/PR-Identifiers-2.0-20150709.html#tth_sEc4.2) -->
 	<key>
 		<name>####</name>
 		<description>####

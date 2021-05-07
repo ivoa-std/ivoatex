@@ -12,7 +12,7 @@ The design goals are:
 * low to moderate installation effort (on POSIX systems with LaTeX),
 * support with routine drudgery.
 
-.. _IVOA: http://www.ivoa.net
+.. _IVOA: https://www.ivoa.net
 
 
 Getting ivoaTeX
@@ -114,7 +114,7 @@ Documentation
 Documentation on ivoatex, including a chapter on a quick start, is
 given in the IVOA note `The IVOATeX Document Preparation System`_.
 
-.. _The IVOATeX Document Preparation System: http://ivoa.net/documents/Notes/IVOATex/index.html
+.. _The IVOATeX Document Preparation System: https://ivoa.net/documents/Notes/IVOATex/
 
 
 Extra Points for git operation
