@@ -149,7 +149,8 @@ role_diagram.svg: role_diagram.xml
 # We're using inkscape here rather than convert because convert
 # rasterises the svg.
 %.pdf: %.svg
-	inkscape --export-pdf=$@ $< || cp ivoatex/svg-fallback.pdf $@
+	inkscape --export-filename=$@ --export-type=pdf $< \
+		|| cp ivoatex/svg-fallback.pdf $@
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway
