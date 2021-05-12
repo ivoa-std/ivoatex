@@ -4,12 +4,13 @@
 This processes documents having the following structure
 
 <archdiag xmlns="http://ivoa.net/archdiag">
-	<rec name="SAMP" x="10" y="14"/>
+	<rec name="SAMP" x="10" y="14" w="30"/>
 	<prerec name="FOP" x="10" y="34"/>  (a REC not yet passed)
 </archdiag>
 
 Recommendation: Start with archdiag-full.xml and remove standards you don't
 want.
+
 -->
 
 <xsl:stylesheet 
@@ -19,26 +20,30 @@ want.
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	version="1.0">
 
+	<!-- set this to something non-empty to build the SVG with a piece
+	of javascript printing the box widths -->
+	<xsl:param name="WITHJS"/>
+
 <xsl:template name="format-standard">
 	<xsl:param name="std-name"/>
 	<xsl:param name="std-class"/>
 	<xsl:param name="x0"/>
 	<xsl:param name="y0"/>
+	<xsl:param name="w"/>
 
-	<svg>
-		<xsl:attribute name="x">
-			<xsl:value-of select="$x0"/>
-		</xsl:attribute>
-		<xsl:attribute name="y">
-			<xsl:value-of select="$y0"/>
-		</xsl:attribute>
-		<rect width="90" height="18" x="0" y="0">
-			<xsl:attribute name="class">
-				<xsl:value-of select="$std-class"/>
-			</xsl:attribute>
-		</rect>
-		<text class="doclabel" x="45" y="12.5"
-			><xsl:value-of select="$std-name"/></text>
+	<xsl:variable name="width">
+		<xsl:choose>
+			<xsl:when test="$w"><xsl:value-of select="$w"/></xsl:when>
+			<xsl:otherwise>90</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
+	<svg x="{$x0}" y="{$y0}">
+		<rect height="18" x="0" y="0" width="{$width}" class="{$std-class}"/>
+		<text class="doclabel" y="12.5">
+			<xsl:attribute name="x">
+				<xsl:value-of select="0.5*$width"/>
+			</xsl:attribute><xsl:value-of select="$std-name"/></text>
 	</svg>
 </xsl:template>
 
@@ -46,6 +51,7 @@ want.
 	<xsl:call-template name="format-standard">
 		<xsl:with-param name="x0" select="@x"/>
 		<xsl:with-param name="y0" select="@y"/>
+		<xsl:with-param name="w" select="@w"/>
 		<xsl:with-param name="std-name" select="@name"/>
 		<xsl:with-param name="std-class">thisrec</xsl:with-param>
 	</xsl:call-template>
@@ -65,6 +71,7 @@ want.
 	<xsl:call-template name="format-standard">
 		<xsl:with-param name="x0" select="@x"/>
 		<xsl:with-param name="y0" select="@y"/>
+		<xsl:with-param name="w" select="@w"/>
 		<xsl:with-param name="std-name" select="@name"/>
 		<xsl:with-param name="std-class">rec</xsl:with-param>
 	</xsl:call-template>
@@ -74,6 +81,7 @@ want.
 	<xsl:call-template name="format-standard">
 		<xsl:with-param name="x0" select="@x"/>
 		<xsl:with-param name="y0" select="@y"/>
+		<xsl:with-param name="w" select="@w"/>
 		<xsl:with-param name="std-name" select="@name"/>
 		<xsl:with-param name="std-class">prerec</xsl:with-param>
 	</xsl:call-template>
@@ -85,19 +93,19 @@ want.
 	<svg  version="2.0"
 		width="800" height="600">
 		<defs>
+			<xsl:if test="$WITHJS">
 			<script type="text/javascript">
 			function adjustBoxWidthsForClass(cls) {
 				var recs = document.getElementsByClassName(cls);
 				for (var index in recs) {
 					if (!recs[index].nextSibling || !recs[index].nextSibling.getBBox) {
 						// for some reason we have a 'rec' box not followed by text;
-						// let's skip this for now an see if this bites someone.
+						// let's skip this for now and see if this bites someone.
 						continue;
 					}
-					var bbox = recs[index].nextSibling.getBBox();
-					var newWidth = bbox.width+6;
-					recs[index].width.baseVal.value = newWidth;
-					recs[index].x.baseVal.value += (90-newWidth)/2;
+					var textNode = recs[index].nextSibling;
+					var newWidth = Math.round(textNode.getBBox().width+8);
+					console.log(`${textNode.textContent}: ${newWidth}; ${45-newWidth/2}`);
 				}
 			}
 
@@ -111,6 +119,7 @@ want.
 
 			window.addEventListener("load", adjustBoxWidths, false);
 			</script>
+			</xsl:if>
 
 			<style type="text/css">
 				@font-face {

@@ -151,7 +151,8 @@ role_diagram.svg: role_diagram.xml
 # We're using inkscape here rather than convert because convert
 # rasterises the svg.
 %.pdf: %.svg
-	inkscape --export-pdf=$@ $< || cp ivoatex/svg-fallback.pdf $@
+	inkscape --export-filename=$@ --export-type=pdf $< \
+		|| cp ivoatex/svg-fallback.pdf $@
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway
@@ -196,16 +197,22 @@ $(TTH): ivoatex/tth_C/tth.c
 
 ############# architecture diagram stuff (to be executed in this directory)
 
-archdiag-l2.svg: archdiag-full.xml make-archdiag.xslt
-	$(XSLTPROC) -o $@ make-archdiag.xslt archdiag-full.xml 
+ARCHDIAG_XSLT = make-archdiag.xslt
 
-archdiag-l1.svg: make-archdiag.xslt
+archdiag-l2.svg: archdiag-full.xml  $(ARCHDIAG_XSLT)
+	$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) archdiag-full.xml 
+
+archdiag-debug.svg: archdiag-full.xml $(ARCHDIAG_XSLT)
+	$(XSLTPROC) --stringparam WITHJS True -o $@ $(ARCHDIAG_XSLT) \
+		archdiag-full.xml 
+
+archdiag-l1.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ make-archdiag.xslt - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
 
-archdiag-l0.svg: make-archdiag.xslt
+archdiag-l0.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag0 xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ make-archdiag.xslt - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
 
 
 ############# below here: building an ivoatex distribution

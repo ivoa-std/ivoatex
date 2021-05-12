@@ -13,70 +13,90 @@ Document authors (ivoatex maintainers have different rules):
 For the time being, keep both role_diagram.pdf and role_diagram.svg as
 created by this in the VCS.  This helps document builds on machines
 with missing dependencies.
+
+
+Archdiag maintainers: When adding boxes here, first look for a good place,
+preferably in one of the grid positions given in the comments for the
+WGs (e.g., 55 for Registry).  Good y positions are ones that already
+exist.  Leave out the w at first.
+
+Then, run
+
+make archdiag-debug.svg
+
+and open archdiag-debug.svg in a javascript-enabled browser.  In that 
+browser's javascript console you will see lines like:
+
+SpectralDM: 67; 11.5
+
+The first number is the box's natural width, which you should use in the w
+attribute of the rec/prerec.  The second is the offset to x you'd need to
+add to one of the x grid lines (the x=something in the opening comments
+of the various sections) to have the box centered.
 -->
 
 <archdiag xmlns="http://ivoa.net/archdiag">
 	<!-- Registry: x=55, y=150..450 -->
-	<rec name="VOResource" x="55" y="155"/>
-	<rec name="RegTAP" x="55" y="180"/>
-	<rec name="RegistryInterface" x="55" y="205"/>
-	<rec name="Resource M.D." x="55" y="230"/>
-	<rec name="TAPRegExt" x="55" y="255"/>
-	<rec name="VODataService" x="55" y="350"/>
-	<rec name="StandardsRegExt" x="55" y="375"/>
-	<rec name="SimpleDALR.E." x="55" y="400"/>
+	<rec name="VOResource" x="64.5" y="155" w="71"/>
+	<rec name="RegTAP" x="76" y="180" w="48"/>
+	<rec name="Reg.Intf" x="75" y="205" w="50"/>
+	<rec name="Resource M.D." x="58" y="230" w="84"/>
+	<rec name="TAPRegExt" x="67.5" y="255" w="65"/>
+	<rec name="VODataService" x="57.5" y="350" w="85"/>
+	<rec name="StandardsRE" x="63" y="375" w="74"/>
+	<rec name="SimpleDALRE" x="61" y="400" w="78"/>
 
-	<rec name="Identifiers" x="125" y="425"/>
+	<rec name="Identifiers" x="125" y="425" w="60"/>
 
 	<!-- Apps: all over the place -->
-	<rec name="VOTable" x="270" y="325"/>
-	<rec name="SAMP" x="170" y="110"/>
-	<rec name="MOC" x="430" y="400"/>
-	<rec name="HiPS" x="430" y="425"/>
+	<rec name="VOTable" x="270" y="325" w="50"/>
+	<rec name="SAMP" x="170" y="110" w="38"/>
+	<rec name="MOC" x="430" y="400" w="33"/>
+	<rec name="HiPS" x="430" y="425" w="33"/>
 
 	<!-- DAL: x=655, y=155..435 -->
-	<rec name="DALI" x="310" y="290"/>
-	<rec name="ADQL" x="250" y="160"/>
+	<rec name="DALI" x="310" y="290" w="33"/>
+	<rec name="ADQL" x="250" y="160" w="37"/>
 
-	<rec name="TAP" x="655" y="155"/>
-	<rec name="SSAP" x="655" y="255"/>
-	<rec name="SLAP" x="655" y="280"/>
-	<rec name="ConeSearch" x="655" y="305"/>
-	<rec name="SIAP" x="655" y="330"/>
-	<rec name="SimDAL" x="655" y="355"/>
-	<rec name="VTP" x="655" y="380"/>
-	<rec name="DataLink" x="610" y="405"/>
-	<rec name="SODA" x="655" y="430"/>
-	<rec name="ObsCore" x="600" y="180"/>
-	<prerec name="EPN-TAP" x="600" y="205"/>
-	<prerec name="ObsLocTAP" x="600" y="230"/>
+	<rec name="TAP" x="686" y="155" w="28"/>
+	<rec name="SSAP" x="682" y="180" w="36"/>
+	<rec name="SLAP" x="682.5" y="205" w="35"/>
+	<rec name="ConeSearch" x="665.5" y="330" w="69"/>
+	<rec name="SIAP" x="683.5" y="230" w="33"/>
+	<rec name="SimDAL" x="676" y="355" w="48"/>
+	<rec name="VTP" x="684" y="380" w="30.5"/>
+	<rec name="DataLink" x="628" y="405" w="53"/>
+	<rec name="SODA" x="681" y="430" w="38"/>
+	<rec name="ObsCore" x="619" y="180" w="52"/>
+	<prerec name="EPN-TAP" x="617.5" y="205" w="55"/>
+	<prerec name="ObsLocTAP" x="612" y="230" w="66"/>
 
 	<!-- Data Models: x=430..580, y=250..400 -->
-	<rec name="VODML" x="490" y="195"/>
-	<rec name="SimDM" x="450" y="230"/>
-	<rec name="STC" x="550" y="255"/>
-	<rec name="CharDM" x="450" y="255"/>
-	<rec name="SSLDM" x="550" y="280"/>
-	<rec name="SpectralDM" x="450" y="280"/>
-	<rec name="PhotDM" x="550" y="305"/>
-	<prerec name="DatasetDM" x="450" y="305"/>
-	<prerec name="CubeDM" x="550" y="330"/>
-	<rec name="ProvDM" x="450" y="330"/>
+	<rec name="VODML" x="512" y="195" w="46"/>
+	<rec name="SimDM" x="473" y="230" w="44"/>
+	<rec name="STC" x="580" y="255" w="30"/>
+	<rec name="CharDM" x="470.5" y="255" w="49"/>
+	<rec name="SSLDM" x="572.5" y="280" w="45"/>
+	<rec name="SpectralDM" x="461.5" y="280" w="67"/>
+	<rec name="PhotDM" x="571" y="305" w="48"/>
+	<prerec name="DatasetDM" x="462.5" y="305" w="65"/>
+	<prerec name="CubeDM" x="569.5" y="330" w="51"/>
+	<rec name="ProvDM" x="471" y="330" w="48"/>
 
 	<!-- GWS: all over the place -->
-	<rec name="PDL" x="425" y="355"/>
-	<rec name="SSO" x="270" y="120"/>
-	<rec name="VOSpace" x="155" y="455"/>
-	<rec name="CDP" x="570" y="115"/>
-	<rec name="UWS" x="605" y="460"/>
-	<prerec name="GMS" x="505" y="460"/>
-	<rec name="VOSI" x="540" y="435"/>
+	<rec name="PDL" x="455.5" y="355" w="29"/>
+	<rec name="SSO" x="300" y="120" w="30"/>
+	<rec name="VOSpace" x="173" y="455" w="54"/>
+	<rec name="CDP" x="599.5" y="115" w="31"/>
+	<rec name="UWS" x="633.5" y="460" w="33"/>
+	<prerec name="GMS" x="534" y="460" w="32"/>
+	<rec name="VOSI" x="568" y="435" w="34"/>
 
 	<!-- Semantics: x=160..250 y=250..400 -->
-	<rec name="VOUnits" x="200" y="250"/>
-	<rec name="UCD" x="160" y="310"/>
-	<rec name="Vocabularies" x="160" y="335"/>
+	<rec name="VOUnits" x="220" y="250" w="50"/>
+	<rec name="UCD" x="189" y="310" w="32"/>
+	<rec name="Vocabularies" x="168.5" y="335" w="73"/>
 
 	<!-- TD -->
-	<rec name="VOEvent"  x="530" y="375"/>
+	<rec name="VOEvent"  x="549" y="375" w="52"/>
 </archdiag>
