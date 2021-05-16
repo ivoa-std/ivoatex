@@ -50,19 +50,19 @@ of the various sections) to have the box centered.
 
 	<!-- Apps: all over the place -->
 	<rec name="VOTable" x="270" y="325" w="50"/>
-	<rec name="SAMP" x="170" y="110" w="38"/>
-	<rec name="MOC" x="430" y="400" w="33"/>
-	<rec name="HiPS" x="430" y="425" w="33"/>
+	<rec name="SAMP" x="300" y="115" w="38"/>
+	<rec name="MOC" x="430" y="405" w="33"/>
+	<rec name="HiPS" x="430" y="430" w="33"/>
 
 	<!-- DAL: x=655, y=155..435 -->
 	<rec name="DALI" x="310" y="290" w="33"/>
 	<rec name="ADQL" x="250" y="160" w="37"/>
 
-	<rec name="TAP" x="686" y="155" w="28"/>
+    <rec name="ConeSearch" x="665.5" y="155" w="69"/>
 	<rec name="SSAP" x="682" y="180" w="36"/>
 	<rec name="SLAP" x="682.5" y="205" w="35"/>
-	<rec name="ConeSearch" x="665.5" y="330" w="69"/>
 	<rec name="SIAP" x="683.5" y="230" w="33"/>
+    <rec name="TAP" x="686" y="255" w="28"/>
 	<rec name="SimDAL" x="676" y="355" w="48"/>
 	<rec name="VTP" x="684" y="380" w="30.5"/>
 	<rec name="DataLink" x="628" y="405" w="53"/>
@@ -72,6 +72,7 @@ of the various sections) to have the box centered.
 	<prerec name="ObsLocTAP" x="612" y="230" w="66"/>
 
 	<!-- Data Models: x=430..580, y=250..400 -->
+	<prerec name="VODML-Map" x="502" y="160" w="66"/>
 	<rec name="VODML" x="512" y="195" w="46"/>
 	<rec name="SimDM" x="473" y="230" w="44"/>
 	<rec name="STC" x="580" y="255" w="30"/>
@@ -79,15 +80,18 @@ of the various sections) to have the box centered.
 	<rec name="SSLDM" x="572.5" y="280" w="45"/>
 	<rec name="SpectralDM" x="461.5" y="280" w="67"/>
 	<rec name="PhotDM" x="571" y="305" w="48"/>
-	<prerec name="DatasetDM" x="462.5" y="305" w="65"/>
-	<prerec name="CubeDM" x="569.5" y="330" w="51"/>
-	<rec name="ProvDM" x="471" y="330" w="48"/>
+	<prerec name="Meas" x="462.5" y="305" w="65"/>
+	<prerec name="Coords" x="462.5" y="330" w="65"/>
+	<prerec name="Transform" x="462.5" y="355" w="65"/>
+	<prerec name="DatasetDM" x="490" y="380" w="65"/>
+	<prerec name="CubeDM" x="497" y="405" w="51"/>
+	<rec name="ProvDM" x="571" y="330" w="48"/>
 
 	<!-- GWS: all over the place -->
-	<rec name="PDL" x="455.5" y="355" w="29"/>
-	<rec name="SSO" x="300" y="120" w="30"/>
+	<rec name="PDL" x="430" y="380" w="33"/>
+	<rec name="SSO" x="450" y="115" w="31"/>
 	<rec name="VOSpace" x="173" y="455" w="54"/>
-	<rec name="CDP" x="599.5" y="115" w="31"/>
+	<rec name="CDP" x="500" y="115" w="31"/>
 	<rec name="UWS" x="633.5" y="460" w="33"/>
 	<prerec name="GMS" x="534" y="460" w="32"/>
 	<rec name="VOSI" x="568" y="435" w="34"/>
@@ -98,5 +102,5 @@ of the various sections) to have the box centered.
 	<rec name="Vocabularies" x="168.5" y="335" w="73"/>
 
 	<!-- TD -->
-	<rec name="VOEvent"  x="549" y="375" w="52"/>
+	<rec name="VOEvent"  x="570" y="375" w="52"/>
 </archdiag>
