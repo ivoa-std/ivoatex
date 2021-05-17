@@ -72,7 +72,7 @@ of the various sections) to have the box centered.
 	<prerec name="ObsLocTAP" x="612" y="230" w="66"/>
 
 	<!-- Data Models: x=430..580, y=250..400 -->
-	<prerec name="VODML-Map" x="502" y="160" w="66"/>
+	<prerec name="VODML-Map" x="440" y="355" w="72"/>
 	<rec name="VODML" x="512" y="195" w="46"/>
 	<rec name="SimDM" x="473" y="230" w="44"/>
 	<rec name="STC" x="580" y="255" w="30"/>
@@ -80,9 +80,9 @@ of the various sections) to have the box centered.
 	<rec name="SSLDM" x="572.5" y="280" w="45"/>
 	<rec name="SpectralDM" x="461.5" y="280" w="67"/>
 	<rec name="PhotDM" x="571" y="305" w="48"/>
-	<prerec name="Meas" x="462.5" y="305" w="65"/>
-	<prerec name="Coords" x="462.5" y="330" w="65"/>
-	<prerec name="Transform" x="462.5" y="355" w="65"/>
+	<prerec name="Meas" x="456" y="305" w="35"/>
+	<prerec name="Coords" x="501" y="305" w="44"/>
+	<prerec name="Transform" x="465" y="330" w="60"/>
 	<prerec name="DatasetDM" x="490" y="380" w="65"/>
 	<prerec name="CubeDM" x="497" y="405" w="51"/>
 	<rec name="ProvDM" x="571" y="330" w="48"/>
