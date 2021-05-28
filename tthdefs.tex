@@ -21,8 +21,8 @@
 	{\begin{html}<li class="previousversion">#2</li>\end{html}}\else
 	{\begin{html}<li class="previousversion">
 	  <a href="#1">#2</a></li>\end{html}}\fi}
-\renewcommand{\ivoagroup}[1]
-  {\begin{html}<dd id="ivoagroup">#1</dd>\end{html}}
+\renewcommand{\ivoagroup}[2][WG]
+  {\begin{html}<dd id="ivoagroup" class="#1">#2</dd>\end{html}}
 \renewcommand{\editor}[2][0]{\def\@tmp{#1}
   \if 0\@tmp
         {\begin{html}<li class="editor">\end{html}#2\begin{html}</li>\end{html}}\else

@@ -203,8 +203,7 @@
     </div>
     <dl id="docmeta">
 
-      <dt>Working Group</dt>
-      <xsl:copy-of select="dd[@id='ivoagroup']"/>
+			<xsl:apply-templates select="dd[@id='ivoagroup']"/>
 
       <dt>This Version</dt>
       <dd>
@@ -369,6 +368,18 @@
         can be found in the <a href="https://www.ivoa.net/documents">IVOA
         document repository</a>.</p>
   </xsl:template>
+
+	<xsl:template match="dd[@id='ivoagroup']">
+		<xsl:choose>
+			<xsl:when test="@class='IG'">
+				<dt>Interest Group</dt>
+			</xsl:when>
+			<xsl:otherwise>
+				<dt>Working Group</dt>
+			</xsl:otherwise>
+		</xsl:choose>
+   	<xsl:copy-of select="."/>
+	</xsl:template>
 
   <xsl:template name="selectDoctypeStyle">
     <xsl:variable name="doctype" select="//span[@id='doctype']"/>
