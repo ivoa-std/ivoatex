@@ -184,7 +184,7 @@ class DocumentMeta(object):
  	 	"VO Event": "voe",
  	 	"Time Domain": "voe",
  	 	"Education": "edu",
-		"Operations": "ops",
+ 	 	"Operations": "ops",
  	 	"No Group": "none",
  	 }
 
