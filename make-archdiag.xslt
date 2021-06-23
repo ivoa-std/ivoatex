@@ -55,6 +55,14 @@ want.
 		<xsl:with-param name="std-name" select="@name"/>
 		<xsl:with-param name="std-class">thisrec</xsl:with-param>
 	</xsl:call-template>
+
+	<xsl:variable name="width">
+		<xsl:choose>
+			<xsl:when test="@w"><xsl:value-of select="@w"/></xsl:when>
+			<xsl:otherwise>90</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
 	<svg>
 		<xsl:attribute name="x">
 			<xsl:value-of select="@x"/>
@@ -62,8 +70,9 @@ want.
 		<xsl:attribute name="y">
 			<xsl:value-of select="@y"/>
 		</xsl:attribute>
-		<ellipse rx="60" ry="15" cx="45" cy="9" fill="none" stroke="red"
-			stroke-width="3"/>
+		<ellipse rx="{$width div 2 + 15}" ry="15" 
+			cx="{$width div 2}" cy="9" 
+			fill="none" stroke="red" stroke-width="3"/>
 	</svg>
 </xsl:template>
 
