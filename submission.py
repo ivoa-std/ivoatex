@@ -185,6 +185,7 @@ class DocumentMeta(object):
  	 	"Time Domain": "voe",
  	 	"Education": "edu",
  	 	"Operations": "ops",
+ 	 	"Radio": "rad",
  	 	"No Group": "none",
  	 }
 
