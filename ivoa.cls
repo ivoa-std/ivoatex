@@ -40,7 +40,12 @@
 
 %%%%%%%%%%%%%%%%%%% Metadata definition macros
 
-\newcommand{\ivoagroup}[1]{\def\ivo@group{#1}}
+\newcommand{\ivoagroup}[2][WG]{%
+	\def\ivo@group{#2}%
+	\ifthenelse{\equal{#1}{IG}}
+		{\gdef\gr@uptype{Interest Group}}
+		{\gdef\gr@uptype{Working Group}}
+}
 
 % these are accumulators for sequences
 \def\previ@usversions{}
@@ -141,7 +146,7 @@
 
 
   \begin{bigdescription}
-    \item[Working group]
+    \item[\gr@uptype]
     	\ivo@group
 
     \item[This version]
