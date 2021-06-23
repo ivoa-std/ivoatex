@@ -343,6 +343,18 @@
 
 \newcommand{\xmlel}[1]{{\ttfamily\itshape #1}}
 \newcommand{\vorent}[1]{\textsc{#1}}
+\def\ucd{\st@rtucd\re@lucd}
+\def\re@lucd#1{\sl#1\@nducd}
+\begingroup
+% let LaTeX break UCD componds and at dots and semicolons in UCDs
+\gdef\bre@kabledot{.\hskip0pt}
+\gdef\bre@kablesemicolon{;\hskip0pt}
+\catcode`\.=\active\catcode`\;=\active
+\gdef\st@rtucd{\begingroup
+  \catcode`\.=\active\let.=\bre@kabledot
+  \catcode`\;=\active\let;=\bre@kablesemicolon}
+\gdef\@nducd{\endgroup}
+\endgroup
 
 \newcommand{\sptablerule}{\noalign{\vspace{2pt}}\hline\noalign{\vspace{2pt}}}
 
