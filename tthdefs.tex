@@ -173,6 +173,25 @@
 \newcommand\caption[2][]{\special{html:<div class="caption">}%
   \tthcaption{#2}\special{html:</div>}}
 
+%%%%%%%%%%%%%%%%%%%% support prettyref
+% The following is the effective content of the prettyref package,
+% minus the default \newrefformat declarations, which are included as examples.
+% (required changes: `\@namedef` doesn't work in tth,
+% and we need an extra space in `\prettyref`).
+%
+% Prettyref is by Kevin Ruland kevin@rodin.wustl.edu (1995, 1998)
+% and is released to the public domain.
+\def\newrefformat#1#2{\expandafter\def\csname pr@#1\endcsname##1{#2}}
+\def\prettyref#1{\@prettyref #1:}
+\def\@prettyref#1:#2:{\csname pr@#1\endcsname{#1:#2}}
+%\newrefformat{eq}{\textup{(\ref{#1})}}
+%\newrefformat{lem}{Lemma \ref{#1}}
+%\newrefformat{thm}{Theorem \ref{#1}}
+%\newrefformat{cha}{Chapter \ref{#1}}
+%\newrefformat{sec}{Section \ref{#1}}
+%\newrefformat{tab}{Table \ref{#1} on page \pageref{#1}}
+%\newrefformat{fig}{Figure \ref{#1} on page \pageref{#1}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Now open up titlepage metadata
 \begin{html}
   <div id="titlepage">
