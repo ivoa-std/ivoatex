@@ -89,7 +89,7 @@ arxiv-upload: $(SOURCES) biblio $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
 clean:
 	rm -f $(DOCNAME).pdf $(DOCNAME).aux $(DOCNAME).log $(DOCNAME).toc texput.log ivoatexmeta.tex
 	rm -f $(DOCNAME).html $(DOCNAME).xhtml
-	rm -f *.bbl *.blg *.out debug.html
+	rm -f *.bbl *.blg *.out debug.html *.fls *.fdb_latexmk
 	rm -f arxiv-upload.tar.gz
 	rm -f $(GENERATED_PNGS)
 
