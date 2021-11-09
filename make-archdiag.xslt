@@ -99,8 +99,7 @@ want.
 <xsl:template name="draw-archdiag">
 	<!-- design size: 800 x 600 whatever; 50 border for annotation-->
 	<xsl:param name="include-level1"/>
-	<svg  version="2.0"
-		width="800" height="600">
+	<svg  version="2.0" viewBox="0 0 800 600">
 		<defs>
 			<xsl:if test="$WITHJS">
 			<script type="text/javascript">
