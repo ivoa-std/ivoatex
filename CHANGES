@@ -11,6 +11,9 @@ Version 1.2 (unreleased)
   * Minor fixes (e.g., escaping in schema snippets, &-less bibanchors,
     titles in HTML output).
 
+	* Use rsvg rather than inkscape for SVG->PDF conversion.  You can
+	  set the environment variable SVGENGINE to inkscape to return to
+	  the previous behaviour.
 
 Version 1.1 (2018-08-14)
 
