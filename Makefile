@@ -160,7 +160,10 @@ role_diagram.svg: role_diagram.xml
 # Also, it needs python installed, which may not be available on all
 # installations.
 generate:
-	$(PYTHON) ivoatex/update_generated.py $(DOCNAME).tex
+	$(PYTHON) ivoatex/update_generated.py "$(DOCNAME).tex"
+
+bib-suggestions: $(DOCNAME).pdf
+	$(PYTHON) ivoatex/suggest-bibupgrade.py $(DOCNAME).aux
 
 package: $(DOCNAME).tex $(DOCNAME).html $(DOCNAME).pdf \
 		$(GENERATED_PNGS)	$(FIGURES) $(AUX_FILES)
