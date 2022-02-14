@@ -26,11 +26,12 @@ PYTHON?=python3
 #     texlive
 #     ghostscript (if you plan on postscript/pdf figures)
 #     zip
-#     inkscape if you need an architecture diagram
+#     librsvg2-bin or inkscape (for architecture diagrams)
 #     pdftk if you want to build draft pdfs with a watermark
 #     optionally, latexmk.
-#  Since inkscape is a rather exotic dependency, please commit both 
-#  role_diagram.svg and role_diagram.pdf into your VCS for now.
+#  If you don't have librsvg2 but you do have inkscape, you 
+#  can set the SVGENGINE environment variable to inkscape.
+#  Then, ivoatex will use inkscape for svg -> pdf conversion.
 
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
@@ -150,9 +151,15 @@ role_diagram.svg: role_diagram.xml
 # Regrettably, pdflatex can't use svg, so we need to convert it.
 # We're using inkscape here rather than convert because convert
 # rasterises the svg.
+ifeq ($(SVGENGINE),inkscape)
 %.pdf: %.svg
 	inkscape --export-filename=$@ --export-type=pdf $< \
 		|| cp ivoatex/svg-fallback.pdf $@
+else
+%.pdf: %.svg
+	rsvg-convert --output=$@ --format=pdf $< \
+		|| cp ivoatex/svg-fallback.pdf $@
+endif
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway
