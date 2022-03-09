@@ -20,5 +20,5 @@ copyAndAdd() {
 copyAndAdd ivoatex/document.template "$1.tex"
 copyAndAdd ivoatex/Makefile.template Makefile
 copyAndAdd ivoatex/svn-ignore.txt .gitignore
-copyAndAdd ivoatex/readme-template.rst README.rst
+copyAndAdd ivoatex/readme-template.md README.md
 copyAndAdd ivoatex/license-template.txt LICENSE
