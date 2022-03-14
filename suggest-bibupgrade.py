@@ -136,15 +136,27 @@ def iter_ref_tags(f):
         if mat:
             yield mat.group(1)
 
+
 def main():
     if len(sys.argv)!=2:
         sys.exit("Do not call this script directly.")
 
+    suggestions = {}
     with open(sys.argv[1], encoding="utf-8") as f:
         for ref_tag in iter_ref_tags(f):
             replacement = get_suggestion(ref_tag)
             if replacement!=ref_tag:
-                print(f"{ref_tag} -> {replacement} ?")
+                suggestions[ref_tag] = replacement
+
+    if suggestions:
+        # There may be a bit of mess from the LaTeX run(s) above us, so feed
+        # a bit of white space.
+        print("\n\n*** Consider updating the following references:")
+        for ref_tag, replacement in suggestions.items():
+            print(f"{ref_tag} -> {replacement} ?")
+    
+    else:
+        print("\n\n*** All references seem up to date.")
 
 
 class TestSuggestions:
