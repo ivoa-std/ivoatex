@@ -24,7 +24,7 @@ import sys
 # Yes, that's the NEW reference tag first.  It's what you see first when
 # inspecting things.
 _DOCMAP ="""
-2010ivoa.spec.1202P 2021ivoa.spec.1102D 
+2021ivoa.spec.1102D 2010ivoa.spec.1202P
 2021ivoa.spec.1101D 2010ivoa.rept.1123A 
 2021ivoa.spec.0616C 2018ivoa.spec.0527P 
 2021ivoa.spec.0525D 2009ivoa.spec.1007G 
