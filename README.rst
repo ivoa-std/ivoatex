@@ -25,15 +25,11 @@ preferably via mechanisms of the version control system chosen (e.g.,
 IvoaTeX is currently maintained in two places:
 
 * https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatex – this is the 
-  original site on volute (an IVOA-affiliated subversion repository).
-* https://github.com/ivoa-std/ivoatex.git – this is experimental and git-based; it
-  is likely that ivoaTeX's recommended process will move to using this at some
-  point.
-
-Because of this situation, some of the points below are mentioned twice, once
-for github and once for volute.
-
-The two locations are being kept in sync manually.
+  legacy site on volute (an IVOA-affiliated subversion repository).  It
+  is being phased out.
+* https://github.com/ivoa-std/ivoatex.git – this is where development
+  happens and what should be used as the submodule in new IVOA
+  standards.
 
 
 Crib Sheet
@@ -49,31 +45,17 @@ Installing the dependencies
 Debian-derived systems::
 
   apt-get install build-essential texlive-latex-extra zip xsltproc\
-    texlive-bibtex-extra imagemagick ghostscript cm-super librsvg2-bin
+    texlive-bibtex-extra latexmk librsvg2-bin ghostscript cm-super\
+    librsvg2-bin
 
 Fedora::
 
   dnf install texlive-scheme-full libxslt make gcc zip\
-    ImageMagick ghostscript
+    librsvg2-tools ImageMagick ghostscript
 
 Mac OS X with MacPorts::
 
   port install ImageMagick  libxslt ghostscript texlive +full
-
-
-Checking Out and Building a Document from Volute
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Where documents are still developed on the Volute VCS, use something like the
-following to build a document; in the example, the ivoatex documentation
-is built::
-
-	svn co https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatexDoc
-	cd ivoatexDoc
-	make biblio
-	make forcetex
-
-Then start your favourite PDF viewer on ivoatexDoc.pdf.
 
 
 Checking Out a Standard from Github and Building it
@@ -86,7 +68,8 @@ Documents developed on github can be built like this::
    make biblio
    make forcetex
 
-This produces the standards document ``ADQL.pdf``.
+This produces the standards document ``ADQL.pdf``.  If you have latexmk
+installed, a simple ``make`` will work as well.
 
 Automatic PDF preview in GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,19 +98,6 @@ Documentation on ivoatex, including a chapter on a quick start, is
 given in the IVOA note `The IVOATeX Document Preparation System`_.
 
 .. _The IVOATeX Document Preparation System: https://ivoa.net/documents/Notes/IVOATex/
-
-
-Extra Points for git operation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-(This is a temporary accumulator for git-related stuff that should go
-into ivoatexDoc once it's stabilised)
-
-(1) VCS info in the documents: ivoatex 1.2, sect 3.8 is svn-specific.  To have
-info on the git commit in the document heading, instead do:
-
-* Add gitmeta.tex to SOURCES in the Makefile
-* Say ``\input gitmeta`` right below ``\input tthdefs`` in your document.
 
 
 Trouble?
@@ -169,7 +139,7 @@ What is inserted into the CSS within the XSLT is then the output of::
 License
 -------
 
-Unless stated otherwise in the files, ivoatex is (c) 2014-2019, the
+Unless stated otherwise in the files, ivoatex is (c) 2014-2022, the
 GAVO project and can be used and distributed under the GNU General
 Public License (ask for additional licenses if you're unhappy with the
 GPL). See COPYING for details.
