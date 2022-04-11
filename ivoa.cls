@@ -29,6 +29,10 @@
 \RequirePackage{natbib}
 \bibliographystyle{ivoatex/ivoa}
 
+% people usually want to cut and paste from our listings, so keep
+% lstlistings from mangling quotes.
+\lstset{upquote=true}
+
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.7}
 \renewcommand{\textfraction}{0.1}
