@@ -9,6 +9,7 @@
 \RequirePackage{ifthen}
 \RequirePackage{doc}
 \RequirePackage{listings}
+\RequirePackage{textcomp}
 \RequirePackage{paralist}
 \RequirePackage{url}
 \RequirePackage[nottoc]{tocbibind}
