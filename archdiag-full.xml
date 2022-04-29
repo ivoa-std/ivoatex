@@ -93,7 +93,7 @@ of the various sections) to have the box centered.
 	<rec name="VOSpace" x="173" y="455" w="54"/>
 	<rec name="CDP" x="500" y="115" w="31"/>
 	<rec name="UWS" x="633.5" y="460" w="33"/>
-	<prerec name="GMS" x="534" y="460" w="32"/>
+	<rec name="GMS" x="534" y="460" w="32"/>
 	<rec name="VOSI" x="568" y="435" w="34"/>
 
 	<!-- Semantics: x=160..250 y=250..400 -->
