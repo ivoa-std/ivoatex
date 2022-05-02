@@ -63,6 +63,7 @@ of the various sections) to have the box centered.
 	<rec name="SLAP" x="682.5" y="205" w="35"/>
 	<rec name="SIAP" x="683.5" y="230" w="33"/>
     <rec name="TAP" x="686" y="255" w="28"/>
+	<prerec name="ObsVisSAP" x="665.5" y="330" w="66"/>
 	<rec name="SimDAL" x="676" y="355" w="48"/>
 	<rec name="VTP" x="684" y="380" w="30.5"/>
 	<rec name="DataLink" x="628" y="405" w="53"/>
@@ -93,7 +94,7 @@ of the various sections) to have the box centered.
 	<rec name="VOSpace" x="173" y="455" w="54"/>
 	<rec name="CDP" x="500" y="115" w="31"/>
 	<rec name="UWS" x="633.5" y="460" w="33"/>
-	<prerec name="GMS" x="534" y="460" w="32"/>
+	<rec name="GMS" x="534" y="460" w="32"/>
 	<rec name="VOSI" x="568" y="435" w="34"/>
 
 	<!-- Semantics: x=160..250 y=250..400 -->
