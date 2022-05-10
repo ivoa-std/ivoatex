@@ -229,7 +229,7 @@ archdiag-l0.svg: $(ARCHDIAG_XSLT)
 
 IVOATEX_FILES = fromivoadoc.xslt Makefile COPYING \
 	ivoabib.bib Makefile.template tthdefs.tex document.template \
-	ivoa.cls README  tth-ivoa.xslt IVOA.jpg docrepo.bib\
+	ivoa.cls README.rst  tth-ivoa.xslt IVOA.jpg docrepo.bib\
 	svn-ignore.txt tthntbib.sty update_generated.py schemadoc.xslt \
 	ivoa.bst CHANGES archdiag-full.xml make-archdiag.xslt stdrec-template.xml \
 	submission.py svg-fallback.pdf
@@ -253,8 +253,8 @@ $(IVOATEX_ARCHIVE): $(IVOATEX_FILES)
 
 ivoatex-installdist: $(IVOATEX_ARCHIVE)
 	@echo "This target will only work for Markus"
-	scp $(IVOATEX_ARCHIVE) alnilam:/var/www/soft/ivoatex/
-	ssh alnilam "cd /var/www/soft/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivoatex-latest.tar.gz"
+	scp $(IVOATEX_ARCHIVE) www.g-vo.org:/var/www/ivoatex/
+	ssh www.g-vo.org "cd /var/www/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivoatex-latest.tar.gz"
 
 # re-gets the ivoa records from ADS
 docrepo.bib:
