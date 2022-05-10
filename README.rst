@@ -19,17 +19,14 @@ Getting ivoaTeX
 ---------------
 
 IvoaTeX is designed to be included with the document source,
-preferably via mechanisms of the version control system chosen (e.g.,
-``svn:externals`` or ``git submodule``).
+preferably via ``git submodule`` (or ``svn:externals``, though support
+for that is waning quickly as ivoaTeX evolves).  See ivoatexDoc_ for
+more information on how this is intended to work.
 
-IvoaTeX is currently maintained in two places:
+.. _ivoatexDoc: http://ivoa.net/documents/Notes/IVOATex/
 
-* https://volute.g-vo.org/svn/trunk/projects/ivoapub/ivoatex – this is the 
-  legacy site on volute (an IVOA-affiliated subversion repository).  It
-  is being phased out.
-* https://github.com/ivoa-std/ivoatex.git – this is where development
-  happens and what should be used as the submodule in new IVOA
-  standards.
+We occasionally make downloadable releases of ivoatex on
+http://ivoatex.g-vo.org/.
 
 
 Crib Sheet
@@ -90,6 +87,7 @@ clickable badge returned by the ``make`` command into your ``README.md``.
 A PDF preview is also generated at each update of a PullRequest. To get it,
 go on the page of your PullRequest, click on the tab ``Checks`` and then on
 ``Artifacts``. This artifact will be automatically deleted after some time.
+
 
 Documentation
 -------------

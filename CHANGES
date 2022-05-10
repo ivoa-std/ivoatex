@@ -1,19 +1,31 @@
-Version 1.2 (unreleased)
+Version 1.2 (2022-05-10)
 
-  * update_generated now works with python3 (you can fall back to python2 
-    by writing PYTHON=python into your Makefile).
+	* Largely replaced support for subversion/volute with support for
+	  git/github.
+
+	* New make-templates.sh script for starting a document.
+
+	* New bib-suggestions target for bibliography maintenance.
+
+  * update_generated now works with python3.
+
+  * Now exploiting latexmk if it is there.
 
   * New VO-DML translator for the generator.
 
 	* Removed legacy entries for IVOA standards from ivoabib.bib.  Use records
 	  from docrepo.bib instead.
-	
-  * Minor fixes (e.g., escaping in schema snippets, &-less bibanchors,
-    titles in HTML output).
+
+	* The architecture diagram can now use variable-width boxes (but
+	  existing diagrams need to be updated to exploit this).
 
 	* Use rsvg rather than inkscape for SVG->PDF conversion.  You can
 	  set the environment variable SVGENGINE to inkscape to return to
 	  the previous behaviour.
+
+  * Minor fixes (e.g., escaping in schema snippets, &-less bibanchors,
+    titles in HTML output).
+
 
 Version 1.1 (2018-08-14)
 
