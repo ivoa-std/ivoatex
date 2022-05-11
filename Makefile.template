@@ -1,4 +1,5 @@
-# ivoatex Makefile.  The ivoatex/README for the targets available.
+# ivoatex Makefile.  The http://ivoa.net/documents/notes/IVOATex 
+# for the targets available.
 
 # short name of your document (edit $DOCNAME.tex; would be like RegTAP)
 DOCNAME = ????
@@ -17,7 +18,7 @@ DOCTYPE = ???
 AUTHOR_EMAIL=???
 
 # Source files for the TeX document (but the main file must always
-# be called $(DOCNAME).tex
+# be called $(DOCNAME).tex)
 SOURCES = $(DOCNAME).tex
 
 # List of image files to be included in submitted package (anything that
