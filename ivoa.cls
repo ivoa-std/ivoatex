@@ -155,10 +155,10 @@
     	\ivo@group
 
     \item[This version]
-    	\currentDocURL
+    	\currentDocRef
 
     \item[Latest version]
-    	\latestDocURL
+    	\latestDocRef
 
     \item[Previous versions]
 			\begin{compactitem}[]
@@ -274,15 +274,13 @@
 	can be found at \href{https://www.ivoa.net/documents/
 	}{https://www.ivoa.net/documents/}.}
 
-
-\newcommand\currentBaseURL % 
-	{https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}
-\newcommand\currentDocURL % URL of this document's landing page
-	{\href{\currentBaseURL}{\currentBaseURL}}
-\newcommand\latestDocURL 
-	% URL of a potential successor to the document's landing page
-	{\href{https://www.ivoa.net/documents/\ivoaDocname}
-		{https://www.ivoa.net/documents/\ivoaDocname}}
+\newcommand\currentDocURL % 
+	{\ivoaBaseURL/\ivoaDocdatecode}
+\newcommand\currentDocRef % formatted reference to this document's landing page
+	{\href{\currentDocURL}{\currentDocURL}}
+\newcommand\latestDocRef 
+	% formatted reference to a potential successor to the document's landing page
+	{\href{\ivoaBaseURL}{\ivoaBaseURL}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Styling various item
@@ -365,7 +363,7 @@
 
 \newcommand{\ivoatex}{\mbox{\textsc{Ivoa}\TeX}}
 
-\newcommand{\auxiliaryurl}[1]{\href{\currentBaseURL/#1}{\currentBaseURL/#1}}
+\newcommand{\auxiliaryurl}[1]{\href{\currentDocURL/#1}{\currentDocURL/#1}}
 
 \chardef\dquote'042
 
