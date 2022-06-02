@@ -274,6 +274,8 @@
 	can be found at \href{https://www.ivoa.net/documents/
 	}{https://www.ivoa.net/documents/}.}
 
+% legacy definition when ivoatexmeta.tex does not yet define it
+\newcommand{\ivoaBaseURL}{https://www.ivoa.net/documents/\ivoaDocname}
 \newcommand\currentDocURL % 
 	{\ivoaBaseURL/\ivoaDocdatecode}
 \newcommand\currentDocRef % formatted reference to this document's landing page

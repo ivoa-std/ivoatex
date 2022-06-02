@@ -121,7 +121,7 @@ ivoatexmeta.tex: Makefile
 	/bin/echo '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
 	/bin/echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
 	/bin/echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
-	/bin/echo '\newcommand{\ivoaBaseURL}{$(DOCREPO_BASEURL)}' >>$@
+	/bin/echo '\renewcommand{\ivoaBaseURL}{$(DOCREPO_BASEURL)}' >>$@
 
 
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
