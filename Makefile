@@ -52,6 +52,7 @@ versionedName:=$(DOCTYPE)-$(DOCNAME)-$(DOCVERSION)
 ifneq "$(DOCTYPE)" "REC"
 		versionedName:=$(versionedName)-$(subst -,,$(DOCDATE))
 endif
+DOCREPO_BASEURL ?= https://www.ivoa.net/documents/$(DOCNAME)
 
 GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 
@@ -64,6 +65,9 @@ GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 
 
 $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
+ifndef DOCNAME
+	$(error No DOCNAME defined.  Do not call plain make in ivoatex.)
+endif
 	$(PDFLATEX) $(DOCNAME)
 
 forcetex:
@@ -101,11 +105,11 @@ update:
 .FORCE:
 
 gitmeta.tex: .FORCE
-	/bin/echo -n '\vcsrevision{' > $@
-	/bin/echo -n "$(shell git log -1 --date=short --pretty=%h 2> /dev/null)" >> $@
-	if [ ! -z "$(shell git status --porcelain -uno 2> /dev/null)" ]; then /bin/echo -n -dirty >> $@; fi
-	/bin/echo } >> $@
-	/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ai 2> /dev/null) '}' >>$@
+	@/bin/echo -n '\vcsrevision{' > $@
+	@/bin/echo -n "$(shell git log -1 --date=short --pretty=%h 2> /dev/null)" >> $@
+	@if [ ! -z "$(shell git status --porcelain -uno 2> /dev/null)" ]; then /bin/echo -n -dirty >> $@; fi
+	@/bin/echo } >> $@
+	@/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ai 2> /dev/null) '}' >>$@
 
 
 ivoatexmeta.tex: Makefile
@@ -117,12 +121,15 @@ ivoatexmeta.tex: Makefile
 	/bin/echo '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
 	/bin/echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
 	/bin/echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
+	/bin/echo '\renewcommand{\ivoaBaseURL}{$(DOCREPO_BASEURL)}' >>$@
+
 
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
 		| $(XSLTPROC) --html \
                   --stringparam CSS_HREF $(CSS_HREF) \
+                  --stringparam docbase "$(DOCREPO_BASEURL)" \
                   ivoatex/tth-ivoa.xslt - \
            >$(DOCNAME).html
 

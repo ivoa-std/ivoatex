@@ -4,11 +4,9 @@
   version="1.0">
 
   <!-- The parameter docbase is the location where the final document
-       will be served from.  This will always have the following value
-       in final versions, but draft versions may appear for a while at
-       a different location, and this can be parameterised when this
-       stylesheet is invoked. -->
-  <xsl:param name='docbase'>https://www.ivoa.net/documents/</xsl:param>
+       will be served from.  This is computed in the Makefile (and
+       can be overridden by setting DOCREPO_BASEURL -->
+  <xsl:param name='docbase' select="''"/>
 
   <xsl:param name="CSS_HREF" select="''"/>
 
@@ -449,7 +447,6 @@
     <xsl:variable name="docdate" select="span[@id='docdate']"/>
     <xsl:variable name="currenturl">
       <xsl:value-of select="$docbase"/>
-      <xsl:value-of select="//span[@id='docname']"/>
       <xsl:text>/</xsl:text>
       <xsl:value-of select="concat(
         substring($docdate, 1, 4),
@@ -471,7 +468,6 @@
   <xsl:template name="latestlink">
     <xsl:variable name="currenturl">
       <xsl:value-of select="$docbase"/>
-      <xsl:value-of select="//span[@id='docname']"/>
     </xsl:variable>
     <xsl:element name="a">
        <xsl:attribute name="class">latestlink</xsl:attribute>
