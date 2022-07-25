@@ -100,7 +100,7 @@ clean:
 
 update:
 	@echo "*** updating ivoatex from github"
-	git submodule update --remote
+	git submodule update --remote --rebase
 
 .FORCE:
 
