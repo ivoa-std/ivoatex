@@ -1,8 +1,8 @@
 /* TtH TeX to HTML translator.
 TtH Version 
-"4.15"
+"4.16"
  (c) Ian Hutchinson
-Sat Sep 19 13:55:17 EDT 2020
+Mon Jul 25 08:59:50 EDT 2022
 */
 
 #line 3 "lex.yy.c"
@@ -14313,11 +14313,11 @@ This file needs to be turned into a C program using flex
 And then compiled into the tth executable using a C compiler.
 */
 #line 10 "tth.lex"
-#define TTH_VERSION "4.15"
+#define TTH_VERSION "4.16"
   /*#define TTH_GOLD "gold" no longer a distinction*/  /*sf*/
 #define TTH_HEAD "HEAD"  /*sf*/
 char tth_DOC[]="\n\
-                Version XXXX (c)1997-2020 Ian Hutchinson\n\
+                Version XXXX (c)1997-2022 Ian Hutchinson\n\
             TtH (TeX-to-HTML) translates TeX into HTML.\n\n\
 The program is a filter by default: it reads from stdin and writes to stdout.\n\
 But a non-switch argument specifies the file[.tex] to translate to file.html.\n\
@@ -21900,7 +21900,7 @@ YY_RULE_SETUP
   if(indexkey("\\amslatex",keys,&nkeys)!=-1){
     TTH_SCAN_STRING("\\verb|");
   }else{
-    TTH_OUTPUT(" - ");
+    if(strstr(closing,"/tt")){TTH_OUTPUT("|");}else{TTH_OUTPUT(" - ");}
   }
 } 
 	YY_BREAK

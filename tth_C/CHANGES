@@ -1,8 +1,12 @@
+Version 4.16 (25 July 2022)
+____________
+Render | as | in \textt{} rather than ---
+
 Version 4.15 (19 Sep 2020)
 ____________
 Make svg a recognized graphic file for direct embedding.
 Implement \nolinkurl
-Fix double apersand escaping in url handling.
+Fix double ampersand escaping in url handling.
 
 Version 4.14 (17 Jul 2020)
 ____________
