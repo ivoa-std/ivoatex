@@ -1,3 +1,24 @@
+Version 4.16 (25 July 2022)
+____________
+Render | as | in \textt{} rather than ---
+
+Version 4.15 (19 Sep 2020)
+____________
+Make svg a recognized graphic file for direct embedding.
+Implement \nolinkurl
+Fix double ampersand escaping in url handling.
+
+Version 4.14 (17 Jul 2020)
+____________
+Fix tth_stack_ptr miscount in footnote code
+Fix incorrect \index{} anchor in non-book usage
+Silence recent officious GCC string warnings in makefile
+
+Version 4.13
+____________
+Fix \caption within newenvironment bug, but nested environments will
+generally break the automatic numbering.
+
 Version 4.12
 ____________
 Give Mathml eqalign equations the <table displaystyle="true"> attribute.
