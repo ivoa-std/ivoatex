@@ -635,7 +635,9 @@ Copyright 2015, The GAVO project
 
   <xsl:template match="xs:documentation" mode="typedesc">
     <xsl:text>\noindent{\small</xsl:text>
-    <xsl:value-of select="."/>
+  	<xsl:call-template name="escape-for-TeX">
+ 			<xsl:with-param name="tx" select="."/>
+ 		</xsl:call-template>
     <xsl:text>\par}&#10;&#10;</xsl:text>
   </xsl:template>
 
