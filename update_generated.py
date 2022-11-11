@@ -37,7 +37,12 @@ def escape_for_TeX(tx):
     """returns tx with TeX's standard active (and other magic) characters 
     escaped.
     """
-    return tx.replace("\\", "$\\backslash$"
+    # the $ is tricky because blindly replacing it with \$ will clash
+    # with my backslash replacement.  Let's hope nobody ever has a 
+    # sterling sign in their schemas...
+    return tx.replace("$", "£",
+        ).replace("\\", "$\\backslash$"
+        ).replace("£", "\\$"
         ).replace("&", "\\&"
         ).replace("#", "\\#"
         ).replace("%", "\\%"

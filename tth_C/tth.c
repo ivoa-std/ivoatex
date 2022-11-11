@@ -14616,7 +14616,7 @@ char *tth_builtins = "\\def\\bye{\\vfill\\eject\\end }\
 \\newenvironment{abstract}{\\begin{tthabstract}}{\\end{tthabstract}}\
 \\newcommand\\tthoutopt[1][]{#1}\n\
 \\newcommand\\tthnooutopt[1][]{}\n\
-\\def\\nolinkurl#!{\\verb!#1!}";
+\\def\\nolinkurl#1{\\verb!#1!}";
 
  /* static functions */
 static int indexkey();
