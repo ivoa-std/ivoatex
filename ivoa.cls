@@ -34,6 +34,8 @@
 % lstlistings from mangling quotes.
 \lstset{upquote=true}
 
+\urlstyle{same}
+
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.7}
 \renewcommand{\textfraction}{0.1}
