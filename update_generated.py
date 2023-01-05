@@ -22,7 +22,8 @@ import sys
 try:
     import requests
 except ImportError:
-    # silently fail for now; !taptable will not work without requests, though
+    # silently fail for now; !taptable and !vocterms will not work without 
+    # requests, though
     pass
 
 class ExecError(Exception):
@@ -111,6 +112,20 @@ def cmd_schemadoc(schema_name, dest_type):
         re.sub("(?s)escape-for-TeX{{{(.*?)}}}", 
             lambda mat: escape_for_TeX(mat.group(1)), output))
 
+
+def cmd_vocterms(vocabulary_name):
+    """returns TeX source for the terms (identifiers) in an IVOA vocabulary.
+
+    vocabulary_name is whatever is after http://www.ivoa.net/rdf.
+    """
+    terms = requests.get("http://www.ivoa.net/rdf/"+vocabulary_name,
+            headers={"accept": "application/x-desise+json"}
+        ).json()["terms"]
+    identifiers = [key for key, props in terms.items()
+        if "deprecated" not in props]
+    return ",\n".join(r"\textsl{{{}}}".format(id)
+        for id in sorted(identifiers, key=lambda t: t.lower()))
+    
 
 def process_one_builtin(command):
     """processes a GENERATED block containing a call to a builtin function.
