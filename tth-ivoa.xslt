@@ -57,7 +57,7 @@
         }
 
         div.admonition {
-          width: 30em;
+          width: 38%;
           position: relative;
           float: right;
           background-color: #dddddd;
