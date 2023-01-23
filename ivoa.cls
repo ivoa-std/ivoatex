@@ -7,7 +7,6 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{ifthen}
-\RequirePackage{doc}
 \RequirePackage{listings}
 \RequirePackage{textcomp}
 \RequirePackage{paralist}
