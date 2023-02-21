@@ -14,7 +14,7 @@
 
 % \previousversion[????URL????]{????Concise Document Label????}
 \previousversion{This is the first public release}
-       
+
 
 \begin{document}
 \begin{abstract}
@@ -62,14 +62,14 @@ infrastructure that enable VO applications.
 \end{figure}
 
 Fig.~\ref{fig:archdiag} shows the role this document plays within the
-IVOA architecture \citep{2010ivoa.rept.1123A}.
+IVOA architecture \citep{2021ivoa.spec.1101D}.
 
 ???? and so on, LaTeX as you know and love it. ????
 
 \appendix
 \section{Changes from Previous Versions}
 
-No previous versions yet.  
+No previous versions yet.
 % these would be subsections "Changes from v. WD-..."
 % Use itemize environments.
 
