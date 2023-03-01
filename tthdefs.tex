@@ -60,7 +60,7 @@
       <div id='statusOfThisDocument'>}\ivoaDoctype\special{html:</div>}
     \tableofcontents
   }
-   
+
 \newenvironment{generated}{%
   \begin{html}
     <div class="generated">
@@ -94,7 +94,7 @@
 \newenvironment{lstlisting}[1][plain]
   {\special{html:<div keyvals="#1">}\tthverbatim{lstlisting}}
   {\special{html:</div>}}
- 
+
 \newenvironment{bigdescription}{%
     \begin{html}<div class="bigdescription">\end{html}
     \begin{description}\let\term\item
@@ -127,9 +127,10 @@
 \newcommand{\ivoatex}{%
   \special{html:<span class="ivoatex">IVOAT<sub>E</sub>X</span>}}
 
-\newcommand{\auxiliaryurl}[1]{%
-  \href{https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1}
-  {https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1}}
+\newcommand{\auxiliaryurl}[1]{% don't use href, we need expansion
+  \special{html:<a href="}https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1\special{html:">}%
+https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1%
+\special{html:</a>}}
 
 \newenvironment{inlinetable}{}{}
 
