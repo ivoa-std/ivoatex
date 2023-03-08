@@ -3,7 +3,7 @@
 #
 # This is part of ivoatex.  See COPYING for the license.
 #
-# Generarated sections are between % GENERATED: <command> 
+# Generarated sections are between % GENERATED: <command>
 # and % /GENERATED.  They are supposed to contain the output of
 # <command>.  <command> get shell-expanded, but since it gets executed
 # anyway, it's not even worth doing shell injection.
@@ -22,7 +22,7 @@ import sys
 try:
     import requests
 except ImportError:
-    # silently fail for now; !taptable and !vocterms will not work without 
+    # silently fail for now; !taptable and !vocterms will not work without
     # requests, though
     pass
 
@@ -35,11 +35,11 @@ class ExecError(Exception):
 
 
 def escape_for_TeX(tx):
-    """returns tx with TeX's standard active (and other magic) characters 
+    """returns tx with TeX's standard active (and other magic) characters
     escaped.
     """
     # the $ is tricky because blindly replacing it with \$ will clash
-    # with my backslash replacement.  Let's hope nobody ever has a 
+    # with my backslash replacement.  Let's hope nobody ever has a
     # sterling sign in their schemas...
     return tx.replace("$", "£",
         ).replace("\\", "$\\backslash$"
@@ -77,7 +77,7 @@ def cmd_taptable(table_name):
 
     for row in csv.DictReader(StringIO(reply.text)):
         row = dict((key, escape_for_TeX(value))
-            for key, value in row.iteritems())
+            for key, value in row.items())
         if row["size"]=="":
             row["size"] = '(*)'
         elif row["size"]=='1':
@@ -103,13 +103,13 @@ def cmd_schemadoc(schema_name, dest_type):
     We cannot just use the output of the stylesheet, as TeX escapes in
     XSLT1 are an inefficient nightmare.
     """
-    output = subprocess.check_output(["xsltproc", 
-        "--stringparam", "destType", dest_type, 
+    output = subprocess.check_output(["xsltproc",
+        "--stringparam", "destType", dest_type,
         "ivoatex/schemadoc.xslt", schema_name]).decode("utf-8")
     # for the TeX escaping, we simply assume there's no nesting
     # of escaped sections, and no annotation uses our magic strings.
     return "\\begin{generated}\n%s\n\\end{generated}\n"%(
-        re.sub("(?s)escape-for-TeX{{{(.*?)}}}", 
+        re.sub("(?s)escape-for-TeX{{{(.*?)}}}",
             lambda mat: escape_for_TeX(mat.group(1)), output))
 
 
@@ -125,7 +125,7 @@ def cmd_vocterms(vocabulary_name):
         if "deprecated" not in props]
     return ",\n".join(r"\textsl{{{}}}".format(id)
         for id in sorted(identifiers, key=lambda t: t.lower()))
-    
+
 
 def process_one_builtin(command):
     """processes a GENERATED block containing a call to a builtin function.
@@ -195,7 +195,7 @@ def process_all(content):
     """
     return re.sub(r"(?sm)^%\s+GENERATED:\s+(?P<command>.*?)$"
         ".*?"
-        r"%\s+/GENERATED", 
+        r"%\s+/GENERATED",
         process_one,
         content)
 
@@ -213,7 +213,7 @@ def main():
     args = parse_command_line()
     with open(args.filename, "rb") as f:
         content = f.read().decode("utf-8")
-    
+
     try:
         content = process_all(content)
     except ExecError as ex:
