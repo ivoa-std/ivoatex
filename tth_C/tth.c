@@ -14390,7 +14390,7 @@ Bit 16. 32768 Silence unknown command warnings.\n\
 #define GET_DIMEN {yy_push_state(lookforunit);yy_push_state(lookfornum);\
                    *argchar=0;}
 #define TTH_MAXDEPTH 30
-#define TTH_CHARLEN 500
+#define TTH_CHARLEN 5000
 #define TTH_DLEN 20000
 #define TTH_34DLEN 72000
 #define TTH_FONTLEN 200
