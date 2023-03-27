@@ -4,7 +4,7 @@
 #  This main Makefile must define DOCNAME, DOCVERSION, DOCDATE, DOCTYPE
 #  SOURCES; also, FIGURES as needed.
 #
-#  See http://ivoa.net/documents/Notes/IVOATex/index.html 
+#  See http://ivoa.net/documents/Notes/IVOATex/index.html
 #  for the targets in here useful to the user.
 #
 #  You should *not* need to change anything here while authoring documents.
@@ -29,7 +29,7 @@ PYTHON?=python3
 #     librsvg2-bin or inkscape (for architecture diagrams)
 #     pdftk if you want to build draft pdfs with a watermark
 #     optionally, latexmk.
-#  If you don't have librsvg2 but you do have inkscape, you 
+#  If you don't have librsvg2 but you do have inkscape, you
 #  can set the SVGENGINE environment variable to inkscape.
 #  Then, ivoatex will use inkscape for svg -> pdf conversion.
 
@@ -72,6 +72,9 @@ endif
 
 forcetex:
 	make -W $(DOCNAME).tex $(DOCNAME).pdf
+
+new-release: ivoatexmeta.tex
+	$(PYTHON) ivoatex/newrelease.py
 
 $(DOCNAME)-draft.pdf: $(DOCNAME).pdf draft-background.pdf
 	pdftk $< background draft-background.pdf output $@
@@ -153,7 +156,7 @@ biblio: $(DOCNAME).bbl
 # The architecture diagram is generated from a spec in the document
 # directory and a stylesheet.
 role_diagram.svg: role_diagram.xml
-	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt role_diagram.xml 
+	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt role_diagram.xml
 
 # Regrettably, pdflatex can't use svg, so we need to convert it.
 # We're using inkscape here rather than convert because convert
@@ -217,19 +220,19 @@ $(TTH): ivoatex/tth_C/tth.c
 ARCHDIAG_XSLT = make-archdiag.xslt
 
 archdiag-l2.svg: archdiag-full.xml  $(ARCHDIAG_XSLT)
-	$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) archdiag-full.xml 
+	$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) archdiag-full.xml
 
 archdiag-debug.svg: archdiag-full.xml $(ARCHDIAG_XSLT)
 	$(XSLTPROC) --stringparam WITHJS True -o $@ $(ARCHDIAG_XSLT) \
-		archdiag-full.xml 
+		archdiag-full.xml
 
 archdiag-l1.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) -
 
 archdiag-l0.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag0 xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) -
 
 
 ############# below here: building an ivoatex distribution
