@@ -11,14 +11,14 @@ You will need to change everything marked with ####
 
 <!-- initially, set created and updated to (roughly) UTC of now.
 change updated whenever you re-upload this record. -->
-<ri:Resource 
-  xsi:type="vstd:Standard" 
-  created="####" 
+<ri:Resource
+  xsi:type="vstd:Standard"
+  created="####"
   updated="####"
   status="active"
-  xmlns:vr="http://www.ivoa.net/xml/VOResource/v1.0" 
-  xmlns:vstd="http://www.ivoa.net/xml/StandardsRegExt/v1.0" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:vr="http://www.ivoa.net/xml/VOResource/v1.0"
+  xmlns:vstd="http://www.ivoa.net/xml/StandardsRegExt/v1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:ri="http://www.ivoa.net/xml/RegistryInterface/v1.0"
   xsi:schemaLocation="http://www.ivoa.net/xml/VOResource/v1.0
     https://www.ivoa.net/xml/VOResource/v1.0
@@ -30,7 +30,7 @@ change updated whenever you re-upload this record. -->
   <title>####</title> <!-- title as given on the standard's title page -->
   <shortName>####</shortName> <!-- this should be your DOCNAME -->
   <!-- put the "short name" of your standard after std/: -->
-  <identifier>ivo://ivoa.net/std/####</identifier> 
+  <identifier>ivo://ivoa.net/std/####</identifier>
   <!-- <altIdentifier>doi:Look up on ADS once your standard has made
     it there and then update this. </altIdentifier>
   <curation>
@@ -85,7 +85,7 @@ change updated whenever you re-upload this record. -->
 
   <!-- You can furthermore have as many key-value pairs as you want.
     Service standard authors will need this to comply with Identifier 2.0's
-    recommendation for standardId 
+    recommendation for standardId
     (https://www.ivoa.net/documents/IVOAIdentifiers/20150709/PR-Identifiers-2.0-20150709.html#tth_sEc4.2) -->
   <key>
     <name>####</name>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <stylesheet version="1.0"
   xmlns:h="http://www.w3.org/1999/xhtml"
-  xmlns="http://www.w3.org/1999/XSL/Transform" 
+  xmlns="http://www.w3.org/1999/XSL/Transform"
   xmlns:fn="http://www.w3.org/2005/xpath-functions">
 
-<!-- XSLT for a partial automation of the migration from ivoadoc 
+<!-- XSLT for a partial automation of the migration from ivoadoc
 XHTML to ivoatex -->
 
 <output method="text"/>
@@ -50,7 +50,7 @@ XHTML to ivoatex -->
 <template match="h:code">\texttt{<apply-templates/>}</template>
 
 <template match="h:a[@href]"
-  >\href{<value-of select="@href"/>}{<apply-templates/>}</template> 
+  >\href{<value-of select="@href"/>}{<apply-templates/>}</template>
 
 <template match="h:br">\\</template>
 
@@ -109,7 +109,7 @@ FIXTHIS: Mark up caption
 
 <template match="h:dt">\item[<apply-templates/>]</template>
 
-<template match="h:dd"><apply-templates/><text>&#x0a;</text></template> 
+<template match="h:dd"><apply-templates/><text>&#x0a;</text></template>
 
 <template match="h:pre">
 \begin{verbatim}<apply-templates/>\end{verbatim}
@@ -154,11 +154,11 @@ FIXTHIS: Mark up caption
 
 </template>
 
-<template match="h:a[@name]"><!-- 
+<template match="h:a[@name]"><!--
   we have no idea what to do with a random anchor --><apply-templates
 /></template>
 
-<template match="h:a[@id]"><!-- 
+<template match="h:a[@id]"><!--
   we have no idea what to do with a random anchor --><apply-templates
 /></template>
 

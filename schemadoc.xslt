@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns:vm="http://www.ivoa.net/xml/VOMetadata/v0.1" 
+<xsl:stylesheet
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vm="http://www.ivoa.net/xml/VOMetadata/v0.1"
   version="1.0">
-<!-- This stylesheet produces LaTeX source for one (simple or complex) 
+<!-- This stylesheet produces LaTeX source for one (simple or complex)
 type taken from an XML schema file.  The name of the type is taken from
 the destType schema parameter.
 
@@ -35,7 +35,7 @@ Copyright 2015, The GAVO project
 
   <xsl:template match="vm:dcterm"/> <!-- we don't have a good place for these
     yet -->
-  
+
   <xsl:template match="xs:complexType[xs:simpleContent]" mode="content"/>
 
   <xsl:template match="xs:complexType" mode="content">
@@ -66,7 +66,7 @@ Copyright 2015, The GAVO project
           <xsl:value-of select="@ref"/>
         <xsl:text>}]&#10;</xsl:text>
         <xsl:call-template name="escape-for-TeX">
-            <xsl:with-param name="tx" 
+            <xsl:with-param name="tx"
              select="xs:annotation/xs:documentation"/>
           </xsl:call-template>
           <xsl:text>&#10;&#10;</xsl:text>
@@ -116,7 +116,7 @@ Copyright 2015, The GAVO project
         </xsl:apply-templates>
       </xsl:when>
       <xsl:when test="$item &lt; 6 and
-        (xs:simpleType/xs:restriction or                             
+        (xs:simpleType/xs:restriction or
           (starts-with($type,/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix)
           and /xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction))">
         <xsl:apply-templates select="." mode="content.allowedValues">
@@ -270,8 +270,8 @@ Copyright 2015, The GAVO project
        <xsl:otherwise>
          <xsl:if test="descendant::xs:enumeration">
            <xsl:text>\item[Allowed Values]\hfil&#10;\begin{longtermsdescription}</xsl:text>
-           <xsl:apply-templates 
-             select="descendant::xs:enumeration" 
+           <xsl:apply-templates
+             select="descendant::xs:enumeration"
              mode="controlledVocab"/>
            <xsl:text>\end{longtermsdescription}&#10;</xsl:text>
          </xsl:if>
@@ -344,7 +344,7 @@ Copyright 2015, The GAVO project
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="@type[starts-with(., /xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix)]" 
+  <xsl:template match="@type[starts-with(., /xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix)]"
       mode="type">
     <xsl:variable name="type" select="substring-after(.,':')"/>
     <xsl:choose>
@@ -369,8 +369,8 @@ Copyright 2015, The GAVO project
             <xsl:when test="@base='xs:nonNegativeInteger'">
               <xsl:text>a non-negative integer (0, 1, ...)</xsl:text>
             </xsl:when>
-            <xsl:when test="@base='xs:decimal' 
-                or @base='xs:float' 
+            <xsl:when test="@base='xs:decimal'
+                or @base='xs:float'
                 or @base='xsdouble'">
               <xsl:text>a floating point number (\xmlel{</xsl:text>
                 <xsl:value-of select="@base"/>
@@ -394,11 +394,11 @@ Copyright 2015, The GAVO project
 
   <xsl:template match="xs:simpleType" mode="type">
     <xsl:choose>
-      <xsl:when test="xs:restriction[@base='xs:string' 
+      <xsl:when test="xs:restriction[@base='xs:string'
           or @base='xs:token']/xs:enumeration">
         <xsl:text>string with controlled vocabulary</xsl:text>
       </xsl:when>
-      <xsl:when test="xs:restriction[@base='xs:string' 
+      <xsl:when test="xs:restriction[@base='xs:string'
           or @base='xs:token']/xs:pattern">
         <xsl:text>string of the form: \emph{</xsl:text>
           <xsl:call-template name="escape-for-TeX">
@@ -425,7 +425,7 @@ Copyright 2015, The GAVO project
     </xsl:call-template>
     <xsl:text>]</xsl:text>
     <xsl:call-template name="escape-for-TeX">
-       <xsl:with-param name="tx" 
+       <xsl:with-param name="tx"
          select="xs:annotation/xs:documentation"/>
      </xsl:call-template>
      <xsl:text>&#10;</xsl:text>
@@ -471,9 +471,9 @@ Copyright 2015, The GAVO project
           <xsl:with-param name="item" select="4"/>
         </xsl:apply-templates>
       </xsl:when>
-      <xsl:when test="$item &lt; 5 and                            
-        (xs:simpleType/xs:restriction or                             
-        (starts-with($type,/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix) 
+      <xsl:when test="$item &lt; 5 and
+        (xs:simpleType/xs:restriction or
+        (starts-with($type,/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix)
           and /xs:schema/xs:simpleType[@name=substring-after($type,':')]/xs:restriction))">
         <xsl:apply-templates select="." mode="content.allowedValues">
           <xsl:with-param name="row" select="$row"/>
@@ -513,7 +513,7 @@ Copyright 2015, The GAVO project
       <xsl:when test="*[local-name()!='annotation']">
         <xsl:text>&gt;</xsl:text>
         <xsl:text>&#10;</xsl:text>
-        <xsl:apply-templates 
+        <xsl:apply-templates
           select="*[local-name()!='annotation']" mode="xsdcode">
           <xsl:with-param name="indent" select="concat($indent,$step)"/>
         </xsl:apply-templates>
@@ -655,7 +655,7 @@ Copyright 2015, The GAVO project
         <xsl:apply-templates select="./xs:annotation/xs:documentation"
           mode="typedesc"/>
       </xsl:if>
-      
+
       <!-- oh my. refactor content.allowedValues stuff above to let us
       re-use the mess there here. -->
        <xsl:if test="xs:restriction/xs:enumeration">
@@ -663,8 +663,8 @@ Copyright 2015, The GAVO project
         <xsl:value-of select="concat(/xs:schema/xs:annotation/xs:appinfo/vm:targetPrefix,':',@name)"/>
         <xsl:text>}</xsl:text>
         <xsl:text> Type Allowed Values}&#10;&#10;\begin{longtermsdescription}</xsl:text>
-         <xsl:apply-templates 
-           select="descendant::xs:enumeration" 
+         <xsl:apply-templates
+           select="descendant::xs:enumeration"
            mode="controlledVocab"/>
          <xsl:text>\end{longtermsdescription}&#10;</xsl:text>
        </xsl:if>

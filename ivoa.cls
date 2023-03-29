@@ -138,14 +138,14 @@
     \Large\color{ivoacolor}\quad\textsl{\textsf{\textbf{V}irtual}} \\
     \Large\color{ivoacolor}\quad\textsl{\textsf{\textbf{O}bservatory}} \\
     \Large\color{ivoacolor}\textsl{\textsf{\textbf{A}lliance}}}}\hfil}
- 
+
  	\vskip 1.4cm
  	\begin{sloppypar}\raggedright
   \LARGE\color{ivoacolor}\sffamily\bfseries \@title\par
   \end{sloppypar}
 
 	\bigskip
-  \noindent{\LARGE\color{ivoacolor}\sffamily\bfseries 
+  \noindent{\LARGE\color{ivoacolor}\sffamily\bfseries
   	Version \ivoaDocversion}
 	\medskip
   \titlehe@d{\expandedDoctype{\ivoaDoctype} \ivoaDocdate}%
@@ -251,12 +251,12 @@
  		{This is an IVOA Proposed Endorsed Note for review by IVOA
       members and other interested parties. It is appropriate to
       reference this document only as a Proposed Endorsed Note that
-      is under review and may change before it is endorsed or may  
-      not be endorsed. 
+      is under review and may change before it is endorsed or may
+      not be endorsed.
  		}
  	{\ifthenelse{\equal{#1}{EN}}
  		{This document is an IVOA Endorsed Note. It has been reviewed  and endorsed
- 			by the IVOA Technical Coordination Group as a stable, citable document 
+ 			by the IVOA Technical Coordination Group as a stable, citable document
  			which constitutes valuable information for the IVOA community and
  			beyond.
  		}
@@ -277,11 +277,11 @@
 
 % legacy definition when ivoatexmeta.tex does not yet define it
 \newcommand{\ivoaBaseURL}{https://www.ivoa.net/documents/\ivoaDocname}
-\newcommand\currentDocURL % 
+\newcommand\currentDocURL %
 	{\ivoaBaseURL/\ivoaDocdatecode}
 \newcommand\currentDocRef % formatted reference to this document's landing page
 	{\href{\currentDocURL}{\currentDocURL}}
-\newcommand\latestDocRef 
+\newcommand\latestDocRef
 	% formatted reference to a potential successor to the document's landing page
 	{\href{\ivoaBaseURL}{\ivoaBaseURL}}
 

@@ -1,5 +1,7 @@
 Version 1.3 (unreleased)
 
+  * There is now a new-release Makefile target.
+
   * You can now override the URL at which the document will and up in
     DOCREPO_BASEURL.
 
@@ -53,8 +55,8 @@ Version 1.1 (2018-08-14)
 
 
 Version 1.0 (2016-04-23):
-  
-  * lstlistings options are now available as CSS classes, and 
+
+  * lstlistings options are now available as CSS classes, and
     basicstyle=\footnotesize is interpreted for HTML.
 
   * Updated to tth 4.08
@@ -68,5 +70,5 @@ Version 1.0 (2016-04-23):
   * Document-specific CSS is now supported.
 
   * Support for generated content (update_generated.py, make generate)
-  
+
   * ivoa.bst is now used to format references

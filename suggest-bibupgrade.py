@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """
-A script somewhat naively looking for outdated references an suggesting 
+A script somewhat naively looking for outdated references an suggesting
 updates.
 
 This expects the name of an .aux file as produced by a LaTeX run.  I'd
-expect this to be run through 
+expect this to be run through
 
-make bib-suggestions 
+make bib-suggestions
 
 exclusively.
 
 If this actually gets use, we might think about flagging false positives
 (i.e., cases where document references are really version-sharp.
 
-Maintenance: Occasionally look at the diffs on docrepo.bib; anything that's 
+Maintenance: Occasionally look at the diffs on docrepo.bib; anything that's
 not version 1 very likely belongs here.
 """
 
@@ -25,17 +25,17 @@ import sys
 # inspecting things.
 _DOCMAP ="""
 2021ivoa.spec.1102D 2010ivoa.spec.1202P
-2021ivoa.spec.1101D 2010ivoa.rept.1123A 
-2021ivoa.spec.0616C 2018ivoa.spec.0527P 
-2021ivoa.spec.0525D 2009ivoa.spec.1007G 
-2019ivoa.spec.1021O 2013ivoa.spec.0920O 
-2019ivoa.spec.1011D 2014ivoa.spec.1208D 
-2019ivoa.spec.1007G 2006ivoa.spec.0528P 
-2019ivoa.spec.1007F 2014ivoa.spec.0602F 
-2019ivoa.spec.0927D 2011ivoa.spec.1028T 
-2018ivoa.spec.0723D 2009ivoa.spec.1104B 
-2018ivoa.spec.0625P 2008ivoa.spec.0222P 
-2018ivoa.spec.0621G 2013ivoa.spec.0329G 
+2021ivoa.spec.1101D 2010ivoa.rept.1123A
+2021ivoa.spec.0616C 2018ivoa.spec.0527P
+2021ivoa.spec.0525D 2009ivoa.spec.1007G
+2019ivoa.spec.1021O 2013ivoa.spec.0920O
+2019ivoa.spec.1011D 2014ivoa.spec.1208D
+2019ivoa.spec.1007G 2006ivoa.spec.0528P
+2019ivoa.spec.1007F 2014ivoa.spec.0602F
+2019ivoa.spec.0927D 2011ivoa.spec.1028T
+2018ivoa.spec.0723D 2009ivoa.spec.1104B
+2018ivoa.spec.0625P 2008ivoa.spec.0222P
+2018ivoa.spec.0621G 2013ivoa.spec.0329G
 2018ivoa.spec.0527P 2007ivoa.spec.0402P
 2017ivoa.spec.0530P 2013ivoa.spec.1125P
 2017ivoa.spec.0524T 2008ivoa.spec.0124R
@@ -107,7 +107,7 @@ _DOCMAP ="""
 """
 
 
-OLD2NEW = dict((p[1], p[0]) 
+OLD2NEW = dict((p[1], p[0])
     for p in (ln.split()
         for ln in _DOCMAP.split("\n") if ln.strip()))
 
@@ -123,10 +123,10 @@ def get_suggestion(ref_tag):
 
 
 def iter_ref_tags(f):
-    """yields all arguments of citation macro calls within the file f's 
+    """yields all arguments of citation macro calls within the file f's
     content.
 
-    We expect the citation calls to be all in one line and without 
+    We expect the citation calls to be all in one line and without
     whitespace and all that.  I think that's how LaTeX produces them:
     We're reading from an aux file here.
     """
@@ -154,7 +154,7 @@ def main():
         print("\n\n*** Consider updating the following references:")
         for ref_tag, replacement in suggestions.items():
             print(f"{ref_tag} -> {replacement} ?")
-    
+
     else:
         print("\n\n*** All references seem up to date.")
 

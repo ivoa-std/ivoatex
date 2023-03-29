@@ -4,7 +4,7 @@
 A little script to operate the IVOA submission form with data scrubbed
 from ivoatex sources.
 
-The keys used here are taken from screen-scraping 
+The keys used here are taken from screen-scraping
 https://www.ivoa.net/cgi-bin/up.cgi (which is also the target to POST
 to).
 
@@ -42,7 +42,7 @@ except ImportError:
         "*** https://pypi.python.org/pypi/requests")
 
 
-DOCREPO_URL = 'https://www.ivoa.net/cgi-bin/up.cgi' 
+DOCREPO_URL = 'https://www.ivoa.net/cgi-bin/up.cgi'
 
 
 class ReportableError(Exception):
@@ -73,7 +73,7 @@ class DocumentMeta(object):
         "author", "editor", "abstract",
         "comment", "group", "docver1", "docver2",
         "year", "month", "day", "doctype"]
-    
+
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)
@@ -148,7 +148,7 @@ class DocumentMeta(object):
                 mat = re.match("(\w+)\s*=\s*(.*)", ln)
                 if mat:
                     meta_keys[mat.group(1)] = mat.group(2)
-        
+
         kwargs = {}
         for input_key, parser_function in [
                 ("DOCNAME", lambda v: [("conciseName", v.strip())]),
@@ -238,7 +238,7 @@ class DocumentMeta(object):
 def review_and_comment(document_meta):
     """prints document_meta and lets the user add a remark if they want.
     """
-    editor = os.environ.get("VISUAL", 
+    editor = os.environ.get("VISUAL",
         os.environ.get("EDITOR", "nano"))
 
     fd, path_name = comment_src = tempfile.mkstemp()
@@ -257,7 +257,7 @@ def review_and_comment(document_meta):
     print("*** Version: %s.%s, %s of %s ***\n"%(
         document_meta.docver1,
         document_meta.docver2,
-        document_meta.doctype, 
+        document_meta.doctype,
         document_meta.get_date()))
     print("Hit ^C if this (or anthing in the dict above) is wrong,"
         " enter to upload.")
@@ -272,7 +272,7 @@ def main(archive_file_name):
     sys.stdout.flush()
 
     with open(sys.argv[1], "rb") as upload:
-        resp = requests.post(DOCREPO_URL, 
+        resp = requests.post(DOCREPO_URL,
             data=document_meta.get_post_payload(),
             files=[('filename', (sys.argv[1], upload))])
 

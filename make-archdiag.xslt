@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- XSLT to generate SVG for architecture diagrams. 
+<!-- XSLT to generate SVG for architecture diagrams.
 
 This processes documents having the following structure
 
@@ -13,9 +13,9 @@ want.
 
 -->
 
-<xsl:stylesheet 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-  xmlns="http://www.w3.org/2000/svg" 
+<xsl:stylesheet
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns="http://www.w3.org/2000/svg"
   xmlns:ad="http://ivoa.net/archdiag"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.0">
@@ -70,8 +70,8 @@ want.
     <xsl:attribute name="y">
       <xsl:value-of select="@y"/>
     </xsl:attribute>
-    <ellipse rx="{$width div 2 + 15}" ry="15" 
-      cx="{$width div 2}" cy="9" 
+    <ellipse rx="{$width div 2 + 15}" ry="15"
+      cx="{$width div 2}" cy="9"
       fill="none" stroke="red" stroke-width="3"/>
   </svg>
 </xsl:template>

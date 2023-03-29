@@ -1,5 +1,5 @@
 /* TtH TeX to HTML translator.
-TtH Version 
+TtH Version
 "4.16"
  (c) Ian Hutchinson
 Mon Jul 25 08:59:50 EDT 2022
@@ -39,7 +39,7 @@ Mon Jul 25 08:59:50 EDT 2022
 #if defined (__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
 
 /* C99 says to define __STDC_LIMIT_MACROS before including stdint.h,
- * if you want the limit (max/min) macros for int types. 
+ * if you want the limit (max/min) macros for int types.
  */
 #ifndef __STDC_LIMIT_MACROS
 #define __STDC_LIMIT_MACROS 1
@@ -56,7 +56,7 @@ typedef uint32_t flex_uint32_t;
 typedef signed char flex_int8_t;
 typedef short int flex_int16_t;
 typedef int flex_int32_t;
-typedef unsigned char flex_uint8_t; 
+typedef unsigned char flex_uint8_t;
 typedef unsigned short int flex_uint16_t;
 typedef unsigned int flex_uint32_t;
 
@@ -176,7 +176,7 @@ extern FILE *yyin, *yyout;
 #define EOB_ACT_LAST_MATCH 2
 
     #define YY_LESS_LINENO(n)
-    
+
 /* Return all but the first "n" matched characters back to the input stream. */
 #define yyless(n) \
 	do \
@@ -238,7 +238,7 @@ struct yy_buffer_state
 
     int yy_bs_lineno; /**< The line count. */
     int yy_bs_column; /**< The column count. */
-    
+
 	/* Whether to try to fill the input buffer when we reach the
 	 * end of it.
 	 */
@@ -14407,7 +14407,7 @@ Bit 16. 32768 Silence unknown command warnings.\n\
 #define RMTERM ""
 #define PATH_SEP ";"
 #define DIR_SEP "\\"
-#else 
+#else
 #define RMCMD "rm"
 #define RMTERM ""
 #define PATH_SEP ":"
@@ -14636,7 +14636,7 @@ static int adddimen();
 /* Paragraph grouping for beginsection, item etc: */
 
 /* Cause par to scan texclose.*/
- 
+
 /* Look for first token following and put argchar at end:*/
 
 /* Expand following command and output expchar after first token,
@@ -14656,7 +14656,7 @@ if non-null, else prefix exptex and rescan (in equations)*/
 
 /* Get from here to end of brace group. Then treat according to storetype:
 0 Make argchar the closing of first, attach second copy, rescan.
-1 Save in supstore. 2 Save in substore. For sup/bscripting. 
+1 Save in supstore. 2 Save in substore. For sup/bscripting.
 3 Rescan with argchar between first and second copies.
 4 Rescan one copy only with argchar prepended.
 5 Rescan one copy with argchar postpended.
@@ -14669,7 +14669,7 @@ if non-null, else prefix exptex and rescan (in equations)*/
 /* Throw away the following text closed by \else or \fi */
 
 /* Inner if state inside falsetext. As falsetext except no else sensitivity*/
- 
+
 /* Throw away the following text closed by \or */
 
 /* Break out of dumping of ortext states */
@@ -14681,23 +14681,23 @@ if non-null, else prefix exptex and rescan (in equations)*/
 /* Get the numbers to compare for ifnum */
 
 /* Look for first number following. Put into argchar, and Pop. */
- 
+
 /* Look for first number following. Output num, argchar, and Pop. */
 
 /* Look for unit.  Catenate to argchar. Construct dimension in anumber */
- 
+
 /* Get the first file-like argument. */
- 
+
 /* Get nothing but the corresponding closebrace. */
 
 /* Get a box definition for setbox. Mostly getting optional dimension */
- 
+
 /* Get an immediate sub or sup, else pop*/
 
 /* Get the command we are defining only: */
 
-/* Get a brace group as the definition's name */ 
- 
+/* Get a brace group as the definition's name */
+
 /* Get the definition's argument description. Leave number in narg. */
 
 /* Compress whitespace in delimited definition argument template and store*/
@@ -14717,7 +14717,7 @@ if non-null, else prefix exptex and rescan (in equations)*/
 /* Output the value of a counter: */
 
 /* Set the value of a previously defined counter: */
- 
+
 /* Extract the halign template.  */
 
 /* Inside tables, interpret & and \cr */
@@ -14800,7 +14800,7 @@ if non-null, else prefix exptex and rescan (in equations)*/
 
 /* Paragraph checking state after a newline when par is possible*/
 
-/* Expand following token till we reach something no more expandable 
+/* Expand following token till we reach something no more expandable
 but don't embrace it. Prefix exptex if not zero. */
 
 /* Copying of a group but escaping special characters as we go. Hence
@@ -14967,7 +14967,7 @@ extern int yywrap (void );
 #endif
 
     static void yyunput (int c,char *buf_ptr  );
-    
+
 #ifndef yytext_ptr
 static void yy_flex_strncpy (char *,yyconst char *,int );
 #endif
@@ -14989,13 +14989,13 @@ static int input (void );
         static int yy_start_stack_ptr = 0;
         static int yy_start_stack_depth = 0;
         static int *yy_start_stack = NULL;
-    
+
     static void yy_push_state (int new_state );
-    
+
     static void yy_pop_state (void );
-    
+
     static int yy_top_state (void );
-    
+
 /* Amount of stuff to slurp up with each read. */
 #ifndef YY_READ_BUF_SIZE
 #ifdef __ia64__
@@ -15103,7 +15103,7 @@ YY_DECL
 	register yy_state_type yy_current_state;
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
-    
+
 #line 541 "tth.lex"
 
 
@@ -15322,7 +15322,7 @@ STATIC char tth_verbenviron[TTH_MAXDEPTH]={0};
  /* */
 
  /* Define the storable stacked integers  */
-#define INTDEPTHMAX 30 /* Stack depth*/ 
+#define INTDEPTHMAX 30 /* Stack depth*/
 #define INTMAX 10      /* Maximum integers */
 #define INTERROR 99999 /* Value indicating overflow */
 int PUSHEDINTS[INTMAX][INTDEPTHMAX]={{0}};
@@ -15359,10 +15359,10 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 #define TTH_SYMENDN  (tth_unicode ? "" : "</span\n>")
 #define TTH_SYMPT(chr) (tth_unicode ? tth_symbol_point(chr) : chr)
 
-#define TTH_DISP1 ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n<table align=\"center\" cellspacing=\"0\"  cellpadding=\"2\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n<table border=\"1\" align=\"center\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" ) 
+#define TTH_DISP1 ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n<table align=\"center\" cellspacing=\"0\"  cellpadding=\"2\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n<table border=\"1\" align=\"center\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" )
 /* DISPE for equalign etc. Old version.*/
-#define TTH_DISPE ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n" ) 
- /* New broken version 
+#define TTH_DISPE ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n" )
+ /* New broken version
    #define TTH_DISPE ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"%d%%\">\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\">\n" ) */
 
 #define TTH_DISP2 "</td></tr></table>\n</td></tr></table>\n"
@@ -15497,7 +15497,7 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 
 
 #define TTH_MATHS(chr) strcat(eqstr,TTH_SYMBOL);\
- strcat(eqstr,TTH_SYMPT(chr));   strcat(eqstr,TTH_SYMENDN); 
+ strcat(eqstr,TTH_SYMPT(chr));   strcat(eqstr,TTH_SYMENDN);
 #define TTH_MATHI(icr) chr1[0]=icr;TTH_MATHS(chr1);
 #define TTH_MATHC(chr) strcat(eqstr,chr);
 #define TTH_COMPLEX ( (strcspn(eqstr,"&+-/") < strlen(eqstr)) || (strstr(eqstr,"\\pm") != NULL) || (strstr(eqstr,"\\mp") != NULL))
@@ -15547,7 +15547,7 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 
  /* This was the old doctype. Reports are that on Windows gecko recognizes
     symbol fonts for a doctype of 40 but not 401. So keep to 40*/
-#define TTH_DOCTYPE4 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"\n           \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>" 
+#define TTH_DOCTYPE4 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"\n           \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>"
 #define TTH_DOCTYPE41 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n        \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>"
 #define TTH_DOCXML "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n           \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">"
 #define TTH_DOCTYPE (tth_htmlstyle&2 ? TTH_DOCXML : TTH_DOCTYPE4 )
@@ -15613,19 +15613,19 @@ else strcat(chr1,chr2);
 #define TTH_CCPY(chr1,chr2) if(strlen(chr2) >= TTH_CHARLEN)\
  {fprintf(stderr,\
 "**** Character overflow; strcpy of %s prevented, line %d\n",chr2,tth_num_lines);}\
-else strcpy(chr1,chr2); 
+else strcpy(chr1,chr2);
 
 #define TTH_PRECLOSE(chr1) strcpy(preclose,closing);TTH_CCPY(closing,chr1);\
- TTH_CCAT(closing,preclose); 
+ TTH_CCAT(closing,preclose);
 
  /*
 #define TTH_PRETEXCLOSE(chr1) strcpy(preclose,tth_texclose[tth_push_depth]);\
  TTH_CCPY(tth_texclose[tth_push_depth],chr1);\
- TTH_CCAT(tth_texclose[tth_push_depth],preclose); 
+ TTH_CCAT(tth_texclose[tth_push_depth],preclose);
  */
 #define TTH_PRETEXCLOSE(chr1) strcpy(scratchstring,tth_texclose[tth_push_depth]);\
  TTH_CCPY(tth_texclose[tth_push_depth],chr1);\
- TTH_CCAT(tth_texclose[tth_push_depth],scratchstring);*scratchstring=0; 
+ TTH_CCAT(tth_texclose[tth_push_depth],scratchstring);*scratchstring=0;
 
 #define TTH_SWAP(chr1) strcpy(swapchar,chr1);yy_push_state(swaparg);\
   yy_push_state(embracetok);
@@ -15667,7 +15667,7 @@ else strcpy(chr1,chr2);
     yy_switch_to_buffer(include_stack[--tth_stack_ptr] );\
     yy_pop_state();jshal=0;\
     if(tth_debug&32){fprintf(stderr,"%s",precell);}\
-    TTH_SCAN_STRING(precell);*precell=0;} 
+    TTH_SCAN_STRING(precell);*precell=0;}
 #define TTH_HALSWITCH  {TTH_PUSH_BUFF(0);yy_switch_to_buffer(halbuff);yy_push_state(talign);}
 
 #define TTH_TEXCLOSE if(*tth_texclose[tth_push_depth-1]){\
@@ -15903,7 +15903,7 @@ YY_RULE_SETUP
 {
   if(tth_titlestate&2){
     tth_tagpurge=1;
-    TTH_SCAN_STRING("\\tth_notageq");  
+    TTH_SCAN_STRING("\\tth_notageq");
   }
 }
 	YY_BREAK
@@ -15952,7 +15952,7 @@ YY_RULE_SETUP
   js2=indexkey("#1",margkeys,&margmax);
   yy_pop_state();
   strcpy(exptex,margs[js2]);
-  rmdef(margkeys,margs,&margmax); 
+  rmdef(margkeys,margs,&margmax);
   if(tth_debug&8)fprintf(stderr,"Expanding after %s\n",exptex);
   *expchar=0;
   yy_push_state(tokexp); /* expandafter not using embracing  */
@@ -16015,7 +16015,7 @@ case 35:
 #line 1243 "tth.lex"
 /* \\epsfbox TTH_TEX_FN("\\tthpsfile#tthdrop1",1);
  This code needs to be changed to behave like \leavevmode\hbox
- in that it stacks boxes horizontally. 
+ in that it stacks boxes horizontally.
  A problem is that to prevent h/vbox from breaking lines unnecessarily in HTML
  we start a new table only if we are NOT in horizmode. This is the opposite
  of TeX's behaviour. However, a \vbox ought to do it.*/
@@ -16042,7 +16042,7 @@ YY_RULE_SETUP
   js2=indexkey("#1",margkeys,&margmax);
   TTH_CCPY(scratchstring,margs[js2]);
   yy_pop_state();
-  rmdef(margkeys,margs,&margmax); 
+  rmdef(margkeys,margs,&margmax);
   if(tth_debug&32)fprintf(stderr,"Figure inclusion %s\n",scratchstring);
   if((chscratch=strstr(scratchstring,"file=")) != NULL){
     chscratch=chscratch+5;
@@ -16109,13 +16109,13 @@ YY_RULE_SETUP
 case 44:
 YY_RULE_SETUP
 #line 1309 "tth.lex"
-{ 
+{
   yy_pop_state();
   if(tth_htmlstyle&3){
     TTH_TEX_FN("{\\special{html:\n<title>} \\begin{notags}#1\\end{verbatim} \\special{html:</title>\n</head>\n<body><div>\n}}#tthdrop1",1);
   }else{
     TTH_TEX_FN("{\\special{html:\n<title>} \\begin{notags}#1\\end{verbatim}\\special{html:</title>\n}}#tthdrop1",1);
-  }  
+  }
 }
 	YY_BREAK
 case 45:
@@ -16123,7 +16123,7 @@ YY_RULE_SETUP
 #line 1318 "tth.lex"
 if(!tth_htmlstyle&1){
   TTH_TEX_FN("{\\special{html:\n<title>}\\begin{notags}#1\\end{verbatim}\\special{html:</title>\n}}#tthdrop1",1);
-}else{  
+}else{
   TTH_TEX_FN("#tthdrop1",1);
 }
 	YY_BREAK
@@ -16251,7 +16251,7 @@ YY_RULE_SETUP
   yy_pop_state();
   yyless(0);
   TTH_SCAN_STRING("\\par");
-} 
+}
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
@@ -16292,7 +16292,7 @@ case 84:
 YY_RULE_SETUP
 #line 1405 "tth.lex"
 {
-  TTH_TEX_FN("{\\special{html:<a href=\"#1\">}#2\\special{html:</a>}}#tthdrop2",2); 
+  TTH_TEX_FN("{\\special{html:<a href=\"#1\">}#2\\special{html:</a>}}#tthdrop2",2);
 }
 	YY_BREAK
 /* Get the following brace group and escape special chars, rescan */
@@ -16406,7 +16406,7 @@ YY_RULE_SETUP
   TTH_INC_LINE;
   if(strstr(yytext,"%%tth:")==yytext){TTH_SCAN_STRING(yytext+6);}
   else if(strstr(yytext,"%%ttm:")==yytext){TTH_SCAN_STRING(yytext+6);}
-  else{ 
+  else{
     if(tth_debug&64) fprintf(stderr,"Comment:%s",yytext);
   }
  }
@@ -16419,7 +16419,7 @@ YY_RULE_SETUP
   TTH_INC_LINE;
   if(strstr(yytext,"%%tth:")==yytext){TTH_SCAN_STRING(yytext+6);}
   else if(strstr(yytext,"%%ttm:")==yytext){TTH_SCAN_STRING(yytext+6);}
-  else{ 
+  else{
     if(tth_debug&64) fprintf(stderr,"Comment:%s",yytext);
     if(horizmode) horizmode=-1;
     yy_push_state(parcheck);
@@ -16430,13 +16430,13 @@ YY_RULE_SETUP
 case 103:
 YY_RULE_SETUP
 #line 1500 "tth.lex"
-strcat(dupstore,"\\");strcat(dupstore,yytext); 
+strcat(dupstore,"\\");strcat(dupstore,yytext);
 	YY_BREAK
 /* Don't escape things already escaped*/
 case 104:
 YY_RULE_SETUP
 #line 1502 "tth.lex"
-strcat(dupstore,yytext); 
+strcat(dupstore,yytext);
 	YY_BREAK
 /*********************************************************************/
 /* Date information needs to be before conditionals. */
@@ -16468,7 +16468,7 @@ YY_RULE_SETUP
   timestruct=*localtime(&thetime);
   timestruct.tm_year= timestruct.tm_year+1900;
   sprintf(scrstring,"%d",timestruct.tm_year);
-  /* Remove space afterwards*/ 
+  /* Remove space afterwards*/
   TTH_PUSH_BUFF(1);yy_scan_string(scrstring);
   yy_pop_state();
 }
@@ -16613,7 +16613,7 @@ case 131:
 YY_RULE_SETUP
 #line 1597 "tth.lex"
 {
-  yy_pop_state(); 
+  yy_pop_state();
   if(tth_debug&1024)fprintf(stderr,"Ending false clause \\if\\fi.\n");
   if(horizmode)horizmode=1;
 }
@@ -16670,7 +16670,7 @@ case 141:
 YY_RULE_SETUP
 #line 1619 "tth.lex"
 {
-  yyless(0); 
+  yyless(0);
   yy_pop_state(); if(tth_debug&1024)fprintf(stderr,"Orbreak exit\n");}
 	YY_BREAK
 case 142:
@@ -16704,9 +16704,9 @@ TTH_CCAT(strif,yytext);
 case 151:
 YY_RULE_SETUP
 #line 1633 "tth.lex"
-{ 
+{
   TTH_DO_MACRO
-  else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) { 
+  else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) {
     if(tth_debug&1024)fprintf(stderr,"If Counter %d, %s\n",ind,countkeys[ind]);
     sprintf(scratchstring,"%d ",counters[ind]);
     TTH_PUSH_BUFF(1);yy_scan_string(scratchstring); /* remove spaces */
@@ -16764,11 +16764,11 @@ yy_push_state(getiftok);*strif=0;  yy_push_state(removespace);
 case 157:
 YY_RULE_SETUP
 #line 1672 "tth.lex"
-{ 
+{
   TTH_DO_MACRO
   else{
     if(tth_debug&1024) fprintf(stderr,
-      "**** Unknown or unexpandable command %s as \\if test token. Line %d\n",yytext,tth_num_lines); 
+      "**** Unknown or unexpandable command %s as \\if test token. Line %d\n",yytext,tth_num_lines);
     if(strlen(strif) > 1){
       yy_pop_state();
       if(!(strlen(strif)==strlen(yytext) && strstr(strif,yytext)))
@@ -16824,7 +16824,7 @@ YY_RULE_SETUP
     }else if(strlen(yytext)==1){ /* Both single characters */
       if(*strif==*yytext) js2=1;
     }
-    if(!js2){ 
+    if(!js2){
       if(tth_debug&1024) fprintf(stderr,"ifx FALSE\n");
       yy_push_state(falsetext);
     }else if(tth_debug&1024) fprintf(stderr,"ifx TRUE\n");
@@ -16839,11 +16839,11 @@ YY_RULE_SETUP
 case 163:
 YY_RULE_SETUP
 #line 1727 "tth.lex"
-{ 
-  if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);       /* Start new row */ 
+{
+  if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);       /* Start new row */
   if(tth_istyle&1)eqalignrow=eqalignrow+6*(levhgt[eqclose]-1)+TTH_HGT;else
     eqalignrow=eqalignrow+levhgt[eqclose];
-  levhgt[eqclose]=1; /* new */ 
+  levhgt[eqclose]=1; /* new */
   TTH_TEX_FN("{#1}\\tth_lefteq#tthdrop1",1);
 }
 	YY_BREAK
@@ -16884,7 +16884,7 @@ YY_RULE_SETUP
 #line 1753 "tth.lex"
 {
   if(tth_debug&2)fprintf(stderr,"end eqnarray, eqdepth=%d, eqclose=%d, tth_multinum=%d, eqalignlog=%d.\n",eqdepth,eqclose,tth_multinum,eqalignlog);
-  TTH_SCAN_STRING("}}\\tth_endeqnarray"); 
+  TTH_SCAN_STRING("}}\\tth_endeqnarray");
 }
 	YY_BREAK
 case 169:
@@ -16934,7 +16934,7 @@ case 178:
 /* rule 178 can match eol */
 YY_RULE_SETUP
 #line 1767 "tth.lex"
-TTH_INC_MULTI; 
+TTH_INC_MULTI;
 	YY_BREAK
 case 179:
 YY_RULE_SETUP
@@ -16962,16 +16962,16 @@ case 182:
 /* rule 182 can match eol */
 YY_RULE_SETUP
 #line 1781 "tth.lex"
-TTH_INC_MULTI;  
+TTH_INC_MULTI;
 	YY_BREAK
 case 183:
 /* rule 183 can match eol */
 YY_RULE_SETUP
 #line 1782 "tth.lex"
-{  
+{
   yyless(0);yy_pop_state();
   tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
-  if(eqaligncell && !tth_LaTeX && eqalignlog){ 
+  if(eqaligncell && !tth_LaTeX && eqalignlog){
     /* This ends the second cell of eqaligno. */
     strcat(eqstr,TTH_CELL_R);
   } else strcat(eqstr,TTH_EQA3);
@@ -16999,7 +16999,7 @@ case 186:
 YY_RULE_SETUP
 #line 1801 "tth.lex"
 {
-  yy_pop_state();  
+  yy_pop_state();
   chscratch=strstr(yytext,"multi");
   TTH_CCPY(argchar,chscratch+strcspn(chscratch,"{")+1);
   *(argchar+strcspn(argchar,"}"))=0;
@@ -17032,7 +17032,7 @@ YY_RULE_SETUP
   else{
     yyless(0);yy_pop_state();
     tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
-    if(eqaligncell && !tth_LaTeX && eqalignlog){ 
+    if(eqaligncell && !tth_LaTeX && eqalignlog){
       /* This ends the second cell of eqaligno. */
       strcat(eqstr,TTH_CELL_R);
     } else strcat(eqstr,TTH_EQA3);
@@ -17049,7 +17049,7 @@ YY_RULE_SETUP
 case 189:
 YY_RULE_SETUP
 #line 1841 "tth.lex"
-{ 
+{
   if(tth_debug&33) fprintf(stderr,"noalign in equation:\n");
   if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);
   if(tth_istyle&1)eqalignrow=eqalignrow+6*(levhgt[eqclose]-1)+TTH_HGT;else
@@ -17069,8 +17069,8 @@ case 192:
 /* rule 192 can match eol */
 YY_RULE_SETUP
 #line 1852 "tth.lex"
-{  
-  if(eqclose && (active[eqclose-1] || mtrx[eqclose-1])){ 
+{
+  if(eqclose && (active[eqclose-1] || mtrx[eqclose-1])){
     /* If this is really an array-type environment. */
     if(tth_debug&16)fprintf(stderr,
 	"Active tth_cr. yytext=%s eqclose=%d, active=%d\n",
@@ -17083,7 +17083,7 @@ YY_RULE_SETUP
     }else{
       /* Next line ensures \cr is equivalent to \nonumber\\ */
       if(strstr(yytext,"\\cr"))if(eqalignlog <= 100) eqalignlog=eqalignlog+100;
-      tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);  
+      tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
     }
     if(tth_debug&16)fprintf(stderr,
    "TTH_CR, eqalignlog=%d, colspan=%d, envirchar=%s, tth_multinum=%d, tth_LaTeX=%d.\n",
@@ -17177,7 +17177,7 @@ case 196:
 case 197:
 YY_RULE_SETUP
 #line 1946 "tth.lex"
-{ 
+{
   TTH_TEXCLOSE else{
   do{
   if(tth_debug&16) {
@@ -17191,7 +17191,7 @@ YY_RULE_SETUP
   }
   if(tophgt[eqclose] != 0){ /* If fraction */
     if(tth_debug&16)fprintf(stderr,"Fraction closing.\n");
-    if(levhgt[eqclose] > 1 || (eqclose > tth_flev && TTH_COMPLEX)){ 
+    if(levhgt[eqclose] > 1 || (eqclose > tth_flev && TTH_COMPLEX)){
       /* If bottom contains a fraction or we are topped out. */
       /* Try bottom compression*/
       oa_removes=b_align(eqstr,tth_debug);
@@ -17202,10 +17202,10 @@ YY_RULE_SETUP
     tth_prefix(eqstrs[eqdepth-1],eqstr,eqstore);
     rmkey(eqstrs,&eqdepth);
     TTH_CLOSEGROUP;TTH_POP_CLOSING; /* put closing before cell end */
-    if(active[eqclose-1]!=30){ 
+    if(active[eqclose-1]!=30){
       /* CELL1/2 test for non-zero levdelim 0,+1 */
-      tth_enclose(TTH_CELL1,eqstr,TTH_CELL2,eqstore); 
-      if(eqclose <= tth_flev) yy_push_state(getsubp); 
+      tth_enclose(TTH_CELL1,eqstr,TTH_CELL2,eqstore);
+      if(eqclose <= tth_flev) yy_push_state(getsubp);
       if(tth_debug&16) fprintf(stderr,"Whole fraction:%s\n",eqstr);
     }
   }else {
@@ -17227,7 +17227,7 @@ YY_RULE_SETUP
   /* Cut spurious cells off end of eqchar and eqstr if necessary*/
   chscratch=eqchar+strlen(eqchar)-strlen(TTH_CELL3);
   if( (strstr(chscratch,TTH_CELL3)==chscratch) &&
-      (strstr(eqstr,TTH_CELL_START)==eqstr+strspn(eqstr," \n"))){ 
+      (strstr(eqstr,TTH_CELL_START)==eqstr+strspn(eqstr," \n"))){
     *chscratch=0;
   }
   chscratch=eqstr+strlen(eqstr)-strlen(TTH_CELL3);
@@ -17294,7 +17294,7 @@ YY_RULE_SETUP
 #line 2055 "tth.lex"
 {
   TTH_TEXCLOSE else{
-    if(tth_debug&2) fprintf(stderr,"Leaving inline eq, eqclose=%d, eqdepth=%d, tth_flev=%d, levhgt=%d, tophgt=%d\n",  
+    if(tth_debug&2) fprintf(stderr,"Leaving inline eq, eqclose=%d, eqdepth=%d, tth_flev=%d, levhgt=%d, tophgt=%d\n",
 	      eqclose,eqdepth,tth_flev,levhgt[eqclose],tophgt[eqclose]);
     TTH_CLOSEGROUP;TTH_POP_CLOSING;
     if(tth_inlinefrac && (levhgt[eqclose]+tophgt[eqclose]>1))
@@ -17323,9 +17323,9 @@ YY_RULE_SETUP
 case 200:
 YY_RULE_SETUP
 #line 2082 "tth.lex"
-{ 
+{
   if(strstr(yytext,"*")==NULL){    /* end{equation} */
-    if(tth_multinum < 2) { 
+    if(tth_multinum < 2) {
       TTH_SCAN_STRING("}\\tth_numbereq");
     }else {
       /* end of equation which needs to unincrement*/
@@ -17381,7 +17381,7 @@ YY_RULE_SETUP
       }
     }
     if(tth_debug&2) fprintf(stderr,
-       "Leaving display eq, eqclose=%d, eqdepth=%d, tth_flev=%d\n",  
+       "Leaving display eq, eqclose=%d, eqdepth=%d, tth_flev=%d\n",
          eqclose,eqdepth,tth_flev);
     if(eqdepth==1){
       rmkey(eqstrs,&eqdepth);/*eqdepth--;*/
@@ -17390,7 +17390,7 @@ YY_RULE_SETUP
    "**** Error: Fatal Abnormal eqdepth %d on display equation exit, line %d\n",
 	      eqdepth,tth_num_lines);TTH_EXIT(2);
     }
-    if(eqclose > 0) { 
+    if(eqclose > 0) {
       fprintf(stderr,
     "**** Error: Fatal Abnormal eqclose %d on Display Equation End, line %d\n",
 	      eqclose,tth_num_lines);TTH_EXIT(3);
@@ -17414,11 +17414,11 @@ YY_RULE_SETUP
 #line 2149 "tth.lex"
 {
   if(active[eqclose]){ /* reembrace to protect active closure */
-    TTH_INC_MULTI; 
+    TTH_INC_MULTI;
     sprintf(scratchstring,"{%s}",yytext);
     TTH_SCAN_STRING(scratchstring);
   }else  if((eqclose > tth_flev || !displaystyle)){
-    TTH_INC_MULTI; 
+    TTH_INC_MULTI;
     chscratch=yytext+strspn(yytext,"${ \t\n");
     chs2=strstr(chscratch,"\\over")+5;
     sprintf(scratchstring,"<sup>%c</sup>/<sub>%c</sub>",
@@ -17438,7 +17438,7 @@ case 208:
 YY_RULE_SETUP
 #line 2170 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   yyless(strspn(yytext," \t\r\n"));
 }
 	YY_BREAK
@@ -17447,7 +17447,7 @@ case 209:
 YY_RULE_SETUP
 #line 2174 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   if(tth_debug&16)fprintf(stderr,
 	  "Over Close Group, depth=%d, eqclose=%d, levhgt=%d\n",
 	  eqdepth,eqclose,levhgt[eqclose]);
@@ -17465,14 +17465,14 @@ YY_RULE_SETUP
   mkkey(eqstr,eqstrs,&eqdepth);
   *eqstr=0;
   tophgt[eqclose]=levhgt[eqclose]+1;
-  levhgt[eqclose]=1; 
+  levhgt[eqclose]=1;
   if(strstr(yytext,"choose")){
     strcat(levdelim[eqclose],"(");
     tth_push_depth--;
     TTH_PRETEXCLOSE("\\tth_chooseclose");
     tth_push_depth++;
   }
- } 
+ }
 	YY_BREAK
 case 210:
 YY_RULE_SETUP
@@ -17487,7 +17487,7 @@ strcpy(levdelim[eqclose+1],")");
 case 211:
 YY_RULE_SETUP
 #line 2209 "tth.lex"
-TTH_MATHI(162); 
+TTH_MATHI(162);
 	YY_BREAK
 case 212:
 YY_RULE_SETUP
@@ -17511,7 +17511,7 @@ case 214:
 YY_RULE_SETUP
 #line 2219 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_SCAN_STRING("\\begin{tabular}");
 }
 	YY_BREAK
@@ -17523,7 +17523,7 @@ case 216:
 YY_RULE_SETUP
 #line 2224 "tth.lex"
 { /*border not really supported*/
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_HAL_PUSH;*halstring=0;
   if(strstr(yytext,"eq") != NULL) eqalignlog++;/*make both levels 1*/
   TTH_EQA_PUSH;
@@ -17588,7 +17588,7 @@ YY_RULE_SETUP
   TTH_TEX_FN("\\left(\\matrix{#1}\\right)#tthdrop1",1);
 }
 	YY_BREAK
-/*  textboxes. Because of problems as subscript, removed this to builtins. 
+/*  textboxes. Because of problems as subscript, removed this to builtins.
      <equation,exptokarg>\\textrm    |
      but this does not generally seem to be a good plan.
      But the approach below breaks with unenclosed subscript texts.
@@ -17658,7 +17658,7 @@ YY_RULE_SETUP
   if(tth_debug&2)fprintf(stderr,
     "Start textbox. eqclose %d. push_depth %d. Line %d\n"
 			 ,eqclose,tth_push_depth,tth_num_lines);
-  if(!displaystyle) yy_push_state(textbox);  
+  if(!displaystyle) yy_push_state(textbox);
   TTH_SWAP(scratchstring);
   /* This had to be moved into tth_tbone */
   /*TTH_PRETEXCLOSE("\\tth_boxclose");*/
@@ -17671,9 +17671,9 @@ YY_RULE_SETUP
   if(tth_debug&2)fprintf(stderr,
       "Start textbox exptokarg. Displaystyle %d. eqclose %d, push_depth %d, Line %d\n"
 			 ,displaystyle,eqclose,tth_push_depth,tth_num_lines);
-  yy_pop_state(); 
+  yy_pop_state();
   if(!displaystyle)yy_push_state(textbox);
-  yy_push_state(exptokarg); 
+  yy_push_state(exptokarg);
   TTH_SWAP(scratchstring);
 }
 	YY_BREAK
@@ -17715,7 +17715,7 @@ YY_RULE_SETUP
   }else if(displaystyle==2){
     if(!strstr(tth_font_open[tth_push_depth],TTH_ITAL1)){
       strcat(tth_font_open[tth_push_depth],tth_font_open[0]);
-      strcat(tth_font_close[tth_push_depth],tth_font_close[0]);   
+      strcat(tth_font_close[tth_push_depth],tth_font_close[0]);
     }
     displaystyle++;
   }else if(displaystyle==3){ /* End enclosure inserted. */
@@ -17726,7 +17726,7 @@ YY_RULE_SETUP
     if(tth_debug&2) fprintf(stderr,"Inline inside box.\n");
     if(!strstr(tth_font_open[tth_push_depth],TTH_ITAL1)){
       strcat(tth_font_open[tth_push_depth],tth_font_open[0]);
-      strcat(tth_font_close[tth_push_depth],tth_font_close[0]); 
+      strcat(tth_font_close[tth_push_depth],tth_font_close[0]);
     }
   }else{
     TTH_SCAN_STRING("}\\tth_endinline");
@@ -17759,7 +17759,7 @@ YY_RULE_SETUP
 #line 2370 "tth.lex"
 TTH_MATHS("e");
 	YY_BREAK
-/* <equation>\\varepsilon{SP}*	TTH_MATHS("e"); */ 
+/* <equation>\\varepsilon{SP}*	TTH_MATHS("e"); */
 case 244:
 YY_RULE_SETUP
 #line 2372 "tth.lex"
@@ -17769,7 +17769,7 @@ YY_RULE_SETUP
   }else{
     TTH_MATHS("e");
   }
-}			  
+}			
 	YY_BREAK
 case 245:
 YY_RULE_SETUP
@@ -17959,12 +17959,12 @@ TTH_MATHI(192);
 case 282:
 YY_RULE_SETUP
 #line 2417 "tth.lex"
-TTH_MATHS("i"); 
+TTH_MATHS("i");
 	YY_BREAK
 case 283:
 YY_RULE_SETUP
 #line 2418 "tth.lex"
-TTH_MATHC("j"); 
+TTH_MATHC("j");
 	YY_BREAK
 case 284:
 YY_RULE_SETUP
@@ -18098,7 +18098,7 @@ case 313:
 case 314:
 YY_RULE_SETUP
 #line 2449 "tth.lex"
-TTH_MATHC("\\"); 
+TTH_MATHC("\\");
 	YY_BREAK
 case 315:
 YY_RULE_SETUP
@@ -18144,7 +18144,7 @@ TTH_MATHS("-");
 case 323:
 YY_RULE_SETUP
 #line 2460 "tth.lex"
-TTH_MATHC("T"); 
+TTH_MATHC("T");
 	YY_BREAK
 case 324:
 #line 2462 "tth.lex"
@@ -18161,7 +18161,7 @@ TTH_MATHI(176);
 case 327:
 YY_RULE_SETUP
 #line 2464 "tth.lex"
-TTH_MATHC("&#126;"); 
+TTH_MATHC("&#126;");
 	YY_BREAK
 case 328:
 YY_RULE_SETUP
@@ -18222,7 +18222,7 @@ TTH_MATHI(183);
 case 341:
 YY_RULE_SETUP
 #line 2478 "tth.lex"
-TTH_MATHC("&#183;"); 
+TTH_MATHC("&#183;");
 	YY_BREAK
 /*<equation>\\cdot	TTH_MATHI(215);*/
 case 342:
@@ -18286,7 +18286,7 @@ YY_RULE_SETUP
 {
   if(eqclose <= tth_flev-1 && displaystyle){
     /*If we end with a CELL3, cut it off. */
-    if( ((jscratch=strlen(eqstr)) >= (js2=strlen(TTH_CELL3))) && 
+    if( ((jscratch=strlen(eqstr)) >= (js2=strlen(TTH_CELL3))) &&
 	strcmp(eqstr+jscratch-js2,TTH_CELL3) == 0){
       *(eqstr+jscratch-js2)=0;
     }
@@ -18425,18 +18425,18 @@ TTH_MATHI(184);
 case 377:
 YY_RULE_SETUP
 #line 2550 "tth.lex"
-TTH_MATHC("&times;"); 
+TTH_MATHC("&times;");
 	YY_BREAK
 /*<equation>\\times	TTH_MATHI(180);*/
 case 378:
 YY_RULE_SETUP
 #line 2552 "tth.lex"
-TTH_MATHC(" &lt;~"); 
+TTH_MATHC(" &lt;~");
 	YY_BREAK
 case 379:
 YY_RULE_SETUP
 #line 2553 "tth.lex"
-TTH_MATHC(" &gt;~"); 
+TTH_MATHC(" &gt;~");
 	YY_BREAK
 case 380:
 YY_RULE_SETUP
@@ -18698,47 +18698,47 @@ TTH_OUTPUT(TTH_DDAG);
 case 438:
 YY_RULE_SETUP
 #line 2617 "tth.lex"
-TTH_MATHC("arccos");  
+TTH_MATHC("arccos");
 	YY_BREAK
 case 439:
 YY_RULE_SETUP
 #line 2618 "tth.lex"
-TTH_MATHC("arcsin");  
+TTH_MATHC("arcsin");
 	YY_BREAK
 case 440:
 YY_RULE_SETUP
 #line 2619 "tth.lex"
-TTH_MATHC("arctan");  
+TTH_MATHC("arctan");
 	YY_BREAK
 case 441:
 YY_RULE_SETUP
 #line 2620 "tth.lex"
-TTH_MATHC("arg");  
+TTH_MATHC("arg");
 	YY_BREAK
 case 442:
 YY_RULE_SETUP
 #line 2621 "tth.lex"
-TTH_MATHC("cos");  
+TTH_MATHC("cos");
 	YY_BREAK
 case 443:
 YY_RULE_SETUP
 #line 2622 "tth.lex"
-TTH_MATHC("cosh");  
+TTH_MATHC("cosh");
 	YY_BREAK
 case 444:
 YY_RULE_SETUP
 #line 2623 "tth.lex"
-TTH_MATHC("cot");  
+TTH_MATHC("cot");
 	YY_BREAK
 case 445:
 YY_RULE_SETUP
 #line 2624 "tth.lex"
-TTH_MATHC("coth");  
+TTH_MATHC("coth");
 	YY_BREAK
 case 446:
 YY_RULE_SETUP
 #line 2625 "tth.lex"
-TTH_MATHC("csc");  
+TTH_MATHC("csc");
 	YY_BREAK
 /* <equation>\\deg{SP}*        TTH_MATHC("&deg;");  Incorrect TeX */
 case 447:
@@ -18749,62 +18749,62 @@ TTH_MATHC("deg");
 case 448:
 YY_RULE_SETUP
 #line 2628 "tth.lex"
-TTH_MATHC("dim");  
+TTH_MATHC("dim");
 	YY_BREAK
 case 449:
 YY_RULE_SETUP
 #line 2629 "tth.lex"
-TTH_MATHC("exp");  
+TTH_MATHC("exp");
 	YY_BREAK
 case 450:
 YY_RULE_SETUP
 #line 2630 "tth.lex"
-TTH_MATHC("hom");  
+TTH_MATHC("hom");
 	YY_BREAK
 case 451:
 YY_RULE_SETUP
 #line 2631 "tth.lex"
-TTH_MATHC("ker");  
+TTH_MATHC("ker");
 	YY_BREAK
 case 452:
 YY_RULE_SETUP
 #line 2632 "tth.lex"
-TTH_MATHC("lg");  
+TTH_MATHC("lg");
 	YY_BREAK
 case 453:
 YY_RULE_SETUP
 #line 2633 "tth.lex"
-TTH_MATHC("ln");  
+TTH_MATHC("ln");
 	YY_BREAK
 case 454:
 YY_RULE_SETUP
 #line 2634 "tth.lex"
-TTH_MATHC("log");  
+TTH_MATHC("log");
 	YY_BREAK
 case 455:
 YY_RULE_SETUP
 #line 2635 "tth.lex"
-TTH_MATHC("sec");  
+TTH_MATHC("sec");
 	YY_BREAK
 case 456:
 YY_RULE_SETUP
 #line 2636 "tth.lex"
-TTH_MATHC("sin");  
+TTH_MATHC("sin");
 	YY_BREAK
 case 457:
 YY_RULE_SETUP
 #line 2637 "tth.lex"
-TTH_MATHC("sinh");  
+TTH_MATHC("sinh");
 	YY_BREAK
 case 458:
 YY_RULE_SETUP
 #line 2638 "tth.lex"
-TTH_MATHC("tan");   
+TTH_MATHC("tan");
 	YY_BREAK
 case 459:
 YY_RULE_SETUP
 #line 2639 "tth.lex"
-TTH_MATHC("tanh");  
+TTH_MATHC("tanh");
 	YY_BREAK
 case 460:
 #line 2642 "tth.lex"
@@ -18851,7 +18851,7 @@ YY_RULE_SETUP
  if(eqclose > tth_flev-1 || !displaystyle ){
    unput('{');
  }else{
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   strcat(eqstr,TTH_CELL3);
   mkkey(eqstr,eqstrs,&eqdepth);
   eqclose++;
@@ -18865,7 +18865,7 @@ YY_RULE_SETUP
     strcpy(eqstr,TTH_OBR);
   }else if(*(yytext+1) == 'u'){
     TTH_CCPY(closing,TTH_OBR);
-    strcpy(eqstr,TTH_OBRB); 
+    strcpy(eqstr,TTH_OBRB);
   }else {
     strcpy(eqstr,"");
     unput(' ');
@@ -18954,7 +18954,7 @@ YY_RULE_SETUP
     case 'h':      TTH_OUTPUT("<span class=\"overacc1\">");TTH_MATHI(217);
       TTH_OUTPUT("</span>");break;
     case 't':TTH_OUTPUT("<span class=\"overacc1\">~</span>");break;
-    case 'o': case 'b': case 's': 
+    case 'o': case 'b': case 's':
       TTH_OUTPUT("<span class=\"overacc2\">");TTH_MATHI(190);
       TTH_OUTPUT("</span>");break;
     case 'd':TTH_OUTPUT("<span class=\"overacc1\">&#183; </span>");break;
@@ -18981,7 +18981,7 @@ YY_RULE_SETUP
       case 'q': /* output moved above to fix inline */ break;
       default : fprintf(stderr,"Overaccent error:%s,%d\n",yytext,*(yytext+1));
       }
-    }else{ /* Display case*/ 
+    }else{ /* Display case*/
       TTH_CCPY(closing,TTH_OA3);
       switch(*(yytext+1)){
       case 'o': strcpy(eqstr,TTH_DIV);
@@ -18989,11 +18989,11 @@ YY_RULE_SETUP
 	break;
       case 'b': case 's': TTH_OUTPUT(TTH_OA1);
 	TTH_OUTPUT((tth_istyle&1 ? "-":"_"));TTH_OUTPUT(TTH_OA2);break;
-      case 'd': TTH_OUTPUT(TTH_OA1); 
+      case 'd': TTH_OUTPUT(TTH_OA1);
 	if(tth_istyle&1) {TTH_MATHI(215);} else {TTH_OUTPUT(".");}
 	TTH_OUTPUT(TTH_OA2);break;
       case '2': TTH_OUTPUT(TTH_OA1);
-	if(tth_istyle&1) {TTH_MATHI(215);TTH_MATHI(215);} else 
+	if(tth_istyle&1) {TTH_MATHI(215);TTH_MATHI(215);} else
 	  {TTH_OUTPUT("..");} TTH_OUTPUT(TTH_OA2);break;
 	  /* case '2': strcpy(eqstr,"..<br />");break; */
       case 't':TTH_OUTPUT(TTH_OA1);TTH_OUTPUT("~");strcat(eqstr,TTH_OA2);break;
@@ -19086,7 +19086,7 @@ YY_RULE_SETUP
 	TTH_OUTPUT(scratchstring);
 	TTH_MATHC("{");
 	TTH_PUSH_CLOSING;
-	/* TTH_CCPY(closing,"}"); Came in wrong order after fraction. 
+	/* TTH_CCPY(closing,"}"); Came in wrong order after fraction.
 	 so fixed in the dupstore call.*/
 	if(tth_debug&2) {
 	  fprintf(stderr,
@@ -19157,7 +19157,7 @@ case 496:
 YY_RULE_SETUP
 #line 2909 "tth.lex"
 {  /* overline needs leading WSP */
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   strcpy(dupstore,yytext);
   *(dupstore+strcspn(dupstore," \t\r\n"))=0;
   /* yy_push_state(embracetok); OLD */
@@ -19199,7 +19199,7 @@ case 499:
 YY_RULE_SETUP
 #line 2937 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_SCAN_STRING("\\left.\\tth_size2\\right");
  }
 	YY_BREAK
@@ -19208,7 +19208,7 @@ case 500:
 YY_RULE_SETUP
 #line 2941 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_SCAN_STRING("\\left.\\tth_size3\\right");
  }
 	YY_BREAK
@@ -19307,7 +19307,7 @@ case 516:
 case 517:
 YY_RULE_SETUP
 #line 2986 "tth.lex"
-{ 
+{
   if(*(yytext) == '\\'){ chscratch=yytext+1;} else {chscratch=yytext;}
   if(*chscratch=='&')chscratch="&amp;";
   /* If the font has been changed, use it for non-letters too */
@@ -19374,7 +19374,7 @@ YY_RULE_SETUP
 #line 3034 "tth.lex"
 {
  TTH_INC_MULTI;
-} 
+}
 	YY_BREAK
 case 523:
 YY_RULE_SETUP
@@ -19456,14 +19456,14 @@ YY_RULE_SETUP
     oa_removes=0;
     strcat(eqstr,"</td><td nowrap=\"nowrap\">");
     *eqlimited=0;
-  }  
+  }
  }
 	YY_BREAK
 /* New big, left, right, delimiters section */
 case 530:
 YY_RULE_SETUP
 #line 3095 "tth.lex"
-{ 
+{
   yy_pop_state();strcpy(levdelim[eqclose+1],"{");unput(*scratchstring);}
 	YY_BREAK
 case 531:
@@ -19585,7 +19585,7 @@ YY_RULE_SETUP
   yy_push_state(equation);
   if( (strlen(yytext)>2) && *(yytext+7)=='e'){
     if(*(yytext+strlen(yytext)-2)!='*') {
-      equatno++;  
+      equatno++;
       strcpy(environment,"equation");
       sprintf(envirchar,"%d",equatno);
     }else if(tth_multinum) *envirchar=0;
@@ -19605,7 +19605,7 @@ YY_RULE_SETUP
   } else eqalignlog=0;
   if(tth_debug&2)fprintf(stderr,
 			 "eqnarray: eqalignlog=%d, tth_multinum=%d yytext=%s\n",
-			 eqalignlog,tth_multinum,yytext); 
+			 eqalignlog,tth_multinum,yytext);
   TTH_SCAN_STRING("\\begin{equation}\\eqalign{");
  }
 	YY_BREAK
@@ -19646,7 +19646,7 @@ YY_RULE_SETUP
 	}
 	/* End of auto aux section.*/
       }
-    }    
+    }
     argchar[0]=0;
   }else{
     fprintf(stderr,
@@ -19710,7 +19710,7 @@ YY_RULE_SETUP
     followed by any number of letters, digits ([0-9]), hyphens ("-"),
     underscores ("_"), colons (":"), and periodsx(".").  This means
     the unallowed characters are: "\n\t_!\"#$%&'()*+,/;<=>?[\\]^`{|}~" */
-    /* This version replaced only ! 
+    /* This version replaced only !
     while(strlen(scratchstring)-strcspn(scratchstring,"!"))
     *(scratchstring+strcspn(scratchstring,"!")) = '+';   */
     while(strlen(scratchstring)
@@ -19815,7 +19815,7 @@ YY_RULE_SETUP
     fclose(tth_inputfile);tth_inputfile=NULL;
     sprintf(scratchstring,"\\htmlheader{1}{\\contentsname{ }}\\input %s ",
 	    argchar);
-    if(tth_indexfile) {TTH_PUSH_BUFF(11);} else /*get extra code*/ 
+    if(tth_indexfile) {TTH_PUSH_BUFF(11);} else /*get extra code*/
     {TTH_PUSH_BUFF(0);} /*braces required*/
     yy_scan_string(scratchstring);
   }
@@ -19863,7 +19863,7 @@ YY_RULE_SETUP
       *(schar+strcspn(schar,"}."))=0; /*sf*/
     } /*sf*/
   }else if(strstr(yytext,"lof}{\\contentsline")){ /*sf*/
-    if(fgno < TNO) mkkey(schar,fchar,&fgno); /*sf*/ 
+    if(fgno < TNO) mkkey(schar,fchar,&fgno); /*sf*/
     else fprintf(stderr,"Too many figures"); /*sf*/
   }else if(strstr(yytext,"lot}{\\contentsline")){ /*sf*/
     if(tbno < TNO) mkkey(schar,tchar,&tbno); /*sf*/
@@ -19880,14 +19880,14 @@ YY_RULE_SETUP
   *scrstring=0;
   if(tth_debug&128) fprintf(stderr,"Contentsline %s\n",yytext);
   strcpy(refchar,"tth_sEc");
-  if(strstr(yytext,"{chapter}")!=NULL){ 
+  if(strstr(yytext,"{chapter}")!=NULL){
     chaplog=4;strcpy(refchar,"tth_chAp");
   }else if(strstr(yytext,"{table}")!=NULL){
     strcpy(refchar,"tth_tAb");
-    for(i=0;i<4;i++) strcat(scrstring,"&nbsp;");    
+    for(i=0;i<4;i++) strcat(scrstring,"&nbsp;");
   }else if(strstr(yytext,"{figure}")!=NULL){
     strcpy(refchar,"tth_fIg");
-    for(i=0;i<4;i++) strcat(scrstring,"&nbsp;");    
+    for(i=0;i<4;i++) strcat(scrstring,"&nbsp;");
   }else if(strstr(yytext,"{section}")!=NULL){
     for(i=0;i<chaplog;i++) strcat(scrstring,"&nbsp;");
   }else if(strstr(yytext,"{subsection}")!=NULL){
@@ -19920,7 +19920,7 @@ YY_RULE_SETUP
 	   scrstring,auxflch,refchar,chscratch,chscratch);
     TTH_TEX_FN("{#1}\\special{html:</a><br />}\\tthunknown#tthdrop2",2);
   }else{
-    if(strstr(yytext,"{part}")){/*Only enter unnumbered line if part*/ 
+    if(strstr(yytext,"{part}")){/*Only enter unnumbered line if part*/
       TTH_TEX_FN("{#1}\\special{html:<br />}\\tthunknown#tthdrop2",2);
     }else{TTH_TEX_FN("\\tthunknown#tthdrop2",2);}
   }
@@ -19941,7 +19941,7 @@ YY_RULE_SETUP
   for(jargmax=0;jargmax<30;jargmax++){
 /*      ind=ind+i+1; */
     ind=ind+i+1+strspn(dupstore+ind+i+1,", \t\n");/*Advance to start of next*/
-    js2=strcspn(dupstore+ind,"},\t\n"); /*Termination of key*/ 
+    js2=strcspn(dupstore+ind,"},\t\n"); /*Termination of key*/
     i=js2+strspn(dupstore+ind+js2," \t\n"); /* Next divider*/
     *(dupstore+ind+js2)=0;
     jarg=indexkey(dupstore+ind,keys,&nkeys);
@@ -19971,7 +19971,7 @@ YY_RULE_SETUP
       strcat(dupstore2,scratchstring);
     if(*(dupstore+ind+i+1))strcat(dupstore2,"\\tthciteib{}");
       strcat(dupstore2,"\\special{html:</a>}");
-      if(!nargs[jarg]){ 
+      if(!nargs[jarg]){
 	if(lbook)jscratch=chapno; else jscratch=sectno;
 	if(appendix) nargs[jarg]=jscratch+64;
 	else nargs[jarg]=jscratch;
@@ -20032,7 +20032,7 @@ YY_RULE_SETUP
   strcpy(dupstore,yytext);
   *(dupstore+strlen(dupstore)-1)=0;
   if((chs2=strstr(dupstore,"]"))==NULL) chs2=dupstore;
-  chs2=chs2+strcspn(chs2,"{")+1; 
+  chs2=chs2+strcspn(chs2,"{")+1;
   jarg=indexkey(chs2,keys,&nkeys);
   if(jarg== -1){
     fprintf(stderr,"Unknown bibitem %s\n",chs2);
@@ -20117,7 +20117,7 @@ YY_RULE_SETUP
 case 567:
 YY_RULE_SETUP
 #line 3612 "tth.lex"
-{  
+{
   fprintf(tth_fdout,"\n<h1>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h1>");
 }
 	YY_BREAK
@@ -20197,7 +20197,7 @@ YY_RULE_SETUP
 case 576:
 YY_RULE_SETUP
 #line 3656 "tth.lex"
-{   
+{
   fprintf(tth_fdout,"\n<h2>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h2>");}
 	YY_BREAK
 case 577:
@@ -20227,10 +20227,10 @@ YY_RULE_SETUP
     sprintf(scratchstring,"\n\\stepcounter{section}\\tthenclose{\
  \\special{html:<a id=\"tth_sEc%s\"></a><h2>}\n\\thesection\
  \\special{html:&nbsp;&nbsp;}}{\\special{html:</h2>}} ",labelchar);
-    TTH_SCAN_STRING(scratchstring);    
+    TTH_SCAN_STRING(scratchstring);
   }else{
-    fprintf(tth_fdout,"\n<h2>"); 
-    yy_push_state(tokenarg); 
+    fprintf(tth_fdout,"\n<h2>");
+    yy_push_state(tokenarg);
     TTH_CCPY(argchar,"</h2>");
   }
 }
@@ -20238,14 +20238,14 @@ YY_RULE_SETUP
 case 579:
 YY_RULE_SETUP
 #line 3685 "tth.lex"
-{   
+{
   fprintf(tth_fdout,"\n<h3>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h3>");}
 	YY_BREAK
 case 580:
 YY_RULE_SETUP
 #line 3687 "tth.lex"
 {
-  { 
+  {
     if(lbook) {
       if(appendix) sprintf(labelchar,"%c.%d.%d",chapno+64,sectno,subsectno+1);
       else sprintf(labelchar,"%d.%d.%d",chapno,sectno,subsectno+1);
@@ -20267,13 +20267,13 @@ YY_RULE_SETUP
 case 581:
 YY_RULE_SETUP
 #line 3706 "tth.lex"
-{   
+{
   fprintf(tth_fdout,"\n<h4>"); yy_push_state(tokenarg); TTH_CCPY(argchar,"</h4>");}
 	YY_BREAK
 case 582:
 YY_RULE_SETUP
 #line 3708 "tth.lex"
-{ 
+{
   {
     if(lbook) {
       if(appendix) sprintf(labelchar,"%c.%d.%d.%d",
@@ -20407,7 +20407,7 @@ YY_RULE_SETUP
       if(strlen(environment))
 	mkdef(dupstore,keys,envirchar,defs,&narg,nargs,&nkeys);
       else
-	if(strlen(labelchar)) 
+	if(strlen(labelchar))
 	   mkdef(dupstore,keys,labelchar,defs,&narg,nargs,&nkeys);
 	else mkdef(dupstore,keys,"*",defs,&narg,nargs,&nkeys);
       if(tth_debug&256){
@@ -20445,7 +20445,7 @@ YY_RULE_SETUP
     }              /*sf*/
     if(*(yytext+4)=='p'){
       strcpy(scrstring,"pageref");
-    }else{ 
+    }else{
       strcpy(scrstring,defs[ind]);
       if(strspn(scrstring," {}")==strlen(scrstring)) strcpy(scrstring,"*");
     }
@@ -20527,7 +20527,7 @@ YY_RULE_SETUP
 	   "\\renewcommand{\\thefigure}{\\thechapter.\\arabic{figure}}");
     strcat(dupstore2,
 	   "\\renewcommand{\\thetable}{\\thechapter.\\arabic{table}}");
-    strcat(dupstore2,"\\setcounter{secnumdepth}{2}");    
+    strcat(dupstore2,"\\setcounter{secnumdepth}{2}");
     strcat(dupstore2,
 	   "\\renewcommand{\\theequation}{\\thechapter.\\arabic{equation}}");
   } else {
@@ -20909,13 +20909,13 @@ YY_RULE_SETUP
 case 637:
 YY_RULE_SETUP
 #line 4147 "tth.lex"
-jscratch++;fprintf(tth_picfile,"%s",yytext);    
+jscratch++;fprintf(tth_picfile,"%s",yytext);
 	YY_BREAK
 case 638:
 YY_RULE_SETUP
 #line 4148 "tth.lex"
 {
-  if(jscratch) {jscratch--; fprintf(tth_picfile,"%s",yytext);}    
+  if(jscratch) {jscratch--; fprintf(tth_picfile,"%s",yytext);}
   else{
     fprintf(tth_picfile,"%s",yytext);
     fprintf(tth_picfile,"\\end{document}\n");
@@ -20991,7 +20991,7 @@ YY_RULE_SETUP
     yy_pop_state();
     TTH_SCAN_STRING("\\tth_endtabpre");
     TTH_SCAN_STRING(margs[jscratch]);
-    rmdef(margkeys,margs,&margmax);       rmdef(margkeys,margs,&margmax); 
+    rmdef(margkeys,margs,&margmax);       rmdef(margkeys,margs,&margmax);
   }else fprintf(stderr,"**** Error: No tabular argument found.\n");
   if(tth_debug&33) fprintf(stderr,"Beginning tabular\n");
   if(!eqdepth)yy_push_state(disptab);  /* Prevent $$ from being display math.*/
@@ -21103,7 +21103,7 @@ case 658:
 /* rule 658 can match eol */
 YY_RULE_SETUP
 #line 4255 "tth.lex"
-if(strcspn(yytext,"\n")==0) TTH_INC_LINE;/* Do nothing if we don't recognize */ 
+if(strcspn(yytext,"\n")==0) TTH_INC_LINE;/* Do nothing if we don't recognize */
 	YY_BREAK
 case 659:
 YY_RULE_SETUP
@@ -21131,7 +21131,7 @@ YY_RULE_SETUP
   if(eqdepth)eqalignrow++;
   yy_push_state(hendline); /* check for multicol at start */
   TTH_PUSH_BUFF(0);halbuff=yy_scan_string(halstring); /* Setup halbuff */
-  yy_switch_to_buffer(include_stack[--tth_stack_ptr]); 
+  yy_switch_to_buffer(include_stack[--tth_stack_ptr]);
   /* But keep current*/
   if(tth_debug&32)fprintf(stderr,"Endtabpre:%s>\n",halstring);
   if(!*halstring){
@@ -21146,7 +21146,7 @@ YY_RULE_SETUP
 { /* cell boundary. Scan @strings if any */
   if(tth_debug&32)fprintf(stderr,"|");
   jstal=-1;
-  if(*precell && !jshal && *tdalign){ 
+  if(*precell && !jshal && *tdalign){
     strcat(precell,"&");
     *tdalign=0;
     yy_switch_to_buffer(include_stack[--tth_stack_ptr] );
@@ -21190,9 +21190,9 @@ case 663:
 YY_RULE_SETUP
 #line 4322 "tth.lex"
 {
-  if(jshal==1||jshal==-1){yyless(0);} 
+  if(jshal==1||jshal==-1){yyless(0);}
   if(jstal==-1)jstal=0;
-  TTH_HALACT; 
+  TTH_HALACT;
 }
 	YY_BREAK
 case YY_STATE_EOF(talign):
@@ -21263,7 +21263,7 @@ case 673:
 YY_RULE_SETUP
 #line 4356 "tth.lex"
 {
-  if(*halstring) {yy_push_state(hamper); 
+  if(*halstring) {yy_push_state(hamper);
   }else{fprintf(tth_fdout,"</td><td width=\"%d\">\n",tabwidth);}/* settabs */
 }
 	YY_BREAK
@@ -21337,7 +21337,7 @@ YY_RULE_SETUP
   }else /**/{
     jstal=0;
     TTH_OUTPUT(TTH_CELL_TAB);
-    TTH_TEX_FN("\\tth_multistart#tthdrop2",2); 
+    TTH_TEX_FN("\\tth_multistart#tthdrop2",2);
   }
 } /* See psub below. */
 	YY_BREAK
@@ -21361,7 +21361,7 @@ YY_RULE_SETUP
       jstal=0;
       yy_pop_state();
       TTH_OUTPUT(TTH_CELL_TAB);
-      TTH_TEX_FN("\\tth_multispan#tthdrop1",1); 
+      TTH_TEX_FN("\\tth_multispan#tthdrop1",1);
   }
 } /* See psub below */
 	YY_BREAK
@@ -21370,7 +21370,7 @@ YY_RULE_SETUP
 #line 4429 "tth.lex"
 { /* expand first */
   TTH_DO_MACRO
-  else{ 
+  else{
     yyless(0);
     strcpy(tdalign,TTH_CELL_TAB);  /* Save the cell closing.*/
     yy_pop_state();jshal=0;
@@ -21422,7 +21422,7 @@ YY_RULE_SETUP
 {
   if(tth_debug&32) fprintf(stderr,"Multicolumn at start:");
   TTH_OUTPUT(TTH_TRO);
-  TTH_TEX_FN("\\tth_multiinner#tthdrop2",2); 
+  TTH_TEX_FN("\\tth_multiinner#tthdrop2",2);
 }
 	YY_BREAK
 /* Add an open brace for a starting multicol */
@@ -21451,8 +21451,8 @@ YY_RULE_SETUP
   sprintf(scrstring,TTH_MULSTART,jshal,scratchstring);
   TTH_OUTPUT(scrstring);
   if(eqdepth){TTH_OUTPUT(TTH_EQ5);}
-  yy_pop_state();    yy_pop_state(); /* get out of hendline/hamper too */  
-  rmdef(margkeys,margs,&margmax);rmdef(margkeys,margs,&margmax); 
+  yy_pop_state();    yy_pop_state(); /* get out of hendline/hamper too */
+  rmdef(margkeys,margs,&margmax);rmdef(margkeys,margs,&margmax);
   jshal++;/* fix */
   TTH_HALSWITCH;
  }
@@ -21468,7 +21468,7 @@ YY_RULE_SETUP
   TTH_HAL_POP;
   if(eqdepth){
     eqclose--;
-    if(tth_istyle&1)jscratch=(eqalignrow+6*(levhgt[eqclose+1]-1)+TTH_HGT)/6; 
+    if(tth_istyle&1)jscratch=(eqalignrow+6*(levhgt[eqclose+1]-1)+TTH_HGT)/6;
     else    jscratch=levhgt[eqclose+1]+eqalignrow;
     if(jscratch>levhgt[eqclose])levhgt[eqclose]=jscratch;
     /* This was an alternative attempt when \\ was forced. Height was broken.
@@ -21480,7 +21480,7 @@ YY_RULE_SETUP
   }
   TTH_CLOSEGROUP;TTH_POP_CLOSING;
   if(!eqdepth)yy_pop_state(); /* the disptab we added */
-} 
+}
 }
 	YY_BREAK
 case 694:
@@ -21532,7 +21532,7 @@ YY_RULE_SETUP
 {
   yy_pop_state();
   if(tth_debug&32) fprintf(stderr,"Line Start Multispan\n");
-  TTH_TEX_FN("\\tth_multispan#tthdrop1",1); 
+  TTH_TEX_FN("\\tth_multispan#tthdrop1",1);
   TTH_OUTPUT(TTH_TRO);
 }
 	YY_BREAK
@@ -21567,7 +21567,7 @@ YY_RULE_SETUP
 case 701:
 YY_RULE_SETUP
 #line 4557 "tth.lex"
-yyless(0);TTH_SCAN_STRING("\\\\"); 
+yyless(0);TTH_SCAN_STRING("\\\\");
 	YY_BREAK
 case 702:
 YY_RULE_SETUP
@@ -21679,7 +21679,7 @@ YY_RULE_SETUP
 #line 4600 "tth.lex"
 TTH_TEX_FN("{\\textColor{#1}#2}#tthdrop2",2);
 	YY_BREAK
-/* textColor in colordvi is global. But that's a terrible thing to do 
+/* textColor in colordvi is global. But that's a terrible thing to do
     so in TtH it is local. */
 case 720:
 YY_RULE_SETUP
@@ -21715,11 +21715,11 @@ YY_RULE_SETUP
 	  /* Custom color.*/    /*Substitute and scan again*/
 	  TTH_CCPY(scratchstring,yytext);
 	  *(scratchstring+strcspn(scratchstring,"{"))=0;
-	  TTH_CCAT(scratchstring,defs[jscratch]); 
+	  TTH_CCAT(scratchstring,defs[jscratch]);
 	  *(scratchstring+strcspn(scratchstring,"#"))=0; /* Fix end*/
 	  TTH_SCAN_STRING(scratchstring);
 	  jscratch=5;
-	}else{ 
+	}else{
 	  jscratch=tth_cmykcolor(chscratch,&cyanc,&magentac,&yellowc,&blackc);
 	}
       }else{
@@ -21747,13 +21747,13 @@ YY_RULE_SETUP
       if(strstr(yytext,"tthbgC")){/*Box Background color case CSS*/
 	sprintf(scratchstring,
 		"\\special{html:\n<span style=\"background: #%s;\">}"
-		,colorchar); 
+		,colorchar);
 	TTH_PRECLOSE("</span>");
       }else if(strstr(yytext,"tthpageC")){ /* Page color HTML violation*/
 	sprintf(scratchstring,
-		"\\special{html:<body bgcolor=\"#%s\">}",colorchar);       
+		"\\special{html:<body bgcolor=\"#%s\">}",colorchar);
       }else{
-	sprintf(scratchstring,TTH_COLOR,colorchar); 
+	sprintf(scratchstring,TTH_COLOR,colorchar);
 	/* if(!strstr(yytext,"tthspecial"))
 	 Not  closing locally for the colordvi special case breaks stuff. */
 	{TTH_PRECLOSE(TTH_COLOREND);}
@@ -21785,7 +21785,7 @@ YY_RULE_SETUP
   TTH_SCAN_STRING(scratchstring);
 }
 	YY_BREAK
-/* Latex graphics colors (see grfguide.ps). The syntax is confusingly the 
+/* Latex graphics colors (see grfguide.ps). The syntax is confusingly the
     exact opposite of colordvi, in that textcolor colorizes its argument
     but color is the switch. Use the preceding function anyway.*/
 case 727:
@@ -21829,7 +21829,7 @@ YY_RULE_SETUP
 {
   localdef=1;
   horizmode=0; /* This protection against \par should not be needed but ...*/
-  yy_push_state(define);  
+  yy_push_state(define);
   yy_push_state(getnumargs);
   yy_push_state(getdef);
 }
@@ -21865,7 +21865,7 @@ case 740:
 /* rule 740 can match eol */
 YY_RULE_SETUP
 #line 4721 "tth.lex"
-{ 
+{
   TTH_INC_MULTI;
   /* Newtheorem with numberedlike option. Overrides macro definition.*/
   if(tth_debug&4)fprintf(stderr,"New numbered-like theorem:%s\n",yytext);
@@ -21902,7 +21902,7 @@ YY_RULE_SETUP
   }else{
     if(strstr(closing,"/tt")){TTH_OUTPUT("|");}else{TTH_OUTPUT(" - ");}
   }
-} 
+}
 	YY_BREAK
 /* url that does not use braces */
 case 743:
@@ -21970,7 +21970,7 @@ case 750:
 YY_RULE_SETUP
 #line 4790 "tth.lex"
 {
-  TTH_TEXCLOSE else{ 
+  TTH_TEXCLOSE else{
     if(!strcmp(closing,"</dd></dl>")) {
       /* Do not close the list or pop closing.*/
       fprintf(tth_fdout,"%s","</dd>\n <dt>\n");
@@ -22042,7 +22042,7 @@ YY_RULE_SETUP
     if(horizmode) {TTH_PAR_ACTION}
     else {fprintf(tth_fdout,"\n");}
   }
-}  
+}
 	YY_BREAK
 case 759:
 /* rule 759 can match eol */
@@ -22239,11 +22239,11 @@ case 784:
 /* rule 784 can match eol */
 YY_RULE_SETUP
 #line 4959 "tth.lex"
-{ /* Space might not mean no opt. */ 
+{ /* Space might not mean no opt. */
   /* If we can immediately detect absence of opt arg. Don't put dt section*/
   TTH_INC_MULTI;
   jscratch=strlen(yytext)-1; /*circumlocution necessary*/
-  yyless(jscratch); 
+  yyless(jscratch);
   TTH_OUTPUT(closing); strcpy(closing,"</dd>\n");
   fprintf(tth_fdout,"\n\t<dd>");
   tth_index_line++;
@@ -22411,7 +22411,7 @@ YY_RULE_SETUP
   TTH_CCPY(closing,"</table>\n");
   TTH_HAL_PUSH;
   *halstring=0;
-  halignenter=tth_push_depth; 
+  halignenter=tth_push_depth;
  }
 	YY_BREAK
 case 800:
@@ -22429,25 +22429,25 @@ YY_RULE_SETUP
 {
   TTH_CCAT(halstring,tdalign);
   /*  TTH_CCAT(scrstring,"}&|");  */
-  TTH_CCAT(scrstring,"&|");  
+  TTH_CCAT(scrstring,"&|");
   TTH_CCAT(halstring,scrstring);
   /*  strcpy(scrstring,"&{");*/
   strcpy(scrstring,"&");
-  /*TTH_CCAT(scrstring,"&|");  
+  /*TTH_CCAT(scrstring,"&|");
   if(strlen(scrstring)>3){
     TTH_CCAT(halstring,scrstring);
   }else {TTH_CCAT(halstring,"|");}
   strcpy(scrstring,"&"); Old version */
   *tdalign=0;
   js2=ncols; /* signifies that we are in the first part of the cell */
-} 
+}
 	YY_BREAK
 case 802:
 YY_RULE_SETUP
 #line 5098 "tth.lex"
 {
   if(*tdalign==0) {
-    strcpy(tdalign,"r"); 
+    strcpy(tdalign,"r");
   } else if(ncols!=js2){
     if(*tdalign=='r') strcpy(tdalign,"c"); else strcpy(tdalign,"l");
     yy_push_state(removespace);
@@ -22483,12 +22483,12 @@ YY_RULE_SETUP
 #line 5116 "tth.lex"
 { /* New version uses the scanning of template. */
   /*
-  TTH_CCAT(scrstring,"&");  
+  TTH_CCAT(scrstring,"&");
   TTH_CCAT(halstring,tdalign);
   if(strlen(scrstring)>2)  {TTH_CCAT(halstring,scrstring);}
   */
   /*  TTH_CCAT(scrstring,"}&");  */
-  TTH_CCAT(scrstring,"&");  
+  TTH_CCAT(scrstring,"&");
   TTH_CCAT(halstring,tdalign);
   TTH_CCAT(halstring,scrstring);
   if(tth_debug&32)fprintf(stderr,"halign format string:%s> ",halstring);
@@ -22496,7 +22496,7 @@ YY_RULE_SETUP
   yy_pop_state();
   yy_push_state(hendline); /* check for multicol at start */
   TTH_PUSH_BUFF(0);halbuff=yy_scan_string(halstring); /* Setup halbuff */
-  yy_switch_to_buffer(include_stack[--tth_stack_ptr]); 
+  yy_switch_to_buffer(include_stack[--tth_stack_ptr]);
   fprintf(tth_fdout,"\n<table%s>",scratchstring);
 }
 	YY_BREAK
@@ -22528,7 +22528,7 @@ YY_RULE_SETUP
 {
   if(valsec){
     if(*valignstring){
-      TTH_CCPY(valignstring," valign=\"middle\"");    
+      TTH_CCPY(valignstring," valign=\"middle\"");
     }else{
       TTH_CCPY(valignstring," valign=\"top\"");
     }
@@ -22543,7 +22543,7 @@ YY_RULE_SETUP
 {
   fprintf(tth_fdout,"\n<table class=\"tabular\"><tr><td%s>",valignstring);
   yy_pop_state();
-}    
+}
 	YY_BREAK
 case 812:
 #line 5168 "tth.lex"
@@ -22562,7 +22562,7 @@ case 815:
 case 816:
 YY_RULE_SETUP
 #line 5174 "tth.lex"
-yy_push_state(inputfile);yy_push_state(removespace); 
+yy_push_state(inputfile);yy_push_state(removespace);
 	YY_BREAK
 case YY_STATE_EOF(inputfile):
 #line 5175 "tth.lex"
@@ -22674,13 +22674,13 @@ YY_RULE_SETUP
     if(tth_debug&1){
       fprintf(stderr,"Closing %s.\n",yytext);
     }
-  }else{ 
+  }else{
     fprintf(stderr,"**** Error closing %s. ",yytext);
     fprintf(stderr," Apparent file pointer:%p.\n",tth_inputfile);
   }
-  
+
   tth_inputfile=NULL;
-} 
+}
 	YY_BREAK
 case 827:
 /* rule 827 can match eol */
@@ -22738,7 +22738,7 @@ YY_RULE_SETUP
   case -3: strcat(defstore,"\\scriptsize ");break;
   case -4: case -5: case -6:  strcat(defstore,"\\tiny ");break;
   default : strcat(defstore,"\\normalsize ");break;
-  }  
+  }
   chscratch=strstr(scratchstring+1,"\\");
   *(chscratch+strcspn(chscratch," ="))=0;
   sprintf(dupstore,"\\def%s{%s}",chscratch,defstore);
@@ -22757,7 +22757,7 @@ YY_RULE_SETUP
 {
   TTH_INC_MULTI;
   sprintf(newcstr,"\\tth_newcounter%s",strstr(yytext,"{"));
-  TTH_TEX_FN_OPT(newcstr,1,""); 
+  TTH_TEX_FN_OPT(newcstr,1,"");
   /* This does not work using scratchstring. Need a permanent String*/
 }
 	YY_BREAK
@@ -22941,7 +22941,7 @@ YY_RULE_SETUP
 TTH_INC_MULTI;
 	YY_BREAK
 /*
-<advance>\\[a-zA-Z]+((margin)|(width)|(height)|(size)|(offset)|(indent)){SP}*(by)?    { 
+<advance>\\[a-zA-Z]+((margin)|(width)|(height)|(size)|(offset)|(indent)){SP}*(by)?    {
   TTH_INC_MULTI;
   if(tth_debug&4) fprintf(stderr,"Removing dimension advance: %s\n",yytext);
   yy_pop_state();
@@ -23014,7 +23014,7 @@ YY_RULE_SETUP
 #line 5518 "tth.lex"
 {
   if(strcspn(yytext,"-") < strlen(yytext)) minus=-1;
-}             
+}
 	YY_BREAK
 case 845:
 #line 5522 "tth.lex"
@@ -23022,7 +23022,7 @@ case 846:
 YY_RULE_SETUP
 #line 5522 "tth.lex"
 {
-  if(iac==-1){ /* First time we are getting the one to set */ 
+  if(iac==-1){ /* First time we are getting the one to set */
     iac=indexkey(yytext,countkeys,&ncounters);
     if(tth_debug&4) fprintf(stderr,"First advance:%s: %d, currently: %d.\n",
 	    yytext,iac,counters[iac]);
@@ -23089,7 +23089,7 @@ YY_RULE_SETUP
   strcpy(scratchstring,chscratch);
   *(scratchstring+strcspn(scratchstring,"}"))=0;
   *(scratchstring)='\\';
-  TTH_SCAN_STRING(scratchstring);    
+  TTH_SCAN_STRING(scratchstring);
   }
 	YY_BREAK
 case 850:
@@ -23115,7 +23115,7 @@ YY_RULE_SETUP
       yy_pop_state();
     }
   } else {
-    switch(jscratch){ 
+    switch(jscratch){
     case 0: sprintf(dupstore2,"%d",counters[i]);break;
     case 1: sprintf(dupstore2,"%c",counters[i]+96);break;
     case 2: sprintf(dupstore2,"%c",counters[i]+64);break;
@@ -23252,7 +23252,7 @@ YY_RULE_SETUP
 {
   if(*(yytext+1)!='d')localdef=0; else localdef=1;
   if(tth_debug&4) fprintf(stderr,"%s(localdef=%d)",yytext,localdef);
-  yy_push_state(define);  
+  yy_push_state(define);
   yy_push_state(getnumargs);
   yy_push_state(getdef);
   }
@@ -23264,7 +23264,7 @@ YY_RULE_SETUP
   if(*(yytext+1)!='e')localdef=0; else localdef=1;
   if(tth_debug&4) fprintf(stderr,"%s(localdef=%d)",yytext,localdef);
   edeftype=1;
-  yy_push_state(define);  
+  yy_push_state(define);
   yy_push_state(getnumargs); /* determine no of args */
   yy_push_state(getdef);  /* determine the key of definition */
   }
@@ -23392,7 +23392,7 @@ YY_RULE_SETUP
   whitespace=1;
   if(horizmode==1){
     horizmode=-1;
-    yy_push_state(parcheck);  
+    yy_push_state(parcheck);
   }else{
     if(horizmode==-1){
       fprintf(stderr,"**** Abnormal NL in -1 ddcomp.\n");
@@ -23440,7 +23440,7 @@ case 882:
 /* rule 882 can match eol */
 YY_RULE_SETUP
 #line 5810 "tth.lex"
-{ 
+{
   TTH_INC_MULTI;
   strcpy(scratchstring,yytext);
   chscratch=strstr(scratchstring+1,"[")+1;
@@ -23548,9 +23548,9 @@ YY_RULE_SETUP
   if(eqdepth){
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_BOLDO);
     TTH_CCAT(tth_font_close[tth_push_depth],TTH_BOLDC);
-    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {  
+    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {
       TTH_OUTPUT(TTH_BOLD1);TTH_PRECLOSE(TTH_BOLD2);
-      }  
+      }
   }else{
     TTH_OUTPUT(TTH_BOLD1);TTH_PRECLOSE(TTH_BOLD2);
   }
@@ -23563,9 +23563,9 @@ YY_RULE_SETUP
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_BOLDO);
     TTH_CCPY(tth_font_close[tth_push_depth],TTH_BOLDC);
-    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {  
+    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {
       TTH_OUTPUT(TTH_BOLD1);TTH_PRECLOSE(TTH_BOLD2);
-    } 
+    }
   }else{
     TTH_OUTPUT(TTH_BOLD1);TTH_PRECLOSE(TTH_BOLD2);
   }
@@ -23579,9 +23579,9 @@ YY_RULE_SETUP
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_BLDITO);
     TTH_CCPY(tth_font_close[tth_push_depth],TTH_BLDITC);
-    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {  
+    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {
       TTH_OUTPUT(TTH_BLDIT1);TTH_PRECLOSE(TTH_BLDIT2);
-    } 
+    }
   }else{
     TTH_OUTPUT(TTH_BLDIT1);TTH_PRECLOSE(TTH_BLDIT2);
   }
@@ -23596,7 +23596,7 @@ YY_RULE_SETUP
   if(eqdepth){
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_ITALO);
     TTH_CCAT(tth_font_close[tth_push_depth],TTH_ITALC);
-    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {  
+    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {
       TTH_OUTPUT(TTH_ITAL1);TTH_PRECLOSE(TTH_ITAL2);
     }
   }else{
@@ -23613,7 +23613,7 @@ YY_RULE_SETUP
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_ITALO);
     TTH_CCPY(tth_font_close[tth_push_depth],TTH_ITALC);
-    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {  
+    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {
       TTH_OUTPUT(TTH_ITAL1);TTH_PRECLOSE(TTH_ITAL2);
     }
   }else{
@@ -23630,7 +23630,7 @@ YY_RULE_SETUP
   if(eqdepth){
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_TTO);
     TTH_CCPY(tth_font_close[tth_push_depth],TTH_TTC);
-    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {  
+    if(strstr(tth_texclose[tth_push_depth-1],"tth_boxclose")) {
       TTH_OUTPUT(TTH_TT1);TTH_PRECLOSE(TTH_TT2);
     }
   }else{
@@ -23654,7 +23654,7 @@ YY_RULE_SETUP
     TTH_CCPY(tth_font_open[tth_push_depth],TTH_NORM1);
     TTH_CCPY(tth_font_close[tth_push_depth],TTH_NORM2);
   }else{
-    if(!eqdepth && !(tth_istyle&1)){ 
+    if(!eqdepth && !(tth_istyle&1)){
       TTH_OUTPUT(TTH_FONTCANCEL); /* not in equations: avoid bug */
     }else{
       TTH_OUTPUT(TTH_NORM1);TTH_PRECLOSE(TTH_NORM2);
@@ -23685,7 +23685,7 @@ YY_RULE_SETUP
 {
     TTH_CCAT(tth_font_open[tth_push_depth],TTH_BOLDO);
     TTH_CCAT(tth_font_close[tth_push_depth],TTH_BOLDC);
-}  
+}
 	YY_BREAK
 case 917:
 YY_RULE_SETUP
@@ -23693,7 +23693,7 @@ YY_RULE_SETUP
 {
     TTH_CCPY(tth_font_open[tth_push_depth],tth_fonto_def);
     TTH_CCPY(tth_font_close[tth_push_depth],tth_fontc_def);
-}  
+}
 	YY_BREAK
 case 918:
 YY_RULE_SETUP
@@ -23729,7 +23729,7 @@ YY_RULE_SETUP
   fprintf(stderr,"Hangafter ignored\n");yy_push_state(lookfornum);*argchar=0;
 }
 	YY_BREAK
-/* Getting values and units, do nothing. Only treat the explicit case. 
+/* Getting values and units, do nothing. Only treat the explicit case.
  A tokenized DIMEN will treat command and dimen as unknown commands.
  Removed /{NUM} also in hangindent, 1.01 (also saved 10k size)*/
 case 922:
@@ -23886,7 +23886,7 @@ YY_RULE_SETUP
   TTH_DO_MACRO
   else{
     if(horizmode) horizmode=1;
-    if(tth_debug&1) fprintf(stderr,"Removing glue command:%s\n",yytext); 
+    if(tth_debug&1) fprintf(stderr,"Removing glue command:%s\n",yytext);
     yy_push_state(glue);GET_DIMEN;
   }
  }
@@ -23895,9 +23895,9 @@ case 940:
 YY_RULE_SETUP
 #line 6078 "tth.lex"
 {
-  if(!horizmode || horizmode==3 ||  strstr(closing,"<!--hbox") || 
+  if(!horizmode || horizmode==3 ||  strstr(closing,"<!--hbox") ||
      strstr(tth_texclose[tth_push_depth-1],"tthhbclose")){
-    if(strstr(yytext,"vtop")){    
+    if(strstr(yytext,"vtop")){
       TTH_CCPY(boxvalign,"</td><td valign=\"top\">");
     }else{
       TTH_CCPY(boxvalign,"</td><td>");
@@ -23943,8 +23943,8 @@ YY_RULE_SETUP
     if((ind=indexkey("\\hsize",keys,&nkeys))!=-1){/*hsize is defined*/
       if(indexkey("\\hsize",keys,&ind)!=-1){/*hsize is currently redefined*/
 	/* Must be done after the yyless */
-	TTH_SCAN_STRING("\\hsize=\\hsize ");/*Set size at the start of vbox*/ 
-	if(tth_debug&1024)fprintf(stderr,"Vbox auto hsize reset\n"); 
+	TTH_SCAN_STRING("\\hsize=\\hsize ");/*Set size at the start of vbox*/
+	if(tth_debug&1024)fprintf(stderr,"Vbox auto hsize reset\n");
       }
     }
   }
@@ -23963,7 +23963,7 @@ YY_RULE_SETUP
     }
     TTH_OUTPUT("<table border=\"0\"><tr><td>");
   }
-  TTH_PUSH_CLOSING; 
+  TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"\n</td></tr></table><!--vbox-->");
   TTH_CCAT(closing,scratchstring);
   if(!horizmode || horizmode==3){ /* Pass on vert mode to next box if any*/
@@ -24010,15 +24010,15 @@ YY_RULE_SETUP
   if(strstr(yytext,"\\h")){
     strcpy(boxalign," align=\"right\"");
   }
-  TTH_PUSH_CLOSING; 
+  TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"</td></tr></table><!--hbox-->\n");
   if(!horizmode){
     TTH_CCAT(closing,"<br clear=\"all\" />");
   }
-  /*Special post-table state does not trigger broken table code */ 
+  /*Special post-table state does not trigger broken table code */
   TTH_CCAT(tth_texclose[tth_push_depth-1],"\\tthhorizbox");
-  if(horizmode&&(horizmode!=2)){TTH_OUTPUT("<br />");} 
-  /* avoid broken table alignment*/ 
+  if(horizmode&&(horizmode!=2)){TTH_OUTPUT("<br />");}
+  /* avoid broken table alignment*/
   if(*scratchstring == '%'){
     sprintf(scratchstring,
 	    "<table align =\"left\" border=\"%d\" width=\"%d%s\"><tr><td%s>\n",
@@ -24030,7 +24030,7 @@ YY_RULE_SETUP
 	    boxborder,thesize/SCALEDPERPIXEL,boxalign);
     TTH_OUTPUT(scratchstring);
   }
-  horizmode=1; 
+  horizmode=1;
   *boxalign=0;boxborder=0;
   yy_pop_state();
 }
@@ -24075,7 +24075,7 @@ case 953:
 YY_RULE_SETUP
 #line 6212 "tth.lex"
 {
-  if(strstr(closing,"</td></tr></table>")){ 
+  if(strstr(closing,"</td></tr></table>")){
     TTH_OUTPUT("</td><td align=\"right\">"); /* align=right a compromise. */
   }
   else{if(tth_debug&1024)fprintf(stderr,
@@ -24218,11 +24218,11 @@ case 972:
 /* rule 972 can match eol */
 YY_RULE_SETUP
 #line 6303 "tth.lex"
-{ 
+{
   /* Count braces, save text in dupstore */
   TTH_INC_MULTI;
   TTH_CHECK_LENGTH;
-   if(tth_debug&16) 
+   if(tth_debug&16)
      fprintf(stderr,"Open brace appending - %s - to - %s -\n",yytext,dupstore);
    bracecount++;strcat(dupstore,yytext);
     }
@@ -24275,7 +24275,7 @@ case 979:
 YY_RULE_SETUP
 #line 6334 "tth.lex"
 {
-  strcat(defstore,yytext+9);    strcpy(xpndstring," "); 
+  strcat(defstore,yytext+9);    strcpy(xpndstring," ");
 }
 	YY_BREAK
 case 980:
@@ -24453,7 +24453,7 @@ case 995:
 case 996:
 YY_RULE_SETUP
 #line 6445 "tth.lex"
-{ 
+{
   strcat(dupstore,yytext);
   strcpy(dupstore+strlen(dupstore)-1," ");
   if(tth_debug&8) fprintf(stderr,"Macarg added space in:%s\n",yytext);
@@ -24581,7 +24581,7 @@ case 1004:
 YY_RULE_SETUP
 #line 6551 "tth.lex"
 {
-  if(verbinput){ TTH_OUTPUT(yytext);} 
+  if(verbinput){ TTH_OUTPUT(yytext);}
   else{
     if(tth_titlestate) tth_titlestate=99;
     TTH_TEXCLOSE else{TTH_CLOSEGROUP;TTH_POP_CLOSING;yy_pop_state();}
@@ -24599,7 +24599,7 @@ YY_RULE_SETUP
 { /* Set the name of verb environment */
   if((jscratch=indexkey("#1",margkeys,&margmax))!=-1){
     strcpy(tth_verbenviron,margs[jscratch]);
-    rmdef(margkeys,margs,&margmax); 
+    rmdef(margkeys,margs,&margmax);
     yy_pop_state();
     if(tth_debug)fprintf(stderr,"Verbenviron=%s\n",tth_verbenviron);
     /* Now the rest of entering verbatim environment. */
@@ -24631,7 +24631,7 @@ YY_RULE_SETUP
       *scratchstring=0;
       *tth_verbenviron=0;
     }else{
-      TTH_OUTPUT(yytext);     
+      TTH_OUTPUT(yytext);
     }
   }
 }
@@ -24649,7 +24649,7 @@ case 1009:
 case 1010:
 YY_RULE_SETUP
 #line 6601 "tth.lex"
-{  
+{
   TTH_TEXCLOSE else{TTH_CLOSEGROUP;TTH_POP_CLOSING;yy_pop_state();}
 }
 	YY_BREAK
@@ -24762,7 +24762,7 @@ YY_RULE_SETUP
 #line 6661 "tth.lex"
 {
   TTH_DO_MACRO
-  else{ 
+  else{
     /* was TTH_CCAT(argchar,yytext); then became yyless(0) now
      presume if argchar !=0 that we need to collect it e.g. in setbox.*/
     if(strlen(argchar)){TTH_CCAT(argchar,yytext);}else  yyless(0);
@@ -24798,7 +24798,7 @@ case 1028:
 /* rule 1028 can match eol */
 YY_RULE_SETUP
 #line 6677 "tth.lex"
-TTH_INC_MULTI;tthglue=1;GET_DIMEN  
+TTH_INC_MULTI;tthglue=1;GET_DIMEN
 	YY_BREAK
 /* nested glue not allowed */
 case 1029:
@@ -24901,7 +24901,7 @@ YY_RULE_SETUP
     levhgt[eqclose]=1;
     *eqstr=0;
     active[eqclose]=1;
-  }else{ 
+  }else{
     strcat(exptex,yytext+strcspn(yytext,"{"));
     TTH_SCAN_STRING(exptex);
     if(tth_debug&8){
@@ -24980,15 +24980,15 @@ case 1051:
 YY_RULE_SETUP
 #line 6789 "tth.lex"
 {
-  if(tth_debug&2) 
+  if(tth_debug&2)
     fprintf(stderr,"Starting textbox equation, line %d\n",tth_num_lines);
   /*  TTH_OUTPUT(TTH_TEXTBOX2);*/
-  if(displaystyle)displaystyle++; 
+  if(displaystyle)displaystyle++;
   mkkey(eqstr,eqstrs,&eqdepth);
   TTH_PUSH_CLOSING;
   yy_push_state(equation);
   TTH_SCAN_STRING("{");
-} 
+}
 	YY_BREAK
 /* $ Will be superceded by equation grab for non-null eqs */
 case 1052:
@@ -25000,7 +25000,7 @@ case 1054:
 case 1055:
 YY_RULE_SETUP
 #line 6803 "tth.lex"
-{ 
+{
   if(displaystyle) fprintf(stderr,"Starting displaystyle incorrect.\n");
   displaystyle=0;
   tophgt[eqclose]=0;levhgt[eqclose]=1;
@@ -25047,7 +25047,7 @@ YY_RULE_SETUP
     if(tth_debug&3) fprintf(stderr,"In line Eq:%s\n",yytext);
     yyless(1);
   }
-  TTH_SCAN_STRING("$"); /* Force into other channel above.*/  
+  TTH_SCAN_STRING("$"); /* Force into other channel above.*/
  }
 	YY_BREAK
 case 1058:
@@ -25057,17 +25057,17 @@ case 1059:
 /* rule 1059 can match eol */
 YY_RULE_SETUP
 #line 6847 "tth.lex"
-{ 
+{
   if(tth_debug&33)fprintf(stderr,"Display Table:\n%s\n",yytext);
   fprintf(tth_fdout,"<dl><dd>");
   yyless(2);
   yy_push_state(disptab);
-  TTH_PUSH_CLOSING;  
+  TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"</dd></dl>");
 }
 	YY_BREAK
 /* Allowing the first half of a display to be recognized as equation is
-    problematic. Instead go to halsearch state. 
+    problematic. Instead go to halsearch state.
     Does not permit non-output commands before the halign. TeX does.*/
 case 1060:
 YY_RULE_SETUP
@@ -25091,7 +25091,7 @@ YY_RULE_SETUP
   yy_pop_state();
   yy_push_state(disptab);
   fprintf(tth_fdout,"<dl><dd>");
-  TTH_PUSH_CLOSING;  
+  TTH_PUSH_CLOSING;
   TTH_CCPY(closing,"</dd></dl>");
 }
 	YY_BREAK
@@ -25742,9 +25742,9 @@ YY_RULE_SETUP
   *dupstore2=0;
   }
 	YY_BREAK
-/* Unknown diacriticals must terminate safely. 
+/* Unknown diacriticals must terminate safely.
 \\noexpand\\H
-\\noexpand\\b 
+\\noexpand\\b
  Above are safely defined. Below need protection.*/
 case 1195:
 YY_RULE_SETUP
@@ -25818,7 +25818,7 @@ YY_RULE_SETUP
 case 1208:
 YY_RULE_SETUP
 #line 7102 "tth.lex"
-strcat(defstore,yytext); 
+strcat(defstore,yytext);
 	YY_BREAK
 case 1209:
 /* rule 1209 can match eol */
@@ -25847,7 +25847,7 @@ YY_RULE_SETUP
   yy_pop_state();
   if(jscratch!=-1){
     strcpy(dupstore,margs[jscratch]);
-    rmdef(margkeys,margs,&margmax); 
+    rmdef(margkeys,margs,&margmax);
     for(js2=0;js2<2*(strlen(dupstore));js2++)TTH_OUTPUT("&nbsp;");
   }else{
     fprintf(stderr,"***** Error. No argument in \\phantom. Line %d\n",tth_num_lines);
@@ -25937,7 +25937,7 @@ YY_RULE_SETUP
 #line 7147 "tth.lex"
 {
   TTH_DO_MACRO
-  else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) { 
+  else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) {
     if(tth_debug&4) fprintf(stderr,"Setting counter %d, %s. ",ind,countkeys[ind]);
     yy_push_state(counterset);
   } else {
@@ -26069,7 +26069,7 @@ horizmode=1;fprintf(tth_fdout,"%s",yytext);
 case 1241:
 YY_RULE_SETUP
 #line 7231 "tth.lex"
-yyless(0);yy_pop_state();      
+yyless(0);yy_pop_state();
 	YY_BREAK
 case 1242:
 YY_RULE_SETUP
@@ -26360,7 +26360,7 @@ case YY_STATE_EOF(halsearch):
 #line 7311 "tth.lex"
 {
   if(!strcmp(yytext,"\\end")) {
-    tth_stack_ptr=0; 
+    tth_stack_ptr=0;
     if(!ftntno){
       TTH_INC_LINE;
       if(tth_debug&1024 && !(tth_stack_ptr||ftntwrap)) fprintf(stderr,"\n");
@@ -26464,7 +26464,7 @@ YY_RULE_SETUP
    yy_push_state(glue); /* In case glue */
    GET_DIMEN
   }
- }    
+ }
 	YY_BREAK
 case 1295:
 #line 7410 "tth.lex"
@@ -26473,13 +26473,13 @@ YY_RULE_SETUP
 #line 7410 "tth.lex"
 { /* Not a tth native command */
   TTH_DO_MACRO
-  else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) { 
+  else if( (ind=indexkey(yytext,countkeys,&ncounters)) != -1) {
     if(tth_debug&4) fprintf(stderr,"Setting counter %d, %s\n",ind,countkeys[ind]);
     yy_push_state(counterset);
   } else {
     if((!strstr(unknownstring,yytext)||tth_debug)&&!(tth_debug&32768)){
       fprintf(stderr,"**** Unknown command %s, (%d user-defined) Line %d\n",
-	    yytext,nkeys-nbuiltins,tth_num_lines); 
+	    yytext,nkeys-nbuiltins,tth_num_lines);
       if(!strstr(unknownstring,yytext)&&
 	 strlen(unknownstring)+strlen(yytext) < TTH_UNKS_LEN)
 	strcat(unknownstring,yytext);
@@ -26603,7 +26603,7 @@ YY_RULE_SETUP
       strcpy(scratchstring," ");
     } else {
       *scratchstring=0;
-      if(whitespace==1)strcat(dupstore," "); /* save spaces if compressed*/ 
+      if(whitespace==1)strcat(dupstore," "); /* save spaces if compressed*/
     }
     whitespace=2;
     if(horizmode==1){horiztemp=-1;}
@@ -26624,14 +26624,14 @@ YY_RULE_SETUP
     else horiztemp=0;
   }else if(*yytext == '\t' || *yytext == ' ') {
     if(!whitespace){
-      strcpy(scratchstring," "); 
+      strcpy(scratchstring," ");
     }else{
       *scratchstring=0;
       if(whitespace==1)strcat(dupstore," ");
     }
     whitespace=2;
     horiztemp=horizmode;
-  }else if(strstr(yytext,"\\") && strlen(yytext)==2 ) { 
+  }else if(strstr(yytext,"\\") && strlen(yytext)==2 ) {
     strcpy(scratchstring,yytext+1);
     strcat(dupstore,"\\");
     if(whitespace==1)whitespace=2; else whitespace=0;
@@ -26748,7 +26748,7 @@ case 1315:
 /* rule 1315 can match eol */
 YY_RULE_SETUP
 #line 7612 "tth.lex"
-yyless(0);yy_pop_state();   
+yyless(0);yy_pop_state();
 	YY_BREAK
 case 1316:
 YY_RULE_SETUP
@@ -27031,7 +27031,7 @@ static int yy_get_next_buffer (void)
 {
 	register yy_state_type yy_current_state;
 	register char *yy_cp;
-    
+
 	yy_current_state = (yy_start);
 
 	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
@@ -27085,7 +27085,7 @@ static int yy_get_next_buffer (void)
     static void yyunput (int c, register char * yy_bp )
 {
 	register char *yy_cp;
-    
+
     yy_cp = (yy_c_buf_p);
 
 	/* undo effects of setting up yytext */
@@ -27128,7 +27128,7 @@ static int yy_get_next_buffer (void)
 
 {
 	int c;
-    
+
 	*(yy_c_buf_p) = (yy_hold_char);
 
 	if ( *(yy_c_buf_p) == YY_END_OF_BUFFER_CHAR )
@@ -27195,12 +27195,12 @@ static int yy_get_next_buffer (void)
 
 /** Immediately switch to a different input stream.
  * @param input_file A readable stream.
- * 
+ *
  * @note This function does not reset the start condition to @c INITIAL .
  */
     void yyrestart  (FILE * input_file )
 {
-    
+
 	if ( ! YY_CURRENT_BUFFER ){
         yyensure_buffer_stack ();
 		YY_CURRENT_BUFFER_LVALUE =
@@ -27213,11 +27213,11 @@ static int yy_get_next_buffer (void)
 
 /** Switch to a different input buffer.
  * @param new_buffer The new input buffer.
- * 
+ *
  */
     void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )
 {
-    
+
 	/* TODO. We should be able to replace this entire function body
 	 * with
 	 *		yypop_buffer_state();
@@ -27257,13 +27257,13 @@ static void yy_load_buffer_state  (void)
 /** Allocate and initialize an input buffer state.
  * @param file A readable stream.
  * @param size The character buffer size in bytes. When in doubt, use @c YY_BUF_SIZE.
- * 
+ *
  * @return the allocated buffer state.
  */
     YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )
 {
 	YY_BUFFER_STATE b;
-    
+
 	b = (YY_BUFFER_STATE) yyalloc(sizeof( struct yy_buffer_state )  );
 	if ( ! b )
 		YY_FATAL_ERROR( "out of dynamic memory in yy_create_buffer()" );
@@ -27286,11 +27286,11 @@ static void yy_load_buffer_state  (void)
 
 /** Destroy the buffer.
  * @param b a buffer created with yy_create_buffer()
- * 
+ *
  */
     void yy_delete_buffer (YY_BUFFER_STATE  b )
 {
-    
+
 	if ( ! b )
 		return;
 
@@ -27311,7 +27311,7 @@ static void yy_load_buffer_state  (void)
 
 {
 	int oerrno = errno;
-    
+
 	yy_flush_buffer(b );
 
 	b->yy_input_file = file;
@@ -27333,7 +27333,7 @@ static void yy_load_buffer_state  (void)
 
 /** Discard all buffered characters. On the next scan, YY_INPUT will be called.
  * @param b the buffer state to be flushed, usually @c YY_CURRENT_BUFFER.
- * 
+ *
  */
     void yy_flush_buffer (YY_BUFFER_STATE  b )
 {
@@ -27362,7 +27362,7 @@ static void yy_load_buffer_state  (void)
  *  the current state. This function will allocate the stack
  *  if necessary.
  *  @param new_buffer The new state.
- *  
+ *
  */
 void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
 {
@@ -27392,7 +27392,7 @@ void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
 
 /** Removes and deletes the top of the stack, if present.
  *  The next element becomes the new top.
- *  
+ *
  */
 void yypop_buffer_state (void)
 {
@@ -27416,7 +27416,7 @@ void yypop_buffer_state (void)
 static void yyensure_buffer_stack (void)
 {
 	int num_to_alloc;
-    
+
 	if (!(yy_buffer_stack)) {
 
 		/* First allocation is just for 2 elements, since we don't know if this
@@ -27429,7 +27429,7 @@ static void yyensure_buffer_stack (void)
 								);
 		if ( ! (yy_buffer_stack) )
 			YY_FATAL_ERROR( "out of dynamic memory in yyensure_buffer_stack()" );
-								  
+								
 		memset((yy_buffer_stack), 0, num_to_alloc * sizeof(struct yy_buffer_state*));
 				
 		(yy_buffer_stack_max) = num_to_alloc;
@@ -27459,13 +27459,13 @@ static void yyensure_buffer_stack (void)
 /** Setup the input buffer state to scan directly from a user-specified character buffer.
  * @param base the character buffer
  * @param size the size in bytes of the character buffer
- * 
- * @return the newly allocated buffer state object. 
+ *
+ * @return the newly allocated buffer state object.
  */
 YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )
 {
 	YY_BUFFER_STATE b;
-    
+
 	if ( size < 2 ||
 	     base[size-2] != YY_END_OF_BUFFER_CHAR ||
 	     base[size-1] != YY_END_OF_BUFFER_CHAR )
@@ -27494,14 +27494,14 @@ YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )
 /** Setup the input buffer state to scan a string. The next call to yylex() will
  * scan from a @e copy of @a str.
  * @param yystr a NUL-terminated string to scan
- * 
+ *
  * @return the newly allocated buffer state object.
  * @note If you want to scan bytes that may contain NUL values, then use
  *       yy_scan_bytes() instead.
  */
 YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )
 {
-    
+
 	return yy_scan_bytes(yystr,strlen(yystr) );
 }
 
@@ -27509,7 +27509,7 @@ YY_BUFFER_STATE yy_scan_string (yyconst char * yystr )
  * scan from a @e copy of @a bytes.
  * @param yybytes the byte buffer to scan
  * @param _yybytes_len the number of bytes in the buffer pointed to by @a bytes.
- * 
+ *
  * @return the newly allocated buffer state object.
  */
 YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )
@@ -27518,7 +27518,7 @@ YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )
 	char *buf;
 	yy_size_t n;
 	int i;
-    
+
 	/* Get memory for full buffer, including space for trailing EOB's. */
 	n = _yybytes_len + 2;
 	buf = (char *) yyalloc(n  );
@@ -27609,16 +27609,16 @@ static void yy_fatal_error (yyconst char* msg )
 /* Accessor  methods (get/set functions) to struct members. */
 
 /** Get the current line number.
- * 
+ *
  */
 int yyget_lineno  (void)
 {
-        
+
     return yylineno;
 }
 
 /** Get the input stream.
- * 
+ *
  */
 FILE *yyget_in  (void)
 {
@@ -27626,7 +27626,7 @@ FILE *yyget_in  (void)
 }
 
 /** Get the output stream.
- * 
+ *
  */
 FILE *yyget_out  (void)
 {
@@ -27634,7 +27634,7 @@ FILE *yyget_out  (void)
 }
 
 /** Get the length of the current token.
- * 
+ *
  */
 int yyget_leng  (void)
 {
@@ -27642,7 +27642,7 @@ int yyget_leng  (void)
 }
 
 /** Get the current token.
- * 
+ *
  */
 
 char *yyget_text  (void)
@@ -27652,18 +27652,18 @@ char *yyget_text  (void)
 
 /** Set the current line number.
  * @param line_number
- * 
+ *
  */
 void yyset_lineno (int  line_number )
 {
-    
+
     yylineno = line_number;
 }
 
 /** Set the input stream. This does not discard the current
  * input buffer.
  * @param in_str A readable stream.
- * 
+ *
  * @see yy_switch_to_buffer
  */
 void yyset_in (FILE *  in_str )
@@ -27721,7 +27721,7 @@ static int yy_init_globals (void)
 /* yylex_destroy is for both reentrant and non-reentrant scanners. */
 int yylex_destroy  (void)
 {
-    
+
     /* Pop the buffer stack, destroying each element. */
 	while(YY_CURRENT_BUFFER){
 		yy_delete_buffer(YY_CURRENT_BUFFER  );
@@ -27813,7 +27813,7 @@ FILE *fdin=0;
 int horizmode=1; /* In signoff use font tags not divs */
 char main_input[TTH_CHARLEN];
 char main_output[TTH_CHARLEN];
-  tth_fdout=stdout; 
+  tth_fdout=stdout;
   if((spoint=strstr(tth_DOC,"XXXX"))){ /* Make version strings */
     strcpy(ttname,"Tt");
     strcat(ttname,TTH_NAME);
@@ -27848,7 +27848,7 @@ char main_output[TTH_CHARLEN];
     if(strspn(argv[i],"-") != 1){ /*Non-switch*/
       if(strlen(tth_latex_file)){
 	fprintf(stderr,
-       "**** Invalid switch, %s, or input file already specified.\n",argv[i]); 
+       "**** Invalid switch, %s, or input file already specified.\n",argv[i]);
 	return 1;
       }
       strcpy(tth_latex_file,argv[i]);
@@ -27867,7 +27867,7 @@ char main_output[TTH_CHARLEN];
 	yyin=fdin;
 	fprintf(stderr,"Translating %s to %s\n",main_input,main_output);
       }else{
-	fprintf(stderr,"**** Invalid switch or file: %s\n",argv[i]); 
+	fprintf(stderr,"**** Invalid switch or file: %s\n",argv[i]);
 	return 1;
       }
     }else{
@@ -27876,7 +27876,7 @@ char main_output[TTH_CHARLEN];
       case 'c': httpcont=1;break;
       case 'd': tth_delimdef=0;break;
       case 'e': sscanf(argv[i]+2,"%d",&tth_epsftype);break;
-      case 'f': sscanf(argv[i]+2,"%d",&tth_flev0); 
+      case 'f': sscanf(argv[i]+2,"%d",&tth_flev0);
 	fprintf(stderr,"Fraction level %d\n",tth_flev0);break;
       case 'g': tth_fontguess=0;break;
       case '?': {if(*(argv[i]+2)=='q'){ printf("%s",tth_DOCQ); }
@@ -27893,7 +27893,7 @@ char main_output[TTH_CHARLEN];
 	}
 	break;
       case 'j': tth_indexpage=9999;
-	if(*(argv[i]+2)) sscanf(argv[i]+2,"%d",&tth_indexpage); 
+	if(*(argv[i]+2)) sscanf(argv[i]+2,"%d",&tth_indexpage);
 	fprintf(stderr,"HTML index page length %d\n",tth_indexpage);break;
       case 'k': strcpy(tth_latex_file,argv[i]+2);break;
       case 'L': case 'l':{
@@ -27908,7 +27908,7 @@ char main_output[TTH_CHARLEN];
 	ilatex=1;
 	break;
       }
-      case 'n': 
+      case 'n':
 	tth_titlestate=4;
 	if(*(argv[i]+2)) sscanf(argv[i]+2,"%d",&tth_titlestate);
 	break;
@@ -27920,18 +27920,18 @@ char main_output[TTH_CHARLEN];
       case 's': tth_splitfile=1;break; /*sf*/
       case 't': tth_inlinefrac=1;break;
       case 'u': tth_unicode=1;
-	if(*(argv[i]+2)) sscanf(argv[i]+2,"%d",&tth_unicode); 
+	if(*(argv[i]+2)) sscanf(argv[i]+2,"%d",&tth_unicode);
 	fprintf(stderr,"HTML unicode style %d\n",tth_unicode);break;
       case 'v': tth_verb=1; tth_debug=1;
 	if(*(argv[i]+2)=='?'){fprintf(stderr,"%s",tth_debughelp);return 1;}
 	else if(*(argv[i]+2)) sscanf(argv[i]+2,"%d",&tth_debug);
         break;
       case 'V': tth_verb=1; tth_debug=2048+256+7;break;
-      case 'w': sscanf(argv[i]+2,"%d",&tth_htmlstyle); 
+      case 'w': sscanf(argv[i]+2,"%d",&tth_htmlstyle);
 	fprintf(stderr,"HTML writing style %d\n",tth_htmlstyle);
 	if(!tth_htmlstyle&1) ititle=0;break;
       case 'x':strcpy(tth_index_cmd,argv[i]+2);break;
-      case 'y':  sscanf(argv[i]+2,"%d",&tth_istyle); 
+      case 'y':  sscanf(argv[i]+2,"%d",&tth_istyle);
 	fprintf(stderr,"Equation layout style %d\n",tth_istyle);
 	break;
     }
@@ -27954,7 +27954,7 @@ char main_output[TTH_CHARLEN];
   if(tth_flev0) tth_flev0=tth_flev0+2; /* Increment to compensate for dummy levels. */
   if(ititle && raw!=1){
     if(tth_htmlstyle&3){
-      yy_push_state(stricttitle); 
+      yy_push_state(stricttitle);
     }else{
       yy_push_state(titlecheck);
     }
@@ -27964,7 +27964,7 @@ char main_output[TTH_CHARLEN];
   /* if(tth_debug)
     fprintf(stderr,"Starting yylex\n"); */
   yylex();
-  fprintf(stderr, "Number of lines processed approximately %d\n", 
+  fprintf(stderr, "Number of lines processed approximately %d\n",
 	  tth_num_lines-1);
   /* Time stamp */
   time(&secs_elapsed);
@@ -28014,7 +28014,7 @@ char arg[];
 void tth_pop(arg)
 char arg[];
 {
-  if(tth_push_depth < 1){ 
+  if(tth_push_depth < 1){
     fprintf(stderr,"**** Error: Fatal. Apparently too many }s.\nCheck for TeX errors or incompatibilities before line %d,\nnext material      ",tth_num_lines);
     /*TTH_FATAL(1);*/
     yy_push_state(error);
@@ -28029,7 +28029,7 @@ char arg[];
 
 /* ********************************************************************
    Process epsbox. If epsftype=0 put link. Arg is the file name.
-   epsftype=1 Convert the ps or eps file to a gif reference. 
+   epsftype=1 Convert the ps or eps file to a gif reference.
    epsftype=2 Ditto but inline it. epsftype=3 inline an iconized version.*/
 void tth_epsf(arg,epsftype)
 char *arg;
@@ -28047,7 +28047,7 @@ int epsftype;
  int c,i,psfound;
  char *ext;
  char eqstr[1]; /*dummy here for tthfunc*/
- *eqstr=0;        /*silence warnings */ 
+ *eqstr=0;        /*silence warnings */
  ext=arg;         /*silence warnings */
 if(epsftype==0){
   fprintf(tth_fdout,"<a href=\"%s\">Figure</a>",arg);
@@ -28218,7 +28218,7 @@ int *nkeys;
 {
   if((*nkeys) > 0){
     (*nkeys)--;
-    free(keys[*nkeys]); 
+    free(keys[*nkeys]);
     keys[*nkeys]=0;
   } else {
     fprintf(stderr,"**** Error: No keys left to remove\n");
@@ -28232,7 +28232,7 @@ int *nkeys;
 {
   if((*nkeys) > 0){
     (*nkeys)--;
-    free(keys[*nkeys]); 
+    free(keys[*nkeys]);
     keys[*nkeys]=0;
     free(defs[*nkeys]);
     defs[*nkeys]=0;
@@ -28323,7 +28323,7 @@ static void delimit(char *type, int heightin, char *codes)
   int height;
   int horizmode=1; /* In equations use font tags not divs */
 
-  /*tth_istyle case*/ 
+  /*tth_istyle case*/
   if(tth_istyle&1) height=0.65*heightin + 0.71;  /* 2 has to yield 2*/
   else height=0.95*heightin+heightin*heightin/16 +.11;
   /* Experimental size. Evenness fixed. If very large assume matrix. */
@@ -28364,7 +28364,7 @@ static void delimit(char *type, int heightin, char *codes)
 	  chr1[0]=214;
 	  sprintf(codes+strlen(codes),
 		  "%s%s%s%s%s",TTH_SYMPT(chr1),TTH_SIZEEND,TTH_SYMEND,TTH_OA3,TTH_CELL3);
-	}else{ 
+	}else{
 	  chr1[0]=230;
 	  sprintf(codes,"%s\n%s%s %s%s%s%s<br />",
 		  TTH_CELL_R,TTH_SCRIPTSIZE,tth_root_index[tth_root_depth],
@@ -28418,7 +28418,7 @@ static void delimit(char *type, int heightin, char *codes)
   }
   else if(!strcmp(type,".")) { *codes=0; return; }
   else {
-    fprintf(stderr, "Incorrect delimiter::%s::\n",type); 
+    fprintf(stderr, "Incorrect delimiter::%s::\n",type);
     i=-1;
     *codes=0;
     return;
@@ -28435,7 +28435,7 @@ static void delimit(char *type, int heightin, char *codes)
 	chr1[0]=mid[i];sprintf(buff,"%s<br />\n",TTH_SYMPT(chr1));}
       else {chr1[0]=flat[i]; sprintf(buff,"%s<br />",TTH_SYMPT(chr1));}
       strcat(codes,buff);
-    } 
+    }
     strcat(codes,TTH_SYMEND);
     strcat(codes,TTH_CELL3);
     if(tth_debug&512) fprintf(stderr,"codes=%s",codes);
@@ -28466,7 +28466,7 @@ char *charin,*charout;
       strcat(charout,TTH_SYMEND);
     }else {
       strcpy(charout,TTH_LARGE);
-      strcat(charout,TTH_SYMBOL);      
+      strcat(charout,TTH_SYMBOL);
       strcat(charout,TTH_SYMPT(charin));
       strcat(charout,"<br />\n") ;
       strcat(charout,TTH_SYMEND);
@@ -28476,11 +28476,11 @@ char *charin,*charout;
     if(*charin==' ')strcpy(charout,charin+1); else strcpy(charout,charin);
     if(strstr(charout,TTH_OBR)+strlen(TTH_OBR)!=charout+strlen(charout)
        && strstr(charout, /*This mess is really TTH_DIV without eqclose ref*/
-		 (tth_istyle&1 ? 
+		 (tth_istyle&1 ?
 		  "\n<div class=\"hrcomp\"><hr noshade=\"noshade\" size=\"1\"/></div>"
 		  :"<hr noshade=\"noshade\" size=\"1\" />")
        )+strlen(
-		 (tth_istyle&1 ? 
+		 (tth_istyle&1 ?
 		  "\n<div class=\"hrcomp\"><hr noshade=\"noshade\" size=\"1\"/></div>"
 		  :"<hr noshade=\"noshade\" size=\"1\" />")
 	  )!=charout+strlen(charout)
@@ -28560,7 +28560,7 @@ static int roman(int num, char *rm)
   *(rm+(m++))=0;
   return 0;
 }
-/* start b_align */    
+/* start b_align */
 /*************************************************************************
  Take off the Cell start and the extra bottom from single over construct.
  This is used only at the completion of the top or bottom of a fraction.
@@ -28597,7 +28597,7 @@ static int b_align(thestring,tth_debug)
     for (ists=0; ists<NSTS; ists++) {
       if((chr1=strstr(chr,TTH_CELL3))){
 	chr2=chr1-strlen(TTH_OA4);
-	if(chr2-chr<0){ists=-1; break;} 
+	if(chr2-chr<0){ists=-1; break;}
 	if(strstr(chr2,TTH_OA4)!=chr2){ists=-2; break;}
 	oastarts[ists+1]=chr2;
 	chr=chr1+strlen(TTH_CELL3);
@@ -28618,8 +28618,8 @@ static int b_align(thestring,tth_debug)
 Convert a dimension into scaled points. 1pt = 2^16 = 65536 sp.
 1pc =12pt = 786432 sp
 1in =72.27pt =4736287 sp
-1bp =72.27/72pt =1.0038 pt= 65785 sp 
-1cm =1in/2.54 = 1864680 sp 
+1bp =72.27/72pt =1.0038 pt= 65785 sp
+1cm =1in/2.54 = 1864680 sp
 1mm = 18648 sp
 1dd =1238/1157 pt = 70124 sp
 1cc = 12 dd = 841489 sp
@@ -28659,13 +28659,13 @@ static int adddimen(number1,unit1,number2,unit2)
 {
   if(*unit1=='%'){/* hsize supercedes others */
     if(*unit2=='%') {
-      *number1=*number1+*number2; 
+      *number1=*number1+*number2;
     }else{
       *number1=*number1+
 	(((double)scaledpoints(*number2,unit2))/SCALEDPERPIXEL)/DEFAULTHSIZEPIX;
       strcpy(unit1,"%");
     }
-  }else{      
+  }else{
     if(*unit2=='%'){
       *number1=*number2+
 	(((double)scaledpoints(*number1,unit1))/SCALEDPERPIXEL)/DEFAULTHSIZEPIX;
@@ -28682,7 +28682,7 @@ static int adddimen(number1,unit1,number2,unit2)
 
 /***********************Color table following  color.pro of dvips ********/
 #define N_COLORS 76
-struct tth_ct { 
+struct tth_ct {
   char name[20];
   float cyan;
   float magenta;
@@ -28789,12 +28789,12 @@ int i;
 }
 
 
-/************************************* 
-Convert a symbol character 8859 reference into unicode point 
+/*************************************
+Convert a symbol character 8859 reference into unicode point
 If the input string chsym is of length 1, just use its 8 bit code.
-If not, try to read the first positive integer from it. 
+If not, try to read the first positive integer from it.
 If that fails, translate every character separately.
-The returned value is a pointer to the global string chuni 
+The returned value is a pointer to the global string chuni
 containing the unicode HTML numeric ref(s) on return.
 */
 
