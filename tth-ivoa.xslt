@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml"
   version="1.0">
 
@@ -66,7 +66,7 @@
           padding: 3pt;
           overflow: auto;
         }
-        
+
         p.admonition-type {
           background-color: #444444;
           color: #ffffff;
@@ -189,7 +189,7 @@
       </table>
       <br/>
     </xsl:copy>
-    
+
     <h1><xsl:value-of select="h1[@align='center']"/></h1>
     <div id="versionstatement">
       Version <xsl:value-of select="span[@id='version']"/>
@@ -226,14 +226,14 @@
           <xsl:apply-templates select="li[@class='author']"/>
         </ul>
       </dd>
-      
+
       <dt>Editor(s)</dt>
                         <dd>
         <ul class="editors">
           <xsl:apply-templates select="li[@class='editor']"/>
         </ul>
       </dd>
-                    
+
       <xsl:if test="span[@id='vcsRev']">
         <dt>Version Control</dt>
         <dd>Revision <xsl:value-of select="span[@id='vcsRev']"
@@ -298,7 +298,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:message terminate='yes'>doctype must be one of
-                  WD, PR, REC, NOTE, EN, PEN not 
+                  WD, PR, REC, NOTE, EN, PEN not
                   '<xsl:value-of select="$doctype"/>'</xsl:message>
       </xsl:otherwise>
     </xsl:choose>
@@ -346,8 +346,8 @@
                 This is an IVOA Proposed Endorsed Note for review by IVOA
                 members and other interested parties. It is appropriate to
                 reference this document only as a Proposed Endorsed Note that
-                is under review and may change before it is endorsed or may  
-                not be endorsed. 
+                is under review and may change before it is endorsed or may
+                not be endorsed.
               </xsl:when>
               <xsl:when test="$doctype='EN'">
                 This document is an IVOA Endorsed Note. It has been reviewed
@@ -404,7 +404,7 @@
   <!-- To somewhat support keyval-style arguments (as in, e.g., listings)
     this allows translating them into css classes.  Essentially,
     generate a div with a keyvals attribute; see lstlisting in tthdefs -->
-  
+
   <xsl:template match="*[@keyvals]">
     <div>
       <xsl:attribute name="class">
@@ -416,14 +416,14 @@
 
   <!-- In verbatim listings, we may want to play tricks with lines.
        So, let's mark them up with spans. -->
-  
+
   <xsl:template name="split-into-lines">
     <xsl:param name="arg"/>
-    <span class="verbline"><xsl:value-of 
+    <span class="verbline"><xsl:value-of
       select="substring-before($arg, '&#xa;')"/>
       <xsl:text>&#xa;</xsl:text>
     </span>
-    
+
     <xsl:if test="substring-after($arg, '&#xa;')">
       <xsl:call-template name="split-into-lines">
         <xsl:with-param name="arg" select="substring-after($arg, '&#xa;')"/>
@@ -490,7 +490,7 @@
 
   <!-- tth has given up detecting p elements in TeX source and hacks in
        div class="p" elements as paragraph separators.  These
-       are potentially very confusing to browsers.  We hence 
+       are potentially very confusing to browsers.  We hence
        replace them with hopefully less confusing constructs -->
   <xsl:template match="div[@class='p']">
     <p class="parsep"><span> </span></p>

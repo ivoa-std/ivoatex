@@ -42,11 +42,11 @@ def do_api_request(_path, _payload=None, **arguments):
 
 
 def main():
-    bibcode_recs = do_api_request("search/query/", 
+    bibcode_recs = do_api_request("search/query/",
         q="bibstem:(ivoa.spec or ivoa.rept)",
         rows="500",
         fl="bibcode")
-    
+
     bibtex_args = {
         "bibcode": [r["bibcode"] for r in bibcode_recs["response"]["docs"]],}
     bibtex_recs = do_api_request("export/bibtex",

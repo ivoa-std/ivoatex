@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
        xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1"
        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
 
-<!-- 
+<!--
   XSLT to translate VO-dml/XML content to an ivoatex file
   which can be inported to the primary document (${DOCNAME}.tex)
 
@@ -68,14 +68,14 @@
   %\end{figure}
 
   <xsl:apply-templates select="." mode="Description"/>
-  
+
   <xsl:for-each select="objectType|dataType">
     <xsl:sort select="name"/>
     <xsl:apply-templates select="." mode="SubSection"><xsl:with-param name="model_prefix" select="$model_prefix"/></xsl:apply-templates>
   </xsl:for-each>
   <xsl:apply-templates select="primitiveType" mode="SubSection"/>
   <xsl:apply-templates select="enumeration" mode="SubSection"/>
-  
+
   <!-- check for packages -->
   <xsl:apply-templates select="package" mode="Section"/>
 </xsl:template>
@@ -94,7 +94,7 @@
   %\end{figure}
 
   <xsl:apply-templates select="." mode="Description"/>
-  
+
   <xsl:for-each select="objectType|dataType">
     <xsl:sort select="name"/>
     <xsl:apply-templates select="." mode="SubSection"/>
@@ -122,7 +122,7 @@
   <xsl:if test="constraint[not(@xsi:type='vo-dml:SubsettedRole')]">
     <xsl:apply-templates select="constraint[not(@xsi:type='vo-dml:SubsettedRole')]" mode="Constraints"/>
   </xsl:if>
-    
+
     <xsl:for-each select="attribute|composition|reference">
       <xsl:apply-templates select="." mode="SubSubSection"><xsl:with-param name="model_prefix" select="$model_prefix"/></xsl:apply-templates>
     </xsl:for-each>
@@ -196,7 +196,7 @@
     \subsubsection{<xsl:value-of select="../name"/>.<xsl:value-of select="name"/>}
       \textbf{vodml-id: <xsl:value-of select="vodml-id"/>} \newline
       \textbf{type: <xsl:value-of select="$typeWithRef"/>} \newline
-      \textbf{multiplicity: <xsl:apply-templates select="multiplicity" mode="tostring"/> <xsl:if test="string-length($isOrdered)">  (ordered)</xsl:if>} \newline 
+      \textbf{multiplicity: <xsl:apply-templates select="multiplicity" mode="tostring"/> <xsl:if test="string-length($isOrdered)">  (ordered)</xsl:if>} \newline
       </xsl:otherwise>
     </xsl:choose>
 <xsl:apply-templates select="." mode="Description"/>

@@ -1,5 +1,5 @@
 /*
-Split a tth-produced MIME file into its consituent files. 
+Split a tth-produced MIME file into its consituent files.
 Copyright 1997 I.H.Hutchinson.
 */
 
@@ -15,12 +15,12 @@ char *ch,*ch2;
 char bound[LINELEN]={0};
 char buff[LINELEN]={0};
 FILE *file;
-if(argc > 1){ 
-  printf( "Usage: tthsplit <infile \n Split a tth MIME file on stdin.\n"); 
+if(argc > 1){
+  printf( "Usage: tthsplit <infile \n Split a tth MIME file on stdin.\n");
   return 1;
 }
 do {
-  ch2=fgets(buff,LINELEN,stdin); 
+  ch2=fgets(buff,LINELEN,stdin);
   if((ch=strstr(buff,"MULTIPART/MIXED; BOUNDARY="))!=NULL){
     ch=strstr(ch,"\"")+1;
     *(strstr(ch,"\""))=0;

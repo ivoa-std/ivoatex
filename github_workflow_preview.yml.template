@@ -16,30 +16,30 @@ on:
 
 jobs:
   build:
-    
+
     runs-on: ubuntu-latest
-    
+
     steps:
-    
+
     - name: Checkout the repository
       uses: actions/checkout@v1
       with:
         submodules: true
-    
+
     - name: Setup dependencies
       run: |
         sudo apt update
         sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended xsltproc latexmk cm-super
         sudo snap install pdftk
-    
+
     - name: Build the document
       run: make ${{ env.doc_name }}-draft.pdf
-    
+
     - name: Check the output
       run: |
         test -f ${{ env.doc_name }}-draft.pdf
         test -f ${{ env.doc_name }}.bbl
-    
+
     - name: Move the auto-pdf-preview tag
       uses: weareyipyip/walking-tag-action@v2
       with:
@@ -48,7 +48,7 @@ jobs:
           Last commit taken into account for the automatically updated PDF preview of this IVOA document.
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Update the PDF preview
       uses: Xotl/cool-github-releases@v1
       with:

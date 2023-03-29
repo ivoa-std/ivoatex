@@ -24,7 +24,7 @@ Then, run
 
 make archdiag-debug.svg
 
-and open archdiag-debug.svg in a javascript-enabled browser.  In that 
+and open archdiag-debug.svg in a javascript-enabled browser.  In that
 browser's javascript console you will see lines like:
 
 SpectralDM: 67; 11.5
