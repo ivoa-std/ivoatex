@@ -9,3 +9,21 @@ then go into this directory and say
 tar --strip-components=1 -xvzf <path-to-your-download>/tth_C.tgz
 
 This assumes GNU tar.
+
+The actual (lex) source is at <svn://svn.code.sf.net/p/tth/code>.
+
+Note 2023-06: For a while we will diverge from upstream tth by removing
+all support for German TeX sequences (with u+0022 as active character: "a,
+"s, "`, etc) from tth.  This needs to be done on the source from
+sourceforge.  A patch for that is in no-german.patch.
+
+While we need this, the procedure to update our tth is:
+
+	svn checkout svn://svn.code.sf.net/p/tth/code tth-code
+	cd tth-code
+	cp <path-to-ivoatex>/tth_C/no-german.patch .
+	patch < no-german.patch
+	make tth.c
+	cp tth.c <path-to-ivoatex>/tth_C/
+
+(and then commit)
