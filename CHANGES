@@ -1,9 +1,16 @@
-Version 1.3 (unreleased)
+Version 1.3 (2023-06-28)
 
   * There is now a new-release Makefile target.
 
+  * New vocterm generator function.
+
   * You can now override the URL at which the document will and up in
     DOCREPO_BASEURL.
+
+	* German-style "a control sequences are no longer interpreted when
+	  rendering to HTML.
+
+	* No longer including the doc.sty LaTeX package
 
 
 Version 1.2 (2022-05-10)

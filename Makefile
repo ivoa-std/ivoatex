@@ -10,7 +10,7 @@
 #  You should *not* need to change anything here while authoring documents.
 #  All customisation should happen in the user Makefile
 
-IVOATEX_VERSION = 1.2
+IVOATEX_VERSION = 1.3
 
 .DELETE_ON_ERROR:
 
