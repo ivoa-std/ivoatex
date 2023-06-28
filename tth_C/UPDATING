@@ -19,8 +19,12 @@ sourceforge.  A patch for that is in no-german.patch.
 
 While we need this, the procedure to update our tth is:
 
-	svn checkout svn://svn.code.sf.net/p/tth/code tth-code
-	cd tth-code
+	Get the latest tarball from
+		https://sourceforge.net/projects/tth/files/ and untar it.
+		WARNING: the svn on sourceforge is outdated.  Do not use
+		it.
+
+	cd tth
 	cp <path-to-ivoatex>/tth_C/no-german.patch .
 	patch < no-german.patch
 	make tth.c
