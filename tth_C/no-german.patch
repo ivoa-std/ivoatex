@@ -1,0 +1,94 @@
+--- tthg-orig.lex	2023-06-29 09:17:37.008894740 +0200
++++ tthg.lex	2023-06-29 09:17:40.838894796 +0200
+@@ -5318,19 +5318,16 @@
+ \\r\{A\} |
+ \\AA		TTH_OUTPUTH("&#197;");
+ \\\~A           TTH_OUTPUTH("&#195;");
+-\"A |		
+ \\\"A	        TTH_OUTPUTH("&#196;");
+  /*  \\c{SP}?C    | */
+ \\noexpand\\c{SP}?C       	TTH_OUTPUTH("&#199;");
+ \\\'E		TTH_OUTPUTH("&#201;");
+ \\\^E		TTH_OUTPUTH("&#202;");
+ \\\`E		TTH_OUTPUTH("&#200;");
+-\"E |
+ \\\"E		TTH_OUTPUTH("&#203;");
+ \\\`I		TTH_OUTPUTH("&#204;");
+ \\\'I		TTH_OUTPUTH("&#205;");
+ \\\^I		TTH_OUTPUTH("&#206;");
+-\"I |
+ \\\"I		TTH_OUTPUTH("&#207;");
+ \\\~N		TTH_OUTPUTH("&#209;");
+ \\\`O		TTH_OUTPUTH("&#210;");
+@@ -5338,14 +5335,12 @@
+ \\\^O		TTH_OUTPUTH("&#212;");
+ \\\O		TTH_OUTPUTH("&#216;");
+ \\\~O		TTH_OUTPUTH("&#213;");
+-\"O |
+ \\\"O		TTH_OUTPUTH("&#214;");
+ \\P		TTH_OUTPUTH("&#182;");
+ \\S		TTH_OUTPUTH("&#167;");
+ \\\'U		TTH_OUTPUTH("&#218;");
+ \\\^U		TTH_OUTPUTH("&#219;");
+ \\\`U		TTH_OUTPUTH("&#217;");
+-\"U |
+ \\\"U		TTH_OUTPUTH("&#220;");
+ \\\'Y		TTH_OUTPUTH("&#221;");
+ <verbatim,notags>&  TTH_OUTPUTH("&amp;");
+@@ -5355,7 +5350,6 @@
+ \\\'a		TTH_OUTPUTH("&#225;");
+ \\\^a		TTH_OUTPUTH("&#226;");
+ \\\~a		TTH_OUTPUTH("&#227;");
+-\"a |
+ \\\"a		TTH_OUTPUTH("&#228;");
+ \\r\{a\} |
+ \\aa{SP}*            TTH_OUTPUTH("&#229;");
+@@ -5367,7 +5361,6 @@
+ \\\^e		TTH_OUTPUTH("&#234;");
+ \\\`e		TTH_OUTPUTH("&#232;");
+ \\v{SP}?o		TTH_OUTPUTH("&#240;");
+-\"e |
+ \\\"e		TTH_OUTPUTH("&#235;");
+ <verbatim,notags>\> |
+ \>	TTH_OUTPUTH("&#62;");
+@@ -5381,7 +5374,6 @@
+ \\\'\\i{SP}*		TTH_OUTPUTH("&#237;");
+ \\\^i	|
+ \\\^\\i{SP}*		TTH_OUTPUTH("&#238;");
+-\"i |
+ \\\"i	|
+ \\\"{SP}*\\i{SP}*		TTH_OUTPUTH("&#239;");
+ \\\~n		TTH_OUTPUTH("&#241;");
+@@ -5390,7 +5382,6 @@
+ \\\^o		TTH_OUTPUTH("&#244;");
+ \\\o{SP}* 		TTH_OUTPUTH("&#248;");
+ \\\~o		TTH_OUTPUTH("&#245;");
+-\"o |
+ \\\"o      TTH_OUTPUTH("&#246;");
+ \\\=		TTH_OUTPUTH("&#175;");
+ \\pounds{SP}*	TTH_OUTPUTH("&#163;");
+@@ -5398,12 +5389,9 @@
+ \\\'u		TTH_OUTPUTH("&#250;");
+ \\\^u		TTH_OUTPUTH("&#251;");
+ \\\`u		TTH_OUTPUTH("&#249;");
+-\"u |
+ \\\"u	TTH_OUTPUTH("&#252;");
+ \\\'y		TTH_OUTPUTH("&#253;");
+-\"y |
+ \\\"y	TTH_OUTPUTH("&#255;");
+-\"s             TTH_OUTPUTH("&#223;");
+ \\3{SP}* |
+ \\ss{SP}*            TTH_DO_MACRO else{ TTH_OUTPUTH("&#223;");}
+   /* Polish character macros:*/
+@@ -5424,11 +5412,6 @@
+ \\\'[{]?z[}]?         TTH_OUTPUTH("&#378;");
+ \\\.[{]?z[}]?         TTH_OUTPUTH("&#380;");
+ 
+-\"\`            TTH_OUTPUTH(",,");
+-\"\'            TTH_OUTPUTH("''");
+-\"<             TTH_OUTPUTH("&#171;");
+-\">             TTH_OUTPUTH("&#187;");
+-\"\|
+  /* Convert TeX double quotes to single-character */
+ \'\'            |
+ \`\`             TTH_OUTPUTH("\"");
