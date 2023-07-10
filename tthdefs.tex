@@ -108,8 +108,7 @@
 \renewcommand{\customcss}[1]{%
   \begin{html}<span class="customcss" ref="#1"/>\end{html}}
 
-\newcommand{\specialterm}[2]{%
-  \begin{html}<span class="#1">\end{html}#2\begin{html}</span>\end{html}}
+\newcommand{\specialterm}[2]{\begin{html}<span class="#1">\end{html}#2\begin{html}</span>\end{html}}
 \newcommand{\xmlel}[1]{\specialterm{xmlel}{#1}}
 \newcommand{\vorent}[1]{\specialterm{vorent}{#1}}
 \newcommand{\ucd}[1]{{\sl #1}}
@@ -119,16 +118,14 @@
 
 \def\dquote{"}
 
-\newcommand{\todo}[2][None]{%
-  \begin{html}<span class="redaction">#2</span>\end{html}}
+\newcommand{\todo}[2][None]{\begin{html}<span class="redaction">#2</span>\end{html}}
 
 \newenvironment{SCfigure}{\begin{figure}}{\end{figure}}
 
-\newcommand{\ivoatex}{%
-  \special{html:<span class="ivoatex">IVOAT<sub>E</sub>X</span>}}
+\newcommand{\ivoatex}{\special{html:<span class="ivoatex">IVOAT<sub>E</sub>X</span>}}
 
 \newcommand{\auxiliaryurl}[1]{% don't use href, we need expansion
-  \special{html:<a href="}https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1\special{html:">}%
+\special{html:<a href="}https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1\special{html:">}%
 https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1%
 \special{html:</a>}}
 
