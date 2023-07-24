@@ -34,7 +34,7 @@
 #if defined (__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
 
 /* C99 says to define __STDC_LIMIT_MACROS before including stdint.h,
- * if you want the limit (max/min) macros for int types. 
+ * if you want the limit (max/min) macros for int types.
  */
 #ifndef __STDC_LIMIT_MACROS
 #define __STDC_LIMIT_MACROS 1
@@ -51,7 +51,7 @@ typedef uint32_t flex_uint32_t;
 typedef signed char flex_int8_t;
 typedef short int flex_int16_t;
 typedef int flex_int32_t;
-typedef unsigned char flex_uint8_t; 
+typedef unsigned char flex_uint8_t;
 typedef unsigned short int flex_uint16_t;
 typedef unsigned int flex_uint32_t;
 
@@ -162,10 +162,10 @@ extern FILE *yyin, *yyout;
 #define EOB_ACT_CONTINUE_SCAN 0
 #define EOB_ACT_END_OF_FILE 1
 #define EOB_ACT_LAST_MATCH 2
-    
+
     #define YY_LESS_LINENO(n)
     #define YY_LINENO_REWIND_TO(ptr)
-    
+
 /* Return all but the first "n" matched characters back to the input stream. */
 #define yyless(n) \
 	do \
@@ -14377,7 +14377,7 @@ Bit 16. 32768 Silence unknown command warnings.\n\
 #define GET_DIMEN {yy_push_state(lookforunit);yy_push_state(lookfornum);\
                    *argchar=0;}
 #define TTH_MAXDEPTH 30
-#define TTH_CHARLEN 500
+#define TTH_CHARLEN 5000
 #define TTH_DLEN 20000
 #define TTH_34DLEN 72000
 #define TTH_FONTLEN 200
@@ -14956,9 +14956,9 @@ extern int yywrap ( void );
 #endif
 
 #ifndef YY_NO_UNPUT
-    
+
     static void yyunput ( int c, char *buf_ptr  );
-    
+
 #endif
 
 #ifndef yytext_ptr
@@ -14981,13 +14981,13 @@ static int input ( void );
         static int yy_start_stack_ptr = 0;
         static int yy_start_stack_depth = 0;
         static int *yy_start_stack = NULL;
-    
+
     static void yy_push_state ( int _new_state );
-    
+
     static void yy_pop_state ( void );
-    
+
     static int yy_top_state ( void );
-    
+
 /* Amount of stuff to slurp up with each read. */
 #ifndef YY_READ_BUF_SIZE
 #ifdef __ia64__
@@ -15095,7 +15095,7 @@ YY_DECL
 	yy_state_type yy_current_state;
 	char *yy_cp, *yy_bp;
 	int yy_act;
-    
+
 	if ( !(yy_init) )
 		{
 		(yy_init) = 1;
@@ -15378,10 +15378,10 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 #define TTH_SYMENDN  (tth_unicode ? "" : "</span\n>")
 #define TTH_SYMPT(chr) (tth_unicode ? tth_symbol_point(chr) : chr)
 
-#define TTH_DISP1 ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n<table align=\"center\" cellspacing=\"0\"  cellpadding=\"2\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n<table border=\"1\" align=\"center\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" ) 
+#define TTH_DISP1 ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n<table align=\"center\" cellspacing=\"0\"  cellpadding=\"2\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n<table border=\"1\" align=\"center\"><tr><td nowrap=\"nowrap\" align=\"center\">\n" )
 /* DISPE for equalign etc. Old version.*/
-#define TTH_DISPE ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n" ) 
- /* New broken version 
+#define TTH_DISPE ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" width=\"%d%%\"><tr><td>\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\"><tr><td>\n" )
+ /* New broken version
    #define TTH_DISPE ((tth_debug < 2) ? "\n<br clear=\"all\" /><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"%d%%\">\n" : "\n<br clear=\"all\" /><table border=\"1\" width=\"%d%%\">\n" ) */
 
 #define TTH_DISP2 "</td></tr></table>\n</td></tr></table>\n"
@@ -15516,7 +15516,7 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 
 
 #define TTH_MATHS(chr) strcat(eqstr,TTH_SYMBOL);\
- strcat(eqstr,TTH_SYMPT(chr));   strcat(eqstr,TTH_SYMENDN); 
+ strcat(eqstr,TTH_SYMPT(chr));   strcat(eqstr,TTH_SYMENDN);
 #define TTH_MATHI(icr) chr1[0]=icr;TTH_MATHS(chr1);
 #define TTH_MATHC(chr) strcat(eqstr,chr);
 #define TTH_COMPLEX ( (strcspn(eqstr,"&+-/") < strlen(eqstr)) || (strstr(eqstr,"\\pm") != NULL) || (strstr(eqstr,"\\mp") != NULL))
@@ -15566,7 +15566,7 @@ int PUSHEDINTDEPTHS[INTMAX]={0};
 
  /* This was the old doctype. Reports are that on Windows gecko recognizes
     symbol fonts for a doctype of 40 but not 401. So keep to 40*/
-#define TTH_DOCTYPE4 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"\n           \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>" 
+#define TTH_DOCTYPE4 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\"\n           \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>"
 #define TTH_DOCTYPE41 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n        \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>"
 #define TTH_DOCXML "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n           \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">"
 #define TTH_DOCTYPE (tth_htmlstyle&2 ? TTH_DOCXML : TTH_DOCTYPE4 )
@@ -16832,11 +16832,11 @@ YY_RULE_SETUP
 case 163:
 YY_RULE_SETUP
 #line 1728 "tth.lex"
-{ 
-  if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);       /* Start new row */ 
+{
+  if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);       /* Start new row */
   if(tth_istyle&1)eqalignrow=eqalignrow+6*(levhgt[eqclose]-1)+TTH_HGT;else
     eqalignrow=eqalignrow+levhgt[eqclose];
-  levhgt[eqclose]=1; /* new */ 
+  levhgt[eqclose]=1; /* new */
   TTH_TEX_FN("{#1}\\tth_lefteq#tthdrop1",1);
 }
 	YY_BREAK
@@ -16877,7 +16877,7 @@ YY_RULE_SETUP
 #line 1754 "tth.lex"
 {
   if(tth_debug&2)fprintf(stderr,"end eqnarray, eqdepth=%d, eqclose=%d, tth_multinum=%d, eqalignlog=%d.\n",eqdepth,eqclose,tth_multinum,eqalignlog);
-  TTH_SCAN_STRING("}}\\tth_endeqnarray"); 
+  TTH_SCAN_STRING("}}\\tth_endeqnarray");
 }
 	YY_BREAK
 case 169:
@@ -16927,7 +16927,7 @@ case 178:
 /* rule 178 can match eol */
 YY_RULE_SETUP
 #line 1768 "tth.lex"
-TTH_INC_MULTI; 
+TTH_INC_MULTI;
 	YY_BREAK
 case 179:
 YY_RULE_SETUP
@@ -16955,16 +16955,16 @@ case 182:
 /* rule 182 can match eol */
 YY_RULE_SETUP
 #line 1782 "tth.lex"
-TTH_INC_MULTI;  
+TTH_INC_MULTI;
 	YY_BREAK
 case 183:
 /* rule 183 can match eol */
 YY_RULE_SETUP
 #line 1783 "tth.lex"
-{  
+{
   yyless(0);yy_pop_state();
   tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
-  if(eqaligncell && !tth_LaTeX && eqalignlog){ 
+  if(eqaligncell && !tth_LaTeX && eqalignlog){
     /* This ends the second cell of eqaligno. */
     strcat(eqstr,TTH_CELL_R);
   } else strcat(eqstr,TTH_EQA3);
@@ -16992,7 +16992,7 @@ case 186:
 YY_RULE_SETUP
 #line 1802 "tth.lex"
 {
-  yy_pop_state();  
+  yy_pop_state();
   chscratch=strstr(yytext,"multi");
   TTH_CCPY(argchar,chscratch+strcspn(chscratch,"{")+1);
   *(argchar+strcspn(argchar,"}"))=0;
@@ -17025,7 +17025,7 @@ YY_RULE_SETUP
   else{
     yyless(0);yy_pop_state();
     tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
-    if(eqaligncell && !tth_LaTeX && eqalignlog){ 
+    if(eqaligncell && !tth_LaTeX && eqalignlog){
       /* This ends the second cell of eqaligno. */
       strcat(eqstr,TTH_CELL_R);
     } else strcat(eqstr,TTH_EQA3);
@@ -17042,7 +17042,7 @@ YY_RULE_SETUP
 case 189:
 YY_RULE_SETUP
 #line 1842 "tth.lex"
-{ 
+{
   if(tth_debug&33) fprintf(stderr,"noalign in equation:\n");
   if(!eqalignrow) mkkey(eqstr,eqstrs,&eqdepth);
   if(tth_istyle&1)eqalignrow=eqalignrow+6*(levhgt[eqclose]-1)+TTH_HGT;else
@@ -17062,8 +17062,8 @@ case 192:
 /* rule 192 can match eol */
 YY_RULE_SETUP
 #line 1853 "tth.lex"
-{  
-  if(eqclose && (active[eqclose-1] || mtrx[eqclose-1])){ 
+{
+  if(eqclose && (active[eqclose-1] || mtrx[eqclose-1])){
     /* If this is really an array-type environment. */
     if(tth_debug&16)fprintf(stderr,
 	"Active tth_cr. yytext=%s eqclose=%d, active=%d\n",
@@ -17076,7 +17076,7 @@ YY_RULE_SETUP
     }else{
       /* Next line ensures \cr is equivalent to \nonumber\\ */
       if(strstr(yytext,"\\cr"))if(eqalignlog <= 100) eqalignlog=eqalignlog+100;
-      tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);  
+      tth_enclose(TTH_EQA1,eqstr,TTH_EQA2,eqstore);
     }
     if(tth_debug&16)fprintf(stderr,
    "TTH_CR, eqalignlog=%d, colspan=%d, envirchar=%s, tth_multinum=%d, tth_LaTeX=%d.\n",
@@ -17170,7 +17170,7 @@ case 196:
 case 197:
 YY_RULE_SETUP
 #line 1947 "tth.lex"
-{ 
+{
   TTH_TEXCLOSE else{
   do{
   if(tth_debug&16) {
@@ -17184,7 +17184,7 @@ YY_RULE_SETUP
   }
   if(tophgt[eqclose] != 0){ /* If fraction */
     if(tth_debug&16)fprintf(stderr,"Fraction closing.\n");
-    if(levhgt[eqclose] > 1 || (eqclose > tth_flev && TTH_COMPLEX)){ 
+    if(levhgt[eqclose] > 1 || (eqclose > tth_flev && TTH_COMPLEX)){
       /* If bottom contains a fraction or we are topped out. */
       /* Try bottom compression*/
       oa_removes=b_align(eqstr,tth_debug);
@@ -17195,10 +17195,10 @@ YY_RULE_SETUP
     tth_prefix(eqstrs[eqdepth-1],eqstr,eqstore);
     rmkey(eqstrs,&eqdepth);
     TTH_CLOSEGROUP;TTH_POP_CLOSING; /* put closing before cell end */
-    if(active[eqclose-1]!=30){ 
+    if(active[eqclose-1]!=30){
       /* CELL1/2 test for non-zero levdelim 0,+1 */
-      tth_enclose(TTH_CELL1,eqstr,TTH_CELL2,eqstore); 
-      if(eqclose <= tth_flev) yy_push_state(getsubp); 
+      tth_enclose(TTH_CELL1,eqstr,TTH_CELL2,eqstore);
+      if(eqclose <= tth_flev) yy_push_state(getsubp);
       if(tth_debug&16) fprintf(stderr,"Whole fraction:%s\n",eqstr);
     }
   }else {
@@ -17220,7 +17220,7 @@ YY_RULE_SETUP
   /* Cut spurious cells off end of eqchar and eqstr if necessary*/
   chscratch=eqchar+strlen(eqchar)-strlen(TTH_CELL3);
   if( (strstr(chscratch,TTH_CELL3)==chscratch) &&
-      (strstr(eqstr,TTH_CELL_START)==eqstr+strspn(eqstr," \n"))){ 
+      (strstr(eqstr,TTH_CELL_START)==eqstr+strspn(eqstr," \n"))){
     *chscratch=0;
   }
   chscratch=eqstr+strlen(eqstr)-strlen(TTH_CELL3);
@@ -17287,7 +17287,7 @@ YY_RULE_SETUP
 #line 2056 "tth.lex"
 {
   TTH_TEXCLOSE else{
-    if(tth_debug&2) fprintf(stderr,"Leaving inline eq, eqclose=%d, eqdepth=%d, tth_flev=%d, levhgt=%d, tophgt=%d\n",  
+    if(tth_debug&2) fprintf(stderr,"Leaving inline eq, eqclose=%d, eqdepth=%d, tth_flev=%d, levhgt=%d, tophgt=%d\n",
 	      eqclose,eqdepth,tth_flev,levhgt[eqclose],tophgt[eqclose]);
     TTH_CLOSEGROUP;TTH_POP_CLOSING;
     if(tth_inlinefrac && (levhgt[eqclose]+tophgt[eqclose]>1))
@@ -17316,9 +17316,9 @@ YY_RULE_SETUP
 case 200:
 YY_RULE_SETUP
 #line 2083 "tth.lex"
-{ 
+{
   if(strstr(yytext,"*")==NULL){    /* end{equation} */
-    if(tth_multinum < 2) { 
+    if(tth_multinum < 2) {
       TTH_SCAN_STRING("}\\tth_numbereq");
     }else {
       /* end of equation which needs to unincrement*/
@@ -17374,7 +17374,7 @@ YY_RULE_SETUP
       }
     }
     if(tth_debug&2) fprintf(stderr,
-       "Leaving display eq, eqclose=%d, eqdepth=%d, tth_flev=%d\n",  
+       "Leaving display eq, eqclose=%d, eqdepth=%d, tth_flev=%d\n",
          eqclose,eqdepth,tth_flev);
     if(eqdepth==1){
       rmkey(eqstrs,&eqdepth);/*eqdepth--;*/
@@ -17383,7 +17383,7 @@ YY_RULE_SETUP
    "**** Error: Fatal Abnormal eqdepth %d on display equation exit, line %d\n",
 	      eqdepth,tth_num_lines);TTH_EXIT(2);
     }
-    if(eqclose > 0) { 
+    if(eqclose > 0) {
       fprintf(stderr,
     "**** Error: Fatal Abnormal eqclose %d on Display Equation End, line %d\n",
 	      eqclose,tth_num_lines);TTH_EXIT(3);
@@ -17407,11 +17407,11 @@ YY_RULE_SETUP
 #line 2150 "tth.lex"
 {
   if(active[eqclose]){ /* reembrace to protect active closure */
-    TTH_INC_MULTI; 
+    TTH_INC_MULTI;
     sprintf(scratchstring,"{%s}",yytext);
     TTH_SCAN_STRING(scratchstring);
   }else  if((eqclose > tth_flev || !displaystyle)){
-    TTH_INC_MULTI; 
+    TTH_INC_MULTI;
     chscratch=yytext+strspn(yytext,"${ \t\n");
     chs2=strstr(chscratch,"\\over")+5;
     sprintf(scratchstring,"<sup>%c</sup>/<sub>%c</sub>",
@@ -17431,7 +17431,7 @@ case 208:
 YY_RULE_SETUP
 #line 2171 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   yyless(strspn(yytext," \t\r\n"));
 }
 	YY_BREAK
@@ -17440,7 +17440,7 @@ case 209:
 YY_RULE_SETUP
 #line 2175 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   if(tth_debug&16)fprintf(stderr,
 	  "Over Close Group, depth=%d, eqclose=%d, levhgt=%d\n",
 	  eqdepth,eqclose,levhgt[eqclose]);
@@ -17458,14 +17458,14 @@ YY_RULE_SETUP
   mkkey(eqstr,eqstrs,&eqdepth);
   *eqstr=0;
   tophgt[eqclose]=levhgt[eqclose]+1;
-  levhgt[eqclose]=1; 
+  levhgt[eqclose]=1;
   if(strstr(yytext,"choose")){
     strcat(levdelim[eqclose],"(");
     tth_push_depth--;
     TTH_PRETEXCLOSE("\\tth_chooseclose");
     tth_push_depth++;
   }
- } 
+ }
 	YY_BREAK
 case 210:
 YY_RULE_SETUP
@@ -17480,7 +17480,7 @@ strcpy(levdelim[eqclose+1],")");
 case 211:
 YY_RULE_SETUP
 #line 2210 "tth.lex"
-TTH_MATHI(162); 
+TTH_MATHI(162);
 	YY_BREAK
 case 212:
 YY_RULE_SETUP
@@ -17504,7 +17504,7 @@ case 214:
 YY_RULE_SETUP
 #line 2220 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_SCAN_STRING("\\begin{tabular}");
 }
 	YY_BREAK
@@ -17516,7 +17516,7 @@ case 216:
 YY_RULE_SETUP
 #line 2225 "tth.lex"
 { /*border not really supported*/
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_HAL_PUSH;*halstring=0;
   if(strstr(yytext,"eq") != NULL) eqalignlog++;/*make both levels 1*/
   TTH_EQA_PUSH;
@@ -17581,7 +17581,7 @@ YY_RULE_SETUP
   TTH_TEX_FN("\\left(\\matrix{#1}\\right)#tthdrop1",1);
 }
 	YY_BREAK
-/*  textboxes. Because of problems as subscript, removed this to builtins. 
+/*  textboxes. Because of problems as subscript, removed this to builtins.
      <equation,exptokarg>\\textrm    |
      but this does not generally seem to be a good plan.
      But the approach below breaks with unenclosed subscript texts.
@@ -17651,7 +17651,7 @@ YY_RULE_SETUP
   if(tth_debug&2)fprintf(stderr,
     "Start textbox. eqclose %d. push_depth %d. Line %d\n"
 			 ,eqclose,tth_push_depth,tth_num_lines);
-  if(!displaystyle) yy_push_state(textbox);  
+  if(!displaystyle) yy_push_state(textbox);
   TTH_SWAP(scratchstring);
   /* This had to be moved into tth_tbone */
   /*TTH_PRETEXCLOSE("\\tth_boxclose");*/
@@ -17664,9 +17664,9 @@ YY_RULE_SETUP
   if(tth_debug&2)fprintf(stderr,
       "Start textbox exptokarg. Displaystyle %d. eqclose %d, push_depth %d, Line %d\n"
 			 ,displaystyle,eqclose,tth_push_depth,tth_num_lines);
-  yy_pop_state(); 
+  yy_pop_state();
   if(!displaystyle)yy_push_state(textbox);
-  yy_push_state(exptokarg); 
+  yy_push_state(exptokarg);
   TTH_SWAP(scratchstring);
 }
 	YY_BREAK
@@ -17708,7 +17708,7 @@ YY_RULE_SETUP
   }else if(displaystyle==2){
     if(!strstr(tth_font_open[tth_push_depth],TTH_ITAL1)){
       strcat(tth_font_open[tth_push_depth],tth_font_open[0]);
-      strcat(tth_font_close[tth_push_depth],tth_font_close[0]);   
+      strcat(tth_font_close[tth_push_depth],tth_font_close[0]);
     }
     displaystyle++;
   }else if(displaystyle==3){ /* End enclosure inserted. */
@@ -17719,7 +17719,7 @@ YY_RULE_SETUP
     if(tth_debug&2) fprintf(stderr,"Inline inside box.\n");
     if(!strstr(tth_font_open[tth_push_depth],TTH_ITAL1)){
       strcat(tth_font_open[tth_push_depth],tth_font_open[0]);
-      strcat(tth_font_close[tth_push_depth],tth_font_close[0]); 
+      strcat(tth_font_close[tth_push_depth],tth_font_close[0]);
     }
   }else{
     TTH_SCAN_STRING("}\\tth_endinline");
@@ -17752,7 +17752,7 @@ YY_RULE_SETUP
 #line 2371 "tth.lex"
 TTH_MATHS("e");
 	YY_BREAK
-/* <equation>\\varepsilon{SP}*	TTH_MATHS("e"); */ 
+/* <equation>\\varepsilon{SP}*	TTH_MATHS("e"); */
 case 244:
 YY_RULE_SETUP
 #line 2373 "tth.lex"
@@ -17762,7 +17762,7 @@ YY_RULE_SETUP
   }else{
     TTH_MATHS("e");
   }
-}			  
+}			
 	YY_BREAK
 case 245:
 YY_RULE_SETUP
@@ -17952,12 +17952,12 @@ TTH_MATHI(192);
 case 282:
 YY_RULE_SETUP
 #line 2418 "tth.lex"
-TTH_MATHS("i"); 
+TTH_MATHS("i");
 	YY_BREAK
 case 283:
 YY_RULE_SETUP
 #line 2419 "tth.lex"
-TTH_MATHC("j"); 
+TTH_MATHC("j");
 	YY_BREAK
 case 284:
 YY_RULE_SETUP
@@ -18091,7 +18091,7 @@ case 313:
 case 314:
 YY_RULE_SETUP
 #line 2450 "tth.lex"
-TTH_MATHC("\\"); 
+TTH_MATHC("\\");
 	YY_BREAK
 case 315:
 YY_RULE_SETUP
@@ -18137,7 +18137,7 @@ TTH_MATHS("-");
 case 323:
 YY_RULE_SETUP
 #line 2461 "tth.lex"
-TTH_MATHC("T"); 
+TTH_MATHC("T");
 	YY_BREAK
 case 324:
 #line 2463 "tth.lex"
@@ -18154,7 +18154,7 @@ TTH_MATHI(176);
 case 327:
 YY_RULE_SETUP
 #line 2465 "tth.lex"
-TTH_MATHC("&#126;"); 
+TTH_MATHC("&#126;");
 	YY_BREAK
 case 328:
 YY_RULE_SETUP
@@ -18215,7 +18215,7 @@ TTH_MATHI(183);
 case 341:
 YY_RULE_SETUP
 #line 2479 "tth.lex"
-TTH_MATHC("&#183;"); 
+TTH_MATHC("&#183;");
 	YY_BREAK
 /*<equation>\\cdot	TTH_MATHI(215);*/
 case 342:
@@ -18279,7 +18279,7 @@ YY_RULE_SETUP
 {
   if(eqclose <= tth_flev-1 && displaystyle){
     /*If we end with a CELL3, cut it off. */
-    if( ((jscratch=strlen(eqstr)) >= (js2=strlen(TTH_CELL3))) && 
+    if( ((jscratch=strlen(eqstr)) >= (js2=strlen(TTH_CELL3))) &&
 	strcmp(eqstr+jscratch-js2,TTH_CELL3) == 0){
       *(eqstr+jscratch-js2)=0;
     }
@@ -18418,18 +18418,18 @@ TTH_MATHI(184);
 case 377:
 YY_RULE_SETUP
 #line 2551 "tth.lex"
-TTH_MATHC("&times;"); 
+TTH_MATHC("&times;");
 	YY_BREAK
 /*<equation>\\times	TTH_MATHI(180);*/
 case 378:
 YY_RULE_SETUP
 #line 2553 "tth.lex"
-TTH_MATHC(" &lt;~"); 
+TTH_MATHC(" &lt;~");
 	YY_BREAK
 case 379:
 YY_RULE_SETUP
 #line 2554 "tth.lex"
-TTH_MATHC(" &gt;~"); 
+TTH_MATHC(" &gt;~");
 	YY_BREAK
 case 380:
 YY_RULE_SETUP
@@ -18691,47 +18691,47 @@ TTH_OUTPUT(TTH_DDAG);
 case 438:
 YY_RULE_SETUP
 #line 2618 "tth.lex"
-TTH_MATHC("arccos");  
+TTH_MATHC("arccos");
 	YY_BREAK
 case 439:
 YY_RULE_SETUP
 #line 2619 "tth.lex"
-TTH_MATHC("arcsin");  
+TTH_MATHC("arcsin");
 	YY_BREAK
 case 440:
 YY_RULE_SETUP
 #line 2620 "tth.lex"
-TTH_MATHC("arctan");  
+TTH_MATHC("arctan");
 	YY_BREAK
 case 441:
 YY_RULE_SETUP
 #line 2621 "tth.lex"
-TTH_MATHC("arg");  
+TTH_MATHC("arg");
 	YY_BREAK
 case 442:
 YY_RULE_SETUP
 #line 2622 "tth.lex"
-TTH_MATHC("cos");  
+TTH_MATHC("cos");
 	YY_BREAK
 case 443:
 YY_RULE_SETUP
 #line 2623 "tth.lex"
-TTH_MATHC("cosh");  
+TTH_MATHC("cosh");
 	YY_BREAK
 case 444:
 YY_RULE_SETUP
 #line 2624 "tth.lex"
-TTH_MATHC("cot");  
+TTH_MATHC("cot");
 	YY_BREAK
 case 445:
 YY_RULE_SETUP
 #line 2625 "tth.lex"
-TTH_MATHC("coth");  
+TTH_MATHC("coth");
 	YY_BREAK
 case 446:
 YY_RULE_SETUP
 #line 2626 "tth.lex"
-TTH_MATHC("csc");  
+TTH_MATHC("csc");
 	YY_BREAK
 /* <equation>\\deg{SP}*        TTH_MATHC("&deg;");  Incorrect TeX */
 case 447:
@@ -18742,62 +18742,62 @@ TTH_MATHC("deg");
 case 448:
 YY_RULE_SETUP
 #line 2629 "tth.lex"
-TTH_MATHC("dim");  
+TTH_MATHC("dim");
 	YY_BREAK
 case 449:
 YY_RULE_SETUP
 #line 2630 "tth.lex"
-TTH_MATHC("exp");  
+TTH_MATHC("exp");
 	YY_BREAK
 case 450:
 YY_RULE_SETUP
 #line 2631 "tth.lex"
-TTH_MATHC("hom");  
+TTH_MATHC("hom");
 	YY_BREAK
 case 451:
 YY_RULE_SETUP
 #line 2632 "tth.lex"
-TTH_MATHC("ker");  
+TTH_MATHC("ker");
 	YY_BREAK
 case 452:
 YY_RULE_SETUP
 #line 2633 "tth.lex"
-TTH_MATHC("lg");  
+TTH_MATHC("lg");
 	YY_BREAK
 case 453:
 YY_RULE_SETUP
 #line 2634 "tth.lex"
-TTH_MATHC("ln");  
+TTH_MATHC("ln");
 	YY_BREAK
 case 454:
 YY_RULE_SETUP
 #line 2635 "tth.lex"
-TTH_MATHC("log");  
+TTH_MATHC("log");
 	YY_BREAK
 case 455:
 YY_RULE_SETUP
 #line 2636 "tth.lex"
-TTH_MATHC("sec");  
+TTH_MATHC("sec");
 	YY_BREAK
 case 456:
 YY_RULE_SETUP
 #line 2637 "tth.lex"
-TTH_MATHC("sin");  
+TTH_MATHC("sin");
 	YY_BREAK
 case 457:
 YY_RULE_SETUP
 #line 2638 "tth.lex"
-TTH_MATHC("sinh");  
+TTH_MATHC("sinh");
 	YY_BREAK
 case 458:
 YY_RULE_SETUP
 #line 2639 "tth.lex"
-TTH_MATHC("tan");   
+TTH_MATHC("tan");
 	YY_BREAK
 case 459:
 YY_RULE_SETUP
 #line 2640 "tth.lex"
-TTH_MATHC("tanh");  
+TTH_MATHC("tanh");
 	YY_BREAK
 case 460:
 #line 2643 "tth.lex"
@@ -18844,7 +18844,7 @@ YY_RULE_SETUP
  if(eqclose > tth_flev-1 || !displaystyle ){
    unput('{');
  }else{
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   strcat(eqstr,TTH_CELL3);
   mkkey(eqstr,eqstrs,&eqdepth);
   eqclose++;
@@ -18858,7 +18858,7 @@ YY_RULE_SETUP
     strcpy(eqstr,TTH_OBR);
   }else if(*(yytext+1) == 'u'){
     TTH_CCPY(closing,TTH_OBR);
-    strcpy(eqstr,TTH_OBRB); 
+    strcpy(eqstr,TTH_OBRB);
   }else {
     strcpy(eqstr,"");
     unput(' ');
@@ -18947,7 +18947,7 @@ YY_RULE_SETUP
     case 'h':      TTH_OUTPUT("<span class=\"overacc1\">");TTH_MATHI(217);
       TTH_OUTPUT("</span>");break;
     case 't':TTH_OUTPUT("<span class=\"overacc1\">~</span>");break;
-    case 'o': case 'b': case 's': 
+    case 'o': case 'b': case 's':
       TTH_OUTPUT("<span class=\"overacc2\">");TTH_MATHI(190);
       TTH_OUTPUT("</span>");break;
     case 'd':TTH_OUTPUT("<span class=\"overacc1\">&#183; </span>");break;
@@ -18974,7 +18974,7 @@ YY_RULE_SETUP
       case 'q': /* output moved above to fix inline */ break;
       default : fprintf(stderr,"Overaccent error:%s,%d\n",yytext,*(yytext+1));
       }
-    }else{ /* Display case*/ 
+    }else{ /* Display case*/
       TTH_CCPY(closing,TTH_OA3);
       switch(*(yytext+1)){
       case 'o': strcpy(eqstr,TTH_DIV);
@@ -18982,11 +18982,11 @@ YY_RULE_SETUP
 	break;
       case 'b': case 's': TTH_OUTPUT(TTH_OA1);
 	TTH_OUTPUT((tth_istyle&1 ? "-":"_"));TTH_OUTPUT(TTH_OA2);break;
-      case 'd': TTH_OUTPUT(TTH_OA1); 
+      case 'd': TTH_OUTPUT(TTH_OA1);
 	if(tth_istyle&1) {TTH_MATHI(215);} else {TTH_OUTPUT(".");}
 	TTH_OUTPUT(TTH_OA2);break;
       case '2': TTH_OUTPUT(TTH_OA1);
-	if(tth_istyle&1) {TTH_MATHI(215);TTH_MATHI(215);} else 
+	if(tth_istyle&1) {TTH_MATHI(215);TTH_MATHI(215);} else
 	  {TTH_OUTPUT("..");} TTH_OUTPUT(TTH_OA2);break;
 	  /* case '2': strcpy(eqstr,"..<br />");break; */
       case 't':TTH_OUTPUT(TTH_OA1);TTH_OUTPUT("~");strcat(eqstr,TTH_OA2);break;
@@ -19079,7 +19079,7 @@ YY_RULE_SETUP
 	TTH_OUTPUT(scratchstring);
 	TTH_MATHC("{");
 	TTH_PUSH_CLOSING;
-	/* TTH_CCPY(closing,"}"); Came in wrong order after fraction. 
+	/* TTH_CCPY(closing,"}"); Came in wrong order after fraction.
 	 so fixed in the dupstore call.*/
 	if(tth_debug&2) {
 	  fprintf(stderr,
@@ -19150,7 +19150,7 @@ case 496:
 YY_RULE_SETUP
 #line 2910 "tth.lex"
 {  /* overline needs leading WSP */
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   strcpy(dupstore,yytext);
   *(dupstore+strcspn(dupstore," \t\r\n"))=0;
   /* yy_push_state(embracetok); OLD */
@@ -19192,7 +19192,7 @@ case 499:
 YY_RULE_SETUP
 #line 2938 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_SCAN_STRING("\\left.\\tth_size2\\right");
  }
 	YY_BREAK
@@ -19201,7 +19201,7 @@ case 500:
 YY_RULE_SETUP
 #line 2942 "tth.lex"
 {
-  TTH_INC_MULTI; 
+  TTH_INC_MULTI;
   TTH_SCAN_STRING("\\left.\\tth_size3\\right");
  }
 	YY_BREAK
@@ -19300,7 +19300,7 @@ case 516:
 case 517:
 YY_RULE_SETUP
 #line 2987 "tth.lex"
-{ 
+{
   if(*(yytext) == '\\'){ chscratch=yytext+1;} else {chscratch=yytext;}
   if(*chscratch=='&')chscratch="&amp;";
   /* If the font has been changed, use it for non-letters too */
@@ -19367,7 +19367,7 @@ YY_RULE_SETUP
 #line 3035 "tth.lex"
 {
  TTH_INC_MULTI;
-} 
+}
 	YY_BREAK
 case 523:
 YY_RULE_SETUP
@@ -19449,14 +19449,14 @@ YY_RULE_SETUP
     oa_removes=0;
     strcat(eqstr,"</td><td nowrap=\"nowrap\">");
     *eqlimited=0;
-  }  
+  }
  }
 	YY_BREAK
 /* New big, left, right, delimiters section */
 case 530:
 YY_RULE_SETUP
 #line 3096 "tth.lex"
-{ 
+{
   yy_pop_state();strcpy(levdelim[eqclose+1],"{");unput(*scratchstring);}
 	YY_BREAK
 case 531:
@@ -27065,7 +27065,7 @@ static int yy_get_next_buffer (void)
 {
 	yy_state_type yy_current_state;
 	char *yy_cp;
-    
+
 	yy_current_state = (yy_start);
 
 	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
@@ -27121,7 +27121,7 @@ static int yy_get_next_buffer (void)
     static void yyunput (int c, char * yy_bp )
 {
 	char *yy_cp;
-    
+
     yy_cp = (yy_c_buf_p);
 
 	/* undo effects of setting up yytext */
@@ -27166,7 +27166,7 @@ static int yy_get_next_buffer (void)
 
 {
 	int c;
-    
+
 	*(yy_c_buf_p) = (yy_hold_char);
 
 	if ( *(yy_c_buf_p) == YY_END_OF_BUFFER_CHAR )
@@ -27233,12 +27233,12 @@ static int yy_get_next_buffer (void)
 
 /** Immediately switch to a different input stream.
  * @param input_file A readable stream.
- * 
+ *
  * @note This function does not reset the start condition to @c INITIAL .
  */
     void yyrestart  (FILE * input_file )
 {
-    
+
 	if ( ! YY_CURRENT_BUFFER ){
         yyensure_buffer_stack ();
 		YY_CURRENT_BUFFER_LVALUE =
@@ -27251,11 +27251,11 @@ static int yy_get_next_buffer (void)
 
 /** Switch to a different input buffer.
  * @param new_buffer The new input buffer.
- * 
+ *
  */
     void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )
 {
-    
+
 	/* TODO. We should be able to replace this entire function body
 	 * with
 	 *		yypop_buffer_state();
@@ -27295,13 +27295,13 @@ static void yy_load_buffer_state  (void)
 /** Allocate and initialize an input buffer state.
  * @param file A readable stream.
  * @param size The character buffer size in bytes. When in doubt, use @c YY_BUF_SIZE.
- * 
+ *
  * @return the allocated buffer state.
  */
     YY_BUFFER_STATE yy_create_buffer  (FILE * file, int  size )
 {
 	YY_BUFFER_STATE b;
-    
+
 	b = (YY_BUFFER_STATE) yyalloc( sizeof( struct yy_buffer_state )  );
 	if ( ! b )
 		YY_FATAL_ERROR( "out of dynamic memory in yy_create_buffer()" );
@@ -27324,11 +27324,11 @@ static void yy_load_buffer_state  (void)
 
 /** Destroy the buffer.
  * @param b a buffer created with yy_create_buffer()
- * 
+ *
  */
     void yy_delete_buffer (YY_BUFFER_STATE  b )
 {
-    
+
 	if ( ! b )
 		return;
 
@@ -27349,7 +27349,7 @@ static void yy_load_buffer_state  (void)
 
 {
 	int oerrno = errno;
-    
+
 	yy_flush_buffer( b );
 
 	b->yy_input_file = file;
@@ -27371,7 +27371,7 @@ static void yy_load_buffer_state  (void)
 
 /** Discard all buffered characters. On the next scan, YY_INPUT will be called.
  * @param b the buffer state to be flushed, usually @c YY_CURRENT_BUFFER.
- * 
+ *
  */
     void yy_flush_buffer (YY_BUFFER_STATE  b )
 {
@@ -27400,7 +27400,7 @@ static void yy_load_buffer_state  (void)
  *  the current state. This function will allocate the stack
  *  if necessary.
  *  @param new_buffer The new state.
- *  
+ *
  */
 void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
 {
@@ -27430,7 +27430,7 @@ void yypush_buffer_state (YY_BUFFER_STATE new_buffer )
 
 /** Removes and deletes the top of the stack, if present.
  *  The next element becomes the new top.
- *  
+ *
  */
 void yypop_buffer_state (void)
 {
@@ -27454,7 +27454,7 @@ void yypop_buffer_state (void)
 static void yyensure_buffer_stack (void)
 {
 	yy_size_t num_to_alloc;
-    
+
 	if (!(yy_buffer_stack)) {
 
 		/* First allocation is just for 2 elements, since we don't know if this
@@ -27497,13 +27497,13 @@ static void yyensure_buffer_stack (void)
 /** Setup the input buffer state to scan directly from a user-specified character buffer.
  * @param base the character buffer
  * @param size the size in bytes of the character buffer
- * 
+ *
  * @return the newly allocated buffer state object.
  */
 YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )
 {
 	YY_BUFFER_STATE b;
-    
+
 	if ( size < 2 ||
 	     base[size-2] != YY_END_OF_BUFFER_CHAR ||
 	     base[size-1] != YY_END_OF_BUFFER_CHAR )
@@ -27532,14 +27532,14 @@ YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_size_t  size )
 /** Setup the input buffer state to scan a string. The next call to yylex() will
  * scan from a @e copy of @a str.
  * @param yystr a NUL-terminated string to scan
- * 
+ *
  * @return the newly allocated buffer state object.
  * @note If you want to scan bytes that may contain NUL values, then use
  *       yy_scan_bytes() instead.
  */
 YY_BUFFER_STATE yy_scan_string (const char * yystr )
 {
-    
+
 	return yy_scan_bytes( yystr, (int) strlen(yystr) );
 }
 
@@ -27547,7 +27547,7 @@ YY_BUFFER_STATE yy_scan_string (const char * yystr )
  * scan from a @e copy of @a bytes.
  * @param yybytes the byte buffer to scan
  * @param _yybytes_len the number of bytes in the buffer pointed to by @a bytes.
- * 
+ *
  * @return the newly allocated buffer state object.
  */
 YY_BUFFER_STATE yy_scan_bytes  (const char * yybytes, int  _yybytes_len )
@@ -27556,7 +27556,7 @@ YY_BUFFER_STATE yy_scan_bytes  (const char * yybytes, int  _yybytes_len )
 	char *buf;
 	yy_size_t n;
 	int i;
-    
+
 	/* Get memory for full buffer, including space for trailing EOB's. */
 	n = (yy_size_t) (_yybytes_len + 2);
 	buf = (char *) yyalloc( n  );
@@ -27648,16 +27648,16 @@ static void yynoreturn yy_fatal_error (const char* msg )
 /* Accessor  methods (get/set functions) to struct members. */
 
 /** Get the current line number.
- * 
+ *
  */
 int yyget_lineno  (void)
 {
-    
+
     return yylineno;
 }
 
 /** Get the input stream.
- * 
+ *
  */
 FILE *yyget_in  (void)
 {
@@ -27665,7 +27665,7 @@ FILE *yyget_in  (void)
 }
 
 /** Get the output stream.
- * 
+ *
  */
 FILE *yyget_out  (void)
 {
@@ -27673,7 +27673,7 @@ FILE *yyget_out  (void)
 }
 
 /** Get the length of the current token.
- * 
+ *
  */
 int yyget_leng  (void)
 {
@@ -27681,7 +27681,7 @@ int yyget_leng  (void)
 }
 
 /** Get the current token.
- * 
+ *
  */
 
 char *yyget_text  (void)
@@ -27691,18 +27691,18 @@ char *yyget_text  (void)
 
 /** Set the current line number.
  * @param _line_number line number
- * 
+ *
  */
 void yyset_lineno (int  _line_number )
 {
-    
+
     yylineno = _line_number;
 }
 
 /** Set the input stream. This does not discard the current
  * input buffer.
  * @param _in_str A readable stream.
- * 
+ *
  * @see yy_switch_to_buffer
  */
 void yyset_in (FILE *  _in_str )
@@ -27760,7 +27760,7 @@ static int yy_init_globals (void)
 /* yylex_destroy is for both reentrant and non-reentrant scanners. */
 int yylex_destroy  (void)
 {
-    
+
     /* Pop the buffer stack, destroying each element. */
 	while(YY_CURRENT_BUFFER){
 		yy_delete_buffer( YY_CURRENT_BUFFER  );

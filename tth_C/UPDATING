@@ -31,3 +31,9 @@ While we need this, the procedure to update our tth is:
 	cp tth.c <path-to-ivoatex>/tth_C/
 
 (and then commit)
+
+Note 2023-07: Upstream still has TTH_CHARLEN 500, which is trouble on
+certain compilers with large bibliography items
+(https://github.com/ivoa-std/ivoatex/pull/104).  *If* you put in new code
+from upstream, until the relevant buffer overflows are fixed, manually bump
+this to 5000.
