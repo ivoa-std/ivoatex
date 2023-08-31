@@ -123,7 +123,7 @@ def cmd_vocterms(vocabulary_name):
         ).json()["terms"]
     identifiers = [key for key, props in terms.items()
         if "deprecated" not in props]
-    return ",\n".join(r"\textsl{{{}}}".format(id)
+    return ",\n".join(r"\textsl{{{}}}".format(escape_for_TeX(id))
         for id in sorted(identifiers, key=lambda t: t.lower()))
 
 
