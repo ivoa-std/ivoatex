@@ -381,4 +381,5 @@
 
 \makeatother
 
+\input aas_macros.tex
 \input ivoatexmeta.tex
