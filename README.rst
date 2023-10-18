@@ -23,7 +23,7 @@ preferably via ``git submodule`` (or ``svn:externals``, though support
 for that is waning quickly as ivoaTeX evolves).  See ivoatexDoc_ for
 more information on how this is intended to work.
 
-.. _ivoatexDoc: http://ivoa.net/documents/Notes/IVOATex/
+.. _ivoatexDoc: http://ivoa.net/documents/Notes/IVOATexDoc/
 
 We occasionally make downloadable releases of ivoatex on
 http://ivoatex.g-vo.org/.
@@ -95,7 +95,7 @@ Documentation
 Documentation on ivoatex, including a chapter on a quick start, is
 given in the IVOA note `The IVOATeX Document Preparation System`_.
 
-.. _The IVOATeX Document Preparation System: https://ivoa.net/documents/Notes/IVOATex/
+.. _The IVOATeX Document Preparation System: https://ivoa.net/documents/Notes/IVOATexDoc/
 
 
 Trouble?
