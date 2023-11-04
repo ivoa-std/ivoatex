@@ -1,0 +1,25 @@
+% This is a test file for the URL/DOI handling in ivoa.bst.
+%
+% When run through BibTeX, this aux file should produce references for the
+% following citations, in this order
+
+\bibdata{ivoabib}
+\bibstyle{ivoa}
+
+% DOI with no prefix
+\citation{2014A+C.....7...27D}
+
+% std:FITS has DOI but no URL
+\citation{std:FITS}
+
+% URL but no DOI
+\citation{std:CSV}
+
+% DOI with https prefix and URL
+\citation{std:DataCite31}
+
+% DOI with matching URL
+\citation{Wilkinson2016}
+
+% The result of `grep -Ei '(harvarditem|doi|url)' test-ivoa-bst-urls.bbl`
+% should be as in test-ivoa-bst-urls.good
