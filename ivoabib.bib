@@ -4,18 +4,27 @@ did not contain DOIs or bibcodes, and were otherwise so undesirable that
 we purged them 2020-11.
 
 If you have documents using these references, please update them, using the
-version-sharp, ADS-connected records from docrepo.bib.  See also 
+version-sharp, ADS-connected records from docrepo.bib.  See also
 ivoatexDoc 1.2, sect. 3.3.2.
 
+@Misc{std:RFC4122,
+  author =       {P. Leach and M. Mealling and R. Salz},
+  title =        {A {Universally Unique IDentifier (UUID)} {URN} Namespace},
+  howpublished = {RFC 4122},
+  organization = {{IETF}},
+  url =          {https://www.ietf.org/rfc/rfc4122.txt},
+  month =        jul,
+  year =         2005
+}
 
 @Misc{std:FITS,
-   author = {{Hanisch}, R.~J. and {Farris}, A. and {Greisen}, E.~W. and {Pence}, 
-W.~D. and 
-    {Schlesinger}, B.~M. and {Teuben}, P.~J. and {Thompson}, R.~W. and 
+   author = {{Hanisch}, R.~J. and {Farris}, A. and {Greisen}, E.~W. and {Pence},
+W.~D. and
+    {Schlesinger}, B.~M. and {Teuben}, P.~J. and {Thompson}, R.~W. and
     {Warnock}, III, A.},
     title = "{Definition of the Flexible Image Transport System (FITS)}",
   journal = {\aap},
- keywords = {INSTRUMENTATION: MISCELLANEOUS, METHODS: MISCELLANEOUS, TECHNIQUES: 
+ keywords = {INSTRUMENTATION: MISCELLANEOUS, METHODS: MISCELLANEOUS, TECHNIQUES:
 MISCELLANEOUS, ASTRONOMICAL DATABASES: MISCELLANEOUS},
      year = 2001,
     month = sep,
@@ -54,6 +63,16 @@ MISCELLANEOUS, ASTRONOMICAL DATABASES: MISCELLANEOUS},
   url={{http://ivoa.net/documents/Notes/UWSRegExt}}
 }
 
+@misc{note:edumatters,
+  author={Demleitner, M. and Molinaro, M. and Ramella, M. and Iafrate, G. and Heinl, H.},
+  editor = {Demleitner, M.},
+  title = {Educational Resources in the Virtual Observatory},
+  version = {1.0},
+  howpublished = {{IVOA} Note 11 April 2018},
+  month=apr,
+  year=2018,
+  url={{http://ivoa.net/documents/Notes/EDU/}}
+}
 
 % [3] R. Fielding, http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 @PhdThesis{fielding00,
@@ -84,13 +103,15 @@ MISCELLANEOUS, ASTRONOMICAL DATABASES: MISCELLANEOUS},
   url =          {http://www.w3.org/TR/1999/REC-xpath-19991116},
 }
 
-
 %[8] WADL, https://wadl.dev.java.net/
-@webpage{wadl,
-  url = {https://wadl.dev.java.net/},
-  key = {WADL},
-  title = {WADL}
+@Misc{wadl,
+	year = 2009,
+  url = {https://wadl.java.net/},
+  author = {{WADL maintainers}},
+  title = {Web Application Description Language {WADL}},
+  howpublished = {Web page, retrieved 2009-08-31}
 }
+
 %[9] RESTful Web Services, L. Richardson and S. Ruby, O’Reilly
 @Book{richardson07,
   author =       {Leonard Richardson and Sam Ruby},
@@ -121,11 +142,12 @@ MISCELLANEOUS, ASTRONOMICAL DATABASES: MISCELLANEOUS},
 }
 
 
-@webpage{IVOAWIKI,
+@Misc{IVOAWIKI,
   url = {http://wiki.ivoa.net/twiki/bin/view/IVOA/WebHome},
-  key = {http://wiki.ivoa.net},
-  title = {{IVOA} Wiki}
-
+  year = 2023,
+  author = {{IVOA}},
+  title = {{IVOA} Wiki},
+	howpublished = {Web page, retrieved 2023-06-27}
 }
 
 @misc{std:DUBLINCORE,
@@ -201,35 +223,31 @@ Version 1.00},
 	key = {Open Archives Initiative},
 	author =       {Carl Lagoze and Herbert Van de Sompel and Michael Nelson
 		and Simeon Warner},
-	title =        {The Open Archives Initiative Protocol for Metadata 
+	title =        {The Open Archives Initiative Protocol for Metadata
 		Harvesting, Version 2.0},
 	year =         {2002},
 	url =          {http://www.openarchives.org/OAI/openarchivesprotocol.html}}
 
-@webpage{sextractor,
+@Misc{sextractor,
+	author={Emmanuel Bertin},
   url = {http://astromatic.iap.fr/software/sextractor/},
-  key = {http://astromatic.iap.fr/software/sextractor/},
-  title = {SExtractor}
+  title = {SExtractor},
+	howpublished = {Web page, retrieved 2023-06-27}
   }
-  
+
 @Misc{std:SOAP,
   author= {Don Box and
-David Ehnebuske and 
-Gopal Kakivaya and 
-Andrew Layman and 
+David Ehnebuske and
+Gopal Kakivaya and
+Andrew Layman and
 Noah Mendelsohn and
 Henrik Frystyk Nielsen and
-Satish Thatte and 
+Satish Thatte and
 Dave Winer
   },
   title={Simple Object Access Protocol (SOAP) 1.1},
   year = 2000,
   url = {http://www.w3.org/TR/2000/NOTE-SOAP-20000508/}
-  }
-  
-@Misc{std:VOCEA,
-  author={Paul Harrison},
-  title={VOCEA - An XML schema for Registering CEA},
   }
 
 @Misc{std:iso8601,
@@ -298,7 +316,6 @@ Dave Winer
 
 @Misc{std:XSL2,
   editor =       {Michael Kay},
-  key = {Kay},
   title =        {{XSL} Transformations ({XSLT}) Version 2.0},
   howpublished = {W3C Recommendation},
   month =        jan,
@@ -308,7 +325,6 @@ Dave Winer
 
 @Misc{std:HTML4,
   editor =       {Dave Raggett and Arnaud Le Hors and Ian Jacobs},
-  key =          {Raggett},
   title =        {{HTML} 4.01 Specification},
   howpublished = {{W3C Recommendation}},
   month =        dec,
@@ -317,8 +333,8 @@ Dave Winer
 }
 
 DO NOT USE std:HTTP in new documents any more.  It has been obsoleted
-by various other RFCs, including std:RFC7230, std:RFC7231, and std:RFC7235,
-which are available below.
+by various other RFCs, including std:RFC7230, std:RFC7231, std:RFC7234,
+and std:RFC7235, which are available below.
 
 @Misc{std:HTTP,
 	obsolete = True,
@@ -346,6 +362,15 @@ which are available below.
   month =        jun,
   year =         2014,
   url =          {https://tools.ietf.org/html/rfc7231}
+}
+
+@misc{std:RFC7234,
+  author =       {R. Fielding and M. Nottingham and J. Reschke},
+  title =        {Hypertext Transfer Protocol ({HTTP}/1.1): Caching},
+  howpublished = {{RFC 7234}},
+  month =        jun,
+  year =         2014,
+  url =          {https://tools.ietf.org/html/rfc7234}
 }
 
 @misc{std:RFC7235,
@@ -399,45 +424,48 @@ which are available below.
     year = 2012
 }
 
-@webpage{saxon,
-  url = {http://saxon.sourceforge.net/},
-  key = {http://saxon.sourceforge.net/},
-  title = {Saxon}
+@Misc{saxon,
+	year = 2004,
+  url = {https://www.saxonica.com/html/welcome/welcome.html},
+  author = {{Saxon maintainers}},
+  title = {Saxon},
+  howpublished = {Web page, retrieved 2023-06-27}
   }
 
-@webpage{ant,
+@Misc{ant,
   url = {http://ant.apache.org/},
-  key = {http://ant.apache.org/},
-  title = {Apache {Ant}}
+  year = 2000,
+  author = {{Apache Ant maintainers}},
+  title = {Apache {Ant}},
+  howpublished = {Web page, retrieved 2023-06-27}
   }
 
-@webpage{FOP,
-  url = {http://xmlgraphics.apache.org/fop/},
-  key = {http://xmlgraphics.apache.org/fop/},
-  title = {Apache {FOP}}
-  }
-
-@webpage{SAX,
+@Misc{SAX,
   url = {http://www.saxproject.org/},
-  key = {http://www.saxproject.org/},
-  title = {{SAX}}
+  year = 2000,
+  author = {{SAX maintainers}},
+  title = {{SAX}},
+  howpublished = {Web page, retrieved 2023-06-27}
   }
 
-@webpage{doc:Postgres92,
+@Misc{doc:Postgres92,
 	url = {http://www.postgresql.org/docs/9.2/static/index.html},
 	author = {{Postgres Global Development Group}},
 	year = 2013,
-	title = {Postgre{SQL} 9.2.1 Documentation}
+	title = {Postgre{SQL} 9.2.1 Documentation},
+  howpublished = {Web page, retrieved 2023-06-27}
 	}
 
-@webpage{svc:RDFaVal,
+@Misc{svc:RDFaVal,
 	url = {http://www.w3.org/2012/pyRdfa/Validator.html},
-	key = {http://www.w3.org/2012/pyRdfa/Validator.html},
-	title = {{W3C RDFa} validator}
+	year = 2012,
+	author = {{W3C}},
+	title = {{W3C RDFa} validator},
+  howpublished = {Web page, retrieved 2023-06-27}
 	}
 
 @inproceedings{soft:pgsphere,
-   author = {{Chilingarian}, I. and {Bartunov}, O. and {Richter}, J. and 
+   author = {{Chilingarian}, I. and {Bartunov}, O. and {Richter}, J. and
 	{Sigaev}, T.},
     title = "{PostgreSQL: the Suitable DBMS Solution for Astronomy and Astrophysics}",
 booktitle = {Astronomical Data Analysis Software and Systems (ADASS) XIII},
@@ -469,8 +497,8 @@ booktitle = {Astronomical Data Analysis Software and Systems XV},
 }
 
 @ARTICLE{soft:Aladin,
-   author = {{Bonnarel}, F. and {Fernique}, P. and {Bienaym{\'e}}, O. and 
-	{Egret}, D. and {Genova}, F. and {Louys}, M. and {Ochsenbein}, F. and 
+   author = {{Bonnarel}, F. and {Fernique}, P. and {Bienaym{\'e}}, O. and
+	{Egret}, D. and {Genova}, F. and {Louys}, M. and {Ochsenbein}, F. and
 	{Wenger}, M. and {Bartlett}, J.~G.},
     title = "{The ALADIN interactive sky atlas. A reference tool for identification of astronomical sources}",
   journal = {Astronomy and Astrophysics Supplement},
@@ -485,7 +513,7 @@ booktitle = {Astronomical Data Analysis Software and Systems XV},
 @misc{std:DOIsystem,
 	Author = {{ISO Technical Committee 46}},
 	Year = 2012,
-	Title = {{ISO} 26324:2012 Information and documentation - 
+	Title = {{ISO} 26324:2012 Information and documentation -
 		Digital object identifier system},
 	Url = {http://www.doi.org/idf-members/ISO\_Standard/ISO\_263234\_English\_Final.pdf}}
 
@@ -518,7 +546,7 @@ booktitle = {Astronomical Data Analysis Software and Systems XV},
 
 
 @INPROCEEDINGS{2004ASPC..314..585P,
-   author = {{Plante}, R. and {Greene}, G. and {Hanisch}, R. and {McGlynn}, T. and 
+   author = {{Plante}, R. and {Greene}, G. and {Hanisch}, R. and {McGlynn}, T. and
 	{O'Mullane}, W. and {Williamson}, R.},
     title = "{Resource Registries for the Virtual Observatory}",
 booktitle = {Astronomical Data Analysis Software and Systems (ADASS) XIII},
@@ -574,7 +602,7 @@ archivePrefix = "ascl",
 
 @MISC{std:DataCite40,
    author={{DataCite Metadata Working Group}},
-   title={{DataCite} Metadata Schema -- Documentation for the Publication 
+   title={{DataCite} Metadata Schema -- Documentation for the Publication
       and Citation of Research Data Version 4.0},
    howpublished = {{DataCite} publication},
    year=2016,
@@ -631,7 +659,7 @@ archivePrefix = "ascl",
 }
 
 @ARTICLE{2014A+C.....7...27D,
-   author = {{Demleitner}, M. and {Neves}, M.~C. and {Rothmaier}, F. and 
+   author = {{Demleitner}, M. and {Neves}, M.~C. and {Rothmaier}, F. and
 	{Wambsganss}, J.},
     title = "{Virtual observatory publishing with DaCHS}",
   journal = {Astronomy and Computing},
@@ -649,7 +677,7 @@ archivePrefix = "arXiv",
 }
 
 @ARTICLE{2015A+A...574A..36R,
-   author = {{Rots}, A.~H. and {Bunclark}, P.~S. and {Calabretta}, M.~R. and 
+   author = {{Rots}, A.~H. and {Bunclark}, P.~S. and {Calabretta}, M.~R. and
 	{Allen}, S.~L. and {Manchester}, R.~N. and {Thompson}, W.~T.
 	},
     title = "{Representations of time coordinates in FITS. Time and relative dimension in space}",
@@ -698,6 +726,20 @@ booktitle = {Astronomical Data Analysis Software and Systems XIV},
     pages = {29},
    adsurl = {https://ui.adsabs.harvard.edu/abs/2005ASPC..347...29T},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@INPROCEEDINGS{2006ASPC..351..666T,
+       author = {{Taylor}, M.~B.},
+        title = "{STILTS - A Package for Command-Line Processing of Tabular Data}",
+    booktitle = {Astronomical Data Analysis Software and Systems XV},
+         year = 2006,
+       editor = {{Gabriel}, C. and {Arviset}, C. and {Ponz}, D. and {Enrique}, S.},
+       series = {Astronomical Society of the Pacific Conference Series},
+       volume = {351},
+        month = jul,
+        pages = {666},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2006ASPC..351..666T},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
 @Misc{std:JSON,
@@ -776,3 +818,27 @@ doi={10.1038/sdata.2016.18},
 url={https://doi.org/10.1038/sdata.2016.18}
 }
 
+@MISC{2014ascl.soft02004G,
+       author = {{Graham}, Matthew and {Plante}, Ray and {Tody}, Doug and {Fitzpatrick}, Mike},
+        title = "{PyVO: Python access to the Virtual Observatory}",
+     keywords = {Software},
+         year = 2014,
+        month = feb,
+          eid = {ascl:1402.004},
+        pages = {ascl:1402.004},
+archivePrefix = {ascl},
+       eprint = {1402.004},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2014ascl.soft02004G},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@misc{ivoatexDoc,
+       Author = {Markus Demleitner and Mark Taylor and James Dempsey
+       	and Patrick Dowler and Paul Harrison and Marco Molinaro},
+       Month = may,
+       Organization = {IVOA},
+       Title = {The {IvoaTeX} Document Preparation System Version 1.3},
+       howpublished = {IVOA Note 25 May 2022},
+       Url = {https://ivoa.net/documents/Notes/IVOATexDoc/},
+       Year = {2022}
+}

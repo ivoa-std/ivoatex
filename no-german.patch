@@ -1,0 +1,98 @@
+Index: tthg.lex
+===================================================================
+--- tthg.lex	(revision 17)
++++ tthg.lex	(working copy)
+@@ -5316,7 +5316,6 @@
+ \\r\{A\} |
+ \\AA		TTH_OUTPUTH("&#197;");
+ \\\~A           TTH_OUTPUTH("&#195;");
+-\"A |		
+ \\\"A	        TTH_OUTPUTH("&#196;");
+  /*  \\c{SP}?C    | */
+ \\noexpand\\c{SP}?C       	TTH_OUTPUTH("&#199;");
+@@ -5323,12 +5322,10 @@
+ \\\'E		TTH_OUTPUTH("&#201;");
+ \\\^E		TTH_OUTPUTH("&#202;");
+ \\\`E		TTH_OUTPUTH("&#200;");
+-\"E |
+ \\\"E		TTH_OUTPUTH("&#203;");
+ \\\`I		TTH_OUTPUTH("&#204;");
+ \\\'I		TTH_OUTPUTH("&#205;");
+ \\\^I		TTH_OUTPUTH("&#206;");
+-\"I |
+ \\\"I		TTH_OUTPUTH("&#207;");
+ \\\~N		TTH_OUTPUTH("&#209;");
+ \\\`O		TTH_OUTPUTH("&#210;");
+@@ -5336,7 +5333,6 @@
+ \\\^O		TTH_OUTPUTH("&#212;");
+ \\\O		TTH_OUTPUTH("&#216;");
+ \\\~O		TTH_OUTPUTH("&#213;");
+-\"O |
+ \\\"O		TTH_OUTPUTH("&#214;");
+ \\P		TTH_OUTPUTH("&#182;");
+ \\S		TTH_OUTPUTH("&#167;");
+@@ -5343,7 +5339,6 @@
+ \\\'U		TTH_OUTPUTH("&#218;");
+ \\\^U		TTH_OUTPUTH("&#219;");
+ \\\`U		TTH_OUTPUTH("&#217;");
+-\"U |
+ \\\"U		TTH_OUTPUTH("&#220;");
+ \\\'Y		TTH_OUTPUTH("&#221;");
+ <verbatim,notags>&  TTH_OUTPUTH("&amp;");
+@@ -5353,7 +5348,6 @@
+ \\\'a		TTH_OUTPUTH("&#225;");
+ \\\^a		TTH_OUTPUTH("&#226;");
+ \\\~a		TTH_OUTPUTH("&#227;");
+-\"a |
+ \\\"a		TTH_OUTPUTH("&#228;");
+ \\r\{a\} |
+ \\aa{SP}*            TTH_OUTPUTH("&#229;");
+@@ -5365,7 +5359,6 @@
+ \\\^e		TTH_OUTPUTH("&#234;");
+ \\\`e		TTH_OUTPUTH("&#232;");
+ \\v{SP}?o		TTH_OUTPUTH("&#240;");
+-\"e |
+ \\\"e		TTH_OUTPUTH("&#235;");
+ <verbatim,notags>\> |
+ \>	TTH_OUTPUTH("&#62;");
+@@ -5379,7 +5372,6 @@
+ \\\'\\i{SP}*		TTH_OUTPUTH("&#237;");
+ \\\^i	|
+ \\\^\\i{SP}*		TTH_OUTPUTH("&#238;");
+-\"i |
+ \\\"i	|
+ \\\"{SP}*\\i{SP}*		TTH_OUTPUTH("&#239;");
+ \\\~n		TTH_OUTPUTH("&#241;");
+@@ -5388,7 +5380,6 @@
+ \\\^o		TTH_OUTPUTH("&#244;");
+ \\\o{SP}* 		TTH_OUTPUTH("&#248;");
+ \\\~o		TTH_OUTPUTH("&#245;");
+-\"o |
+ \\\"o      TTH_OUTPUTH("&#246;");
+ \\\=		TTH_OUTPUTH("&#175;");
+ \\pounds{SP}*	TTH_OUTPUTH("&#163;");
+@@ -5396,12 +5387,9 @@
+ \\\'u		TTH_OUTPUTH("&#250;");
+ \\\^u		TTH_OUTPUTH("&#251;");
+ \\\`u		TTH_OUTPUTH("&#249;");
+-\"u |
+ \\\"u	TTH_OUTPUTH("&#252;");
+ \\\'y		TTH_OUTPUTH("&#253;");
+-\"y |
+ \\\"y	TTH_OUTPUTH("&#255;");
+-\"s             TTH_OUTPUTH("&#223;");
+ \\3{SP}* |
+ \\ss{SP}*            TTH_DO_MACRO else{ TTH_OUTPUTH("&#223;");}
+   /* Polish character macros:*/
+@@ -5422,11 +5410,6 @@
+ \\\'[{]?z[}]?         TTH_OUTPUTH("&#378;");
+ \\\.[{]?z[}]?         TTH_OUTPUTH("&#380;");
+ 
+-\"\`            TTH_OUTPUTH(",,");
+-\"\'            TTH_OUTPUTH("''");
+-\"<             TTH_OUTPUTH("&#171;");
+-\">             TTH_OUTPUTH("&#187;");
+-\"\|
+  /* Convert TeX double quotes to single-character */
+ \'\'            |
+ \`\`             TTH_OUTPUTH("\"");

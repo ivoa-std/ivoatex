@@ -17,28 +17,28 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
-    
+
     - name: Checkout the repository
       uses: actions/checkout@v1
       with:
         submodules: true
-    
+
     - name: Setup dependencies
       run: |
         sudo apt update
         sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended xsltproc latexmk cm-super
-      
+
     - name: Build the document
       run: make
-      
+
     - name: Check the output
       run: |
         test -f ${{ env.doc_name }}.pdf
         test -f ${{ env.doc_name }}.bbl
-        
-    - name: Keep the PDF artefact 
+
+    - name: Keep the PDF artefact
       uses: actions/upload-artifact@v1
       with:
         name: PDF Preview

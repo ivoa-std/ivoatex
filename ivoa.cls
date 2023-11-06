@@ -7,8 +7,8 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{ifthen}
-\RequirePackage{doc}
 \RequirePackage{listings}
+\RequirePackage{textcomp}
 \RequirePackage{paralist}
 \RequirePackage{url}
 \RequirePackage[nottoc]{tocbibind}
@@ -28,6 +28,12 @@
 
 \RequirePackage{natbib}
 \bibliographystyle{ivoatex/ivoa}
+
+% people usually want to cut and paste from our listings, so keep
+% lstlistings from mangling quotes.
+\lstset{upquote=true}
+
+\urlstyle{same}
 
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\bottomfraction}{0.7}
@@ -132,14 +138,14 @@
     \Large\color{ivoacolor}\quad\textsl{\textsf{\textbf{V}irtual}} \\
     \Large\color{ivoacolor}\quad\textsl{\textsf{\textbf{O}bservatory}} \\
     \Large\color{ivoacolor}\textsl{\textsf{\textbf{A}lliance}}}}\hfil}
- 
+
  	\vskip 1.4cm
  	\begin{sloppypar}\raggedright
   \LARGE\color{ivoacolor}\sffamily\bfseries \@title\par
   \end{sloppypar}
 
 	\bigskip
-  \noindent{\LARGE\color{ivoacolor}\sffamily\bfseries 
+  \noindent{\LARGE\color{ivoacolor}\sffamily\bfseries
   	Version \ivoaDocversion}
 	\medskip
   \titlehe@d{\expandedDoctype{\ivoaDoctype} \ivoaDocdate}%
@@ -150,10 +156,10 @@
     	\ivo@group
 
     \item[This version]
-    	\currentDocURL
+    	\currentDocRef
 
     \item[Latest version]
-    	\latestDocURL
+    	\latestDocRef
 
     \item[Previous versions]
 			\begin{compactitem}[]
@@ -245,12 +251,12 @@
  		{This is an IVOA Proposed Endorsed Note for review by IVOA
       members and other interested parties. It is appropriate to
       reference this document only as a Proposed Endorsed Note that
-      is under review and may change before it is endorsed or may  
-      not be endorsed. 
+      is under review and may change before it is endorsed or may
+      not be endorsed.
  		}
  	{\ifthenelse{\equal{#1}{EN}}
  		{This document is an IVOA Endorsed Note. It has been reviewed  and endorsed
- 			by the IVOA Technical Coordination Group as a stable, citable document 
+ 			by the IVOA Technical Coordination Group as a stable, citable document
  			which constitutes valuable information for the IVOA community and
  			beyond.
  		}
@@ -269,15 +275,15 @@
 	can be found at \href{https://www.ivoa.net/documents/
 	}{https://www.ivoa.net/documents/}.}
 
-
-\newcommand\currentBaseURL % 
-	{https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode}
-\newcommand\currentDocURL % URL of this document's landing page
-	{\href{\currentBaseURL}{\currentBaseURL}}
-\newcommand\latestDocURL 
-	% URL of a potential successor to the document's landing page
-	{\href{https://www.ivoa.net/documents/\ivoaDocname}
-		{https://www.ivoa.net/documents/\ivoaDocname}}
+% legacy definition when ivoatexmeta.tex does not yet define it
+\newcommand{\ivoaBaseURL}{https://www.ivoa.net/documents/\ivoaDocname}
+\newcommand\currentDocURL %
+	{\ivoaBaseURL/\ivoaDocdatecode}
+\newcommand\currentDocRef % formatted reference to this document's landing page
+	{\href{\currentDocURL}{\currentDocURL}}
+\newcommand\latestDocRef
+	% formatted reference to a potential successor to the document's landing page
+	{\href{\ivoaBaseURL}{\ivoaBaseURL}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Styling various item
@@ -360,7 +366,7 @@
 
 \newcommand{\ivoatex}{\mbox{\textsc{Ivoa}\TeX}}
 
-\newcommand{\auxiliaryurl}[1]{\href{\currentBaseURL/#1}{\currentBaseURL/#1}}
+\newcommand{\auxiliaryurl}[1]{\href{\currentDocURL/#1}{\currentDocURL/#1}}
 
 \chardef\dquote'042
 

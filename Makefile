@@ -4,13 +4,13 @@
 #  This main Makefile must define DOCNAME, DOCVERSION, DOCDATE, DOCTYPE
 #  SOURCES; also, FIGURES as needed.
 #
-#  See http://ivoa.net/documents/Notes/IVOATex/index.html 
+#  See http://ivoa.net/documents/Notes/IVOATex/index.html
 #  for the targets in here useful to the user.
 #
 #  You should *not* need to change anything here while authoring documents.
 #  All customisation should happen in the user Makefile
 
-IVOATEX_VERSION = 1.1
+IVOATEX_VERSION = 1.3
 
 .DELETE_ON_ERROR:
 
@@ -26,11 +26,12 @@ PYTHON?=python3
 #     texlive
 #     ghostscript (if you plan on postscript/pdf figures)
 #     zip
-#     inkscape if you need an architecture diagram
+#     librsvg2-bin or inkscape (for architecture diagrams)
 #     pdftk if you want to build draft pdfs with a watermark
 #     optionally, latexmk.
-#  Since inkscape is a rather exotic dependency, please commit both 
-#  role_diagram.svg and role_diagram.pdf into your VCS for now.
+#  If you don't have librsvg2 but you do have inkscape, you
+#  can set the SVGENGINE environment variable to inkscape.
+#  Then, ivoatex will use inkscape for svg -> pdf conversion.
 
 XSLTPROC = xsltproc
 XMLLINT = xmllint -noout
@@ -51,6 +52,7 @@ versionedName:=$(DOCTYPE)-$(DOCNAME)-$(DOCVERSION)
 ifneq "$(DOCTYPE)" "REC"
 		versionedName:=$(versionedName)-$(subst -,,$(DOCDATE))
 endif
+DOCREPO_BASEURL ?= https://www.ivoa.net/documents/$(DOCNAME)
 
 GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 
@@ -63,10 +65,16 @@ GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 
 
 $(DOCNAME).pdf: ivoatexmeta.tex $(SOURCES) $(FIGURES) $(VECTORFIGURES)
+ifndef DOCNAME
+	$(error No DOCNAME defined.  Do not call plain make in ivoatex.)
+endif
 	$(PDFLATEX) $(DOCNAME)
 
 forcetex:
 	make -W $(DOCNAME).tex $(DOCNAME).pdf
+
+new-release: ivoatexmeta.tex
+	$(PYTHON) ivoatex/newrelease.py
 
 $(DOCNAME)-draft.pdf: $(DOCNAME).pdf draft-background.pdf
 	pdftk $< background draft-background.pdf output $@
@@ -89,22 +97,22 @@ arxiv-upload: $(SOURCES) biblio $(FIGURES) $(VECTORFIGURES) ivoatexmeta.tex
 clean:
 	rm -f $(DOCNAME).pdf $(DOCNAME).aux $(DOCNAME).log $(DOCNAME).toc texput.log ivoatexmeta.tex
 	rm -f $(DOCNAME).html $(DOCNAME).xhtml
-	rm -f *.bbl *.blg *.out debug.html
+	rm -f *.bbl *.blg *.out debug.html *.fls *.fdb_latexmk
 	rm -f arxiv-upload.tar.gz
 	rm -f $(GENERATED_PNGS)
 
 update:
 	@echo "*** updating ivoatex from github"
-	git submodule update --remote
+	git submodule update --remote --rebase
 
 .FORCE:
 
 gitmeta.tex: .FORCE
-	/bin/echo -n '\vcsrevision{' > $@
-	/bin/echo -n "$(shell git log -1 --date=short --pretty=%h 2> /dev/null)" >> $@
-	if [ ! -z "$(shell git status --porcelain -uno 2> /dev/null)" ]; then /bin/echo -n -dirty >> $@; fi
-	/bin/echo } >> $@
-	/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ai 2> /dev/null) '}' >>$@
+	@/bin/echo -n '\vcsrevision{' > $@
+	@/bin/echo -n "$(shell git log -1 --date=short --pretty=%h 2> /dev/null)" >> $@
+	@if [ ! -z "$(shell git status --porcelain -uno 2> /dev/null)" ]; then /bin/echo -n -dirty >> $@; fi
+	@/bin/echo } >> $@
+	@/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ai 2> /dev/null) '}' >>$@
 
 
 ivoatexmeta.tex: Makefile
@@ -116,12 +124,15 @@ ivoatexmeta.tex: Makefile
 	/bin/echo '\newcommand{\ivoaDocdatecode}{$(DOCDATE)}' | sed -e 's/-//g' >>$@
 	/bin/echo '\newcommand{\ivoaDoctype}{$(DOCTYPE)}' >>$@
 	/bin/echo '\newcommand{\ivoaDocname}{$(DOCNAME)}' >>$@
+	/bin/echo '\renewcommand{\ivoaBaseURL}{$(DOCREPO_BASEURL)}' >>$@
+
 
 $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 		$(GENERATED_PNGS)
 	$(TTH) -w2 -e2 -u2 -pivoatex -L$(DOCNAME) <$(DOCNAME).tex \
 		| $(XSLTPROC) --html \
                   --stringparam CSS_HREF $(CSS_HREF) \
+                  --stringparam docbase "$(DOCREPO_BASEURL)" \
                   ivoatex/tth-ivoa.xslt - \
            >$(DOCNAME).html
 
@@ -145,14 +156,20 @@ biblio: $(DOCNAME).bbl
 # The architecture diagram is generated from a spec in the document
 # directory and a stylesheet.
 role_diagram.svg: role_diagram.xml
-	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt role_diagram.xml 
+	$(XSLTPROC) -o $@ ivoatex/make-archdiag.xslt role_diagram.xml
 
 # Regrettably, pdflatex can't use svg, so we need to convert it.
 # We're using inkscape here rather than convert because convert
 # rasterises the svg.
+ifeq ($(SVGENGINE),inkscape)
 %.pdf: %.svg
 	inkscape --export-filename=$@ --export-type=pdf $< \
 		|| cp ivoatex/svg-fallback.pdf $@
+else
+%.pdf: %.svg
+	rsvg-convert --output=$@ --format=pdf $< \
+		|| cp ivoatex/svg-fallback.pdf $@
+endif
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway
@@ -160,7 +177,10 @@ role_diagram.svg: role_diagram.xml
 # Also, it needs python installed, which may not be available on all
 # installations.
 generate:
-	$(PYTHON) ivoatex/update_generated.py $(DOCNAME).tex
+	$(PYTHON) ivoatex/update_generated.py "$(DOCNAME).tex"
+
+bib-suggestions: $(DOCNAME).pdf
+	$(PYTHON) ivoatex/suggest-bibupgrade.py $(DOCNAME).aux
 
 package: $(DOCNAME).tex $(DOCNAME).html $(DOCNAME).pdf \
 		$(GENERATED_PNGS)	$(FIGURES) $(AUX_FILES)
@@ -200,26 +220,26 @@ $(TTH): ivoatex/tth_C/tth.c
 ARCHDIAG_XSLT = make-archdiag.xslt
 
 archdiag-l2.svg: archdiag-full.xml  $(ARCHDIAG_XSLT)
-	$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) archdiag-full.xml 
+	$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) archdiag-full.xml
 
 archdiag-debug.svg: archdiag-full.xml $(ARCHDIAG_XSLT)
 	$(XSLTPROC) --stringparam WITHJS True -o $@ $(ARCHDIAG_XSLT) \
-		archdiag-full.xml 
+		archdiag-full.xml
 
 archdiag-l1.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) -
 
 archdiag-l0.svg: $(ARCHDIAG_XSLT)
 	echo '<archdiag0 xmlns="http://ivoa.net/archdiag"/>' | \
-		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) - 
+		$(XSLTPROC) -o $@ $(ARCHDIAG_XSLT) -
 
 
 ############# below here: building an ivoatex distribution
 
 IVOATEX_FILES = fromivoadoc.xslt Makefile COPYING \
 	ivoabib.bib Makefile.template tthdefs.tex document.template \
-	ivoa.cls README  tth-ivoa.xslt IVOA.jpg docrepo.bib\
+	ivoa.cls README.rst  tth-ivoa.xslt IVOA.jpg docrepo.bib\
 	svn-ignore.txt tthntbib.sty update_generated.py schemadoc.xslt \
 	ivoa.bst CHANGES archdiag-full.xml make-archdiag.xslt stdrec-template.xml \
 	submission.py svg-fallback.pdf
@@ -243,8 +263,8 @@ $(IVOATEX_ARCHIVE): $(IVOATEX_FILES)
 
 ivoatex-installdist: $(IVOATEX_ARCHIVE)
 	@echo "This target will only work for Markus"
-	scp $(IVOATEX_ARCHIVE) alnilam:/var/www/soft/ivoatex/
-	ssh alnilam "cd /var/www/soft/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivoatex-latest.tar.gz"
+	scp $(IVOATEX_ARCHIVE) www.g-vo.org:/var/www/ivoatex/
+	ssh www.g-vo.org "cd /var/www/ivoatex/; ln -sf $(IVOATEX_ARCHIVE) ivoatex-latest.tar.gz"
 
 # re-gets the ivoa records from ADS
 docrepo.bib:
