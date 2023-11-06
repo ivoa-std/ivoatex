@@ -17,7 +17,6 @@
 
 ENTRY
   { address
-  	archivePrefix
     author
     booktitle
     chapter
@@ -49,14 +48,19 @@ ENTRY
 
 INTEGERS { output.state before.all mid.sentence after.sentence after.block }
 
+STRINGS { s t f doi.url doi.prefix arxiv.prefix }
+
 FUNCTION {init.state.consts}
 { #0 'before.all :=
   #1 'mid.sentence :=
   #2 'after.sentence :=
   #3 'after.block :=
-}
 
-STRINGS { s t f }
+  "https://doi.org/" 'doi.url := % prefix to make URL from DOI (used to be dx.doi.org)
+  "doi:" 'doi.prefix :=          % formatting prefix
+  % we're presuming here that all eprints are at arXiv
+  "arXiv:" 'arxiv.prefix :=      % formatting prefix
+}
 
 FUNCTION {output.nonnull}
 { 's :=
@@ -161,26 +165,88 @@ FUNCTION {quote}
   if$
 }
 
-FUNCTION {write.url}
-{ URL empty$ {
-		doi empty$ {
-			adsurl empty$
-    		{ skip$ }
-    		{ "\newline\url{" adsurl * "}" * write$ newline$ }
-    		if$
-    	}
-    	{ "\newline\url{http://doi.org/" doi * "}" * write$ newline$}
-    	if$
+% Minimal DOI parsing.
+% Given a DOI on the stack, check whether it starts with 'doi.url' or not.
+% In either case, leave on the stack first a DOI with,
+% and then a DOI without, the URL prefix
+% (ie, stack-top: doi doi-link)
+FUNCTION {parse.doi}
+{
+  #1 doi.url text.length$ substring$
+  doi.url =
+    { doi
+      doi doi.url text.length$ #1 + #999 substring$ }
+    { doi.url doi *
+      doi }
+  if$
+}
+
+% Given (stack-top: link-text URL), make an href link
+% (depends on the \href macro from the hyperref package)
+FUNCTION {make.href}
+{
+  swap$ "\href {" swap$ * "} {" * swap$ * "}" *
+}
+
+% Wrap the string at the top of the stack in \url{...}
+% (from the 'url' package).
+% See the note about \doi{...} below.
+FUNCTION {protect.with.url}
+{
+  "\url{" swap$ * "}" *
+}
+
+% Write out URL and DOI entries.
+%
+% DOIs can be provided with or without the 'http://doi.org' prefix,
+% and these will be formatted the same.
+%
+% If the generated DOI will be the same as the URL,
+% then don't print the URL (thanks to Joseph Wright
+% for (the original version of) this code,
+% at http://tex.stackexchange.com/questions/5660)
+FUNCTION {write.url.and.doi}
+{ new.block
+  URL empty$
+    { doi empty$
+        { adsurl empty$
+            { skip$ }
+            { "\url{" adsurl * "}" * output.nonnull }
+          if$
+        }
+        { doi.prefix doi parse.doi
+          % Only a few DOIs have characters that need protecting by
+          % the \url macro (from the 'url' package), but we protect
+          % all of them here, just in case.  This typically formats
+          % URLs in a tt-font. This isn't pretty, but we shouldn't
+          % second-guess the formatting here.  A better solution would
+          % be to \DeclareUrlCommand\doi{\urlstyle{rm}}, and protect
+          % these with \doi instead.
+          protect.with.url
+          make.href * output.nonnull
+        }
+      if$
     }
-    { "\newline\url{" URL * "}" * write$ newline$ }
+    { doi empty$
+        { "\url{" URL * "}" * output.nonnull }  % no DOI: simple case
+        { doi parse.doi swap$   % stack top: doi-url doi
+          duplicate$
+          url =
+            { pop$ pop$ }              % DOI and URL refer to same, don't print the DOI
+            { swap$ make.href doi.prefix swap$ * output.nonnull}
+          if$
+          "\url{" URL * "}" * output.nonnull
+        }
+      if$
+    }
   if$
 }
 
 FUNCTION {write.eprintid}
-{ archivePrefix empty$
-		{ skip$ }
-		{ " " archivePrefix * ":" * eprint * output }
-	if$
+{ eprint empty$
+    { skip$ }
+    { " " arxiv.prefix * eprint * output }
+  if$
 }
 
 INTEGERS { nameptr namesleft numnames }
@@ -460,7 +526,6 @@ FUNCTION {format.article.crossref}
     }
     { "{\em in} \citeasnoun{" crossref * "}" * }
   if$
-
 }
 
 FUNCTION {format.book.crossref}
@@ -509,7 +574,6 @@ FUNCTION {format.incoll.inproc.crossref}
     }
     { "{\em in} \citeasnoun{" crossref * "}" * }
   if$
-
 }
 
 INTEGERS { len }
@@ -705,7 +769,8 @@ FUNCTION {output.bibitem}
 }
 
 FUNCTION {list.label.output}
-{ make.list.label " " * write$
+{
+  make.list.label " " * write$
 }
 
 FUNCTION {article}
@@ -728,8 +793,8 @@ FUNCTION {article}
   write.eprintid
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {book}
@@ -761,8 +826,8 @@ FUNCTION {book}
   if$
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {booklet}
@@ -777,8 +842,8 @@ FUNCTION {booklet}
   address output
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {inbook}
@@ -811,8 +876,8 @@ FUNCTION {inbook}
   format.chapter.pages "chapter and pages" output.check
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {incollection}
@@ -838,8 +903,8 @@ FUNCTION {incollection}
   format.chapter.pages output
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {inproceedings}
@@ -871,8 +936,8 @@ FUNCTION {inproceedings}
   format.pages output
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {conference} { inproceedings }
@@ -898,8 +963,8 @@ FUNCTION {manual}
   if$
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {mastersthesis}
@@ -916,8 +981,8 @@ FUNCTION {mastersthesis}
   address output
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {misc}
@@ -932,8 +997,8 @@ FUNCTION {misc}
   write.eprintid
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
   empty.misc.check
 }
 
@@ -951,8 +1016,8 @@ FUNCTION {phdthesis}
   address output
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {proceedings}
@@ -983,8 +1048,8 @@ FUNCTION {proceedings}
   if$
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {techreport}
@@ -1001,8 +1066,8 @@ FUNCTION {techreport}
   address output
   new.block
   note output
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {unpublished}
@@ -1016,8 +1081,8 @@ FUNCTION {unpublished}
   if$
   new.block
   note "note" output.check
+  write.url.and.doi
   fin.entry
-  write.url
 }
 
 FUNCTION {default.type} { misc }
