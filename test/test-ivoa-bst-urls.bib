@@ -1,0 +1,90 @@
+
+Nothing
+@Misc{t1,
+  author =       {A Alpha},
+  title =        {Test 1},
+  year =         {2001}
+}
+
+bare DOI, no URL
+@Misc{t2,
+  author =       {B Bravo},
+  title =        {Test 2},
+  year =         {2002},
+  doi =          {10.0002/0002}
+}
+
+bare DOI with URL
+(incidentally with a scheme which isn't http or
+https, to check we don't fail in this case)
+@Misc{t3,
+  author =       {C Charlie},
+  title =        {Test 3},
+  year =         {2003},
+  doi =          {10.0003/0003},
+  url =          {ldap://example.org/0003}
+}
+
+bare DOI with adsURL
+@Misc{t4,
+  author =       {D Delta},
+  title =        {Test 4},
+  year =         {2004},
+  doi =          {10.0004/0004},
+  adsurl =       {http://example.org/0004}
+}
+
+http DOI; no URL
+@Misc{t5,
+  author =       {E Echo},
+  title =        {Test 5},
+  year =         {2005},
+  doi =          {http://doi.org/10.0005/0005}
+}
+
+https DOI, no URL
+@Misc{t6,
+  author =       {F Foxtrot},
+  title =        {Test 6},
+  year =         {2006},
+  doi =          {https://doi.org/10.0006/0006}
+}
+
+bare DOI with matching http URL
+@Misc{t7,
+  author =       {G Golf},
+  title =        {Test 7},
+  year =         {2007},
+  doi =          {10.0007/0007},
+  url =          {http://doi.org/10.0007/0007}
+}
+
+bare DOI with matching https URL
+@Misc{t8,
+  author =       {H Hotel},
+  title =        {Test 8},
+  year =         {2008},
+  doi =          {10.0008/0008},
+  url =          {https://doi.org/10.0008/0008}
+}
+
+http DOI with matching https URL
+@Misc{t9,
+  author =       {I India},
+  title =        {Test 9},
+  year =         {2009},
+  doi =          {http://doi.org/10.0009/0009},
+  url =          {https://doi.org/10.0009/0009}
+}
+
+https DOI with matching http URL
+@Misc{t10,
+  author =       {J Juliet},
+  title =        {Test 10},
+  year =         {2010},
+  doi =          {https://doi.org/10.0010/0010},
+  url =          {http://doi.org/10.0010/0010}
+}
+
+We won't bother looking at an adsurl starting doi.org,
+since I don't think that ever happens

@@ -1,14 +1,44 @@
-\harvarditem[{Demleitner} \harvardand\ {Neves} et~al.]{{Demleitner}, {Neves},
-\newblock doi:\href {https://doi.org/10.1016/j.ascom.2014.08.003}
-  {\url{10.1016/j.ascom.2014.08.003}}.
-\harvarditem[{Hanisch} \harvardand\ {Farris} et~al.]{{Hanisch}, {Farris},
-\newblock doi:\href {https://doi.org/10.1051/0004-6361:20010923}
-  {\url{10.1051/0004-6361:20010923}}.
-\harvarditem{Shafranovich}{2005}{std:CSV}
-\newblock \url{https://tools.ietf.org/html/rfc4180}.
-\harvarditem{Starr et~al.}{2015}{std:DataCite31}
-\newblock doi:\href {https://doi.org/http://doi.org/10.5438/0010}
-  {http://doi.org/10.5438/0010},
-  \url{https://schema.datacite.org/meta/kernel-3.1/doc/DataCite-MetadataKernel_v3.1.pdf}.
-\harvarditem[Wilkinson \harvardand\ Dumontier et~al.]{Wilkinson, Dumontier,
-\newblock \url{https://doi.org/10.1038/sdata.2016.18}.
+\begin{thebibliography}{xx}
+
+\harvarditem{Alpha}{2001}{t1}
+Alpha, A.  \harvardyearleft 2001\harvardyearright , `Test 1'.
+
+\harvarditem{Bravo}{2002}{t2}
+Bravo, B.  \harvardyearleft 2002\harvardyearright , `Test 2'.
+\newblock doi:\href {https://doi.org/10.0002/0002} {\nolinkurl{10.0002/0002}}.
+
+\harvarditem{Charlie}{2003}{t3}
+Charlie, C.  \harvardyearleft 2003\harvardyearright , `Test 3'.
+\newblock doi:\href {https://doi.org/10.0003/0003} {\nolinkurl{10.0003/0003}},
+  \url{ldap://example.org/0003}.
+
+\harvarditem{Delta}{2004}{t4}
+Delta, D.  \harvardyearleft 2004\harvardyearright , `Test 4'.
+\newblock doi:\href {https://doi.org/10.0004/0004} {\nolinkurl{10.0004/0004}},
+  \url{http://example.org/0004}.
+
+\harvarditem{Echo}{2005}{t5}
+Echo, E.  \harvardyearleft 2005\harvardyearright , `Test 5'.
+\newblock doi:\href {https://doi.org/10.0005/0005} {\nolinkurl{10.0005/0005}}.
+
+\harvarditem{Foxtrot}{2006}{t6}
+Foxtrot, F.  \harvardyearleft 2006\harvardyearright , `Test 6'.
+\newblock doi:\href {https://doi.org/10.0006/0006} {\nolinkurl{10.0006/0006}}.
+
+\harvarditem{Golf}{2007}{t7}
+Golf, G.  \harvardyearleft 2007\harvardyearright , `Test 7'.
+\newblock doi:\href {https://doi.org/10.0007/0007} {\nolinkurl{10.0007/0007}}.
+
+\harvarditem{Hotel}{2008}{t8}
+Hotel, H.  \harvardyearleft 2008\harvardyearright , `Test 8'.
+\newblock doi:\href {https://doi.org/10.0008/0008} {\nolinkurl{10.0008/0008}}.
+
+\harvarditem{India}{2009}{t9}
+India, I.  \harvardyearleft 2009\harvardyearright , `Test 9'.
+\newblock doi:\href {https://doi.org/10.0009/0009} {\nolinkurl{10.0009/0009}}.
+
+\harvarditem{Juliet}{2010}{t10}
+Juliet, J.  \harvardyearleft 2010\harvardyearright , `Test 10'.
+\newblock doi:\href {https://doi.org/10.0010/0010} {\nolinkurl{10.0010/0010}}.
+
+\end{thebibliography}
