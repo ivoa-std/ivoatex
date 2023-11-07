@@ -54,7 +54,7 @@ ENTRY
 
 INTEGERS { output.state before.all mid.sentence after.sentence after.block }
 
-STRINGS { s t f doi.url doi.prefix arxiv.prefix }
+STRINGS { s t f doi.http.url doi.https.url doi.prefix arxiv.prefix }
 
 FUNCTION {init.state.consts}
 { #0 'before.all :=
@@ -62,7 +62,8 @@ FUNCTION {init.state.consts}
   #2 'after.sentence :=
   #3 'after.block :=
 
-  "https://doi.org/" 'doi.url := % prefix to make URL from DOI (used to be dx.doi.org)
+  "https://doi.org/" 'doi.https.url := % prefix to make URL from DOI (used to be dx.doi.org)
+  "http://doi.org/" 'doi.http.url := % the non-SSL version of that
   "doi:" 'doi.prefix :=          % formatting prefix
   % we're presuming here that all eprints are at arXiv
   "arXiv:" 'arxiv.prefix :=      % formatting prefix
@@ -172,19 +173,34 @@ FUNCTION {quote}
 }
 
 % Minimal DOI parsing.
-% Given a DOI on the stack, check whether it starts with 'doi.url' or not.
+% Given a string, strips either "http://doi.org/" (15 chars) or
+% "https://doi.org/" (16) from the front of it.
+% If the string doesn't start with either, then leave it alone.
+FUNCTION {strip.doi.prefix}
+{
+  duplicate$
+  #1 #15 substring$
+  "http://doi.org/" =
+    { #16 #999 substring$ }
+    { duplicate$
+      #1 #16 substring$
+      "https://doi.org/" =
+        { #17 #999 substring$ }
+        'skip$
+      if$ }
+  if$
+}
+
+% Given a DOI on the stack, check whether it starts with 'doi.http(s).url' or not.
 % In either case, leave on the stack first a DOI with,
 % and then a DOI without, the URL prefix
-% (ie, stack-top: doi doi-link)
+% (ie, stack-top: doi doi-url)
 FUNCTION {parse.doi}
 {
-  #1 doi.url text.length$ substring$
-  doi.url =
-    { doi
-      doi doi.url text.length$ #1 + #999 substring$ }
-    { doi.url doi *
-      doi }
-  if$
+  strip.doi.prefix
+  duplicate$
+  doi.https.url swap$ *         %put the prefix back on one
+  swap$
 }
 
 % Given (stack-top: link-text URL), make an href link
@@ -227,34 +243,25 @@ FUNCTION {protect.url}
 % at http://tex.stackexchange.com/questions/5660)
 FUNCTION {write.url.and.doi}
 { new.block
-  URL empty$
-    { doi empty$
-        { adsurl empty$
-            { skip$ }
-            { adsurl make.url output.nonnull }
-          if$
-        }
-        { doi.prefix doi parse.doi
-          % Only a few DOIs have characters that need protecting by
-          % the \url macro (from the 'url' package), but we protect
-          % all of them here, just in case.
-          protect.url
-          make.href * output.nonnull
-        }
-      if$
-    }
-    { doi empty$
-        { URL make.url output.nonnull }  % no DOI: simple case
-        { doi parse.doi swap$   % stack top: doi-url doi
-          duplicate$
-          url =
-            { pop$ pop$ }              % DOI and URL refer to same, don't print the DOI
-            { swap$ make.href doi.prefix swap$ * output.nonnull}
-          if$
-          URL make.url output.nonnull
-        }
-      if$
-    }
+  "x" 't :=                     %possibly replaced by DOI URL
+  doi empty$
+    'skip$
+    { doi parse.doi swap$       % stack top: doi-url doi
+      duplicate$ 't :=          %save DOI URL
+      swap$ protect.url
+      make.href
+      doi.prefix swap$ * output.nonnull }
+  if$
+  url empty$
+    { adsurl empty$
+        'skip$
+        { adsurl make.url output.nonnull }
+      if$ }
+    { t strip.doi.prefix        % t is still "x" if there's no DOI
+      url strip.doi.prefix =
+        'skip$   % DOI and URL refer to same, don't print the URL
+        { url make.url output.nonnull }
+      if$ }
   if$
 }
 
