@@ -1,9 +1,9 @@
 \harvarditem[{Demleitner} \harvardand\ {Neves} et~al.]{{Demleitner}, {Neves},
 \newblock doi:\href {https://doi.org/10.1016/j.ascom.2014.08.003}
-  {\url{10.1016/j.ascom.2014.08.003}}.
+  {\nolinkurl{10.1016/j.ascom.2014.08.003}}.
 \harvarditem[{Hanisch} \harvardand\ {Farris} et~al.]{{Hanisch}, {Farris},
 \newblock doi:\href {https://doi.org/10.1051/0004-6361:20010923}
-  {\url{10.1051/0004-6361:20010923}}.
+  {\nolinkurl{10.1051/0004-6361:20010923}}.
 \harvarditem{Shafranovich}{2005}{std:CSV}
 \newblock \url{https://tools.ietf.org/html/rfc4180}.
 \harvarditem{Starr et~al.}{2015}{std:DataCite31}

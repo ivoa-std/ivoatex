@@ -15,6 +15,12 @@
 %   Peter Williams, Key Centre for Design Quality, Sydney University
 %   e-mail: peterw@archsci.arch.su.oz.au
 
+% Some further DOI-related adjustments from Norman Gray <norman.gray@glasgow.ac.uk>.
+% Note: these adjustments assume (a) that the `url` package is loaded,
+% so that the `\url` macro is available, and (b) that the `hyperref`
+% package is loaded, so that the `\nolinkurl` macro is available to
+% provide a no-link version of the escaping that `url` provides.
+
 ENTRY
   { address
     author
@@ -191,9 +197,23 @@ FUNCTION {make.href}
 % Wrap the string at the top of the stack in \url{...}
 % (from the 'url' package).
 % See the note about \doi{...} below.
-FUNCTION {protect.with.url}
+FUNCTION {make.url}
 {
   "\url{" swap$ * "}" *
+}
+
+% Wrap the string at the top of the stack in... something which
+% protects it, without making it a linked  URL.  This would be
+% \url{...}, but the hyperref package turns this into a link, which
+% messes up DOIs.  That package adds \nolinkurl for this purpose.
+%
+% This typically formats URLs in a tt-font. This isn't pretty, but we
+% shouldn't second-guess the formatting here.  A possibly better
+% solution would be to \DeclareUrlCommand\doi{\urlstyle{rm}}, and
+% protect these with \doi instead.
+FUNCTION {protect.url}
+{
+  "\nolinkurl{" swap$ * "}" *
 }
 
 % Write out URL and DOI entries.
@@ -211,31 +231,27 @@ FUNCTION {write.url.and.doi}
     { doi empty$
         { adsurl empty$
             { skip$ }
-            { "\url{" adsurl * "}" * output.nonnull }
+            { adsurl make.url output.nonnull }
           if$
         }
         { doi.prefix doi parse.doi
           % Only a few DOIs have characters that need protecting by
           % the \url macro (from the 'url' package), but we protect
-          % all of them here, just in case.  This typically formats
-          % URLs in a tt-font. This isn't pretty, but we shouldn't
-          % second-guess the formatting here.  A better solution would
-          % be to \DeclareUrlCommand\doi{\urlstyle{rm}}, and protect
-          % these with \doi instead.
-          protect.with.url
+          % all of them here, just in case.
+          protect.url
           make.href * output.nonnull
         }
       if$
     }
     { doi empty$
-        { "\url{" URL * "}" * output.nonnull }  % no DOI: simple case
+        { URL make.url output.nonnull }  % no DOI: simple case
         { doi parse.doi swap$   % stack top: doi-url doi
           duplicate$
           url =
             { pop$ pop$ }              % DOI and URL refer to same, don't print the DOI
             { swap$ make.href doi.prefix swap$ * output.nonnull}
           if$
-          "\url{" URL * "}" * output.nonnull
+          URL make.url output.nonnull
         }
       if$
     }
