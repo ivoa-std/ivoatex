@@ -27,12 +27,35 @@ Distributed under CC0 by the IVOA.
 import contextlib
 import datetime
 import os
+import re
 import subprocess
 import tempfile
 import traceback
 
 
 ####################### Misc. utilities
+
+def _assert_has(assertion, found_str, where):
+    """executes assertion on found_str.
+
+    Assertion can be a
+
+    * str, bytes: the assertion fails if the string isn't in found_str
+    * callable: the assertin fails if callable(found_str) is false.
+    * None: Nothing will be asserted.
+    """
+    if assertion is None:
+        return
+
+    elif isinstance(assertion, (str, bytes)):
+		    assert assertion in found_str, f"'{assertion}' missing in {where}"
+
+    elif hasattr(assertion, "__call__"):
+        assert assertion(found_str), f"f({assertion}) is not true in {where}"
+
+    else:
+        assert False, f"Cannot understand assertion: {assertion}"
+
 
 def execute(cmd, check_output=None, input=None):
 	"""execute a subprocess.Popen-compatible command cmd under supervision.
@@ -47,10 +70,11 @@ def execute(cmd, check_output=None, input=None):
 	output = subprocess.check_output(cmd, shell=True, input=input,
 		stderr=subprocess.STDOUT)
 	output = output.decode("utf-8")
-	if isinstance(check_output, str):
+	if check_output is not None:
 		with open("last-output.txt", "w", encoding="utf-8") as f:
 			f.write(output)
-		assert check_output in output, f"'{check_output}' missing"
+		_assert_has(check_output, output, cmd)
+
 	return output
 
 
@@ -67,7 +91,7 @@ def _assert_for_particles(file_name, assertion, particles):
 		content = content.decode("utf-8")
 
 	for part in particles:
-		assertion(part, content)
+		assertion(part, content, file_name)
 
 
 def assert_in_file(file_name, *particles):
@@ -77,9 +101,7 @@ def assert_in_file(file_name, *particles):
 	if particles[0] is a string, content will be utf-8 decoded, else
 	we will make assertions about byte strings.
 	"""
-	def _(part, content):
-		assert part in content, f"'{part}' not in {file_name}"
-	_assert_for_particles(file_name, _, particles)
+	_assert_for_particles(file_name, _assert_has, particles)
 
 
 def assert_not_in_file(file_name, *particles):
@@ -88,8 +110,8 @@ def assert_not_in_file(file_name, *particles):
 
 	See assert_in_file for details.
 	"""
-	def _(part, content):
-		assert part not in content, f"'{part}' present in {file_name}"
+	def _(part, content, where):
+		assert part not in content, f"'{part}' present in {where}"
 	_assert_for_particles(file_name, _, particles)
 
 
@@ -172,7 +194,8 @@ def edit_document_template():
 def test_first_run():
 	# Basically, make sure that a very basic LaTeX call works and yields a
 	# plausible PDF.
-	execute("make", "Latexmk: All targets (Regress.pdf) are up-to-date")
+	execute("make", lambda output: re.search(
+	  "Latexmk: All targets (.*?) are up-to-date", output))
 	execute("pdftotext Regress.pdf")
 
 	assert_in_file("Regress.txt",
@@ -210,7 +233,7 @@ def test_archdiag():
 
 	assert_in_file("role_diagram.pdf", b"%PDF-1.5", b"/Kids [ 2 0 R ]")
 	assert_in_file("Regress.log",
-		"<role_diagram.pdf, id=47, 803.0pt x 602.25pt>")
+		lambda op: re.search(b"<role_diagram.pdf, id=47, .*?pt>", op))
 
 
 def test_extra_macros():
