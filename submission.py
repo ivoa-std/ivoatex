@@ -37,9 +37,9 @@ from xml.etree import ElementTree as etree
 try:
     import requests
 except ImportError:
-    sys.exit("*** Automatic document submission needs python-requests.\n"
-        "*** Install a package named like this or get it from\n"
-        "*** https://pypi.python.org/pypi/requests")
+    sys.exit("*** Automatic document submission needs the Python 'requests'"
+        " package.\n"
+        "*** Please install it (Debian: python3-requests; pypi: requests).\n")
 
 
 DOCREPO_URL = 'https://www.ivoa.net/cgi-bin/up.cgi'
