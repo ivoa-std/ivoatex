@@ -65,7 +65,7 @@ def _assert_for_particles(file_name, assertion, particles):
 		content = f.read()
 	if particles and isinstance(particles[0], str):
 		content = content.decode("utf-8")
-	
+
 	for part in particles:
 		assertion(part, content)
 
@@ -117,7 +117,7 @@ def edit_file(target_file, replacements):
 
 	for to_replace, replacement in replacements:
 		doc = do_edit(doc, to_replace, replacement)
-	
+
 	with open(target_file, "w", encoding="utf-8") as f:
 		f.write(doc)
 
@@ -188,7 +188,7 @@ def test_template_files():
 	assert_in_file("README.md",
 		"This document describes/defines FILL-THIS-OUT",
 		"see [ivoatexDoc](https://ivoa.net/documents/Notes/IVOATex/)")
-	
+
 	assert_in_file("LICENSE",
 		"Attribution-ShareAlike 4.0 International")
 
@@ -228,7 +228,7 @@ def test_extra_macros():
 			"In a Regression test, we sometimes want to break things.\n\n"
 			"\\begin{admonition}{Note}\nBut still be reasonable.\\end{admonition}"),
 		])
-	
+
 	execute("make Regress.html")
 
 	assert_in_file("Regress.html",
@@ -421,7 +421,7 @@ def test_all_bibliography():
 		(r"\appendix", "\n".join([
 			r"\nocite{*}"
 			r"\appendix"]))])
-	
+
 	execute("make Regress.html")
 
 	assert_not_in_file("Regress.blg",
@@ -436,15 +436,19 @@ def test_all_bibliography():
 	)
 
 
-def run_tests(branch_name):
+def run_tests(repo_url, branch_name):
 		os.environ["DOCNAME"] = "Regress"
 		execute("mkdir $DOCNAME")
 		os.chdir(os.environ["DOCNAME"])
 
 		execute("git init")
-		execute("git submodule add https://github.com/ivoa-std/ivoatex")
-# TODO: make repo configurable like with branch
-#		execute("git submodule add https://github.com/mbtaylor/ivoatex")
+
+		if repo_url.startswith("/"):
+		    git_command = "git -c protocol.file.allow=always"
+		else:
+        # be a bit more careful with remote repos
+		    git_command = "git"
+		execute(f"{git_command} submodule add {repo_url}")
 		if branch_name:
 			with in_dir("ivoatex"):
 				execute(f"git checkout '{branch_name}'")
@@ -488,6 +492,11 @@ def parse_command_line():
 	parser.add_argument("--branch",
 		dest="branch_name", default=None, metavar="NAME",
 		help="run against ivoatex branch NAME rather than master")
+	parser.add_argument("--repo-url",
+		dest="repo_url", default=None, metavar="URL",
+		help="use URL as submodule.  Defaults to the parent of the current"
+		    " directory.  Use https://github.com/ivoa-std/ivoatex for the"
+		    " ivoatexDoc behaviour.")
 
 	return parser.parse_args()
 
@@ -495,11 +504,14 @@ def parse_command_line():
 def main():
 	args = parse_command_line()
 
+	if args.repo_url is None:
+	    args.repo_url = os.path.realpath("..")
+
 	with tempfile.TemporaryDirectory("ivoatex") as dir:
 		try:
 			print(f"Testing in {dir}")
 			os.chdir(dir)
-			run_tests(args.branch_name)
+			run_tests(args.repo_url, args.branch_name)
 		except Exception as ex:
 			traceback.print_exc()
 			print(f"**Failure. Dumping you in a shell in the testbed.")
