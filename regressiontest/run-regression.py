@@ -295,7 +295,7 @@ def test_referencing():
         'We are not talking about Plante and Stébé et al. (2010)',
         "Bradner, S. (1997), ‘Key words",
         "Collections, Services Version 1.1’",
-        "http://doi.org/10.5479/ADS/bib/2010ivoa.spec.1202P")
+        "doi:10.5479/ADS/bib/2010ivoa.spec.1202P")
 
     execute("make bib-suggestions",
         "2010ivoa.spec.1202P -> 2021ivoa.spec.1102D ?")
@@ -455,7 +455,7 @@ def test_all_bibliography():
         '<a href="https://ui.adsabs.harvard.edu/abs/2006ASPC..351..666T"><tt>https://ui.', # rendered link
         '<dt><b>Plante &amp; Demleitner et al. (2018)</b></dt>', # from ivoabib
         'IVOA Recommendation 25 June 2018', # howpublished rendered
-        '<a href="http://doi.org/10.5479/ADS/bib/2018ivoa.spec.0625P"><tt>http://doi.org/10.5479', # ivoabib link
+        'doi:<a href="https://doi.org/10.5479/ADS/bib/2006ivoa.rept.0606A"><tt>10.5479/ADS/bib/2006ivoa.rept.0606A</tt></a>,', # ivoabib doi link
     )
 
 
@@ -506,7 +506,15 @@ def run_tests(repo_url, branch_name):
 
         test_all_bibliography()
 
-        run_shell()
+        # run_shell()
+
+
+def clean_environment():
+    """drops environment variables that may adversely influence our
+    tests.
+    """
+    # java spits these out when called, spoiling our outputs
+    del os.environ["JDK_JAVA_OPTIONS"]
 
 
 def parse_command_line():
@@ -525,6 +533,7 @@ def parse_command_line():
 
 
 def main():
+    clean_environment()
     args = parse_command_line()
 
     if args.repo_url is None:
@@ -535,9 +544,10 @@ def main():
             print(f"Testing in {dir}")
             os.chdir(dir)
             run_tests(args.repo_url, args.branch_name)
+            print("All tests passed.")
         except Exception as ex:
             traceback.print_exc()
-            print(f"**Failure. Dumping you in a shell in the testbed.")
+            print(f"*** Failure. Dumping you in a shell in the testbed.")
             print("Exit the shell to tear it down.")
             run_shell()
 
