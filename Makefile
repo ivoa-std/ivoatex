@@ -305,3 +305,17 @@ $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
 
 github-preview: $(GITHUB_BUILD) $(GITHUB_PREVIEW)
 
+help:
+	@echo Documentation on IVOATeX is available at
+	@echo https://ivoa.net/documents/Notes/IVOATexDoc.
+	@echo
+	@echo The most important targets are:
+	@echo
+	@echo "* '' -- a simple 'make' will build the PDF of the document"
+	@echo "* <docname>.html -- build the HTML version of the document"
+	@echo "* update -- pull the current version of ivoatex from github"
+	@echo "* new-release -- prepare for a new version of the document"
+	@echo "* bib-suggestions -- see if any references might need updates"
+	@echo "* generate -- re-build embedded generated content"
+	@echo "* upload -- upload a package to the IVOA document repo"
+	@echo "* test -- run (document-defined) tests"
