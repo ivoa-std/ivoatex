@@ -104,6 +104,15 @@ _DOCMAP ="""
 2019ivoa.spec.0520D note:DataCollect
 2013ivoa.rept.1213D note:TAPNotes
 2010ivoa.rept.0618D note:votstc
+2023ivoa.spec.1215M 2008ivoa.spec.1030O
+2023ivoa.spec.1215G 2014ivoa.spec.0523D
+2023ivoa.spec.1215B 2015ivoa.spec.0617D
+2023ivoa.spec.1117C 2021ivoa.spec.0310C
+2023ivoa.spec.0206D 2021ivoa.spec.0525D
+2023ivoa.spec.0125C 2021ivoa.spec.0616C
+2022ivoa.spec.1101S 2013ivoa.spec.1005S
+2022ivoa.spec.0727F 2019ivoa.spec.1007F
+2022ivoa.spec.0222D 2013ivoa.spec.1125P
 """
 
 
