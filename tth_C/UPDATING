@@ -36,4 +36,16 @@ Note 2023-07: Upstream still has TTH_CHARLEN 500, which is trouble on
 certain compilers with large bibliography items
 (https://github.com/ivoa-std/ivoatex/pull/104).  *If* you put in new code
 from upstream, until the relevant buffer overflows are fixed, manually bump
-this to 5000.
+this to 5000.  Similarly, (some of) the following buffers overflow on
+harmless document builds) on clang:
+
+	STATIC char environment[20]={0};   /* Name of environment */
+	STATIC char labelchar[20]={0}; /* Running label in current section. */
+	STATIC char envirchar[20]={0}; /* Running label in numbered environment. */
+	STATIC char refchar[20]={0};   /* Type of internal reference. */
+	STATIC char colorchar[20]={0};
+	STATIC char filechar[20]={0};
+	STATIC char filenext[20]={0}; /*sf*/
+	STATIC char auxflch[20]={0};
+
+For now, let's push them to 200.
