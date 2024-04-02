@@ -15269,14 +15269,14 @@ STATIC int countstart=0;
 #define partno counters[8+countstart]
 #define secnumdepth counters[9+countstart]
 STATIC int appendix=0;
-STATIC char environment[20]={0};   /* Name of environment */
-STATIC char labelchar[20]={0}; /* Running label in current section. */
-STATIC char envirchar[20]={0}; /* Running label in numbered environment. */
-STATIC char refchar[20]={0};   /* Type of internal reference. */
-STATIC char colorchar[20]={0};
-STATIC char filechar[20]={0};
-STATIC char filenext[20]={0}; /*sf*/
-STATIC char auxflch[20]={0};
+STATIC char environment[200]={0};   /* Name of environment */
+STATIC char labelchar[200]={0}; /* Running label in current section. */
+STATIC char envirchar[200]={0}; /* Running label in numbered environment. */
+STATIC char refchar[200]={0};   /* Type of internal reference. */
+STATIC char colorchar[200]={0};
+STATIC char filechar[200]={0};
+STATIC char filenext[200]={0}; /*sf*/
+STATIC char auxflch[200]={0};
 STATIC char schar[3]={0}; /*sf*/
 #define TNO 400
 STATIC char *tchar[TNO]={0}; /*sf*/
