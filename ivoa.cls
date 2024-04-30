@@ -270,10 +270,10 @@
      attention to the specification and to promote its
      widespread deployment. This enhances the functionality and
      interoperability inside the Astronomical Community.}
-		{UNKNOWN DOCUMENT (fix DOCTYPE)}}}}}}\par
+		{UNKNOWN DOCUMENT TYPE (fix DOCTYPE)}}}}}}\par
 	A list of current IVOA Recommendations and other technical documents
-	can be found at \href{https://www.ivoa.net/documents/
-	}{https://www.ivoa.net/documents/}.}
+	can be found in the IVOA document
+	repository\footnotemark\footnotetext{\url{https://www.ivoa.net/documents/}}.}
 
 % legacy definition when ivoatexmeta.tex does not yet define it
 \newcommand{\ivoaBaseURL}{https://www.ivoa.net/documents/\ivoaDocname}
