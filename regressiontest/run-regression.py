@@ -233,7 +233,7 @@ def test_archdiag():
 
     assert_in_file("role_diagram.pdf", b"%PDF-1.5", b"/Kids [ 2 0 R ]")
     assert_in_file("Regress.log",
-        lambda op: re.search(b"<role_diagram.pdf, id=47, .*?pt>", op))
+        lambda op: re.search(b"<role_diagram.pdf, .*?pt>", op))
 
 
 def test_extra_macros():

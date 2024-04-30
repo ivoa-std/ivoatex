@@ -134,10 +134,21 @@ What is inserted into the CSS within the XSLT is then the output of::
   base64 -w0 ls-sub.ttf
 
 
+Regression testing
+------------------
+
+If you change ivoatex, please run a regression test (and perhaps amend
+it if you added a feature).  To do that, after committing your changes,
+do::
+
+  cd regressiontest
+  python run_regression.py
+
+
 License
 -------
 
-Unless stated otherwise in the files, ivoatex is (c) 2014-2022, the
+Unless stated otherwise in the files, ivoatex is (c) 2014-2024, the
 GAVO project and can be used and distributed under the GNU General
 Public License (ask for additional licenses if you're unhappy with the
 GPL). See COPYING for details.
