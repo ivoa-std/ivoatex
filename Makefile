@@ -28,6 +28,7 @@ PYTHON?=python3
 #     zip
 #     librsvg2-bin or inkscape (for architecture diagrams)
 #     pdftk if you want to build draft pdfs with a watermark
+#     pdf2svg when you have TikZ-based vector graphics
 #     optionally, latexmk.
 #  If you don't have librsvg2 but you do have inkscape, you
 #  can set the SVGENGINE environment variable to inkscape.
@@ -171,6 +172,12 @@ else
 	rsvg-convert --output=$@ --format=pdf $< \
 		|| cp ivoatex/svg-fallback.pdf $@
 endif
+
+%.tikz.pdf: %.tikz.tex
+	pdflatex -jobname=$*.tikz '\documentclass[crop,tikz,multi=false]{standalone}\begin{document}\input '$<'\end{document}'
+
+%.tikz.svg: %.tikz.pdf
+	pdf2svg $< $@
 
 # generate may modify DOCNAME.tex controlled by arbitrary external binaries.
 # It is impossible to model these dependencies (here), and anyway

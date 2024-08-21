@@ -370,6 +370,8 @@
 
 \chardef\dquote'042
 
+\newcommand{\tikzfigure}[1]{\input{#1.tikz.tex}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Changing LaTeX/package defaults
 
 \renewcommand*\descriptionlabel[1]
