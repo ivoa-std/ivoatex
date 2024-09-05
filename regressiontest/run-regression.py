@@ -341,10 +341,6 @@ def test_auxiliaryurl_and_test():
 
 def test_git_integration():
     execute("git init")
-    edit_file("Makefile", [
-        ("SOURCES = ", "SOURCES = gitmeta.tex ")])
-    edit_file("Regress.tex", [
-        (r"\input tthdefs", "\\input tthdefs\n\\input gitmeta")])
     execute("make")
     execute("pdftotext Regress.pdf")
 
