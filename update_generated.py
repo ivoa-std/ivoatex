@@ -41,7 +41,7 @@ def escape_for_TeX(tx):
     # the $ is tricky because blindly replacing it with \$ will clash
     # with my backslash replacement.  Let's hope nobody ever has a
     # sterling sign in their schemas...
-    return tx.replace("$", "£",
+    escaped = tx.replace("$", "£",
         ).replace("\\", "$\\backslash$"
         ).replace("£", "\\$"
         ).replace("&", "\\&"
@@ -51,6 +51,24 @@ def escape_for_TeX(tx):
         ).replace("}", "\\}"
         ).replace("{", "\\{"
         ).replace('"', '{"}')
+
+    # long URLs in documentation strings are a pain because TeX
+    # will not break them.  Let's see if things break badly if we
+    # guess URLs and mark them up.  URL detection REs are of course
+    # black art.  If we want to get fancy here, try
+    # docutils.parsers.rst.states, look for uri=.
+
+    def replace_url(mat):
+      # we need to undo LaTeX escapes; LaTeX url could cope with them
+      # but tth doesn't.
+      return ("\\url{"
+        +re.sub(r"\\(.)", r"\1", mat.group(1))
+        +"}"+mat.group(2))
+
+    return re.sub(
+      r"(https?://[^/]*/[^\s]*?)([.,)]*(\s|$))",
+      replace_url,
+      escaped)
 
 
 def cmd_taptable(table_name):
