@@ -120,16 +120,17 @@ def run_shell():
     subprocess.call([os.environ.get("SHELL", "sh")])
 
 
-def do_edit(doc, to_replace, replacement):
+def do_edit(doc, to_replace, replacement, nop_ok):
     """replaces to_replace with replacement in doc, making sure something
     actually changed.
     """
     changed = doc.replace(to_replace, replacement)
-    assert doc!=changed, f"{to_replace} -> {replacement} didn't do anything"
+    if not nop_ok:
+        assert doc!=changed, f"{to_replace} -> {replacement} didn't do anything"
     return changed
 
 
-def edit_file(target_file, replacements):
+def edit_file(target_file, replacements, nop_ok=False):
     """replaces target_file with a version with replacements applied.
 
     Each (old, new) replacement must change the document.
@@ -138,7 +139,7 @@ def edit_file(target_file, replacements):
         doc = f.read()
 
     for to_replace, replacement in replacements:
-        doc = do_edit(doc, to_replace, replacement)
+        doc = do_edit(doc, to_replace, replacement, nop_ok)
 
     with open(target_file, "w", encoding="utf-8") as f:
         f.write(doc)
@@ -200,7 +201,7 @@ def test_first_run():
 
     assert_in_file("Regress.txt",
         "Working Group\nStandards and Processes",
-        "This version\nhttps://www.ivoa.net/documents/Regress/20230201",
+        "This version\nhttps://www.ivoa.net/documents/Notes/Regress/20230201",
         "\nTest, F., Other-Person, A. N.\n",
         "This is an IVOA Note expressing",
         "2 Normative Nonsense\n\n3",
@@ -401,7 +402,7 @@ def test_new_release():
         "DOCDATE = "+datetime.date.today().strftime("%Y-%m-%d"),
         "DOCTYPE = EN")
     assert_in_file("Regress.tex",
-        "\previousversion[https://www.ivoa.net/documents/Regress/20230201]{Version 1.0}",
+        "\previousversion[https://www.ivoa.net/documents/Notes/Regress/20230201]{Version 1.0}",
         "%\subsection{Changes from Version 1.0}")
 
     execute("make new-release", input=b"\n\n\n")
@@ -455,6 +456,21 @@ def test_all_bibliography():
     )
 
 
+def test_REC_material():
+    edit_file("Makefile", [
+        ("DOCTYPE = PEN", "DOCTYPE = REC"),
+        ("DOCTYPE = NOTE", "DOCTYPE = REC"),
+        ("DOCDATE = 2024-10-16", "DOCDATE = 2023-02-01")],
+        nop_ok=True)
+    execute("make")
+    execute("pdftotext Regress.pdf")
+    assert_in_file("Regress.txt",
+        "IVOA Recommendation 2023-02-01",
+        # note: No /Notes path part
+        "This version\nhttps://www.ivoa.net/documents/Regress/20230201",
+        "has been endorsed by the IVOA Executive Committee")
+
+
 def run_tests(repo_url, branch_name):
         os.environ["DOCNAME"] = "Regress"
         execute("mkdir $DOCNAME")
@@ -500,8 +516,9 @@ def run_tests(repo_url, branch_name):
 
             test_html_content()
 
-        test_all_bibliography()
+            test_all_bibliography()
 
+        test_REC_material()
         # run_shell()
 
 

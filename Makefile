@@ -53,7 +53,11 @@ versionedName:=$(DOCTYPE)-$(DOCNAME)-$(DOCVERSION)
 ifneq "$(DOCTYPE)" "REC"
 		versionedName:=$(versionedName)-$(subst -,,$(DOCDATE))
 endif
-DOCREPO_BASEURL ?= https://www.ivoa.net/documents/$(DOCNAME)
+ifeq "$(DOCTYPE)" "NOTE"
+	DOCREPO_BASEURL ?= https://www.ivoa.net/documents/Notes/$(DOCNAME)
+else
+	DOCREPO_BASEURL ?= https://www.ivoa.net/documents/$(DOCNAME)
+endif
 
 GENERATED_PNGS = $(VECTORFIGURES:pdf=png)
 
