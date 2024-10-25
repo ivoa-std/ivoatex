@@ -181,6 +181,7 @@ class DocumentMeta(object):
           "Standards and Processes": "std",
           "Semantics": "semantics",
           "Theory": "the",
+          "Technical Coordination Group": "tcg",
           "VO Event": "voe",
           "Time Domain": "voe",
           "Education": "edu",
