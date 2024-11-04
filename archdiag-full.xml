@@ -1,19 +1,6 @@
 <!--
-Document authors (ivoatex maintainers have different rules):
-
-* svn cp this file to role_diagram.xml, and then:
-
-* Remove all <rec> elements in there referring to standards not related
-  to the current one,
-
-* change the tag name for the current one from rec to thisrec
-
-* make role_diagram.pdf
-
-For the time being, keep both role_diagram.pdf and role_diagram.svg as
-created by this in the VCS.  This helps document builds on machines
-with missing dependencies.
-
+See https://ivoa.net/documents/Notes/IVOATexDoc/, sect. 2.2.3 for what
+to do with this as a user.
 
 Archdiag maintainers: When adding boxes here, first look for a good place,
 preferably in one of the grid positions given in the comments for the

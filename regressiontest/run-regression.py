@@ -460,7 +460,7 @@ def test_REC_material():
     edit_file("Makefile", [
         ("DOCTYPE = PEN", "DOCTYPE = REC"),
         ("DOCTYPE = NOTE", "DOCTYPE = REC"),
-        ("DOCDATE = 2024-10-16", "DOCDATE = 2023-02-01")],
+        ("DOCDATE = ", "DOCDATE = 2023-02-01 # ")],
         nop_ok=True)
     execute("make")
     execute("pdftotext Regress.pdf")
