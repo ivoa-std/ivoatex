@@ -1,0 +1,10 @@
+# This file gives (suggestions for) the links from the landing page in
+# the format <anchor text>;<doc type>;<file name>.
+# sumission.py will fill in the keys html-doc and pdf-doc, and you
+# should have a very good reason to change that.  You can add additional
+# entries, for instance for schema files and the like.
+# <doc type> at this point can be document and schema.
+# For now, no values may include semicolons; if you think you have to
+# include curly braces, escape them from python str.format.
+html;document;{html-doc}
+pdf;document;{pdf-doc}
