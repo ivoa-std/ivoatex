@@ -48,6 +48,26 @@ except ImportError:
 
 DOCREPO_URL = 'http://testingdocrepo.ivoa.info/new_doc'
 
+KNOWN_GROUPS = [
+    # this list is from ivoatexDoc.  I'm hoping to convince the docrepo folks
+    # to use it, too.
+    "Applications",
+    "Data Access Layer",
+    "Data Models",
+    "Grid and Web Services",
+    "Registry",
+    "Data Curation and Preservation",
+    "Standards and Processes",
+    "Semantics",
+    "Operations",
+    "Radio",
+    "Theory",
+    "VO Event",
+    "Time Domain",
+    "Education",
+    "No Group",
+    ]
+
 
 class ReportableError(Exception):
     """raise this with a human-readable error message to cause a non-traceback
@@ -127,6 +147,13 @@ class DocumentMeta(object):
                 self._authors.append(to_text(el))
             elif el.get("class")=="editor":
                 self._editors.append(to_text(el))
+
+    def validate(self):
+        # TODO: add more tests here
+        if self.group_name not in KNOWN_GROUPS:
+            raise ReportableError(f"{self.group_name} is it an IVOA"
+                " WG/IG name we recognise.  See ivoatexDoc for a"
+                " list of recognised strings.")
 
     @property
     def authors(self):
@@ -246,12 +273,15 @@ def validate_manifest(archive_file_name):
                 anchor, doctype, path = [s.strip() for s in line.split(";")]
                 if not path in members:
                     raise ReportableError(
-                        f"MANIFEST: Missing file in line:{line_no+1}: {path}")
+                        f"MANIFEST: Missing file in line {line_no+1}: {path}")
 
                 if doctype not in ["document", "schema"]:
                     raise ReportableError(
                         f"MANIFEST: Bad doctype {doctype}"
-                        f" in line:{line_no+1}: {path}")
+                        f" in line:{line_no+1}")
+
+            except ReportableError:
+                raise
 
             except Exception as ex:
                 raise ReportableError(
@@ -261,12 +291,17 @@ def validate_manifest(archive_file_name):
 def main(archive_file_name, dry_run):
     document_meta = DocumentMeta.from_makefile()
     document_meta.add_info_from_document()
+    document_meta.validate()
     validate_manifest(archive_file_name)
-    review_and_comment(document_meta)
+    if not dry_run:
+        # dry_run is used in regression testing, and we don't want to
+        # fake input there
+        review_and_comment(document_meta)
     print("Uploading... ", end="", flush=True)
 
     if dry_run:
-        with open("submission-payload.txt", "w", encoding="utf-8"):
+        with open("submission-payload.txt", "w", encoding="utf-8") as f:
+            f.write(archive_file_name+"\n")
             f.write("\n".join(f"{k} {v}" for k, v in
                 sorted(document_meta.get_post_payload().items()))+"\n")
         print("*** Aborted since --dry-run was passed.")
