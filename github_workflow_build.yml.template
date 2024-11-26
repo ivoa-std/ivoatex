@@ -39,7 +39,7 @@ jobs:
         test -f ${{ env.doc_name }}.bbl
 
     - name: Keep the PDF artefact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: PDF Preview
         path: ${{ env.doc_name }}.pdf
