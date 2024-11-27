@@ -284,7 +284,7 @@ docrepo.bib:
 
 ############# GitHub workflows configuration
 
-.PHONY: github-preview
+.PHONY: github-preview check-clear-ci clear-ci update-ci
 
 GITHUB_WORKFLOWS        = .github/workflows
 GITHUB_BUILD            = $(GITHUB_WORKFLOWS)/build.yml
@@ -298,14 +298,15 @@ $(GITHUB_WORKFLOWS):
 $(GITHUB_BUILD): $(GITHUB_WORKFLOWS) $(GITHUB_BUILD_TEMPLATE)
 	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_BUILD_TEMPLATE) > $@
 	@git add "$@"
-	@echo -e "* GitHub Workflow for PDF preview in PullRequest configured:\n      $@"
-	@echo '  => Run "git commit && git push" to enable GitHub PDF preview.'
+	@echo "* GitHub Workflow Build (to check compilation of the IVOA document)\
+	         \n  in PullRequest configured:\n                 $@"
+	@echo '  => Run "git commit && git push" to enable this Build workflow.'
 
 $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
 	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_PREVIEW_TEMPLATE) > $@
 	@git add "$@"
-	@echo -e "* GitHub Workflow for PDF preview at pushed commit configured:\n\
-	        $@\n\
+	@echo "* GitHub Workflow for PDF preview at pushed commit configured:\
+	         \n                 $@\n\
 	  -----------------------------------------------------------------------\n\
 	    Clickable badge toward the generated PDF preview:\n\n\
 	        [![PDF-Preview](https://img.shields.io/badge/Preview-PDF-blue)]\
@@ -316,6 +317,18 @@ $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
 	@echo '  => Run "git commit && git push" to enable GitHub PDF preview.'
 
 github-preview: $(GITHUB_BUILD) $(GITHUB_PREVIEW)
+
+check-clear-ci:
+	@echo "* You are about to remove the current following GitHub workflows:\n    - $(GITHUB_BUILD)\n    - $(GITHUB_PREVIEW)"
+	@read -p "  => Are you sure you want to remove them? [y/N] " ans && ans=$${ans:-N} ; \
+    ans=$$(echo $${ans} | tr '[:upper:]' '[:lower:]') ; \
+    [ $${ans} = y ] || [ $${ans} = yes ]
+
+clear-ci: check-clear-ci
+	@rm $(GITHUB_BUILD) $(GITHUB_PREVIEW)
+	@echo "  => GitHub workflows removed."
+
+update-ci: clear-ci github-preview
 
 help:
 	@echo Documentation on IVOATeX is available at
