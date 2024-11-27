@@ -30,12 +30,12 @@ jobs:
 
     - name: Setup dependencies
       run: |
-        sudo apt update
-        sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended xsltproc latexmk cm-super
-        sudo snap install pdftk
+        sudo apt install texlive-latex-base texlive-latex-recommended \
+                         texlive-latex-extra texlive-fonts-recommended
+                         pdftk xsltproc latexmk cm-super
 
     - name: Build the document
-      run: make ${{ env.doc_name }}-draft.pdf
+      run: make biblio ${{ env.doc_name }}-draft.pdf
 
     - name: Check the output
       run: |
