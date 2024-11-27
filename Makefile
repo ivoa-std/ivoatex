@@ -319,14 +319,18 @@ $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
 github-preview: $(GITHUB_BUILD) $(GITHUB_PREVIEW)
 
 check-clear-ci:
-	@echo "* You are about to remove the current following GitHub workflows:\n    - $(GITHUB_BUILD)\n    - $(GITHUB_PREVIEW)"
-	@read -p "  => Are you sure you want to remove them? [y/N] " ans && ans=$${ans:-N} ; \
-    ans=$$(echo $${ans} | tr '[:upper:]' '[:lower:]') ; \
-    [ $${ans} = y ] || [ $${ans} = yes ]
+	@if [ -f "$(GITHUB_BUILD)" -o -f "$(GITHUB_PREVIEW)" ]; then \
+	  echo "* You are about to remove the current following GitHub workflows:\n    - $(GITHUB_BUILD)\n    - $(GITHUB_PREVIEW)" ; \
+	  read -p "  => Are you sure you want to remove them? [y/N] " ans && ans=$${ans:-N} ; \
+      ans=$$(echo $${ans} | tr '[:upper:]' '[:lower:]') ; \
+      [ $${ans} = y ] || [ $${ans} = yes ] ; \
+	fi
 
 clear-ci: check-clear-ci
-	@rm $(GITHUB_BUILD) $(GITHUB_PREVIEW)
-	@echo "  => GitHub workflows removed."
+	@if [ -f "$(GITHUB_BUILD)" -o -f "$(GITHUB_PREVIEW)" ]; then \
+	  rm -f $(GITHUB_BUILD) $(GITHUB_PREVIEW) && \
+	  echo "  => GitHub workflows removed." ; \
+	fi
 
 update-ci: clear-ci github-preview
 
