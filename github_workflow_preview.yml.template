@@ -31,7 +31,7 @@ jobs:
     - name: Setup dependencies
       run: |
         sudo apt install texlive-latex-base texlive-latex-recommended \
-                         texlive-latex-extra texlive-fonts-recommended
+                         texlive-latex-extra texlive-fonts-recommended \
                          pdftk xsltproc latexmk cm-super
 
     - name: Build the document
