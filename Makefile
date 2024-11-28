@@ -296,14 +296,14 @@ $(GITHUB_WORKFLOWS):
 	@mkdir -p $@
 
 $(GITHUB_BUILD): $(GITHUB_WORKFLOWS) $(GITHUB_BUILD_TEMPLATE)
-	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_BUILD_TEMPLATE) > $@
+	@sed "s!^\(\s*doc_name\s*:\)!\1 $(DOCNAME)!g" $(GITHUB_BUILD_TEMPLATE) > $@
 	@git add "$@"
 	@echo "* GitHub Workflow Build (to check compilation of the IVOA document)\
 	         \n  in PullRequest configured:\n                 $@"
 	@echo '  => Run "git commit && git push" to enable this Build workflow.'
 
 $(GITHUB_PREVIEW): $(GITHUB_WORKFLOWS) $(GITHUB_PREVIEW_TEMPLATE)
-	@sed "s!^\(\s*doc_name:\)!\1 $(DOCNAME)!g" $(GITHUB_PREVIEW_TEMPLATE) > $@
+	@sed "s!^\(\s*doc_name\s*:\)!\1 $(DOCNAME)!g" $(GITHUB_PREVIEW_TEMPLATE) > $@
 	@git add "$@"
 	@echo "* GitHub Workflow for PDF preview at pushed commit configured:\
 	         \n                 $@\n\
