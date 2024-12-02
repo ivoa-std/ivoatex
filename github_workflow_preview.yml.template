@@ -32,7 +32,7 @@ jobs:
       run: |
         sudo apt install texlive-latex-base texlive-latex-recommended \
                          texlive-latex-extra texlive-fonts-recommended \
-                         python3-sphinxcontrib.svg2pdfconverter perl latexmk \
+                         librsvg2-bin latexmk \
                          pdftk xsltproc latexmk cm-super
 
     - name: Build the document
