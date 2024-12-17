@@ -108,8 +108,16 @@ clean:
 
 update:
 	@echo "*** updating ivoatex from github"
-	cd ivoatex && git checkout master
+	cd ivoatex && git checkout master && git pull
 	git submodule update --remote --rebase
+
+tag:
+	git tag $(versionedName)
+	git push origin --tags $(versionedName)
+
+untag:
+	git tag -d $(versionedName)
+	git push origin :$(versionedName)
 
 .FORCE:
 
