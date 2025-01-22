@@ -113,7 +113,7 @@ update:
 
 tag:
 	git tag $(versionedName)
-	git push origin --tags $(versionedName)
+	git push origin $(versionedName)
 
 untag:
 	git tag -d $(versionedName)
