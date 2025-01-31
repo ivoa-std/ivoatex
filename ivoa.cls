@@ -317,7 +317,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Various utilities for writing IVOA docs
 
 \newenvironment{admonition}[1]{ % a simple admonition box
-  \begin{table} %% TBD: use a different sort of insertion env?
+  \begin{table}[ht] %% TBD: use a different sort of insertion env?
   \hskip -0.75cm
   \begin{minipage}[r]{0.75\columnwidth}%
   {\color{lightgray}\hrule}
