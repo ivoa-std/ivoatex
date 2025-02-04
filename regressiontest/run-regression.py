@@ -57,7 +57,7 @@ def _assert_has(assertion, found_str, where):
         assert False, f"Cannot understand assertion: {assertion}"
 
 
-def execute(cmd, check_output=None, input=None):
+def execute(cmd, check_output=None, input=None, expected_status=0):
     """execute a subprocess.Popen-compatible command cmd under supervision.
 
     Specifically, we run with shell=True so the ivoatexDoc recipes work as
@@ -67,9 +67,10 @@ def execute(cmd, check_output=None, input=None):
     check_stdout is not met.  For now, that is: neither stdout nor stderr
     contains a string.
     """
-    output = subprocess.check_output(cmd, shell=True, input=input,
-        stderr=subprocess.STDOUT)
-    output = output.decode("utf-8")
+    proc = subprocess.run(cmd, shell=True, input=input,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    assert proc.returncode == expected_status
+    output = proc.stdout.decode("utf-8")
     if check_output is not None:
         with open("last-output.txt", "w", encoding="utf-8") as f:
             f.write(output)
@@ -307,7 +308,7 @@ def test_auxiliaryurl_and_test():
         (r"\section{Normative Nonsense}", "\\section{Normative Nonsense}\n"
             "See (\\auxiliaryurl{our-instance.xml}) for details.")])
     edit_file("Makefile", [
-        ('AUX_FILES =', 'AUX_FILES = our-schema.xml')])
+        ('AUX_FILES =', 'AUX_FILES = our-instance.xml')])
     with open("our-instance.xml", "w") as f:
         f.write(
 """<ri:Resource xmlns:ri="http://www.ivoa.net/xml/RegistryInterface/v1.0" xmlns:vg="http://www.ivoa.net/xml/VORegistry/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" created="2014-09-24T08:36:00Z" status="active" updated="2020-09-17T10:19:29Z" xsi:type="vg:Authority">
@@ -471,6 +472,58 @@ def test_REC_material():
         "has been endorsed by the IVOA Executive Committee")
 
 
+def test_submission():
+    execute("make fakeupload")
+    assert_in_file("submission-payload.txt",
+        "group_name Standards and Processes\n",
+        "title Regression test\n")
+
+    # submission.py at this point parses its metadata out of the
+    # built html in the repo, *not* the one in the zip.  If this
+    # changes, we have to change these tests, too
+    os.unlink("submission-payload.txt")
+    edit_file("Regress.html", [
+        ('<dd xmlns="" id="ivoagroup" class="WG">Standards and Processes</dd>',
+            '<dd xmlns="" id="ivoagroup" class="WG">Break and Crash</dd>'),])
+
+    execute(
+        "python ivoatex/submission.py --dry-run NOTE-Regress-1.0-20230201.zip",
+        expected_status=1,
+        check_output="Break and Crash is it an IVOA WG/IG name we recognise.")
+    os.unlink("Regress.html")
+
+
+def test_manifest():
+    execute("cp ivoatex/MANIFEST.in MANIFEST.in")
+    with open("MANIFEST.in", "a+") as f:
+        f.write("\nsample;document;my_sample.dat\n")
+    execute("make fakeupload", expected_status=2,
+        check_output="MANIFEST: Missing file in line 12: my_sample.dat")
+
+    with open("my_sample.dat", "w") as f:
+        f.write("abc")
+    edit_file("Makefile", [("AUX_FILES =", "AUX_FILES = my_sample.dat ")])
+    edit_file("MANIFEST.in", [("sample;document;", "sample;dcuoment;")])
+    execute("make fakeupload", expected_status=2,
+        check_output="MANIFEST: Bad doctype dcuoment in line:12")
+
+    edit_file("MANIFEST.in", [("sample;dcuoment;", "sample;document;")])
+    execute("make fakeupload")
+
+    # the first line of submission-payload is the name of the upload
+    # file
+    with open("submission-payload.txt") as f:
+        zip_name = next(f).strip()
+        base_name = zip_name[:-4]
+
+    assert_in_file("MANIFEST",
+        f"html;document;{base_name}.html",
+        f"pdf;document;{base_name}.pdf",
+        "sample;document;my_sample.dat")
+
+    execute(f"unzip -l {zip_name}", check_output="/MANIFEST")
+
+
 def run_tests(repo_url, branch_name):
         os.environ["DOCNAME"] = "Regress"
         execute("mkdir $DOCNAME")
@@ -518,7 +571,11 @@ def run_tests(repo_url, branch_name):
 
             test_all_bibliography()
 
-        test_REC_material()
+            test_REC_material()
+
+            test_submission()
+
+        test_manifest()
         # run_shell()
 
 
