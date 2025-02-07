@@ -57,7 +57,7 @@ def _assert_has(assertion, found_str, where):
         assert False, f"Cannot understand assertion: {assertion}"
 
 
-def execute(cmd, check_output=None, input=None):
+def execute(cmd, check_output=None, input=None, ok_status={0}):
     """execute a subprocess.Popen-compatible command cmd under supervision.
 
     Specifically, we run with shell=True so the ivoatexDoc recipes work as
@@ -69,6 +69,7 @@ def execute(cmd, check_output=None, input=None):
     """
     output = subprocess.check_output(cmd, shell=True, input=input,
         stderr=subprocess.STDOUT)
+
     output = output.decode("utf-8")
     if check_output is not None:
         with open("last-output.txt", "w", encoding="utf-8") as f:
@@ -383,7 +384,7 @@ def test_generated_content():
             "export TAPURL=http://reg.g-vo.org/tap\n\n-include ivoa")])
 
     execute("make generate")
-    execute("make")
+    subprocess.call("make", stdout=subprocess.PIPE)
     execute("pdftotext Regress.pdf")
 
     assert_in_file("Regress.txt",
@@ -471,6 +472,26 @@ def test_REC_material():
         "has been endorsed by the IVOA Executive Committee")
 
 
+def test_recupdate():
+    edit_file("Makefile", [
+        ("DOCTYPE = PEN", "DOCTYPE = REC"),
+        ("DOCTYPE = NOTE", "DOCTYPE = REC"),
+        ("DOCDATE = ", "DOCDATE = 2023-02-01 # ")],
+        nop_ok=True)
+    execute("make")
+
+    with open("ivoatex/stdrec-template.xml", "rb") as src:
+        with open("testrec.vor", "wb") as dest:
+            dest.write(src.read())
+    execute("python ivoatex/update-stdrec.py testrec.vor")
+    assert_in_file("testrec.vor",
+        'updated="'+datetime.datetime.utcnow().strftime("%Y-%m-%d"),
+        '<date role="Updated">2023-02-01 </date>',
+        '<date role="Updated">####</date>',
+        '<version>1.2</version>',
+        '<endorsedVersion status="rec">1.2</endorsedVersion>')
+
+
 def run_tests(repo_url, branch_name):
         os.environ["DOCNAME"] = "Regress"
         execute("mkdir $DOCNAME")
@@ -518,7 +539,9 @@ def run_tests(repo_url, branch_name):
 
             test_all_bibliography()
 
-        test_REC_material()
+            test_REC_material()
+
+        test_recupdate()
         # run_shell()
 
 
@@ -568,3 +591,4 @@ def main():
 if __name__=="__main__":
     main()
 
+# vim:et:sw=4:sta

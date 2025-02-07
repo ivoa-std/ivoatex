@@ -32,7 +32,7 @@ change updated whenever you re-upload this record. -->
   <!-- put the "short name" of your standard after std/: -->
   <identifier>ivo://ivoa.net/std/####</identifier>
   <!-- <altIdentifier>doi:Look up on ADS once your standard has made
-    it there and then update this. </altIdentifier>
+    it there and then update this. </altIdentifier> -->
   <curation>
     <publisher>IVOA</publisher>
 
@@ -46,7 +46,7 @@ change updated whenever you re-upload this record. -->
     </creator>
 
     <!-- this should be the date of the last recommendation -->
-    <date role="update">####</date>
+    <date role="Updated">####</date>
     <version>####</version> <!-- the document version -->
     <contact>
       <name>####</name> <!-- typcially, the name of the main WG/IG-->
