@@ -153,7 +153,7 @@ $(DOCNAME).html: $(DOCNAME).pdf ivoatex/tth-ivoa.xslt $(TTH) \
 
 #		| tee debug.html \
 
-$(DOCNAME).bbl: $(DOCNAME).tex ivoatex/ivoabib.bib ivoatexmeta.tex
+$(DOCNAME).bbl: $(DOCNAME).pdf ivoatex/ivoabib.bib ivoatexmeta.tex
 ifdef LATEXMK_BANNER
 	$(PDFLATEX) -bibtex $(DOCNAME).tex
 else
