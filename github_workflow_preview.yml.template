@@ -36,7 +36,7 @@ jobs:
                          pdftk xsltproc latexmk cm-super
 
     - name: Build the document
-      run: make biblio ${{ env.doc_name }}-draft.pdf
+      run: make ${{ env.doc_name }}-draft.pdf
 
     - name: Check the output
       run: |
