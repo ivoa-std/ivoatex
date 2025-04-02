@@ -265,6 +265,7 @@ IVOATEX_FILES = fromivoadoc.xslt Makefile COPYING \
 	ivoa.bst CHANGES archdiag-full.xml make-archdiag.xslt stdrec-template.xml \
 	submission.py svg-fallback.pdf suggest-bibupgrade.py aas_macros.tex \
 	license-template.txt make-templates.sh newrelease.py readme-template.md \
+	update-stdrec.py
 
 TTH_FILES= tth_C/CHANGES tth_C/latex2gif tth_C/ps2gif tth_C/tth.c \
 	tth_C/tth_manual.html tth_C/INSTALL tth_C/license.txt tth_C/ps2png \
