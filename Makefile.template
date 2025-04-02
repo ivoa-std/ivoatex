@@ -1,4 +1,4 @@
-# ivoatex Makefile.  The http://ivoa.net/documents/notes/IVOATex
+# ivoatex Makefile.  See http://ivoa.net/documents/notes/IVOATexDoc
 # for the targets available.
 
 # short name of your document (edit $DOCNAME.tex; would be like RegTAP)
