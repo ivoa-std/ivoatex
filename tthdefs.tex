@@ -124,9 +124,17 @@
 
 \newcommand{\ivoatex}{\special{html:<span class="ivoatex">IVOAT<sub>E</sub>X</span>}}
 
+\newcommand\currentDocURL %
+	{\ivoaBaseURL/\ivoaDocdatecode}
+\newcommand\currentDocRef % formatted reference to this document's landing page
+	{\href{\currentDocURL}{\currentDocURL}}
+\newcommand\latestDocRef
+	% formatted reference to a potential successor to the document's landing page
+	{\href{\ivoaBaseURL}{\ivoaBaseURL}}
+
 \newcommand{\auxiliaryurl}[1]{% don't use href, we need expansion
-\special{html:<a href="}https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1\special{html:">}%
-https://www.ivoa.net/documents/\ivoaDocname/\ivoaDocdatecode/#1%
+\special{html:<a href="}\currentDocURL/#1\special{html:">}%
+\currentDocURL/#1%
 \special{html:</a>}}
 
 \newcommand{\tikzfigure}[1]{\special{html:<img
