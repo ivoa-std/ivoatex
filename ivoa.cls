@@ -18,6 +18,8 @@
 
 \definecolor{ivoacolor}{rgb}{0.0,0.318,0.612}
 \definecolor{linkcolor}{rgb}{0.318,0,0.318}
+\definecolor{termcolor}{rgb}{0.6,0.1,0.1}
+
 
 \RequirePackage[colorlinks,
 	linkcolor=linkcolor,
@@ -360,6 +362,15 @@
   \catcode`\.=\active\let.=\bre@kabledot
   \catcode`\;=\active\let;=\bre@kablesemicolon}
 \gdef\@nducd{\endgroup}
+\endgroup
+\def\vocterm{\startvocterm\realvocterm}
+\def\realvocterm#1{\emph{\color{termcolor}#1}\endvocterm}
+\begingroup
+\gdef\breakablecolon{:\hskip0pt}
+\catcode`\:=\active
+\gdef\startvocterm{\begingroup
+  \catcode`\:=\active\let:=\breakablecolon}
+\gdef\endvocterm{\endgroup}
 \endgroup
 
 \newcommand{\sptablerule}{\noalign{\vspace{2pt}}\hline\noalign{\vspace{2pt}}}
