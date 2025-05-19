@@ -32,7 +32,7 @@ def do_api_request(_path, _payload=None, **arguments):
     """
     # Yeah, I know, I could save this with requests; but it'd be an
     # extra dependency, and avoiding that is worth a few lines.
-    auth_header = {"Authorization": "Bearer:%s"%ADS_TOKEN}
+    auth_header = {"Authorization": "Bearer %s"%ADS_TOKEN}
     req = request.Request(
         API_URL+_path+"?"+parse.urlencode(arguments),
         _payload,
@@ -42,7 +42,7 @@ def do_api_request(_path, _payload=None, **arguments):
 
 
 def main():
-    bibcode_recs = do_api_request("search/query/",
+    bibcode_recs = do_api_request("search/query",
         q="bibstem:(ivoa.spec or ivoa.rept)",
         rows="500",
         fl="bibcode")
