@@ -329,8 +329,8 @@ def test_auxiliaryurl_and_test():
     execute("make Regress.html")
 
     assert_in_file("Regress.html",
-        'See (<a href="https://www.ivoa.net/documents/Regress/20230201/'
-        'our-instance.xml">https://www.ivoa.net/documents/Regress/'
+        'See (<a href="https://www.ivoa.net/documents/Notes/Regress/20230201/'
+        'our-instance.xml">https://www.ivoa.net/documents/Notes/Regress/'
         '20230201/our-instance.xml</a>) for')
 
     edit_file("Makefile", [
