@@ -50,7 +50,7 @@ def escape_for_TeX(tx):
         ).replace("_", "\\_"
         ).replace("}", "\\}"
         ).replace("{", "\\{"
-        ).replace('"', '{"}')
+        ).replace('"', '{"}').strip()
 
     # long URLs in documentation strings are a pain because TeX
     # will not break them.  Let's see if things break badly if we

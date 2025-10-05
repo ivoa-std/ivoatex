@@ -47,6 +47,12 @@ Copyright 2015, The GAVO project
 
   <xsl:template match="xs:simpleType" mode="content"/>
 
+	<xsl:template match="xs:attributeGroup[@ref]">
+		<xsl:variable name="group-name" select="substring-after(@ref, ':')"/>
+    <xsl:apply-templates select="//xs:attributeGroup[@name=$group-name]//xs:attribute"
+    	mode="attributes"/>
+  </xsl:template>
+
   <xsl:template match="xs:complexType|xs:simpleType" mode="attributes">
     <xsl:if test=".//xs:attribute">
       <xsl:attribute namespace="" name="title">
@@ -269,7 +275,8 @@ Copyright 2015, The GAVO project
        </xsl:when>
        <xsl:otherwise>
          <xsl:if test="descendant::xs:enumeration">
-           <xsl:text>\item[Allowed Values]\hfil&#10;\begin{longtermsdescription}</xsl:text>
+           <xsl:text>\item[Allowed Values\vrule width 0pt depth 5pt]\hfil
+           \begin{longtermsdescription}</xsl:text>
            <xsl:apply-templates
              select="descendant::xs:enumeration"
              mode="controlledVocab"/>
@@ -633,8 +640,9 @@ Copyright 2015, The GAVO project
     <xsl:text>\end{lstlisting}</xsl:text>
   </xsl:template>
 
+
   <xsl:template match="xs:documentation" mode="typedesc">
-    <xsl:text>\noindent{\small</xsl:text>
+    <xsl:text>\noindent{\small{}</xsl:text>
   	<xsl:call-template name="escape-for-TeX">
  			<xsl:with-param name="tx" select="."/>
  		</xsl:call-template>
@@ -675,11 +683,12 @@ Copyright 2015, The GAVO project
       <xsl:text> Type Schema Definition}&#10;&#10;</xsl:text>
       <xsl:apply-templates select="." mode="xsddef"/>
 
-      <xsl:if test=".//xs:attribute">
+      <xsl:if test=".//xs:attribute or .//xs:attributeGroup[@ref]">
         <xsl:text>&#10;&#10;\vspace{0.5ex}\noindent\textbf{</xsl:text>
         <xsl:apply-templates select="." mode="attributeTitle"/>
         <xsl:text>}&#10;&#10;\begingroup\small\begin{bigdescription}</xsl:text>
         <xsl:apply-templates select="." mode="attributes"/>
+     		<xsl:apply-templates select=".//xs:attributeGroup[@ref]"/>
         <xsl:text>&#10;\end{bigdescription}\endgroup&#10;&#10;</xsl:text>
       </xsl:if>
 
