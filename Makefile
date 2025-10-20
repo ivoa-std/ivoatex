@@ -18,6 +18,8 @@ CSS_HREF = https://www.ivoa.net/misc/ivoa_doc.css
 TTH = ivoatex/tth_C/tth
 ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 PYTHON?=python3
+CC?=gcc
+CFLAGS?="-std=gnu17"
 
 #  Requirements:
 #     XSLT processor
@@ -234,7 +236,7 @@ upload: package
 #  TtH source seems to be highly portable, so compilation should be easy
 #  as long as you have a C compiler.
 $(TTH): ivoatex/tth_C/tth.c
-	$(CC) -o $(TTH) ivoatex/tth_C/tth.c
+	$(CC) $(CFLAGS) -o $(TTH) ivoatex/tth_C/tth.c
 
 ############# architecture diagram stuff (to be executed in this directory)
 
