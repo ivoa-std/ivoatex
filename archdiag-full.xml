@@ -47,7 +47,7 @@ of the various sections) to have the box centered.
   <!-- DAL: x=655, y=155..435 -->
   <rec name="DALI" x="310" y="290" w="33"/>
   <rec name="ADQL" x="250" y="160" w="37"/>
-  <rec name="UDFCatalogue" x="250" y="185" w="75"/>
+  <rec name="UDFCat" x="245" y="185" w="47"/>
 
   <rec name="ConeSearch" x="665.5" y="155" w="69"/>
   <prerec name="DAP" x="686" y="180" w="28"/>
