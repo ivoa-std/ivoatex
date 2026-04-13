@@ -129,7 +129,7 @@ gitmeta.tex: .FORCE
 	@/bin/echo -n "$(shell git log -1 --date=short --pretty=%h 2> /dev/null)" >> $@
 	@if [ ! -z "$(shell git status --porcelain -uno 2> /dev/null)" ]; then /bin/echo -n -dirty >> $@; fi
 	@/bin/echo } >> $@
-	@/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ai 2> /dev/null) '}' >>$@
+	@/bin/echo '\vcsdate{' $(shell git log -1 --date=short --pretty=%ci 2> /dev/null) '}' >>$@
 
 
 ivoatexmeta.tex: Makefile
