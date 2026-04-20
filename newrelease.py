@@ -34,7 +34,10 @@ def add_previous_version(spec):
     to docname.tex.
     """
     docname = spec["Docname"]
-    cur_document_url = spec["BaseURL"]+"/"+spec["Docdatecode"]
+    if spec["Doctype"]=="NOTE":
+        cur_document_url = spec["BaseURL"]+"/"
+    else:
+        cur_document_url = spec["BaseURL"]+"/"+spec["Docdatecode"]
 
     if os.environ.get("IVOATEX_HUSH")!="shsh":
         print("I am opening a web browser that should show the last\n"
