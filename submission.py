@@ -171,7 +171,7 @@ class DocumentMeta(object):
         meta_keys = {}
         with open("Makefile", encoding="utf-8") as f:
             for ln in f:
-                mat = re.match("(\w+)\s*=\s*(.*)", ln)
+                mat = re.match(r"(\w+)\s*=\s*(.*)", ln)
                 if mat:
                     meta_keys[mat.group(1)] = mat.group(2)
 
@@ -199,7 +199,7 @@ class DocumentMeta(object):
     def _parse_DOCVERSION(version_string):
         """helps from_makefile by returning form keys from the document version.
         """
-        mat = re.match("(\d).(\d+)", version_string)
+        mat = re.match(r"(\d).(\d+)", version_string)
         if not mat:
             raise ReportableError("DOCVERSION in Makefile (%s) garbled."%
                 version_string)
@@ -213,7 +213,7 @@ class DocumentMeta(object):
         (actually, in the new docrepo we don't need to parse; but
         we still do some basic format validation.
         """
-        mat = re.match("(\d\d\d\d)-(\d\d)-(\d\d)", date_string)
+        mat = re.match(r"(\d\d\d\d)-(\d\d)-(\d\d)", date_string)
         if not mat:
             raise ReportableError("DOCDATE in Makefile (%s) garbled."%
                 date_string)
@@ -275,7 +275,7 @@ def validate_manifest(archive_file_name):
                     raise ReportableError(
                         f"MANIFEST: Missing file in line {line_no+1}: {path}")
 
-                if doctype not in ["document", "schema"]:
+                if doctype not in ["document", "schema", "example"]:
                     raise ReportableError(
                         f"MANIFEST: Bad doctype {doctype}"
                         f" in line:{line_no+1}")
