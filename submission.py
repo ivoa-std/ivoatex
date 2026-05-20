@@ -37,6 +37,7 @@ import sys
 import tempfile
 import zipfile
 from xml.etree import ElementTree as etree
+from html import parser as htmlparser
 
 try:
     import requests
@@ -288,6 +289,56 @@ def validate_manifest(archive_file_name):
                     f"MANIFEST: bad syntax in line {line_no+1} ({ex})")
 
 
+class ErrorLocator(htmlparser.HTMLParser):
+    """An htmllib parser for extracting an error from the docrepo response.
+
+    The error message comes within an element with role="alert".
+
+    Yes, this would be a one-liner with beautifulsoup, but I'd like to keep
+    dependencies minimal here.
+    """
+    def __init__(self):
+        super().__init__()
+        self.gobbling_message = False
+        self.element_stack = []
+        self.message = []
+
+    def handle_starttag(self, tag, attrs):
+        if self.gobbling_message:
+            self.element_stack.append(tag)
+        elif dict(attrs).get("role")=="alert":
+            self.gobbling_message = True
+
+    def handle_endtag(self, tag):
+        if self.gobbling_message:
+            self.element_stack.pop()
+            if not self.element_stack:
+                self.gobbling_message = False
+
+    def handle_data(self, data):
+        if self.gobbling_message:
+            self.message.append(data.strip())
+
+    def get_message(self):
+        if self.message:
+            return " ".join(m for m in self.message if m)
+        else:
+            return None
+
+
+def get_error(response):
+    """returns an error message embedded in response.
+
+    (that's the text within an element with role="alert").
+
+    If there is no error message, this returns None.
+    """
+    parser = ErrorLocator()
+    parser.feed(response)
+
+    return parser.get_message()
+
+
 def main(archive_file_name, dry_run):
     document_meta = DocumentMeta.from_makefile()
     document_meta.add_info_from_document()
@@ -312,9 +363,11 @@ def main(archive_file_name, dry_run):
             data=document_meta.get_post_payload(),
             files=[('filename', (sys.argv[1], upload))])
 
-    sys.stdout.write("done (result in docrepo-response.html)\n")
-    with open("docrepo-response.html", "w", encoding="utf-8") as f:
-        f.write(resp.text)
+    msg = get_error(resp.text)
+    if msg:
+        with open("docrepo-response.html", "w", encoding="utf-8") as f:
+            f.write(resp.text)
+        raise ReportableError(f"Document repository refused with '{msg}'\n")
 
 
 if __name__=="__main__":
@@ -329,7 +382,7 @@ if __name__=="__main__":
     try:
         main(args.pkgname, args.dry_run)
     except ReportableError as msg:
-        sys.stderr.write("*** Failure while preparing submission:\n")
+        sys.stderr.write("*** Failure during submission:\n")
         sys.exit(msg)
 
 # vim:sta:sw=4:et
