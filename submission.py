@@ -47,7 +47,7 @@ except ImportError:
         "*** Please install it (Debian: python3-requests; pypi: requests).\n")
 
 
-DOCREPO_URL = 'http://testingdocrepo.ivoa.info/new_doc'
+DOCREPO_URL = 'http://testingdocrepo.ivoa.info/api/upload'
 
 KNOWN_GROUPS = [
     # this list is from ivoatexDoc.  I'm hoping to convince the docrepo folks
@@ -355,7 +355,7 @@ def main(archive_file_name, dry_run):
             f.write(archive_file_name+"\n")
             f.write("\n".join(f"{k} {v}" for k, v in
                 sorted(document_meta.get_post_payload().items()))+"\n")
-        print("*** Aborted since --dry-run was passed.")
+        print("\n*** Aborted since --dry-run was passed.")
         return
 
     with open(sys.argv[1], "rb") as upload:
@@ -368,6 +368,9 @@ def main(archive_file_name, dry_run):
         with open("docrepo-response.html", "w", encoding="utf-8") as f:
             f.write(resp.text)
         raise ReportableError(f"Document repository refused with '{msg}'\n")
+
+    else:
+        print("\nSucceeded.\n")
 
 
 if __name__=="__main__":
