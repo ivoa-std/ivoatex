@@ -10,20 +10,23 @@ to).
 
 Fields needed:
 
-* doctitle
-* conciseName
+* title
+* concise_name
 * email
 * filename
-* author
-* editor
+* authors
+* editors
 * abstract
 * comment
+* group_name (this is controlled vocabulary that authors must follow;
+  we should probably validate that here)
+* version_major, version_minor
+* date
+* status (one of Note, WD, PR, REC, EN, PEN, Other)
 
-* group (one of app, dal, dm, gws, reg, dcp, std, semantics, the, voe, vot,
-  voq)
-* docver1, docver2
-* year, month, day
-* doctype (one of note, wd, pr, rec, other)
+This is a bit lame in that we (largely) work on the repo rather than the
+zipfile to work out these values.  If this ever becomes a problem, see
+what we are doing to validate the MANIFEST.
 """
 
 import pprint
@@ -32,7 +35,9 @@ import re
 import subprocess
 import sys
 import tempfile
+import zipfile
 from xml.etree import ElementTree as etree
+from html import parser as htmlparser
 
 try:
     import requests
@@ -42,7 +47,27 @@ except ImportError:
         "*** Please install it (Debian: python3-requests; pypi: requests).\n")
 
 
-DOCREPO_URL = 'https://www.ivoa.net/cgi-bin/up.cgi'
+DOCREPO_URL = 'http://testingdocrepo.ivoa.info/api/upload'
+
+KNOWN_GROUPS = [
+    # this list is from ivoatexDoc.  I'm hoping to convince the docrepo folks
+    # to use it, too.
+    "Applications",
+    "Data Access Layer",
+    "Data Models",
+    "Grid and Web Services",
+    "Registry",
+    "Data Curation and Preservation",
+    "Standards and Processes",
+    "Semantics",
+    "Operations",
+    "Radio",
+    "Theory",
+    "VO Event",
+    "Time Domain",
+    "Education",
+    "No Group",
+    ]
 
 
 class ReportableError(Exception):
@@ -69,17 +94,17 @@ class DocumentMeta(object):
     For now, we just use attributes named like the fields in the
     IVOA docrepo API.
     """
-    _attrs = ["doctitle", "conciseName", "email",
-        "author", "editor", "abstract",
-        "comment", "group", "docver1", "docver2",
-        "year", "month", "day", "doctype"]
+    _attrs = ["title", "concise_name", "email",
+        "authors", "editors", "abstract",
+        "comment", "group_name", "version_major", "version_minor",
+        "date", "status"]
 
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
             setattr(self, k, v)
         self._authors = []
         self._editors = []
-        self.group = None
+        self.group_name = None
         self.comment = ""
 
     def get_post_payload(self):
@@ -93,15 +118,10 @@ class DocumentMeta(object):
             payload[name] = getattr(self, name)
         return payload
 
-    def get_date(self):
-        """returns the document date in ISO format.
-        """
-        return "%s-%s-%s"%(self.year, self.month, self.day)
-
     def add_info_from_document(self):
         """tries to obtain missing metadata from the formatted (XHTML) source.
         """
-        with open(self.conciseName+".html", "rb") as f:
+        with open(self.concise_name+".html", "rb") as f:
             tree = etree.parse(f)
 
         # The following would be a bit smoother if we had xpath; there's
@@ -111,7 +131,7 @@ class DocumentMeta(object):
 
         # first h1 is the document title
         for el in tree.iter(H("h1")):
-            self.doctitle = to_text(el)
+            self.title = to_text(el)
             break
 
         # pull things with ids or unique classes
@@ -123,18 +143,25 @@ class DocumentMeta(object):
                 el[0].text = ""
                 self.abstract = to_text(el)
             elif el.get("id")=="ivoagroup":
-                self.group = self._get_wg_code(to_text(el))
+                self.group_name = to_text(el)
             elif el.get("class")=="author":
                 self._authors.append(to_text(el))
             elif el.get("class")=="editor":
                 self._editors.append(to_text(el))
 
+    def validate(self):
+        # TODO: add more tests here
+        if self.group_name not in KNOWN_GROUPS:
+            raise ReportableError(f"{self.group_name} is it an IVOA"
+                " WG/IG name we recognise.  See ivoatexDoc for a"
+                " list of recognised strings.")
+
     @property
-    def author(self):
+    def authors(self):
         return ", ".join(self._authors)
 
     @property
-    def editor(self):
+    def editors(self):
         return ", ".join(self._editors)
 
     @classmethod
@@ -145,17 +172,17 @@ class DocumentMeta(object):
         meta_keys = {}
         with open("Makefile", encoding="utf-8") as f:
             for ln in f:
-                mat = re.match("(\w+)\s*=\s*(.*)", ln)
+                mat = re.match(r"(\w+)\s*=\s*(.*)", ln)
                 if mat:
                     meta_keys[mat.group(1)] = mat.group(2)
 
         kwargs = {}
         for input_key, parser_function in [
-                ("DOCNAME", lambda v: [("conciseName", v.strip())]),
+                ("DOCNAME", lambda v: [("concise_name", v.strip())]),
                 ("DOCVERSION", cls._parse_DOCVERSION),
                 ("DOCDATE", cls._parse_DOCDATE),
                 ("AUTHOR_EMAIL", cls._parse_AUTHOR_EMAIL),
-                ("DOCTYPE", lambda v: [("doctype", v.strip().lower())])]:
+                ("DOCTYPE", lambda v: [("status", v.strip())])]:
             if input_key not in meta_keys:
                 raise ReportableError("%s not defined/garbled in Makefile"
                     " but required for upload."%input_key)
@@ -165,69 +192,34 @@ class DocumentMeta(object):
         res = cls(**kwargs)
 
         if "IVOA_GROUP" in meta_keys:
-            res.group = res._get_wg_code(meta_keys["IVOA_GROUP"])
+            res.group_name = res._get_wg_code(meta_keys["IVOA_GROUP"])
 
         return res
-
-    _wg_mapping = {
-        "Applications": "app",
-          "DAL": "dal",
-          "Data Access Layer": "dal",
-          "Data Models": "dm",
-          "Grid and Web Services": "gws",
-          "Registry": "reg",
-          "Data Curation and Preservation": "dcp",
-          "Documents and Standards": "std",
-          "Standards and Processes": "std",
-          "Semantics": "semantics",
-          "Theory": "the",
-          "Technical Coordination Group": "tcg",
-          "VO Event": "voe",
-          "Time Domain": "voe",
-          "Education": "edu",
-          "Operations": "ops",
-          "Radio": "rad",
-          "No Group": "none",
-      }
-
-    def _get_wg_code(self, wg_string):
-        """returns one of the docrepo codes for the ivoa WGs.
-
-        This will look at wg_string only if self.group isn't already
-        set (in which case self.group is simply returned); this allows
-        overriding the WG name in the Makefile if necessary.
-        """
-        if self.group:
-            return self.group
-        if wg_string not in self._wg_mapping.keys():
-            raise ReportableError("ivoagroup must be one of %s.  If this is"
-                " really inappropriate, set IVOA_GROUP = No Group in the Makefile"%
-                ", ".join(self._wg_mapping.keys()))
-        return self._wg_mapping[wg_string]
 
     @staticmethod
     def _parse_DOCVERSION(version_string):
         """helps from_makefile by returning form keys from the document version.
         """
-        mat = re.match("(\d).(\d+)", version_string)
+        mat = re.match(r"(\d).(\d+)", version_string)
         if not mat:
             raise ReportableError("DOCVERSION in Makefile (%s) garbled."%
                 version_string)
-        yield "docver1", mat.group(1)
-        yield "docver2", mat.group(2)
+        yield "version_major", mat.group(1)
+        yield "version_minor", mat.group(2)
 
     @staticmethod
     def _parse_DOCDATE(date_string):
         """helps from_makefile by returning form keys from the document date.
+
+        (actually, in the new docrepo we don't need to parse; but
+        we still do some basic format validation.
         """
-        mat = re.match("(\d\d\d\d)-(\d\d)-(\d\d)", date_string)
+        mat = re.match(r"(\d\d\d\d)-(\d\d)-(\d\d)", date_string)
         if not mat:
             raise ReportableError("DOCDATE in Makefile (%s) garbled."%
                 date_string)
 
-        yield "year", mat.group(1)
-        yield "month", mat.group(2)
-        yield "day", mat.group(3)
+        yield "date", mat.group()
 
     @staticmethod
     def _parse_AUTHOR_EMAIL(email_string):
@@ -254,40 +246,146 @@ def review_and_comment(document_meta):
 
     pprint.pprint(document_meta.get_post_payload())
     print("-----------------------\n")
-    print("Going to upload %s\n"%document_meta.doctitle)
+    print("Going to upload %s\n"%document_meta.title)
     print("*** Version: %s.%s, %s of %s ***\n"%(
-        document_meta.docver1,
-        document_meta.docver2,
-        document_meta.doctype,
-        document_meta.get_date()))
+        document_meta.version_major,
+        document_meta.version_minor,
+        document_meta.status,
+        document_meta.date))
     print("Hit ^C if this (or anthing in the dict above) is wrong,"
         " enter to upload.")
     input()
 
 
-def main(archive_file_name):
+def validate_manifest(archive_file_name):
+    """raises a ReportableError if we notice anything is wrong with the
+    MANIFEST.
+    """
+    with zipfile.ZipFile(archive_file_name) as archive:
+        # strip off the directory part, since that is not part of
+        # the manifest paths.
+        members = [n.split("/", 1)[-1] for n in archive.namelist()]
+
+    with open("MANIFEST") as f:
+        for line_no, line in enumerate(f):
+            if line.startswith("#") or not line.strip():
+                continue
+            try:
+                anchor, doctype, path = [s.strip() for s in line.split(";")]
+                if not path in members:
+                    raise ReportableError(
+                        f"MANIFEST: Missing file in line {line_no+1}: {path}")
+
+                if doctype not in ["document", "schema", "example"]:
+                    raise ReportableError(
+                        f"MANIFEST: Bad doctype {doctype}"
+                        f" in line:{line_no+1}")
+
+            except ReportableError:
+                raise
+
+            except Exception as ex:
+                raise ReportableError(
+                    f"MANIFEST: bad syntax in line {line_no+1} ({ex})")
+
+
+class ErrorLocator(htmlparser.HTMLParser):
+    """An htmllib parser for extracting an error from the docrepo response.
+
+    The error message comes within an element with role="alert".
+
+    Yes, this would be a one-liner with beautifulsoup, but I'd like to keep
+    dependencies minimal here.
+    """
+    def __init__(self):
+        super().__init__()
+        self.gobbling_message = False
+        self.element_stack = []
+        self.message = []
+
+    def handle_starttag(self, tag, attrs):
+        if self.gobbling_message:
+            self.element_stack.append(tag)
+        elif dict(attrs).get("role")=="alert":
+            self.gobbling_message = True
+
+    def handle_endtag(self, tag):
+        if self.gobbling_message:
+            self.element_stack.pop()
+            if not self.element_stack:
+                self.gobbling_message = False
+
+    def handle_data(self, data):
+        if self.gobbling_message:
+            self.message.append(data.strip())
+
+    def get_message(self):
+        if self.message:
+            return " ".join(m for m in self.message if m)
+        else:
+            return None
+
+
+def get_error(response):
+    """returns an error message embedded in response.
+
+    (that's the text within an element with role="alert").
+
+    If there is no error message, this returns None.
+    """
+    parser = ErrorLocator()
+    parser.feed(response)
+
+    return parser.get_message()
+
+
+def main(archive_file_name, dry_run):
     document_meta = DocumentMeta.from_makefile()
     document_meta.add_info_from_document()
-    review_and_comment(document_meta)
-    sys.stdout.write("Uploading... ")
-    sys.stdout.flush()
+    document_meta.validate()
+    validate_manifest(archive_file_name)
+    if not dry_run:
+        # dry_run is used in regression testing, and we don't want to
+        # fake input there
+        review_and_comment(document_meta)
+    print("Uploading... ", end="", flush=True)
+
+    if dry_run:
+        with open("submission-payload.txt", "w", encoding="utf-8") as f:
+            f.write(archive_file_name+"\n")
+            f.write("\n".join(f"{k} {v}" for k, v in
+                sorted(document_meta.get_post_payload().items()))+"\n")
+        print("\n*** Aborted since --dry-run was passed.")
+        return
 
     with open(sys.argv[1], "rb") as upload:
         resp = requests.post(DOCREPO_URL,
             data=document_meta.get_post_payload(),
             files=[('filename', (sys.argv[1], upload))])
 
-    sys.stdout.write("done (result in docrepo-response.html)\n")
-    with open("docrepo-response.html", "w", encoding="utf-8") as f:
-        f.write(resp.text)
+    msg = get_error(resp.text)
+    if msg:
+        with open("docrepo-response.html", "w", encoding="utf-8") as f:
+            f.write(resp.text)
+        raise ReportableError(f"Document repository refused with '{msg}'\n")
+
+    else:
+        print("\nSucceeded.\n")
 
 
 if __name__=="__main__":
+    import argparse
+    parser = argparse.ArgumentParser(
+        description="Upload an IVOA document")
+    parser.add_argument("pkgname", help="Name of the archive to upload.")
+    parser.add_argument("--dry-run", action="store_true",
+        dest="dry_run", help="Only do local actions, but do no http requests.")
+    args = parser.parse_args()
+
     try:
-        if len(sys.argv)!=2:
-            raise ReportableError(
-                "Usage: %s <upload package file name>"%sys.argv[0])
-        main(sys.argv[1])
+        main(args.pkgname, args.dry_run)
     except ReportableError as msg:
-        sys.stderr.write("*** Failure while preparing submission:\n")
+        sys.stderr.write("*** Failure during submission:\n")
         sys.exit(msg)
+
+# vim:sta:sw=4:et
