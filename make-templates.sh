@@ -22,3 +22,4 @@ copyAndAdd ivoatex/Makefile.template Makefile
 copyAndAdd ivoatex/svn-ignore.txt .gitignore
 copyAndAdd ivoatex/readme-template.md README.md
 copyAndAdd ivoatex/license-template.txt LICENSE
+copyAndAdd ivoatex/MANIFEST.in MANIFEST.in
