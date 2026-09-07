@@ -13,6 +13,8 @@ RUN gcc -o tth tth.c
 
 FROM ubuntu:24.04
 
+ARG TARGETARCH
+
 COPY --from=build /workspace/tth /usr/local/bin/tth
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -47,14 +49,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /workspace
 
 # get the latest version of pandoc from github releases and install it
-RUN curl -L -o /tmp/pandoc.deb  https://github.com/jgm/pandoc/releases/download/3.11/pandoc-3.11-1-amd64.deb\
+RUN curl -L -o /tmp/pandoc.deb  https://github.com/jgm/pandoc/releases/download/3.11/pandoc-3.11-1-${TARGETARCH}.deb\
     && dpkg -i /tmp/pandoc.deb \
     && rm /tmp/pandoc.deb
 
 # Pre-install Python deps
 COPY requirements.txt /tmp/requirements.txt
-RUN python3 -m pip install --upgrade pip \
-    && python3 -m pip install -r /tmp/requirements.txt \
+RUN python3 -m venv .venv && ./.venv/bin/python3 -m pip install --upgrade pip \
+    && ./.venv/bin/python3 -m pip install -r /tmp/requirements.txt \
     && rm -f /tmp/requirements.txt
 
 CMD ["bash"]
