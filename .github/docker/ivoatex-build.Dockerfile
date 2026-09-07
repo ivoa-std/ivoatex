@@ -1,7 +1,8 @@
 #This is a dockerfile for building the ivoatex documentation
 #it is designed to be used in a GitHub Actions workflow, but can also be used locally for development and testing.
 
-FROM ubuntu:22.04
+
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PIP_NO_CACHE_DIR=1 \
@@ -35,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /workspace
 
 # get the latest version of pandoc from github releases and install it
-RUN curl -L -o /tmp/pandoc.deb  https://github.com/jgm/pandoc/releases/download/3.9.0.2/pandoc-3.9.0.2-1-amd64.deb\
+RUN curl -L -o /tmp/pandoc.deb  https://github.com/jgm/pandoc/releases/download/3.11/pandoc-3.11-amd64.deb\
     && dpkg -i /tmp/pandoc.deb \
     && rm /tmp/pandoc.deb
 
