@@ -4,9 +4,10 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "../docker/ivoatex-build.Dockerfile"
+      - ".github/docker/ivoatex-build.Dockerfile"
       - "requirements.txt"
       - ".github/workflows/build-container.yml"
+      - "tth_C/*"
   workflow_dispatch:
 
 permissions:
