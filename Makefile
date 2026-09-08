@@ -15,7 +15,7 @@ IVOATEX_VERSION = 1.5
 .DELETE_ON_ERROR:
 
 CSS_HREF = https://www.ivoa.net/misc/ivoa_doc.css
-TTH = ivoatex/tth_C/tth
+TTH?=ivoatex/tth_C/tth
 ARCHIVE_FILES = $(DOCNAME).tex $(DOCNAME).pdf $(DOCNAME).html $(FIGURES)
 PYTHON?=python3
 CC?=gcc
