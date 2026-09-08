@@ -59,4 +59,7 @@ RUN python3 -m venv .venv && ./.venv/bin/python3 -m pip install --upgrade pip \
     && ./.venv/bin/python3 -m pip install -r /tmp/requirements.txt \
     && rm -f /tmp/requirements.txt
 
+# override TTH with the pre-built one
+ENV TTH=/usr/local/bin/tth
+
 CMD ["bash"]
