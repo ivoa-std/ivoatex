@@ -18,20 +18,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    # use pre-built container
+    container:
+      image: ghcr.io/ivoa-std/ivoadoc:latest
+
     steps:
 
     - name: Checkout the repository
       uses: actions/checkout@v4
       with:
         submodules: true
-
-    - name: Setup dependencies
-      run: |
-        sudo apt update
-        sudo apt install texlive-latex-base texlive-latex-recommended \
-                         texlive-latex-extra texlive-fonts-recommended \
-                         librsvg2-bin latexmk \
-                         pdftk xsltproc latexmk cm-super
 
     - name: Build the document
       run: make
