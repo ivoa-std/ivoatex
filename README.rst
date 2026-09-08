@@ -35,9 +35,29 @@ Crib Sheet
 For your convenience (you should skim over the note anyway), here's a
 few crib sheets on ivoaTeX operation.
 
+Using the Docker Image
+~~~~~~~~~~~~~~~~~~~~~~
+
+The requirements to run ivoaTeX are defined within a `Docker file <.github/docker/ivoatex-build.Dockerfile>_`
+which is built automatically to run the GitHub actions. If you have Docker installed locally
+and wish to use the same image, then you can execute the following::
+
+  docker run -it -v $HOME/Work/ivoa/TAP:/doc ghcr.io/ivoa-std/ivoadoc:latest bash
+  cd /doc
+  make
+
+where the part of the ``-v`` argument before the colon is the local path the the document
+source and the part after the colon is the path within the container where it will be mounted.
+You can then run ``make`` to build the document.
+Note that the first time that the docker command is run it will take some time to download the image, but subsequent runs will be faster once the image is cached locally.
 
 Installing the dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you prefer to use your system's package manager to install the dependencies,
+here are some examples for common systems.  You may need to adjust the package
+names for your system.
+
 
 Debian-derived systems::
 
