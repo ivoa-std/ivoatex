@@ -46,20 +46,21 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     plantuml \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /workspace
-
 # get the latest version of pandoc from github releases and install it
 RUN curl -L -o /tmp/pandoc.deb  https://github.com/jgm/pandoc/releases/download/3.11/pandoc-3.11-1-${TARGETARCH}.deb\
     && dpkg -i /tmp/pandoc.deb \
     && rm /tmp/pandoc.deb
 
+WORKDIR /python-venv
 # Pre-install Python deps
 COPY requirements.txt /tmp/requirements.txt
-RUN python3 -m venv .venv && ./.venv/bin/python3 -m pip install --upgrade pip \
-    && ./.venv/bin/python3 -m pip install -r /tmp/requirements.txt \
+RUN python3 -m venv /python-venv && /python-venv/bin/python3 -m pip install --upgrade pip \
+    && /python-venv/bin/python3 -m pip install -r /tmp/requirements.txt \
     && rm -f /tmp/requirements.txt
 
 # override TTH with the pre-built one
 ENV TTH=/usr/local/bin/tth
+
+WORKDIR /document
 
 CMD ["bash"]
