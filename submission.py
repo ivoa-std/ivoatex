@@ -187,6 +187,7 @@ class DocumentMeta(object):
           "Education": "edu",
           "Operations": "ops",
           "Radio": "rad",
+          "High Energy": "hea",
           "No Group": "none",
       }
 
